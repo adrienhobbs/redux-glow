@@ -1,0 +1,53 @@
+@import 'base';
+:global {
+  .study-summary-statistics {
+    max-width: 50%;
+    margin: auto;
+    display: none;
+    @include media($large-screen-up) {
+      display: block;
+    }
+    @include media(max-height 900px) {
+      display: none;
+    }
+    .stat {
+      @include flex(1);
+      text-align: center;
+      @include align-self(center);
+      font-family: $gt;
+      font-weight: bold;
+      color: white;
+
+      .num {
+        font-size: 3.75rem;
+        line-height: rem(45);
+      }
+
+      .text {
+        font-size: 1.125vw;
+        @media (max-width: 1350px) {
+          font-size: 1.125em;
+        }
+      }
+    }
+    @include media($medium) {
+      display: none;
+    }
+    @include media($small) {
+      display: none;
+    }
+  }
+
+  .study-summary-inner-flex {
+    position: relative;
+    @include display(flex);
+    display: flex;
+    //@include align-items(stretch);
+    &.single {
+      @include center('xy')
+    }
+    @include media($medium) {
+      font-size: 0.6em;
+    }
+  }
+}

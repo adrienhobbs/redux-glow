@@ -1,0 +1,92 @@
+
+$gt: "GT-Walsheim";
+$domaine: "Domaine";
+
+// Typography
+$base-font-family: $gt;
+$heading-font-family: $gt;
+
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #477dca;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$dove-gray: #737373;
+$stack: #8E8E8E;
+$pink: #f12d5c;
+$iron: #CCCCCC;
+$mercury: #E6E6E6;
+$stack: rgba(142, 142, 142, 1);
+$tin: rgba(128, 128, 128, 1);
+$tin-darkened: darken($tin, 10%);
+$roof: rgba(0, 55, 74, 1);
+$alto: #DADADA;
+
+$glow-blue: rgb(72,195,211); // #48c3d3;
+$radical-red: rgb(241, 45, 92); // #f12d5c;
+$storm-dust: rgb(167,167,167); // #a7a7a7;
+$radical-red-hover: shade($radical-red, 20%);
+
+// Font Colors
+$base-font-color: $storm-dust;
+$action-color: $radical-red;
+
+// Border
+$base-border-color: $iron;
+$base-border: 2px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($iron, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Padding
+
+$mobile-pad: 25px;
+$mobile-pad-top: 60px;
+
+$medium-pad: 40px;
+$medium-pad-top: 75px;
+
+$large-pad: 75px;
+$large-pad-top: 100px;
+
+$nav-height-large: 100px;
+$nav-height-medium: 75px;
+$nav-height-small: 60px;
+$nav-height-xsmall: 50px;
+
+$side-pad-large: 75px;
+$side-pad-medium: 40px;
+$side-pad-small: 25px;
+$side-pad-xsmall: 15px;
+
+$global-max-width: 1620px;
+
+// GLOBAL CONTAINER VARIABLES
+$nav-height: 5.2vw;
+$outer-width: 92.1875%;
+$frame-width: 3.90625vw;
+$min-frame-width: em(15);
+$s3: 'https://s3.amazonaws.com/weareglow-assets/'; 

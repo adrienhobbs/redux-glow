@@ -1,0 +1,35 @@
+:global {
+@import 'base';
+  .titles {
+    display: none;
+    @include media($small-screen-up) {
+      display: block;
+    }
+    @include center('xy');
+    text-align: center;
+    @include clearfix();
+  }
+
+  .slide-title {
+
+    width: 239px;
+
+    // @include media($large-screen-up) {
+      //   width: 305px;
+    // }
+
+    font-size: 0.9em;
+    @include media($large-screen-up) {
+      font-size: 1.2em;
+    }
+    font-family: $gt;
+    color: #959595;
+    font-weight: 400;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    opacity: 0;
+    @include transform(rotateZ(-90deg) translateY(-120px));
+  }
+}

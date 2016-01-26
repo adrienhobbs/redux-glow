@@ -1,0 +1,33 @@
+@import 'base';
+
+
+.desktop-footer {
+  @include outer-container(100%);
+  @include outer-container-padding;
+  a {
+    color: $dove-gray;
+
+    &:hover {
+      @include transition(all 1.0s ease-in-out);
+      color: shade($dove-gray, 40%);
+    }
+  }
+  .footer {
+    &-top {
+      font-size: rem(18);
+      @include padding(2% 150px 2% 150px);
+    }
+    &-block {
+      height: 100%;
+      @include span-columns(4);
+      @include omega(3n);
+      &:nth-of-type(2) {
+        text-align: center;
+      }
+
+      &:last-of-type {
+        text-align: right;
+      }
+    }
+  }
+}

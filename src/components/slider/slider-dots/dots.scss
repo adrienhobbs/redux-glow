@@ -1,0 +1,20 @@
+@import 'base';
+:global {
+  #slider-dots {
+    display: none;
+    @include center(xy);
+    width: 12px;
+    overflow: visible;
+
+    svg {
+      overflow: visible;
+    }
+    .dot {
+      cursor: pointer;
+    }
+
+    @include media($small-screen-up) {
+      display: block;
+    }
+  }
+}

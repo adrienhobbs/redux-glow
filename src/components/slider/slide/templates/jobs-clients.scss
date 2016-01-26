@@ -1,0 +1,131 @@
+@import 'base';
+:global {
+  #contact-wrapper {
+    position: relative;
+    @include size(100%);
+    background: $alto;
+  }
+
+  .contact-inner {
+    @include center(xy);
+    @include media(max-height 280px) {
+      top: 100%;
+    }
+    width: 80%;
+    max-width: $global-max-width;
+
+    #our-clients {
+      h2.featured-headline {
+        @include media(max-height 900px) {
+          font-size: 3rem;
+        }
+        @include media(max-height 550px) {
+          font-size: 2rem;
+        }
+
+        @include media($xsmall-small-screen) {
+          font-size: 2rem;
+        }
+      }
+    }
+    .subtitle {
+      font-weight: 600;
+    }
+    @include media($small-large-screen) {
+      width: 90%;
+    }
+    @include media(max-height 900px) {
+      font-size: 0.8em;
+    }
+    @include media(max-height 600px) {
+      font-size: 0.5em;
+      padding-top: $nav-height-large;
+    }
+    .subtitle {
+      @include media(max-height 900px) {
+        display: none;
+      }
+    }
+
+    // .featured-headline, .hiring-title {
+      //   @include media(max-height 900px) {
+        //     margin-bottom: rem(10) !important;
+      //   }
+      //   @include media(max-height 550px) {
+        //     margin-bottom: rem(5) !important;
+        //     font-size: 2rem;
+      //   }
+    // }
+
+    // .hiring-title {
+      //   @include media(max-height 900px) {
+        //     margin-bottom: rem(20);
+      //   }
+      //   h2.featured-headline {
+        //     @include media(max-height 900px) {
+          //       font-size: 3rem;
+        //     }
+        //     @include media(max-height 550px) {
+          //       font-size: 2rem;
+        //     }
+        //     @include media($xsmall-small-screen) {
+          //       font-size: 2rem;
+        //     }
+      //   }
+    // }
+  }
+  .hiring {
+    margin-top: em(40);
+    @include media($xsmall-large-screen) {
+      margin-top: 0;
+    }
+    text-align: center;
+    &-title {
+      position: relative;
+      h2 {
+        display: inline;
+        background: $alto;
+        position: relative;
+        z-index: 1;
+      }
+    }
+    .subtitle {
+      font-family: $domaine;
+      font-style: italic;
+      position: relative;
+      z-index: 3;
+      margin-bottom: em(40);
+    }
+
+    .rule {
+      max-width: 91%;
+      height: 2px;
+      background: white;
+      width: 100%;
+      z-index: 0;
+      @include center(xy);
+    }
+  }
+
+  .hiring-copy {
+    @include outer-container(91%);
+    p {
+      @include media(max-height 900px) {
+        font-size: 1.2rem;
+      }
+      @include media(max-height 600px) {
+        font-size: 1rem;
+      }
+      @include media($xsmall-small-screen) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .view-openings {
+      margin-top: 1%;
+      a {
+        font-size: 1.5em;
+      }
+    }
+  }
+}

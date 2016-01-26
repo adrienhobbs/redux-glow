@@ -1,0 +1,25 @@
+@import 'core'; 
+
+.home-desktop {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  top:0;
+  left:0;
+}
+
+.home-container {
+
+}
+.home {
+  @include size(100%);
+}
+
+.home-container-desktop {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+}

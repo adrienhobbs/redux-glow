@@ -1,0 +1,44 @@
+@import "../neat/neat-helpers"; 
+
+// Neat Overrides
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 12;
+$max-width: 1770px;
+
+// Neat Breakpoints
+$medium-screen: 992px;
+$large-screen: 1200px;
+$small: 768px;
+$small-phone: 568px;
+
+$xsmall-screens: new-breakpoint(max-width em($small - 1) 2);
+$small-phones: new-breakpoint(max-width em($small-phone) 2);
+$small-screens: new-breakpoint(min-width em($small) max-width em($medium-screen - 1) 4);
+$small-screen-up: new-breakpoint(min-width em($small + 1));
+$under-small: new-breakpoint(max-width em($small - 1) 4);
+$under-medium: new-breakpoint(max-width em($medium-screen - 1) 4);
+$under-large: new-breakpoint(max-width em($large-screen - 1) 4);
+$medium-screens: new-breakpoint(min-width $medium-screen max-width em($large-screen - 1) 8);
+$medium-screen-up: new-breakpoint(min-width em($medium-screen));
+$large-screen-up: new-breakpoint(min-width em($large-screen));
+$header-large-up: new-breakpoint(min-width em(1770));
+$medium-laptop: new-breakpoint(min-width $medium-screen max-width em(1440));
+$xsmall-screen: 320px;
+$small-screen: 768px;
+$medium-screen: 1023px;
+$lsu: 1441px;
+$msu: 1024px;
+$above-laptop: new-breakpoint(min-width $lsu);
+$xsmall: new-breakpoint(max-width $xsmall-screen);
+$xsmall-small-screen: new-breakpoint(min-width $xsmall-screen max-width $small-screen);
+$xsmall-medium-screen: new-breakpoint(min-width $xsmall-screen max-width $medium-screen);
+$xsmall-large-screen: new-breakpoint(min-width $xsmall-screen max-width $large-screen);
+
+$small-medium-screen: new-breakpoint(min-width $small-screen max-width $medium-screen);
+$small-large-screen: new-breakpoint(min-width $small-screen max-width $large-screen);
+$small-screen-up: new-breakpoint(min-width $small-screen);
+$medium-large-screen: new-breakpoint(min-width $msu max-width $large-screen);
+$medium: $small-medium-screen;
+$small: new-breakpoint(max-width 768px);
+

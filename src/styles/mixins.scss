@@ -1,0 +1,18 @@
+
+.center {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+
+.headerImageBase {
+  height: 17.3vw;
+  background-size: cover;
+  lost-column: 1 0 0;
+  margin-bottom: em(45);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  min-height: em(100);
+}

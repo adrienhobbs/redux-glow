@@ -1,0 +1,93 @@
+@import 'base';
+:global {
+  #footer {
+    margin-top: em(80);
+    width: 100%;
+    @include media($medium-screen-up) {
+      margin-top: em(170);
+    }
+    position: relative;
+    z-index: 10;
+    .desktop {
+      display: none;
+      min-height: em(50);
+      @include media($medium-screen-up) {
+        display: flex;
+        @include cst-row();
+      }
+    }
+    .mobile {
+      min-height: em(70);
+      @include media($medium-screen-up) {
+        display: none;
+      }
+    }
+
+    .footer-section {
+      lost-column: 1/3 3 60px;
+      &.left {
+        text-align: left;
+        lost-align: middle-left;
+      }
+      &.right {
+        text-align: right;
+        lost-align: middle-right;
+        right: 17px;
+        a {
+          color: #A7A7A7;
+          &:hover {
+            color: $tin-darkened;
+          }
+        }
+      }
+      &.middle {
+        text-align: center; 
+        lost-align: middle-center;
+      } 
+    }
+    .colophon {
+      lost-column: 1;
+      margin-top: em(10);
+      margin-bottom: em(10);
+      font-size: 0.7em;
+      @include media($medium-screen-up) {
+        margin-top: em(20);
+        margin-bottom: em(40);
+      }
+      text-align: center;
+    }
+
+    .mobile {
+      width: $outer-width;
+      padding-left: $frame-width;
+      padding-right: $frame-width;
+      margin: auto;
+      ul {
+        @include cst-row();
+        width: 100%;
+        height: em(52);
+      }
+      li {
+        height: em(52);
+        cursor: pointer;
+        lost-column: 1/4;
+        lost-align: middle-center;
+        .icon {
+          @include size(em(52));
+          border-radius: 50%;
+          border: 4px solid $radical-red;
+          &:hover {
+            border: 4px solid $radical-red-hover;
+          }
+        }
+        svg {
+          fill: $radical-red;
+          &:hover {
+            fill: $radical-red-hover;
+          }
+        }
+      }
+    }
+
+  }
+}

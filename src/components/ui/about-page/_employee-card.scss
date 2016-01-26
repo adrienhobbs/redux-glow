@@ -1,0 +1,44 @@
+@import 'base';
+
+.employee-card {
+  //@include size(560px);
+  //background-image: url("/assets/images/pinky.jpg");
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  &-inner {
+    padding-top: 60px;
+    background-image: url("/assets/images/Employee_Card_Shape.svg");
+    background-size: cover;
+    background-position: top center;
+    height: 168px;
+    @include position(absolute, null null 0 0);
+    @include transform(scaleY(0));
+    @include transform-origin(top center);
+    width: 100%;
+  }
+
+  .employee-name {
+    font-family: $gt;
+    font-weight: bold;
+    font-size: rem(46);
+    letter-spacing: -0.025em;
+    color: $radical-red;
+  }
+
+  .employee-position {
+    margin-top: -15px;
+    font-family: $domaine;
+    font-style: italic;
+    font-size: rem(26);
+    color: $tin;
+    font-weight: normal;
+  }
+
+  img {
+    cursor: pointer;
+    &.filter {
+      @include filter(hue-rotate(180deg));
+    }
+  }
+}

@@ -1,27 +1,76 @@
-import React, { PropTypes } from 'react'
-import '../../styles/core.scss'
+import React, { PropTypes } from 'react';
+import '../../styles/core.scss';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { actions as counterActions } from '../../redux/modules/counter';
+import { actions as navActions } from '../../redux/modules/nav';
+import { actions as workActions } from '../../redux/modules/work';
+import { actions as viewportActions } from '../../redux/modules/viewport';
+import resizeUtils from '../../utilities/resize';
+import Nav from 'components/nav';
+import PageTransition from 'components/page-transition';
+import Footer from 'components/footer';
 
-// Note: Stateless/function components *will not* hot reload!
-// react-transform *only* works on component classes.
-//
-// Since layouts rarely change, they are a good place to
-// leverage React's new Stateless Functions:
-// https://facebook.github.io/react/docs/reusable-components.html#stateless-functions
-//
-// CoreLayout is a pure function of its props, so we can
-// define it with a plain javascript function...
-function CoreLayout ({ children }) {
-  return (
-    <div className='page-container'>
-      <div className='view-container'>
-        {children}
+const mapStateToProps = (state) => ({
+  pageTransition: state.pageTransition,
+  viewport: state.viewport
+});
+
+export class CoreLayout extends React.Component {
+  static propTypes = {
+    dispatch: PropTypes.func,
+    children: PropTypes.object,
+    pageTransition: PropTypes.object,
+    viewport: PropTypes.object
+  };
+
+  constructor (props) {
+    super(props);
+    this.actions = bindActionCreators(Object.assign({}, counterActions, navActions, workActions, viewportActions), props.dispatch);
+    resizeUtils.init(this.actions);
+  }
+  static contextTypes = {
+    router: PropTypes.object
+  };
+  static childContextTypes = {
+    router: PropTypes.object,
+    viewport: PropTypes.object
+  };
+  testForFeatured (re, str) {
+    var midstring;
+    if (str.search(re) != -1) {
+        midstring = ' contains ';
+        return true;
+      } else {
+          midstring = ' does not contain ';
+          return false;
+        }
+    // console.log(str + midstring + re);
+  }
+  getFooter () {
+      const isFeatured = this.testForFeatured('featured', this.props.location.pathname);
+    return (this.props.location.pathname !== '/' && isFeatured === false) ? <Footer /> : null;
+  }
+
+  getChildContext() {
+    return {
+      router: this.context.router,
+      viewport: this.props.viewport
+    }
+  }
+
+  render () {
+    return (
+      <div className='page-container'>
+        <div className='view-container'>
+          {this.props.children}
+        </div>
+        <PageTransition status={this.props.pageTransition} />
+        <Nav />
+        {this.getFooter()}
       </div>
-    </div>
-  )
+      );
+  }
 }
 
-CoreLayout.propTypes = {
-  children: PropTypes.element
-}
-
-export default CoreLayout
+export default connect(mapStateToProps)(CoreLayout);

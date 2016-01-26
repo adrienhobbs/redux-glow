@@ -1,0 +1,27 @@
+@import 'base';
+:global {
+  .connect-slide {
+    margin: auto;
+    height: 100vh;
+    background: white;
+    padding-top: $nav-height;
+    .row {
+      @include center(y);
+      max-width: $outer-width;
+      @include media($under-medium) {
+        max-width: 80%;
+        @include center(xy);
+      }
+    }
+    .connect-information {
+      @include media($under-medium) {
+        display: none;
+      }
+    }
+  }
+  .connect-inner-row {
+    .newsletter {
+      margin-top: em(20);
+    }
+  }
+}

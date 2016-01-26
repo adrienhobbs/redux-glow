@@ -1,0 +1,77 @@
+@import 'base';
+:global {
+  $connect-row-margin: rem(10);
+
+  .contact-form {
+    margin-bottom: $connect-row-margin;
+    position: relative;
+
+    p {
+      // line-height: 1;
+      margin-bottom: rem(55);
+    }
+    input {
+      overflow: visible;
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    label {
+      padding-left: 0.5em;
+      color: $iron;
+    }
+
+    .contact-link {
+      font-weight: normal;
+    }
+
+    textarea {
+      margin-top: rem(35); 
+      width: 100%;
+      min-height: 75px;
+      @include placeholder {
+        color: $iron;
+        font-size: 1.2em;
+      }
+    }
+
+    button {
+      //background: transparent;
+      font-family: $gt;
+      font-size: 1.25em;
+      border-radius: 0;
+      font-weight: normal;
+      color: white;
+    }
+
+    .submit-btn-ctr {
+      text-align: right;
+    }
+
+    .message {
+      visibility: hidden;
+      opacity: 0;
+      text-align: center;
+      lost-align: middle-center;
+      width: 100%;
+    }
+  }
+
+  .input-fields {
+    @include cst-row();
+
+    #name, #email {
+      lost-column: 1/2;
+    }
+
+    #message {
+      margin-top: $connect-row-margin;
+      lost-column: 1;
+    }
+  }
+
+  .connect-headline {
+    margin-bottom: $connect-row-margin;
+  }
+
+}

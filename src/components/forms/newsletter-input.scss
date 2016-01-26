@@ -1,0 +1,74 @@
+@import 'base';
+:global {
+  $newsletter-height: rem(40);
+
+  .newsletter {
+    position: relative;
+    @include outer-container(100%);
+    .contact-headline {
+      margin-bottom: 0.5em !important;
+      text-align: center;
+      @include media($medium-screen-up) {
+        text-align: left;
+      }
+    }
+
+    input {
+      width: 95%;
+      height: $newsletter-height;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+    }
+    button {
+      width: rem(150);
+      height: rem(40);
+      padding:0 !important;
+      background: $radical-red;
+      color: white;
+      font-size:1.25rem;
+      border-radius: 0;
+      text-align: center;
+      position: relative;
+      .inner-btn {
+        lost-align: middle-center;
+      }
+
+    }
+    .message {
+      visibility: hidden;
+      opacity: 0;
+      text-align: center;
+      button {
+        color: white;
+      }
+
+      .message-button-ctr {
+        position: relative;
+        @include outer-container(50%);
+        button {
+          width: 100%;
+        }
+      }
+    }
+
+    .form, .newsletter-form {
+
+      div {
+        display: inline-block;
+        width: 100%;
+        @include media($medium-screen-up) {
+          width: 70%;
+        }
+      }
+
+      button {
+        width:100%;
+        @include media($medium-screen-up) {
+          width: 30%;
+        }
+      }
+    }
+
+  }
+}

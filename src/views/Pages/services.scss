@@ -1,0 +1,105 @@
+@import 'base';
+:global {
+  @mixin service-row-margin() {
+    margin-top: em(15);
+    @include media($medium-screen-up) {
+      margin-top: em(20);
+    }
+  }
+
+  #services {
+    .header-image {
+      @include header-image('services.jpg');
+    }
+    div.service {
+      &-bucket {
+        @include media($under-small) {
+          lost-center: em(500); 
+          lost-column: 1;
+          margin-right: auto !important;
+        }
+        @include media($small-screen-up) {
+          lost-column: 1/2 2 60px;
+        }
+
+        position: relative;
+
+        .title {
+          font-family: $gt;
+          font-weight: 600;
+          font-size: rem(38);
+          letter-spacing: -0.05em;
+          color: rgb(115, 115, 115);
+          position: relative;
+
+          @include media($medium-screen-up) {
+            text-align: left;
+          }
+
+          &::after {
+            content: ' ';
+            height: 2px;
+            width: 40px;
+            background: $tin;
+            margin-top: 0px;
+            @include media($under-small) {
+              margin-top: 0;
+            }
+
+            @include transform(none);
+            left: 0;
+            position: absolute;
+          }
+        }
+
+        .body {
+          @include service-row-margin;
+          font-family: $gt;
+          color: $storm-dust;
+          font-size: 1rem;
+
+          @include media($medium-screen-up) {
+            text-align: left;
+          }
+
+          @include media($large-screen-up) {
+            font-size: rem(18);
+            padding-right: 18%;
+          }
+        }
+
+        .categories {
+          @include cst-row();
+          @include service-row-margin;
+          margin-bottom: em(15);
+
+          .cat {
+            font-family: $gt;
+            font-weight: 200;
+            font-style: oblique;
+            color: $radical-red;
+            font-size: em(15);
+            line-height: 1.5;
+            text-align: left;
+            lost-column: 1/2;
+
+            @include media($small-screens) {
+              lost-column: 1;
+              margin-bottom: em(5);
+              font-size: em(16);
+            }
+
+            @include media($small-phones) {
+              lost-column: 1;
+            }
+
+            @include media($large-screen-up) {
+              font-size: em(18);
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
