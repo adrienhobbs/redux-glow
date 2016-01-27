@@ -28,7 +28,7 @@ const initialState = {
 
 export default handleActions({
   [SET_PAGE_VIEWPORT] : (state, viewport) => {
-   return {
+    return {
       breakpoint: viewport.payload.breakpoint,
       orientation: viewport.payload.orientation,
       isPhone: !(isNull(md.phone())),
@@ -36,7 +36,7 @@ export default handleActions({
       isTablet: (!(isNull(md.tablet()))),
       orientationChanged: (state.orientation !== viewport.payload.orientation),
       breakpointChanged: (state.breakpoint !== viewport.payload.breakpoint),
-      hasTouch: Modernizr.touchevents 
+      hasTouch: Modernizr.touchevents
     };
   },
   [GET_ORIENTATION] : (state, viewport) => {

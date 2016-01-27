@@ -15,14 +15,14 @@ export class Proof extends BaseTemplate {
   }
 
   videoPlayNow () {
-    const TL = new TimelineLite;
+    const TL = new TimelineLite();
     TL.add(() => this.refs.video.play());
     return TL;
   }
 
   pauseVideo () {
     this.refs.video.pause();
-    const TL = new TimelineLite;
+    const TL = new TimelineLite();
     TL.addLabel('start');
     TL.to(this.refs.videoBlock, 0.7, {maxWidth: '51.25em', ease: Expo.easeInOut}, 'start+=0.5');
     TL.to(this.refs.playBtn, 0.5, {autoAlpha: 1, ease: Expo.easeInOut}, 'start+=0.5');
@@ -33,7 +33,7 @@ export class Proof extends BaseTemplate {
   }
   onVideoClick () {
     const width = this.refs.videoBlock.getBoundingClientRect().width;
-    const TL = new TimelineLite;
+    const TL = new TimelineLite();
     TL.addLabel('start');
     TL.set(this.refs.videoBlock, {width: width, maxWidth: '100%'}, 'start');
     TL.to(this.refs.videoBlock, 0.5, {width: '100%', ease: Expo.easeInOut}, 'start+=0.5');

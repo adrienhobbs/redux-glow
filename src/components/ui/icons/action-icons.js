@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Archive from './actionable/archive';
 import Arrow from './actionable/arrow';
 import Close from './actionable/close';
@@ -14,7 +14,12 @@ import {colors} from 'constants/global';
 
 class ActionIcons extends React.Component {
 
-  getIcon(color = colors.radicalRed) {
+  static propTypes = {
+    iconType: PropTypes.string,
+    color: PropTypes.string
+  };
+
+  getIcon (color = colors.radicalRed) {
     const icons = {
       ARCHIVE: () => {
         return <Archive color={color} />;
@@ -74,12 +79,11 @@ class ActionIcons extends React.Component {
     return icons[this.props.iconType]();
   }
 
-
-  constructor() {
+  constructor () {
     super();
   }
 
-  render() {
+  render () {
     const actionIcon = this.getIcon(this.props.color);
     return (
       actionIcon

@@ -21,7 +21,8 @@ export class CoreLayout extends React.Component {
     dispatch: PropTypes.func,
     children: PropTypes.object,
     pageTransition: PropTypes.object,
-    viewport: PropTypes.object
+    viewport: PropTypes.object,
+    location: PropTypes.object
   };
 
   constructor (props) {
@@ -37,26 +38,22 @@ export class CoreLayout extends React.Component {
     viewport: PropTypes.object
   };
   testForFeatured (re, str) {
-    var midstring;
-    if (str.search(re) != -1) {
-        midstring = ' contains ';
-        return true;
-      } else {
-          midstring = ' does not contain ';
-          return false;
-        }
-    // console.log(str + midstring + re);
+    if (str.search(re) !== -1) {
+      return true;
+    } else {
+      return false;
+    }
   }
   getFooter () {
-      const isFeatured = this.testForFeatured('featured', this.props.location.pathname);
+    const isFeatured = this.testForFeatured('featured', this.props.location.pathname);
     return (this.props.location.pathname !== '/' && isFeatured === false) ? <Footer /> : null;
   }
 
-  getChildContext() {
+  getChildContext () {
     return {
       router: this.context.router,
       viewport: this.props.viewport
-    }
+    };
   }
 
   render () {

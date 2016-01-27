@@ -28,7 +28,11 @@ export class Nav extends React.Component {
   static propTypes = {
     routerState: PropTypes.object,
     viewport: PropTypes.object,
-    currentPath: PropTypes.string
+    currentPath: PropTypes.string,
+    dispatch: PropTypes.func,
+    nav: PropTypes.object,
+    colors: PropTypes.object,
+    counter: PropTypes.object
   };
 
   constructor (props) {
@@ -204,59 +208,3 @@ export class Nav extends React.Component {
 };
 
 export default connect(mapStateToProps)(Nav);
-
-// const Nav = React.createClass({
-//   propTypes: {
-//     transitionActions:  React.PropTypes.object,
-//     counterActions:     React.PropTypes.object,
-//     shouldAnimate:      React.PropTypes.bool,
-//     routerState:        React.PropTypes.object,
-//     isVisible:          React.PropTypes.bool,
-//     viewport:           React.PropTypes.object,
-//     history:            React.PropTypes.object,
-//     color:              React.PropTypes.string,
-//     goTo:               React.PropTypes.func
-//   },
-//   getInitialState () {
-//     return {
-//       currentLinkIndex: 0,
-//       mobileNavOpen: false
-//     };
-//   },
-
-
-//   toggleMobileMenu () {
-//     this.setState({mobileNavOpen: !this.state.mobileNavOpen});
-//   },
-
-//   render () {
-//     return (
-//       <div className='nav-container'>
-//         <nav ref='mobileNav' className='mobile'>
-//           <div className='inner'>
-//             {this.getMobileLinks()}
-//           </div>
-//         </nav>
-//         <nav ref='nav' className='nav'>
-//           <div className='nav-inner desktop'>
-//             <div className='nav-left'>
-//               <div onClick={this.logoClick} className='logo' style={{backgroundColor: this.getLinkColor()}}>
-//                 <GlowLogo width='90%' />
-//               </div>
-//               <div onClick={this.toggleMobileMenu} className='hamburger'>
-//               </div>
-//             </div>
-//             <div className='nav-right'>
-//               {this.getNavLinks()}
-//               <Link className='twitter-link' to='/about'><Twitter color={this.getLinkColor()}/></Link>
-//             </div>
-//           </div>
-//         </nav>
-//         <div ref='frameLeft' className='frame-left' id='frame-left'></div>
-//         <div ref='frameRight' className='frame-right' id='frame-right'></div>
-//       </div>
-//     );
-//   }
-// });
-
-// export default Nav;

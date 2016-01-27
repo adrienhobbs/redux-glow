@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const Title = React.createClass({
   propTypes: {
-    title: React.PropTypes.string,
-    isCurrent: React.PropTypes.bool
+    title: PropTypes.string,
+    isCurrent: PropTypes.bool
   },
 
   componentDidMount () {
@@ -28,7 +28,7 @@ const Title = React.createClass({
   },
 
   animateTitleIn (delay = '+=0') {
-    this.tl = new TimelineLite;
+    this.tl = new TimelineLite();
     const mySplitText = new SplitText(this.refs.title, {type:'words,chars'});
     const chars = mySplitText.chars;
     TweenLite.set(this.refs.title, {perspective:400, autoAlpha: 1});
@@ -43,6 +43,5 @@ const Title = React.createClass({
     );
   }
 });
-
 
 export default Title;

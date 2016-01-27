@@ -15,7 +15,7 @@ export class StudyProjectTitle extends React.Component {
   getProjectColor () {
     return (this.props.projectColor) ? this.props.projectColor : '#ffffff';
   }
-  
+
   getLogoColor () {
     return (this.props.logoColor) ? this.props.logoColor : '#ffffff';
   }
@@ -24,8 +24,8 @@ export class StudyProjectTitle extends React.Component {
     const svgEl = ReactDOM.findDOMNode(this.refs.projectTitle);
     const projectTitle = svgEl.getElementsByClassName('logo-project-title');
     const logo = svgEl.getElementsByClassName('logo-title');
-    TweenLite.set(projectTitle, {attr: {fill: this.getProjectColor() }});
-    TweenLite.set(logo, {attr: {fill: this.getLogoColor() }});
+    TweenLite.set(projectTitle, {attr: { fill: this.getProjectColor() }});
+    TweenLite.set(logo, {attr: { fill: this.getLogoColor() }});
   }
 
   render () {

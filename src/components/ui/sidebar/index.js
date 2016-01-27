@@ -23,7 +23,7 @@ const Sidebar = React.createClass({
   getServices () {
     return this.props.data.get('services').map((service, i) => {
       return <li key={i} style={this.getCopyColor()}>{service}</li>;
-});
+    });
   },
   getServiceContent () {
     return (
@@ -93,7 +93,7 @@ const Sidebar = React.createClass({
         {this.getServiceContent()}
         {this.getRecognitionContent()}
         <div className={this.getSidebarBoxClass()} id='sidebar-share'>
-            <ShareButton copyColor={this.getShareButtonCopyColor()} strokeColor={this.getShareButtonStroke()} color={this.props.data.get('sidebarLogoColor')} />
+          <ShareButton copyColor={this.getShareButtonCopyColor()} strokeColor={this.getShareButtonStroke()} color={this.props.data.get('sidebarLogoColor')} />
         </div>
 
       </div>

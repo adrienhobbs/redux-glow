@@ -2,7 +2,7 @@ import du from 'domutil';
 
 const IntroAnimations = {
 
-  getNavTween() {
+  getNavTween () {
     const TL = new TimelineLite;
     TL.add(
       this.props.navActions.changeNavState.bind(
@@ -49,7 +49,7 @@ const IntroAnimations = {
     }, 0);
     return TL;
   },
-  
+
   openStudy () {
     du.addClass(document.body, 'locked');
     this.TL.reverse();
@@ -102,20 +102,20 @@ const IntroAnimations = {
     const wd   = rect.width;
     const sP = [0, ht, wd, ht, wd, ht, 0, ht];
     const eP = [0, ht * 0.8, wd, ht * 0.6, wd, ht, 0, ht];
-      eP.ease = Expo.easeInOut;
-      eP.onUpdate = () => {
-        const points = `${sP[0]} ${sP[1]} ${sP[2]} ${sP[3]} ${sP[4]} ${sP[5]} ${sP[6]} ${sP[7]}`;
-        TweenLite.set(this.refs.pointsSvg, {attr: {points: points}});
-      };
+    eP.ease = Expo.easeInOut;
+    eP.onUpdate = () => {
+      const points = `${sP[0]} ${sP[1]} ${sP[2]} ${sP[3]} ${sP[4]} ${sP[5]} ${sP[6]} ${sP[7]}`;
+      TweenLite.set(this.refs.pointsSvg, {attr: {points: points}});
+    };
     TweenLite.set(this.refs.maskSvg, {attr: {viewBox: '0 0 ' + wd + ' ' + ht}});
     this.maskSVGTL.to(sP, 0.4, eP);
-    
+
   },
 
   testTweenOut () {
     this.maskSVGTL.reverse();
   },
-  getMaskEndValue() {
+  getMaskEndValue () {
 
     if (this.refs.projectImage) {
       this.testTween();

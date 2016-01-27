@@ -40,9 +40,7 @@
 
   .study-summary-inner-flex {
     position: relative;
-    @include display(flex);
     display: flex;
-    //@include align-items(stretch);
     &.single {
       @include center('xy')
     }

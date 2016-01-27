@@ -6,22 +6,19 @@ import { Route, IndexRoute, Redirect } from 'react-router';
 // they were from the root of the ~/src directory. This makes it
 // very easy to navigate to files regardless of how deeply nested
 // your current file is.
-import CoreLayout from 'layouts/CoreLayout/CoreLayout';
-import HomeView from 'views/HomeView/HomeView';
-import NotFoundView from 'views/NotFoundView/NotFoundView';
-import AboutView             from 'views/Pages/AboutView';
-import ServicesView          from 'views/Pages/ServicesView';
+import CoreLayout           from 'layouts/CoreLayout/CoreLayout';
+import HomeView             from 'views/HomeView/HomeView';
+import NotFoundView         from 'views/NotFoundView/NotFoundView';
+import AboutView            from 'views/Pages/AboutView';
+import ServicesView         from 'views/Pages/ServicesView';
 import CareersView          from 'views/Pages/CareersView';
 import ConnectView          from 'views/Pages/ConnectView';
-// import Test from 'components/test';
-import WorkView from 'views/WorkView/work';
+import WorkView             from 'views/WorkView/work';
 
 export default (
-  <Route path='/' component={CoreLayout}>      
+  <Route path='/' component={CoreLayout}>
     <Route component={HomeView} path='/featured/:project' />
-    <IndexRoute component={HomeView} >
-
-    </IndexRoute>
+    <IndexRoute component={HomeView} />
     <Route path='/404' component={NotFoundView} />
     <Route      component={AboutView}     path='about' />
     <Route      component={ServicesView}     path='services' />
@@ -30,5 +27,6 @@ export default (
     <Route      component={WorkView}     path='work' >
       <Route    component={WorkView}      path='/case-study/:project' />
     </Route>
+    <Redirect from='*' to='/404' />
   </Route>
 );

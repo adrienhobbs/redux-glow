@@ -4,7 +4,7 @@ import ScrollArea from 'react-scrollbar';
 
 
 class App extends React.Component {
-  render (){
+  render () {
     return (
       <ScrollArea className='test'>
         <Content />
@@ -14,13 +14,13 @@ class App extends React.Component {
 }
 
 class Content extends React.Component {
-  render (){
+  render () {
     return (
       <div onClick={this.handleSomeAction.bind(this)}> Some long content </div>
     );
-}
+  }
 
-handleSomeAction (){
+handleSomeAction () {
   this.context.scrollArea.refresh();
 }
 }

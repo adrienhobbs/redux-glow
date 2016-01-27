@@ -1,7 +1,5 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
-import classes from './HomeView.scss';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import HomeTemplate from './HomeTemplate';
 // We define mapStateToProps where we'd normally use
@@ -40,7 +38,7 @@ export class HomeView extends PageLayout {
     super(props);
   }
   render () {
-    this.TL = new TimelineLite;
+    this.TL = new TimelineLite();
     const HomeTemp = this.getHomeTemplate();
     return (
       <div className='home-container'>

@@ -30,6 +30,7 @@ const CaseStudy = React.createClass({
       </div>
     );
   }
+
 });
 
 export default CaseStudy;

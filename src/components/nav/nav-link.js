@@ -77,7 +77,7 @@ const NavLink = React.createClass({
       TweenLite.set(this.refs.lineSvg, {clearProps: 'all'});
     }});
     this.splitTL.set(this.refs.lineSvg, {width: lineWidth});
-      this.splitTL.to(this.refs.line, 0.3, {attr: {x1: lineWidth}, ease: Quad.easeInOut});
+    this.splitTL.to(this.refs.line, 0.3, {attr: {x1: lineWidth}, ease: Quad.easeInOut});
     _.forEach(this.splitText.chars, (child, i) => {
       this.splitTL.to(child, speed, {y:-6, ease:Linear.easeNone}, ((speed * i) * offset));
       this.splitTL.to(child, speed, {y:-3, ease:Linear.easeNone}, (speed * i) * offset + speed);
@@ -90,12 +90,11 @@ const NavLink = React.createClass({
 
     this.splitTLLeave   = new TimelineMax({onComplete: () => {
     }});
-      this.splitTLLeave.to(this.refs.line, 0.3, {attr: {x1: lineWidth}, ease: Quad.easeInOut});
+    this.splitTLLeave.to(this.refs.line, 0.3, {attr: {x1: lineWidth}, ease: Quad.easeInOut});
     _.forEach(this.splitText.chars, (child, i) => {
       // this.splitTLLeave.to(child, speed, {y:-3, ease:Linear.easeNone}, ((speed * i) * offset));
       this.splitTLLeave.to(child, speed, {y:0, ease:Linear.easeNone}, (speed * i) * offset + speed);
     });
-
   },
   setLinkColor (color) {
     TweenLite.to(this.refs.link, 1.4, {color: color, ease: Expo.easeInOut});

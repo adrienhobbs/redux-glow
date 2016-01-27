@@ -4,16 +4,16 @@ function scrollReset () {
   scroll.top(document.body, 0, {duration: 1});
 };
 
-function getOffsetSum(elem) {
-  var top=0, left=0
+function getOffsetSum (elem) {
+  var top = 0, left = 0;
 
-  while(elem) {
-    top = top + parseInt(elem.offsetTop)
-    left = left + parseInt(elem.offsetLeft)
-    elem = elem.offsetParent       
+  while (elem) {
+    top = top + parseInt(elem.offsetTop, 10);
+    left = left + parseInt(elem.offsetLeft, 10);
+    elem = elem.offsetParent;
   }
 
-  return {top: top, left: left}
+  return {top: top, left: left};
 }
 function getOffsetRect (elem) {
   // (1)
@@ -39,9 +39,9 @@ function getOffsetRect (elem) {
 
 function getOffset (elem) {
   if (elem.getBoundingClientRect) {
-    return getOffsetRect(elem)
+    return getOffsetRect(elem);
   } else { // old browser
-    return getOffsetSum(elem)
+    return getOffsetSum(elem);
   }
 }
 
@@ -50,5 +50,5 @@ const DomHelpers = {
   getOffsetRect:  getOffsetRect,
   getOffsetSum:   getOffsetSum,
   resetScroll:    scrollReset
-}
+};
 export default DomHelpers;

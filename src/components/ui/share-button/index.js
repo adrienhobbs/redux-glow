@@ -62,14 +62,12 @@ const ShareButton = React.createClass({
     this.tl.add(TweenMax.to(this.refs.email.refs.icon, speed, {opacity:1, ease:Quad.easeOut, delay:-speed}));
     this.tl.pause();
   },
-
-
   render () {
     return (
       <svg onClick={this.onClick} id='svg_share' version='1.1'  x='0px' y='0px' viewBox='0 0 203 55' >
         <g ><circle onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} id='twitter_circle' stroke={this.getStrokeColor()} ref='twitterCircle'  cx='101.5' cy='26.5' r='0'/></g>
         <g><circle id='email_circle' ref='emailCircle'  cx='101.5' cy='26.5' r='0' stroke={this.getStrokeColor()}/></g>
-        <rect ref='shareBox' id='share_box' x='1.5' y='1.5' style={{fillOpacity: 0, stroke: this.getStrokeColor(), strokeWidth:3, strokeMiterlimit:10 }} width='200' height='50' rx='0'/>
+        <rect ref='shareBox' id='share_box' x='1.5' y='1.5' style={{ fillOpacity: 0, stroke: this.getStrokeColor(), strokeWidth:3, strokeMiterlimit:10 }} width='200' height='50' rx='0'/>
         <g id='Share_Text' ref='shareText'>
           <text  className='clip-svg' fill={this.props.copyColor || this.props.color || '#fff'} transform='matrix(1 0 0 1 70.0633 31.9807)'>share</text>
         </g>

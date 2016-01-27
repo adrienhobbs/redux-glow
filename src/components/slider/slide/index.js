@@ -32,7 +32,7 @@ export class Slide extends React.Component {
 
     if (currentPosition === 'top') {
       return Animations.upAndOut(this.refs.slideContainer);
-    } else if (currentPosition === 'center' && previousPosition === 'bottom' ) {
+    } else if (currentPosition === 'center' && previousPosition === 'bottom') {
       return Animations.upAndIn(this.refs.slideContainer);
     } else if (currentPosition === 'bottom') {
       return Animations.downAndOut(this.refs.slideContainer);

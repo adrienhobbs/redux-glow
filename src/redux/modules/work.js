@@ -51,5 +51,5 @@ export default handleActions({
   [SET_CURRENT_STUDY] : (state, params) => {
     state.current = getCurrentCaseStudy(params);
     return state;
-  } 
+  }
 }, initialState);

@@ -14,7 +14,7 @@ const MobileFooter = React.createClass({
   },
 
   getMobileIconsForDesktop () {
-    return mobileFooterIcons.filter((icon) =>{
+    return mobileFooterIcons.filter((icon) => {
       return (icon.get('type') !== 'PHONE');
     });
   },
@@ -25,7 +25,7 @@ const MobileFooter = React.createClass({
       : this.getMobileIconsForDesktop();
   },
 
-  getIcons() {
+  getIcons () {
     return this.getPropIcons().map(function getIconsForMobile (icon, i) {
       return (
         <li key={i}>

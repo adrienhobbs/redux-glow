@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import ProjectIntro from 'components/case-study/standard';
 import MobileFeatured from 'components/case-study/featured/featured-mobile';
 import Slide from 'components/slider/slide';
-import PageLayout from 'layouts/PageLayout/PageLayout';
 import {snakeCase} from 'lodash';
 
 export class WorkHelpers extends React.Component {
   static propTypes = {
-    slider: React.PropTypes.object,
-    counter: React.PropTypes.object,
-    TL: React.PropTypes.object,
-    work: React.PropTypes.object,
-    viewport: React.PropTypes.object,
-    featuredWorkOnly: React.PropTypes.bool,
-    params: React.PropTypes.object,
-    mobileLayout: React.PropTypes.bool,
-    toggleNav: React.PropTypes.func,
-    frameEls: React.PropTypes.object
+    slider: PropTypes.object,
+    counter: PropTypes.object,
+    TL: PropTypes.object,
+    work: PropTypes.object,
+    viewport: PropTypes.object,
+    featuredWorkOnly: PropTypes.bool,
+    params: PropTypes.object,
+    mobileLayout: PropTypes.bool,
+    toggleNav: PropTypes.func,
+    frameEls: PropTypes.object,
+    actions: PropTypes.object,
+    location: PropTypes.object,
+    locationState: PropTypes.object
   };
 
   constructor () {
@@ -25,7 +27,7 @@ export class WorkHelpers extends React.Component {
 
   getBackgroundColor () {
     return (this.props.slider)
-      ? { position: 'absolute', top: 0, left: 0, width: '100vw', height: '100vh', backgroundImage: 'linear-gradient(to top, ' + this.getCurrentSlide().get('gradientTop') + ', ' + this.getCurrentSlide().get('gradientBottom') + ')'}
+      ? {position: 'absolute', top: 0, left: 0, width: '100vw', height: '100vh', backgroundImage: 'linear-gradient(to top, ' + this.getCurrentSlide().get('gradientTop') + ', ' + this.getCurrentSlide().get('gradientBottom') + ')'}
       : {background: '#ffffff'};
   }
 

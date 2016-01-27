@@ -38,10 +38,8 @@ export class DesktopHomeView extends PageLayout {
       const size = this.props.featuredWork.size;
       this.actions.start(size - 1);
     }
-  
-  TweenLite.set('.home-container', {className: '+=home-container-desktop'});
-  TweenLite.set(document.documentElement, {overflowY: 'scroll'});
-
+    TweenLite.set('.home-container', {className: '+=home-container-desktop'});
+    TweenLite.set(document.documentElement, {overflowY: 'scroll'});
   }
   componentDidMount () {
     this.mountDotsAndTitles();
@@ -180,7 +178,7 @@ export class DesktopHomeView extends PageLayout {
     this.toggleNavState(navState);
   }
   goToSlideNumber (num, dir) {
-   this.actions.goToNumber({number: num, direction: dir}); 
+    this.actions.goToNumber({number: num, direction: dir});
   }
   mountDotsAndTitles () {
     const dots = <SliderDots colors={this.props.colors} currentDot={this.props.counter.current} goToNumber={this.goToSlideNumber.bind(this)}/>;

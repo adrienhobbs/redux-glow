@@ -27,6 +27,6 @@ export const EmployeeCardAnimation = {
     paramsFrom: {y: 80},
     paramsTo: {y: 0, ease: Expo.easeInOut},
     dur: 0.3,
-    startTime: "-=0.3"
+    startTime: '-=0.3'
   }
 };

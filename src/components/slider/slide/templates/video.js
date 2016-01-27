@@ -15,12 +15,12 @@ const Video = React.createClass({
   },
 
   componentDidMount () {
-    this.refs.video.play();  
+    this.refs.video.play();
   },
 
   componentDidUpdate () {
     if (this.props.position !== 'center') {
-      this.props.TL.eventCallback('onComplete', () => {this.refs.video.pause();});
+      this.props.TL.eventCallback('onComplete', () => { this.refs.video.pause(); });
     } else if (this.props.position === 'center') {
       this.refs.video.play();
     }

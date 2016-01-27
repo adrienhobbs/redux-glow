@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import du from 'domutil';
 import StudyProjectTitle from 'components/ui/study-project-title';
 import Templates from './templates';
@@ -6,9 +6,9 @@ import Templates from './templates';
 const StudyBody = React.createClass({
 
   propTypes: {
-    data: React.PropTypes.object,
-    isVisible: React.PropTypes.bool,
-    viewport: React.PropTypes.object
+    data: PropTypes.object,
+    isVisible: PropTypes.bool,
+    viewport: PropTypes.object
   },
 
   componentDidMount () {
@@ -83,7 +83,7 @@ const StudyBody = React.createClass({
         <div ref='studyWrapper' className='wrapper case-study-single'>
           <div className='study-intro-container' ref='introCtr'></div>
           <div className='study-content-wrapper'>
-            <div className='study-content-mask' style={{background: this.props.data.get('secColor') }}></div>
+            <div className='study-content-mask' style={{ background: this.props.data.get('secColor') }}></div>
             <StudyTemplate data={this.props.data} />
           </div>
         </div>

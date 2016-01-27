@@ -11,8 +11,8 @@ const servicesList =  [
   },
   {
     type: 'social content',
-    description: "We develop content to serve brands' needs in today's feed-centric media landscape that is timely, relevant, and sought after by your target audience.",
-    cats: ['custom video', "GIF's",  'cinemagraphs', 'content themes', 'personalized creative']
+    description: 'We develop content to serve brands\' needs in today\'s feed-centric media landscape that is timely, relevant, and sought after by your target audience.',
+    cats: ['custom video', 'GIF\'s',  'cinemagraphs', 'content themes', 'personalized creative']
   },
   {
     type: 'creative',

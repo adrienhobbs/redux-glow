@@ -77,6 +77,7 @@ export class Services extends PageLayout {
       </div>
     );
   }
+
 }
 
 export default connect(mapStateToProps)(Services);

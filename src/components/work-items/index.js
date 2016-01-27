@@ -1,7 +1,5 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-// import * as NavActions from 'actions/nav';
 import WorkHelpers from './work-helpers';
 import radium from 'radium';
 import './work-items.scss';
@@ -32,15 +30,6 @@ export class WorkItems extends WorkHelpers  {
 
   componentWillMount () {
     // TweenLite.set(document.documentElement, {overflowY: 'scroll'});
-    // this._navActions = bindActionCreators(NavActions, this.props.dispatch);
-  }
-
-  componentWillUnmount () {
-    // TweenLite.set(document.documentElement, {overflowY: 'auto'});
-  }
-
-  componentDidMount () {
-    console.log('mounted');
   }
 
   hideInactiveProjects (activeStudy, singleMode) {

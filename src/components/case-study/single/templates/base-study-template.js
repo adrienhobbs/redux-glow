@@ -20,7 +20,6 @@ export class BaseStudyComponent extends React.Component {
     TL.to(this.refs.playBtn, 0.5, {autoAlpha: 1, ease: Expo.easeInOut}, 'start+=0.5');
     TL.to(this.refs.controls, 0.5, {autoAlpha: 0}, 'start+=1');
   }
-  
   stopVideo () {
     this.refs.video.stop();
   }

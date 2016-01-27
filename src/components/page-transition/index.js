@@ -11,7 +11,7 @@ const PageTransition = React.createClass({
     router: PropTypes.object
   },
   componentWillMount () {
-    this.transitionTL = new TimelineLite;
+    this.transitionTL = new TimelineLite();
   },
   componentWillReceiveProps (nextProps) {
     if (nextProps.status.startTransition && !this.props.status.startTransition) {
@@ -23,7 +23,7 @@ const PageTransition = React.createClass({
   },
   getCurrentDocHeight () {
     const ctr = document.getElementsByClassName('page-container')[0];
-    return ctr.getBoundingClientRect().height; 
+    return ctr.getBoundingClientRect().height;
   },
   getCurrentWindowHeight () {
     return window.innerHeight;
@@ -32,28 +32,28 @@ const PageTransition = React.createClass({
     return (this.getCurrentDocHeight() < this.getCurrentWindowHeight()) ? this.getCurrentWindowHeight() : this.getCurrentDocHeight();
   },
   leftTransTL (startOrigin) {
-    const TL = new TimelineLite;
+    const TL = new TimelineLite();
     TL.to(this.refs.transLeft, 0.42, {scaleX: 1, transformOrigin: startOrigin, ease: Quart.easeIn});
     return TL;
   },
   rightTransTL (startOrigin) {
-    const TL = new TimelineLite;
+    const TL = new TimelineLite();
     TL.to(this.refs.transRight, 0.42, {scaleX: 1, transformOrigin: startOrigin, ease: Quart.easeIn});
     return TL;
   },
   leftTransTLOut (endOrigin) {
-    const TL = new TimelineLite;
+    const TL = new TimelineLite();
     TL.to(this.refs.transLeft, 0.42, {scaleX: 0, transformOrigin: endOrigin, ease: Quart.easeIn});
     return TL;
   },
   rightTransTLOut (endOrigin) {
-    const TL = new TimelineLite;
+    const TL = new TimelineLite();
     TL.to(this.refs.transRight, 0.12, {scaleX: 0, transformOrigin: endOrigin, ease: Quart.easeIn});
     return TL;
   },
   pageTransTL (pageEl, xStart) {
-    const TL = new TimelineLite;
-    TL.fromTo(pageEl, 0.4, {xPercent: xStart}, {xPercent: 0, ease: Quart.easeOut, onComplete: () => {TweenLite.set(pageEl, {clearProps: 'all'});}});
+    const TL = new TimelineLite();
+    TL.fromTo(pageEl, 0.4, {xPercent: xStart}, {xPercent: 0, ease: Quart.easeOut, onComplete: () => { TweenLite.set(pageEl, {clearProps: 'all'}); }});
     return TL;
   },
   goToNewPath (path) {
@@ -61,7 +61,7 @@ const PageTransition = React.createClass({
   },
   animateIn (newPath, animDir) {
     const transOriginStart = (animDir === 'left') ? 'center left' : 'center right';
-    this.transitionTL.set([ this.refs.transLeft, this.refs.transRight], {height: this.getTransitionElementHeight()});
+    this.transitionTL.set([this.refs.transLeft, this.refs.transRight], {height: this.getTransitionElementHeight()});
     this.transitionTL.addLabel('start');
     this.transitionTL.add(this.leftTransTL(transOriginStart), 'start');
     this.transitionTL.add(this.rightTransTL(transOriginStart), 'start+=0.33');
@@ -70,7 +70,7 @@ const PageTransition = React.createClass({
   animateOut (pageEl, animDir) {
     const transOriginEnd = (animDir === 'left') ? 'center right' : 'center left';
     const xStart         = (animDir === 'left') ? -100 : 100;
-    this.transitionTL.set([this.refs.transLeft, this.refs.transRight ], {height: this.getTransitionElementHeight()});
+    this.transitionTL.set([this.refs.transLeft, this.refs.transRight], {height: this.getTransitionElementHeight()});
     this.transitionTL.addLabel('start');
     this.transitionTL.add(this.leftTransTLOut(transOriginEnd), 'start');
     this.transitionTL.add(this.rightTransTLOut(transOriginEnd), 'start+=0.33');

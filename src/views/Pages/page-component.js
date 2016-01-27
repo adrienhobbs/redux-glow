@@ -39,7 +39,7 @@ export class PageComponent extends React.Component {
   watchHeaderScrollTop () {
     this.headerWatcher = scrollMonitor.create(this.refs.headerImage);
     this.headerWatcher.on('exitViewport', () => {
-      console.log('yah')
+      console.log('yah');
     });
     // this.headerWatcher.on('exitViewport', this.showHeaderGradient.bind(this));
     this.headerWatcher.on('enterViewport', this.hideHeaderGradient.bind(this));

@@ -25,7 +25,7 @@ export default handleActions({
       path: payload.path,
       name: payload.name,
       animationDirection: payload.animationDirection
-    }; 
+    };
   },
   [END_TRANSITION]: (state, {payload}) => {
     return {

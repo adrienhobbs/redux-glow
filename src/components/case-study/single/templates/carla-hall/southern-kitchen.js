@@ -10,16 +10,15 @@ export class SouthernKitchen extends BaseTemplate {
 
   constructor (props) {
     super(props);
-
   }
   videoPlayNow () {
-    const TL = new TimelineLite;
+    const TL = new TimelineLite();
     TL.add(() => this.refs.video.play());
     return TL;
   }
   pauseVideo () {
     this.refs.video.pause();
-    const TL = new TimelineLite;
+    const TL = new TimelineLite();
     TL.addLabel('start');
     TL.to(this.refs.videoBlock, 0.7, {maxWidth: '51.25em', ease: Expo.easeInOut}, 'start+=0.5');
     TL.to(this.refs.playBtn, 0.5, {autoAlpha: 1, ease: Expo.easeInOut}, 'start+=0.5');
@@ -30,7 +29,7 @@ export class SouthernKitchen extends BaseTemplate {
   }
   onVideoClick () {
     const width = this.refs.videoBlock.getBoundingClientRect().width;
-    const TL = new TimelineLite;
+    const TL = new TimelineLite();
     // this.refs.videoBlock.webkitRequestFullscreen();
     TL.addLabel('start');
     TL.set(this.refs.videoBlock, {width: width, maxWidth: '100%'}, 'start');

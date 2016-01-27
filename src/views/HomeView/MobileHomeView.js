@@ -7,13 +7,13 @@ import PageLayout from 'layouts/PageLayout/PageLayout';
 
 export class HomeMobile extends PageLayout {
 
-  constructor(props) {
+  constructor (props) {
     super(props);
   }
 
   componentDidMount () {
     this.pageCtr = document.getElementsByClassName('page-container')[0];
-    this.TL = new TimelineLite;
+    this.TL = new TimelineLite();
     this.TL.set(this.pageCtr, {width: '100%'});
   }
 

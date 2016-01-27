@@ -7,14 +7,16 @@ import { actions as viewportActions } from '../../redux/modules/viewport';
 import { actions as transitionActions } from '../../redux/modules/page-transition.js';
 import {isNull} from 'lodash';
 import Helpers from '../../utilities/helpers';
-import scrollMonitor from 'scrollmonitor';
+// import scrollMonitor from 'scrollmonitor';
 import Footer from 'components/footer';
 
 export class PageLayout extends React.Component {
   static propTypes = {
     actions: PropTypes.object,
     counter: PropTypes.object,
-    dispatch: PropTypes.func
+    dispatch: PropTypes.func,
+    location: PropTypes.object,
+    viewport: PropTypes.object
   };
   constructor (props) {
     super(props);
@@ -57,7 +59,7 @@ export class PageLayout extends React.Component {
 
   watchHeaderScrollTop () {
     // this.headerWatcher = scrollMonitor.create(this.refs.headerImage);
-    
+
     // console.log(this.refs.headerImage);
     // this.headerWatcher.on('enterViewport', function() {
     //   console.log('yah')

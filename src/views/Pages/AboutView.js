@@ -6,7 +6,6 @@ import { connect }  from 'react-redux';
 import {map} from 'lodash';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import './about.scss';
-import Footer from 'components/footer';
 
 const mapStateToProps = (state) => ({
   counter: state.counter,
@@ -32,7 +31,6 @@ export class AboutView extends PageLayout {
 
   componentDidMount () {
     this.animatePageContentIn();
-    console.log(this)
     // this.watchHeaderScrollTop();
   }
   componentWillUnmount () {

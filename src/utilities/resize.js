@@ -44,7 +44,7 @@ const resizeUtil  = (function resizeUtility () {
   };
 
   // Run Callbacks on resize
-  const runCallbacks = function runCallbacksFn() {
+  const runCallbacks = function runCallbacksFn () {
     try {
       if (orientation !== getOrientation()) {
         orientation = getOrientation();
@@ -57,7 +57,7 @@ const resizeUtil  = (function resizeUtility () {
     running = false;
   };
 
-  const resize = function resizeFn() {
+  const resize = function resizeFn () {
     if (!running) {
       running = true;
       raf(runCallbacks);
