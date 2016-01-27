@@ -1,5 +1,5 @@
 import React from 'react';
-import './services.scss';
+// import './services.scss';
 import { connect }            from 'react-redux';
 import servicesList from 'constants/data/services-list';
 import PageLayout from 'layouts/PageLayout/PageLayout';

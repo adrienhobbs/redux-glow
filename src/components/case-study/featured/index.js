@@ -9,7 +9,8 @@ import StudyProjectTitle from 'components/ui/study-project-title';
 import {snakeCase} from 'lodash';
 import { connect } from 'react-redux';
 import PageLayout from 'layouts/PageLayout/PageLayout';
-
+import classes from './study.scss';
+console.log(classes);
 const mapStateToProps = (state) => ({
   counter: state.counter,
   nav: state.nav,
@@ -96,7 +97,7 @@ export class FeaturedStudy extends PageLayout {
     let backBar = (this.props.position === 'center') ? <BackBar showBar={this.state.showBody} singleMode={this.state.singleMode} data={this.props.data.toJS()} goBack={this.changeState.bind(this)} /> : null;
     let vb = '0, 0, 1728, 492';
     return (
-        <div className='featured-slide-container' ref='project_container'>
+        <div className={classes.featuredSlideContainer} ref='project_container'>
           <CaseStudy slider showBody={this.state.showBody} singleMode={this.state.singleMode} viewport={this.props.viewport} ref='projectInfoSvg' data={this.props.data} />
           <div ref='info' className='featured-info-outer'>
             <Spring endValue={this.state.singleMode ? {val: window.innerHeight, config: [200, 15]} : {val: 0, config: [150, 16]}}>
@@ -109,8 +110,8 @@ export class FeaturedStudy extends PageLayout {
                 <polygon ref='shapePoly' points='0,340 0,492 1204,492 1728,82 1728,0'></polygon>
               </svg>
             </svg>
-            <div className='featured-info-inner' ref='projectInner'  >
-              <div ref='innerWrap' className='featured-info-inner-wrap' onClick={this.changeState.bind(this)}>
+            <div className={classes.featuredInfoInner} ref='projectInner'  >
+              <div ref='innerWrap' className={classes.featuredInfoInnerWrap} onClick={this.changeState.bind(this)}>
                 <StudyProjectTitle projectColor={this.getFeaturedProjectTitleColor()} path={this.props.data.get('infoPath')} />
                 <div className='view-case-study'>
                   <ViewCaseStudy />

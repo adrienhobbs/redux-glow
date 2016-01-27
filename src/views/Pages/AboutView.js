@@ -5,7 +5,7 @@ import EmployeeInfo from 'constants/data/employees';
 import { connect }  from 'react-redux';
 import {map} from 'lodash';
 import PageLayout from 'layouts/PageLayout/PageLayout';
-import './about.scss';
+// import './about.scss';
 
 const mapStateToProps = (state) => ({
   counter: state.counter,

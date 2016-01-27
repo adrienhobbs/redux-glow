@@ -2,12 +2,22 @@
 @import 'vendor/base/variables';
 @import 'vendor/base/base';
 @import 'vendor/normalize';
+@import './pages/about.scss';
+@import './pages/careers.scss';
+@import './pages/connect.scss';
+@import './pages/services.scss';
 :global {
 
 @import 'vendor/evil-icons';
 
   @import './nav.scss';
 
+  .home-container, html, body, .view-container, .page-container {
+    min-height: 100%;
+  }
+  .page-container, .view-container {
+    height: 100%;
+  }
   // Some best-practice CSS that's useful for most apps
   // Just remove them if they're not what you want
   // html {

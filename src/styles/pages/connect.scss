@@ -1,0 +1,63 @@
+:global {
+
+@import 'base';
+
+
+  .connect-inner {
+    lost-column: 1/2 2;
+    @include media($under-medium) {
+      lost-column: 1 0;
+
+    }
+    &.left {
+      background-color: $storm-dust;
+
+    }
+  }
+  .connect-headline {
+    @include title;
+    text-align: left;
+    font-size: 1.8em !important;
+    @include media($medium-screen-up) {
+      font-size: 2em;
+    }
+  }
+  div.connect-information {
+    @include cst-row($row-width: 100%);
+  }
+  .connect-info-box {
+    lost-column: 1/2;
+    @include media($under-medium) {
+      lost-column: 1/2;
+      margin-bottom: em(20);
+    }
+
+  }
+
+  .connect-info-box-inner {
+    position: relative;
+    @include bottom-rule-accent($align: left);
+    margin-bottom: em(10);
+  }
+  .contact-link {
+    height: 40px;
+    width: 150px;
+    padding: 0;
+  }
+
+  .newsletter {
+    margin-top: em(90);
+    margin-bottom: em(25);
+  }
+
+}
+:local {
+
+@import 'base';
+  .headerImage {
+    composes: headerImageBase from './mixins.scss';
+    
+  background-image: url($s3 + 'header-images/' +  'connect.jpg');
+    // @include header-image('connect.jpg');
+  }
+}

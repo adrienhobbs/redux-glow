@@ -6,7 +6,7 @@ import Titles from 'components/slider/titles';
 import du from 'domutil';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import { connect } from 'react-redux';
-
+import styles from './home.scss';
 const mapStateToProps = (state) => ({
   counter: state.counter,
   nav: state.nav,
@@ -188,7 +188,7 @@ export class DesktopHomeView extends PageLayout {
   }
   render () {
     return (
-      <div className='home-desktop'
+      <div className={styles.homeContainerDesktop}
         onWheel={(evt) => this.onWheel(evt) }
         onTouchStart={(evt) => this.onTouchStart(evt)}
         onTouchMove={(evt) => this.onTouchMove(evt)}>

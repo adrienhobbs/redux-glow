@@ -4,7 +4,7 @@ const Arrow = React.createClass({
   propTypes: {
     direction: PropTypes.string,
     color: PropTypes.string,
-    width: number
+    width: PropTypes.number
   },
   getInitialState () {
     return null;

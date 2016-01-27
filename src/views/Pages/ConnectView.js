@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './connect.scss';
+// import styles from './connect.scss';
 import Newsletter from 'components/forms/newsletter-input';
 import ContactForm from 'components/forms/contact-form';
 import PageLayout from 'layouts/PageLayout/PageLayout';

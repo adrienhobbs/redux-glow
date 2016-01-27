@@ -28,29 +28,25 @@
   }
 
 
-  .case-study-expanded-container {
-    position: fixed;
-    overflow-y: scroll;
-    z-index: 10;
-    @include media($large-screen-up) {
-      @include span-columns(12);
-      @include omega(2n);
-    }
-    @include span-columns(12);
-    @include omega();
-    margin-bottom: rem(30);
-  }
+  // .case-study-expanded-container {
+  //   position: fixed;
+  //   overflow-y: scroll;
+  //   z-index: 10;
+  //   @include media($large-screen-up) {
+  //     @include span-columns(12);
+  //     @include omega(2n);
+  //   }
+  //   @include span-columns(12);
+  //   @include omega();
+  //   margin-bottom: rem(30);
+  // }
 
   //TYPOGRAPHY
 
-  .featured-slide-container {
-    @include size(100%);
-    @include position(absolute, 0 null null 0);
-  }
 
-  .featured-image {
-    height: 100%;
-  }
+  // .featured-image {
+  //   height: 100%;
+  // }
 
   .info {
     @include position(relative, null null 0 0);
@@ -89,7 +85,7 @@
   }
 
   .study-content-mask {
-    @include transform(rotate(-8deg));
+    transform: rotate(-8deg);
     margin-top: -70px;
     @include media($medium-screen-up) {
       margin-top: -145px;
@@ -136,34 +132,13 @@
       display: block;
     }
   }
-  .featured-info {
-    &-inner {
-
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-size: cover;
-      &-wrap {
-        @include media($xsmall-large-screen) {
-          height: 100%;
-        }
-        @include position(absolute, null null 1% 0);
-        @include media($medium-large-screen) {
-          @include position(absolute, null null 0 0);
-        }
-        @include media($large-screen-up) {
-          @include position(absolute, null null 5% 0);
-        }
-        width:100%;
-      }
-    }
-  }
 
   .featured-info-outer {
-    @include size(100%);
-    @include position(absolute, null null 0 0);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     margin: auto;
     text-align: center;
 
@@ -198,6 +173,46 @@
       @include media($xsmall-large-screen) {
         position: absolute;
         top: 91%;
+      }
+    }
+  }
+}
+
+:local {
+  
+  .featuredSlideContainer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .featuredInfo {
+    &Inner {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-size: cover;
+      &Wrap {
+        @include media($xsmall-large-screen) {
+          height: 100%;
+        }
+        position: absolute;
+        bottom: 1%;
+        left: 0;
+        @include media($medium-large-screen) {
+          position: absolute;
+          bottom: 0;
+        }
+        @include media($large-screen-up) {
+          @include position(absolute, null null 5% 0);
+          position: absolute;
+          bottom: 5%;
+        }
+        width:100%;
       }
     }
   }

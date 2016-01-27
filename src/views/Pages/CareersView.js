@@ -1,5 +1,5 @@
 import React from 'react';
-import './careers.scss';
+// import './careers.scss';
 import { connect } from 'react-redux';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 
