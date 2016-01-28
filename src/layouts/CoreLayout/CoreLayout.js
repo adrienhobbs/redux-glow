@@ -46,7 +46,7 @@ export class CoreLayout extends React.Component {
   }
   getFooter () {
     const isFeatured = this.testForFeatured('featured', this.props.location.pathname);
-    return (this.props.location.pathname !== '/' && isFeatured === false) ? <Footer /> : null;
+    return (this.props.location.pathname !== '/' && isFeatured === false || this.props.viewport.isPhone) ? <Footer /> : null;
   }
 
   getChildContext () {

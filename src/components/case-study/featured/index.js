@@ -10,7 +10,7 @@ import {snakeCase} from 'lodash';
 import { connect } from 'react-redux';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import classes from './study.scss';
-console.log(classes);
+
 const mapStateToProps = (state) => ({
   counter: state.counter,
   nav: state.nav,
@@ -21,7 +21,7 @@ const mapStateToProps = (state) => ({
 });
 
 export class FeaturedStudy extends PageLayout {
-  static PropTypes = {
+  static propTypes = {
     TL: PropTypes.object,
     position: PropTypes.string,
     data: PropTypes.object,

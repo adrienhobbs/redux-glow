@@ -1,16 +1,15 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import StudyBody from './single/study-body';
-import './_case-study.scss';
 
 const CaseStudy = React.createClass({
 
   propTypes: {
-    singleMode: React.PropTypes.bool,
-    getInfoEl: React.PropTypes.func,
-    data: React.PropTypes.object,
-    children: React.PropTypes.element || React.PropTypes.array,
-    viewport: React.PropTypes.object,
-    showBody: React.PropTypes.bool
+    singleMode: PropTypes.bool,
+    getInfoEl: PropTypes.func,
+    data: PropTypes.object,
+    children: PropTypes.element || PropTypes.array,
+    viewport: PropTypes.object,
+    showBody: PropTypes.bool
   },
 
   getBackground () {

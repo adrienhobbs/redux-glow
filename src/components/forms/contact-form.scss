@@ -2,6 +2,10 @@
 :global {
   $connect-row-margin: rem(10);
 
+  .contact-form-input {
+    height: $input-field-height;
+  }
+
   .contact-form {
     margin-bottom: $connect-row-margin;
     position: relative;
@@ -14,6 +18,8 @@
       overflow: visible;
       position: relative;
       margin-bottom: 0;
+
+      @extend .contact-form-input;
     }
 
     label {
@@ -25,14 +31,15 @@
       font-weight: normal;
     }
 
+    $text-area-height: em(46);
     textarea {
-      margin-top: rem(35); 
       width: 100%;
-      min-height: 75px;
       @include placeholder {
         color: $iron;
         font-size: 1.2em;
       }
+      margin-bottom: 0;
+      @extend .contact-form-input;
     }
 
     button {
@@ -41,11 +48,28 @@
       font-size: 1.25em;
       border-radius: 0;
       font-weight: normal;
-      color: white;
+      color: $radical-red;
+      width: 100%;
+      background-color: transparent;
+      @extend .contact-form-input;
+      padding-right: 10px;
+      &:hover {
+        background: transparent;
+      }
+    }
+    button:disabled {
+      opacity: 1 !important;
     }
 
     .submit-btn-ctr {
       text-align: right;
+      position: absolute;
+      bottom: 7px;
+      right: 0;
+      @include media($under-medium) {
+        right: 10px;
+      }
+
     }
 
     .message {
@@ -62,11 +86,16 @@
 
     #name, #email {
       lost-column: 1/2;
+      @include media($under-small) {
+        lost-column: 1;
+        margin-top: $connect-row-margin;
+      }
     }
+
 
     #message {
       margin-top: $connect-row-margin;
-      lost-column: 1;
+      lost-column: 10/10 10 0;
     }
   }
 

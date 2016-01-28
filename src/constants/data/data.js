@@ -247,7 +247,7 @@ const data = [
     },
   },
   {
-    featured: true,
+    featured: false,
     client: 'westminster',
     project: "westminster",
     title: "westminster",
@@ -283,18 +283,18 @@ const data = [
     gradientBottom: "#f12d5c",
     cat: " ― about glow ― "
   },
-  // {
-  //   featured: true,
-  //   title: "Info",
-  //   type: "contact",
-  //   home: true,
-  //   backgroundImageUrl: "/assets/images/infoPath.jpg",
-  //   logoColor: "#f12d5c",
-  //   secColor: "#FFFFFF",
-  //   gradientBottom: "#FFFFFF",
-  //   gradientTop: "#DADADA",
-  //   cat: " ― get in touch ― "
-  // }
+  {
+    featured: true,
+    title: "Info",
+    type: "contact",
+    home: true,
+    backgroundImageUrl: "/assets/images/infoPath.jpg",
+    logoColor: "#f12d5c",
+    secColor: "#FFFFFF",
+    gradientBottom: "#FFFFFF",
+    gradientTop: "#DADADA",
+    cat: " ― get in touch ― "
+  }
 ];
 
 module.exports = data;

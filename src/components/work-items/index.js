@@ -1,8 +1,6 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import WorkHelpers from './work-helpers';
-import radium from 'radium';
-import './work-items.scss';
 
 const mapStateToProps = (state) => ({
   nav: state.nav,
@@ -45,4 +43,4 @@ export class WorkItems extends WorkHelpers  {
   }
 }
 
-export default connect(mapStateToProps)(radium(WorkItems));
+export default connect(mapStateToProps)(WorkItems);

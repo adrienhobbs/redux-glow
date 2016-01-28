@@ -34,7 +34,7 @@ label {
 select[multiple=multiple],
 textarea {
   background-color: $base-background-color;
-  border: $base-border;
+  border: none;
   border-radius: 0;
   //box-shadow: $form-box-shadow;
   box-sizing: border-box;

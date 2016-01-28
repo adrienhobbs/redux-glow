@@ -1,8 +1,5 @@
 :global {
 
-@import 'base';
-
-
   .connect-inner {
     lost-column: 1/2 2;
     @include media($under-medium) {
@@ -49,15 +46,8 @@
     margin-top: em(90);
     margin-bottom: em(25);
   }
-
-}
-:local {
-
-@import 'base';
   .headerImage {
-    composes: headerImageBase from './mixins.scss';
-    
-  background-image: url($s3 + 'header-images/' +  'connect.jpg');
-    // @include header-image('connect.jpg');
+    @include header-image('connect.jpg');
   }
+
 }

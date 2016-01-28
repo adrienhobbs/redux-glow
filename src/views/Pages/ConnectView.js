@@ -22,7 +22,6 @@ export class ConnectView extends PageLayout {
   componentDidMount () {
     this.animatePageContentIn();
     this.watchHeaderScrollTop();
-    console.log(styles);
   }
 
   componentWillUnmount () {
@@ -37,7 +36,7 @@ export class ConnectView extends PageLayout {
     return (
       <div className='container' id='connect' ref='page'>
         <div className='header'>
-          <div ref='headerImage' className={styles.headerImage}></div>
+          <div ref='headerImage' className='header-image'></div>
           <h1 className='page-title'>connect</h1>
           <h4 className='page-subtitle'>{this.pageSubTitle()}</h4>
         </div>

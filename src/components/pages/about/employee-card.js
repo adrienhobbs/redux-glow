@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import './_employee-card.scss';
 import { EmployeeCardAnimation as CardAnim } from 'constants/animations/pages';
 
 export class EmployeeCard extends React.Component {

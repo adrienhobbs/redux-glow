@@ -35,6 +35,7 @@ $tin: rgba(128, 128, 128, 1);
 $tin-darkened: darken($tin, 10%);
 $roof: rgba(0, 55, 74, 1);
 $alto: #DADADA;
+$concrete: rgb(242, 242, 242);
 
 $glow-blue: rgb(72,195,211); // #48c3d3;
 $radical-red: rgb(241, 45, 92); // #f12d5c;
@@ -50,7 +51,7 @@ $base-border-color: $iron;
 $base-border: 2px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fff;
+$base-background-color: $concrete;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms
@@ -90,3 +91,5 @@ $outer-width: 92.1875%;
 $frame-width: 3.90625vw;
 $min-frame-width: em(15);
 $s3: 'https://s3.amazonaws.com/weareglow-assets/'; 
+
+$input-field-height: rem(46);

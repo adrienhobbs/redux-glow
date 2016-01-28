@@ -19,6 +19,7 @@ const NewsletterInput = React.createClass({
       <div className='newsletter'>
         <div className='newsletter-inner' ref='form'>
           <h2 className='connect-headline'>join the newsletter</h2>
+          <p>stay up on the industry with glow's monthly newsletter. Chalk full of relevant industry news and inspiring work. Let's make them even now. yes mhmm indeed!</p>
           <Formsy.Form
             onSubmit={this.onSubmit}
             className='newsletter-form'
@@ -31,7 +32,7 @@ const NewsletterInput = React.createClass({
               validations='isEmail'
               type='text'
               required/>
-            <button disabled={!this.state.canSubmit} type='submit'>join!</button>
+            <button disabled={!this.state.canSubmit} type='submit'>join  →</button>
           </Formsy.Form>
         </div>
         <div ref='message' className='message'>

@@ -8,7 +8,8 @@ const PageTransition = React.createClass({
     actions: React.PropTypes.object
   },
   contextTypes: {
-    router: PropTypes.object
+    router: PropTypes.object,
+    viewport: PropTypes.object
   },
   componentWillMount () {
     this.transitionTL = new TimelineLite();
@@ -69,12 +70,13 @@ const PageTransition = React.createClass({
   },
   animateOut (pageEl, animDir) {
     const transOriginEnd = (animDir === 'left') ? 'center right' : 'center left';
-    const xStart         = (animDir === 'left') ? -100 : 100;
+    const xStart         = (animDir === 'left') ? -500 : 500;
     this.transitionTL.set([this.refs.transLeft, this.refs.transRight], {height: this.getTransitionElementHeight()});
     this.transitionTL.addLabel('start');
     this.transitionTL.add(this.leftTransTLOut(transOriginEnd), 'start');
     this.transitionTL.add(this.rightTransTLOut(transOriginEnd), 'start+=0.33');
     if (pageEl) {
+      console.log(this);
       this.transitionTL.add(this.pageTransTL(pageEl, xStart), 'start+=0.33');
     }
   },

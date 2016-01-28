@@ -11,7 +11,7 @@ import { actions as counterActions } from '../../redux/modules/counter';
 import { actions as transitionActions } from '../../redux/modules/page-transition.js';
 import Isvg from 'react-inlinesvg';
 import {ToggleVis} from 'constants/animations/nav-bar';
-
+import {isNull} from 'lodash';
 const mapStateToProps = (state) => ({
   counter: state.counter,
   nav: state.nav,
@@ -44,7 +44,7 @@ export class Nav extends React.Component {
     };
   }
   componentDidMount () {
-    // this.checkFramePositionType(this.props.routerState.path);
+    this.checkFramePositionType(this.props.currentPath);
     this.ham = document.getElementsByClassName('ham')[0].getElementsByTagName('svg');
   }
   componentDidUpdate (prevProps, prevState) {
@@ -136,12 +136,13 @@ export class Nav extends React.Component {
     }
   }
   checkFramePositionType (path) {
-    // if (!(_.isNull(this.props.viewport.isPhone)) && path === '/') {
-    //   TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'absolute'});
-    // }
-    // if (!(_.isNull(this.props.viewport.isPhone)) && path !== '/') {
-    //   TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'fixed'});
-    // }
+    console.log(path);
+    if (!(isNull(this.props.viewport.isPhone)) && path === '/') {
+      TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'absolute'});
+    }
+    if (!(isNull(this.props.viewport.isPhone)) && path !== '/') {
+      TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'fixed'});
+    }
   }
   goTo (path = '/', newIndex, newPathName) {
     if (this.props.currentPath !== path) {
