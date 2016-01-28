@@ -1,172 +1,174 @@
+
 const employeeInfo = [
   {
+    name: 'Pete Levin',
+    position: 'Co-Founder',
+    photoName: 'Pete'
+  },
+  {
+    name: 'Ted Kacandes',
+    position: 'Co-Flounder',
+    photoName: 'Ted'
+  },
+  {
+    name: 'Howie Kleinberg',
+    position: 'COO & President',
+    photoName: 'Howie'
+  },
+  {
+    name: 'Mike Molnar',
+    position: 'Managing Partner',
+    photoName: 'Mike'
+  },
+  {
     name: 'Adrien Hobbs',
-    position: 'Glow Westerner',
+    position: 'Developer',
     photoName: 'Adrien'
   },
   {
     name: 'Matt Will',
-    position: 'Glow Westerner',
+    position: 'Art Director',
     photoName: 'Matt'
   },
   {
     name: 'Clayton Benn',
-    position: 'Glow Westerner',
+    position: 'Sr. Account Executive',
     photoName: 'Clayton'
   },
   {
     name: 'Ann Ketly',
-    position: 'Glow Easterner',
+    position: 'Office Manager',
     photoName: 'Ann'
   },
   {
     name: 'Emily Stone',
-    position: 'Neutral Territory',
+    position: 'Designer',
     photoName: 'EmilyS'
   },
   {
-    name: 'Ted Kacandes',
-    position: 'Glow Co-Flounder',
-    photoName: 'Ted'
-  },
-  {
     name: 'Gina Amsellem',
-    position: 'Glow Easterner',
+    position: 'Social Designer',
     photoName: 'GinaA'
   },
   {
     name: 'Sean Lynam',
-    position: 'Glow Easterner',
+    position: 'Director of Marketing',
     photoName: 'Sean'
   },
-  {
-    name: 'Pete Levin',
-    position: 'Glow Founder',
-    photoName: 'Pete'
-  },
-  {
-    name: 'Mike Molnar',
-    position: 'Glow Easterner',
-    photoName: 'Mike'
-  },
+
   {
     name: 'Ivan Burguete',
-    position: 'Glow Easterner',
+    position: 'Art Director',
     photoName: 'Ivan'
   },
   {
     name: 'Ben Tuber',
-    position: 'Glow Easterner',
+    position: 'Art Director',
     photoName: 'Ben'
   },
   {
     name: 'Aaron Perez',
-    position: 'Glow Easterner',
+    position: 'Digital Strategist',
     photoName: 'Aaron'
   },
   {
     name: 'Danielle Guernica',
-    position: 'Glow Easterner',
+    position: 'Community Manager',
     photoName: 'Danielle'
   },
   {
     name: 'Emily Babich',
-    position: 'Glow Easterner',
+    position: 'Community Manager',
     photoName: 'EmilyB'
   },
   {
     name: 'Eric Drumm',
-    position: 'Glow Easterner',
+    position: 'Digital Strategist',
     photoName: 'Eric'
   },
   {
     name: 'Erin Resnick',
-    position: 'Glow Easterner',
+    position: 'Community Manager',
     photoName: 'Erin'
   },
   {
-    name: 'Gina C',
-    position: 'Glow Easterner',
+    name: 'Gina Chen',
+    position: 'Digital Project Manager',
     photoName: 'GinaC'
   },
   {
-    name: 'Howie Kleinberg',
-    position: 'Glow Easterner',
-    photoName: 'Howie'
-  },
-  {
     name: 'Jasmyn Lawson',
-    position: 'Glow Easterner',
+    position: 'Digital Project Manager',
     photoName: 'Jas'
   },
   {
     name: 'Jasper Speier',
-    position: 'Glow Easterner',
+    position: 'Digital Strategist',
     photoName: 'Jasper'
   },
   {
     name: 'Jerry Levin',
-    position: 'Glow Easterner',
+    position: 'Chief Financial Officer',
     photoName: 'Jerry'
   },
   {
     name: 'Kendell Burton',
-    position: 'Glow Easterner',
+    position: 'Social Designer',
     photoName: 'Kendell'
   },
   {
     name: 'Lauren Farmer',
-    position: 'Glow Easterner',
+    position: 'Digital Strategist',
     photoName: 'Lauren'
   },
   {
     name: 'Meagan Mosser',
-    position: 'Glow Easterner',
+    position: 'Creative Director',
     photoName: 'Meagan'
   },
   {
     name: 'Morris Didia',
-    position: 'Glow Easterner',
+    position: 'Digital Project Manager',
     photoName: 'Morris'
   },
   {
     name: 'Peter Kondratowicz',
-    position: 'Glow Easterner',
+    position: 'Senior Designer',
     photoName: 'PK'
   },
   {
     name: 'Rachel Coleman',
-    position: 'Glow Easterner',
+    position: 'Community Manager',
     photoName: 'Rachel'
   },
   {
     name: 'Sarah Pine',
-    position: 'Glow Easterner',
+    position: 'Digital Strategist',
     photoName: 'Sarah'
   },
   {
     name: 'Simona Belau',
-    position: 'Glow Easterner',
+    position: 'Digital Strategist',
     photoName: 'Simona'
   },
   {
     name: 'Stephanie Rogers',
-    position: 'Glow Easterner',
+    position: 'Sr. Account Manager',
     photoName: 'Steph'
   },
   {
     name: 'Tara Lewis',
-    position: 'Glow Easterner',
+    position: 'Account Executive',
     photoName: 'Tara'
   },
   {
     name: 'Tom Quirk',
-    position: 'Glow Easterner',
+    position: 'Community Manager',
     photoName: 'Tom'
   },
   {
     name: 'Zach Linder',
-    position: 'Glow Easterner',
+    position: 'Digital Strategist',
     photoName: 'Zach'
   }
 

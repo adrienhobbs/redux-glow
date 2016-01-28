@@ -34,7 +34,8 @@
 
   .form-paragraph {
     margin-bottom: $paragraphBottomMargin;
-    @include media($under-medium) {
+    padding-right: em(20);
+    @include media($under-small) {
       font-size: 0.7em;
       margin-bottom: $paragraphBottomMargin/2;
     }
@@ -79,14 +80,14 @@
     height: 40%;
     background-color: rgb(87, 182, 154);
     width: 100%;
-    @include media($under-medium) {
+    @include media($under-small) {
       height: 20%;
     }
   }
 
   .connectForm {
     lost-column: 1/2 0;
-    @include media($under-medium) {
+    @include media($under-small) {
       lost-column: 1;
     }
   }

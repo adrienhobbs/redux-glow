@@ -1,7 +1,29 @@
 @import 'base';
 :global {
   $connect-row-margin: rem(10);
-
+  .contact-form, .newsletter {
+    width: 97%;
+  
+  }
+  .message-button-ctr {
+    position: relative;
+    @include outer-container(50%);
+    button {
+      margin-top: em(20);
+      width: 80%;
+    }
+  }
+  .message {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    width: 100%;
+    button {
+      color: white;
+    }
+  }
   .contact-form-input {
     height: $input-field-height;
   }
@@ -29,6 +51,7 @@
 
     .contact-link {
       font-weight: normal;
+      padding-right: 15px;
     }
 
     $text-area-height: em(46);
@@ -52,7 +75,6 @@
       width: 100%;
       background-color: transparent;
       @extend .contact-form-input;
-      padding-right: 10px;
       &:hover {
         background: transparent;
       }
@@ -69,15 +91,6 @@
       @include media($under-medium) {
         right: 10px;
       }
-
-    }
-
-    .message {
-      visibility: hidden;
-      opacity: 0;
-      text-align: center;
-      lost-align: middle-center;
-      width: 100%;
     }
   }
 
@@ -103,4 +116,9 @@
     margin-bottom: $connect-row-margin;
   }
 
+  .message-button-ctr {
+    button {
+      background-color: $radical-red !important;
+    }
+  }
 }

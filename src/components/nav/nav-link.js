@@ -68,8 +68,8 @@ const NavLink = React.createClass({
     this.setState({isActive: !this.state.isActive});
   },
   splitLinkText () {
-    const speed     = 0.15;
-    const offset    = 0.1;
+    // const speed     = 0.15;
+    // const offset    = 0.1;
     const lineWidth = this.refs.link.getBoundingClientRect().width + 6;
 
     this.splitText = new SplitText(this.refs.link, {type: 'chars'});
@@ -78,23 +78,23 @@ const NavLink = React.createClass({
     }});
     this.splitTL.set(this.refs.lineSvg, {width: lineWidth});
     this.splitTL.to(this.refs.line, 0.3, {attr: {x1: lineWidth}, ease: Quad.easeInOut});
-    _.forEach(this.splitText.chars, (child, i) => {
-      this.splitTL.to(child, speed, {y:-6, ease:Linear.easeNone}, ((speed * i) * offset));
-      this.splitTL.to(child, speed, {y:-3, ease:Linear.easeNone}, (speed * i) * offset + speed);
-    });
+    // _.forEach(this.splitText.chars, (child, i) => {
+    //   this.splitTL.to(child, speed, {y:-6, ease:Linear.easeNone}, ((speed * i) * offset));
+    //   this.splitTL.to(child, speed, {y:-3, ease:Linear.easeNone}, (speed * i) * offset + speed);
+    // });
   },
   splitLinkTextLeave () {
-    const speed     = 0.15;
-    const offset    = 0;
+    // const speed     = 0.15;
+    // const offset    = 0;
     const lineWidth = 0;
 
     this.splitTLLeave   = new TimelineMax({onComplete: () => {
     }});
     this.splitTLLeave.to(this.refs.line, 0.3, {attr: {x1: lineWidth}, ease: Quad.easeInOut});
-    _.forEach(this.splitText.chars, (child, i) => {
-      // this.splitTLLeave.to(child, speed, {y:-3, ease:Linear.easeNone}, ((speed * i) * offset));
-      this.splitTLLeave.to(child, speed, {y:0, ease:Linear.easeNone}, (speed * i) * offset + speed);
-    });
+    // _.forEach(this.splitText.chars, (child, i) => {
+    //   // this.splitTLLeave.to(child, speed, {y:-3, ease:Linear.easeNone}, ((speed * i) * offset));
+    //   this.splitTLLeave.to(child, speed, {y:0, ease:Linear.easeNone}, (speed * i) * offset + speed);
+    // });
   },
   setLinkColor (color) {
     TweenLite.to(this.refs.link, 1.4, {color: color, ease: Expo.easeInOut});
