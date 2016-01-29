@@ -21,8 +21,9 @@
   .home-container, html, body, .view-container, .page-container {
     min-height: 100%;
   }
-  .page-container, .view-container {
+  .page-container, body, html {
     height: 100%;
+
   }
 
   .headerImageBase {
@@ -45,12 +46,6 @@
   }
 
 
-  .case-bg {
-    height: 100vh;
-    width: 100vw;
-    background-position: center center;
-    background-size: cover;
-  }
   @mixin transition-element {
     @include transform(scaleX(0));
     height: 100vh;

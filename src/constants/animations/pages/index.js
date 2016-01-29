@@ -22,5 +22,4 @@ export const EmployeeCardAnimation = {
     dur: 0.3,
     startTime: 'start'
   }
-
 };

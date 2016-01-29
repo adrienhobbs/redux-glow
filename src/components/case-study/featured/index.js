@@ -1,10 +1,8 @@
 import React, { PropTypes } from 'react';
-import './study.scss';
 import { Spring } from 'react-motion';
 import CaseStudy from 'components/case-study';
 import BackBar from 'components/ui/backbar';
 import ViewCaseStudy from 'components/ui/icons/view-case-study';
-import StudyStats from 'components/ui/study-stats';
 import StudyProjectTitle from 'components/ui/study-project-title';
 import {snakeCase} from 'lodash';
 import { connect } from 'react-redux';
@@ -116,7 +114,6 @@ export class FeaturedStudy extends PageLayout {
                 <div className='view-case-study'>
                   <ViewCaseStudy />
                 </div>
-                <StudyStats />
               </div>
             </div>
           </div>

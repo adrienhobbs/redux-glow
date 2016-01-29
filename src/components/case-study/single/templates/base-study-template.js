@@ -6,6 +6,10 @@ export class BaseStudyComponent extends React.Component {
     data: React.PropTypes.object
   };
 
+  createMarkup (markup) {
+    return {__html: markup};
+  }
+
   videoPlayNow () {
     const TL = new TimelineLite();
     TL.add(() => this.refs.video.play());
@@ -64,6 +68,11 @@ export class BaseStudyComponent extends React.Component {
         </div>
       );
     });
+  }
+  render () {
+    return (
+      <h1>Not Implemented Yet!</h1>
+    );
   }
 }
 

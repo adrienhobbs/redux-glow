@@ -110,7 +110,56 @@ const data = [
     shareButton: {
       strokeColor: '#ed0f77',
       copyColor: '#4d4d4d'
+    }
+  },
+  {
+    featured: true,
+    client: 'hbo',
+    project: "veep",
+    title: "veep",
+    subtitle: "seasons 2-3-4 social & media campaigns",
+    type: "case-study",
+    infoPath: s3 + "case-studies/hbo/veep/logo-title.svg",
+    backgroundImageUrl: s3 + 'case-studies/hbo/veep/landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/veep/vertical.jpg',
+    logoColor: "#c03d3b",
+    secColor: "#0e374a",
+    gradientTop: "#c03d3b",
+    gradientBottom: "#0e374a",
+    featuredProjectTitleColor: '#c03d3b',
+    cat: " ― hbo | veep ― ",
+    templateName: 'Veep',
+    copyColor: '#ffffff',
+    headlineColor: '#ffffff',
+    services: ['social strategy', 'community management', 'media campaign', 'asset creation'],
+    sidebar: {
+      logoColor: '#ffffff',
+      copyColor: '#577381',
+      headlineColor: '#ffffff'
     },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    results: {
+      stats: [
+        {label: 'Twitter buzz increase', stat: '+76%'},
+        {label: 'Pieces of custom content', stat: '1500+'},
+        {label: 'increase in social volume', stat: '+53%'},
+        {label: 'tweeting premieres w/ custom content RT', stat: 'live'},
+        {label: 'Robocall texts exchanged', stat: '40k'},
+        {label: 'GIF on Tumblr w/ reblog from founder David Karp', stat: 'viral'},
+        {label: 'Twitter mentions from top social influencers', stat: '20'},
+        {label: 'Twitter buzz increase', stat: '??'},
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#C03D3B',
+      bgColor: '#0A2C3A'
+    },
+
+    endShape: {
+      bgColor: '#0A2C3A'
+    }
   },
   {
     featured: false,
@@ -147,24 +196,6 @@ const data = [
       strokeColor: '#82b3dc',
       copyColor: '#000'
     },
-  },
-  {
-    featured: false,
-    client: 'hbo',
-    project: "veep",
-    title: "veep",
-    subtitle: "social & media campaign",
-    type: "case-study",
-    infoPath: s3 + "case-studies/hbo/veep/logo-title.svg",
-    backgroundImageUrl: s3 + 'case-studies/hbo/veep/landscape.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/hbo/veep/vertical.jpg',
-    logoColor: "#c03d3b",
-    secColor: "#0e374a",
-    gradientTop: "#c03d3b",
-    gradientBottom: "#0e374a",
-    featuredProjectTitleColor: '#c03d3b',
-    cat: " ― hbo | veep ― ",
-    logo: "HBO_logo.svg"
   },
   {
     featured: false,
@@ -270,7 +301,6 @@ const data = [
     logo: "CartoonNetwork.svg",
     clientLogoColor: '#d6963f',
   },
-
   {
     featured: true,
     title: "contact",

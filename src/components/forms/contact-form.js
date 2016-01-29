@@ -30,7 +30,7 @@ const ContactForm = React.createClass({
             onInvalid={this.disableButton}
             onValid={this.enableButton}>
             <h2 className='connect-headline'>work with us</h2>
-            <p style={{display: (this.props.hideCopy) ? 'none' : 'block'}}> we are always looking for great new opportunities. we'd love to work with you on your idea, however big or small. use the form below to make our hotline bling.</p>
+            <p style={{display: (this.props.hideCopy) ? 'none' : 'block'}}> we are always looking for great new opportunities. we'd love to work with you on your idea, however big or small.</p>
             <article className='input-fields'>
               <section id='name'>
                 <NameInput

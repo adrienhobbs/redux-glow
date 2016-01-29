@@ -26,6 +26,7 @@ export default (
     <Route      component={ConnectView}     path='connect' />
     <Route      component={WorkView}     path='work' >
       <Route    component={WorkView}      path='/case-study/:project' />
+      <Route    component={WorkView}      path='/work/:project' />
     </Route>
     <Redirect from='*' to='/404' />
   </Route>

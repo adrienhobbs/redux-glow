@@ -136,9 +136,8 @@ export class Nav extends React.Component {
     }
   }
   checkFramePositionType (path) {
-    console.log(path);
     if (!(isNull(this.props.viewport.isPhone)) && path === '/') {
-      TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'absolute'});
+      TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'fixed'});
     }
     if (!(isNull(this.props.viewport.isPhone)) && path !== '/') {
       TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'fixed'});

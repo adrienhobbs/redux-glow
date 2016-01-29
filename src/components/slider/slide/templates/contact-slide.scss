@@ -30,7 +30,7 @@
 
 :global {
   
-  $paragraphBottomMargin: em(40);
+  $paragraphBottomMargin: em(20);
 
   .form-paragraph {
     margin-bottom: $paragraphBottomMargin;
@@ -43,8 +43,35 @@
       // display: none !important;
     }
   }
-
+  #connect-slide-map {
+  
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
   #connect-slide {
+    .connect-headline {
+      text-align: center;
+    }
+
+    .submit-btn-ctr {
+      position: initial;
+      bottom: auto;
+      right: auto;
+      width: 100%;
+      text-align: center;
+      button {
+        color: $radical-red;
+        &:hover {
+          background-color: white;
+        }
+      }
+    }
+    textarea {
+      height: em(100);
+    }
     .newsletter {
       margin-top: 0;
       p {
@@ -60,37 +87,49 @@
 
     }
   }
-
 }
-:local {
 
+:local {
   .connectSlide {
-    background-color: white;
-    padding-top: $nav-height;
-    max-width: $outer-width;
-    margin-left: auto;
-    margin-right: auto;
+    // background-color: white;
+    // padding-top: $nav-height;
+    // max-width: $outer-width;
+    // margin-left: auto;
+    // margin-right: auto;
     width: 100%;
-    height: 100vh;
-    lost-flex-container: row;
-    
+    // lost-flex-container: row;
+    background-color: rgb(87, 182, 154);
+    position: absolute;
+    top:0;
+    bottom: 0;
   }
   
-  .map {
-    height: 40%;
-    background-color: rgb(87, 182, 154);
-    width: 100%;
-    @include media($under-small) {
-      height: 20%;
-    }
-  }
-
   .connectForm {
-    lost-column: 1/2 0;
-    @include media($under-small) {
-      lost-column: 1;
+    height: 100%;
+    position:absolute ;
+    
+    width: 100%;
+  }
+
+  .connectFormCtr {
+    width: 93%;
+    @include media($small-medium-screen) {
+      width: 75%;
     }
+    @include media($large-screen-up) {
+      width: 50%;
+    }
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: em(35);
+    text-align: center;
   }
 
 
+  
 }

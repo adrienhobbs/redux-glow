@@ -11,6 +11,7 @@ export class SouthernKitchen extends BaseTemplate {
   constructor (props) {
     super(props);
   }
+
   videoPlayNow () {
     const TL = new TimelineLite();
     TL.add(() => this.refs.video.play());
@@ -51,14 +52,7 @@ export class SouthernKitchen extends BaseTemplate {
             </div>
             <div className='about-center'>
               <div className='copy-inner'>
-                <p style={copyStyle}>
-                  GLOWs relationship with celebrity chef Carla Hall from ABC’s “The Chew” began with a conversation around launching a Kickstarter campaign to raise funds to support her life long dream of opening her own restaurant, Carla Hall’s Southern Kitchen. <br />
-                  <br />
-                  GLOW laid out a strategy that began with a complete social refresh of all of Carla’s social profiles to ignite and strengthen her base before we kicked off her Kickstarter campaign.
-                    <br />
-                    <br />
-                      In just 3.5 months, we increased Facebook page Likes by 20.73 % - Twitter followers by 8.0% and Instagram follows by 34.48%.
-                        </p>
+                <p style={copyStyle}>GLOWs relationship with celebrity chef Carla Hall from ABC’s “The Chew” began with a conversation around launching a Kickstarter campaign to raise funds to support her life long dream of opening her own restaurant, Carla Hall’s Southern Kitchen. <br /> <br /> GLOW laid out a strategy that began with a complete social refresh of all of Carla’s social profiles to ignite and strengthen her base before we kicked off her Kickstarter campaign.<br /> <br /> In just 3.5 months, we increased Facebook page Likes by 20.73 % - Twitter followers by 8.0% and Instagram follows by 34.48%.</p>
               </div>
             </div>
             <Sidebar data={this.props.data}/>

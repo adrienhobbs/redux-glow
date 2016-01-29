@@ -27,27 +27,6 @@
     }
   }
 
-
-  // .case-study-expanded-container {
-  //   position: fixed;
-  //   overflow-y: scroll;
-  //   z-index: 10;
-  //   @include media($large-screen-up) {
-  //     @include span-columns(12);
-  //     @include omega(2n);
-  //   }
-  //   @include span-columns(12);
-  //   @include omega();
-  //   margin-bottom: rem(30);
-  // }
-
-  //TYPOGRAPHY
-
-
-  // .featured-image {
-  //   height: 100%;
-  // }
-
   .info {
     @include position(relative, null null 0 0);
     width: 100%;
@@ -145,6 +124,11 @@
     .view-case-study {
       cursor: pointer;
       text-align: center;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 91%;
       width: 100%;
 
       svg {
@@ -157,29 +141,14 @@
         }
       }
       @include media($large-screen-up) {
-        text-align: right;
-        width: 80%;
-        top: -20%;
-        margin: 0;
-        position: absolute;
-      }
-      @include media(max-height 900px) {
-        cursor: pointer;
-        text-align: center;
-        width: 100%;
-        position: relative;
-        top: 1em;
-      }
-      @include media($xsmall-large-screen) {
-        position: absolute;
-        top: 91%;
+        top: 100%;
       }
     }
   }
 }
 
 :local {
-  
+
   .featuredSlideContainer {
     height: 100%;
     width: 100%;
@@ -201,7 +170,7 @@
           height: 100%;
         }
         position: absolute;
-        bottom: 1%;
+        bottom: 0%;
         left: 0;
         @include media($medium-large-screen) {
           position: absolute;
@@ -210,7 +179,7 @@
         @include media($large-screen-up) {
           @include position(absolute, null null 5% 0);
           position: absolute;
-          bottom: 5%;
+          bottom: 8%;
         }
         width:100%;
       }

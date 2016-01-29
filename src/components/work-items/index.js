@@ -26,10 +26,6 @@ export class WorkItems extends WorkHelpers  {
     };
   }
 
-  componentWillMount () {
-    // TweenLite.set(document.documentElement, {overflowY: 'scroll'});
-  }
-
   hideInactiveProjects (activeStudy, singleMode) {
     this.setState({singleMode: singleMode, activeStudy: activeStudy});
   }

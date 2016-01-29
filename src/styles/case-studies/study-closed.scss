@@ -24,10 +24,7 @@
       }
       position: relative;
       overflow: hidden;
-      img {
-        @include size(100%);
-      }
-    @include aspect-ratio(835px, 441px); 
+    @include aspect-ratio(em(835), em(441)); 
     }
 
     .project-overlay {
@@ -245,19 +242,6 @@
   }
 
   .case-bg {
-    // @include media($xsmall-screen) {
-    //   min-height: 150px;
-    // }
-    // @include media($small-medium-screen) {
-    //   min-height: 250px;
-    // }
-    // @include media($medium-laptop) {
-    //   min-height: 300px;
-    // }
-    // @include media($above-laptop) {
-    //   min-height: 250px;
-    // }
-
 
     @include backface-visibility(hidden);
     svg {

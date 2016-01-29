@@ -7,6 +7,7 @@ import du from 'domutil';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import { connect } from 'react-redux';
 import styles from './home.scss';
+
 const mapStateToProps = (state) => ({
   counter: state.counter,
   nav: state.nav,
@@ -39,16 +40,13 @@ export class DesktopHomeView extends PageLayout {
       this.actions.start(size - 1);
     }
     TweenLite.set('.home-container', {className: '+=home-container-desktop'});
-    TweenLite.set(document.documentElement, {overflowY: 'scroll'});
+    // TweenLite.set(document.documentElement, {overflowY: 'scroll'});
   }
   componentDidMount () {
     this.mountDotsAndTitles();
-    this.footer = document.getElementById('footer');
-    // TweenLite.set(this.footer, {autoAlpha: 0});
-    // TweenLite.set('.home-container', {className: '+=home-container-desktop'});
+    TweenLite.set('.home-container', {className: '+=home-container-desktop'});
     this.checkTouchEvents();
-
-    // this.checkKeyDownEvent();
+    this.checkKeyDownEvent();
   }
   componentDidUpdate (prevProps, prevState) {
     if (this.props.counter.current !== prevProps.counter.current) {
@@ -61,8 +59,6 @@ export class DesktopHomeView extends PageLayout {
     }
   }
   componentWillUnmount () {
-    // TweenLite.set(this.footer, {autoAlpha: 1});
-    //
     TweenLite.set(document.documentElement, {overflowY: 'initial'});
     ReactDOM.unmountComponentAtNode(document.getElementById('frame-left'));
     ReactDOM.unmountComponentAtNode(document.getElementById('frame-right'));
@@ -101,10 +97,12 @@ export class DesktopHomeView extends PageLayout {
       this.listenForKeyDown();
     }
   }
-  listenForKeyDown () {
-    du.bind(document, 'keydown', this.onKeyDown);
+  timelineIsActive () {
+    return this.props.TL.isActive();
   }
-
+  listenForKeyDown () {
+    du.bind(document, 'keydown', this.onKeyDown.bind(this));
+  }
   enteredSingleView (prevState) {
     return (this.state.singleView && !prevState.singleView);
   }
@@ -161,7 +159,6 @@ export class DesktopHomeView extends PageLayout {
     this.checkThreshold(e);
   }
   onKeyDown (e) {
-    if (!this.props.TL.isActive()) {
       switch (e.keyCode) {
         case 38 :
           this.checkThreshold({deltaY: -51, type: 'wheel'});
@@ -170,7 +167,6 @@ export class DesktopHomeView extends PageLayout {
           this.checkThreshold({deltaY: 51, type: 'wheel'});
           break;
       }
-    }
   }
   /*eslint-enable */
   toggleNav (navState) {

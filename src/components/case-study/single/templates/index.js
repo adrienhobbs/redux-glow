@@ -4,6 +4,7 @@ import Proof from './tnt/proof.js';
 import Sharknado from './syfy/sharknado.js';
 import WKC from './wkc/dog-show.js';
 import MindyProject from './hulu/mindy.js';
+import Veep from './hbo/veep.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
@@ -11,7 +12,8 @@ const CaseStudyTemplates = (function templates () {
     Proof: Proof,
     Sharknado: Sharknado,
     WKC: WKC,
-    Mindy: MindyProject
+    Mindy: MindyProject,
+    Veep: Veep
   };
 }());
 

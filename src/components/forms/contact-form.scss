@@ -3,14 +3,15 @@
   $connect-row-margin: rem(10);
   .contact-form, .newsletter {
     width: 97%;
-  
   }
   .message-button-ctr {
     position: relative;
     @include outer-container(50%);
+    color: white;
     button {
       margin-top: em(20);
       width: 80%;
+    color: white !important;
     }
   }
   .message {
@@ -71,7 +72,6 @@
       font-size: 1.25em;
       border-radius: 0;
       font-weight: normal;
-      color: $radical-red;
       width: 100%;
       background-color: transparent;
       @extend .contact-form-input;

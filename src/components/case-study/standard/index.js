@@ -44,7 +44,8 @@ const ProjectIntro = React.createClass({
   componentDidMount () {
     if (this.props.isOpen && !this.state.singleMode) {
       this.isNew = true;
-      this.openStudyFromProject();
+      this.context.router.push({pathname: '/work'});
+      // this.openStudyFromProject();
     }
   },
 

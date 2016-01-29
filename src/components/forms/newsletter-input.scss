@@ -64,14 +64,7 @@
         color: white;
       }
 
-      .message-button-ctr {
-        position: relative;
-        @include outer-container(50%);
-        button {
-          margin-top: em(20);
-          width: 80%;
-        }
-      }
+
     }
 
     .form, .newsletter-form {
