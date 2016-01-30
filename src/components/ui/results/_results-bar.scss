@@ -1,6 +1,18 @@
 @import 'base';
 :global {
   .results {
+    position: relative;
+    &-outer {
+      position: relative;
+    }
+    &-bg {
+      position: absolute;
+      width: 100%;
+      height: 75%;
+      @include media($under-small) {
+        height: 100%;
+      }
+    }
     section {
       padding-top: em(25);
     }
@@ -48,7 +60,7 @@
     width: 60px;
     background: white;
     opacity: 0.3;
-    @include margin(40px auto 40px auto);
+    @include margin(40px auto 30px auto);
     @include media($medium-screen-up) {
       width: 80px;
       height: 2px;
@@ -70,7 +82,6 @@
     @include media($under-medium) {
       font-size: rem(80);
     }
-
     @include media($under-small) {
       font-size: rem(40);
     }
@@ -92,7 +103,6 @@
     @include media($small-phones) {
       max-width: 100%;
     }
-
     @include media($small-medium-screen) {
       max-width: 60%; 
       margin: auto;
@@ -100,19 +110,15 @@
     @include media($under-medium) {
       font-size: rem(20);
     }
-
     @include media($under-small) {
       font-size: rem(13);
     }
     @include media($medium-screen-up) {
-      // lost-center: 56%;
       width: 100%;
       max-width: 100%;
       font-size: rem(15);
-      // margin-top: -20px;
     }
     margin-top: -10px;
-    // white-space: nowrap;
   }
 
   .results-info-box {
@@ -136,6 +142,7 @@
     margin-bottom: em(25);
     lost-flex-container: row;
     width: 100%;
+    text-align: center;
 
     .stat-box {
       lost-column: 1/2;
@@ -143,6 +150,46 @@
     .stat-box-triple {
       lost-column: 1/3;
       text-align: center;
+    }
+    .stat-box-device {
+      lost-column: 1 0 0;
+    }
+    .stat-num {
+      @include media($under-medium) {
+        font-size: rem(40);
+      }
+      @include media($under-small) {
+        font-size: rem(40);
+      }
+      @include media($medium-screen-up) {
+        font-size: rem(60);
+      }
+      color: white;
+    }
+    .stat-device-left, .stat-device-right {
+      lost-column: 15/100 0 0;
+      @include media($under-small) {
+        lost-column: 1/2 0 0;
+      }
+      .stat-description, .stat-label {
+        @include media($under-medium) {
+          font-size: rem(10);
+        }
+        @include media($under-small) {
+          font-size: rem(13);
+        }
+        @include media($medium-screen-up) {
+          width: 100%;
+          max-width: 100%;
+          font-size: rem(15);
+        }
+      }
+    }
+    .stat-device-image {
+      lost-column: 70/100 0 0;
+      @include media($under-small) {
+        display: none;
+      }
     }
     .stat-box-quad {
       lost-column: 1/4;

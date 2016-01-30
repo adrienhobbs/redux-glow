@@ -2,9 +2,21 @@ import React from 'react';
 import './_results-bar.scss';
 
 const Results = React.createClass({
+
   propTypes: {
     bg: React.PropTypes.string,
     data: React.PropTypes.object
+  },
+
+  getStatClass () {
+    switch (this.props.data.get('results').stats.length) {
+      case 8 :
+        return 'stat-box-quad';
+      case 4 :
+        return 'stat-box-device';
+      default :
+        return 'stat-box';
+    }
   },
   getStatContent () {
     return this.props.data.get('results').stats.map((stat, i) => {

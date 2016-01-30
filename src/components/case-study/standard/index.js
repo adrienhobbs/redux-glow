@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import du from 'domutil';
 import CaseStudy from 'components/case-study';
 import BackBar from 'components/ui/backbar';
-import {snakeCase} from 'lodash';
+import {snakeCase, map} from 'lodash';
 import HoverMixin from './hover-mixin';
 
 const ProjectIntro = React.createClass({
@@ -41,10 +41,11 @@ const ProjectIntro = React.createClass({
       }
     }
   },
+
   componentDidMount () {
     if (this.props.isOpen && !this.state.singleMode) {
       this.isNew = true;
-      this.context.router.push({pathname: '/work'});
+      // this.context.router.push({pathname: '/work'});
       // this.openStudyFromProject();
     }
   },
@@ -175,6 +176,11 @@ const ProjectIntro = React.createClass({
     return this.studyTL.reverse();
   },
 
+  getTags () {
+    return map(this.props.data.get('services'), function (service, i) {
+      return <span key={i}>{service}</span>
+    }); 
+  },
   render () {
     const backBar = (this.state.singleMode) ? <BackBar singleMode={this.state.singleMode} showBar={this.state.showBody} data={this.props.data.toJS()} goBack={this.toggleStudyState}  /> : null;
     return (
@@ -194,9 +200,7 @@ const ProjectIntro = React.createClass({
             <span className='project-name' ref='projectName'>{this.props.data.get('title')}</span>
           </div>
           <div className='tags' ref='tags'>
-            <span>media</span>
-            <span>social</span>
-            <span>strategy</span>
+            {this.getTags()}
           </div>
         </div>
       </div>

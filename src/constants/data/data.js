@@ -14,64 +14,6 @@ const data = [
   //   cat: " ― glow hq ― "
   // },
   {
-    featured: false,
-    client: 'hulu',
-    project: "mindy",
-    title: "the mindy project",
-    subtitle: "social media campaign",
-    type: "case-study",
-    infoPath: s3 + "case-studies/hulu/mindy-project/logo-title.svg",
-    backgroundImageUrl: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
-    logoColor: "#e70062",
-    secColor: "#18d4ff",
-    gradientTop: "#e70062",
-    gradientBottom: "#18d4ff",
-    clientLogoColor: '#6eb116',
-    headlineColor: "#e70062",
-    copyColor: "#000",
-    featuredProjectTitleColor: '#e70062',
-    cat: " ― hulu | mindy ― ",
-    templateName: 'Mindy',
-    results: {
-      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
-      statColor: '#000000',
-      statLabelColor: '#ed0f77',
-      customHtml: '<div class="info-box"> testing </div>'
-    },
-    services: ['community management', 'video production', 'social content'],
-    recognition: ['short award finalist', 'best twitter campaign'],
-    sidebar: {
-      logoColor: '#129fbf',
-      copyColor: '#129fbf',
-      headlineColor: '#fff'
-    },
-    shareButton: {
-      strokeColor: '#fff',
-      copyColor: '#fff'
-    },
-    sidebarLogoColor: '#129fbf',
-    sidebarCopyColor: '#129fbf'
-  },
-  {
-    featured: false,
-    client: 'hulu',
-    project: "casual",
-    title: "casual",
-    subtitle: "social campaign",
-    type: "case-study",
-    infoPath: s3 + "case-studies/hulu/casual/logo-title.svg",
-    backgroundImageUrl: s3 + 'case-studies/hulu/casual/landscape.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/hulu/casual/landscape.jpg',
-    logoColor: "#68ae34",
-    secColor: "#5f6e8d",
-    gradientTop: "#68ae34",
-    gradientBottom: "#5f6e8d",
-    featuredProjectTitleColor: '#68ae34',
-    clientLogoColor: '#6eb116',
-    cat: " ― hulu | casual ― "
-  },
-  {
     featured: true,
     client: 'carla hall',
     project: "southern kitchen",
@@ -162,7 +104,7 @@ const data = [
     }
   },
   {
-    featured: false,
+    featured: true,
     client: 'tnt',
     project: "proof",
     title: "proof",
@@ -180,12 +122,12 @@ const data = [
     cat: " ― tnt | proof ― ",
     logo: "HBO_logo.svg",
     templateName: 'Proof',
-    services: ['community management', 'video production', 'social content'],
+    services: ['social strategy', 'community management', 'video production'],
     results: {
-      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
-      statColor: '#000000',
-      statLabelColor: '#ed0f77',
-      customHtml: '<div class="info-box"> testing </div>'
+      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+      statColor: '#ffffff',
+      statLabelColor: '#000000',
+      bgColor: '#c3c3c3'
     },
     sidebar: {
       logoColor: '#aaa',
@@ -196,6 +138,9 @@ const data = [
       strokeColor: '#82b3dc',
       copyColor: '#000'
     },
+    endShape: {
+      bgColor: '#82b3dc'
+    }
   },
   {
     featured: false,
@@ -212,6 +157,7 @@ const data = [
     gradientTop: "#d52027",
     gradientBottom: "#1d1d1d",
     cat: " ― ilny | aor ― ",
+    services: ['community management', 'video production', 'social content'],
     logo: "HBO_logo.svg"
   },
   {
@@ -229,6 +175,7 @@ const data = [
     gradientTop: "#54325b",
     gradientBottom: "#00838b",
     cat: " ― syfy | ascension ― ",
+    services: ['community management', 'video production', 'social content'],
     logo: "Syfy.svg"
   },
   {
@@ -246,6 +193,7 @@ const data = [
     gradientTop: "#00283f",
     gradientBottom: "#074d68",
     cat: " ― cn | calendar ― ",
+    services: ['community management', 'video production', 'social content'],
     logo: "Syfy.svg"
   },
   {
@@ -328,3 +276,62 @@ const data = [
 ];
 
 module.exports = data;
+
+// {
+//   featured: false,
+//   client: 'hulu',
+//   project: "mindy",
+//   title: "the mindy project",
+//   subtitle: "social media campaign",
+//   type: "case-study",
+//   infoPath: s3 + "case-studies/hulu/mindy-project/logo-title.svg",
+//   backgroundImageUrl: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
+//   backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
+//   logoColor: "#e70062",
+//   secColor: "#18d4ff",
+//   gradientTop: "#e70062",
+//   gradientBottom: "#18d4ff",
+//   clientLogoColor: '#6eb116',
+//   headlineColor: "#e70062",
+//   copyColor: "#000",
+//   featuredProjectTitleColor: '#e70062',
+//   cat: " ― hulu | mindy ― ",
+//   templateName: 'Mindy',
+//   results: {
+//     stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+//     statColor: '#000000',
+//     statLabelColor: '#ed0f77',
+//     customHtml: '<div class="info-box"> testing </div>'
+//   },
+//   services: ['community management', 'video production', 'social content'],
+//   recognition: ['short award finalist', 'best twitter campaign'],
+//   sidebar: {
+//     logoColor: '#129fbf',
+//     copyColor: '#129fbf',
+//     headlineColor: '#fff'
+//   },
+//   shareButton: {
+//     strokeColor: '#fff',
+//     copyColor: '#fff'
+//   },
+//   sidebarLogoColor: '#129fbf',
+//   sidebarCopyColor: '#129fbf'
+// },
+// {
+//   featured: false,
+//   client: 'hulu',
+//   project: "casual",
+//   title: "casual",
+//   subtitle: "social campaign",
+//   type: "case-study",
+//   infoPath: s3 + "case-studies/hulu/casual/logo-title.svg",
+//   backgroundImageUrl: s3 + 'case-studies/hulu/casual/landscape.jpg',
+//   backgroundImageUrlVert: s3 + 'case-studies/hulu/casual/landscape.jpg',
+//   logoColor: "#68ae34",
+//   secColor: "#5f6e8d",
+//   gradientTop: "#68ae34",
+//   gradientBottom: "#5f6e8d",
+//   featuredProjectTitleColor: '#68ae34',
+//   clientLogoColor: '#6eb116',
+//   cat: " ― hulu | casual ― "
+// },
