@@ -243,7 +243,6 @@
     background-position: center center;
   }
 
-
   .video-block {
     position: relative;
     margin-top: em(80);
@@ -354,12 +353,8 @@
     }
   }
   .social-strategy {
-
     padding-top: em(40);
-
-
   }
-
 
   .end {
     position: absolute;
@@ -372,6 +367,7 @@
       transform: translateX(-50%);
     }
   }
+
   .img-single {
     margin: auto;
     max-width: 58%;
@@ -382,6 +378,7 @@
     position: relative;
     z-index: 2;
   }
+
   .img-triple {
     lost-flex-container: row;
     lost-center: 58%;
@@ -391,7 +388,7 @@
       lost-column: 1/3;
     }
   }
-  .strategy {
+  .strategy, .media-campaign {
     position: relative;
   }
 }

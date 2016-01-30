@@ -72,7 +72,7 @@ const NavLink = React.createClass({
     // const offset    = 0.1;
     const lineWidth = this.refs.link.getBoundingClientRect().width + 6;
 
-    this.splitText = new SplitText(this.refs.link, {type: 'chars'});
+    // this.splitText = new SplitText(this.refs.link, {type: 'chars'});
     this.splitTL   = new TimelineMax({onReverseComplete: () => {
       TweenLite.set(this.refs.lineSvg, {clearProps: 'all'});
     }});
@@ -105,7 +105,7 @@ const NavLink = React.createClass({
       <div ref='linkCtr'  onClick={this.onClick} onTouchEnd={this.onClick} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}  className='nav-item'>
         <a ref='link'  >{this.props.name}</a>
         <svg ref='lineSvg' className='line' height={`${lineHeight}px`}>
-          <line ref='line' id='underLine' fill='none' stroke={this.props.color} strokeWidth={lineHeight} strokeMiterLimit='10' x1='0' y1='2' x2='0' y2='2'/>
+          <line ref='line' id='underLine' fill='none' stroke={this.props.color} strokeWidth={lineHeight} strokeMiterLimit='10' x1='0' y1='0' x2='0' y2='0'/>
         </svg>
       </div>
     );

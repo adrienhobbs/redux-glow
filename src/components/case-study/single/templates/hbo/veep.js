@@ -71,16 +71,16 @@ export class Veep extends BaseTemplate {
                 <div className='copy-inner'>
                   <p style={this.getCopyStyle()}>Glow also partnered to create the digital media campaigns for Veep.  As both social and display partner, we were able to work with HBO to integrate the robocall number into key art on all display units in the campaign, adding a significant element of reach and awareness to the effort.</p>
                 </div>
+                </div>
+                <div className='img-single'>
+                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/veep-media.png' alt='' />
               </div>
-            </div>
-
             <div className='end'>
-            <div className='img-single'>
-              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/veep-media.png' alt='' />
-            </div>
+
               <svg preserveAspectRatio='none' className='end-shape' ref='endShape' version='1.1' id='Layer_1'  x='0px' y='0px' viewBox='0 0 1920 600' >
                 <polygon style={{fill:  this.props.data.get('endShape').bgColor}} points='0,0 1920,314.6 1920,600 0,600 '/>
               </svg>
+            </div>
             </div>
           </div>
         </div>

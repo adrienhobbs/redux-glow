@@ -50,6 +50,7 @@
       }
 
       .sidebar-body {
+        font-family: $gt;
         padding-left: 10%;
         @include media($under-large) {
           text-align: center;

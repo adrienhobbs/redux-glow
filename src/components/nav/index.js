@@ -56,10 +56,11 @@ export class Nav extends React.Component {
       this.toggleNavVisibility();
     }
     if (this.state.mobileNavOpen && !prevState.mobileNavOpen) {
-      TweenLite.to(this.refs.mobileNav, 0.4, {scaleY: 1, transformOrigin: 'center top', ease: Expo.easeInOut});
+      // TweenLite.to(this.refs.mobileNav, 0.4, {scaleY: 1, transformOrigin: 'center top', ease: Expo.easeInOut});
+      TweenLite.fromTo(this.refs.mobileNav, 0.6, {scale: 2, autoAlpha: 0}, {scale: 1, autoAlpha: 1, transformOrigin: 'center center', ease: Expo.easeInOut});
     }
     if (!this.state.mobileNavOpen && prevState.mobileNavOpen) {
-      TweenLite.set(this.refs.mobileNav, {scaleY: 0, transformOrigin: 'center top', ease: Expo.easeInOut});
+      TweenLite.to(this.refs.mobileNav, 0.6, {scale: 2, autoAlpha: 0, transformOrigin: 'center', ease: Expo.easeInOut});
     }
 
     TweenLite.set(this.ham, {attr: {fill: this.getLinkColor()}});
@@ -72,7 +73,6 @@ export class Nav extends React.Component {
   getAnimationDirection (newIndex) {
     return (newIndex > this.state.currentLinkIndex) ? 'right' : 'left';
   }
-
   toggleNavVisibility () {
     const AnimVals = ToggleVis(this.props.nav.isVisible);
     AnimVals.TL.addLabel('start', '0');
@@ -103,7 +103,6 @@ export class Nav extends React.Component {
       );
     }, this);
   }
-
   getNavLinks (mobile) {
     return Links.map((link, i) => {
       return (
@@ -123,7 +122,6 @@ export class Nav extends React.Component {
       );
     }, this);
   }
-
   getLinkColor () {
     return (this.props.currentPath !== '/') ? Colors.radRed : this.props.colors.get(this.props.counter.current);
   }
@@ -155,7 +153,6 @@ export class Nav extends React.Component {
       this.setCurrentLink(newIndex);
     }
   }
-
   logoClick () {
     if (this.props.currentPath === '/') {
       if (this.state.mobileNavOpen) {
@@ -169,12 +166,10 @@ export class Nav extends React.Component {
       }
     }
   }
-
   setLogoBgColor () {
     TweenLite.to(this.refs.logoBg, 1.4, {backgroundColor: this.getLinkColor(), ease: Expo.easeInOut});
     TweenLite.to(this.refs.twitterSVG.refs.twitterIcon, 1.8, {fill: this.getLinkColor(), ease: Expo.easeInOut});
   }
-
   render () {
     return (
       <div className='nav-container'>
@@ -204,7 +199,6 @@ export class Nav extends React.Component {
       </div>
     );
   }
-
 };
 
 export default connect(mapStateToProps)(Nav);
