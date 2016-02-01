@@ -43,7 +43,6 @@ export class DesktopHomeView extends PageLayout {
     // TweenLite.set(document.documentElement, {overflowY: 'scroll'});
   }
   componentDidMount () {
-    console.log(this);
     this.mountDotsAndTitles();
     TweenLite.set('.home-container', {className: '+=home-container-desktop'});
     this.checkTouchEvents();
@@ -122,13 +121,13 @@ export class DesktopHomeView extends PageLayout {
   }
   checkThreshold (e) {
     if (!this.state.singleView) {
-      if (e.deltaY > 50) {
+      if (e.deltaY >= 1) {
         if (e.type === 'wheel') {
           this.goForward();
         } else {
           this.goBack();
         }
-      } else if (e.deltaY < -50) {
+      } else if (e.deltaY <= -1) {
         if (e.type === 'wheel') {
           this.goBack();
         } else {
@@ -137,6 +136,7 @@ export class DesktopHomeView extends PageLayout {
       }
     }
   }
+
   onTouchStart (e) {
     if (!this.state.singleView && this.props.viewport.hasTouch) {
       const t = (e.targetTouches) ? e.targetTouches[0] : e;
@@ -158,6 +158,7 @@ export class DesktopHomeView extends PageLayout {
   /* eslint-disable */
   onWheel (e) {
     this.checkThreshold(e);
+    // var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
   }
   onKeyDown (e) {
       switch (e.keyCode) {
