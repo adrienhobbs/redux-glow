@@ -5,6 +5,8 @@ import Sharknado from './syfy/sharknado.js';
 import WKC from './wkc/dog-show.js';
 import MindyProject from './hulu/mindy.js';
 import Veep from './hbo/veep.js';
+import ILNY from './ilny/ilny.js';
+import WinterCalendar from './cn/winter-calendar.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
@@ -13,7 +15,9 @@ const CaseStudyTemplates = (function templates () {
     Sharknado: Sharknado,
     WKC: WKC,
     Mindy: MindyProject,
-    Veep: Veep
+    Veep: Veep,
+    ILNY: ILNY,
+    WinterCalendar: WinterCalendar
   };
 }());
 

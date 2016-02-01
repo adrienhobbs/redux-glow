@@ -70,6 +70,11 @@ export class BaseStudyComponent extends React.Component {
     });
   }
 
+  createHeadlineEl (headline) {
+    return (
+      <h1 style={this.getHeadlineStyle()} className='page-title'>{headline} </h1>
+    ) 
+  }
   render () {
     return (
       <h1>Not Implemented Yet!</h1>

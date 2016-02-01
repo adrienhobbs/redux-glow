@@ -155,7 +155,7 @@ const data = [
   },
   {
     featured: false,
-    client: 'i love ny',
+    client: 'ILNY',
     project: "social retainer",
     title: "social retainer",
     subtitle: "social campaign",
@@ -168,7 +168,31 @@ const data = [
     gradientTop: "#d52027",
     gradientBottom: "#1d1d1d",
     cat: " ― ilny | aor ― ",
-    services: ['community management', 'video production', 'social content']
+    services: ['community management', 'video production', 'social content'],
+    templateName: 'ILNY',
+    headlineColor: '#d52027',
+    results: {
+      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+      statColor: '#ffffff',
+      statLabelColor: '#d52027',
+      bgColor: '#171717'
+    },
+    sidebar: {
+      // logoColor: '#aaa',
+      copyColor: '#616161',
+      headlineColor: '#fff'
+    },
+    shareButton: {
+      strokeColor: '#d52027',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#82b3dc',
+      summaryCopyColor: '#000000'
+    },
+    endShape: {
+      bgColor: '#171717'
+    }
   },
   {
     featured: false,
@@ -202,7 +226,33 @@ const data = [
     gradientTop: "#00283f",
     gradientBottom: "#074d68",
     cat: " ― cn | calendar ― ",
-    services: ['community management', 'video production', 'social content']
+    services: ['ui/ux', 'animation', 'development'],
+    templateName: 'WinterCalendar',
+    headlineColor: '#ffffff',
+    results: {
+      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+      statColor: '#ffffff',
+      statLabelColor: '#fcb823',
+      bgColor: '#0d4155'
+    },
+    sidebar: {
+      // logoColor: '#aaa',
+      copyColor: '#83a6b4',
+      headlineColor: '#fff'
+    },
+    shareButton: {
+      strokeColor: '#fcb823',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#82b3dc',
+      summaryCopyColor: '#000000'
+    },
+    endShape: {
+      bgColor: '#00283f'
+    }
+
+
   },
   {
     featured: false,
