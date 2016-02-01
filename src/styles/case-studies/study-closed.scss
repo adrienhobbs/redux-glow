@@ -224,22 +224,6 @@
 
   }
 
-  .view-button {
-    color: white;
-    margin: auto;
-    text-align: center;
-    position: relative;
-    min-height: 83px;
-    font-size: rem(15);
-    font-family: $gt;
-    div {
-      width: 150px;
-      height:33px;
-      @include padding(5px 5px 5px 5px);
-      border-radius: 3px;
-      @include center(xy);
-    }
-  }
 
   .case-bg {
 

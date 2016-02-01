@@ -45,8 +45,7 @@ const ProjectIntro = React.createClass({
   componentDidMount () {
     if (this.props.isOpen && !this.state.singleMode) {
       this.isNew = true;
-      // this.context.router.push({pathname: '/work'});
-      // this.openStudyFromProject();
+      this.openStudyFromProject();
     }
   },
 
@@ -170,7 +169,6 @@ const ProjectIntro = React.createClass({
         clearProps: 'all'
       });
     });
-
     du.removeClass(document.body, 'locked');
     du.removeClass(document.documentElement, 'locked');
     return this.studyTL.reverse();
@@ -178,8 +176,8 @@ const ProjectIntro = React.createClass({
 
   getTags () {
     return map(this.props.data.get('services'), function (service, i) {
-      return <span key={i}>{service}</span>
-    }); 
+      return <span key={i}>{service}</span>;
+    });
   },
   render () {
     const backBar = (this.state.singleMode) ? <BackBar singleMode={this.state.singleMode} showBar={this.state.showBody} data={this.props.data.toJS()} goBack={this.toggleStudyState}  /> : null;

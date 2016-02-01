@@ -18,14 +18,15 @@ const ShareButton = React.createClass({
   },
   componentDidMount () {
     this.tl = new TimelineMax();
-    this.setupTl();
+    // this.setupTl();
   },
   shouldComponentUpdate (prevProps, prevState) {
     return (this.state.isOpen !== prevState.isOpen);
   },
   componentDidUpdate () {
     if (this.state.isOpen) {
-      this.tl.play();
+      // this.tl.play();
+      this.setupTl();
     } else {
       this.tl.reverse();
     }
@@ -60,7 +61,7 @@ const ShareButton = React.createClass({
     this.tl.add(TweenMax.to(this.refs.facebook.refs.icon, speed, {opacity:1, ease:Quad.easeOut, delay:-speed}));
     this.tl.add(TweenMax.from(this.refs.email.refs.icon, speed, {y:'+=18', opacity:0, ease:Back.easeOut.config(3), delay:-(speed - 0.1)}));
     this.tl.add(TweenMax.to(this.refs.email.refs.icon, speed, {opacity:1, ease:Quad.easeOut, delay:-speed}));
-    this.tl.pause();
+    // this.tl.pause();
   },
   render () {
     return (

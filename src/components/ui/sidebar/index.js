@@ -16,7 +16,6 @@ const Sidebar = React.createClass({
   getLogoColor () {
     return this.props.data.get('sidebar').logoColor || '#ffffff';
   },
-
   getCopyColor () {
     return {color: this.props.data.get('sidebar').copyColor || '#ffffff'};
   },
@@ -79,7 +78,6 @@ const Sidebar = React.createClass({
     return !(_.isEmpty(this.props.data.get('recognition')));
   },
   render () {
-    console.log(this.getCopyColor());
     return (
       <div className='sidebar'>
         <div className={this.getSidebarBoxClass()} id='sidebar-client'>

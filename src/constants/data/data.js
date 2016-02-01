@@ -41,7 +41,6 @@ const data = [
       statLabelColor: '#ed0f77',
       customHtml: '<div class="info-box"> testing </div>'
     },
-    videoCampaign: {},
     fullScreenBgImg: s3 + 'case-studies/carla-hall/southern-kitchen/carla-full-bg.jpg',
     templateName: 'SouthernKitchen',
     sidebar: {
@@ -52,6 +51,10 @@ const data = [
     shareButton: {
       strokeColor: '#ed0f77',
       copyColor: '#4d4d4d'
+    },
+    mobile: {
+      bgColor: '#c3c3c3',
+      summaryCopyColor: '#000000'
     }
   },
   {
@@ -82,6 +85,10 @@ const data = [
     shareButton: {
       strokeColor: '#C03D3B',
       copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0e374a',
+      summaryCopyColor: '#000000'
     },
     results: {
       stats: [
@@ -138,6 +145,10 @@ const data = [
       strokeColor: '#82b3dc',
       copyColor: '#000'
     },
+    mobile: {
+      bgColor: '#82b3dc',
+      summaryCopyColor: '#000000'
+    },
     endShape: {
       bgColor: '#82b3dc'
     }
@@ -157,8 +168,7 @@ const data = [
     gradientTop: "#d52027",
     gradientBottom: "#1d1d1d",
     cat: " ― ilny | aor ― ",
-    services: ['community management', 'video production', 'social content'],
-    logo: "HBO_logo.svg"
+    services: ['community management', 'video production', 'social content']
   },
   {
     featured: false,
@@ -175,8 +185,7 @@ const data = [
     gradientTop: "#54325b",
     gradientBottom: "#00838b",
     cat: " ― syfy | ascension ― ",
-    services: ['community management', 'video production', 'social content'],
-    logo: "Syfy.svg"
+    services: ['community management', 'video production', 'social content']
   },
   {
     featured: false,
@@ -193,8 +202,7 @@ const data = [
     gradientTop: "#00283f",
     gradientBottom: "#074d68",
     cat: " ― cn | calendar ― ",
-    services: ['community management', 'video production', 'social content'],
-    logo: "Syfy.svg"
+    services: ['community management', 'video production', 'social content']
   },
   {
     featured: false,
@@ -214,7 +222,6 @@ const data = [
     headlineColor: '#a3373f',
     sidebarLogoColor: '#ffffff',
     cat: " ― syfy | sharknado ",
-    logo: "CartoonNetwork.svg",
     templateName: 'Sharknado',
     sidebarCopyColor: '#ffffff',
     services: ['community management', 'video production', 'social content'],
@@ -246,7 +253,6 @@ const data = [
     templateName: 'WKC',
     services: ['community management', 'video production', 'social content'],
     cat: " ― wkc | dog-show ",
-    logo: "CartoonNetwork.svg",
     clientLogoColor: '#d6963f',
   },
   {

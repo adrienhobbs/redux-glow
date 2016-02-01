@@ -1,9 +1,26 @@
 :global {
 
-  .hidden {
-    opacity: 0;
-    visibility: hidden;
+  .view-button {
+    color: white;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    min-height: 83px;
+    font-size: 1em;
+    font-family: $gt;
+    div {
+      @include padding(0.75em 1.5em 0.75em 1.5em);
+      line-height: 1;
+      width: 186px;
+      height:40px;
+      border-radius: 3px;
+      @include center(xy);
+    }
   }
+  // .hidden {
+  //   opacity: 0;
+  //   visibility: hidden;
+  // }
 
   .mobile-project-wrap, 
   .home-mobile-image,

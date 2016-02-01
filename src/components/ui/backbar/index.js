@@ -20,7 +20,11 @@ export class BackBar extends React.Component {
   }
 
   componentDidMount () {
-    TweenLite.set(this.refs.backbar, {yPercent: -100, autoAlpha: 0});
+    if (!this.props.showBar) {
+      TweenLite.set(this.refs.backbar, {yPercent: -100, autoAlpha: 0});
+    } else if (this.props.showBar) {
+      this.toggle(0, 1.1);
+    }
   }
 
   componentWillReceiveProps (nextProps) {

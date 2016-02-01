@@ -21,6 +21,7 @@ export class WorkView extends PageLayout {
 
   componentDidMount () {
     this.animatePageContentIn();
+    // this.actions.changeNavState({isVisible: true});
   }
 
   render () {

@@ -43,6 +43,7 @@ export class DesktopHomeView extends PageLayout {
     // TweenLite.set(document.documentElement, {overflowY: 'scroll'});
   }
   componentDidMount () {
+    console.log(this);
     this.mountDotsAndTitles();
     TweenLite.set('.home-container', {className: '+=home-container-desktop'});
     this.checkTouchEvents();

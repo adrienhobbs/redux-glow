@@ -14,19 +14,19 @@ import ServicesView         from 'views/Pages/ServicesView';
 import CareersView          from 'views/Pages/CareersView';
 import ConnectView          from 'views/Pages/ConnectView';
 import WorkView             from 'views/WorkView/work';
-
+import Direct from 'components/case-study/direct';
 export default (
   <Route path='/' component={CoreLayout}>
     <Route component={HomeView} path='/featured/:project' />
     <IndexRoute component={HomeView} />
     <Route path='/404' component={NotFoundView} />
+    <Route      component={Direct}     path='work/:project' />
     <Route      component={AboutView}     path='about' />
     <Route      component={ServicesView}     path='services' />
     <Route      component={CareersView}     path='careers' />
     <Route      component={ConnectView}     path='connect' />
     <Route      component={WorkView}     path='work' >
       <Route    component={WorkView}      path='/case-study/:project' />
-      <Route    component={WorkView}      path='/work/:project' />
     </Route>
     <Redirect from='*' to='/404' />
   </Route>

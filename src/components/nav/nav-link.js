@@ -52,6 +52,8 @@ const NavLink = React.createClass({
       this.splitTL.reverse();
     }
   },
+  onTouchEnd () {
+  },
   onClick (e) {
     if (!this.state.isActive) {
       if (this.props.mobile) {
@@ -100,9 +102,9 @@ const NavLink = React.createClass({
     TweenLite.to(this.refs.link, 1.4, {color: color, ease: Expo.easeInOut});
   },
   render () {
-    const lineHeight = 3;
+    const lineHeight = 4;
     return (
-      <div ref='linkCtr'  onClick={this.onClick} onTouchEnd={this.onClick} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}  className='nav-item'>
+      <div ref='linkCtr'  onClick={this.onClick} onTouchEnd={this.onTouchEnd} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}  className='nav-item'>
         <a ref='link'  >{this.props.name}</a>
         <svg ref='lineSvg' className='line' height={`${lineHeight}px`}>
           <line ref='line' id='underLine' fill='none' stroke={this.props.color} strokeWidth={lineHeight} strokeMiterLimit='10' x1='0' y1='0' x2='0' y2='0'/>

@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 // import du from 'domutil';
 import CaseStudy from 'components/case-study';
 import BackBar from 'components/ui/backbar';
-// import radium from 'radium';
 // import scroll from 'scroll';
 // import '../study-closed.scss';
 import PageLayout from 'layouts/PageLayout/PageLayout';
@@ -154,7 +153,7 @@ export class FeaturedStudyMobile extends PageLayout {
     return (
       <div className='project mobile'
         ref='projectBox'
-        style={{background: this.props.data.get('secColor')}} >
+        style={{background: this.props.data.get('mobile').bgColor}} >
         <div className='mobile-project-wrap'>
           <div ref='projectIntro' className='project-intro project__container mobile closed'>
             <div ref='projectImage' className='project-image project__image link' >
