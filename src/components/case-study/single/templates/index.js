@@ -1,4 +1,3 @@
-// import React from 'react';
 import SouthernKitchen from './carla-hall/southern-kitchen.js';
 import Proof from './tnt/proof.js';
 import Sharknado from './syfy/sharknado.js';
@@ -7,6 +6,9 @@ import MindyProject from './hulu/mindy.js';
 import Veep from './hbo/veep.js';
 import ILNY from './ilny/ilny.js';
 import WinterCalendar from './cn/winter-calendar.js';
+import TwelveMonkeys from './syfy/12-monkeys.js';
+import Casual from './hulu/casual.js';
+import HowIDidIt from './yahoo/how-i-did-it.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
@@ -17,7 +19,10 @@ const CaseStudyTemplates = (function templates () {
     Mindy: MindyProject,
     Veep: Veep,
     ILNY: ILNY,
-    WinterCalendar: WinterCalendar
+    WinterCalendar: WinterCalendar,
+    TwelveMonkeys: TwelveMonkeys,
+    Casual: Casual,
+    HowIDidIt: HowIDidIt
   };
 }());
 

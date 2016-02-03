@@ -1,9 +1,9 @@
-export function ToggleVis (isVisible) {
+export function ToggleVis (navState) {
   return {
     TL: new TimelineLite(),
     ease: Expo.easeInOut,
-    dur: 0.6,
+    dur: (navState.shouldAnimate) ? 0.6 : 0.0001,
     transformPerspective: 300,
-    scale: (isVisible) ? 1 : 0
+    scale: (navState.isVisible) ? 1 : 0
   };
 }

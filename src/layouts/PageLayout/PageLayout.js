@@ -6,6 +6,7 @@ import { actions as workActions } from '../../redux/modules/work';
 import { actions as viewportActions } from '../../redux/modules/viewport';
 import { actions as transitionActions } from '../../redux/modules/page-transition.js';
 import {isNull} from 'lodash';
+import du from 'domutil';
 import Helpers from '../../utilities/helpers';
 // import scrollMonitor from 'scrollmonitor';
 import Footer from 'components/footer';
@@ -45,7 +46,11 @@ export class PageLayout extends React.Component {
   showHeaderGradient () {
     // TweenLite.set(this.refs.headerGradient, {scaleY: 1});
   }
-
+  checkBodyVisibility () {
+    if (du.hasClass(document.body, 'isHidden')) {
+      TweenLite.to(document.body, 0.8, {autoAlpha: 1, className: '-=isHidden', ease: Circ.easeInOut});
+    }
+  }
   hideHeaderGradient () {
     // TweenLite.set(this.refs.headerGradient, {scaleY: 0});
   }

@@ -1,23 +1,20 @@
 import React from 'react';
+import shader from 'constants/shade-blender';
 import Sidebar from 'components/ui/sidebar';
 import BaseTemplate from '../base-study-template';
 
-export class Sharknado extends BaseTemplate {
-
+export class TwelveMonkeys extends BaseTemplate {
   static propTypes = {
     data: React.PropTypes.object
   };
-
   constructor (props) {
     super(props);
   }
-
   videoPlayNow () {
     const TL = new TimelineLite();
     TL.add(() => this.refs.video.play());
     return TL;
   }
-
   pauseVideo () {
     this.refs.video.pause();
     const TL = new TimelineLite();
@@ -40,6 +37,7 @@ export class Sharknado extends BaseTemplate {
     TL.to(this.refs.controls, 0.5, {autoAlpha: 1}, 'start+=1.8');
   }
   render () {
+    const subStyle = {color: shader(0.15, this.props.data.get('logoColor'))};
     const copyStyle = this.getCopyStyle();
     return (
       <div ref='studyContent' className='study-content' style={{background: this.props.data.get('secColor')}}>
@@ -50,7 +48,7 @@ export class Sharknado extends BaseTemplate {
             </div>
             <div className='about-center'>
               <div className='copy-inner'>
-                <p style={copyStyle}>Sharknado 3 took the world by storm and stirred up 2 billion Twitter Impressions. Yes, that’s a B. A key priority program for Syfy, GLOW couldn’t wait to dive-in. Together we planned and launched a FOMO-inducing social campaign, which included social strategy, community management and social content creative to make Sharknado 3 a can’t-miss event.</p>
+                <p style={copyStyle}>That is seventeen five - your half of the thirty-five thousand. Plus there's an extra fifteen in there, it's all yours, you've earned it. We made a deal. That's right. Because I think that we can do business together - we came to an understanding. Take a look at the money in your hand. Now just imagine making that every week. That's right. Two pounds a week, thirty-five thousand a pound. Look... I feel like I'm running out of ways to explain this to you but once more, I shall try. <span style={subStyle}>This fly is a major problem for us. </span>It will ruin our batch. And we need to destroy it and every trace of it, so we can cook.</p>
               </div>
             </div>
             <Sidebar data={this.props.data}/>
@@ -64,41 +62,41 @@ export class Sharknado extends BaseTemplate {
                   <div className='stat-device-left'>
                     <div className='stat-box-device'>
                       <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                        #Trending
+                        0000
                       </div>
                       <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-                        Trended #1 in U.S. & #2 across the planet
+                        lorem ipsum stat goes here
                       </h5>
                     </div>
                     <div className='stat-rule'></div>
                     <div className='stat-box-device'>
                       <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                        6 million
+                        0000
                       </div>
                       <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-                        video views
+                        lorem ipsum stat goes here
                       </h5>
                     </div>
                   </div>
                   <div className='stat-device-image'>
-                    <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-device.png' alt='' />
+                    <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/proof-device.png' alt='' />
                   </div>
                   <div className='stat-device-right'>
                     <div className='stat-box-device'>
                       <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                        100%
+                        0000
                       </div>
                       <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-                       increase in Twitter traffic
+                        lorem ipsum stat goes here
                       </h5>
                     </div>
                     <div className='stat-rule'></div>
                     <div className='stat-box-device'>
                       <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                        2 billion
+                        0000
                       </div>
                       <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-                        Twitter impressions
+                        lorem ipsum stat goes here
                       </h5>
                     </div>
                   </div>
@@ -106,27 +104,24 @@ export class Sharknado extends BaseTemplate {
               </div>
             </div>
           </article>
-          <article className='approach'>
-            {this.createHeadlineEl('approach')}
-            <div className='copy'>
-              <div className='copy-inner'>
-                <p style={copyStyle}>We knew we had a record to beat and that’s just what we did. We wanted to ensure that Americans had no excuse to not be talking about the third ‘Nado on social on day of premiere. To make Sharknado sized waves on social, the team developed and executed a strategy that engaged fans and influencers, created best in-class creative, and dominated the social conversation on July 22. </p>
+          <article className='strategy'>
+              <h1 style={this.getHeadlineStyle()} className='page-title'>strategy</h1>
+              <div className='copy'>
+                <div className='copy-inner'>
+                  <p style={copyStyle}>That is seventeen five - your half of the thirty-five thousand. Plus there's an extra fifteen in there, it's all yours, you've earned it. We made a deal. That's right. Because I think that we can do business together - we came to an understanding. Take a look at the money in your hand. Now just imagine making that every week. That's right. Two pounds a week, thirty-five thousand a pound. Look... I feel like I'm running out of ways to explain this to you but once more, I shall try. <span style={subStyle}>This fly is a major problem for us. </span>It will ruin our batch. And we need to destroy it and every trace of it, so we can cook.</p>
+                </div>
               </div>
-            </div>
-            <div className='img-single'>
-              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-01.png' alt='' />
-            </div>
-          </article>
-          <article className='approach'>
-            {this.createHeadlineEl('twitter war room')}
-            <div className='copy'>
-              <div className='copy-inner'>
-                <p style={copyStyle}>For this 3rd installment of the franchise, we were armed and ready to slay a "night of" event that led to 2 Billion Twitter impressions. Our War Room consisted of 8 community managers tasked with pushing out hilarious GIFs and statics of the movie, responding to fans while tracking hashtags, @mentions, keywords, influencers, Facebook mentions, cast, and brand sponsors. We also deployed 3 social managers handling trend alerts and featured on-air tweets along with art directors and designers churning out social content to feed the social frenzy.</p>
+              <div className='img-single'>
+                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/proof-1.png' alt='' />
               </div>
-            </div>
-            <div className='img-single'>
-              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-02.jpg' alt='' />
-            </div>
+              <div className='img-single'>
+                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/proof-2.png' alt='' />
+              </div>
+          <div className='end'>
+            <svg preserveAspectRatio='none' className='end-shape' ref='endShape' version='1.1' id='Layer_1'  x='0px' y='0px' viewBox='0 0 1920 600' >
+              <polygon style={{fill: this.props.data.get('endShape').bgColor}} points='0,0 1920,314.6 1920,600 0,600 '/>
+            </svg>
+          </div>
           </article>
 
         </div>
@@ -135,4 +130,5 @@ export class Sharknado extends BaseTemplate {
   }
 }
 
-export default Sharknado;
+export default TwelveMonkeys;
+

@@ -112,11 +112,13 @@
   }
 
   .connectFormCtr {
+
+    z-index: 3;
     width: 93%;
     @include media($small-medium-screen) {
       width: 75%;
     }
-    @include media($large-screen-up) {
+    @include media($medium-screen-up) {
       width: 50%;
     }
     position: absolute;

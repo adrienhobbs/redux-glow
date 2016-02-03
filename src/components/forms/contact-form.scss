@@ -78,19 +78,30 @@
       &:hover {
         background: transparent;
       }
+      color: $radical-red;
     }
     button:disabled {
       opacity: 1 !important;
     }
 
     .submit-btn-ctr {
+      width: 100%;
       text-align: right;
-      position: absolute;
-      bottom: 7px;
-      right: 0;
-      @include media($under-medium) {
-        right: 10px;
+      button {
+        width: 100%;
+        text-align: right;
+        padding-right: 0;
+        &:hover {
+          background-color: transparent;
+        }
       }
+      // text-align: right;
+      // position: absolute;
+      // bottom: 7px;
+      // right: 0;
+      // @include media($under-medium) {
+      //   right: 10px;
+      // }
     }
   }
 

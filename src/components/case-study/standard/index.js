@@ -67,6 +67,7 @@ const ProjectIntro = React.createClass({
       height: rect.height,
       x: rect.left,
       y: rect.top,
+      z: 0,
       position: 'fixed',
       overflow: 'hidden'
       // zIndex: 99
@@ -82,6 +83,7 @@ const ProjectIntro = React.createClass({
       height: '100%',
       x: windowW / 2,
       y: 0,
+      z: 0,
       xPercent: -50,
       ease: Quart.easeInOut,
       clearProps: 'all',
@@ -198,7 +200,7 @@ const ProjectIntro = React.createClass({
             <span className='project-name' ref='projectName'>{this.props.data.get('title')}</span>
           </div>
           <div className='tags' ref='tags'>
-            {this.getTags()}
+            {this.props.data.get('subtitleSlug')}
           </div>
         </div>
       </div>

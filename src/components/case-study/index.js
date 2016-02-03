@@ -3,17 +3,17 @@ import StudyBody from './single/study-body';
 
 const CaseStudy = React.createClass({
 
-  propTypes: {
-    singleMode: PropTypes.bool,
-    getInfoEl: PropTypes.func,
-    data: PropTypes.object,
-    children: PropTypes.element || PropTypes.array,
-    viewport: PropTypes.object,
-    showBody: PropTypes.bool
+  propTypes:     {
+    singleMode:  PropTypes.bool,
+    getInfoEl:   PropTypes.func,
+    data:        PropTypes.object,
+    children:    PropTypes.element || PropTypes.array,
+    viewport:    PropTypes.object,
+    showBody:    PropTypes.bool,
+    slider:      PropTypes.bool
   },
-
   getBackground () {
-    if (this.props.viewport.orientation === 'portrait' && this.props.viewport.isPhone) {
+    if (this.props.viewport.orientation === 'portrait' && this.props.data.get('featured') && this.props.slider) {
       return this.props.data.get('backgroundImageUrlVert');
     } else {
       return this.props.data.get('backgroundImageUrl');

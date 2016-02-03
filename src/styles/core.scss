@@ -97,6 +97,9 @@
   .view-container {
     // background-color: white;
     padding-top: $nav-height;
+    @include media(min-width 1920px) {
+      padding-top: 75px;
+    }
     width: 100%;
     @include media($under-medium) {
       padding-top: em(50);

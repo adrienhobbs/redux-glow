@@ -165,21 +165,26 @@
     }
     .stat-box-device {
       lost-column: 1 0 0;
+      min-height: 80px;
     }
     .stat-num {
       @include media($under-medium) {
-        font-size: rem(60);
+        font-size: rem(30);
       }
       @include media($under-small) {
-        font-size: rem(60);
+        font-size: rem(35);
+        margin-bottom: 10px;
       }
       @include media($medium-screen-up) {
-        font-size: rem(60);
+        font-size: rem(47);
       }
       color: white;
     }
     .stat-device-left, .stat-device-right {
       lost-column: 15/100 0 0;
+      @include media ($under-large) {
+        lost-column: 3/10 0 0;
+      }
       @include media($under-small) {
         lost-column: 1/2 0 0;
       }
@@ -199,6 +204,9 @@
     }
     .stat-device-image {
       lost-column: 70/100 0 0;
+      @include media ($under-large) {
+        lost-column: 4/10 0 0;
+      }
       @include media($under-small) {
         display: none;
       }

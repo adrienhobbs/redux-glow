@@ -73,7 +73,12 @@ export class BaseStudyComponent extends React.Component {
   createHeadlineEl (headline) {
     return (
       <h1 style={this.getHeadlineStyle()} className='page-title'>{headline} </h1>
-    ) 
+    );
+  }
+  createParagraphEl (paragraph) {
+    let t = this.createMarkup(this.props.data.get('testMe'));
+    console.log(t);
+    return t;
   }
   render () {
     return (

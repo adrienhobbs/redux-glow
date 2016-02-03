@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from 'components/ui/sidebar';
 import BaseTemplate from '../base-study-template';
 
-export class MindyProject extends BaseTemplate {
+export class Casual extends BaseTemplate {
 
   static propTypes = {
     data: React.PropTypes.object
@@ -114,4 +114,4 @@ export class MindyProject extends BaseTemplate {
   }
 }
 
-export default MindyProject;
+export default Casual;

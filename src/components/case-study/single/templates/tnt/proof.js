@@ -1,5 +1,4 @@
 import React from 'react';
-// import Results from 'components/ui/results';
 import shader from 'constants/shade-blender';
 import Sidebar from 'components/ui/sidebar';
 import BaseTemplate from '../base-study-template';

@@ -47,7 +47,7 @@ const NavLink = React.createClass({
     }
   },
   onMouseLeave () {
-    if (!this.state.isActive && !this.props.mobile) {
+    if (this.splitTL && !this.state.isActive && !this.props.mobile) {
       // this.splitLinkTextLeave();
       this.splitTL.reverse();
     }

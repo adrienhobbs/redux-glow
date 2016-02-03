@@ -1,5 +1,11 @@
 :global {
 
+  .mapboxgl-canvas-container {
+    position: relative;
+    height:100%;
+
+  }
+
   .connect-inner {
     lost-column: 1/2 2;
     @include media($under-medium) {
@@ -7,9 +13,21 @@
 
     }
     &.left {
-      background-color: $storm-dust;
+      position: relative;
+      // background-color: $storm-dust;
+      height: 800px;
 
     }
+  }
+  #connect-page-map {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
   }
   .connect-headline {
     @include title;
@@ -28,7 +46,6 @@
       lost-column: 1/2;
       margin-bottom: em(20);
     }
-
   }
 
   .connect-info-box-inner {

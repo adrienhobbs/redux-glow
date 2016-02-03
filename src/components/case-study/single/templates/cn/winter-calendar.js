@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import Sidebar from 'components/ui/sidebar';
 import BaseTemplate from '../base-study-template';
-import Results from 'components/ui/results';
 import classes from './winter-calendar.scss';
 
 export class WinterCalendar extends BaseTemplate {
@@ -23,7 +22,12 @@ export class WinterCalendar extends BaseTemplate {
             <div className='about-left'></div>
             <div className='about-center'>
               <div className='copy-inner' lang='en'>
-                <p style={this.getCopyStyle()}>Veep was a favorite among critics in its inaugural season. However, critical acclaim is simply not enough. GLOW approached HBO and took this opportunity to do what we do best - build audience and expand the social footprint with a smart, strong strategy and quality social content...and lots of it. <br/><br/> All the while, we were striving to redefine how a thirty-minute comedy is marketed on social media. <br/><br/> And it worked.</p>
+                <p style={this.getCopyStyle()}>We do it for the kids. Lormem itsa inaugural season. However, critical acclaim is simply not enough. GLOW approached HBO and took this opportunity to do what we do best - build audience and expand the social footprint with a smart, strong strategy and quality social content...and lots of it. <br/><br/> All the while, we were striving to redefine how a thirty-minute comedy is marketed on social media. <br/><br/> And it worked.</p>
+                <div className={classes.outerButton}>
+                  <a href='http://www.weareglow.com/staging/cartoon_network/winter-calendar/' target='_blank'>
+                    <div className={classes.cnButton}> <span>view the site  &#8594;</span></div>
+                  </a>
+                </div>
               </div>
             </div>
             <Sidebar data={this.props.data}/>
@@ -36,7 +40,7 @@ export class WinterCalendar extends BaseTemplate {
                 <div className='stat-boxes'>
                   <div className='stat-cn'>
                     <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                      3,345 
+                      3,345
                     </div>
                     <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
                       facebook likes

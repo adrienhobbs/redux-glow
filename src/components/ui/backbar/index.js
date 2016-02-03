@@ -39,10 +39,14 @@ export class BackBar extends React.Component {
     TweenLite.to(this.refs.backbar, 0.4, {yPercent: val, ease: Expo.easeInOut, delay: delay});
   }
 
+  getBackgroundColor () {
+    return {
+      backgroundColor: this.props.data.backbar.bgColor || this.props.data.logoColor
+    };
+  }
   render () {
-    const style = { background: this.props.data.logoColor };
     return (
-      <div onClick={this.props.goBack} style={style} ref='backbar' className='backbar'>
+      <div onClick={this.props.goBack} style={this.getBackgroundColor()} ref='backbar' className='backbar'>
         <div className='backbar-inner'>
           <div className='backbar-button'>
             <ActionIcons iconType='ARROW' direction='back' color='#ffffff' width={35} />

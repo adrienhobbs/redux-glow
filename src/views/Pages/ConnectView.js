@@ -1,5 +1,4 @@
 import React from 'react';
-// import styles from './connect.scss';
 import Newsletter from 'components/forms/newsletter-input';
 import ContactForm from 'components/forms/contact-form';
 import PageLayout from 'layouts/PageLayout/PageLayout';
@@ -17,17 +16,28 @@ export class ConnectView extends PageLayout {
 
   componentWillMount () {
     this.setupPageInfo('Connect');
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHdpbGwiLCJhIjoiY2lqb3B4cmRrMDB3a3Q5a28xaHg0cnM0NiJ9.cmyU94c4wtK1aEs-cNfnCw';
   }
 
   componentDidMount () {
     this.animatePageContentIn();
     this.watchHeaderScrollTop();
+    this.map = new mapboxgl.Map({
+      container: this.refs.map,
+      style: 'mapbox://styles/mattwill/cijysv78o00uo90lxte3x4fua',
+      center: [-74.01, 40.73],
+      zoom: 14
+    });
+    this.map.on('load', this.setHeight.bind(this));
+  }
+
+  setHeight () {
+    this.map.resize();
   }
 
   componentWillUnmount () {
     this.removeHeaderWatcher();
   }
-
   pageSubTitle () {
     return <span>Yea Dawg, Like Connect With Us!</span>;
   }
@@ -42,7 +52,9 @@ export class ConnectView extends PageLayout {
         </div>
         <div className='page-content'>
           <div className='row'>
-            <div className='connect-inner left'></div>
+            <div className='connect-inner left'>
+              <div id='connect-page-map' ref='map'></div>
+            </div>
             <div className='connect-inner right'>
               <ContactForm />
               <Newsletter />

@@ -46,6 +46,9 @@ export class Nav extends React.Component {
   }
   componentDidMount () {
     this.checkFramePositionType(this.props.currentPath);
+    if (!this.props.nav.isVisible) {
+      this.toggleNavVisibility();
+    }
   }
   componentDidUpdate (prevProps, prevState) {
     this.setLogoBgColor();
@@ -69,14 +72,12 @@ export class Nav extends React.Component {
     return (newIndex > this.state.currentLinkIndex) ? 'right' : 'left';
   }
   toggleNavVisibility () {
-    const AnimVals = ToggleVis(this.props.nav.isVisible);
+    const AnimVals = ToggleVis(this.props.nav);
     AnimVals.TL.addLabel('start', '0');
-    if (this.props.nav.shouldAnimate) {
-      AnimVals.TL.add(TweenLite.to(this.refs.nav, AnimVals.dur, {scaleY: AnimVals.scale, transformOrigin: 'top center', transformPerspective: AnimVals.transformPerspective, ease: AnimVals.ease}), 'start');
-      AnimVals.TL.add(TweenLite.to(this.refs.frameLeft, AnimVals.dur, {scaleX: AnimVals.scale, transformOrigin: 'left center', transformPerspective: AnimVals.transformPerspective, ease: AnimVals.ease}), 'start');
-      AnimVals.TL.add(TweenLite.to(this.refs.frameRight, AnimVals.dur, {scaleX: AnimVals.scale, transformOrigin: 'right center', transformPerspective: AnimVals.transformPerspective, ease: AnimVals.ease}), 'start');
-      AnimVals.TL.play();
-    }
+    AnimVals.TL.add(TweenLite.to(this.refs.nav, AnimVals.dur, {scaleY: AnimVals.scale, transformOrigin: 'top center', transformPerspective: AnimVals.transformPerspective, ease: AnimVals.ease}), 'start');
+    AnimVals.TL.add(TweenLite.to(this.refs.frameLeft, AnimVals.dur, {scaleX: AnimVals.scale, transformOrigin: 'left center', transformPerspective: AnimVals.transformPerspective, ease: AnimVals.ease}), 'start');
+    AnimVals.TL.add(TweenLite.to(this.refs.frameRight, AnimVals.dur, {scaleX: AnimVals.scale, transformOrigin: 'right center', transformPerspective: AnimVals.transformPerspective, ease: AnimVals.ease}), 'start');
+    AnimVals.TL.play();
   }
   getMobileLinks () {
     return Links.map((link, i) => {

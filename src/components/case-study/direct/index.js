@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import CaseStudy from 'components/case-study';
 import BackBar from 'components/ui/backbar';
 import PageLayout from 'layouts/PageLayout/PageLayout';
+import { has, snakeCase } from 'lodash';
 
 const mapStateToProps = (state) => ({
   nav: state.nav,
@@ -33,21 +34,38 @@ export class Direct extends PageLayout {
   }
 
   goBack () {
-    this.context.router.push({pathname: '/work'});
+    TweenLite.to(document.body, 0.5, {autoAlpha: 0, ease: Circ.easeInOut, className: '+=isHidden', onComplete: () => {
+      this.context.router.push({pathname: '/work'});
+    }});
+  }
+  getCurrentCaseStudy () {
+    let current = {};
+
+    this.props.work.studyData.filter(function (a, b) {
+      if (snakeCase(a.get('title')) === this.props.params.project) {
+        current.study = a;
+      }
+    }, this);
+    return current;
+  }
+  createCurrentStudy (current) {
+    return (
+      <CaseStudy showBody {...this.props} singleMode data={current.study}>
+        <BackBar showBar singleMode data={current.study.toJS()} goBack={this.goBack.bind(this)} />
+      </CaseStudy>
+    );
   }
   getCurrentStudy () {
-    if (this.props.work.current) {
-      return (
-        <CaseStudy showBody {...this.props} singleMode data={this.props.work.current.study}>
-          <BackBar showBar singleMode data={this.props.work.current.study.toJS()} goBack={this.goBack.bind(this)} />
-        </CaseStudy>
-      );
+    const current = this.getCurrentCaseStudy();
+    if (has(current, 'study')) {
+      return this.createCurrentStudy(current);
+    } else {
+      this.context.router.push({pathname: '/404'});
     }
   }
 
   componentDidMount () {
-    this.actions.changeNavState({isVisible: false, shouldAnimate: true});
-    this.actions.setCurrentStudy(this.props.params);
+    this.actions.changeNavState({isVisible: false, shouldAnimate: false});
     TweenLite.set('#footer', {autoAlpha: 0});
     TweenLite.set(document.documentElement, {overflowY: 'hidden'});
     TweenLite.fromTo(this.refs.caseStudy, 1, {autoAlpha: 0}, {autoAlpha: 1, ease: Expo.easeInOut, delay: 1});
