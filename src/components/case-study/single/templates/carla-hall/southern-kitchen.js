@@ -99,13 +99,13 @@ export class SouthernKitchen extends BaseTemplate {
             </div>
             <div className='image-container-large'>
               <div>
-                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/video-img-1.jpg' />
+                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/video-01.jpg' />
               </div>
               <div>
-                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/video-img-2.jpg' />
+                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/video-02.jpg' />
               </div>
               <div>
-                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/video-img-3.jpg' />
+                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/video-03.jpg' />
               </div>
             </div>
             <div className='copy-inner'>

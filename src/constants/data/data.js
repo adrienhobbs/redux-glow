@@ -33,6 +33,7 @@ const data = [
     copyColor: '#000000',
     cat: '― carla hall ―',
     services: ['community management', 'video production', 'social content'],
+    fullScreenBgImg: s3 + 'case-studies/carla-hall/southern-kitchen/video-04.jpg',
     backbar: {
       bgColor: '#ed0f77'
     },

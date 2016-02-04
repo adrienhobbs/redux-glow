@@ -45,12 +45,12 @@ export class FeaturedStudy extends PageLayout {
 
   componentDidUpdate (prevProps, prevState) {
     if (prevProps.position === 'bottom' && this.props.position === 'center') {
-      TweenLite.fromTo(this.refs.projectSvg, 2, {y: 500}, {y: 0, ease: Expo.easeInOut});
-      TweenLite.fromTo(this.refs.projectInner, 1.75, {y: 500}, {y: 0, ease: Expo.easeInOut});
+      TweenLite.fromTo(this.refs.projectSvg, 2, {y: 500, z: 0}, {z: 0, y: 0, ease: Expo.easeInOut});
+      TweenLite.fromTo(this.refs.projectInner, 1.75, {y: 500, z: 0}, {z: 0, y: 0, ease: Expo.easeInOut});
     }
     if (prevProps.position === 'top' && this.props.position === 'center') {
-      TweenLite.fromTo(this.refs.projectSvg, 1.25, {y: -50}, {y:0, ease: Expo.easeInOut});
-      TweenLite.fromTo(this.refs.projectInner, 1.65, {y: -40}, {y: 0, ease: Expo.easeInOut});
+      TweenLite.fromTo(this.refs.projectSvg, 1.25, {y: -50, z: 0}, {y:0, ease: Expo.easeInOut, z: 0});
+      TweenLite.fromTo(this.refs.projectInner, 1.65, {y: -40, z: 0}, {y: 0, ease: Expo.easeInOut, z: 0});
     }
 
     if (prevState.singleMode && !this.state.singleMode && this.props.routerState.location.pathname !== '/') {

@@ -370,6 +370,10 @@
     width: 100%;
     z-index: 1;
     .img-single {
+      img {
+        display: block;
+        margin: auto;
+      }
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
