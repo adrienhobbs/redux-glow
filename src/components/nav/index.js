@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { Link }  from 'react-router';
 import Twitter from 'components/ui/icons/twitter';
 import GlowLogo from 'components/icons/glow-logo';
 import NavLink from './nav-link';
@@ -311,7 +310,7 @@ export class Nav extends React.Component {
             </div>
             <div className='nav-right'>
               {this.getNavLinks()}
-              <Link className='twitter-link' to='http://www.twitter.com/weareglow'><Twitter ref='twitterSVG' color={this.getLinkColor()}/></Link>
+              <a className='twitter-link' target='_blank' href='http://www.twitter.com/weareglow'><Twitter ref='twitterSVG' color={this.getLinkColor()}/></a>
             </div>
           </div>
         </nav>

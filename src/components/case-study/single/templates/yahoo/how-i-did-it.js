@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
-
 export class HowIDidIt extends BaseTemplate {
 
   static propTypes = {

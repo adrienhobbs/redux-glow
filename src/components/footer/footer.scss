@@ -65,14 +65,21 @@
       ul {
         @include cst-row();
         width: 100%;
-        height: em(52);
+        height: em(62);
       }
       li {
-        height: em(52);
+        position: relative;
+        height: em(62);
         cursor: pointer;
-        lost-column: 1/4;
-        lost-align: middle-center;
+        lost-column: 1/3;
+        // lost-align: middle-center;
+        a {
+        
+          @include center(xy);
+        
+        }
         .icon {
+          overflow: visible;
           @include size(em(52));
           border-radius: 50%;
           border: 4px solid $radical-red;

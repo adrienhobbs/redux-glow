@@ -35,7 +35,8 @@ export class NotFoundView extends PageLayout {
 
   render () {
     return (
-      <div>soon to be 404 page</div>
+      <div>soon to be 404 page
+      </div>
     );
   }
 }

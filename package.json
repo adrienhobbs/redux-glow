@@ -57,6 +57,7 @@
     "formsy-react": "^0.17.0",
     "history": "^2.0.0-rc2",
     "immutable": "^3.7.6",
+    "inline-loader": "^0.1.0",
     "koa": "^2.0.0-alpha.3",
     "koa-connect-history-api-fallback": "^0.3.0",
     "koa-convert": "^1.2.0",

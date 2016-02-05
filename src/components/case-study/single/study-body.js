@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import du from 'domutil';
-import StudyProjectTitle from 'components/ui/study-project-title';
 import Templates from './templates';
+import Lockup from 'components/ui/lockup/lockup.js';
 
 const StudyBody = React.createClass({
 
@@ -61,7 +61,7 @@ const StudyBody = React.createClass({
         yPercent: 0,
         ease: Expo.easeInOut,
         onComplete: () => {
-          du.addClass(this.refs.studyWrapper, 'y-overflow-auto');
+          // du.addClass(this.refs.studyWrapper, 'y-overflow-auto');
         },
         delay: 0.5
       });
@@ -76,7 +76,7 @@ const StudyBody = React.createClass({
       <div className='study-outer'>
         <div ref='studyOverlay' className='study-overlay'>
           <div className='overlay-info' ref='overlayInfo'>
-            <StudyProjectTitle logoColor={this.getLogoColor()} single path={this.props.data.get('infoPath')} projectColor='#fff'/>
+            <Lockup data={this.props.data} single />
             <div className='study-headline-subtitle'>{this.props.data.get('subtitle')}</div>
           </div>
         </div>

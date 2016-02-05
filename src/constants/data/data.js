@@ -34,6 +34,9 @@ const data = [
     cat: '― carla hall ―',
     services: ['community management', 'video production', 'social content'],
     fullScreenBgImg: s3 + 'case-studies/carla-hall/southern-kitchen/video-04.jpg',
+    lockup: {
+      className: 'carla-lockup'
+    },
     backbar: {
       bgColor: '#ed0f77'
     },
@@ -88,6 +91,10 @@ const data = [
     },
     services: ['community management', 'video production', 'social content'],
     recognition: ['short award finalist', 'best twitter campaign'],
+    lockup: {
+      className: 'mindy-lockup',
+      logoColor: '#73B100'
+    },
     sidebar: {
       logoColor: '#129fbf',
       copyColor: '#129fbf',
@@ -130,6 +137,10 @@ const data = [
       statLabelColor: '#6eb116',
       bgColor: '#4C5772'
     },
+    lockup: {
+      className: 'casual-lockup',
+      logoColor: '#73B100'
+    },
     services: ['community management', 'video production', 'social content'],
     recognition: ['short award finalist', 'best twitter campaign'],
     sidebar: {
@@ -158,7 +169,7 @@ const data = [
     type: 'case-study',
     infoPath: s3 + 'case-studies/hbo/veep/logo-title.svg',
     backgroundImageUrl: s3 + 'case-studies/hbo/veep/landscape.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/hbo/veep/vertical.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/veep/portrait.jpg',
     logoColor: '#c03d3b',
     secColor: '#0e374a',
     gradientTop: '#c03d3b',
@@ -184,6 +195,14 @@ const data = [
     mobile: {
       bgColor: '#0e374a',
       summaryCopyColor: '#000000'
+    },
+
+    lockup: {
+      className: 'veep-lockup',
+      projectColor: '#fff',
+      featured: {
+        projectColor: '#BE4138'
+      }
     },
     results: {
       stats: [
@@ -230,6 +249,9 @@ const data = [
       logoColor:      '#ffffff',
       copyColor:      '#727272',
       headlineColor:  '#ffffff'
+    },
+    lockup: {
+      className: '12-monkeys-lockup'
     },
     backbar: {
       bgColor: '#551313'
@@ -305,6 +327,9 @@ const data = [
       bgColor: '#82b3dc',
       summaryCopyColor: '#000000'
     },
+    lockup: {
+      className: 'proof-lockup'
+    },
     endShape: {
       bgColor: '#82b3dc'
     }
@@ -345,6 +370,9 @@ const data = [
     shareButton: {
       strokeColor: '#d52027',
       copyColor: '#ffffff'
+    },
+    lockup: {
+      className: 'ilny-lockup'
     },
     mobile: {
       bgColor: '#82b3dc',
@@ -390,6 +418,9 @@ const data = [
     services: ['ui/ux', 'animation', 'development'],
     templateName: 'WinterCalendar',
     headlineColor: '#ffffff',
+    lockup: {
+      className: 'winter-calendar-lockup'
+    },
     results: {
       stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
       statColor: '#ffffff',
@@ -437,6 +468,11 @@ const data = [
     copyColor: '#000000',
     templateName: 'HowIDidIt',
     headlineColor: '#1EB547',
+    lockup: {
+      className: 'yahoo-lockup',
+      logoColor: '#00283f',
+      projectTitle: '#fff'
+    },
     results: {
       stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
       statColor: '#ffffff',
@@ -485,6 +521,9 @@ const data = [
     templateName: 'Sharknado',
     services: ['community management', 'video production', 'social content'],
     headlineColor: '#7d2f37',
+    lockup: {
+      className: 'sharknado-lockup'
+    },
     backbar: {
       bgColor: '#091720'
     },
@@ -528,6 +567,10 @@ const data = [
     cat: ' ― wkc | dog-show ',
     clientLogoColor: '#d6963f',
     headlineColor: '#d6963f',
+    lockup: {
+      className: 'westminster-lockup',
+      logoColor: '#D6963F'
+    },
     backbar: {
       bgColor: '#d6963f'
     },

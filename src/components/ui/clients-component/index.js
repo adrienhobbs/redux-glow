@@ -1,34 +1,33 @@
 import React from 'react';
-import ClientLogo from 'components/ui/client-logos';
+import ClientLogo from 'components/ui/logo-sprites/logo-sprite.js';
 import './client-logos.scss';
 
 const clients = [
-  'WETV',
-  'SYFY',
-  'HBO',
-  'CN',
-  'USA',
-  'ILNY',
-  'CRACKLE',
-  'TNT',
-  'CINEMAX',
-  'CNBC',
-  'CARLAHALL',
-  'HULU',
-  'WESTMINSTER',
-  'AE'
+  'wetv',
+  'syfy',
+  'hbo',
+  'cartoon-network',
+  'usa',
+  'ilny-gray',
+  'crackle',
+  'tnt',
+  'cinemax',
+  'cnbc',
+  'carla-hall',
+  'hulu',
+  'westminster',
+  'ae'
 ];
 
 const ClientsBar = React.createClass({
   propTypes: {
     showSubtitle: React.PropTypes.bool
   },
-
   getAllClientLogos () {
     return clients.map(function mapClientNames (client, i) {
       return (
         <div key={i} className='client-logo-container'>
-          <ClientLogo color='gray' client={client}/>
+          <ClientLogo  clientName={client}/>
         </div>
       );
     });
@@ -55,4 +54,4 @@ const ClientsBar = React.createClass({
   }
 });
 
-// export default ClientsBar;
+export default ClientsBar;

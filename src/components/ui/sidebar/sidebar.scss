@@ -58,6 +58,7 @@
         }
         svg {
           max-width: 40%;
+          height: em(70);
           @include media($under-large) {
             margin: auto;
           }

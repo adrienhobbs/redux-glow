@@ -1,7 +1,6 @@
 import React from 'react';
-// import './mobile-home.scss';
 import Work from 'components/work-items';
-import ClientsBar from 'components/ui/clients-bar';
+import AllClients from 'components/ui/clients-component/index.js';
 import {Link} from 'react-router';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 
@@ -41,7 +40,7 @@ export class HomeMobile extends PageLayout {
         </div>
         <div className='clients mobile clients-mobile'>
           <div className='clients-mobile-wrap'>
-            <ClientsBar mobileHome />
+            <AllClients mobileHome />
             <div className='services-button'>
               <Link to='/services'>
                 <button>view our services  &#8594;</button>

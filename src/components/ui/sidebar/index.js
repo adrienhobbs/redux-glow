@@ -2,6 +2,7 @@ import React from 'react';
 import './sidebar.scss';
 import ClientLogo from 'components/ui/client-logos';
 import ShareButton from 'components/ui/share-button';
+import Logo from 'components/ui/logo-sprites/logo-sprite';
 
 const Sidebar = React.createClass({
   propTypes: {
@@ -11,7 +12,8 @@ const Sidebar = React.createClass({
     return null;
   },
   getClient () {
-    return this.props.data.get('client').toUpperCase().replace(/\s+/g, '');
+    console.log(this.props.data.get('client').replace(/\s+/g, '-'))
+    return this.props.data.get('client').replace(/\s+/g, '-');
   },
   getLogoColor () {
     return this.props.data.get('sidebar').logoColor || '#ffffff';
@@ -85,7 +87,7 @@ const Sidebar = React.createClass({
             client
           </div>
           <div className='sidebar-body'>
-            <ClientLogo color={this.getLogoColor()} client={this.getClient()}/>
+            <Logo color={this.getLogoColor()} clientName={this.getClient()}/>
           </div>
         </div>
         {this.getServiceContent()}

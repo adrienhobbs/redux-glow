@@ -30,9 +30,11 @@ export class AboutSection extends React.Component {
   createHeadlineEl (headline) {
     return <h1 style={this.getHeadlineStyle()} className='page-title'> {headline} </h1>;
   }
+
   createParagraphEl (paragraph) {
     return this.createMarkup(this.props.data.get('aboutCopy'));
   }
+
   render () {
     return (
       <article>

@@ -5,7 +5,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import config from '../config';
 import _debug from 'debug';
-
 const debug = _debug('app:webpack:config');
 const paths = config.utils_paths;
 const {__DEV__, __PROD__, __TEST__} = config.globals;
@@ -54,7 +53,7 @@ webpackConfig.plugins = [
     hash: false,
     favicon: paths.client('static/favicon.ico'),
     filename: 'index.html',
-    inject: 'body',
+  inject: 'body',
     minify: {
       collapseWhitespace: true
     }
@@ -105,7 +104,9 @@ webpackConfig.eslint = {
 // Loaders
 // ------------------------------------
 // JavaScript / JSON
-webpackConfig.module.loaders = [{
+  webpackConfig.module.loaders = [
+
+  {
   test: /\.(js|jsx)$/,
   exclude: /node_modules/,
   loader: 'babel',
@@ -204,8 +205,8 @@ webpackConfig.module.loaders.push(
   { test: /\.otf(\?.*)?$/,   loader: 'file?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=font/opentype' },
   { test: /\.ttf(\?.*)?$/,   loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/octet-stream' },
   { test: /\.eot(\?.*)?$/,   loader: 'file?prefix=fonts/&name=[path][name].[ext]' },
-  { test: /\.svg(\?.*)?$/,   loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml' },
-  { test: /\.(png|jpg)$/,    loader: 'url?limit=8192' }
+{ test: /\.(png|jpg)$/,    loader: 'url?limit=8192' },
+{ test: /\.svg$/i, loader: 'inline?parentId=svginline' }
 )
 /* eslint-enable */
 

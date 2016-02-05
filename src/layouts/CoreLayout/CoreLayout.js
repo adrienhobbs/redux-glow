@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import ReactDom from 'react-dom';
 import '../../styles/core.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -10,6 +11,7 @@ import resizeUtils from '../../utilities/resize';
 import Nav from 'components/nav';
 import PageTransition from 'components/page-transition';
 import Footer from 'components/footer';
+import '../../../evil-icons.svg';
 
 const mapStateToProps = (state) => ({
   pageTransition: state.pageTransition,

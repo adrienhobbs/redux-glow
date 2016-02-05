@@ -1,6 +1,6 @@
 import React from 'react';
 import './jobs-clients.scss';
-import ClientsBar from 'components/ui/clients-bar';
+import AllClients from 'components/ui/clients-component/index.js';
 import {Link} from 'react-router';
 
 const JobsClients = React.createClass({
@@ -12,7 +12,7 @@ const JobsClients = React.createClass({
     return (
       <div id='contact-wrapper'>
         <div className='contact-inner'>
-          <ClientsBar showSubtitle />
+          <AllClients showSubtitle />
           <div className='hiring'>
             <div className='hiring-title'>
               <h2 className='page-title'>we&#8217;re hiring</h2>

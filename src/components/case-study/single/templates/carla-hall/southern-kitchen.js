@@ -132,7 +132,7 @@ export class SouthernKitchen extends BaseTemplate {
             <div className='copy' style={{backgroundColor: '#c3c3c3'}}>
               <div className='copy-inner end'>
                 <div className='image-large'>
-                  <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/hot-chicken-face.gif' alt='' />
+                  <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/social-01.gif' alt='' />
                 </div>
                 <h2 style={this.getHeadlineStyle()} className='page-title'>recap</h2>
                 <p style={copyStyle}>That is seventeen five - your half of the thirty-five thousand. Plus there's an extra fifteen in there, it's all yours, you've earned it. We made a deal. That's right. Because I think that we can do business together - we came to an understanding. Take a look at the money in your hand. Now just imagine making that every week.</p>
