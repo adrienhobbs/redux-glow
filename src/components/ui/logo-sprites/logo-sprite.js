@@ -5,19 +5,33 @@ export class SpriteLogo extends React.Component {
 
   static propTypes = {
     clientName: PropTypes.string,
-    suffix: PropTypes.string
+    suffix: PropTypes.string,
+    color: PropTypes.string
   };
 
   constructor (props) {
     super(props);
+    this.logoEl = document.getElementById(props.clientName);
+    if (this.logoEl && props.color) {
+      this.tl = new TimelineLite();
+      this.tl.set(this.logoEl, {attr: {fill: props.color}});
+    }
+  }
+
+  componentWillUnmount () {
+    if (this.tl) {
+      this.tl.reverse();
+    }
   }
 
   getSuffixClass () {
     return 'logo-' + this.props.clientName + '-' + this.props.suffix;
   }
+
   getStandardClass () {
     return 'logo-' + this.props.clientName;
   }
+
   getClassname () {
     return (this.props.suffix) ? this.getSuffixClass() : this.getStandardClass();
   }

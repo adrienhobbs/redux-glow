@@ -13,12 +13,12 @@
 .gradientCtr {
   width: 100%;
   position: fixed;
-  height: 80px;
+  height: 100px;
   left: 0;
   top: $nav-height;
   z-index: 10;
   @include media(min-width 1920px) {
-    top: 75px;
+    top: 100px;
   }
   width: 100%;
   @include media($under-medium) {

@@ -63,6 +63,7 @@ export class DesktopHomeView extends PageLayout {
     ReactDOM.unmountComponentAtNode(document.getElementById('frame-left'));
     ReactDOM.unmountComponentAtNode(document.getElementById('frame-right'));
     this.cancelTouchMoveListener();
+    this.actions.goToNumber({number: 0});
   }
   getCurrentFeaturedSlide () {
     return this.props.featuredWork.get(this.props.counter.current);

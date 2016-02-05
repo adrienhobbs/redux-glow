@@ -1,3 +1,4 @@
+    /*eslint-disable*/
 // import React from 'react';
 const s3 = 'https://s3.amazonaws.com/weareglow-assets/';
 const data = [
@@ -219,10 +220,11 @@ const data = [
       statLabelColor: '#C03D3B',
       bgColor: '#0A2C3A'
     },
-
     endShape: {
       bgColor: '#0A2C3A'
-    }
+    },
+    aboutCopy: '<p>Veep was a favorite among critics in its inaugural season. However, critical acclaim is simply not enough. GLOW approached HBO and took this opportunity to do what we do best - build audience and expand the social footprint with a smart, strong strategy and quality social content...and lots of it.</p><p>All the while, we were striving to redefine how a thirty-minute comedy is marketed on social media. </p><p>And it worked.</p>'
+
   },
   {
     featured:                   false,
@@ -282,7 +284,8 @@ const data = [
 
     endShape: {
       bgColor: '#171717'
-    }
+    },
+    aboutCopy: "<p>Syfy’s <i>12 Monkeys</i> is a science fiction thriller about one man's desperate attempt to save mankind using a dangerous and untested method of time travel. Our objective around the series launch was to build the world of 12 Monkeys for a new audience by making sense of its complex time-traveling story and supplement the on-air viewing with multi-platform digital and social content around this theme.  </p><p>The goals were to drive an immersive experience that would build and sustain engagement throughout the series and illustrate a comprehensive and clear vision for mapping the time travel jumps of James Cole, one of the lead characters. We also wanted to offer a stream of unique, provocative real-time, platform-specific social content for fans. </p>"
   },
   {
     featured: false,
@@ -332,7 +335,8 @@ const data = [
     },
     endShape: {
       bgColor: '#82b3dc'
-    }
+    },
+    aboutCopy: '<p>The premise of “what happens when we die?” is a powerful question that connects us all.  Near death experiences are both common, and fascinating.  Our challenge as we began crafting our creative approach was how to best use this question of life after death as a launch platform for TNT’s new show, Proof. </p>'
   },
   {
     featured: false,
@@ -380,7 +384,8 @@ const data = [
     },
     endShape: {
       bgColor: '#171717'
-    }
+    },
+    aboutCopy: '<p>In the fall of 2014, Empire State Development approached Glow.  The I Love New York initiative had taken shape on social, but it was important to ESD to maintain an edge over other states.  They needed a partner to analyze the trends, execute on insights and take their visual and editorial content to level unseen previous.  Glow stepped into this role with the goal to revitalize their social footprint, but also give it a unique voice among other states.</p>'
   },
   // {
   //   featured: false,
@@ -444,7 +449,8 @@ const data = [
     },
     backbar: {
       bgColor: '#00283f'
-    }
+    },
+    aboutCopy: '<p>In a count-down-to-winter-themed effort to engage fans with custom and unique content for the hit franchise Adventure Time, GLOW teamed with Cartoon Network to develop a digital experience called Adventure Time Winter Breakout. Our goal was to develop a fun, seasonal engagement that drove excitement around a countdown to winter, gave fans a reason to come back and engage with their favorite show, unlocking new items daily that awarded fans with Adventure Time assets and winnable items. </p>' 
   },
   {
     featured: false,
@@ -542,7 +548,8 @@ const data = [
     },
     endShape: {
       bgColor: '#091720'
-    }
+    },
+    aboutCopy: '<p>Sharknado 3 took the world by storm and stirred up 2 billion Twitter Impressions. Yes, that’s a B. A key priority program for Syfy, GLOW couldn’t wait to dive-in. Together we planned and launched a FOMO-inducing social campaign, which included social strategy, community management and social content creative to make Sharknado 3 a can’t-miss event. </p>'
   },
   {
     featured: false,
@@ -589,7 +596,8 @@ const data = [
     },
     endShape: {
       bgColor: '#431d67'
-    }
+    },
+    aboutCopy: '<p>The Westminster Kennel Club Dog Show is one of the oldest sporting events in modern history, and since 2013, GLOW has been the leading force behind expanding the organization’s social media presence.  Challenged with an aging audience and antiquated communication strategies, it was clear to us from day one, that there was the need to double down on social in order to build a larger social footprint and a sustainable social audience.</p>'
   },
   {
     featured: true,

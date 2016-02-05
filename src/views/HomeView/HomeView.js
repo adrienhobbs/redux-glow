@@ -38,7 +38,6 @@ export class HomeView extends PageLayout {
     const images = this.props.work.studyData.filter((workItem) => {
       return (workItem.get('type') === 'case-study');
     }).map((workItem) => {
-      console.log(workItem.get('backgroundImageUrl'));
       return workItem.get('backgroundImageUrl');
     }).toJS();
     images.push('https://s3.amazonaws.com/weareglow-assets/assets/work-shape.svg');
