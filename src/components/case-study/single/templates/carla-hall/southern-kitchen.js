@@ -125,24 +125,25 @@ export class SouthernKitchen extends BaseTemplate {
               </div>
             </div>
           </article>
-          <div className='end'>
-            <svg preserveAspectRatio='none' className='end-shape' ref='endShape' version='1.1' id='Layer_1'  x='0px' y='0px' viewBox='0 0 1920 600' >
-              <polygon style={{fill:  '#c3c3c3'}} points='0,0 1920,314.6 1920,600 0,600 '/>
-            </svg>
-            <div className='copy' style={{backgroundColor: '#c3c3c3'}}>
-              <div className='copy-inner end'>
+            <div className='copy'>
+              <div className='copy-inner'>
                 <div className='image-large'>
-                  <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/social-01.gif' alt='' />
+                  <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/social-02.gif' alt='' />
                 </div>
                 <h2 style={this.getHeadlineStyle()} className='page-title'>recap</h2>
                 <p style={copyStyle}>That is seventeen five - your half of the thirty-five thousand. Plus there's an extra fifteen in there, it's all yours, you've earned it. We made a deal. That's right. Because I think that we can do business together - we came to an understanding. Take a look at the money in your hand. Now just imagine making that every week.</p>
               </div>
             </div>
-          </div>
         </div>
-        </div>
+      </div>
     );
   }
 }
 
 export default SouthernKitchen;
+
+          // <div className='end'>
+          //   <svg preserveAspectRatio='none' className='end-shape' ref='endShape' version='1.1' id='Layer_1'  x='0px' y='0px' viewBox='0 0 1920 600' >
+          //     <polygon style={{fill:  '#c3c3c3'}} points='0,0 1920,314.6 1920,600 0,600 '/>
+          //   </svg>
+          // </div>

@@ -1,5 +1,7 @@
 :global {
   #work {
+    max-width: 1920px;
+    margin: auto;
     .header {
       margin-top: 2em;
       @include media($large-screen-up) {

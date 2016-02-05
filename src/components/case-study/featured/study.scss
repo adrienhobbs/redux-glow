@@ -67,14 +67,14 @@
     transform: rotate(-8deg);
     margin-top: -70px;
     @include media($medium-screen-up) {
-      margin-top: -145px;
+      margin-top: -178px;
     }
 
     position: absolute;
     top: 0;
     right: -25%;
     left: -25%;
-    height: 342px;
+    height: 400px;
     bottom: 0;
   }
   .study-intro-container {
