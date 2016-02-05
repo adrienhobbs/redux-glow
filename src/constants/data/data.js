@@ -62,103 +62,103 @@ const data = [
     },
     aboutCopy: '<p>GLOWs relationship with celebrity chef Carla Hall from ABC’s “The Chew” began with a conversation around launching a Kickstarter campaign to raise funds to support her life long dream of opening her own restaurant, <i>Carla Hall’s Southern Kitchen.</i></p> <p>GLOW laid out a strategy that began with a complete social refresh of all of Carla’s social profiles to ignite and strengthen her base before we kicked off her Kickstarter campaign.</p>'
   },
-  {
-    featured: false,
-    client: 'hulu',
-    project: 'mindy',
-    title: 'the mindy project',
-    subtitle: 'social media campaign',
-    subtitleSlug: 'social media campaign',
-    type: 'case-study',
-    infoPath: s3 + 'case-studies/hulu/mindy-project/logo-title.svg',
-    backgroundImageUrl: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
-    logoColor: '#e70062',
-    secColor: '#18d4ff',
-    gradientTop: '#e70062',
-    gradientBottom: '#18d4ff',
-    clientLogoColor: '#6eb116',
-    headlineColor: '#e70062',
-    copyColor: '#000',
-    featuredProjectTitleColor: '#e70062',
-    cat: ' ― hulu | mindy ― ',
-    templateName: 'Mindy',
-    results: {
-      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
-      statColor: '#ffffff',
-      statLabelColor: '#e70662',
-      bgColor: '#00C1E8'
-    },
-    services: ['community management', 'video production', 'social content'],
-    recognition: ['short award finalist', 'best twitter campaign'],
-    lockup: {
-      className: 'mindy-lockup',
-      logoColor: '#73B100'
-    },
-    sidebar: {
-      logoColor: '#129fbf',
-      copyColor: '#129fbf',
-      headlineColor: '#fff'
-    },
-    shareButton: {
-      strokeColor: '#fff',
-      copyColor: '#fff'
-    },
-    endShape: {
-      bgColor: '#00CAFF'
-    },
-    backbar: {
-      bgColor: '#e70062'
-    }
-  },
-  {
-    featured: false,
-    client: 'hulu',
-    project: 'casual',
-    title: 'casual',
-    subtitle: 'social media campaign',
-    subtitleSlug: 'social media campaign',
-    type: 'case-study',
-    infoPath: s3 + 'case-studies/hulu/casual/logo-title.svg',
-    backgroundImageUrl: s3 + 'case-studies/hulu/casual/landscape.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/hulu/casual/landscape.jpg',
-    logoColor: '#68ae34',
-    secColor: '#5f6e8d',
-    gradientTop: '#68ae34',
-    gradientBottom: '#5f6e8d',
-    featuredProjectTitleColor: '#68ae34',
-    clientLogoColor: '#6eb116',
-    headlineColor: '#ffffff',
-    cat: ' ― hulu | casual ― ',
-    templateName: 'Casual',
-    results: {
-      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
-      statColor: '#ffffff',
-      statLabelColor: '#6eb116',
-      bgColor: '#4C5772'
-    },
-    lockup: {
-      className: 'casual-lockup',
-      logoColor: '#73B100'
-    },
-    services: ['community management', 'video production', 'social content'],
-    recognition: ['short award finalist', 'best twitter campaign'],
-    sidebar: {
-      logoColor: '#3C465D',
-      copyColor: '#3C465D',
-      headlineColor: '#fff'
-    },
-    shareButton: {
-      strokeColor: '#fff',
-      copyColor: '#fff'
-    },
-    backbar: {
-      bgColor: '#6eb116'
-    },
-    endShape: {
-      bgColor: '#4C5772'
-    }
-  },
+  // {
+  //   featured: false,
+  //   client: 'hulu',
+  //   project: 'mindy',
+  //   title: 'the mindy project',
+  //   subtitle: 'social media campaign',
+  //   subtitleSlug: 'social media campaign',
+  //   type: 'case-study',
+  //   infoPath: s3 + 'case-studies/hulu/mindy-project/logo-title.svg',
+  //   backgroundImageUrl: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
+  //   backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
+  //   logoColor: '#e70062',
+  //   secColor: '#18d4ff',
+  //   gradientTop: '#e70062',
+  //   gradientBottom: '#18d4ff',
+  //   clientLogoColor: '#6eb116',
+  //   headlineColor: '#e70062',
+  //   copyColor: '#000',
+  //   featuredProjectTitleColor: '#e70062',
+  //   cat: ' ― hulu | mindy ― ',
+  //   templateName: 'Mindy',
+  //   results: {
+  //     stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+  //     statColor: '#ffffff',
+  //     statLabelColor: '#e70662',
+  //     bgColor: '#00C1E8'
+  //   },
+  //   services: ['community management', 'video production', 'social content'],
+  //   recognition: ['short award finalist', 'best twitter campaign'],
+  //   lockup: {
+  //     className: 'mindy-lockup',
+  //     logoColor: '#73B100'
+  //   },
+  //   sidebar: {
+  //     logoColor: '#129fbf',
+  //     copyColor: '#129fbf',
+  //     headlineColor: '#fff'
+  //   },
+  //   shareButton: {
+  //     strokeColor: '#fff',
+  //     copyColor: '#fff'
+  //   },
+  //   endShape: {
+  //     bgColor: '#00CAFF'
+  //   },
+  //   backbar: {
+  //     bgColor: '#e70062'
+  //   }
+  // },
+  // {
+  //   featured: false,
+  //   client: 'hulu',
+  //   project: 'casual',
+  //   title: 'casual',
+  //   subtitle: 'social media campaign',
+  //   subtitleSlug: 'social media campaign',
+  //   type: 'case-study',
+  //   infoPath: s3 + 'case-studies/hulu/casual/logo-title.svg',
+  //   backgroundImageUrl: s3 + 'case-studies/hulu/casual/landscape.jpg',
+  //   backgroundImageUrlVert: s3 + 'case-studies/hulu/casual/landscape.jpg',
+  //   logoColor: '#68ae34',
+  //   secColor: '#5f6e8d',
+  //   gradientTop: '#68ae34',
+  //   gradientBottom: '#5f6e8d',
+  //   featuredProjectTitleColor: '#68ae34',
+  //   clientLogoColor: '#6eb116',
+  //   headlineColor: '#ffffff',
+  //   cat: ' ― hulu | casual ― ',
+  //   templateName: 'Casual',
+  //   results: {
+  //     stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+  //     statColor: '#ffffff',
+  //     statLabelColor: '#6eb116',
+  //     bgColor: '#4C5772'
+  //   },
+  //   lockup: {
+  //     className: 'casual-lockup',
+  //     logoColor: '#73B100'
+  //   },
+  //   services: ['community management', 'video production', 'social content'],
+  //   recognition: ['short award finalist', 'best twitter campaign'],
+  //   sidebar: {
+  //     logoColor: '#3C465D',
+  //     copyColor: '#3C465D',
+  //     headlineColor: '#fff'
+  //   },
+  //   shareButton: {
+  //     strokeColor: '#fff',
+  //     copyColor: '#fff'
+  //   },
+  //   backbar: {
+  //     bgColor: '#6eb116'
+  //   },
+  //   endShape: {
+  //     bgColor: '#4C5772'
+  //   }
+  // },
   {
     featured: true,
     client: 'hbo',
@@ -225,7 +225,7 @@ const data = [
     }
   },
   {
-    featured:                   true,
+    featured:                   false,
     client:                     'syfy',
     project:                    '12-Monkeys',
     title:                      '12-Monkeys',
@@ -285,7 +285,7 @@ const data = [
     }
   },
   {
-    featured: true,
+    featured: false,
     client: 'tnt',
     project: 'proof',
     title: 'proof',
@@ -452,12 +452,11 @@ const data = [
     project: 'how i did it',
     title: 'how i did it',
     subtitle: 'video campaign',
-    testMe: '<h1> WOAH </h1>',
     subtitleSlug: 'video campaign',
     type: 'case-study',
     infoPath: s3 + 'case-studies/yahoo/how-i-did-it/logo-title.svg',
-    backgroundImageUrl: s3 +  'case-studies/cn/winter-calendar/landscape.jpg',
-    backgroundImageUrlVert: s3 +  'case-studies/cn/winter-calendar/landscape.jpg',
+    backgroundImageUrl: s3 +  'case-studies/yahoo/how-i-did-it/landscape.jpg',
+    backgroundImageUrlVert: s3 +  'case-studies/yahoo/how-i-did-it/landscape.jpg',
     logoColor: '#00283f',
     bodyColor: 'ffffff',
     secColor: '#ffffff',
@@ -470,7 +469,6 @@ const data = [
     headlineColor: '#1EB547',
     lockup: {
       className: 'yahoo-lockup',
-      logoColor: '#00283f',
       projectTitle: '#fff'
     },
     results: {
@@ -501,7 +499,7 @@ const data = [
     aboutCopy: '<p>HOW I DID IT: EVERYDAY STORIES OF FINANCIAL SUCCESS is a five part documentary series of short stories on subjects ranging from Paying for College, to Buying Your First House. GLOW, in partnership with Believe Entertainment, Yahoo Finance, and the Consumer Financial Protection Bureau, produced, directed and edited all five episodes.</p><p> The goal of the project was to demystify options available when facing a range of different financial challenges, by showing the personal approaches of several ordinary individuals in a fun, and relatable first-person telling of how they met and overcame their own financial issues.</p>'
   },
   {
-    featured: false,
+    featured: true,
     client: 'syfy',
     project: 'sharknado',
     title: 'sharknado',

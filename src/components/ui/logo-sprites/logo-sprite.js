@@ -23,7 +23,7 @@ export class SpriteLogo extends React.Component {
   }
 
   getLocalClassname () {
-    return classes[this.getClassname()]
+    return classes[this.getClassname()];
   }
 
   getUseLink () {

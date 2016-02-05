@@ -22,9 +22,9 @@ $base-z-index: 0;
 
 // Colors
 $blue: #477dca;
-$dark-gray: #333;
+$dark-gray: #a7a7a7;
 $medium-gray: #999;
-$light-gray: #ddd;
+$light-gray: #d4d4d4;
 $dove-gray: #737373;
 $stack: #8E8E8E;
 $pink: #f12d5c;
@@ -51,7 +51,7 @@ $base-border-color: $iron;
 $base-border: 2px solid $base-border-color;
 
 // Background Colors
-$base-background-color: $concrete;
+$base-background-color: $light-gray;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms

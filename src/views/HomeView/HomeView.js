@@ -8,6 +8,7 @@ import HomeTemplate from './HomeTemplate';
 // the component can be tested w/ and w/o being connected.
 // See: http://rackt.github.io/redux/docs/recipes/WritingTests.html
 //
+import {ImageHelper} from 'react-preload';
 
 const mapStateToProps = (state) => ({
   counter: state.counter,
@@ -33,6 +34,16 @@ export class HomeView extends PageLayout {
 
   componentDidMount () {
     this.animatePageContentIn();
+
+    const images = this.props.work.studyData.filter((workItem) => {
+      return (workItem.get('type') === 'case-study');
+    }).map((workItem) => {
+      console.log(workItem.get('backgroundImageUrl'));
+      return workItem.get('backgroundImageUrl');
+    }).toJS();
+    images.push('https://s3.amazonaws.com/weareglow-assets/assets/work-shape.svg');
+
+    ImageHelper.loadImages(images);
   }
   constructor (props) {
     super(props);

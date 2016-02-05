@@ -1,6 +1,5 @@
 import React from 'react';
 import './sidebar.scss';
-import ClientLogo from 'components/ui/client-logos';
 import ShareButton from 'components/ui/share-button';
 import Logo from 'components/ui/logo-sprites/logo-sprite';
 
@@ -12,7 +11,6 @@ const Sidebar = React.createClass({
     return null;
   },
   getClient () {
-    console.log(this.props.data.get('client').replace(/\s+/g, '-'))
     return this.props.data.get('client').replace(/\s+/g, '-');
   },
   getLogoColor () {

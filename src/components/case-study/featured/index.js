@@ -3,7 +3,6 @@ import { Spring } from 'react-motion';
 import CaseStudy from 'components/case-study';
 import BackBar from 'components/ui/backbar';
 import ViewCaseStudy from 'components/ui/icons/view-case-study';
-// import StudyProjectTitle from 'components/ui/study-project-title';
 import {snakeCase} from 'lodash';
 import { connect } from 'react-redux';
 import PageLayout from 'layouts/PageLayout/PageLayout';
@@ -130,4 +129,3 @@ export class FeaturedStudy extends PageLayout {
 
 export default connect(mapStateToProps)(FeaturedStudy);
 
-// <StudyProjectTitle projectColor={this.getFeaturedProjectTitleColor()} path={this.props.data.get('infoPath')} />

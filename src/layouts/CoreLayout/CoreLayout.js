@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import ReactDom from 'react-dom';
 import '../../styles/core.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';

@@ -1,7 +1,7 @@
 import React from 'react';
-// import './careers.scss';
 import { connect } from 'react-redux';
 import PageLayout from 'layouts/PageLayout/PageLayout';
+import Header from 'components/ui/header-component/header-component.js';
 
 const mapStateToProps = (state) => ({
   routerstate: state.router
@@ -15,24 +15,12 @@ export class Careers extends PageLayout {
   }
   componentDidMount () {
     this.animatePageContentIn();
-    this.watchHeaderScrollTop();
-  }
-
-  componentWillUnmount () {
-    this.removeHeaderWatcher();
-  }
-  pageSubTitle () {
-    return <span>We pay your bills, in exchange for your skills</span>;
   }
 
   render () {
     return (
       <div className='container' id='careers' ref='page'>
-        <div className='header'>
-          <div ref='headerImage' className='header-image'></div>
-          <h1 className='page-title'>careers</h1>
-          <h4 className='page-subtitle'>{this.pageSubTitle()}</h4>
-        </div>
+        <Header title={'careers'} subtitle={'We pay your bills in exchange for your skills'} />
         <div className='page-content'>
           <div className='row'>
             <p className='careers-copy'> MailChimp makes powerful marketing products that people love to use. In 2015, our 500 employees will help 9 million users around the world send 200 billion emails. We’re privately owned, profitable, and growing fast. We live in Atlanta and dream in the stratosphere. We’re always looking for weird, smart, and independent thinkers to join the team.</p>
@@ -68,7 +56,6 @@ export class Careers extends PageLayout {
             </div>
           </div>
         </div>
-        <div ref='headerGradient' className='header-grad'></div>
       </div>
     );
   }

@@ -8,7 +8,6 @@ import { actions as transitionActions } from '../../redux/modules/page-transitio
 import {isNull} from 'lodash';
 import du from 'domutil';
 import Helpers from '../../utilities/helpers';
-// import scrollMonitor from 'scrollmonitor';
 import Footer from 'components/footer';
 
 export class PageLayout extends React.Component {
@@ -42,44 +41,14 @@ export class PageLayout extends React.Component {
   getFooter () {
     return <Footer />;
   }
-
-  showHeaderGradient () {
-    // TweenLite.set(this.refs.headerGradient, {scaleY: 1});
-  }
   checkBodyVisibility () {
     if (du.hasClass(document.body, 'isHidden')) {
       TweenLite.to(document.body, 0.8, {autoAlpha: 1, className: '-=isHidden', ease: Circ.easeInOut});
     }
   }
-  hideHeaderGradient () {
-    // TweenLite.set(this.refs.headerGradient, {scaleY: 0});
-  }
-
-  removeHeaderWatcher () {
-    // console.log('destory')
-    // if (typeof this.headerWatcher !== undefined) {
-    //   this.headerWatcher.destroy();
-    // }
-  }
-
-  watchHeaderScrollTop () {
-    // this.headerWatcher = scrollMonitor.create(this.refs.headerImage);
-
-    // console.log(this.refs.headerImage);
-    // this.headerWatcher.on('enterViewport', function() {
-    //   console.log('yah')
-    // })
-    // this.headerWatcher.on('exitViewport', function() {
-    //   console.log('exit')
-    // })
-    // // this.headerWatcher.exitViewport(this.showHeaderGradient.bind(this));
-    // // this.headerWatcher.enterViewport(this.hideHeaderGradient.bind(this));
-  }
-
   getCurrentDevice () {
     return (this.props.viewport.isPhone) ? 'mobile' : 'desktop';
   }
-
   setupPageInfo (pageName) {
     Helpers.setPageTitle(pageName);
   }

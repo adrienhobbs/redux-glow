@@ -1,15 +1,18 @@
 :global {
   #careers {
-    .header-image {
-      @include header-image('careers.jpg');
-    }
 
+    .page-content {
+      
+    }
     .careers-copy {
+      // lost-center: 820px;
       text-align: center;
+      margin-bottom: em(80);
     }
 
     .career-listings {
       margin-top: em(30);
+      // lost-center: 820px;
     }
     .row {
       width: 100%;
@@ -39,6 +42,7 @@
       }
 
       .positions-list {
+        font-family: $gt;
         margin-top: em(30);
         text-align: center;
         .position {

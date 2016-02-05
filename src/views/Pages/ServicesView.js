@@ -1,9 +1,8 @@
 import React from 'react';
-// import './services.scss';
 import { connect }            from 'react-redux';
 import servicesList from 'constants/data/services-list';
 import PageLayout from 'layouts/PageLayout/PageLayout';
-
+import Header from 'components/ui/header-component/header-component.js';
 const mapStateToProps = (state) => ({
 
   work: state.work,
@@ -24,25 +23,17 @@ export class Services extends PageLayout {
     this.setupPageInfo('Services');
   }
 
-  componentWillUnmount () {
-    this.removeHeaderWatcher();
-  }
-
   componentDidMount () {
     this.animatePageContentIn();
-    this.watchHeaderScrollTop();
   }
+
   pageSubTitle () {
     return <span>check out our dope services, son!</span>;
   }
 
   getOurServices () {
     return servicesList.map(function mapServices (service, i) {
-      function getCats () {
-        return service.cats.map(function mapServiceCats (cat, ii) {
-          return <div key={ii} className='cat'>&#8594;  {cat}</div>;
-        });
-      }
+      function getCats () { return service.cats.map(function mapServiceCats (cat, ii) { return <div key={ii} className='cat'>&#8594;  {cat}</div>; }); }
       return (
         <div key={i} className='service-bucket'>
           <div className='title'>
@@ -61,19 +52,14 @@ export class Services extends PageLayout {
   render () {
     return (
       <div className='page-outer'>
-      <div className='container' id='services' ref='page'>
-        <div className='header'>
-          <div ref='headerImage' className='header-image'></div>
-          <h1 className='page-title'>services</h1>
-          <h4 className='page-subtitle'>{this.pageSubTitle()}</h4>
-        </div>
-        <div className='page-content'>
-          <div className='row'>
-            {this.getOurServices()}
+        <div className='container' id='services' ref='page'>
+          <Header title={'services'} subtitle={'check out our dope services, son!'} />
+          <div className='page-content'>
+            <div className='row'>
+              {this.getOurServices()}
+            </div>
           </div>
         </div>
-      </div>
-          <div ref='headerGradient' className='header-grad'></div>
       </div>
     );
   }

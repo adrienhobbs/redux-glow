@@ -40,6 +40,10 @@
       .inner-btn {
         lost-align: middle-center;
       }
+      &:hover, &:focus {
+        background: transparent !important;
+        color: $radical-red-hover;
+      }
 
       position: absolute;
       top: 0;

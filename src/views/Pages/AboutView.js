@@ -5,7 +5,7 @@ import EmployeeInfo from 'constants/data/employees';
 import { connect }  from 'react-redux';
 import {map} from 'lodash';
 import PageLayout from 'layouts/PageLayout/PageLayout';
-// import './about.scss';
+import Header from 'components/ui/header-component/header-component.js';
 
 const mapStateToProps = (state) => ({
   counter: state.counter,
@@ -20,21 +20,14 @@ const mapStateToProps = (state) => ({
 export class AboutView extends PageLayout {
   static propTypes = {
   };
-
   constructor (props) {
     super(props);
   }
-
   componentWillMount () {
     this.setupPageInfo('About');
   }
-
   componentDidMount () {
     this.animatePageContentIn();
-    // this.watchHeaderScrollTop();
-  }
-  componentWillUnmount () {
-    // this.removeHeaderWatcher();
   }
   getEmployees () {
     return map(EmployeeInfo, function mapEmployeeInfo (employee, i) {
@@ -48,11 +41,7 @@ export class AboutView extends PageLayout {
   render () {
     return (
       <div className='container' id='about' ref='page'>
-        <div className='header'>
-          <div ref='headerImage' className='header-image'></div>
-          <h1 className='page-title'>about</h1>
-          <h4 className='page-subtitle'>it's always sunny in new york city</h4>
-        </div>
+        <Header title={'services'} subtitle={'its probably not sunny today'} />
         <div className='page-content'>
           <div className='row'>
             <div className='about-copy'>
@@ -72,7 +61,6 @@ export class AboutView extends PageLayout {
         <div className='row-large'>
           {this.getEmployees()}
         </div>
-        <div ref='headerGradient' className='header-grad'></div>
       </div>
     );
   }

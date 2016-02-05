@@ -1,5 +1,39 @@
 :global {
 
+  .full-width-container {
+    lost-flex-container: row;
+    position: relative;
+    min-height: 60vh;
+  }
+
+  .connect-map-inner-left {
+    position: relative;
+    lost-column: 1/2 0 0;
+    @include media($under-medium) {
+      lost-column: 1/4 0 0;
+    }
+    @include media($under-small) {
+      lost-column: 0;
+    }
+  }
+  .connect-map-inner-right {
+    position: relative;
+    lost-column: 1/2 0 0;
+    padding-top: em(30);
+    padding-bottom: em(30);
+
+    @include media($under-medium) {
+      lost-column: 3/4 0 0;
+    }
+
+    @include media($under-small) {
+      lost-column: 1;
+    }
+    .connect-forms-container {
+      background: rgba(255,255,255,0.8);
+      padding: 1.4em;
+    }
+  }
   .mapboxgl-canvas-container {
     position: relative;
     height:100%;
@@ -19,15 +53,14 @@
 
     }
   }
-  #connect-page-map {
 
+  #connect-page-map {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
-
   }
   .connect-headline {
     @include title;
