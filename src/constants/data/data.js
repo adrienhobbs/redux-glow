@@ -33,6 +33,9 @@ const data = [
     headlineColor: '#ed0f77',
     copyColor: '#000000',
     cat: '― carla hall ―',
+    mobile: {
+      bgColor: '#fff' 
+    },
     services: ['community management', 'video production', 'social content'],
     fullScreenBgImg: s3 + 'case-studies/carla-hall/southern-kitchen/video-04.jpg',
     lockup: {
@@ -525,6 +528,9 @@ const data = [
     templateName: 'Sharknado',
     services: ['community management', 'video production', 'social content'],
     headlineColor: '#7d2f37',
+    mobile: {
+      bgColor: '#fff' 
+    },
     lockup: {
       className: 'sharknado-lockup'
     },

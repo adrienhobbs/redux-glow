@@ -10,7 +10,7 @@ const ContactSlide = React.createClass({
       style: 'mapbox://styles/mattwill/cijysv78o00uo90lxte3x4fua',
       center: [-74.01, 40.73],
       zoom:16,
-      interactive: true
+      interactive: false
     });
     this.map.on('load', this.setMapHeight);
   },
