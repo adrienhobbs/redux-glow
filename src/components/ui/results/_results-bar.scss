@@ -66,7 +66,7 @@
     @include media($medium-screen-up) {
       width: 80px;
       height: 2px;
-      @include margin(60px auto 50px auto);
+      // @include margin(60px auto 50px auto);
     }
 
   }

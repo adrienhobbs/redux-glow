@@ -41,7 +41,7 @@ export class Proof extends BaseTemplate {
                     </div>
                   </div>
                   <div className='stat-device-image'>
-                    <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/proof-device.png' alt='' />
+                    <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/device.png' alt='' />
                   </div>
                   <div className='stat-device-right'>
                     <div className='stat-box-device'>
@@ -76,10 +76,10 @@ export class Proof extends BaseTemplate {
                 </div>
               </div>
               <div className='img-single'>
-                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/proof-1.png' alt='' />
+                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/media-01.png' alt='' />
               </div>
               <div className='img-single'>
-                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/proof-2.png' alt='' />
+                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/media-02.jpg' alt='' />
               </div>
           </article>
 

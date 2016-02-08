@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
 import Video from 'components/video/video.js';
 
 export class TwelveMonkeys extends BaseTemplate {
   static propTypes = {
-    data: React.PropTypes.object
+    data: PropTypes.object
   };
   constructor (props) {
     super(props);
@@ -51,7 +51,7 @@ export class TwelveMonkeys extends BaseTemplate {
                   <div className='stat-device-left'>
                     <div className='stat-box-device'>
                       <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                       100k
+                        100k
                       </div>
                       <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
                         Facebook Fans in season 1
@@ -93,26 +93,36 @@ export class TwelveMonkeys extends BaseTemplate {
               </div>
             </div>
           </article>
+          <div className='copy'>
+            <div className='copy-inner'>
+              <p style={copyStyle}>By creating a dynamic interactive experience, a compelling social media content campaign, and a targeted digital media campaign ensured viewers were met at every opportunity with variations of 12 Monkeys content and messaging geared for each platform. Consolidating all asks of a campaign into one agency allowed for extreme efficiencies and shared platform learnings—paving the way for GLOW to deliver a successful campaign across the board.</p>
+              <p style={copyStyle}>Overall, during January to May 2015, the 12 Monkeys Time Map on Syfy.com exceeded expectations on total page views, uniques, and site visits and garnered a time spent average of 3+ minutes per visit, which is an outstanding “dwell time” that’s notably above industry average. </p>
+            </div>
+          </div>
           <article className='strategy'>
-            {this.createHeadlineEl('strategy')}
+            {this.createHeadlineEl('approach')}
             <div className='copy'>
               <div className='copy-inner'>
-                <p style={copyStyle}>Our goals were clear: amplify awareness in key audience categories with display and content, and build community among hardcore and casual fans of Syfy/12 Monkeys/ Terry Gilliam fans throughout social.  </p>
+                <p style={copyStyle}>The heart of the campaign was the digital Time Map activation that lived on Syfy.com, which GLOW designed and produced. We put animation and interactivity at the forefront so the user could learn and digest the action at their own pace as they watched the timeline “build” over the course of the 13 weeks that the series aired. </p>
               </div>
-            </div>
-            <div className='img-single'>
-              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/strategy-01.jpg' alt='' />
-            </div>
-            <div className='img-single'>
-              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/strategy-02.png' alt='' />
+              <Video autoplay btnColor='#000' bgColor='#1D1D1D' videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/site-01.mp4' />
+              <div className='copy-inner'>
+                <p style={copyStyle}>Each week, the Time Map would update with the new episode’s time travel, which was depicted with photos and video clips directly from the show as well as text-based summaries all working together to contextualize and dramatize several of James Cole’s “jumps.” We outfitted the Time Map with a number of special features to help both casual viewers as well as superfans delve as deep as they wanted to. Users could look at individual episodes and explore the jumps, toggle through the entire timeline episode by episode, or turn on the “onion skin” function to see the buildup of all the time travel throughout the course of the series while still being able to scroll through episode by episode. The Time Map updates were also optimized on mobile so the audience could have a similarly rich experience no matter what device they were using.  </p>
+              </div>
+              <Video autoplay btnColor='#000' bgColor='#1D1D1D' videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/site-02.mp4' />
             </div>
             <div className='copy'>
               <div className='copy-inner'>
-                <p style={copyStyle}>The result was a passionate fan base on FB with more than 100k fans engaging regularly with show content and almost 16k fans on Twitter discussing the show weekly.  We delivered a massive display campaign packed with rich media, high impact placements and sampling opportunity, and a site experience that launched in two phases, pre and post premiere.  The site evolved weekly alongside the series where fans could return throughout the season for a deeper dive into time travel, information and content. </p>
+                <p style={copyStyle}>To extend the Time Map activation socially on Twitter and Facebook beyond our regular teaser posts, each week we created special content to push to the Time Map’s newest update. We also produced exclusive “When Is Cole?” video episode recaps that combined show clips and animations from the Time Map.  All of the social content served as drivers back to the Time Map and to support tune in to the series. Syfy supported the Time Map on air with promo spots. </p>
+                <p style={copyStyle}>Finally, GLOW designed and developed the digital media campaign for both desktop and mobile. The digital media campaign ran in tandem with the interactive and social experiences to serve the goal of wide-reaching tune in awareness for audiences outside of Syfy’s owned media channels. Eye-catching design and animation brought the 12 Monkeys key art to life in a visually eerie way. </p>
               </div>
             </div>
-            <Video btnColor='#000' bgColor='#000' videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/site-01.mp4' />
-            <Video btnColor='#000' bgColor='#000' videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/site-02.mp4' />
+              <div className='img-single'>
+                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/media-01.png' alt='' />
+              </div>
+              <div className='img-single'>
+                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/social-01.png' alt='' />
+              </div>
           </article>
         </div>
       </div>
@@ -122,8 +132,8 @@ export class TwelveMonkeys extends BaseTemplate {
 
 export default TwelveMonkeys;
 
-            // <div className='end'>
-            //   <svg preserveAspectRatio='none' className='end-shape' ref='endShape' version='1.1' id='Layer_1'  x='0px' y='0px' viewBox='0 0 1920 600' >
-            //     <polygon style={{fill: this.props.data.get('endShape').bgColor}} points='0,0 1920,314.6 1920,600 0,600 '/>
-            //   </svg>
-            // </div>
+// <div className='end'>
+//   <svg preserveAspectRatio='none' className='end-shape' ref='endShape' version='1.1' id='Layer_1'  x='0px' y='0px' viewBox='0 0 1920 600' >
+//     <polygon style={{fill: this.props.data.get('endShape').bgColor}} points='0,0 1920,314.6 1920,600 0,600 '/>
+//   </svg>
+// </div>

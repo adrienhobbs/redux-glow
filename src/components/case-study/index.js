@@ -12,18 +12,34 @@ const CaseStudy = React.createClass({
     showBody:    PropTypes.bool,
     slider:      PropTypes.bool
   },
+  isPortrait () {
+    return (this.props.viewport.orientation === 'portrait' && this.props.data.get('featured') && this.props.slider);
+  },
   getBackground () {
-    if (this.props.viewport.orientation === 'portrait' && this.props.data.get('featured') && this.props.slider) {
+    if (this.isPortrait()) {
       return this.props.data.get('backgroundImageUrlVert');
     } else {
       return this.props.data.get('backgroundImageUrl');
     }
   },
+  getBgPosition () {
+    if (this.isPortrait()) {
+      return 'top center';
+    } else {
+      return 'top center';
+    }
+  },
+  getBgStyle () {
+    return {
+      backgroundImage: `url(${this.getBackground()})`,
+      backgroundPosition: this.getBgPosition()
+    };
+  },
 
   render () {
     const studyBody = (this.props.showBody && this.props.data.get('templateName')) ? <StudyBody data={this.props.data} viewport={this.props.viewport} isVisible={this.props.singleMode} /> : null;
     return (
-      <div className='case-bg' style={{backgroundImage: `url(${this.getBackground()})`}}>
+      <div className='case-bg' style={this.getBgStyle()}>
         {this.props.children}
         {studyBody}
       </div>

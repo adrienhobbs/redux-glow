@@ -32,11 +32,14 @@
     position: relative;
     margin-top: em(80);
     lost-center: em(820);
-    min-height: 600px;
-    background: #e8e8e8;
-    overflow: hidden;
+    margin: auto;
+    // min-height: 600px;
+    // background: #e8e8e8;
+    // overflow: hidden;
     video {
-      @include center(xy);
+      // @include center(xy);
+      max-width: 95%;
+      margin: auto;
       z-index: 19;
     }
     .play-button-outer {
