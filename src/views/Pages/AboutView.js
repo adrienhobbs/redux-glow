@@ -41,14 +41,14 @@ export class AboutView extends PageLayout {
   render () {
     return (
       <div className='container' id='about' ref='page'>
-        <Header title={'services'} subtitle={'its probably not sunny today'} />
+        <Header title={'about us '} subtitle={'its probably not sunny today'} />
         <div className='page-content'>
           <div className='row'>
             <div className='about-copy'>
-              <p>GLOW is an agency built to thrive in today's ever-evolving digital landscape.  Our diverse team is dedicated to helping leading brands utilize the latest technology and channels to engange and motivate coveted audiences and consumers.  We are your consumers and we are your audience.  And for the past 16 years we have crafted an expertise in driving consumers to action through a mix of smart, strategic thinking bolstered by top-notch execution.</p>
+              <p>Since 1999, GLOW has partnered with high-profile brands and networks to build world-class social and digital campaigns. We aren't just an award-winning digital marketing and social media agency in NYC. We are a methodically built team of 50, composed of industry veterans, Ivy League graduates, photographers, musicians, artists, world travelers, devoted fans, and curious marketers, all unified in our expertise of social and digital. We take tremendous pride in identifying and nurturing talent to consistently provide value for our partners. </p>
             </div>
             <div className='about-copy'>
-              <p>Our teams are experts in a range of services that include social media strategy, community management, concept development, video production, graphic design, social content creation, and experiential development and design.  Whether the goal is to drive tune-in, generate tweets, clicks, shares, posts, visits, or to make a purchase, GLOW has successfull applied our blend of award-winning strategies and creative to engage audiences and drive action, enabling our clients to achieve successful measurable results.</p>
+              <p>Without our talent we would not be experiencing such growth nor have the longstanding partnerships that we do. We work tirelessly to develop strategies and tactics and as experts we possess an expansive understanding of platforms, data and tools that exist because we are avid users of those platforms, both personally and professionally. With a long history of smart, effective, and results-driven campaigns, we have and will always take great pride in our long term client relationships. </p>
             </div>
           </div>
           <div className='row'>
