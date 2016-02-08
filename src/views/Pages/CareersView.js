@@ -28,20 +28,20 @@ export class Careers extends PageLayout {
           <div className='row career-listings'>
             <div className='career'>
               <div className='career-category'>
-                <h4 className='career-title'>client services</h4>
-                <ul className='positions-list'>
-                  <li className='position'>project manager</li>
-                  <li className='position'>account manager</li>
-                </ul>
-              </div>
-            </div>
-            <div className='career'>
-              <div className='career-category'>
                 <h4 className='career-title'>creative</h4>
                 <ul className='positions-list'>
                   <li className='position'>junior designer</li>
                   <li className='position'>art director</li>
                   <li className='position'>production designer</li>
+                </ul>
+              </div>
+            </div>
+            <div className='career'>
+              <div className='career-category'>
+                <h4 className='career-title'>client services</h4>
+                <ul className='positions-list'>
+                  <li className='position'>project manager</li>
+                  <li className='position'>account manager</li>
                 </ul>
               </div>
             </div>
@@ -55,6 +55,9 @@ export class Careers extends PageLayout {
               </div>
             </div>
           </div>
+        </div>
+        <div className='interested'>
+          <p>want to apply? send us an email at <a className='hoverline' href='mailto:jobs@weareglow.com'>jobs@weareglow.com.</a></p>
         </div>
       </div>
     );

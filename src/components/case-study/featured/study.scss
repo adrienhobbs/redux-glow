@@ -128,9 +128,15 @@
       text-align: center;
       width: 100%;
       position: absolute;
-      top: 91%;
+      top: 90%;
       width: 100%;
 
+      @include media($under-small) {
+        top: 85%;
+      }
+      @include media($under-medium) {
+        top: 87%;
+      }
       svg {
         width: 70%;
         @include media($large-screen-up) {

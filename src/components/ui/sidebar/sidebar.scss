@@ -2,6 +2,7 @@
 :global {
   .sidebar-three {
     lost-row: 1 0 0;
+    height: auto;
 
     @include media($under-large) {
       lost-column: 1/3 0 0;

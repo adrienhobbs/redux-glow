@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
-import classes from './logo-sprite.css';
-import './logos.svg';
+import './symbol/svg/sprite.symbol.svg';
+import classes from './symbol/sprite.css';
 export class SpriteLogo extends React.Component {
 
   static propTypes = {
@@ -11,12 +11,12 @@ export class SpriteLogo extends React.Component {
 
   constructor (props) {
     super(props);
-    this.logoEl = document.getElementById(props.clientName);
+    this.logoEl = document.getElementById(props.clientName + '-logo');
     if (this.logoEl && props.color) {
       this.tl = new TimelineLite();
       this.tl.set(this.logoEl, {attr: {fill: props.color}});
     }
-  }
+  };
 
   componentWillUnmount () {
     if (this.tl) {
@@ -29,7 +29,7 @@ export class SpriteLogo extends React.Component {
   }
 
   getStandardClass () {
-    return 'logo-' + this.props.clientName;
+    return this.props.clientName + '-logo';
   }
 
   getClassname () {
@@ -37,15 +37,16 @@ export class SpriteLogo extends React.Component {
   }
 
   getLocalClassname () {
-    return classes[this.getClassname()];
+    return classes['svg-' + this.getClassname() + '-dims'];
   }
 
   getUseLink () {
-    return this.props.clientName + '-logo-icon';
+    return this.props.clientName + '-logo';
   }
+
   render () {
     return (
-      <svg ref='lockup'  role='img' className={this.getLocalClassname()}>
+      <svg ref='logo' role='img' className={this.getLocalClassname()}>
         <use xlinkHref={`#${this.getUseLink()}`}></use>
       </svg>
     );

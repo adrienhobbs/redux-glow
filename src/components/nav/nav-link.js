@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './nav-link.scss';
 const NavLink = React.createClass({
 
   propTypes: {

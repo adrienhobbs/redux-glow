@@ -75,6 +75,7 @@
     }
     lost-column: 1/6 0 0;
     a {
+      font-family: $gt;
       @include user-select(none);
     }
 
@@ -191,5 +192,6 @@ nav.mobile {
   }
 
 }
+
 
 

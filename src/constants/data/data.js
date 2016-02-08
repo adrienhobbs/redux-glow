@@ -187,7 +187,8 @@ const data = [
     sidebar: {
       logoColor: '#ffffff',
       copyColor: '#577381',
-      headlineColor: '#ffffff'
+      headlineColor: '#ffffff',
+      customClientLogo: 'hbo-white'
     },
     backbar: {
       bgColor: '#c03d3b'
@@ -343,7 +344,7 @@ const data = [
   },
   {
     featured: false,
-    client: 'ILNY',
+    client: 'i love new york',
     project: 'social retainer',
     title: 'social retainer',
     subtitle: 'social agency of record',
@@ -372,7 +373,8 @@ const data = [
     sidebar: {
       // logoColor: '#aaa',
       copyColor: '#616161',
-      headlineColor: '#fff'
+      headlineColor: '#fff',
+      customClientLogo: 'ilny'
     },
     shareButton: {
       strokeColor: '#d52027',
@@ -505,7 +507,39 @@ const data = [
     backbar: {
       bgColor: '#1EB547'
     },
-    aboutCopy: '<p>HOW I DID IT: EVERYDAY STORIES OF FINANCIAL SUCCESS is a five part documentary series of short stories on subjects ranging from Paying for College, to Buying Your First House. GLOW, in partnership with Believe Entertainment, Yahoo Finance, and the Consumer Financial Protection Bureau, produced, directed and edited all five episodes.</p><p> The goal of the project was to demystify options available when facing a range of different financial challenges, by showing the personal approaches of several ordinary individuals in a fun, and relatable first-person telling of how they met and overcame their own financial issues.</p>'
+    aboutCopy: '<p>HOW I DID IT: EVERYDAY STORIES OF FINANCIAL SUCCESS is a five part documentary series of short stories on subjects ranging from Paying for College, to Buying Your First House. GLOW, in partnership with Believe Entertainment, Yahoo Finance, and the Consumer Financial Protection Bureau, produced, directed and edited all five episodes.</p><p> The goal of the project was to demystify options available when facing a range of different financial challenges, by showing the personal approaches of several ordinary individuals in a fun, and relatable first-person telling of how they met and overcame their own financial issues.</p>',
+    videos: [
+      {
+        videoSrc: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep01.mp4',
+        posterImg: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep01-poster.jpg',
+        title: 'ep 01 : paying off credit card debt',
+        description: 'A former Captain in the U.S. Army breaks down the strategy that helped him pay off $35,000 of credit card debt in less than a year.'
+      },
+      {
+        videoSrc: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep02.mp4',
+        posterImg: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep02-poster.jpg',
+        title: 'ep 02 : paying off student loans',
+        description: 'A public school principal tells the story of how she paid off her student loans in three simple, but determined, steps.'
+      },
+      {
+        videoSrc: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep03.mp4',
+        posterImg: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep03-poster.jpg',
+        title: 'ep 03: paying for college without loans',
+        description: 'See how a former caddy paid for four years of college without taking out one single loan.'
+      },
+      {
+        videoSrc: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep04.mp4',
+        posterImg: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep04-poster.jpg',
+        title: 'ep 04: saving a million dollars for retirement',
+        description: 'Retiree Whitney Devlin offers her simple four-point strategy for securing a million dollars by retirement.'
+      },
+      {
+        videoSrc: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep05.mp4',
+        posterImg: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep05-poster.jpg',
+        title: 'ep 05: saving a million dollars for retirement',
+        description: 'Laura Kelly outlines an easy-to-follow strategy, along with pitfalls to avoid, for buying your first home.'
+      }
+    ]
   },
   {
     featured: true,
@@ -594,7 +628,8 @@ const data = [
     sidebar: {
       logoColor: '#d6963f',
       copyColor: '#8b6ba9',
-      headlineColor: '#fff'
+      headlineColor: '#fff',
+      customClientLogo: 'westminster-yellow'
     },
     shareButton: {
       strokeColor: '#d6963f',

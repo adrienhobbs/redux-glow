@@ -6,7 +6,8 @@ import { connect } from 'react-redux';
 import Header from 'components/ui/header-component/header-component.js';
 
 const mapStateToProps = (state) => ({
-  routerstate: state.router
+  routerstate: state.router,
+  viewport: state.viewport
 });
 
 export class ConnectView extends PageLayout {
@@ -21,14 +22,17 @@ export class ConnectView extends PageLayout {
   }
 
   componentDidMount () {
+    console.log(this.props);
     this.animatePageContentIn();
-    this.map = new mapboxgl.Map({
-      container: this.refs.map,
-      style: 'mapbox://styles/mattwill/cijysv78o00uo90lxte3x4fua',
-      center: [-74.01, 40.73],
-      zoom: 14
-    });
-    this.map.on('load', this.setHeight.bind(this));
+    if (!this.props.viewport.isPhone) {
+      this.map = new mapboxgl.Map({
+        container: this.refs.map,
+        style: 'mapbox://styles/mattwill/cijysv78o00uo90lxte3x4fua',
+        center: [-74.01, 40.73],
+        zoom: 14
+      });
+      this.map.on('load', this.setHeight.bind(this));
+    }
   }
 
   setHeight () {
@@ -57,12 +61,12 @@ export class ConnectView extends PageLayout {
                     <li>New York, NY 10013</li>
                     <li>+1 212-206-7370</li>
                   </ul>
-                  <a href='mailto:hello@weareglow.com'>hello@weareglow.com</a>
+                  <a className='hoverline' href='mailto:hello@weareglow.com'>hello@weareglow.com</a>
                 </div>
                 <div id='work-for-us' className='connect-info-box'>
                   <h1 className='connect-headline'>work with us</h1>
                   <ul className='connect-info-box-inner'><li>we are always looking for talented people. please check out our current openings or just send us an email.</li></ul>
-                  <a href='mailto:hello@weareglow.com'>jobs@weareglow.com</a>
+                  <a className='hoverline' href='mailto:hello@weareglow.com'>jobs@weareglow.com</a>
                 </div>
               </div>
             </div>

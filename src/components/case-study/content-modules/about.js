@@ -51,7 +51,3 @@ export class AboutSection extends React.Component {
   }
 }
 export default AboutSection;
-// <article>
-//   <div dangerouslySetInnerHTML={this.createParagraphEl()}></div>
-//   {this.createHeadlineEl('the calendar')}
-// </article>

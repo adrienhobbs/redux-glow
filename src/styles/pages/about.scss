@@ -37,6 +37,7 @@
     letter-spacing: -0.025em;
     position: relative;
     cursor: grab;
+    margin-top: em(30);
 
     @include media($medium-screen-up) {
       font-size: rem(42);
@@ -49,14 +50,15 @@
       }
 
       .quote-attr {
+        margin-top: em(30);
         font-style: italic;
         font-weight: normal;
         font-family: $domaine;
-        font-size: rem(32);
+        font-size: rem(14);
         letter-spacing: 0.015em;
         color: #48c3d3;
 
-        @include media($large-screen-up) {
+        @include media($medium-screen-up) {
           margin-top: rem(20);
         }
       }
@@ -90,7 +92,7 @@
       margin-bottom: 15px;
     }
     @include media($under-small) {
-      lost-column: 1/2 2 20px;
+      lost-column: 1 1 20px;
       margin-bottom: 15px;
     }
   }

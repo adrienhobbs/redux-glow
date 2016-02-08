@@ -43,4 +43,4 @@ $large-xl-screen: new-breakpoint(min-width $large-screen max-width 1600px);
 
 $medium: $small-medium-screen;
 $small: new-breakpoint(max-width 768px);
-
+$small-phone-under: new-breakpoint(max-width $small-phone);

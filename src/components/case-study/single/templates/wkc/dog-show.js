@@ -10,32 +10,6 @@ export class DogShow extends BaseTemplate {
   constructor (props) {
     super(props);
   }
-  videoPlayNow () {
-    const TL = new TimelineLite();
-    TL.add(() => this.refs.video.play());
-    return TL;
-  }
-  pauseVideo () {
-    this.refs.video.pause();
-    const TL = new TimelineLite();
-    TL.addLabel('start');
-    TL.to(this.refs.videoBlock, 0.7, {maxWidth: '51.25em', ease: Expo.easeInOut}, 'start+=0.5');
-    TL.to(this.refs.playBtn, 0.5, {autoAlpha: 1, ease: Expo.easeInOut}, 'start+=0.5');
-    TL.to(this.refs.controls, 0.5, {autoAlpha: 0}, 'start+=1');
-  }
-  stopVideo () {
-    this.refs.video.stop();
-  }
-  onVideoClick () {
-    const width = this.refs.videoBlock.getBoundingClientRect().width;
-    const TL = new TimelineLite();
-    TL.addLabel('start');
-    TL.set(this.refs.videoBlock, {width: width, maxWidth: '100%'}, 'start');
-    TL.to(this.refs.videoBlock, 0.5, {width: '100%', ease: Expo.easeInOut}, 'start+=0.5');
-    TL.to(this.refs.playBtn, 0.5, {autoAlpha: 0, ease: Expo.easeInOut}, 'start+=0.5');
-    TL.add(this.videoPlayNow.bind(this), 'start+=1.5');
-    TL.to(this.refs.controls, 0.5, {autoAlpha: 1}, 'start+=1.8');
-  }
   render () {
     const subStyle = {color: shader(0.15, this.props.data.get('logoColor'))};
     const copyStyle = this.getCopyStyle();
@@ -107,11 +81,6 @@ export class DogShow extends BaseTemplate {
             <div className='img-single'>
               <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/proof-2.png' alt='' />
             </div>
-            <div className='end'>
-              <svg preserveAspectRatio='none' className='end-shape' ref='endShape' version='1.1' id='Layer_1'  x='0px' y='0px' viewBox='0 0 1920 600' >
-                <polygon style={{fill: this.props.data.get('endShape').bgColor}} points='0,0 1920,314.6 1920,600 0,600 '/>
-              </svg>
-            </div>
           </article>
         </div>
       </div>
@@ -122,3 +91,8 @@ export class DogShow extends BaseTemplate {
 export default DogShow;
 
 // <Results template={'device'} data={this.props.data} bg={this.props.data.get('secColor')} />
+// <div className='end'>
+//   <svg preserveAspectRatio='none' className='end-shape' ref='endShape' version='1.1' id='Layer_1'  x='0px' y='0px' viewBox='0 0 1920 600' >
+//     <polygon style={{fill: this.props.data.get('endShape').bgColor}} points='0,0 1920,314.6 1920,600 0,600 '/>
+//   </svg>
+// </div>

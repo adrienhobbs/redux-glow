@@ -11,7 +11,7 @@ const Sidebar = React.createClass({
     return null;
   },
   getClient () {
-    return this.props.data.get('client').replace(/\s+/g, '-');
+    return this.props.data.get('sidebar').customClientLogo || this.props.data.get('client').replace(/\s+/g, '-');
   },
   getLogoColor () {
     return this.props.data.get('sidebar').logoColor || '#ffffff';
@@ -93,7 +93,6 @@ const Sidebar = React.createClass({
         <div className={this.getSidebarBoxClass()} id='sidebar-share'>
           <ShareButton copyColor={this.getShareButtonCopyColor()} strokeColor={this.getShareButtonStroke()} color={this.props.data.get('sidebarLogoColor')} />
         </div>
-
       </div>
     );
   }

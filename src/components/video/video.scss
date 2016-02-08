@@ -1,0 +1,111 @@
+@import 'base';
+:global {
+  .video-looping {
+    margin: auto;
+    max-width: 95%;
+    margin-bottom: em(70);
+    video {
+      display: block;
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+  .video-block {
+    &.isStopped {
+      cursor: url(https://s3.amazonaws.com/weareglow-assets/assets/play.png), auto;
+    }
+    &.isPlaying {
+      cursor: url(https://s3.amazonaws.com/weareglow-assets/assets/pause.png), auto;
+    }
+  }
+
+  .video-block-mobile {
+    max-width: 95%;
+    margin: auto;
+    margin-top: 70px;
+  }
+  .mobile-video {
+    max-width: 100%;
+  }
+
+  .video-block {
+    position: relative;
+    margin-top: em(80);
+    lost-center: em(820);
+    min-height: 600px;
+    background: #e8e8e8;
+    overflow: hidden;
+    video {
+      @include center(xy);
+      z-index: 19;
+    }
+    .play-button-outer {
+      width: em(150);
+      height: em(80);
+      @include center(xy);
+      z-index: 20;
+      background: white;
+      border-radius: 5px;
+    }
+    .play-button-inner {
+      @include size(100%);
+      cursor: pointer;
+      position: relative;
+      .inner-ctr-wrap {
+        width: em(142);
+        height: em(72);
+        @include center(xy);
+        background: #14e06e;
+        &:hover {
+          background: shade(rgb(19,224,110), 20%);
+        }
+        border-radius: 5px;
+      }
+      .inner-ctr {
+        position: relative;
+        @include size(100%);
+        .inner-btn {
+          width: 20px;
+          height: 28px;
+          @include center(xy);
+          svg {
+            fill: white;
+          }
+        }
+      }
+    }
+
+    .controls {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      opacity: 0;
+      visibility: hidden;
+      div.pause-button-ctr {
+        cursor: pointer;
+        float: right;
+        svg {
+          &:hover {
+            background: rgba(255,255,255,0.4);
+          }
+        }
+      }
+      div.stop-button-ctr {
+        cursor: pointer;
+        float: right;
+        svg {
+          &:hover {
+            background: rgba(255,255,255,0.4);
+          }
+        }
+      }
+
+      svg {
+        @include size(40px);
+        fill: #14e06e;
+      }
+    }
+  }
+}

@@ -42,27 +42,27 @@ const PageTransition = React.createClass({
   },
   leftTransTL (startOrigin) {
     const TL = new TimelineLite();
-    TL.to(this.refs.transLeft, 1.6, {z: 0.00001, scaleX: 1, transformOrigin: startOrigin, ease: Expo.easeInOut});
+    TL.to(this.refs.transLeft, 1.6, {z: 0.0, scaleX: 1, transformOrigin: startOrigin, ease: Expo.easeInOut});
     return TL;
   },
   rightTransTL (startOrigin) {
     const TL = new TimelineLite();
-    TL.to(this.refs.transRight, 1.5, {z: 0.00001, zIndex:12, scaleX: 1, transformOrigin: startOrigin, ease: Expo.easeInOut});
+    TL.to(this.refs.transRight, 1.5, {z: 0.0, zIndex:12, scaleX: 1, transformOrigin: startOrigin, ease: Expo.easeInOut});
     return TL;
   },
   leftTransTLOut (endOrigin) {
     const TL = new TimelineLite();
-    TL.to(this.refs.transLeft, 0.25, {z: 0.00001, scaleX: 0, transformOrigin: endOrigin, ease: Quart.easeInOut});
+    TL.to(this.refs.transLeft, 0.25, {z: 0.0, scaleX: 0, transformOrigin: endOrigin, ease: Quart.easeInOut});
     return TL;
   },
   rightTransTLOut (endOrigin) {
     const TL = new TimelineLite();
-    TL.to(this.refs.transRight, 0.25, {z: 0.00001, scaleX: 0, transformOrigin: endOrigin, ease: Quart.easeInOut});
+    TL.to(this.refs.transRight, 0.25, {z: 0.0, scaleX: 0, transformOrigin: endOrigin, ease: Quart.easeInOut});
     return TL;
   },
   pageTransTL (pageEl, xStart) {
     const TL = new TimelineLite();
-    TL.fromTo(pageEl, 1.8, {xPercent: xStart, z: 0.00001}, {z: 0.00001,  xPercent: 0, ease: Expo.easeInOut, onComplete: () => {
+    TL.fromTo(pageEl, 1.8, {xPercent: xStart, z: 0.0000}, {z: 0.0000,  xPercent: 0, ease: Expo.easeInOut, onComplete: () => {
       TweenLite.set(pageEl, {clearProps: 'all'});
     }});
     return TL;

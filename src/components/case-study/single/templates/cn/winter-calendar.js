@@ -65,11 +65,6 @@ export class WinterCalendar extends BaseTemplate {
           <div className={classes.cnImage}>
             <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/cn/winter-calendar/ui-elements.png' className={classes.cnSingleImage} alt='' />
           </div>
-          <div className='end'>
-            <svg preserveAspectRatio='none' className='end-shape' ref='endShape' version='1.1' id='Layer_1'  x='0px' y='0px' viewBox='0 0 1920 600' >
-              <polygon style={{fill:  this.props.data.get('endShape').bgColor}} points='0,0 1920,314.6 1920,600 0,600 '/>
-            </svg>
-          </div>
         </div>
       </div>
     );
@@ -77,3 +72,9 @@ export class WinterCalendar extends BaseTemplate {
 }
 
 export default WinterCalendar;
+
+          // <div className='end'>
+          //   <svg preserveAspectRatio='none' className='end-shape' ref='endShape' version='1.1' id='Layer_1'  x='0px' y='0px' viewBox='0 0 1920 600' >
+          //     <polygon style={{fill:  this.props.data.get('endShape').bgColor}} points='0,0 1920,314.6 1920,600 0,600 '/>
+          //   </svg>
+          // </div>

@@ -30,7 +30,6 @@ export class HeaderComponent extends React.Component {
   }
 
   showGradient () {
-    TweenLite.to(this.refs.middleStop, 0.3, {ease: Circ.easeInOut, attr: {offset: 0.4}});
     TweenLite.to(this.refs.endStop, 0.3, {ease: Circ.easeInOut, attr: {offset: 0.95}});
   }
 
@@ -58,7 +57,6 @@ export class HeaderComponent extends React.Component {
           <svg className={classes.gradientSvg}>
             <linearGradient id='t' gradientTransform='rotate(90)'>
               <stop offset='0' stopColor='white' />
-              <stop offset='0' stopColor='white' stopOpacity='0.4' ref='middleStop'/>
               <stop offset='0' stopColor='white' stopOpacity='0' ref='endStop' />
             </linearGradient>
             <rect x='0' y='0' width='100%' height='100%' fill='url(#t)' />

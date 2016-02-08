@@ -22,7 +22,7 @@ const ContactForm = React.createClass({
   render () {
     return (
       <div className='contact-form'>
-        <div className='contact-form-inner' ref='form'>
+        <div className='contact-form-inner form-inner' ref='form'>
           <Formsy.Form
             ref='contactForm'
             onSubmit={this.onSubmit}

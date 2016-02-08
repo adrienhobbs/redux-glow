@@ -3,15 +3,15 @@ import ClientLogo from 'components/ui/logo-sprites/logo-sprite.js';
 import './client-logos.scss';
 
 const clients = [
-  'wetv',
+  'we-tv',
   'syfy',
-  'hbo',
+  'hbo-gray',
   'cartoon-network',
-  'usa',
-  'ilny-gray',
   'crackle',
-  'tnt',
+  'ilny-gray',
+  'usa',
   'cinemax',
+  'tnt',
   'cnbc',
   'carla-hall',
   'hulu',
@@ -27,7 +27,7 @@ const ClientsBar = React.createClass({
     return clients.map(function mapClientNames (client, i) {
       return (
         <div key={i} className='client-logo-container'>
-          <ClientLogo  clientName={client}/>
+          <ClientLogo color='#666' stroke='#666'  clientName={client}/>
         </div>
       );
     });

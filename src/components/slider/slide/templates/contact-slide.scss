@@ -36,7 +36,9 @@
     margin-bottom: $paragraphBottomMargin;
     padding-right: em(20);
     @include media($under-small) {
-      font-size: 0.7em;
+      font-size: 1.3em;
+      max-width: 80%;
+      margin: auto;
       margin-bottom: $paragraphBottomMargin/2;
     }
     @include media($small) {
@@ -54,6 +56,9 @@
   #connect-slide {
     .connect-headline {
       text-align: center;
+      @include media($under-small) {
+        font-size: 2em !important;
+      }
     }
 
     .submit-btn-ctr {
@@ -114,22 +119,33 @@
   .connectFormCtr {
 
     z-index: 3;
-    width: 93%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
+
+    text-align: center;
+  }
+
+  .connectFormCtrInner {
+    background: white;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: em(35);
+    margin: auto;
+    height: 100%;
+
     @include media($small-medium-screen) {
       width: 75%;
     }
     @include media($medium-screen-up) {
       width: 50%;
     }
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-top: em(35);
-    text-align: center;
+    .connect-headline {
+
+    }
   }
 
 

@@ -17,9 +17,9 @@ const NewsletterInput = React.createClass({
   render () {
     return (
       <div className='newsletter'>
-        <div className='newsletter-inner' ref='form'>
+        <div className='newsletter-inner form-inner ' ref='form'>
           <h2 className='connect-headline'>join the newsletter</h2>
-          <p>stay up on the industry with glow's monthly newsletter. Chalk full of relevant industry news and inspiring work. Let's make them even now. yes mhmm indeed!</p>
+          <p>stay up on the industry with glow's monthly newsletter. chalk full of relevant industry news and inspiring work.</p>
           <Formsy.Form
             onSubmit={this.onSubmit}
             className='newsletter-form'

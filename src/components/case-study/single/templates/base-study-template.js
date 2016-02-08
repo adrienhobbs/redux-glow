@@ -75,6 +75,11 @@ export class BaseStudyComponent extends React.Component {
       <h1 style={this.getHeadlineStyle()} className='page-title'>{headline} </h1>
     );
   }
+  createSubtitleEl (headline) {
+    return (
+      <h1 style={this.getHeadlineStyle()} className='page-title small'>{headline} </h1>
+    );
+  }
   createParagraphEl (paragraph) {
     let t = this.createMarkup(this.props.data.get('testMe'));
     console.log(t);

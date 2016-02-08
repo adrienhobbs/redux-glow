@@ -24,7 +24,7 @@ const JobsClients = React.createClass({
                 We’re privately owned, profitable, and growing fast. We live in Atlanta and dream in the stratosphere. We’re always looking for weird, smart, and independent thinkers to join the team.
               </p>
               <div className='view-openings'>
-                <Link to='/careers'>view current openings  &#8594;</Link>
+                <Link className='hoverline' to='/careers'>view current openings</Link>
               </div>
             </div>
           </div>
