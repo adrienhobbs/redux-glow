@@ -310,7 +310,7 @@ export class Nav extends React.Component {
             </div>
             <div className='nav-right'>
               {this.getNavLinks()}
-              <a className='twitter-link' target='_blank' href='http://www.twitter.com/weareglow'><Twitter ref='twitterSVG' color={this.getLinkColor()}/></a>
+              <a className='twitter-link' target='_blank' href='http://www.twitter.com/glow'><Twitter ref='twitterSVG' color={this.getLinkColor()}/></a>
             </div>
           </div>
         </nav>

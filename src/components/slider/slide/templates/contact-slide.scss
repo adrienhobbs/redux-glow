@@ -1,52 +1,18 @@
-// @import 'base';
-// :global {
-//   .connect-slide {
-//     margin: auto;
-//     height: 100vh;
-//     background: white;
-//     padding-top: $nav-height;
-//     // .row {
-//     //   @include center(y);
-//     //   max-width: $outer-width;
-//     //   @include media($under-medium) {
-//     //     max-width: 80%;
-//     //     @include center(xy);
-//     //   }
-//     // }
-//     .connect-information {
-//       @include media($under-medium) {
-//         display: none;
-//       }
-//     }
-//   }
-//   .connect-inner-row {
-//     .newsletter {
-//       margin-top: em(20);
-//     }
-//   }
-// }
-
 @import 'base';
-
 :global {
-  
   $paragraphBottomMargin: em(20);
-
   .form-paragraph {
     margin-bottom: $paragraphBottomMargin;
     padding-right: em(20);
     @include media($under-small) {
       font-size: 1.3em;
-      max-width: 80%;
+      max-width: 90%;
+      text-align: center;
       margin: auto;
       margin-bottom: $paragraphBottomMargin/2;
     }
-    @include media($small) {
-      // display: none !important;
-    }
   }
   #connect-slide-map {
-  
     position: absolute;
     top: 0;
     bottom: 0;
@@ -54,6 +20,13 @@
     height: 100%;
   }
   #connect-slide {
+    .contact-form {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 1.75em;
+      text-align: left;
+    }
     .connect-headline {
       text-align: center;
       @include media($under-small) {
@@ -68,7 +41,9 @@
       width: 100%;
       text-align: center;
       button {
+        text-align: center;
         color: $radical-red;
+        font-size: 1.4em;
         &:hover {
           background-color: white;
         }
@@ -96,23 +71,17 @@
 
 :local {
   .connectSlide {
-    // background-color: white;
-    // padding-top: $nav-height;
-    // max-width: $outer-width;
-    // margin-left: auto;
-    // margin-right: auto;
     width: 100%;
-    // lost-flex-container: row;
     background-color: rgb(87, 182, 154);
     position: absolute;
     top:0;
     bottom: 0;
   }
-  
+
   .connectForm {
     height: 100%;
     position:absolute ;
-    
+
     width: 100%;
   }
 
@@ -143,11 +112,8 @@
     @include media($medium-screen-up) {
       width: 50%;
     }
-    .connect-headline {
-
-    }
   }
 
 
-  
+
 }

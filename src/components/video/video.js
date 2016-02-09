@@ -59,7 +59,6 @@ export class VideoComponent extends React.Component {
   }
 
   playVideo () {
-    const width = this.refs.videoBlock.getBoundingClientRect().width;
     const TL = new TimelineLite();
     TL.addLabel('start');
     // TL.set(this.refs.videoBlock, {width: width, maxWidth: '100%'}, 'start');
@@ -88,7 +87,7 @@ export class VideoComponent extends React.Component {
   getMobileVideo () {
     return (
       <div className='video-block-mobile'>
-        <video ref='video' className='mobile-video' controls src={this.props.videoSrc} poster={this.props.posterImg}></video>;
+        <video ref='video' className='mobile-video' controls src={this.props.videoSrc} poster={this.props.posterImg}></video>
       </div>
     );
   }

@@ -148,6 +148,12 @@ export class FeaturedStudyMobile extends PageLayout {
     return this.studyTL.reverse();
   }
 
+  getDescStyle () {
+    return {
+      color: this.props.data.get('mobile').summaryCopyColor || '#fff'
+    };
+  }
+
   render () {
     const backBar = (this.state.singleMode) ? <BackBar showBar={this.state.showBody} singleMode={this.state.singleMode} data={this.props.data.toJS()} goBack={this.toggleStudyState.bind(this)}  /> : null;
     return (
@@ -173,7 +179,7 @@ export class FeaturedStudyMobile extends PageLayout {
                 <span className='project-name' ref='title'>{this.props.data.get('title')}</span>
               </span>
             </div>
-            <p>
+            <p style={this.getDescStyle()}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
             </p>
             <div onClick={this.openStudyFromProject.bind(this)} className='view-button' ><div style={{background: this.props.data.get('logoColor')}}>view case study  &#8594;</div></div>

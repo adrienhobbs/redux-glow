@@ -10,6 +10,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "compile": "node -r dotenv/config --harmony bin/compile",
+    "cc" : "gulp clean-dist && npm run compile --production && gulp default",
     "lint": "eslint . ./",
     "lint:fix": "npm run lint -- --fix",
     "start": "better-npm-run start",
@@ -111,6 +112,9 @@
     "extract-text-webpack-plugin": "^1.0.0",
     "file-loader": "^0.8.4",
     "fs-extra": "^0.26.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-watch": "^4.3.5",
     "html-webpack-plugin": "^1.6.1",
     "isparta-loader": "^2.0.0",
     "json-loader": "^0.5.4",

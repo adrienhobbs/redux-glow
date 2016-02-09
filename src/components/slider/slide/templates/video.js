@@ -36,7 +36,7 @@ const Video = React.createClass({
   },
   getVidTemplate () {
     return (
-      <video webkit-playsinline onPlay={this.onLoad} ref='video' className='home-video' muted loop src={this.props.data.get('video')}>
+      <video preload webkit-playsinline onPlay={this.onLoad} ref='video' className='home-video' muted loop src={this.props.data.get('video')}>
         <p>sorry cant play</p>
       </video>
     );
@@ -45,7 +45,7 @@ const Video = React.createClass({
     return (
       <div ref='videoContainer' className='wrapper video-wrapper video-placeholder' style={{height: '100%', width: '100%'}}>
         {this.getVidTemplate()}
-        </div>
+      </div>
     );
   }
 });

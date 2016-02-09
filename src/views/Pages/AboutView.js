@@ -41,7 +41,7 @@ export class AboutView extends PageLayout {
   render () {
     return (
       <div className='container' id='about' ref='page'>
-        <Header title={'about us '} subtitle={'its probably not sunny today'} />
+        <Header title={'about us'} subtitle={'its probably not sunny today'} />
         <div className='page-content'>
           <div className='row'>
             <div className='about-copy'>

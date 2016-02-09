@@ -13,7 +13,7 @@ const SubmitButton = React.createClass({
   },
   render () {
     return (
-      <button disabled={this.props.disabled} ref='submit' type='submit' className='contact-link'>submit  →</button>
+      <button disabled={this.props.disabled} ref='submit' type='submit' className='contact-link'>submit →</button>
     );
   }
 });

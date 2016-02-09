@@ -30,7 +30,7 @@ export class HeaderComponent extends React.Component {
   }
 
   showGradient () {
-    TweenLite.to(this.refs.endStop, 0.3, {ease: Circ.easeInOut, attr: {offset: 0.95}});
+    TweenLite.to(this.refs.endStop, 0.01, {ease: Circ.easeInOut, attr: {offset: 0.95}});
   }
 
   hideGradient () {

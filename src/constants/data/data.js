@@ -2,18 +2,82 @@
 // import React from 'react';
 const s3 = 'https://s3.amazonaws.com/weareglow-assets/';
 const data = [
-  // {
-  //   featured: true,
-  //   title: 'Intro Video',
-  //   home: true,
-  //   type: 'video',
-  //   video: 'https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic.mp4',
-  //   logoColor: '#f12d5c',
-  //   gradientTop: '#c03d3b',
-  //   gradientBottom: '#0e374a',
-  //   cat: ' ― glow hq ― '
-  // },
-  //
+  //{
+  //  featured: true,
+  //  title: 'Intro Video',
+  //  home: true,
+  //  type: 'video',
+  //  video: 'https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic.mp4',
+  //  logoColor: '#f12d5c',
+  //  gradientTop: '#c03d3b',
+  //  gradientBottom: '#0e374a',
+  //  cat: '- we are glow -'
+  //},
+  ////
+   {
+    featured: true,
+    client: 'hbo',
+    project: 'veep',
+    title: 'veep',
+    subtitle: 'seasons 2-3-4 social & media campaigns',
+    subtitleSlug: 'social & media campaigns',
+    type: 'case-study',
+    infoPath: s3 + 'case-studies/hbo/veep/logo-title.svg',
+    backgroundImageUrl: s3 + 'case-studies/hbo/veep/landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/veep/portrait.jpg',
+    logoColor: '#c03d3b',
+    secColor: '#0e374a',
+    gradientTop: '#c03d3b',
+    gradientBottom: '#0e374a',
+    featuredProjectTitleColor: '#c03d3b',
+    cat: ' ― hbo | veep ― ',
+    templateName: 'Veep',
+    copyColor: '#ffffff',
+    headlineColor: '#ffffff',
+    services: ['social strategy', 'community management', 'media campaign', 'asset creation'],
+    sidebar: {
+      logoColor: '#ffffff',
+      copyColor: '#577381',
+      headlineColor: '#ffffff',
+      customClientLogo: 'hbo-white'
+    },
+    backbar: {
+      bgColor: '#c03d3b'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0e374a'
+    },
+    lockup: {
+      className: 'veep-lockup',
+      projectColor: '#fff',
+      featured: {
+        projectColor: '#BE4138'
+      }
+    },
+    results: {
+      stats: [
+        {label: 'Twitter buzz increase', stat: '+76%'},
+        {label: 'Pieces of custom content', stat: '1500+'},
+        {label: 'increase in social volume', stat: '+53%'},
+        {label: 'tweeting premieres w/ custom content RT', stat: 'live'},
+        {label: 'Robocall texts exchanged', stat: '40k'},
+        {label: 'GIF on Tumblr w/ reblog from founder David Karp', stat: 'viral'},
+        {label: 'Twitter mentions from top social influencers', stat: '20'},
+        {label: 'Twitter buzz increase', stat: '??'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#C03D3B',
+      bgColor: '#0A2C3A'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>Veep was a favorite among critics in its inaugural season. However, critical acclaim is simply not enough. GLOW approached HBO and took this opportunity to do what we do best - build audience and expand the social footprint with a smart, strong strategy and quality social content...and lots of it.</p><p>All the while, we were striving to redefine how a thirty-minute comedy is marketed on social media. </p><p>And it worked.</p>'
+  },
   {
     featured: true,
     client: 'carla hall',
@@ -33,6 +97,7 @@ const data = [
     headlineColor: '#ed0f77',
     copyColor: '#000000',
     cat: '― carla hall ―',
+    templateName: 'SouthernKitchen',
     mobile: {
       bgColor: '#fff' 
     },
@@ -50,7 +115,6 @@ const data = [
       statLabelColor: '#ed0f77'
       // customHtml: <div class='info-box'> testing </div>
     },
-    templateName: 'SouthernKitchen',
     sidebar: {
       logoColor: '#4d4d4d',
       copyColor: '#4d4d4d',
@@ -61,8 +125,8 @@ const data = [
       copyColor: '#4d4d4d'
     },
     mobile: {
-      bgColor: '#c3c3c3',
-      summaryCopyColor: '#000000'
+      bgColor: '#ffffff',
+      summaryCopyColor: '#4d4d4d'
     },
     aboutCopy: '<p>GLOWs relationship with celebrity chef Carla Hall from ABC’s “The Chew” began with a conversation around launching a Kickstarter campaign to raise funds to support her life long dream of opening her own restaurant, <i>Carla Hall’s Southern Kitchen.</i></p> <p>GLOW laid out a strategy that began with a complete social refresh of all of Carla’s social profiles to ignite and strengthen her base before we kicked off her Kickstarter campaign.</p>'
   },
@@ -163,73 +227,7 @@ const data = [
   //     bgColor: '#4C5772'
   //   }
   // },
-  {
-    featured: true,
-    client: 'hbo',
-    project: 'veep',
-    title: 'veep',
-    subtitle: 'seasons 2-3-4 social & media campaigns',
-    subtitleSlug: 'social & media campaigns',
-    type: 'case-study',
-    infoPath: s3 + 'case-studies/hbo/veep/logo-title.svg',
-    backgroundImageUrl: s3 + 'case-studies/hbo/veep/landscape.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/hbo/veep/portrait.jpg',
-    logoColor: '#c03d3b',
-    secColor: '#0e374a',
-    gradientTop: '#c03d3b',
-    gradientBottom: '#0e374a',
-    featuredProjectTitleColor: '#c03d3b',
-    cat: ' ― hbo | veep ― ',
-    templateName: 'Veep',
-    copyColor: '#ffffff',
-    headlineColor: '#ffffff',
-    services: ['social strategy', 'community management', 'media campaign', 'asset creation'],
-    sidebar: {
-      logoColor: '#ffffff',
-      copyColor: '#577381',
-      headlineColor: '#ffffff',
-      customClientLogo: 'hbo-white'
-    },
-    backbar: {
-      bgColor: '#c03d3b'
-    },
-    shareButton: {
-      strokeColor: '#C03D3B',
-      copyColor: '#ffffff'
-    },
-    mobile: {
-      bgColor: '#0e374a',
-      summaryCopyColor: '#000000'
-    },
 
-    lockup: {
-      className: 'veep-lockup',
-      projectColor: '#fff',
-      featured: {
-        projectColor: '#BE4138'
-      }
-    },
-    results: {
-      stats: [
-        {label: 'Twitter buzz increase', stat: '+76%'},
-        {label: 'Pieces of custom content', stat: '1500+'},
-        {label: 'increase in social volume', stat: '+53%'},
-        {label: 'tweeting premieres w/ custom content RT', stat: 'live'},
-        {label: 'Robocall texts exchanged', stat: '40k'},
-        {label: 'GIF on Tumblr w/ reblog from founder David Karp', stat: 'viral'},
-        {label: 'Twitter mentions from top social influencers', stat: '20'},
-        {label: 'Twitter buzz increase', stat: '??'}
-      ],
-      statColor: '#ffffff',
-      statLabelColor: '#C03D3B',
-      bgColor: '#0A2C3A'
-    },
-    endShape: {
-      bgColor: '#0A2C3A'
-    },
-    aboutCopy: '<p>Veep was a favorite among critics in its inaugural season. However, critical acclaim is simply not enough. GLOW approached HBO and took this opportunity to do what we do best - build audience and expand the social footprint with a smart, strong strategy and quality social content...and lots of it.</p><p>All the while, we were striving to redefine how a thirty-minute comedy is marketed on social media. </p><p>And it worked.</p>'
-
-  },
   {
     featured:                   false,
     client:                     'syfy',
@@ -563,7 +561,7 @@ const data = [
     services: ['community management', 'video production', 'social content'],
     headlineColor: '#7d2f37',
     mobile: {
-      bgColor: '#fff' 
+      bgColor: '#0b1c28' 
     },
     lockup: {
       className: 'sharknado-lockup'
