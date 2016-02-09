@@ -536,7 +536,7 @@ const data = [
       {
         videoSrc: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep05.mp4',
         posterImg: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep05-poster.jpg',
-        title: 'ep 05: saving a million dollars for retirement',
+        title: 'ep 05: buying my first home',
         description: 'Laura Kelly outlines an easy-to-follow strategy, along with pitfalls to avoid, for buying your first home.'
       }
     ]
@@ -550,7 +550,7 @@ const data = [
     subtitleSlug: 'social media campaign',
     type: 'case-study',
     infoPath: s3 + 'case-studies/syfy/sharknado/logo-title.svg',
-    backgroundImageUrl: s3 + 'case-studies/syfy/sharknado/landscape-1440.jpg',
+    backgroundImageUrl: s3 + 'case-studies/syfy/sharknado/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/syfy/sharknado/vertical.jpg',
     logoColor: '#a3373f',
     secColor: '#0b1c28',
@@ -596,7 +596,7 @@ const data = [
     client: 'westminster',
     project: 'westminster',
     title: '2015 dog show',
-    subtitle: 'social agency of record',
+    subtitle: 'social media agency of record',
     subtitleSlug: 'social agency of record',
     type: 'case-study',
     infoPath: s3 + 'case-studies/wkc/westminster-dog-show/logo-title.svg',
@@ -609,7 +609,6 @@ const data = [
     featuredProjectTitleColor: '#ffffff',
     templateName: 'WKC',
     services: ['community management', 'video production', 'social content'],
-    cat: ' ― wkc | dog-show ',
     clientLogoColor: '#d6963f',
     headlineColor: '#d6963f',
     lockup: {

@@ -34,7 +34,7 @@ export class SouthernKitchen extends BaseTemplate {
           </article>
           <article className='video-campaign'>
             <h2 style={this.getHeadlineStyle()} className='page-title'>video campaign</h2>
-            <Video posterImg={'https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/carla-video-poster.jpg'} videoSrc={'https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/Carla+Hall+-+Kickstarter-HD.mp4'}/>
+            <Video posterImg={'https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/poster.jpg'} videoSrc={'https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/Carla+Hall+-+Kickstarter-HD.mp4'}/>
             <div className='copy-inner'>
               <p style={copyStyle}>Marie, I said Cheetos, not Fritos. I must've said Cheetos like ten times.  You need me to write it down for you? Well I'm just saying, y'know, I said Cheetos. Ch-ch-ch sound. Virtually impossible to confuse Cheetos with Fritos it seems to me.  Where are you going? So things are quire, y'know? Not a lot of cyrstal on the streets right now. Well, we keep hearing a name.  Heisenberg. Lately pretty much every dimebagger we come across. Yeah, I Know. Maybe it's a tweaker urban legend. Still, somebody somewhere is cooking that big blue we keep finding.</p>
             </div>
@@ -59,7 +59,7 @@ export class SouthernKitchen extends BaseTemplate {
             <div className='copy'>
               <div className='copy-inner'>
               <div className='video-looping'>
-                <video  loop autoPlay src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/social-01.mp4'></video>
+                <video loop autoPlay src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/social-01.mp4'></video>
               </div>
                 <p style={copyStyle}>In just 3.5 months, we increased page likes by 20.73 % - twitter followers by 8.08 % and Instagram follows by 34.48%.</p>
                 <p style={copyStyle}>After effectively completing this social overhaul, we then launched into our Kickstarter campaign.  GLOW's video team produced, scripted, directed, shot and edited a dynamic series of videos for the Kickstarter campaign. The main video was a direct plea to Carla's fans with Carla front and center. The follow up videos included a how-to video on cooking the perfect Hot Chicken, followed by the story of Carla's cooking inspiration, and finally Carla in the streets of New York City talking Hot Chicken as she mixes and mingles with residents of the big city.</p>

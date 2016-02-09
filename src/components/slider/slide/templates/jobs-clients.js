@@ -20,9 +20,7 @@ const JobsClients = React.createClass({
             </div>
             <div className='subtitle'>we don't bite. promise.</div>
             <div className='hiring-copy'>
-              <p>MailChimp makes powerful marketing products that people love to use. In 2015, our 500 employees will help 9 million users around the world send 200 billion emails.
-                We’re privately owned, profitable, and growing fast. We live in Atlanta and dream in the stratosphere. We’re always looking for weird, smart, and independent thinkers to join the team.
-              </p>
+              <p>At GLOW, hiring the best and brightest talent is by far our best concept.  If you are looking to join a young, smart, hardworking team that values thinking, creativity, passion and curiosity, then we want to hear from you.  Below is a list of current positions available at GLOW.</p>
               <div className='view-openings'>
                 <Link className='hoverline' to='/careers'>view current openings</Link>
               </div>

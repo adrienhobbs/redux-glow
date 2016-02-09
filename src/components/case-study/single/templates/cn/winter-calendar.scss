@@ -61,6 +61,18 @@
     margin-top: 4em;
   }
 
+  .dancerRow {
+    lost-flex-container: row;
+    lost-center: 820px;
+  }
+  .dancer {
+    lost-column: 1/3;
+    margin-bottom: 1em;
+  }
+  .dancerImg {
+    display: block;
+    margin: auto;
+  }
 }
 
 :global {

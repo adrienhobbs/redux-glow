@@ -2,23 +2,47 @@
 :global {
   .video-looping {
     margin: auto;
-    max-width: 95%;
+    max-width: 100%;
     margin-bottom: em(70);
+
     video {
       display: block;
       max-width: 100%;
       margin: auto;
     }
+
+    &-half {
+      lost-column: 1/2;
+    }
+    &-full {
+      lost-column: 1;
+      margin-bottom: 1em;
+    }
   }
   .video-block {
     &.isStopped {
-      cursor: url(https://s3.amazonaws.com/weareglow-assets/assets/play.png), auto;
+      .video-block-inner {
+        cursor: url(https://s3.amazonaws.com/weareglow-assets/assets/play.png), auto;
+      }
     }
     &.isPlaying {
-      cursor: url(https://s3.amazonaws.com/weareglow-assets/assets/pause.png), auto;
+      .video-block-inner {
+        cursor: url(https://s3.amazonaws.com/weareglow-assets/assets/pause.png), auto;
+      }
     }
   }
 
+  .video-looping-row {
+    lost-flex-container: row;
+    max-width: 820px;
+    margin: auto;
+    video {
+      max-width: 100%;
+    }
+    @include media($under-medium) {
+      max-width: 85%;
+    }
+  }
   .video-block-mobile {
     max-width: 95%;
     margin: auto;
@@ -29,16 +53,24 @@
   }
 
   .video-block {
+
+    &-inner {
+      max-width: 1120px;
+      width: 95%;
+      margin: auto;
+    }
     position: relative;
-    margin-top: em(80);
-    lost-center: em(820);
-    margin: auto;
+    // margin-top: em(80);
+    // height: 0;
+    // padding-bottom: 56.25%;
+    // lost-center: em(820);
+    // margin: auto;
     // min-height: 600px;
     // background: #e8e8e8;
     // overflow: hidden;
     video {
       // @include center(xy);
-      max-width: 95%;
+      max-width: 100%;
       margin: auto;
       z-index: 19;
     }

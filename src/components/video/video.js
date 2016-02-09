@@ -62,7 +62,7 @@ export class VideoComponent extends React.Component {
     const width = this.refs.videoBlock.getBoundingClientRect().width;
     const TL = new TimelineLite();
     TL.addLabel('start');
-    TL.set(this.refs.videoBlock, {width: width, maxWidth: '100%'}, 'start');
+    // TL.set(this.refs.videoBlock, {width: width, maxWidth: '100%'}, 'start');
     TL.to(this.refs.videoBlock, 0.5, {width: '100%', ease: Expo.easeInOut}, 'start+=0.5');
 
     if (this.props.showBtn) {
@@ -77,7 +77,7 @@ export class VideoComponent extends React.Component {
     if (!this.props.autoplay) {
       const TL = new TimelineLite();
       TL.addLabel('start');
-      TL.to(this.refs.videoBlock, 0.7, {maxWidth: '51.25em', ease: Expo.easeInOut}, 'start+=0.5');
+      // TL.to(this.refs.videoBlock, 0.7, {maxWidth: '51.25em', ease: Expo.easeInOut}, 'start+=0.5');
       if (this.props.showBtn) {
         TL.to(this.refs.playBtn, 0.5, {autoAlpha: 1, ease: Expo.easeInOut}, 'start+=0.5');
         TL.to(this.refs.controls, 0.5, {autoAlpha: 0}, 'start+=1');
@@ -140,8 +140,10 @@ export class VideoComponent extends React.Component {
   getDesktopVideo () {
     return (
       <div className='video-block isStopped' onClick={this.onVideoClick.bind(this)} ref='videoBlock' style={{backgroundColor: this.props.bgColor || '000'}}>
-        <video onEnded={this.onEnd.bind(this)} webkit-playsinline ref='video' src={this.props.videoSrc} poster={this.props.posterImg}></video>
-        {this.getBtn()}
+        <div className='video-block-inner'>
+          <video onEnded={this.onEnd.bind(this)} webkit-playsinline ref='video' src={this.props.videoSrc} poster={this.props.posterImg}></video>
+          {this.getBtn()}
+        </div>
       </div>
     );
   }

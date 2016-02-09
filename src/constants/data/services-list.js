@@ -16,7 +16,7 @@ const servicesList =  [
   },
   {
     type: 'creative',
-    description: 'Creative starts with the people, and hiring our diverse team of design experts is the best idea we’ve had.  Their skillsets and experience XXXXX.',
+    description: 'Whether crafting a singular conceptual direction or a brand-wide holistic visual voice, our creative team maintains a focus on partner goals, ensuring we are strategically and visually on brand.',
     cats: ['concept development', 'UX/UI', 'display media branding', 'apps/games', 'custom experiences']
   },
   {
