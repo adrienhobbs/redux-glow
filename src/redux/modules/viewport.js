@@ -1,5 +1,5 @@
 import { createAction, handleActions } from 'redux-actions';
-import {isNull} from 'lodash';
+import isNull from 'lodash/isNull';
 import MobileDetect from 'mobile-detect';
 // require('modernizr/modernizr');
 import Helpers from '../../utilities/helpers.js';

@@ -8,18 +8,15 @@ var destPathPub = '../glow-laravel/public/';
 var destPathViews = '../glow-laravel/resources/views/';
 var path = require('path');
 var GulpSSH = require('gulp-ssh');
+// var replace = require('gulp-replace');
 var async = require('async');
 var batchReplace = require('gulp-batch-replace');
-var fs = require('fs');
-var argv = require('yargs').argv;
-var commitMsg     = argv.msg || 'updates';
-var shell         = require('gulp-shell');
-var push          = shell.task(['cd ../glow-laravel && git add . &&  git commit -m=' + commitMsg +  ' && git push']);
+
 var config = {
-  host:        '54.172.235.134',
+  host:        'ec2-user@54.172.235.134',
   port:        22,
   username:    'ec2-user',
-  privateKey:  fs.readFileSync('../glowsite.pem')
+  privateKey:  fs.readFileSync('../glow-site.pem')
 };
 
 var gulpSSH = new GulpSSH({
@@ -27,15 +24,15 @@ var gulpSSH = new GulpSSH({
   sshConfig:     config
 });
 
-gulp.task('push', push);
-var ssh = function () {
+gulp.task('ssh', ssh);
+
+var ssh = function() {
   var path = '/var/www/glow-site';
   return gulpSSH
-  .shell(['cd ' + path + ' && git fetch && git pull origin dev'], {filePath: 'ssh.log'})
-  .pipe(gulp.dest('../glow-site-logs'));
+  .shell(['cd ' + path +' && git fetch && git pull origin dev'], {filePath: 'ssh.log'})
+  .pipe(gulp.dest('logs'));
 };
 
-gulp.task('ssh', ssh);
 var getBladeSrc = function (file, ext) {
   console.log(ext);
   var folder = (ext === '.css') ? 'css/' : 'js/';

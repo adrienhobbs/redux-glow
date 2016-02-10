@@ -5,7 +5,7 @@ import { actions as navActions } from '../../redux/modules/nav';
 import { actions as workActions } from '../../redux/modules/work';
 import { actions as viewportActions } from '../../redux/modules/viewport';
 import { actions as transitionActions } from '../../redux/modules/page-transition.js';
-import {isNull} from 'lodash';
+import isNull from 'lodash/isNull';
 import du from 'domutil';
 import Helpers from '../../utilities/helpers';
 import Footer from 'components/footer';

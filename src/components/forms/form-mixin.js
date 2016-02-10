@@ -1,6 +1,6 @@
 import React from 'react';
 import request from 'superagent';
-
+import isNull from 'lodash/isNull';
 const FormMixin = {
   getInitialState () {
     return {
@@ -18,7 +18,7 @@ const FormMixin = {
       .end(this.setMessage);
   },
   componentDidUpdate (prevProps, prevState) {
-    if (this.state.msg !== prevState.msg && !(_.isNull(this.state.msg))) {
+    if (this.state.msg !== prevState.msg && !(isNull(this.state.msg))) {
       this.showMessage();
     }
   },
@@ -52,7 +52,7 @@ const FormMixin = {
     this.hideMessageAndShowForm();
   },
   getMessageButton () {
-    return (!(_.isNull(this.state.buttonMsg)) ? <button onClick={this.showForm} >{this.state.buttonMsg}</button> : null);
+    return (!(isNull(this.state.buttonMsg)) ? <button onClick={this.showForm} >{this.state.buttonMsg}</button> : null);
   },
   disableButton () {
     this.setState({canSubmit: false});

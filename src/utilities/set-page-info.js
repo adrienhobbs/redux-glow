@@ -1,5 +1,6 @@
 import du from 'domutil';
-import { isElement, isEmpty } from 'lodash';
+import isElement from 'lodash/isElement';
+import isEmpty from 'lodash/isEmpty';
 
 let titleEl;
 

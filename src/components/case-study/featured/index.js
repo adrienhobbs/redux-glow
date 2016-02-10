@@ -3,7 +3,7 @@ import { Spring } from 'react-motion';
 import CaseStudy from 'components/case-study';
 import BackBar from 'components/ui/backbar';
 import ViewCaseStudy from 'components/ui/icons/view-case-study';
-import {snakeCase} from 'lodash';
+import snakeCase from 'lodash/snakeCase';
 import { connect } from 'react-redux';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import classes from './study.scss';

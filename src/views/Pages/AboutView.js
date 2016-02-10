@@ -3,7 +3,7 @@ import Testimonials from 'components/pages/about/testimonials';
 import EmployeeCard from 'components/pages/about/employee-card';
 import EmployeeInfo from 'constants/data/employees';
 import { connect }  from 'react-redux';
-import {map} from 'lodash';
+import map from 'lodash/map';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import Header from 'components/ui/header-component/header-component.js';
 

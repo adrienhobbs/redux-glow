@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import CaseStudy from 'components/case-study';
 import BackBar from 'components/ui/backbar';
 import PageLayout from 'layouts/PageLayout/PageLayout';
-import { has, snakeCase } from 'lodash';
+// import { has, snakeCase } from 'lodash';
+import has from 'lodash/has';
+import snakeCase from 'lodash/snakeCase';
 
 const mapStateToProps = (state) => ({
   nav: state.nav,

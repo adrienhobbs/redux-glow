@@ -1,7 +1,7 @@
 import Immutable from 'immutable';
 import { createAction, handleActions } from 'redux-actions';
 import data from 'constants/data/data.js';
-import {snakeCase} from 'lodash';
+import snakeCase from 'lodash/snakeCase';
 export const SET_CURRENT_STUDY = 'SET_CURRENT_STUDY';
 
 export const setCurrentStudy = createAction(SET_CURRENT_STUDY, (newState) => newState);

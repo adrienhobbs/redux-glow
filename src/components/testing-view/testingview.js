@@ -40,7 +40,7 @@ export class Testing extends PageLayout {
         <AllClients color='#666' stroke='#666' />
         <Logo clientName='cartoon-network-std'/>
         <Logo clientName='ilny'/>
-        <Logo clientName='westminster-yellow'/>
+        <Logo clientName='facebook-icon' isIcon/>
       </div>
     );
   }

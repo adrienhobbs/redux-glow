@@ -3,7 +3,7 @@ import du from 'domutil';
 import MobileDetect from 'mobile-detect';
 import getBreakpoint from './get-breakpoint';
 import getOrientation from './get-orientation';
-import {debounce} from 'lodash';
+import debounce from 'lodash/debounce';
 
 const resizeUtil  = (function resizeUtility () {
   const md        = new MobileDetect(window.navigator.userAgent || navigator.userAgent);

@@ -1,5 +1,5 @@
 import { createAction, handleActions } from 'redux-actions';
-import { isUndefined } from 'lodash';
+import isUndefined from 'lodash/isUndefined';
 export const NAV_STATE_CHANGED = 'NAV_STATE_CHANGED';
 
 export const changeNavState = createAction(NAV_STATE_CHANGED, (newState) => newState);

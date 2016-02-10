@@ -2,7 +2,8 @@ import React, { PropTypes } from 'react';
 import ProjectIntro from 'components/case-study/standard';
 import MobileFeatured from 'components/case-study/featured/featured-mobile';
 import Slide from 'components/slider/slide';
-import {snakeCase} from 'lodash';
+import snakeCase from 'lodash/snakeCase';
+import keys from 'lodash/keys';
 
 export class WorkHelpers extends React.Component {
   static propTypes = {
@@ -43,7 +44,7 @@ export class WorkHelpers extends React.Component {
       top: (i < this.props.counter.current),
       bottom: (i > this.props.counter.current)
     };
-    return _.keys(positions).filter(function returnPositions (key) {
+    return keys(positions).filter(function returnPositions (key) {
       return positions[key];
     })[0];
   }

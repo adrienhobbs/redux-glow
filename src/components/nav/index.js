@@ -9,7 +9,7 @@ import { bindActionCreators } from 'redux';
 import { actions as counterActions } from '../../redux/modules/counter';
 import { actions as transitionActions } from '../../redux/modules/page-transition.js';
 import {ToggleVis} from 'constants/animations/nav-bar';
-import {isNull} from 'lodash';
+import isNull from 'lodash/isNull';
 import { VelocityComponent, velocityHelpers } from 'velocity-react';
 
 const mapStateToProps = (state) => ({

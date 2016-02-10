@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { EmployeeCardAnimation as CardAnim } from 'constants/animations/pages';
-import { words } from 'lodash';
+import words from 'lodash/words';
 
 export class EmployeeCard extends React.Component {
 

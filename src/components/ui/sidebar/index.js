@@ -2,6 +2,7 @@ import React from 'react';
 import './sidebar.scss';
 import ShareButton from 'components/ui/share-button';
 import Logo from 'components/ui/logo-sprites/logo-sprite';
+import isEmpty from 'lodash/isEmpty';
 
 const Sidebar = React.createClass({
   propTypes: {
@@ -75,7 +76,7 @@ const Sidebar = React.createClass({
     return this.props.data.get('shareButton').copyColor || '#fff';
   },
   hasRecognition () {
-    return !(_.isEmpty(this.props.data.get('recognition')));
+    return !(isEmpty(this.props.data.get('recognition')));
   },
   render () {
     return (

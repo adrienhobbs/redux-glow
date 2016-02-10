@@ -2,7 +2,8 @@ import React, { PropTypes } from 'react';
 import du from 'domutil';
 import CaseStudy from 'components/case-study';
 import BackBar from 'components/ui/backbar';
-import {snakeCase, map} from 'lodash';
+import snakeCase from 'lodash/snakeCase';
+import map from 'lodash/map';
 import HoverMixin from './hover-mixin';
 
 const ProjectIntro = React.createClass({

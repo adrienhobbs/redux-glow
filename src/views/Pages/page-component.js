@@ -6,7 +6,6 @@ import * as counterActions from 'actions/counter';
 import * as viewportActions from 'actions/viewport';
 
 import { resetScroll, setPageTitle } from 'utils';
-import scrollMonitor from 'scrollmonitor';
 
 export class PageComponent extends React.Component {
 
@@ -24,27 +23,6 @@ export class PageComponent extends React.Component {
     setPageTitle(pageName);
   }
 
-  showHeaderGradient () {
-    TweenLite.set(this.refs.headerGradient, {scaleY: 1});
-  }
-
-  hideHeaderGradient () {
-    TweenLite.set(this.refs.headerGradient, {scaleY: 0});
-  }
-
-  removeHeaderWatcher () {
-    this.headerWatcher.destroy();
-  }
-
-  watchHeaderScrollTop () {
-    this.headerWatcher = scrollMonitor.create(this.refs.headerImage);
-    this.headerWatcher.on('exitViewport', () => {
-      console.log('yah');
-    });
-    // this.headerWatcher.on('exitViewport', this.showHeaderGradient.bind(this));
-    this.headerWatcher.on('enterViewport', this.hideHeaderGradient.bind(this));
-  }
-
   bindTransitionActions () {
     this._transitionActions = bindActionCreators(transitionActions, this.props.dispatch);
   }
@@ -59,7 +37,6 @@ export class PageComponent extends React.Component {
   bindViewportActions () {
     this._viewportActions = bindActionCreators(viewportActions, this.props.dispatch);
   }
-
 
   animatePageContentIn () {
     if (!(_.isNull(this.props.location.state))) {
