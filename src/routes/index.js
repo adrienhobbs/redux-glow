@@ -21,7 +21,6 @@ export default (
   <Route path='/' component={CoreLayout}>
     <Route component={HomeView} path='/featured/:project' />
     <Route component={TestingStuff} path='/testing' />
-
     <IndexRoute component={HomeView} />
     <Route path='/404' component={NotFoundView} />
     <Route      component={Direct}     path='work/:project' />

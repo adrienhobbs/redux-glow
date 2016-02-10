@@ -5,7 +5,7 @@ import ScrollMonitor from 'scrollmonitor';
 export class HeaderComponent extends React.Component {
 
   static propTypes = {
-    bg: PropTypes.string,
+    bgSrc: PropTypes.string,
     title: PropTypes.string,
     subtitle: PropTypes.string,
     hideGradient: PropTypes.bool
@@ -38,7 +38,7 @@ export class HeaderComponent extends React.Component {
   }
 
   getBgUrl () {
-    return `https://s3.amazonaws.com/weareglow-assets/header-images/${this.props.title}.jpg`;
+    return this.props.bgSrc || `https://s3.amazonaws.com/weareglow-assets/header-images/${this.props.title}.jpg`;
   }
 
   getHeaderStyle () {

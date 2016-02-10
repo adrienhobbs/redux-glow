@@ -1,7 +1,7 @@
 import { createAction, handleActions } from 'redux-actions';
 import {isNull} from 'lodash';
 import MobileDetect from 'mobile-detect';
-require('modernizr/modernizr');
+// require('modernizr/modernizr');
 import Helpers from '../../utilities/helpers.js';
 const md = new MobileDetect(window.navigator.userAgent || navigator.userAgent);
 export const SET_PAGE_VIEWPORT = 'SET_PAGE_VIEWPORT';
@@ -13,6 +13,7 @@ export const actions = {
   setPageViewport,
   getPageOrientation
 };
+const b = Browser();
 
 const initialState = {
   isPhone: !(isNull(md.phone())),
@@ -22,7 +23,7 @@ const initialState = {
   orientation: Helpers.getOrientation(),
   orientationChanged: null,
   breakpointChanged: null,
-  hasTouch: Modernizr.touchevents,
+  hasTouch: b.touch,
   browser: Browser()
 };
 
@@ -36,7 +37,7 @@ export default handleActions({
       isTablet: (!(isNull(md.tablet()))),
       orientationChanged: (state.orientation !== viewport.payload.orientation),
       breakpointChanged: (state.breakpoint !== viewport.payload.breakpoint),
-      hasTouch: Modernizr.touchevents,
+      hasTouch: b.touch,
       browser: state.browser
     };
   },
@@ -47,7 +48,7 @@ export default handleActions({
       isPhone: !(isNull(md.phone())),
       isMobile: (!isNull(md.mobile())),
       isTablet: (!(isNull(md.tablet()))),
-      hasTouch: Modernizr.touchevents,
+      hasTouch: b.touch,
       browser: state.browser
     };
   }

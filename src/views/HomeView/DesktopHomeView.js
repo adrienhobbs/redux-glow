@@ -44,6 +44,7 @@ export class DesktopHomeView extends PageLayout {
   }
   componentDidMount () {
     this.mountDotsAndTitles();
+    TweenLite.set(document.body, {overflowY: 'hidden'});
     TweenLite.set('.home-container', {className: '+=home-container-desktop'});
     this.checkTouchEvents();
     this.checkKeyDownEvent();
@@ -60,6 +61,7 @@ export class DesktopHomeView extends PageLayout {
   }
   componentWillUnmount () {
     TweenLite.set(document.documentElement, {overflowY: 'initial'});
+    TweenLite.set(document.body, {overflowY: 'visible'});
     ReactDOM.unmountComponentAtNode(document.getElementById('frame-left'));
     ReactDOM.unmountComponentAtNode(document.getElementById('frame-right'));
     this.cancelTouchMoveListener();
@@ -120,15 +122,23 @@ export class DesktopHomeView extends PageLayout {
       this.actions.next();
     }
   }
+  tlIsActive () {
+    return this.props.TL.isActive();
+  }
+  getThreshold () {
+    return (this.props.viewport.safari) ? 1 : 51;
+  }
   checkThreshold (e) {
+    console.log(this.getThreshold());
+    console.log(this.tlIsActive());
     if (!this.state.singleView) {
-      if (e.deltaY >= 1) {
+      if (e.deltaY >= this.getThreshold()) {
         if (e.type === 'wheel') {
           this.goForward();
         } else {
           this.goBack();
         }
-      } else if (e.deltaY <= -1) {
+      } else if (e.deltaY <= -this.getThreshold()) {
         if (e.type === 'wheel') {
           this.goBack();
         } else {
@@ -162,6 +172,7 @@ export class DesktopHomeView extends PageLayout {
     // var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
   }
   onKeyDown (e) {
+    console.log(this.tlIsActive());
       switch (e.keyCode) {
         case 38 :
           this.checkThreshold({deltaY: -51, type: 'wheel'});

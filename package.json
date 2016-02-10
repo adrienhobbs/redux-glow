@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "compile": "node -r dotenv/config --harmony bin/compile",
-    "cc" : "gulp clean-dist && npm run compile --production && gulp default",
+    "cc" : "gulp clean-dist && npm3 run compile --production && gulp bladeify && gulp",
     "lint": "eslint . ./",
     "lint:fix": "npm run lint -- --fix",
     "start": "better-npm-run start",
