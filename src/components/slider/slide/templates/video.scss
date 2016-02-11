@@ -1,7 +1,13 @@
 @import 'base';
 :global {
+  .hm-video-overlay {
+  
+    height: 100%;
+    width: 100%;
+  }
   .video-wrapper {
     position: relative;
+    font-size: 0.7em;
     .wrap {
       @include center(xy);
       text-align: center;

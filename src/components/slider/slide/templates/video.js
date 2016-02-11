@@ -36,7 +36,7 @@ const Video = React.createClass({
   },
   getVidTemplate () {
     return (
-      <video preload webkit-playsinline onPlay={this.onLoad} ref='video' className='home-video' muted loop src={this.props.data.get('video')}>
+      <video preload webkit-playsinline poster='https://s3.amazonaws.com/weareglow-assets/assets/video/home-poster.jpg' onPlay={this.onLoad} ref='video' className='home-video' muted loop src={this.props.data.get('video')}>
         <p>sorry cant play</p>
       </video>
     );
@@ -44,34 +44,19 @@ const Video = React.createClass({
   render () {
     return (
       <div ref='videoContainer' className='wrapper video-wrapper video-placeholder' style={{height: '100%', width: '100%'}}>
+        <div className='hm-video-overlay'>
+        </div>
         {this.getVidTemplate()}
+        <div className='wrap' style={{width: '90%'}}>
+          <h1 ref='hdl' className='featured-headline' >we are glow</h1>
+          <p ref='p'>We activate fans, build and nurture communities and create interactive experiences that engage and convert.
+            </p>
+          </div>
+          <p ref='scroll' className='scroll-down'>scroll <br/> <span className='arrow'>&#8595;</span></p>
+
       </div>
     );
   }
 });
 
 export default Video;
-
-// <div className='vid-box'><img src='/assets/images/test.png' alt=''/></div>
-// <div className='wrap' style={{width: '90%'}}>
-//  <h1 ref='hdl' className='featured-headline' >we are glow</h1>
-//  <p ref='p'>We activate fans, build and nurture communities and create interactive experiences that engage and convert.
-//  </p>
-// </div>
-//
-// return (this.getViewportIsSmall())
-//   ? <div>
-//   <div className='wrap' style={{width: '100%'}}>
-//     <h1 ref='hdl' className='featured-headline' >we are glow</h1>
-//     <p ref='p'>We activate fans, build and nurture communities and create interactive experiences that engage and convert.  </p>
-//   </div>
-// </div>
-//   : <video onPlay={this.onLoad} ref='video' className='home-video' autoPlay muted loop src={this.props.data.get('video')} />;
-//
-        // <div ref='vidOverlay' className='video-overlay'></div>
-        // <div className='wrap' style={{width: '90%'}}>
-        //   <h1 ref='hdl' className='featured-headline' >we are glow</h1>
-        //   <p ref='p'>We activate fans, build and nurture communities and create interactive experiences that engage and convert.
-        //     </p>
-        //   </div>
-        //   <p ref='scroll' className='scroll-down'>scroll <br/> <span className='arrow'>&#8595;</span></p>

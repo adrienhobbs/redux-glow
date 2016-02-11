@@ -87,7 +87,7 @@ export class VideoComponent extends React.Component {
   getMobileVideo () {
     return (
       <div className='video-block-mobile'>
-        <video ref='video' className='mobile-video' controls src={this.props.videoSrc} poster={this.props.posterImg}></video>
+        <video preload ref='video' className='mobile-video' controls src={this.props.videoSrc} poster={this.props.posterImg}></video>
       </div>
     );
   }
@@ -140,7 +140,7 @@ export class VideoComponent extends React.Component {
     return (
       <div className='video-block isStopped' onClick={this.onVideoClick.bind(this)} ref='videoBlock' style={{backgroundColor: this.props.bgColor || '000'}}>
         <div className='video-block-inner'>
-          <video onEnded={this.onEnd.bind(this)} webkit-playsinline ref='video' src={this.props.videoSrc} poster={this.props.posterImg}></video>
+          <video preload onEnded={this.onEnd.bind(this)} webkit-playsinline ref='video' src={this.props.videoSrc} poster={this.props.posterImg}></video>
           {this.getBtn()}
         </div>
       </div>

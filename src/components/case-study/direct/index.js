@@ -3,15 +3,12 @@ import { connect } from 'react-redux';
 import CaseStudy from 'components/case-study';
 import BackBar from 'components/ui/backbar';
 import PageLayout from 'layouts/PageLayout/PageLayout';
-// import { has, snakeCase } from 'lodash';
 import has from 'lodash/has';
 import snakeCase from 'lodash/snakeCase';
 
 const mapStateToProps = (state) => ({
-  nav: state.nav,
-  viewport: state.viewport,
   work: state.work,
-  counter: state.counter
+  viewport: state.viewport
 });
 
 export class Direct extends PageLayout {
@@ -19,8 +16,8 @@ export class Direct extends PageLayout {
   static propTypes = {
     dispatch: PropTypes.func,
     work: PropTypes.object,
-    viewport: PropTypes.object,
-    toggleNav: PropTypes.func
+    toggleNav: PropTypes.func,
+    viewport: PropTypes.viewport
   };
 
   static contextTypes = {

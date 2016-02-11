@@ -6,7 +6,7 @@ import { connect }  from 'react-redux';
 import map from 'lodash/map';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import Header from 'components/ui/header-component/header-component.js';
-
+import AllClients from 'components/ui/clients-component/index.js';
 const mapStateToProps = (state) => ({
   counter: state.counter,
   nav: state.nav,
@@ -57,8 +57,13 @@ export class AboutView extends PageLayout {
           <div className='row'>
             <Testimonials />
           </div>
+          <div className='row' id='about-all-clients'>
+            <AllClients />
+          </div>
         </div>
+        <h1 className='page-title' id='who-we-are-title'>who we are</h1>
         <div className='row-large'>
+
           {this.getEmployees()}
         </div>
       </div>

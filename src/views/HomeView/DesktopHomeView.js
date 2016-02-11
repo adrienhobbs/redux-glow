@@ -125,12 +125,12 @@ export class DesktopHomeView extends PageLayout {
   tlIsActive () {
     return this.props.TL.isActive();
   }
+
   getThreshold () {
     return (this.props.viewport.safari) ? 1 : 51;
   }
+
   checkThreshold (e) {
-    console.log(this.getThreshold());
-    console.log(this.tlIsActive());
     if (!this.state.singleView) {
       if (e.deltaY >= this.getThreshold()) {
         if (e.type === 'wheel') {
@@ -169,10 +169,8 @@ export class DesktopHomeView extends PageLayout {
   /* eslint-disable */
   onWheel (e) {
     this.checkThreshold(e);
-    // var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
   }
   onKeyDown (e) {
-    console.log(this.tlIsActive());
       switch (e.keyCode) {
         case 38 :
           this.checkThreshold({deltaY: -51, type: 'wheel'});

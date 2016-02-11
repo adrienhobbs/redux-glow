@@ -30,7 +30,7 @@
     .client-logo-container {
       text-align: center;
       position: relative;
-      margin-bottom: em(20);
+      margin-bottom: em(40);
 
       @include media($under-medium) {
         lost-column: 1/4;
@@ -57,6 +57,7 @@
       svg {
         width: 100%;
         max-height: em(29);
+        max-width: 146px;
         @include media($small-screen) {
           max-height: em(29);
         }
