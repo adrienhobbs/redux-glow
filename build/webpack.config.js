@@ -1,11 +1,15 @@
 import webpack from 'webpack';
-import cssnano from 'cssnano';
+// import cssnano from 'cssnano';
+import use from 'postcss-use';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import config from '../config';
-import lost from 'lost';
 import _debug from 'debug';
+import webpackPostcssTools from 'webpack-postcss-tools';
 
+var map = webpackPostcssTools.makeVarMap('./build/index.css');
+
+console.log(map);
 const debug = _debug('app:webpack:config');
 const paths = config.utils_paths;
 const {__DEV__, __PROD__, __TEST__} = config.globals;
@@ -53,10 +57,10 @@ webpackConfig.plugins = [
     hash: false,
     favicon: paths.client('static/favicon.ico'),
     filename: 'index.html',
-    inject: 'body'
-    // minify: {
-    //   collapseWhitespace: true
-    // }
+    inject: 'body',
+    minify: {
+      collapseWhitespace: true
+    }
   })
 ];
 
@@ -158,6 +162,7 @@ webpackConfig.module.loaders.push({
 webpackConfig.module.loaders.push({
   test: /\.scss$/,
   exclude: /src/,
+
   loaders: [
     'style',
     'css?sourceMap',
@@ -182,20 +187,12 @@ webpackConfig.sassLoader = {
 };
 
 webpackConfig.postcss = [
-  cssnano({
-    autoprefixer: {
-      add: true,
-      remove: true,
-      browsers: ['last 2 versions']
-    },
-    discardComments: {
-      removeAll: true
-    },
-    safe: true,
-    sourcemap: true
-  }),
-  lost
-];
+  webpackPostcssTools.prependTildesToImports,
+  require('postcss-custom-properties')({variables: map.vars}),
+  require('postcss-custom-media')({extensions: map.media}),
+  require('postcss-nested'),
+  use({modules: ['lost']}
+)];
 
 // File loaders
 /* eslint-disable */

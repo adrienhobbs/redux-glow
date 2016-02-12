@@ -9,6 +9,7 @@ import isNull from 'lodash/isNull';
 import du from 'domutil';
 import Helpers from '../../utilities/helpers';
 import Footer from 'components/footer';
+import classnames from 'classnames';
 
 export class PageLayout extends React.Component {
   static propTypes = {
@@ -18,6 +19,9 @@ export class PageLayout extends React.Component {
     location: PropTypes.object,
     viewport: PropTypes.object
   };
+  getClassnames (cn) {
+    return classnames(cn);
+  }
   constructor (props) {
     super(props);
     this.actions = bindActionCreators(Object.assign({}, transitionActions, counterActions, navActions, workActions, viewportActions), props.dispatch);

@@ -1,5 +1,20 @@
     /*eslint-disable*/
 // import React from 'react';
+    // winter calendar custom animation html5 development creative execution
+    // ilny social strategy community management content lab creative execution recognition: beautiful destinations partnership
+    // carla add social strategy 
+    // monkeys add content lab creative execution html5 site design digital media custom video
+    // proof creative execution digital media social content // update client logo
+    // ilny social strategy community management content lab creative execution recognition: beautiful destinations partnership
+    // winter calendar custom animation html5 development creative execution
+    // sharknado social strategy comminutiy mangement content lab creative execution influencer marketing 
+    // westminster social strategy community mangement content lab creative exectution live event management
+    //
+    // proof creative execution digital media social content // update client logo
+    // monkeys add content lab creative execution html5 site design digital media custom video
+    // veep social strategy, comm mangement, content lab, creative execution, digital mediau, influenver campaings, recogntion: shorty: best multi-paltform shorty: best twitter campaign.
+    // westminster social strategy community mangement content lab creative exectution live event management
+    //
 const s3 = 'https://s3.amazonaws.com/weareglow-assets/';
 const data = [
   {
@@ -34,7 +49,8 @@ const data = [
     templateName: 'Veep',
     copyColor: '#ffffff',
     headlineColor: '#ffffff',
-    services: ['social strategy', 'community management', 'media campaign', 'asset creation'],
+    services: ['social strategy', 'community management', 'content lab', 'creative execution', 'digital media', 'influencer campaigns'],
+    recognition: ['shorty: best multi-platform', 'shorty: best twitter campaign'],
     sidebar: {
       logoColor: '#ffffff',
       copyColor: '#577381',
@@ -101,7 +117,7 @@ const data = [
     mobile: {
       bgColor: '#fff' 
     },
-    services: ['community management', 'video production', 'social content'],
+    services: ['social strategy', 'community management', 'video production', 'social content'],
     fullScreenBgImg: s3 + 'case-studies/carla-hall/southern-kitchen/video-04.jpg',
     lockup: {
       className: 'carla-lockup'
@@ -248,7 +264,7 @@ const data = [
     templateName:               'TwelveMonkeys',
     copyColor:                  '#ffffff',
     headlineColor:              '#949494',
-    services:                   ['social strategy', 'community management', 'media campaign', 'asset creation'],
+    services:                   ['social strategy', 'community management', 'media campaign', 'asset creation', 'content-lab', 'creative execution', 'html5 site design', 'digital media', 'custom video'],
     sidebar: {
       logoColor:      '#ffffff',
       copyColor:      '#727272',
@@ -309,7 +325,8 @@ const data = [
     cat: ' ― tnt | proof ― ',
     logo: 'HBO_logo.svg',
     templateName: 'Proof',
-    services: ['social strategy', 'community management', 'video production'],
+
+    services: ['creative execution', 'digital media', 'social content'],
     backbar: {
       bgColor: '#82b3dc'
     },
@@ -356,7 +373,8 @@ const data = [
     gradientTop: '#d52027',
     gradientBottom: '#1d1d1d',
     cat: ' ― ilny | aor ― ',
-    services: ['community management', 'video production', 'social content'],
+    services: ['social strategy', 'community management', 'content lab', 'creative execution'],
+    recognition: ['beautiful destinations partnership'],
     templateName: 'ILNY',
     headlineColor: '#d52027',
     backbar: {
@@ -423,7 +441,7 @@ const data = [
     gradientTop: '#00283f',
     gradientBottom: '#074d68',
     cat: ' ― cn | calendar ― ',
-    services: ['ui/ux', 'animation', 'development'],
+    services: ['ui/ux', 'custom animation', 'html5 development', 'creative execution'],
     templateName: 'WinterCalendar',
     headlineColor: '#ffffff',
     lockup: {
@@ -558,7 +576,8 @@ const data = [
     sidebarLogoColor: '#ffffff',
     cat: ' ― syfy | sharknado ',
     templateName: 'Sharknado',
-    services: ['community management', 'video production', 'social content'],
+    // sharknado social strategy comminutiy mangement content lab creative execution influencer marketing 
+    services: ['social strategy', 'community management', 'content lab', 'creative execution', 'influencer marketing'],
     headlineColor: '#7d2f37',
     mobile: {
       bgColor: '#0b1c28' 
@@ -606,7 +625,7 @@ const data = [
     gradientBottom: '#d6963f',
     featuredProjectTitleColor: '#ffffff',
     templateName: 'WKC',
-    services: ['community management', 'video production', 'social content'],
+    services: ['social strategy', 'community management', 'content lab', 'creative execution', 'live event management'],
     clientLogoColor: '#d6963f',
     headlineColor: '#d6963f',
     lockup: {

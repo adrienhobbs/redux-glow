@@ -1,0 +1,41 @@
+--xs: 33em;
+@custom-media --sm-viewport (min-width:320px) and (max-width:640px);
+@custom-media --md-viewport (min-width:640px) and (max-width:960px);
+@custom-media --lg-viewport (min-width:960px);
+@custom-media --under-medium (max-width: 991px);
+@custom-media --md-lg (min-width: 992px) and (max-width: 1200px);
+@custom-media --lg-up (min-width: 1201px);
+@custom-media --xs (max-width: 34em);
+@custom-media --sm (min-width: 34em);
+@custom-media --md (min-width: 48em);
+@custom-media --lg (min-width: 62em);
+@custom-media --xl (min-width: 75em);
+@custom-media --sm-down (max-width: 48em);
+@custom-media --md-down (max-width: 62em);
+@custom-media --lg-down (max-width: 75em);
+
+:root {
+  /* Colors */
+  --color-blue: #477dca;
+  --color-dark-gray: #a7a7a7;
+
+  --color-medium-gray: #999;
+  --color-light-gray: #d4d4d4;
+  --color-dove-gray: #737373;
+  --color-stack: #8E8E8E;
+  --color-pink: #f12d5c;
+  --color-iron: #CCCCCC;
+  --color-mercury: #E6E6E6;
+  --color-stack: rgba(142, 142, 142, 1);
+  --color-tin: rgba(128, 128, 128, 1);
+  --color-tin-darkened: darken($tin, 10%);
+  --color-roof: rgba(0, 55, 74, 1);
+  --color-alto: #DADADA;
+  --color-concrete: rgb(242, 242, 242);
+  --color-glow-blue: rgb(72,195,211);
+  --color-radical-red: rgb(241, 45, 92);
+  --color-storm-dust: rgb(167,167,167);
+  --color-radical-red-hover: shade($radical-red, 20%);
+  
+  /* Padding */
+}

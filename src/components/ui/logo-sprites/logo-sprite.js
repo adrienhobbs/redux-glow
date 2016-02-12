@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import './symbol/svg/sprite.symbol.svg';
-import classes from './symbol/sprite.css';
 export class SpriteLogo extends React.Component {
 
   static propTypes = {
@@ -36,17 +35,13 @@ export class SpriteLogo extends React.Component {
     return (this.props.suffix) ? this.getSuffixClass() : this.getStandardClass();
   }
 
-  getLocalClassname () {
-    return classes['svg-' + this.getClassname() + '-dims'];
-  }
-
   getUseLink () {
     return this.props.clientName + '-logo';
   }
 
   render () {
     return (
-      <svg ref='logo' role='img' className={this.getLocalClassname()}>
+      <svg ref='logo' role='img' >
         <use xlinkHref={`#${this.getUseLink()}`}></use>
       </svg>
     );

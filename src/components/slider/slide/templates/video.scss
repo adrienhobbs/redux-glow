@@ -1,7 +1,21 @@
 @import 'base';
 :global {
+  .words-wrapper {
+    position: relative;
+    display: inline-block;
+    b {
+      position: absolute;
+      display: inline-block;
+      width: 283px;
+      white-space: nowrap;
+      top: 0;
+      left: 0;
+      &:first-of-type {
+        position: relative;
+      }
+    }
+  }
   .hm-video-overlay {
-  
     height: 100%;
     width: 100%;
   }
@@ -31,9 +45,6 @@
         font-weight: bold;
         @include outer-container(14em);
         font-size: 1.475em;
-        @include media($xsmall-small-screen) {
-
-        }
         @include media($small-medium-screen) {
           font-size: 1.875em;
           @include outer-container(21em);
@@ -67,7 +78,6 @@
   .home-video {
     @include center(x);
     @include position(fixed, 0 0 0 50%);
-
     position: fixed;
     right: 0;
     bottom: 0;

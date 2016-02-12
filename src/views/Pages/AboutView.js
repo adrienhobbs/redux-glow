@@ -7,6 +7,8 @@ import map from 'lodash/map';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import Header from 'components/ui/header-component/header-component.js';
 import AllClients from 'components/ui/clients-component/index.js';
+import request from 'superagent';
+
 const mapStateToProps = (state) => ({
   counter: state.counter,
   nav: state.nav,
@@ -22,12 +24,21 @@ export class AboutView extends PageLayout {
   };
   constructor (props) {
     super(props);
-  }
-  componentWillMount () {
+    this.state = {
+      weather: 'getting weather...'
+    };
     this.setupPageInfo('About');
   }
   componentDidMount () {
+    request.get('/weather')
+      .set('Accept', 'application/json')
+      .end(this.setWeather.bind(this));
     this.animatePageContentIn();
+  }
+  setWeather (err, res) {
+    if (!err) {
+      this.setState({weather: res.body.caption || res.text.caption});
+    }
   }
   getEmployees () {
     return map(EmployeeInfo, function mapEmployeeInfo (employee, i) {
@@ -41,7 +52,7 @@ export class AboutView extends PageLayout {
   render () {
     return (
       <div className='container' id='about' ref='page'>
-        <Header bgSrc='https://s3.amazonaws.com/weareglow-assets/header-images/about.gif' title={'about us'} subtitle={'its probably not sunny today'} />
+        <Header bgSrc='https://s3.amazonaws.com/weareglow-assets/header-images/about.gif' title={'about us'} subtitle={this.state.weather} />
         <div className='page-content'>
           <div className='row'>
             <div className='about-copy'>

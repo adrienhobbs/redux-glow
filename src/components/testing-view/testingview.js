@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import AllClients from 'components/ui/clients-component/index.js';
 import Logo from 'components/ui/logo-sprites/logo-sprite';
+import styles from  './test.css';
+
 const mapStateToProps = (state) => ({
   nav: state.nav,
   viewport: state.viewport,
@@ -24,7 +26,6 @@ export class Testing extends PageLayout {
   };
 
   componentWillMount () {
-    console.log(this);
     if (this.props.nav.isVisible) {
       this.actions.changeNavState({isVisible: false, shouldAnimate: false});
     }
@@ -37,10 +38,7 @@ export class Testing extends PageLayout {
   render () {
     return (
       <div>
-        <AllClients color='#666' stroke='#666' />
-        <Logo clientName='cartoon-network-std'/>
-        <Logo clientName='ilny'/>
-        <Logo clientName='facebook-icon' isIcon/>
+        <AllClients showSubtitle color='#666' stroke='#666' />
       </div>
     );
   }
