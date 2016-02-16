@@ -455,7 +455,8 @@ const data = [
     },
     sidebar: {
       copyColor: '#83a6b4',
-      headlineColor: '#fff'
+      headlineColor: '#fff',
+      customClientLogo: 'cartoon-network-std'
     },
     shareButton: {
       strokeColor: '#fcb823',

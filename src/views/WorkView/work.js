@@ -2,7 +2,7 @@ import React from 'react';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import { connect } from 'react-redux';
 import WorkItems from 'components/work-items';
-
+import styles from './work-view.css';
 const mapStateToProps = (state) => ({
   work: state.work,
   routerState: state.router
@@ -25,12 +25,12 @@ export class WorkView extends PageLayout {
   render () {
     return (
       <div className='page-outer'>
-      <div className='container'  ref='page' id='work'>
-        <div className='header'>
+      <div className={styles.work_view}  ref='page'>
+        <div className={styles.work_view_header}>
           <h1 className='page-title'>our work</h1>
-          <h4 className='page-subtitle'>heres our work man</h4>
+          <h4 className={styles.page_subtitle}>heres our work man</h4>
         </div>
-        <div className='page-content'>
+        <div className={styles.work_view_content}>
           <WorkItems actions={this.actions} location={this.props.routerState.location} params={this.props.params}  />
         </div>
       </div>

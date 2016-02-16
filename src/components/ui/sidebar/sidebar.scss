@@ -1,5 +1,7 @@
 @import 'base';
+@use lost;
 :global {
+
   .sidebar-three {
     lost-row: 1 0 0;
     height: auto;
@@ -19,7 +21,7 @@
   }
   .sidebar {
     lost-column: 2.7/10 0 0;
-    margin-top: 40px;
+    // margin-top: 40px;
     padding-left: 5%;
     lost-flex-container: column;
     @include clearfix;
@@ -36,6 +38,7 @@
     .sidebar-inner {
 
     }
+
     &-box {
 
       min-height: 120px;

@@ -1,5 +1,5 @@
+@use lost;
 :global {
-
   .hoverline {
     position: relative;
     padding-bottom: 4px;
@@ -11,6 +11,7 @@
     color: #f12d5c;
     transition: all .3s ease;
   }
+
   .hoverline:before {
     content: "";
     position: absolute;
@@ -23,6 +24,7 @@
     width: 0px;
     transition: all .45s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
+
   .hoverline:hover:before {
     visibility: visible;
     opacity: 1;
@@ -34,5 +36,49 @@
 
   .hoverline.active {
     border-bottom:2px solid #f12d5c;
+  }
+}
+
+.nav-item {
+  cursor: pointer;
+  lost-align: middle-center;
+
+  a {
+    font-family: var(--primary-font-family);
+  }
+}
+.navItem {
+  composes: nav-item;
+  font-size: 0.95em;
+  lost-column: 1/6 0 0; 
+
+  @media (--xl) {
+    font-size: 1.2em;
+  }
+
+}
+
+.svg_line {
+  width: 0;
+  top:69%;
+}
+
+.navItemMobile {
+  composes: nav-item;
+  lost-row: 1/5 0 0;
+  text-align: center;
+  .line {
+    display: none;
+  }
+  &:hover {
+    background: var(--color-radical-red);
+    color: white !important;
+    a {
+      color: white !important;
+    }
+  }
+  a {
+    font-size: 3em;
+    font-weight: bold;
   }
 }

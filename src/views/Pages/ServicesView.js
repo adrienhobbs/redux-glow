@@ -1,18 +1,18 @@
-import React from 'react';
-import { connect }            from 'react-redux';
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import servicesList from 'constants/data/services-list';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import Header from 'components/ui/header-component/header-component.js';
-const mapStateToProps = (state) => ({
+import styles from './services-view.css';
 
+const mapStateToProps = (state) => ({
   work: state.work,
   routerState: state.router
-
 });
 
 export class Services extends PageLayout {
   static propTypes = {
-    location: React.PropTypes.object
+    location: PropTypes.object
   };
 
   constructor (props) {
@@ -33,15 +33,15 @@ export class Services extends PageLayout {
 
   getOurServices () {
     return servicesList.map(function mapServices (service, i) {
-      function getCats () { return service.cats.map(function mapServiceCats (cat, ii) { return <div key={ii} className='cat'>&#8594;  {cat}</div>; }); }
+      function getCats () { return service.cats.map(function mapServiceCats (cat, ii) { return <div key={ii} className={styles.service_cat}>&#8594;  {cat}</div>; }); }
       return (
-        <div key={i} className='service-bucket'>
-          <div className='title'>
+        <div key={i} className={styles.service_bucket}>
+          <div className={styles.service_title}>
             {service.type}
             <div className='divider'></div>
           </div>
-          <div className='body'>{service.description}</div>
-          <div className='categories'>
+          <div className={styles.service_body}>{service.description}</div>
+          <div className={styles.service_categories}>
             {getCats()}
           </div>
         </div>

@@ -2,8 +2,6 @@ import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import AllClients from 'components/ui/clients-component/index.js';
-import Logo from 'components/ui/logo-sprites/logo-sprite';
-import styles from  './test.css';
 
 const mapStateToProps = (state) => ({
   nav: state.nav,

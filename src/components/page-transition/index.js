@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import styles from './page-transition.css';
 
 // 1. animate pink slide
 // 2. animate white slide
@@ -91,8 +92,8 @@ const PageTransition = React.createClass({
   render () {
     return (
       <div className='transition' ref='transitionEl'>
-        <div ref='transRight' className='transition-right'></div>
-        <div ref='transLeft' className='transition-left' style={{backgroundColor: 'radicalRed'}}></div>
+        <div ref='transRight' className={styles.transition_right}></div>
+        <div ref='transLeft' className={styles.transition_left}></div>
       </div>
     );
   }

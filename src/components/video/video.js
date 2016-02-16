@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import du from 'domutil';
-import './video.scss';
+import styles from  './video.css';
+import classnames from 'classnames';
 
 export class VideoComponent extends React.Component {
   static propTypes = {
@@ -86,8 +87,8 @@ export class VideoComponent extends React.Component {
 
   getMobileVideo () {
     return (
-      <div className='video-block-mobile'>
-        <video preload ref='video' className='mobile-video' controls src={this.props.videoSrc} poster={this.props.posterImg}></video>
+      <div className={styles.video_block_mobile}>
+        <video preload ref='video' className={styles.mobile_video} controls src={this.props.videoSrc} poster={this.props.posterImg}></video>
       </div>
     );
   }
@@ -138,8 +139,8 @@ export class VideoComponent extends React.Component {
   }
   getDesktopVideo () {
     return (
-      <div className='video-block isStopped' onClick={this.onVideoClick.bind(this)} ref='videoBlock' style={{backgroundColor: this.props.bgColor || '000'}}>
-        <div className='video-block-inner'>
+      <div className={styles.video_block} onClick={this.onVideoClick.bind(this)} ref='videoBlock' style={{backgroundColor: this.props.bgColor || '000'}}>
+        <div className={classnames(styles.video_block_inner, 'isStopped')}>
           <video preload onEnded={this.onEnd.bind(this)} webkit-playsinline ref='video' src={this.props.videoSrc} poster={this.props.posterImg}></video>
           {this.getBtn()}
         </div>

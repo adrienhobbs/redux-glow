@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import du from 'domutil';
 import Templates from './templates';
 import Lockup from 'components/ui/lockup/lockup.js';
+import styles from './case-study.css';
 
 const StudyBody = React.createClass({
 
@@ -74,16 +75,16 @@ const StudyBody = React.createClass({
     const StudyTemplate = this.getStudyTemplate();
     return (
       <div className='study-outer'>
-        <div ref='studyOverlay' className='study-overlay'>
-          <div className='overlay-info' ref='overlayInfo'>
+        <div ref='studyOverlay' className={styles.study_overlay}>
+          <div className={styles.overlay_info} ref='overlayInfo'>
             <Lockup data={this.props.data} single />
-            <div className='study-headline-subtitle'>{this.props.data.get('subtitle')}</div>
+            <div className={styles.study_headline_subtitle}>{this.props.data.get('subtitle')}</div>
           </div>
         </div>
-        <div ref='studyWrapper' className='wrapper case-study-single'>
-          <div className='study-intro-container' ref='introCtr'></div>
-          <div className='study-content-wrapper'>
-            <div className='study-content-mask' style={{ background: this.props.data.get('secColor') }}></div>
+        <div ref='studyWrapper' className={styles.case_study_single_wrapper}>
+          <div className={styles.study_intro_container} ref='introCtr'></div>
+          <div className={styles.study_content_wrapper}>
+            <div className={styles.study_content_mask} style={{ background: this.props.data.get('secColor') }}></div>
             <StudyTemplate data={this.props.data} />
           </div>
         </div>

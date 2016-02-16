@@ -1,5 +1,7 @@
 import React from 'react';
 import './nav-link.scss';
+import styles from './nav-link.css';
+
 const NavLink = React.createClass({
 
   propTypes: {
@@ -101,12 +103,15 @@ const NavLink = React.createClass({
   setLinkColor (color) {
     TweenLite.to(this.refs.link, 1.4, {color: color, ease: Expo.easeInOut});
   },
+  getClassName () {
+    return (this.props.mobile) ? styles.navItemMobile : styles.navItem;
+  },
   render () {
     const lineHeight = 4;
     return (
-      <div ref='linkCtr'  onClick={this.onClick} onTouchEnd={this.onTouchEnd} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}  className='nav-item'>
+      <div ref='linkCtr'  onClick={this.onClick} onTouchEnd={this.onTouchEnd} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}  className={this.getClassName()}>
         <a ref='link'  >{this.props.name}</a>
-        <svg ref='lineSvg' className='line' height={`${lineHeight}px`}>
+        <svg ref='lineSvg' className={styles.svg_line} height={`${lineHeight}px`}>
           <line ref='line' id='underLine' fill='none' stroke={this.props.color} strokeWidth={lineHeight} strokeMiterLimit='10' x1='0' y1='0' x2='0' y2='0'/>
         </svg>
       </div>

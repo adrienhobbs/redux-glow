@@ -5,8 +5,8 @@ import TextArea from 'components/forms/textarea';
 import SubmitButton from 'components/forms/submit-button';
 import NameInput from 'components/forms/name-input';
 import FormMixin from './form-mixin';
+import styles from  './contact-form.css';
 
-import './contact-form.scss';
 const ContactForm = React.createClass({
   propTypes: {
     hideCopy: React.PropTypes.bool
@@ -22,17 +22,17 @@ const ContactForm = React.createClass({
   render () {
     return (
       <div className='contact-form'>
-        <div className='contact-form-inner form-inner' ref='form'>
+        <div className={styles.form_inner} ref='form'>
           <Formsy.Form
             ref='contactForm'
             onSubmit={this.onSubmit}
             className='Form'
             onInvalid={this.disableButton}
             onValid={this.enableButton}>
-            <h2 className='connect-headline'>work with us</h2>
+            <h2 className={styles.connect_headline}>work with us</h2>
             <p style={{display: (this.props.hideCopy) ? 'none' : 'block'}}> we are always looking for great new opportunities. we'd love to work with you on your idea, however big or small.</p>
-            <article className='input-fields'>
-              <section id='name'>
+            <article className={styles.input_fields}>
+              <section className={styles.field} id='name'>
                 <NameInput
                   ref='name'
                   name='name'
@@ -41,7 +41,7 @@ const ContactForm = React.createClass({
                   validationError='This is not a valid name'
                   validations='isWords' />
               </section>
-              <section id='email'>
+              <section className={styles.field} id='email'>
                 <EmailInput
                   ref='email'
                   name='email'
@@ -51,7 +51,7 @@ const ContactForm = React.createClass({
                   type='email'
                   required/>
               </section>
-              <section id='message'>
+              <section className={styles.text_area_message} id='message'>
                 <TextArea
                   ref='textarea'
                   name='message'
@@ -59,15 +59,13 @@ const ContactForm = React.createClass({
                   validationError='This is not a valid email'
                   required />
               </section>
-              <div className='submit-btn-ctr'>
-                <SubmitButton disabled={!this.state.canSubmit} />
-              </div>
+              <SubmitButton disabled={!this.state.canSubmit} />
             </article>
           </Formsy.Form>
         </div>
-        <div ref='message' className='message'>
+        <div ref='message' className={styles.message}>
           <div>{this.state.msg}</div>
-          <div className='message-button-ctr'>
+          <div className={styles.message_button_ctr}>
             {this.getMessageButton()}
           </div>
         </div>

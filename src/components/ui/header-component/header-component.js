@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import classes from './header-component.scss';
+import classes from './header-component.css';
 import ScrollMonitor from 'scrollmonitor';
 
 export class HeaderComponent extends React.Component {

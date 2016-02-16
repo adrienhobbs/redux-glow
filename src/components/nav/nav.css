@@ -1,0 +1,133 @@
+@use lost;
+.nav-height {
+  height: var(--sizing-nav-height);
+  min-height: 50px;
+  max-height: 99.8px;
+}
+
+/* LEFT AND RIGHT FRAME ELEMENTS */
+
+.frame {
+  width: var(--sizing-frame-width); 
+  max-width: 75px;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  min-width: var(--sizing-min-frame-width);
+}
+
+.frame_right {
+  composes: frame;
+  right: 0;
+}
+
+.frame_left {
+  composes: frame;
+  left: 0;
+}
+
+/* LEFT COLUMN OF NAV */
+
+.nav_left {
+  lost-column: 6/12 0 0;
+
+  &_logo {
+    cursor: pointer;
+    margin-left: var(--sizing-frame-width);
+    width: 6.5104vw;
+    height: 6.5104vw;
+    min-height: 60px;
+    min-width: 60px;
+    max-height: 125px;
+    max-width: 125px;
+    position: relative;
+
+    svg {
+      top: center;
+      left: center;
+    }
+  }
+
+  @media(--lg) {
+    lost-column: 7/12 0 0;
+  }
+}
+
+/* RIGHT COLUMN OF NAV */
+
+.nav_right {
+  lost-flex-container: row;
+  lost-column: 6/12 0 0;
+
+  @media (--lg) {
+    lost-column: 5/12 0 0;
+  }
+
+  @media (--md-down) {
+    display: none;
+  }
+}
+
+.nav {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  &_innerDesktop {
+    composes: nav-height;
+    width: 100%;
+    padding-left: var(--sizing-frame-width);
+    padding-right: var(--sizing-frame-width);
+    lost-flex-container: row;
+  }
+}
+
+.twitter_link {
+  compose: nav-height;
+  lost-column: 1/6 0 0; 
+  lost-align: middle-center;
+}
+
+.mobile {
+  lost-flex-container: column;
+  lost-align: middle-center;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  background-color: white;
+  visibility: hidden;
+  opacity: 0;
+
+  &_inner {
+    height: 75vh;
+    width: 100%;
+  }
+}
+
+.hamburger {
+  composes: nav-height;
+  cursor: pointer;
+  top: 0;
+  display: inline-block;
+  position: absolute;
+  width: 28px;
+  right: var(--sizing-frame-width);
+  
+  @media(--lg) {
+    display: none;
+  }
+
+  svg {
+    top: center;
+    right: 0;
+  }
+}
+

@@ -1,0 +1,39 @@
+@use lost;
+
+.about_content_module {
+  lost-flex-container: row;
+  @media(--lg-down) {
+    lost-flex-container: column;
+  }
+  p {
+    margin-top: 10px;
+  }
+  p:first-of-type {
+    margin-top: 0px;
+  }
+}
+
+.about {
+  &_left {
+    lost-column: 2.7/10 0 0;
+    height: auto;
+  @media(--lg-down) {
+      display: none;
+      lost-row: 0 column;
+    }
+  }
+
+  &_center {
+    lost-column: 4.6/10 0 0;
+    @include clearfix;
+    @media(--lg-down) {
+      lost-row: 1 0 auto;
+      lost-center: em(820);
+      height: auto;
+      order: 2;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+}
+

@@ -10,7 +10,6 @@ import resizeUtils from '../../utilities/resize';
 import Nav from 'components/nav';
 import PageTransition from 'components/page-transition';
 import Footer from 'components/footer';
-import '../../../evil-icons.svg';
 
 const mapStateToProps = (state) => ({
   pageTransition: state.pageTransition,

@@ -11,6 +11,7 @@ import { actions as transitionActions } from '../../redux/modules/page-transitio
 import {ToggleVis} from 'constants/animations/nav-bar';
 import isNull from 'lodash/isNull';
 import { VelocityComponent, velocityHelpers } from 'velocity-react';
+import styles from './nav.css';
 
 const mapStateToProps = (state) => ({
   counter: state.counter,
@@ -73,7 +74,7 @@ export class Nav extends React.Component {
   toggleNavVisibility () {
     const AnimVals = ToggleVis(this.props.nav);
     AnimVals.TL.addLabel('start', '0');
-    AnimVals.TL.add(TweenLite.to(this.refs.nav, AnimVals.dur, {scaleY: AnimVals.scale, transformOrigin: 'top center', transformPerspective: AnimVals.transformPerspective, ease: AnimVals.ease}), 'start');
+    AnimVals.TL.add(TweenLite.to(this.refs.nav, AnimVals.dur, {y: AnimVals.y, transformOrigin: 'top center', transformPerspective: AnimVals.transformPerspective, ease: AnimVals.ease}), 'start');
     AnimVals.TL.add(TweenLite.to(this.refs.frameLeft, AnimVals.dur, {scaleX: AnimVals.scale, transformOrigin: 'left center', transformPerspective: AnimVals.transformPerspective, ease: AnimVals.ease}), 'start');
     AnimVals.TL.add(TweenLite.to(this.refs.frameRight, AnimVals.dur, {scaleX: AnimVals.scale, transformOrigin: 'right center', transformPerspective: AnimVals.transformPerspective, ease: AnimVals.ease}), 'start');
     AnimVals.TL.play();
@@ -279,18 +280,18 @@ export class Nav extends React.Component {
     };
     return (
       <div className='nav-container'>
-        <nav ref='mobileNav' className='mobile'>
-          <div className='inner'>
+        <nav ref='mobileNav' className={styles.mobile}>
+          <div className={styles.mobile_inner}>
             {this.getMobileLinks()}
           </div>
         </nav>
-        <nav ref='nav' className='nav'>
-          <div className='nav-inner desktop'>
-            <div className='nav-left'>
-              <div style={{backgroundColor: Colors.radRed}} ref='logoBg' onClick={this.logoClick.bind(this)} className='logo' >
+        <nav ref='nav' className={styles.nav}>
+          <div className={styles.nav_innerDesktop}>
+            <div className={styles.nav_left}>
+              <div style={{backgroundColor: Colors.radRed}} ref='logoBg' onClick={this.logoClick.bind(this)} className={styles.nav_left_logo} >
                 <GlowLogo width='90%' />
               </div>
-              <div onClick={this.toggleMobileMenu.bind(this)} className='hamburger'>
+              <div onClick={this.toggleMobileMenu.bind(this)} className={styles.hamburger}>
                 <svg ref='ham' fill='#F12D5C' width='28px' height='20px' viewBox='0 0 28 20' version='1.1' style={{overflow: 'visible'}}>
                   <g id='Page-1' strokeWidth='1' fill-rule='evenodd'>
                     <g id='hamburger' >
@@ -308,14 +309,14 @@ export class Nav extends React.Component {
                 </svg>
               </div>
             </div>
-            <div className='nav-right'>
+            <div className={styles.nav_right}>
               {this.getNavLinks()}
-              <a className='twitter-link' target='_blank' href='http://www.twitter.com/glow'><Twitter ref='twitterSVG' color={this.getLinkColor()}/></a>
+              <a className={styles.twitter_link} target='_blank' href='http://www.twitter.com/glow'><Twitter ref='twitterSVG' color={this.getLinkColor()}/></a>
             </div>
           </div>
         </nav>
-        <div ref='frameLeft' className='frame-left' id='frame-left'></div>
-        <div ref='frameRight' className='frame-right' id='frame-right'></div>
+        <div ref='frameLeft' className={styles.frame_left} id='frame-left'></div>
+        <div ref='frameRight' className={styles.frame_right} id='frame-right'></div>
       </div>
     );
   }

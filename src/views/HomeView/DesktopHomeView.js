@@ -61,7 +61,7 @@ export class DesktopHomeView extends PageLayout {
   }
   componentWillUnmount () {
     TweenLite.set(document.documentElement, {overflowY: 'initial'});
-    TweenLite.set(document.body, {overflowY: 'visible'});
+    TweenLite.set(document.body, {clearProps: 'all'});
     ReactDOM.unmountComponentAtNode(document.getElementById('frame-left'));
     ReactDOM.unmountComponentAtNode(document.getElementById('frame-right'));
     this.cancelTouchMoveListener();
@@ -82,7 +82,10 @@ export class DesktopHomeView extends PageLayout {
     return ('onkeydown' in document);
   }
   listenForTouchMove (e) {
-    e.preventDefault();
+    if (!this.state.singleView) {
+      console.log('canceling touch');
+      e.preventDefault();
+    }
   }
   preventTouchMove () {
     du.bind(document, 'touchmove', this.listenForTouchMove);

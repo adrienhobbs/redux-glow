@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import './symbol/svg/sprite.symbol.svg';
+import './glow-icons.svg';
 export class SpriteLogo extends React.Component {
 
   static propTypes = {

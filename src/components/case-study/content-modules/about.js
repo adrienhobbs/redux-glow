@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Sidebar from 'components/ui/sidebar';
+import styles from './about-content-module.css';
 
 export class AboutSection extends React.Component {
 
@@ -39,10 +40,10 @@ export class AboutSection extends React.Component {
     return (
       <article>
         {this.createHeadlineEl('about')}
-        <div className='copy' id='about'>
-          <div className='about-left'></div>
-          <div className='about-center'>
-            <div className='copy-inner' lang='en' style={this.getCopyStyle()} dangerouslySetInnerHTML={this.createParagraphEl()} />
+        <div className={styles.about_content_module} id='about'>
+          <div className={styles.about_left}></div>
+          <div className={styles.about_center}>
+            <div className={styles.about_copy_inner} lang='en' style={this.getCopyStyle()} dangerouslySetInnerHTML={this.createParagraphEl()} />
           </div>
           <Sidebar data={this.props.data}/>
         </div>

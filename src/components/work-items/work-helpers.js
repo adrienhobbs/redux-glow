@@ -6,6 +6,7 @@ import snakeCase from 'lodash/snakeCase';
 import keys from 'lodash/keys';
 
 export class WorkHelpers extends React.Component {
+
   static propTypes = {
     slider: PropTypes.object,
     counter: PropTypes.object,

@@ -1,6 +1,6 @@
 import React from 'react';
 import './sidebar.scss';
-import ShareButton from 'components/ui/share-button';
+// import ShareButton from 'components/ui/share-button';
 import Logo from 'components/ui/logo-sprites/logo-sprite';
 import isEmpty from 'lodash/isEmpty';
 
@@ -91,12 +91,13 @@ const Sidebar = React.createClass({
         </div>
         {this.getServiceContent()}
         {this.getRecognitionContent()}
-        <div className={this.getSidebarBoxClass()} id='sidebar-share'>
-          <ShareButton copyColor={this.getShareButtonCopyColor()} strokeColor={this.getShareButtonStroke()} color={this.props.data.get('sidebarLogoColor')} />
-        </div>
       </div>
     );
   }
 });
 
 export default Sidebar;
+
+        // <div className={this.getSidebarBoxClass()} id='sidebar-share'>
+        //   <ShareButton copyColor={this.getShareButtonCopyColor()} strokeColor={this.getShareButtonStroke()} color={this.props.data.get('sidebarLogoColor')} />
+        // </div>

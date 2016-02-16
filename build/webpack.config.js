@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 // import cssnano from 'cssnano';
+import autoprefixer from 'autoprefixer';
 import use from 'postcss-use';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
@@ -162,7 +163,6 @@ webpackConfig.module.loaders.push({
 webpackConfig.module.loaders.push({
   test: /\.scss$/,
   exclude: /src/,
-
   loaders: [
     'style',
     'css?sourceMap',
@@ -191,7 +191,10 @@ webpackConfig.postcss = [
   require('postcss-custom-properties')({variables: map.vars}),
   require('postcss-custom-media')({extensions: map.media}),
   require('postcss-nested'),
-  use({modules: ['lost']}
+  require('postcss-center'),
+  require('postcss-svg'),
+  autoprefixer({browsers: ['last 2 versions']}),
+  use({modules: ['lost', 'postcss-autoreset', 'postcss-custom-properties']}
 )];
 
 // File loaders

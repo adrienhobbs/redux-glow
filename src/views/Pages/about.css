@@ -1,0 +1,53 @@
+@use lost;
+
+.about_all_clients {
+  .headline-wrap {
+    margin-bottom: 3em;
+  }
+  .client-logos-row {
+    margin-bottom: 3em;
+  }
+}
+
+#who-we-are-title {
+  margin-bottom: 1em;
+}
+
+.quote-mark {
+  font-size: 150px;
+  line-height: 0;
+  font-family: var(--primary-font-family);
+  font-weight: normal;
+  color: var(--color-tin);
+}
+
+.about_copy {
+  lost-column: 1/2;
+  @media (--md-down) {
+    lost-column: 1;
+    margin-bottom: 15px;
+  }
+}
+
+.about_employee_card {
+  @media (--sm-down) {
+    lost-column: 1 0 0;
+    margin-bottom: 15px;
+  }
+
+  @media (--sm) {
+    lost-column: 1/2 2 20px;
+    margin-bottom: 15px;
+  }
+
+  @media (--md) {
+    lost-column: 1/2 2 30px;
+    margin-bottom: 20px;
+  }
+  
+  @media(--lg) {
+    lost-column: 1/4 4 40px;
+    margin-bottom: 30px;
+  }
+}
+

@@ -1,0 +1,140 @@
+:global {
+  #featured-work {
+    margin-top: 60px;
+  }
+  .project {
+    &.mobile {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  }
+  .mobile-project-wrap {
+    width: var(--sizing-outer-width);
+    margin: auto;
+  }
+  .view-button {
+    color: white;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    min-height: 83px;
+    font-size: 1em;
+    font-family: var(--primary-font-family);
+
+    div {
+      padding: 0.75em 1.5em 0.75em 1.5em;
+      line-height: 1;
+      width: 186px;
+      height:40px;
+      border-radius: 3px;
+      left: center;
+      top: center;
+    }
+  }
+}
+
+.mobile_home_width {
+  width: var(--sizing-outer-width);
+  margin: auto;
+}
+.mobile_project_wrap, 
+.home_mobile_image,
+.about_mobile,
+.clients_mobile_wrap {
+  composes: mobile_home_width;
+}
+
+.home_mobile {
+  background: white;
+  position: relative;
+  text-align: center;
+  &_image {
+    min-height: 47vh;
+    background-position: center center;
+    background-image: url('https://s3.amazonaws.com/weareglow-assets/assets/mobile-home.jpg');
+    background-size: cover;
+  }
+
+}
+
+.inner_wrap {
+  margin-top:2vh;
+  height: 41vh;
+  width: 100%;
+  position: relative;
+
+  .featured-headline {
+    font-size: 15vw;
+  }
+
+  p {
+    color: var(--color-tin);
+  }
+
+}
+
+.scroll_for_more {
+  margin-top:2vh;
+  text-align: center;
+  font-family: var(--primary-font-family);
+  font-size: 1.5em;
+  width: 100%;
+  color: var(--color-radical-red);
+  position: absolute;
+  font-weight: 600;
+}
+
+.clients_mobile {
+  background: var(--color-light-gray);
+  &_wrap {
+    padding-top: 40px;
+    composes: mobile_home_width;
+  }
+}
+
+.services_button {
+  min-height: 60px;
+  a {
+    color: white;
+  }
+  button {
+    background: var(--color-radical-red);
+    left: center;
+  }
+}
+
+.about_glow {
+  composes: mobile_home_width;
+  margin-top: 40px;
+  .header-image {
+    margin-bottom: 20px;
+  }
+  .featured-headline {
+    text-align: center;
+  }
+
+  .contact-bucket {
+    margin-top: 15px;
+  }
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: rem(15);
+    font-weight: 300;
+    font-family: $gt;
+    line-height: 1.5;
+    color: $dove-gray;
+    text-align: center;
+  }
+
+}
+
+
+
+.clients.mobile {
+  .headline-wrap {
+    margin-bottom: 1em;
+  }
+}

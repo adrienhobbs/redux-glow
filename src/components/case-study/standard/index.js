@@ -52,9 +52,9 @@ const ProjectIntro = React.createClass({
 
   hideOrShow (prevProps, prevState) {
     if (this.props.isHidden && !prevProps.isHidden) {
-      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.4, {delay:this.props.id / 15, opacity: 0, autoAlpha: 1, ease: Expo.easeInOut});
+      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.4, {delay:this.props.id / 1500,  autoAlpha: 0, ease: Expo.easeInOut});
     } else if (!this.props.isHidden && prevProps.isHidden) {
-      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.6, {delay:this.props.id / 20, autoAlpha:1, ease: Expo.easeInOut});
+      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.6, {delay:this.props.id / 2000, autoAlpha:1, ease: Expo.easeInOut});
     }
   },
 
@@ -176,7 +176,6 @@ const ProjectIntro = React.createClass({
     du.removeClass(document.documentElement, 'locked');
     return this.studyTL.reverse();
   },
-
   getTags () {
     return map(this.props.data.get('services'), function (service, i) {
       return <span key={i}>{service}</span>;

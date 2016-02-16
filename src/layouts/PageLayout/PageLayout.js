@@ -8,7 +8,6 @@ import { actions as transitionActions } from '../../redux/modules/page-transitio
 import isNull from 'lodash/isNull';
 import du from 'domutil';
 import Helpers from '../../utilities/helpers';
-import Footer from 'components/footer';
 import classnames from 'classnames';
 
 export class PageLayout extends React.Component {
@@ -19,21 +18,25 @@ export class PageLayout extends React.Component {
     location: PropTypes.object,
     viewport: PropTypes.object
   };
+
   getClassnames (cn) {
     return classnames(cn);
   }
+
   constructor (props) {
     super(props);
     this.actions = bindActionCreators(Object.assign({}, transitionActions, counterActions, navActions, workActions, viewportActions), props.dispatch);
-    this.Footer = Footer;
   }
+
   static contextTypes = {
     router: PropTypes.object,
     location: PropTypes.object
   };
+
   toggleNavState (navState) {
     this.actions.changeNavState(navState);
   }
+
   animatePageContentIn () {
     if (!(isNull(this.props.location.state))) {
       if (this.props.location.state.animateIn) {
@@ -42,9 +45,7 @@ export class PageLayout extends React.Component {
     }
     Helpers.dom.resetScroll();
   }
-  getFooter () {
-    return <Footer />;
-  }
+
   checkBodyVisibility () {
     if (du.hasClass(document.body, 'isHidden')) {
       TweenLite.to(document.body, 0.8, {autoAlpha: 1, className: '-=isHidden', ease: Circ.easeInOut});

@@ -50,7 +50,7 @@ export class SouthernKitchen extends BaseTemplate {
               </div>
             </div>
             <div className='copy-inner'>
-              <p style={copyStyle}>I think you know who Tuco Salamanca was. I think your car was there because you were there. Tuco had a bullet in him when I got there and I think you know something about that, too. Sky, the, um... I know it's none of my business, but uh... keeping him away from the kids? Whoa, whoa, no heavy lifting. I got it. jesus, what you got in there - cinder blocks? If I have to. I think you know who Tuco Salamanca was. i think your car was there</p>
+              <p style={copyStyle}>GLOW’s strategy proved successful, having exceeded our financial goal of $250k.  The team continues to provide updates on Kickstarter and engage with backers.  Since then, GLOW has taken control of all social efforts for Carla, driving numerous efforts yielding very positive results. </p>
             </div>
           </article>
           <div className='full-width-bg' style={{backgroundImage: 'url(' + this.props.data.get('fullScreenBgImg') + ')'}}></div>
@@ -59,11 +59,10 @@ export class SouthernKitchen extends BaseTemplate {
             <div className='copy'>
               <div className='copy-inner'>
               <div className='video-looping'>
-                <video loop autoPlay src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/social-01.mp4'></video>
+                <video className='video-looping-el' loop autoPlay src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/social-01.mp4'></video>
               </div>
                 <p style={copyStyle}>In just 3.5 months, we increased page likes by 20.73 % - twitter followers by 8.08 % and Instagram follows by 34.48%.</p>
                 <p style={copyStyle}>After effectively completing this social overhaul, we then launched into our Kickstarter campaign.  GLOW's video team produced, scripted, directed, shot and edited a dynamic series of videos for the Kickstarter campaign. The main video was a direct plea to Carla's fans with Carla front and center. The follow up videos included a how-to video on cooking the perfect Hot Chicken, followed by the story of Carla's cooking inspiration, and finally Carla in the streets of New York City talking Hot Chicken as she mixes and mingles with residents of the big city.</p>
-                <p style={copyStyle}>GLOW’s strategy proved successful, having exceeded our financial goal of $250k.  The team continues to provide updates on Kickstarter and engage with backers.  Since then, GLOW has taken control of all social efforts for Carla, driving numerous efforts yielding very positive results. </p>
               </div>
               <div className='image-large'>
                 <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/social-02.gif' alt='' />
