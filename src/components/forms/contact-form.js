@@ -21,7 +21,7 @@ const ContactForm = React.createClass({
   },
   render () {
     return (
-      <div className='contact-form'>
+      <div className={styles.contact_form_outer}>
         <div className={styles.form_inner} ref='form'>
           <Formsy.Form
             ref='contactForm'

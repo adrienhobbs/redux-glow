@@ -46,33 +46,6 @@
         display: none;
       }
     }
-
-    // .featured-headline, .hiring-title {
-      //   @include media(max-height 900px) {
-        //     margin-bottom: rem(10) !important;
-      //   }
-      //   @include media(max-height 550px) {
-        //     margin-bottom: rem(5) !important;
-        //     font-size: 2rem;
-      //   }
-    // }
-
-    // .hiring-title {
-      //   @include media(max-height 900px) {
-        //     margin-bottom: rem(20);
-      //   }
-      //   h2.featured-headline {
-        //     @include media(max-height 900px) {
-          //       font-size: 3rem;
-        //     }
-        //     @include media(max-height 550px) {
-          //       font-size: 2rem;
-        //     }
-        //     @include media($xsmall-small-screen) {
-          //       font-size: 2rem;
-        //     }
-      //   }
-    // }
   }
   .hiring {
     margin-top: em(40);

@@ -14,11 +14,11 @@ export class HowIDidIt extends BaseTemplate {
 
   getVideoComponents (video, i) {
     return (
-      <article key={i}>
+      <article key={i} style={{marginTop: 50}}>
         {this.createSubtitleEl(video.title)}
         <Video posterImg={video.posterImg} videoSrc={video.videoSrc}/>
         <div className='copy'>
-          <div className='copy-inner'>
+          <div className='copy-inner' style={{marginTop: -50}}>
             <p style={this.getCopyStyle()}>{video.description}</p>
           </div>
         </div>

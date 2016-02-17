@@ -10,6 +10,7 @@
 .service_bucket {
   position: relative;
 
+  margin-bottom: 5%;
   @media(--sm-down) {
     lost-center: 500px;
     lost-column: 1;

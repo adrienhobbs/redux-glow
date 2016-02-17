@@ -3,7 +3,7 @@ import styles from './footer.css';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id='footer'>
       <article className={styles.desktop_footer}>
         <section className={styles.footer_section_left}>
           <ul className={styles.mobile_list}>

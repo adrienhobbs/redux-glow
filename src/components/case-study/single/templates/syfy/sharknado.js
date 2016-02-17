@@ -48,7 +48,7 @@ export class Sharknado extends BaseTemplate {
           <article className='results' id='results'>
             <div className='results-bg' style={{backgroundColor: this.props.data.get('results').bgColor}}></div>
             <div className='results-outer'>
-              <h1 style={this.getHeadlineStyle()} className='page-title'>results</h1>
+              <h1 style={this.getHeadlineStyle()} className='study_headline section_headline'>results</h1>
               <div className='results-inner'>
                 <div className='stat-boxes'>
                   <div className='stat-device-left'>
@@ -63,7 +63,7 @@ export class Sharknado extends BaseTemplate {
                     <div className='stat-rule'></div>
                     <div className='stat-box-device'>
                       <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                        6 million
+                        6m
                       </div>
                       <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
                         video views
@@ -85,7 +85,7 @@ export class Sharknado extends BaseTemplate {
                     <div className='stat-rule'></div>
                     <div className='stat-box-device'>
                       <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                        2 billion
+                        2b
                       </div>
                       <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
                         Twitter impressions
@@ -103,7 +103,7 @@ export class Sharknado extends BaseTemplate {
                 <p style={copyStyle}>We knew we had a record to beat and that’s just what we did. We wanted to ensure that Americans had no excuse to not be talking about the third ‘Nado on social on day of premiere. To make Sharknado sized waves on social, the team developed and executed a strategy that engaged fans and influencers, created best in-class creative, and dominated the social conversation on July 22. </p>
               </div>
             </div>
-            <div className='img-single'>
+            <div className='img-single inner_section'>
               <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-01.png' alt='' />
             </div>
           </article>
@@ -114,11 +114,10 @@ export class Sharknado extends BaseTemplate {
                 <p style={copyStyle}>For this 3rd installment of the franchise, we were armed and ready to slay a "night of" event that led to 2 Billion Twitter impressions. Our War Room consisted of 8 community managers tasked with pushing out hilarious GIFs and statics of the movie, responding to fans while tracking hashtags, @mentions, keywords, influencers, Facebook mentions, cast, and brand sponsors. We also deployed 3 social managers handling trend alerts and featured on-air tweets along with art directors and designers churning out social content to feed the social frenzy.</p>
               </div>
             </div>
-            <div className='img-single'>
+            <div className='img-single inner_section'>
               <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-02.jpg' alt='' />
             </div>
           </article>
-
         </div>
       </div>
     );

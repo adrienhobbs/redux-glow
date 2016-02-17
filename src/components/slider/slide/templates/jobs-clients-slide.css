@@ -1,0 +1,72 @@
+@use lost;
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-alto);
+  overflow: hidden;
+}
+
+.subtitle {
+  composes: headline_subtitle from 'styles/mixins.css';
+  z-index: 3;
+  position: relative;
+}
+
+.inner {
+  left: center;
+  top: center;
+  width: 80%;
+}
+
+.hiring {
+  text-align: center;
+}
+.hiring_title {
+  position: relative;
+}
+
+.rule {
+  max-width: 91%;
+  height: 2px;
+  background: white;
+  width: 100%;
+  z-index: 0;
+  left: center;
+  top: center;
+  @media (--sm-down) {
+    display: none;
+  }
+}
+
+.hiring_copy {
+  lost-center: 91%;
+  p {
+    font-size: 1.5rem;
+    color: var(--color-slate-gray);
+    @media(--sm-down) {
+      font-size: 1rem;
+    }
+  }
+}
+.view_openings {
+  margin-top: 1%;
+  text-align: center;
+  width: 100%;
+  a {
+    font-family: var(--primary-font-family);
+    font-size: 1.5em;
+  }
+}
+
+.headline {
+  composes: headline from 'styles/mixins.css';
+  z-index: 1;
+  position: relative;
+  display: inline;
+  background-color: var(--color-alto);
+  padding-left: 3%;
+  padding-right: 3%;
+}
+

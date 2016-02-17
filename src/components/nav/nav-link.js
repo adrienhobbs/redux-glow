@@ -1,5 +1,5 @@
 import React from 'react';
-import './nav-link.scss';
+
 import styles from './nav-link.css';
 
 const NavLink = React.createClass({

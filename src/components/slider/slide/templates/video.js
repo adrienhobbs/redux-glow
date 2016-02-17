@@ -1,5 +1,5 @@
 import React from 'react';
-import './video.scss';
+import styles from './video-slide.css';
 
 const Video = React.createClass({
   propTypes: {
@@ -16,13 +16,13 @@ const Video = React.createClass({
 
   componentDidMount () {
     this.refs.video.play();
-    this.paramsIn = {rotationX: 0, transformOrigin: '50% 0%', transformPerspective:400, ease: Expo.easeInOut};
-    this.inDur = 0.5;
-    this.outDur = 0.5;
-    this.alphaInDur = 0.25;
-    this.alphaInDur = 0.25;
-    this.alphaOutDur = 0.2;
-    this.animateHeadline();
+    // this.paramsIn = {rotationX: 0, transformOrigin: '50% 0%', transformPerspective:400, ease: Expo.easeInOut};
+    // this.inDur = 0.5;
+    // this.outDur = 0.5;
+    // this.alphaInDur = 0.25;
+    // this.alphaInDur = 0.25;
+    // this.alphaOutDur = 0.2;
+    // this.animateHeadline();
     //
   },
 
@@ -33,7 +33,6 @@ const Video = React.createClass({
     TL.add(TweenLite.to(this.refs.hdlOne, this.alphaInDur, {autoAlpha: 1}), 'start+=0.25');
     return TL;
   },
-
   headlineOneOutTl () {
     const TL = new TimelineLite();
     TL.addLabel('start');
@@ -41,7 +40,6 @@ const Video = React.createClass({
     TL.add(TweenLite.to(this.refs.hdlOne, this.alphaOutDur, {autoAlpha: 0}), 'start+=0.1');
     return TL;
   },
-
   headlineTwoInTl () {
     const TL = new TimelineLite();
     TL.addLabel('start');
@@ -49,7 +47,6 @@ const Video = React.createClass({
     TL.add(TweenLite.to(this.refs.hdlTwo, this.alphaInDur, {autoAlpha: 1}), 'start+=0.25');
     return TL;
   },
-
   headlineTwoOutTl () {
     const TL = new TimelineLite();
     TL.addLabel('start');
@@ -57,7 +54,6 @@ const Video = React.createClass({
     TL.add(TweenLite.to(this.refs.hdlTwo, this.alphaOutDur, {autoAlpha: 0}), 'start+=0.1');
     return TL;
   },
-
   headlineThreeInTl () {
     const TL = new TimelineLite();
     TL.addLabel('start');
@@ -72,7 +68,6 @@ const Video = React.createClass({
     TL.add(TweenLite.to(this.refs.hdlThree, this.alphaOutDur, {autoAlpha: 0}), 'start+=0.1');
     return TL;
   },
-
   headlineFourInTl () {
     const TL = new TimelineLite();
     TL.addLabel('start');
@@ -121,36 +116,49 @@ const Video = React.createClass({
   },
   getVidTemplate () {
     return (
-      <video preload webkit-playsinline poster='https://s3.amazonaws.com/weareglow-assets/assets/video/home-poster.jpg' onPlay={this.onLoad} ref='video' className='home-video' muted loop src={this.props.data.get('video')}>
+      <video
+        preload
+        webkit-playsinline
+        poster='https://s3.amazonaws.com/weareglow-assets/assets/video/home-poster.jpg'
+        onPlay={this.onLoad}
+        ref='video'
+        className={styles.home_video}
+        muted
+        loop
+        src={this.props.data.get('video')}>
         <p>sorry cant play</p>
       </video>
     );
   },
+
   restartTL () {
     this.tl.restart();
   },
+
   render () {
     return (
-      <div ref='videoContainer' className='wrapper video-wrapper video-placeholder' style={{height: '100%', width: '100%'}}>
-        <div className='hm-video-overlay'></div>
+      <div ref='videoContainer' className={styles.video_placeholder}>
+        <div className={styles.overlay}></div>
         {this.getVidTemplate()}
-        <div className='wrap' style={{width: '90%'}}>
-          <div className='restart' onClick={this.restartTL} ref='restart' style={{position: 'relative', top: -50, width: 200, background: 'black', margin: 'auto'}}>restart</div>
-          <h1 ref='hdl' className='featured-headline'>
-            <span>we are </span>
-            <span ref='words' className='words-wrapper'>
-              <b ref='hdlOne'>social</b>
-              <b ref='hdlTwo'>digital</b>
-              <b ref='hdlThree'>cool</b>
-              <b ref='hdlFour'>glow</b>
-            </span>
-          </h1>
-          <p ref='p'>We activate fans, build and nurture communities and create interactive experiences that engage and convert.</p>
-        </div>
-        <p ref='scroll' className='scroll-down'>scroll <br/> <span className='arrow'>&#8595;</span></p>
+
       </div>
     );
   }
 });
 
 export default Video;
+
+          // <div className='restart' onClick={this.restartTL} ref='restart' style={{position: 'relative', top: -50, width: 200, background: 'black', margin: 'auto'}}>restart</div>
+            // <span ref='words' className='words-wrapper'>
+            //   <b ref='hdlOne'>social</b>
+            //   <b ref='hdlTwo'>digital</b>
+            //   <b ref='hdlThree'>cool</b>
+            //   <b ref='hdlFour'>glow</b>
+            // </span>
+// //        <div className={styles.copy_wrap}>
+//           <h1 ref='hdl' className={styles.featured_headline}>
+//             <span>we are glow</span>
+//           </h1>
+//           <p ref='p'>We activate fans, build and nurture communities and create interactive experiences that engage and convert.</p>
+//         </div>
+//         <p ref='scroll' className={styles.scroll_down}>scroll <br/> <span className='arrow'>&#8595;</span></p>

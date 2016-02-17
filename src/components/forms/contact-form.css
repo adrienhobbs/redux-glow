@@ -26,17 +26,21 @@
 }
 
 .message {
-  position: absolute;
-  top: 0;
+  text-align: center;
+  font-family: var(--primary-font-family);
+  color: var(--color-slate-gray);
+  width: 100%;
   visibility: hidden;
   opacity: 0;
-  text-align: center;
-  width: 100%;
-  button {
-    color: white;
-  }
+  position: relative;
+  top: -100px;
+  /* button { */
+  /*   color: white; */
+  /* } */
 }
-
+.contact_form_outer {
+  position: relative;
+}
 .contact_form {
   margin-bottom: 10px;
   position: relative;
@@ -83,6 +87,8 @@
 
   button:disabled {
     opacity: 1 !important;
+    background-color: transparent;
+    background: transparent;
   }
 
 }
@@ -90,15 +96,13 @@
 .field {
   lost-column: 1/2;
   @media (--sm-down) {
-    lost-column: 1;
+    lost-column: 1 0 0;
     margin-top: var(--connect-row-margin);
   }
 }
+
 .input_fields {
-
   lost-flex-container: row;
-
-
 }
 
 .connect_headline {
@@ -109,8 +113,14 @@
 }
 
 .message_button_ctr {
+
   button {
-    background-color: var(--color-radical-red) !important;
+    background-color: var(--color-radical-red);
+    text-align: center;
+    font-family: var(--primary-font-family);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width:100%;
   }
 }
 

@@ -20,15 +20,15 @@ export class VideoComponent extends React.Component {
 
   componentDidMount () {
     if (this.props.autoplay) {
-      this.onVideoClick();
+      this.playVideo();
     }
   }
 
   constructor (props) {
     super(props);
     this.state = {
-      isStopped: true,
-      isPlaying: false
+      isStopped: (!this.props.autoplay),
+      isPlaying: (this.props.autoplay)
     };
   };
 
@@ -63,7 +63,7 @@ export class VideoComponent extends React.Component {
     const TL = new TimelineLite();
     TL.addLabel('start');
     // TL.set(this.refs.videoBlock, {width: width, maxWidth: '100%'}, 'start');
-    TL.to(this.refs.videoBlock, 0.5, {width: '100%', ease: Expo.easeInOut}, 'start+=0.5');
+    // TL.to(this.refs.videoBlock, 0.5, {width: '100%', ease: Expo.easeInOut}, 'start+=0.5');
 
     if (this.props.showBtn) {
       TL.to(this.refs.playBtn, 0.5, {autoAlpha: 0, ease: Expo.easeInOut}, 'start+=0.5');
@@ -137,10 +137,13 @@ export class VideoComponent extends React.Component {
   onEnd () {
     (this.props.loop) ? this.resetVideo() : this.restartVideo();
   }
+  getStatusClass () {
+    return (this.props.autoplay) ? 'isPlaying' : 'isStopped';
+  }
   getDesktopVideo () {
     return (
-      <div className={styles.video_block} onClick={this.onVideoClick.bind(this)} ref='videoBlock' style={{backgroundColor: this.props.bgColor || '000'}}>
-        <div className={classnames(styles.video_block_inner, 'isStopped')}>
+      <div className={classnames(styles.video_block, this.getStatusClass())} onClick={this.onVideoClick.bind(this)} ref='videoBlock' style={{backgroundColor: this.props.bgColor || '000'}}>
+        <div className={styles.video_block_inner}>
           <video preload onEnded={this.onEnd.bind(this)} webkit-playsinline ref='video' src={this.props.videoSrc} poster={this.props.posterImg}></video>
           {this.getBtn()}
         </div>

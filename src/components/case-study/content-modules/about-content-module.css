@@ -2,6 +2,7 @@
 
 .about_content_module {
   lost-flex-container: row;
+  margin-bottom: 110px;
   @media(--lg-down) {
     lost-flex-container: column;
   }
@@ -25,7 +26,6 @@
 
   &_center {
     lost-column: 4.6/10 0 0;
-    @include clearfix;
     @media(--lg-down) {
       lost-row: 1 0 auto;
       lost-center: em(820);
@@ -37,3 +37,6 @@
   }
 }
 
+.section_headline {
+  composes: study_headline from 'styles/mixins.css';
+}

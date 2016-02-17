@@ -21,7 +21,7 @@ export class WinterCalendar extends BaseTemplate {
           <article className='results' id='results'>
             <div className='results-bg' style={{backgroundColor: this.props.data.get('results').bgColor}}></div>
             <div className='results-outer'>
-              <h1 style={this.getHeadlineStyle()} className='page-title'>results</h1>
+              <h1 style={this.getHeadlineStyle()} className='study_headline section_headline'>results</h1>
               <div className={classes.resultsInner}>
                 <div className='stat-boxes'>
                   <div className='stat-cn'>
@@ -58,7 +58,7 @@ export class WinterCalendar extends BaseTemplate {
           <div className={classes.cnImage}>
             <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/cn/winter-calendar/calendar.jpg' className='' alt='' />
           </div>
-          <div className='the-dancers cn-section'>
+          <div className='inner_section'>
             {this.createHeadlineEl('the dancers')}
           </div>
 
@@ -82,7 +82,7 @@ export class WinterCalendar extends BaseTemplate {
               <img className={classes.dancerImg} src='https://s3.amazonaws.com/weareglow-assets/case-studies/cn/winter-calendar/dancer-06.gif' alt='' />
             </div>
           </div>
-          <div className='ui-elements cn-section'>
+          <div className='ui-elements inner_section'>
             {this.createHeadlineEl('ui-elements')}
           </div>
           <div className={classes.cnImage}>

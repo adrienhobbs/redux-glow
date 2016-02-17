@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { EmployeeCardAnimation as CardAnim } from 'constants/animations/pages';
 import words from 'lodash/words';
+import styles from './employee-card.css';
 
 export class EmployeeCard extends React.Component {
 
@@ -49,14 +50,14 @@ export class EmployeeCard extends React.Component {
 
   render () {
     return (
-      <div className='employee-card' onMouseEnter={this.showEmployeeInfo.bind(this)} onMouseLeave={this.hideEmployeeInfo.bind(this)}>
-        <div className='employee-card-inner-container' >
-          <img ref='employeeImage' src={'https://s3.amazonaws.com/weareglow-assets/employee-photos/' + this.props.photoName + '.jpg'} alt='' style={{width: '100%'}}/>
-          <img className='img-roll' ref='employeeImageRoll' src={'https://s3.amazonaws.com/weareglow-assets/employee-photos/' + this.props.photoName + '_Roll.jpg'} alt='' style={{width: '100%'}}/>
-          <div className='employee-card-inner' ref='employeeInfo'>
-            <div className='employee-card-inner-wrap' ref='innerWrap'>
-              <div className='employee-name'>{this.getEmployeeName()}</div>
-              <div className='employee-position'>{this.props.position}</div>
+      <div className={styles.employee_card} onMouseEnter={this.showEmployeeInfo.bind(this)} onMouseLeave={this.hideEmployeeInfo.bind(this)}>
+        <div className={styles.employee_card_inner_container} >
+          <img className={styles.img_one} ref='employeeImage' src={'https://s3.amazonaws.com/weareglow-assets/employee-photos/' + this.props.photoName + '.jpg'} alt='' style={{width: '100%'}}/>
+          <img className={styles.img_roll} ref='employeeImageRoll' src={'https://s3.amazonaws.com/weareglow-assets/employee-photos/' + this.props.photoName + '_Roll.jpg'} alt='' style={{width: '100%'}}/>
+          <div className={styles.employee_card_inner} ref='employeeInfo'>
+            <div className={styles.employee_card_inner_wrap} ref='innerWrap'>
+              <div className={styles.employee_name}>{this.getEmployeeName()}</div>
+              <div className={styles.employee_position}>{this.props.position}</div>
             </div>
           </div>
         </div>

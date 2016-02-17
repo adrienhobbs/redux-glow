@@ -39,20 +39,19 @@
 .connect_info_box_inner {
   position: relative;
   margin-bottom: 10px;
+  margin-right: 30%;
   composes: bottom-rule;
 
 }
 .connect_map_inner_left {
-  @media (--sm) {
-    lost-column: 0 0 0;
+  @media (--md) {
+    lost-column: 1/2 0 0;
   }
-
   @media (--md-down) {
     lost-column: 1/4 0 0;
   }
-
-  @media (--md) {
-    lost-column: 1/2 0 0;
+  @media (--sm-down) {
+    lost-column: 0 0 0;
   }
 }
 
@@ -60,17 +59,18 @@
   position: relative;
   background-color: rgba(255,255,255,0.8);
   padding: 2%;
-  
+  @media (--md) {
+    lost-column: 1/2 0 0;
+  }
   @media (--md-down) {
     lost-column: 3/4 0 0;
   }
-
   @media (--sm-down) {
     lost-column: 1 0 0;
   }
-
-  @media (--md) {
-    lost-column: 1/2 0 0;
+  @media (--xl) {
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 }
 

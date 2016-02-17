@@ -5,6 +5,7 @@ import BackBar from 'components/ui/backbar';
 import snakeCase from 'lodash/snakeCase';
 import map from 'lodash/map';
 import HoverMixin from './hover-mixin';
+// import styles from './work-items.css';
 
 const ProjectIntro = React.createClass({
   mixins: [HoverMixin],
@@ -52,9 +53,9 @@ const ProjectIntro = React.createClass({
 
   hideOrShow (prevProps, prevState) {
     if (this.props.isHidden && !prevProps.isHidden) {
-      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.4, {delay:this.props.id / 1500,  autoAlpha: 0, ease: Expo.easeInOut});
+      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.4, {delay:this.props.id / 150,  autoAlpha: 0, ease: Expo.easeInOut});
     } else if (!this.props.isHidden && prevProps.isHidden) {
-      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.6, {delay:this.props.id / 2000, autoAlpha:1, ease: Expo.easeInOut});
+      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.6, {delay:this.props.id / 200, autoAlpha:1, ease: Expo.easeInOut});
     }
   },
 
@@ -62,6 +63,7 @@ const ProjectIntro = React.createClass({
     const TL = new TimelineLite();
     const rect = this.refs.projectIntro.getBoundingClientRect();
     const projHeight = this.refs.projectBox.getBoundingClientRect().height;
+    console.log(projHeight);
     const windowW = window.innerWidth;
     TL.set(this.refs.projectIntro, {
       width: rect.width,
@@ -130,7 +132,7 @@ const ProjectIntro = React.createClass({
     }
     this.props.hideOthers(this.props.id, true);
     TweenLite.set([this.refs.overlay, this.refs.projectInfo], {autoAlpha: 0});
-    TweenLite.set(this.refs.shape, {scaleY: 0});
+    TweenLite.to(this.refs.shape, 0.3, {scaleY: 0});
     this.hoverOut();
     this.studyTL = new TimelineLite({onComplete: () => this.setState({showBody: true})});
     // const startPoint = (this.isNew) ? 2 : this.props.id/10;

@@ -29,7 +29,7 @@ export class AboutSection extends React.Component {
   }
 
   createHeadlineEl (headline) {
-    return <h1 style={this.getHeadlineStyle()} className='page-title'> {headline} </h1>;
+    return <h1 style={this.getHeadlineStyle()} className={styles.section_headline}> {headline} </h1>;
   }
 
   createParagraphEl (paragraph) {
@@ -43,7 +43,7 @@ export class AboutSection extends React.Component {
         <div className={styles.about_content_module} id='about'>
           <div className={styles.about_left}></div>
           <div className={styles.about_center}>
-            <div className={styles.about_copy_inner} lang='en' style={this.getCopyStyle()} dangerouslySetInnerHTML={this.createParagraphEl()} />
+            <div className='copy-inner' lang='en' style={this.getCopyStyle()} dangerouslySetInnerHTML={this.createParagraphEl()} />
           </div>
           <Sidebar data={this.props.data}/>
         </div>

@@ -117,12 +117,14 @@ export class TwelveMonkeys extends BaseTemplate {
                 <p style={copyStyle}>Finally, GLOW designed and developed the digital media campaign for both desktop and mobile. The digital media campaign ran in tandem with the interactive and social experiences to serve the goal of wide-reaching tune in awareness for audiences outside of Syfy’s owned media channels. Eye-catching design and animation brought the 12 Monkeys key art to life in a visually eerie way. </p>
               </div>
             </div>
+            <div className='inner_section'>
               <div className='img-single'>
                 <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/media-01.png' alt='' />
               </div>
               <div className='img-single'>
                 <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/social-01.png' alt='' />
               </div>
+            </div>
           </article>
         </div>
       </div>

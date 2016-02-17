@@ -1,0 +1,77 @@
+.words-wrapper {
+  position: relative;
+  display: inline-block;
+  b {
+    position: absolute;
+    display: inline-block;
+    width: 283px;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    &:first-of-type {
+      position: relative;
+    }
+  }
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+}
+.featured_headline {
+  color: white;
+  font-size: 4.2em;
+  margin-bottom: 20px;
+}
+
+.copy_wrap {
+  text-align: center;
+  top: center;
+  left:center;
+  width: 90%;
+  max-width: 960px;
+
+  p {
+    font-family: var(--primary-font-family); 
+    color: white;
+    font-weight: bold;
+    font-size: 1.875em;
+  }
+}
+
+
+.home_video {
+  left: center;
+  top: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.scroll_down {
+  position: absolute;
+  left: 50%;
+  top: 94%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  color: white;
+  letter-spacing: 4px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  .arrow {
+    font-size: 1.5rem;
+  }
+
+}
+
+.video_placeholder {
+  height: 100%;
+  width: 100%;
+  background-image: url('/assets/images/Glow_Home_Splash_Vertical.jpg');
+  background-size: cover;
+  background-position: bottom center;
+}

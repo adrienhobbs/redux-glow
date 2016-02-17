@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react';
 import './symbol/svg/sprite.symbol.svg';
 import './glow-icons.svg';
-export class SpriteLogo extends React.Component {
 
+export class SpriteLogo extends React.Component {
   static propTypes = {
     clientName: PropTypes.string,
     suffix: PropTypes.string,
@@ -14,7 +14,7 @@ export class SpriteLogo extends React.Component {
     this.logoEl = document.getElementById(props.clientName + '-logo');
     if (this.logoEl && props.color) {
       this.tl = new TimelineLite();
-      this.tl.set(this.logoEl, {attr: {fill: props.color}});
+      this.tl.set(this.logoEl, {fill: props.color || '#666', attr: {fill: props.color || '#666'}});
     }
   };
 

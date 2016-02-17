@@ -139,7 +139,7 @@ $default-row-width: em(1620);
 
 @mixin title {
   color: $radical-red;
-  font-size: 4em;
+  font-size: 4.5em;
   @include media($under-small) {
     font-size: 3em;
   }

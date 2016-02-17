@@ -18,7 +18,7 @@ export class Proof extends BaseTemplate {
           <article className='results' id='results'>
             <div className='results-bg' style={{backgroundColor: this.props.data.get('results').bgColor}}></div>
             <div className='results-outer'>
-              <h1 style={this.getHeadlineStyle()} className='page-title'>results</h1>
+              <h1 style={this.getHeadlineStyle()} className='study_headline section_headline'>results</h1>
               <div className='results-inner'>
                 <div className='stat-boxes'>
                   <div className='stat-device-left'>
@@ -75,14 +75,15 @@ export class Proof extends BaseTemplate {
                   <p style={copyStyle}>The creative approach worked.  By organically incorporating the social hashtag elements into the creative, we leveraged the reach of the media campaign to drive the audience directly to the conversation on social, spiking conversation leading up to premiere and providing sustained engagement among fans for the length of the campaign.</p>
                 </div>
               </div>
+              <div className='inner_section'>
               <div className='img-single'>
                 <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/media-01.png' alt='' />
               </div>
               <div className='img-single'>
                 <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/tnt/proof/media-02.jpg' alt='' />
               </div>
+            </div>
           </article>
-
         </div>
       </div>
     );

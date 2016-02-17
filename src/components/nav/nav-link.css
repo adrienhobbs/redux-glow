@@ -7,6 +7,7 @@
       content: ' →';
     }
   }
+
   .hoverline:hover {
     color: #f12d5c;
     transition: all .3s ease;
@@ -42,18 +43,17 @@
 .nav-item {
   cursor: pointer;
   lost-align: middle-center;
-
   a {
     font-family: var(--primary-font-family);
   }
 }
 .navItem {
   composes: nav-item;
-  font-size: 0.95em;
+  font-size: 1.15em;
   lost-column: 1/6 0 0; 
 
   @media (--xl) {
-    font-size: 1.2em;
+    font-size: 1.3125em;
   }
 
 }

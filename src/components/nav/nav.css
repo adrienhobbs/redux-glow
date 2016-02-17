@@ -8,6 +8,7 @@
 /* LEFT AND RIGHT FRAME ELEMENTS */
 
 .frame {
+  min-width: var(--sizing-min-frame-width);
   width: var(--sizing-frame-width); 
   max-width: 75px;
   height: 100vh;
@@ -15,7 +16,6 @@
   position: fixed;
   z-index: 12;
   top: 0;
-  min-width: var(--sizing-min-frame-width);
 }
 
 .frame_right {
@@ -51,7 +51,7 @@
   }
 
   @media(--lg) {
-    lost-column: 7/12 0 0;
+    lost-column: 6/12 0 0;
   }
 }
 
@@ -62,7 +62,7 @@
   lost-column: 6/12 0 0;
 
   @media (--lg) {
-    lost-column: 5/12 0 0;
+    lost-column: 6/12 0 0;
   }
 
   @media (--md-down) {

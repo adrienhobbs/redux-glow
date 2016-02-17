@@ -35,7 +35,7 @@ const Results = React.createClass({
   render () {
     return (
       <div className='results-outer' style={{backgroundColor: this.props.data.get('results').bgColor}}>
-        <h2 className='page-title' style={{color: this.props.data.get('headlineColor')}}>results</h2>
+        <h2 className='study_headline' style={{color: this.props.data.get('headlineColor')}}>results</h2>
         <div className='results-inner'>
           <div className='stat-boxes'>
             {this.getStatContent()}

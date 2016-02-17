@@ -7,7 +7,9 @@
 .careers_copy {
   text-align: center;
   margin-bottom: 30px;
-  max-width: 831px;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .career_listings {
   margin-top: 30px;
@@ -24,22 +26,22 @@
     font-size: 1em;
   }
 
-  &_title {
-    color: var(--color-radical-red);
-    text-align: center;
-    letter-spacing: -0.035em;
-    font-size: 2.5rem;
-
-    &:after {
-      content: ' ';
-      width: 60px;
-      height: 3px;
-      background-color: var(--color-storm-dust);
-      margin-top: 10px;
-      lost-center: 80px;
-    }
+}
+.career_title {
+  color: var(--color-radical-red);
+  text-align: center;
+  letter-spacing: -0.035em;
+  font-size: 2.5rem;
+  &:after {
+    content: ' ';
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-storm-dust);
+    margin-top: 10px;
+    lost-center: 80px;
   }
 }
+
 
 .positions_list {
   font-family: var(--primary-font-family);

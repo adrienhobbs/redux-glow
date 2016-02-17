@@ -1,5 +1,5 @@
 import React from 'react';
-import './jobs-clients.scss';
+import styles from  './jobs-clients-slide.css';
 import AllClients from 'components/ui/clients-component/index.js';
 import {Link} from 'react-router';
 
@@ -10,18 +10,18 @@ const JobsClients = React.createClass({
 
   render () {
     return (
-      <div id='contact-wrapper'>
-        <div className='contact-inner'>
-          <AllClients showSubtitle />
-          <div className='hiring'>
-            <div className='hiring-title'>
-              <h2 className='page-title'>we&#8217;re hiring</h2>
-              <div className='rule'></div>
+      <div className={styles.wrapper}>
+        <div className={styles.inner}>
+          <AllClients color='#666' slide showSubtitle />
+          <div className={styles.hiring}>
+            <div className={styles.hiring_title}>
+              <h2 className={styles.headline}>we&#8217;re hiring</h2>
+              <div className={styles.rule}></div>
             </div>
-            <div className='subtitle'>we don't bite. promise.</div>
-            <div className='hiring-copy'>
+            <h2 className={styles.subtitle}>we don&#8217;t bite. promise.</h2>
+            <div className={styles.hiring_copy}>
               <p>At GLOW, hiring the best and brightest talent is by far our best concept.  If you are looking to join a young, smart, hardworking team that values thinking, creativity, passion and curiosity, then we want to hear from you.  Below is a list of current positions available at GLOW.</p>
-              <div className='view-openings'>
+              <div className={styles.view_openings}>
                 <Link className='hoverline' to='/careers'>view current openings</Link>
               </div>
             </div>

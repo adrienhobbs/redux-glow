@@ -6,6 +6,7 @@
 @custom-media --md (min-width: 48em);
 @custom-media --lg (min-width: 62em);
 @custom-media --xl (min-width: 75em);
+@custom-media --xs-down (max-width: 34em);
 @custom-media --sm-down (max-width: 48em);
 @custom-media --md-down (max-width: 62em);
 @custom-media --lg-down (max-width: 75em);
@@ -17,6 +18,7 @@
   --color-medium-gray: #999;
   --color-light-gray: #d4d4d4;
   --color-dove-gray: #737373;
+  --color-slate-gray: #666666;
   --color-stack: #8E8E8E;
   --color-pink: #f12d5c;
   --color-iron: #CCCCCC;
@@ -39,12 +41,14 @@
   --sizing-frame-width: 3.90625vw;
   --sizing-min-frame-width: 15px;
   --sizing-outer-width: 92.1875%;
+  --global-max-width: 1620px;
 
   --sizing-nav-height-large: 100px;
   --sizing-nav-height-medium: 75px;
   --sizing-nav-height-small: 60px;
   --sizing-nav-height-xsmall: 50px;
 
+  --sizing-section-margin: 50px;
   --sizing-side-pad-large: 75px;
   --sizing-side-pad-medium: 40px;
   --sizing-side-pad-small: 25px;

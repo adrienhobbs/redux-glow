@@ -72,7 +72,7 @@ export class BaseStudyComponent extends React.Component {
 
   createHeadlineEl (headline) {
     return (
-      <h1 style={this.getHeadlineStyle()} className='page-title'>{headline} </h1>
+      <h1 style={this.getHeadlineStyle()} className='study_headline'>{headline} </h1>
     );
   }
   createSubtitleEl (headline) {

@@ -44,7 +44,7 @@ export class ILNY extends BaseTemplate {
           <article className='results' id='results'>
             <div className='results-bg' style={{backgroundColor: this.props.data.get('results').bgColor}}></div>
             <div className='results-outer'>
-              <h1 style={this.getHeadlineStyle()} className='page-title'>results</h1>
+              <h1 style={this.getHeadlineStyle()} className='study_headline'>results</h1>
               <div className='results-inner'>
                 <div className='stat-boxes'>
                   <div className='stat-device-left'>
@@ -93,7 +93,7 @@ export class ILNY extends BaseTemplate {
             </div>
           </article>
           <article className='strategy'>
-              <h1 style={this.getHeadlineStyle()} className='page-title'>social strategy</h1>
+              <h1 style={this.getHeadlineStyle()} className='study_headline section_headline'>social strategy</h1>
               <div className='copy'>
                 <div className='copy-inner'>
                   <p style={copyStyle}>To achieve our goals for I Love New York, we first had to assess the situation.  We saw that there was potential for ILNY to break through using great content, but it wasn’t quite there.  We looked at trends across the travel industry as well as the social behaviors of the target.  After cross-referencing them, we found a way in for each of the active platforms that would resonate with followers more than it had been.</p>
@@ -103,7 +103,7 @@ export class ILNY extends BaseTemplate {
                   <p style={copyStyle}>Meanwhile, Glow took over editorial duties for the I Love New York’s blog, using the social channels to drive traffic to their site and facilitate trip bookings.</p>
                 </div>
               </div>
-              <div className='img-wrap video-looping-row'>
+              <div className='img-wrap video-looping-row inner_section'>
                 <div className='video-looping-full'>
                   <video loop autoPlay src='https://s3.amazonaws.com/weareglow-assets/case-studies/iloveny/social-retainer/social-01.mp4'></video>
                 </div>

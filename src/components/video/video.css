@@ -24,6 +24,9 @@
   .video-looping {
     margin: auto;
     max-width: 100%;
+    @media(--sm-down) {
+      max-width: var(--sizing-outer-width);
+    }
     /* margin-bottom: 70px; */
 
      &-el {
@@ -45,7 +48,8 @@
 .video_block_mobile {
   max-width: 95%;
   margin: auto;
-  margin-top: 70px;
+  margin-top: var(--sizing-section-margin);
+  margin-bottom: var(--sizing-section-margin);
 }
 
 .mobile_video {
@@ -61,6 +65,8 @@
   }
 
   position: relative;
+  margin-top: var(--sizing-section-margin);
+  margin-bottom: var(--sizing-section-margin);
 
   video {
     max-width: 100%;

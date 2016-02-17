@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import ClientLogo from 'components/ui/logo-sprites/logo-sprite.js';
 import styles from './client-logos.css';
+import classnames from 'classnames';
 
 const clients = [
   'we-tv',
@@ -22,7 +23,8 @@ const clients = [
 export class ClientsBar extends React.Component {
 
   static propTypes = {
-    showSubtitle: PropTypes.bool
+    showSubtitle: PropTypes.bool,
+    slide: PropTypes.bool
   };
 
   constructor (props) {
@@ -30,10 +32,11 @@ export class ClientsBar extends React.Component {
   }
 
   getAllClientLogos () {
+    const logoClass = this.getClassname();
     return clients.map(function mapClientNames (client, i) {
       return (
-        <div key={i} className={styles.clientLogoContainer}>
-          <ClientLogo color='#666' stroke='#666'  clientName={client}/>
+        <div key={i} className={logoClass} >
+          <ClientLogo color='#666' stroke='#666' clientName={client}/>
         </div>
       );
     });
@@ -41,15 +44,18 @@ export class ClientsBar extends React.Component {
 
   getSubtitle () {
     return (this.props.showSubtitle)
-      ? <h2 className={styles.ourClients_subtitle}><div>brands we've</div><div>partnered with.</div></h2> : null;
+      ? <h2 className={styles.subtitle}><div>brands we&#8217;ve</div><div>partnered with.</div></h2> : null;
+  }
+  getClassname () {
+    const logoClass = (this.props.slide) ? styles.slideLogo : 'page';
+    return classnames(styles.clientLogoContainer, logoClass);
   }
 
   render () {
-    TweenLite.set('#footer', {display:'none'});
     return (
       <div className={styles.ourClients}>
         <div className={styles.ourClients_headlineWrap}>
-          <h2 className='page-title'>our clients</h2>
+          <h2 className={styles.headline}>our clients</h2>
           {this.getSubtitle()}
         </div>
         <div className={styles.clientsLogoRow}>

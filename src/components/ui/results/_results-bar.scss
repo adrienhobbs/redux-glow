@@ -20,8 +20,8 @@
 
     &-info-box {
       text-align: center;
-      margin-top: em(50);
       padding-top: em(30);
+      color: white;
       padding-bottom: em(30);
       lost-center: 820px;
     }
@@ -142,8 +142,8 @@
     }
   }
   .stat-boxes {
-    margin-top: em(20);
-    margin-bottom: em(25);
+    // margin-top: em(20);
+    // margin-bottom: em(25);
     lost-flex-container: row;
     width: 100%;
     text-align: center;

@@ -48,7 +48,7 @@ export class AboutView extends PageLayout {
       <div className='container' id='about' ref='page'>
         <Header bgSrc='https://s3.amazonaws.com/weareglow-assets/header-images/about.gif' title={'about us'} subtitle={this.state.weather} />
         <div className='page-content'>
-          <section className='row'>
+          <section className={styles.row}>
             <article className={styles.about_copy}>
               <p>Since 1999, GLOW has partnered with high-profile brands and networks to build world-class social and digital campaigns. We aren't just an award-winning digital marketing and social media agency in NYC. We are a methodically built team of 50, composed of industry veterans, Ivy League graduates, photographers, musicians, artists, world travelers, devoted fans, and curious marketers, all unified in our expertise of social and digital. We take tremendous pride in identifying and nurturing talent to consistently provide value for our partners. </p>
             </article>
@@ -57,11 +57,11 @@ export class AboutView extends PageLayout {
             </article>
           </section>
           <section className={styles.about_all_clients}>
-            <AllClients />
+            <AllClients color='#666' />
           </section>
         </div>
         <h1 className='page-title' id='who-we-are-title'>who we are</h1>
-        <section className='row-large'>
+        <section className={styles.row_large}>
           {this.getEmployees()}
         </section>
       </div>
