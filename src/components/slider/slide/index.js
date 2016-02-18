@@ -4,7 +4,7 @@ import HomeVideo from 'components/slider/slide/templates/video';
 import ContactSlide from 'components/slider/slide/templates/contact-slide';
 import JobsClients from 'components/slider/slide/templates/jobs-clients';
 import Study from 'components/case-study/featured';
-import './slide.scss';
+import styles from './slide.css';
 
 export class Slide extends React.Component {
 
@@ -86,7 +86,7 @@ export class Slide extends React.Component {
 
   render () {
     return (
-      <div ref='slideContainer' className='slide'>
+      <div ref='slideContainer' className={styles.slide}>
         {this.getSlideType()}
       </div>
     );

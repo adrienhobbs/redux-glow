@@ -61,7 +61,7 @@
   }
 
   @media(--xl) {
-    lost-column: 1/4 4 40px;
+    lost-column: 1/4;
     margin-bottom: 30px;
   }
 }

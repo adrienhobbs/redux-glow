@@ -5,4 +5,5 @@ const colors = {
   tin: 'rgb(128,128,128)'
 };
 
+export const primaryColor = colors.radRed;
 export default colors;

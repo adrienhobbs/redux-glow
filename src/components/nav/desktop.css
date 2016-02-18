@@ -1,0 +1,96 @@
+@use lost;
+
+.hoverline {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.hoverline:hover {
+  color: #f12d5c;
+  transition: all .3s ease;
+}
+
+.hoverline:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 3px;
+  border-bottom: 2px solid #f12d5c;
+  visibility: hidden;
+  width: 0px;
+  transition: all .45s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hoverline:hover:before {
+  visibility: visible;
+  opacity: 1;
+  color: rgba(0,0,0,1);
+  bottom: 0px;
+  border-bottom: 2px solid #f12d5c;
+  width: 100%;
+}
+
+.hoverline.hoverline_active:before {
+  visibility: visible;
+  opacity: 1;
+  color: rgba(0,0,0,1);
+  bottom: 0px;
+  border-bottom: 2px solid #f12d5c;
+  width: 100%;
+}
+
+.logo {
+  composes: logo from './nav.css';
+}
+
+.desktop {
+  display: none;
+  composes: nav-height from './nav.css';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: var(--sizing-frame-width);
+  padding-right: var(--sizing-frame-width);
+  background: white;
+  z-index: 100;
+  @media(--lg) {
+    lost-flex-container: row;
+  }
+}
+
+.left {
+  lost-column: 6/12;
+}
+
+.right {
+  lost-column: 6/12;
+  lost-flex-container: row;
+}
+
+.link_ctr {
+  lost-column: 1/6 0 0;
+  position: relative;
+  composes: nav-height from './nav.css';
+  text-align: center;
+  a {
+    font-family: var(--primary-font-family);
+    font-size: 1.15em;
+    lost-column: 1/6 0 0; 
+
+    @media (--xl) {
+      font-size: 1.3125em;
+    }
+  }
+}
+
+.link_ctr_inner {
+  
+  top: center;
+  left: center;
+  width: 100%;
+}
+
+

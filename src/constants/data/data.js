@@ -17,17 +17,17 @@
     //
 const s3 = 'https://s3.amazonaws.com/weareglow-assets/';
 const data = [
-  {
-    featured: true,
-    title: 'Intro Video',
-    home: true,
-    type: 'video',
-    video: 'https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic.mp4',
-    logoColor: '#f12d5c',
-    gradientTop: '#c03d3b',
-    gradientBottom: '#0e374a',
-    cat: '- we are glow -'
-  },
+  // {
+  //   featured: true,
+  //   title: 'Intro Video',
+  //   home: true,
+  //   type: 'video',
+  //   video: 'https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic.mp4',
+  //   logoColor: '#f12d5c',
+  //   gradientTop: '#c03d3b',
+  //   gradientBottom: '#0e374a',
+  //   cat: '- we are glow -'
+  // },
   //
    {
     featured: true,

@@ -82,3 +82,24 @@
     font-weight: bold;
   }
 }
+
+.mobile_logo {
+  cursor: pointer;
+  /* margin-left: var(--sizing-frame-width); */
+  width: 6.5104vw;
+  height: 6.5104vw;
+  min-height: 60px;
+  min-width: 60px;
+  max-height: 125px;
+  max-width: 125px;
+  position:absolute;
+  top: 0;
+  left: calc(var(--sizing-frame-width) * 2);
+  background: var(--color-radical-red);
+
+  svg {
+    width: 80%;
+    top: center;
+    left: center;
+  }
+}

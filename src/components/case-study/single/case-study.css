@@ -1,5 +1,4 @@
 @use lost;
-
 :global {
   .full-width-bg {
     width: 100%;
@@ -8,6 +7,7 @@
     background-position: center center;
     margin-top: var(--sizing-section-margin);
   }
+
   .section_headline {
     margin-top: 3%;
   }
@@ -70,7 +70,7 @@
       lost-center: 1100px;
       lost-flex-container: row;
 
-      @media (md--down) {
+      @media (--md-down) {
         lost-center: var(--sizing-outer-width);
       }
 
@@ -146,12 +146,10 @@
         }
       }
 
-      @media(--lg-down) {
-        /* margin-top: 40px; */
-        /* margin-bottom: 40px; */
-        p {
-          max-width: 820px;
-        }
+      /* margin-top: 40px; */
+      /* margin-bottom: 40px; */
+      p {
+        max-width: 820px;
       }
     }
   }
@@ -229,13 +227,12 @@
 
 }
 
-.study-headline {
-  @include headline($desktopSize: 5.625em);
-  margin-bottom: 30px;
-  @include media($medium-screen-up) {
-    margin-bottom: 60px;
-  }
-}
+/* .study-headline { */
+/*   margin-bottom: 30px; */
+/*   @include media($medium-screen-up) { */
+/*     margin-bottom: 60px; */
+/*   } */
+/* } */
 
 /* .social { */
 /*   // margin-bottom: em(140); */

@@ -1,6 +1,6 @@
 import React from 'react';
 import SliderDot from './slider-dot';
-import './dots.scss';
+import styles from './dots.css';
 
 const SliderDots = React.createClass({
 
@@ -28,7 +28,7 @@ const SliderDots = React.createClass({
       );
     };
     return (
-      <svg className='dots' id='slider-dots'>
+      <svg className={styles.slider_dots} id='slider-dots'>
         {this.props.colors.map(createDot.bind(this))}
       </svg>
     );

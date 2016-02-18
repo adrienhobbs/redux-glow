@@ -55,17 +55,21 @@ const NavLink = React.createClass({
     }
   },
   onTouchEnd () {
+    console.log('touch end');
   },
   onClick (e) {
-    if (!this.state.isActive) {
-      if (this.props.mobile) {
+    e.preventDefault();
+    if (!this.props.viewport.hasTouch) {
+      if (!this.state.isActive) {
+        if (this.props.mobile) {
+          this.props.toggleMobileMenu();
+        }
+        this.toggleActiveState();
+        this.props.goTo(this.props.path, this.props.num + 1, this.props.name);
+      }
+      if (this.state.isActive && this.props.mobile) {
         this.props.toggleMobileMenu();
       }
-      this.toggleActiveState();
-      this.props.goTo(this.props.path, this.props.num + 1, this.props.name);
-    }
-    if (this.state.isActive && this.props.mobile) {
-      this.props.toggleMobileMenu();
     }
   },
   toggleActiveState () {
@@ -87,6 +91,7 @@ const NavLink = React.createClass({
     //   this.splitTL.to(child, speed, {y:-3, ease:Linear.easeNone}, (speed * i) * offset + speed);
     // });
   },
+
   splitLinkTextLeave () {
     // const speed     = 0.15;
     // const offset    = 0;

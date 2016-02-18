@@ -25,7 +25,6 @@ export const actions = {
 
 export default handleActions({
   [NAV_STATE_CHANGED]: (state, { payload }) => {
-    console.log(state, payload);
     return {
       isVisible: payload.isVisible,
       shouldAnimate: getAnimateState(state, payload)

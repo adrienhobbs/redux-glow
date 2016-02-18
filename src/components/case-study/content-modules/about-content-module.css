@@ -28,7 +28,7 @@
     lost-column: 4.6/10 0 0;
     @media(--lg-down) {
       lost-row: 1 0 auto;
-      lost-center: em(820);
+      lost-center: 820px;
       height: auto;
       order: 2;
       margin-left: auto !important;

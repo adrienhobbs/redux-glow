@@ -1,4 +1,5 @@
 @use lost;
+
 .nav-height {
   height: var(--sizing-nav-height);
   min-height: 50px;
@@ -6,33 +7,32 @@
 }
 
 /* LEFT AND RIGHT FRAME ELEMENTS */
+  .frame {
+    min-width: var(--sizing-min-frame-width);
+    width: var(--sizing-frame-width); 
+    max-width: 75px;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    z-index: 12;
+    top: 0;
+  }
 
-.frame {
-  min-width: var(--sizing-min-frame-width);
-  width: var(--sizing-frame-width); 
-  max-width: 75px;
-  height: 100vh;
-  background-color: white;
-  position: fixed;
-  z-index: 12;
-  top: 0;
-}
+  .frame_right {
+    composes: frame;
+    right: 0;
+  }
 
-.frame_right {
-  composes: frame;
-  right: 0;
-}
-
-.frame_left {
-  composes: frame;
-  left: 0;
-}
+  .frame_left {
+    composes: frame;
+    left: 0;
+  }
 
 /* LEFT COLUMN OF NAV */
 
 .nav_left {
   lost-column: 6/12 0 0;
-
+  height: 100%;
   &_logo {
     cursor: pointer;
     margin-left: var(--sizing-frame-width);
@@ -58,6 +58,7 @@
 /* RIGHT COLUMN OF NAV */
 
 .nav_right {
+  height: 100%;
   lost-flex-container: row;
   lost-column: 6/12 0 0;
 
@@ -85,6 +86,7 @@
     padding-right: var(--sizing-frame-width);
     lost-flex-container: row;
   }
+
 }
 
 .twitter_link {
@@ -95,7 +97,7 @@
 
 .mobile {
   lost-flex-container: column;
-  lost-align: middle-center;
+  /* lost-align: middle-center; */
   top: 0;
   left: 0;
   z-index: 100;
@@ -103,9 +105,8 @@
   position: fixed;
   width: 100vw;
   background-color: white;
-  visibility: hidden;
-  opacity: 0;
-
+  /* visibility: hidden; */
+  /* opacity: 0; */
   &_inner {
     height: 75vh;
     width: 100%;
@@ -120,7 +121,7 @@
   position: absolute;
   width: 28px;
   right: var(--sizing-frame-width);
-  
+
   @media(--lg) {
     display: none;
   }
@@ -131,3 +132,33 @@
   }
 }
 
+.logo {
+  cursor: pointer;
+  /* margin-left: var(--sizing-frame-width); */
+  width: 6.5104vw;
+  height: 6.5104vw;
+  min-height: 60px;
+  min-width: 60px;
+  max-height: 125px;
+  max-width: 125px;
+  position:absolute;
+  top: 0;
+  left: calc(var(--sizing-frame-width) * 2);
+  background: var(--color-radical-red);
+
+  svg {
+    width: 80%;
+    top: center;
+    left: center;
+  }
+}
+
+.site_nav {
+  composes: nav-height;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}

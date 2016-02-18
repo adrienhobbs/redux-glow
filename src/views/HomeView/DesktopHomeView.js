@@ -82,10 +82,7 @@ export class DesktopHomeView extends PageLayout {
     return ('onkeydown' in document);
   }
   listenForTouchMove (e) {
-    if (!this.state.singleView) {
-      console.log('canceling touch');
-      e.preventDefault();
-    }
+    e.preventDefault();
   }
   preventTouchMove () {
     du.bind(document, 'touchmove', this.listenForTouchMove);

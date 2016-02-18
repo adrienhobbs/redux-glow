@@ -9,7 +9,7 @@
 @custom-media --xs-down (max-width: 34em);
 @custom-media --sm-down (max-width: 48em);
 @custom-media --md-down (max-width: 62em);
-@custom-media --lg-down (max-width: 75em);
+@custom-media --lg-down (min-width: 0em);
 
 :root {
   /* Colors */

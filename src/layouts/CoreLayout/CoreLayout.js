@@ -6,10 +6,13 @@ import { actions as counterActions } from '../../redux/modules/counter';
 import { actions as navActions } from '../../redux/modules/nav';
 import { actions as workActions } from '../../redux/modules/work';
 import { actions as viewportActions } from '../../redux/modules/viewport';
+import { actions as transitionActions } from '../../redux/modules/page-transition';
+import styles from 'components/nav/nav.css';
 import resizeUtils from '../../utilities/resize';
 import Nav from 'components/nav';
 import PageTransition from 'components/page-transition';
 import Footer from 'components/footer';
+import isNull from 'lodash/isNull';
 
 const mapStateToProps = (state) => ({
   pageTransition: state.pageTransition,
@@ -27,7 +30,7 @@ export class CoreLayout extends React.Component {
 
   constructor (props) {
     super(props);
-    this.actions = bindActionCreators(Object.assign({}, counterActions, navActions, workActions, viewportActions), props.dispatch);
+    this.actions = bindActionCreators(Object.assign({}, transitionActions, counterActions, navActions, workActions, viewportActions), props.dispatch);
     resizeUtils.init(this.actions);
   }
   static contextTypes = {
@@ -35,8 +38,37 @@ export class CoreLayout extends React.Component {
   };
   static childContextTypes = {
     router: PropTypes.object,
-    viewport: PropTypes.object
+    viewport: PropTypes.object,
+    transitionToNewRoute: PropTypes.func
   };
+  getChildContext () {
+    return {
+      router: this.context.router,
+      viewport: this.props.viewport,
+      transitionToNewRoute: this.transitionToNewRoute.bind(this)
+    };
+  }
+  componentDidMount () {
+    this.actions.setCurrentLinkIndex(this.props.location.pathname);
+    this.checkFramePositionType(this.props.location.pathname);
+  }
+  checkFramePositionType (path) {
+    if ((this.props.viewport.isPhone) && path === '/') {
+      TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'absolute'});
+    }
+    if (!(isNull(this.props.viewport.isPhone)) && path !== '/') {
+      TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'fixed'});
+    }
+  }
+  transitionToNewRoute (path = '/', newIndex) {
+    if (this.props.location.pathname !== path) {
+      this.checkFramePositionType(path);
+      this.actions.startTransition({
+        startTransition: true,
+        pathname: path
+      });
+    }
+  }
   testForFeatured (re, str) {
     if (str.search(re) !== -1) {
       return true;
@@ -49,13 +81,6 @@ export class CoreLayout extends React.Component {
     return (this.props.location.pathname !== '/' && isFeatured === false || this.props.viewport.isPhone) ? <Footer /> : null;
   }
 
-  getChildContext () {
-    return {
-      router: this.context.router,
-      viewport: this.props.viewport
-    };
-  }
-
   render () {
     return (
       <div className='page-container'>
@@ -64,6 +89,8 @@ export class CoreLayout extends React.Component {
         </div>
         <PageTransition status={this.props.pageTransition} />
         <Nav />
+        <div ref='frameLeft' className={styles.frame_left} id='frame-left'></div>
+        <div ref='frameRight' className={styles.frame_right} id='frame-right'></div>
         {this.getFooter()}
       </div>
       );

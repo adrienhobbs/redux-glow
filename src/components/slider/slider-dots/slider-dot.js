@@ -1,5 +1,6 @@
 import React from 'react';
 import { active, inActive } from 'constants/animations/slider/dots';
+import styles from './dots.css';
 
 const SliderDot = React.createClass({
   propTypes: {
@@ -57,7 +58,7 @@ const SliderDot = React.createClass({
 
     return (
       <circle
-        className='dot'
+        className={styles.dot}
         ref='dot'
         onClick={this.dotClick}
         key={i}

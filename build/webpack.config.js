@@ -1,7 +1,4 @@
 import webpack from 'webpack';
-
-// import cssnano from 'cssnano';
-//
 import autoprefixer from 'autoprefixer';
 import use from 'postcss-use';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -11,8 +8,6 @@ import _debug from 'debug';
 import webpackPostcssTools from 'webpack-postcss-tools';
 
 var map = webpackPostcssTools.makeVarMap('./build/index.css');
-
-console.log(map);
 const debug = _debug('app:webpack:config');
 const paths = config.utils_paths;
 const {__DEV__, __PROD__, __TEST__} = config.globals;
@@ -190,13 +185,11 @@ webpackConfig.sassLoader = {
 
 webpackConfig.postcss = [
   webpackPostcssTools.prependTildesToImports,
-  require('postcss-custom-properties')({variables: map.vars}),
-  require('postcss-custom-media')({extensions: map.media}),
   require('postcss-nested'),
   require('postcss-center'),
-  require('postcss-svg'),
+  require('postcss-cssnext')({features: { customProperties: {variables: map.vars}, autoprefixer: false, customMedia: {extensions: map.media}, nesting: false }}),
   autoprefixer({browsers: ['last 2 versions']}),
-  use({modules: ['lost', 'postcss-autoreset', 'postcss-custom-properties']}
+  use({modules: ['lost', 'postcss-autoreset']}
 )];
 
 // File loaders

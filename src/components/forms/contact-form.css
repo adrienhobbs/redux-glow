@@ -1,8 +1,9 @@
-@use postcss-autoreset;
 @use lost;
+@use postcss-autoreset;
 
 .form_inner {
   p {
+
     margin-bottom: 20px;
     font-family: var(--primary-font-family);
     color: var(--color-storm-dust);
@@ -21,7 +22,8 @@
     all: initial;
     margin-top: 20px;
     width: 80%;
-    color: white;
+    background-color: transparent;
+
   }
 }
 
@@ -97,7 +99,6 @@
   lost-column: 1/2;
   @media (--sm-down) {
     lost-column: 1 0 0;
-    margin-top: var(--connect-row-margin);
   }
 }
 
