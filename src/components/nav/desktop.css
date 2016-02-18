@@ -87,10 +87,13 @@
 }
 
 .link_ctr_inner {
-  
   top: center;
   left: center;
   width: 100%;
+}
+
+.link_ctr_inner:last-of-type {
+  width: auto;
 }
 
 

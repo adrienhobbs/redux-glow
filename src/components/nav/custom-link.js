@@ -4,9 +4,12 @@ import {Link} from 'react-router';
 
 export class CustomLink extends React.Component {
   static propTypes = {
-    toggleNavState:  PropTypes.func,
-    data:            PropTypes.object.isRequired,
-    activeStyle:     PropTypes.object
+    toggleNavState:     PropTypes.func,
+    data:               PropTypes.object.isRequired,
+    activeStyle:        PropTypes.object,
+    insertIntoElArray:  PropTypes.func,
+    desktop:            PropTypes.bool,
+    color:              PropTypes.string
   };
 
   static contextTypes = {
@@ -29,9 +32,13 @@ export class CustomLink extends React.Component {
     this.context.transitionToNewRoute(this.getData('path'));
   }
 
+  getStyle () {
+    return (this.props.desktop) ? {color: this.props.color} : {};
+  }
+
   render () {
     return (
-      <Link {...this.props} onClick={this.onClick.bind(this)} to={this.getData('path')}>{this.getData('name')}</Link>
+      <Link ref='link' style={this.getStyle()} {...this.props} onClick={this.onClick.bind(this)} to={this.getData('path')}>{this.getData('name')}</Link>
     );
   }
 }

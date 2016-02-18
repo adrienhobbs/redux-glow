@@ -9,6 +9,7 @@ import isNull from 'lodash/isNull';
 import MobileNav from './mobile.js';
 import DesktopNav from './desktop.js';
 import styles from './nav.css';
+import GlowLogoLink from './glow-logo-link.js';
 
 const mapStateToProps = (state) => ({
   counter: state.counter,
@@ -48,9 +49,9 @@ export class Nav extends React.Component {
   }
   componentDidUpdate (prevProps, prevState) {
     // this.setLogoBgColor();
-    if (this.props.viewport.breakpointChanged) {
-      this.handleResize();
-    }
+    // if (this.props.viewport.breakpointChanged) {
+    //   this.handleResize();
+    // }
     if (prevProps.nav.isVisible !== this.props.nav.isVisible) {
       this.toggleNavVisibility();
     }
@@ -79,11 +80,6 @@ export class Nav extends React.Component {
     return (this.props.currentPath !== '/') ? Colors.radRed : this.props.colors.get(this.props.counter.current);
   }
 
-  handleResize () {
-    if (window.innerWidth >= 992 && this.state.mobileNavOpen) {
-      this.toggleMobileMenu();
-    }
-  }
   checkFramePositionType (path) {
     if ((this.props.viewport.isPhone) && path === '/') {
       TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'absolute'});
@@ -93,38 +89,29 @@ export class Nav extends React.Component {
     }
   }
 
-  logoClick () {
-    if (this.props.currentPath === '/') {
-      if (this.state.mobileNavOpen) {
-        this.toggleMobileMenu();
-      }
-      this.actions.goToNumber({number: 0});
-    } else if (this.props.currentPath !== '/') {
-      this.goTo('/', 0);
-      if (this.state.mobileNavOpen) {
-        this.toggleMobileMenu();
-      }
-    }
-  }
   restartSliderPos () {
     this.actions.goToNumber({number: 0});
   }
-  setLogoBgColor () {
-    TweenLite.to(this.refs.logoBg, 1.4, {backgroundColor: this.getLinkColor(), ease: Expo.easeInOut});
-    TweenLite.to(this.refs.twitterSVG.refs.twitterIcon, 1.8, {fill: this.getLinkColor(), ease: Expo.easeInOut});
-    TweenLite.to(this.refs.ham, 1.8, {fill: this.getLinkColor(), ease: Expo.easeInOut});
+
+  setLogoClick (fn) {
+    this.logoClick = fn;
   }
   getNav () {
     if (this.props.viewport.hasTouch || window.innerWidth <= 992) {
-      return <MobileNav currentPath={this.props.currentPath} color={this.getLinkColor()} />;
+      return <MobileNav setLogoClick={this.setLogoClick.bind(this)} currentPath={this.props.currentPath} color={this.getLinkColor()} />;
     } else if (!this.props.viewport.hasTouch) {
-      return <DesktopNav restartSliderPos={this.restartSliderPos.bind(this)} color={this.getLinkColor()} currentPath={this.props.currentPath} />;
+      return <DesktopNav setLogoClick={this.setLogoClick.bind(this)} restartSliderPos={this.restartSliderPos.bind(this)} color={this.getLinkColor()} currentPath={this.props.currentPath} />;
     }
   }
+  getMenuType () {
+    return (this.props.viewport.hasTouch || window.innerWidth <= 992) ? 'mobile' : 'desktop';
+  }
+
   render ()  {
     return (
       <div className={styles.site_nav} ref='nav'>
-      {this.getNav()}
+        {this.getNav()}
+        <GlowLogoLink color={this.getLinkColor()} logoClick={this.logoClick} />
       </div>
     );
   }

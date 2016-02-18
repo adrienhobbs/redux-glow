@@ -8,7 +8,8 @@ export class DesktopNav extends React.Component {
   static propTypes = {
     color: PropTypes.string,
     currentPath: PropTypes.string,
-    restartSliderPos: PropTypes.func
+    restartSliderPos: PropTypes.func,
+    setLogoClick: PropTypes.func
   };
 
   static contextTypes = {
@@ -18,16 +19,21 @@ export class DesktopNav extends React.Component {
   constructor (props) {
     super(props);
   }
+  componentDidMount () {
+    this.props.setLogoClick(this.logoClick.bind(this));
+    this.links = document.getElementsByClassName(styles.hoverline);
+  }
+
   getLinks () {
     return Links.map((link, i) => {
       return (
         <div key={i} className={styles.link_ctr}>
           <div className={styles.link_ctr_inner}>
-            <CustomLink className={styles.hoverline} activeClassName={styles.hoverline_active} {...this.props} linkNum={i} data={link} />
+            <CustomLink desktop ref={'link-' + i} className={styles.hoverline} activeClassName={styles.hoverline_active} {...this.props} linkNum={i} data={link} />
           </div>
         </div>
       );
-    });
+    }, this);
   }
   getLinkColor () {
     return this.props.color;
@@ -39,14 +45,16 @@ export class DesktopNav extends React.Component {
       this.context.transitionToNewRoute('/');
     }
   }
+  componentDidUpdate (prevProps) {
+    (this.props.color !== prevProps.color) ? this.changeColors() : null;
+  }
+  changeColors () {
+    console.log(this.links);
+    TweenLite.to(this.links, 1.5, {color: this.props.color});
+  }
   render () {
     return (
       <nav className={styles.desktop}>
-        <div onClick={this.logoClick.bind(this)} className={styles.logo}>
-          <svg ref='logo' role='img' >
-            <use xlinkHref='#glow-logo'></use>
-          </svg>
-        </div>
         <div className={styles.left}></div>
         <div className={styles.right}>
           {this.getLinks()}

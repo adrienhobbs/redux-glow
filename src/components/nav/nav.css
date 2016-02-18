@@ -146,8 +146,10 @@
   left: calc(var(--sizing-frame-width) * 2);
   background: var(--color-radical-red);
 
+  z-index: 101;
   svg {
-    width: 80%;
+    overflow: visible;
+    width: 90%;
     top: center;
     left: center;
   }

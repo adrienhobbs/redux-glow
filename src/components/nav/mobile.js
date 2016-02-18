@@ -7,7 +7,8 @@ import {primaryColor} from 'constants/colors';
 
 export class MobileNav extends React.Component {
   static propTypes = {
-    color: PropTypes.string
+    color: PropTypes.string,
+    setLogoClick: PropTypes.func
   };
   static contextTypes = {
     transitionToNewRoute: PropTypes.func
@@ -27,7 +28,7 @@ export class MobileNav extends React.Component {
     return Links.map((link, i) => {
       return (
         <div key={i} className={ms.link_ctr}>
-          <CustomLink activeStyle={this.getActiveStyle()} {...this.props} toggleNavState={this.toggleNavState.bind(this)} linkNum={i} data={link} />
+          <CustomLink  activeStyle={this.getActiveStyle()} {...this.props} toggleNavState={this.toggleNavState.bind(this)} linkNum={i} data={link} />
         </div>
       );
     });
@@ -46,6 +47,9 @@ export class MobileNav extends React.Component {
       TweenLite.to(this.refs.mobileNav, 0.4, {scale: 1.3, autoAlpha: 0, transformOrigin: 'center', ease: Expo.easeInOut});
     }
   }
+  componentDidMount () {
+    this.props.setLogoClick(this.logoClick.bind(this));
+  }
   logoClick () {
     if (this.state.open) {
       this.toggleNavState();
@@ -56,18 +60,13 @@ export class MobileNav extends React.Component {
     return (
       <nav className={ms.mobile}>
         <div className={ms.mobile_outer}>
-          <div onClick={this.logoClick.bind(this)} className={ms.logo}>
-            <svg ref='logo' role='img' >
-              <use xlinkHref='#glow-logo'></use>
-            </svg>
-          </div>
           <div className={ms.nav_icon_ctr}>
             <div onClick={this.toggleNavState.bind(this)} className={this.getClassname()}>
               <div className={ms.span_ctr}>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <span style={{backgroundColor: this.props.color}}></span>
+                <span style={{backgroundColor: this.props.color}}></span>
+                <span style={{backgroundColor: this.props.color}}></span>
+                <span style={{backgroundColor: this.props.color}}></span>
               </div>
             </div>
           </div>
