@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Formsy from 'formsy-react';
 import EmailInput from 'components/forms/email-input';
 import TextArea from 'components/forms/textarea';
@@ -9,7 +9,7 @@ import styles from  './contact-form.css';
 
 const ContactForm = React.createClass({
   propTypes: {
-    hideCopy: React.PropTypes.bool
+    hideCopy: PropTypes.bool
   },
   mixins: [FormMixin],
   componentWillMount () {
@@ -29,7 +29,7 @@ const ContactForm = React.createClass({
             className='Form'
             onInvalid={this.disableButton}
             onValid={this.enableButton}>
-            <h2 className={styles.connect_headline}>work with us</h2>
+            <h2 style={{display: (this.props.hideCopy) ? 'none' : 'block'}} className={styles.connect_headline}>work with us</h2>
             <p style={{display: (this.props.hideCopy) ? 'none' : 'block'}}> we are always looking for great new opportunities. we'd love to work with you on your idea, however big or small.</p>
             <article className={styles.input_fields}>
               <section className={styles.field} id='name'>

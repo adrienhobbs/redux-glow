@@ -1,0 +1,15 @@
+.study_headline {
+  position: relative;
+  font-family: var(--primary-font-family);
+  font-weight: bold;
+  font-size: 5em;
+  margin-bottom: 30px;
+  letter-spacing: -2px;
+  text-align: center;
+  @media(--md-down) {
+    font-size: 3.5em;
+  }
+  @media(--sm-down) {
+    font-size: 3em;
+  }
+}

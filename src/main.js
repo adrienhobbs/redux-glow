@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { useRouterHistory } from 'react-router';
+import useRouterHistory  from 'react-router/lib/useRouterHistory';
 import { createHistory } from 'history';
 import routes from './routes';
 import Root from './containers/Root';

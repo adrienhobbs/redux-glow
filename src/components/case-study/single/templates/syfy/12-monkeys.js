@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
 import Video from 'components/video/video.js';
-
+import Results from 'components/case-study/content-modules/results';
 export class TwelveMonkeys extends BaseTemplate {
   static propTypes = {
     data: PropTypes.object
@@ -42,57 +42,7 @@ export class TwelveMonkeys extends BaseTemplate {
       <div ref='studyContent' className='study-content' style={{background: this.props.data.get('secColor')}}>
         <div className='content-container' style={{backgroundColor: this.props.data.get('secColor')}}>
           <AboutSection data={this.props.data} />
-          <article className='results' id='results'>
-            <div className='results-bg' style={{backgroundColor: this.props.data.get('results').bgColor}}></div>
-            <div className='results-outer'>
-              <h1 style={this.getHeadlineStyle()} className='page-title'>results</h1>
-              <div className='results-inner'>
-                <div className='stat-boxes'>
-                  <div className='stat-device-left'>
-                    <div className='stat-box-device'>
-                      <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                        100k
-                      </div>
-                      <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-                        Facebook Fans in season 1
-                      </h5>
-                    </div>
-                    <div className='stat-rule'></div>
-                    <div className='stat-box-device'>
-                      <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                        55%
-                      </div>
-                      <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-                        Increase in organic page likes
-                      </h5>
-                    </div>
-                  </div>
-                  <div className='stat-device-image'>
-                    <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/device.png' alt='' />
-                  </div>
-                  <div className='stat-device-right'>
-                    <div className='stat-box-device'>
-                      <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                        0000
-                      </div>
-                      <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-                        Total pieces of social content & video created
-                      </h5>
-                    </div>
-                    <div className='stat-rule'></div>
-                    <div className='stat-box-device'>
-                      <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-                        120+
-                      </div>
-                      <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-                        Display media units created
-                      </h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
+          <Results data={this.props.data} />
           <div className='copy'>
             <div className='copy-inner'>
               <p style={copyStyle}>By creating a dynamic interactive experience, a compelling social media content campaign, and a targeted digital media campaign ensured viewers were met at every opportunity with variations of 12 Monkeys content and messaging geared for each platform. Consolidating all asks of a campaign into one agency allowed for extreme efficiencies and shared platform learnings—paving the way for GLOW to deliver a successful campaign across the board.</p>
@@ -139,3 +89,55 @@ export default TwelveMonkeys;
 //     <polygon style={{fill: this.props.data.get('endShape').bgColor}} points='0,0 1920,314.6 1920,600 0,600 '/>
 //   </svg>
 // </div>
+//
+          // <article className='results' id='results'>
+          //   <div className='results-bg' style={{backgroundColor: this.props.data.get('results').bgColor}}></div>
+          //   <div className='results-outer'>
+          //     <h1 style={this.getHeadlineStyle()} className='page-title'>results</h1>
+          //     <div className='results-inner'>
+          //       <div className='stat-boxes'>
+          //         <div className='stat-device-left'>
+          //           <div className='stat-box-device'>
+          //             <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
+          //               100k
+          //             </div>
+          //             <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
+          //               Facebook Fans in season 1
+          //             </h5>
+          //           </div>
+          //           <div className='stat-rule'></div>
+          //           <div className='stat-box-device'>
+          //             <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
+          //               55%
+          //             </div>
+          //             <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
+          //               Increase in organic page likes
+          //             </h5>
+          //           </div>
+          //         </div>
+          //         <div className='stat-device-image'>
+          //           <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/12-monkeys/device.png' alt='' />
+          //         </div>
+          //         <div className='stat-device-right'>
+          //           <div className='stat-box-device'>
+          //             <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
+          //               0000
+          //             </div>
+          //             <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
+          //               Total pieces of social content & video created
+          //             </h5>
+          //           </div>
+          //           <div className='stat-rule'></div>
+          //           <div className='stat-box-device'>
+          //             <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
+          //               120+
+          //             </div>
+          //             <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
+          //               Display media units created
+          //             </h5>
+          //           </div>
+          //         </div>
+          //       </div>
+          //     </div>
+          //   </div>
+          // </article>

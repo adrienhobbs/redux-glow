@@ -25,7 +25,7 @@ export class GlowLogoLink extends React.Component {
     return (
       <div ref='logoBG' onClick={this.onClick.bind(this)} className={styles.logo}>
         <svg ref='logo' role='img' >
-          <use xlinkHref='#glow-logo'></use>
+          <use xlinkHref='#glow'></use>
         </svg>
       </div>
     );

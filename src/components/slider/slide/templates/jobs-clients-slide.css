@@ -15,8 +15,9 @@
 
 .inner {
   left: center;
-  top: center;
-  width: 80%;
+  bottom: 6%;
+
+  width: 90%;
 }
 
 .hiring {

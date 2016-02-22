@@ -12,6 +12,7 @@ import resizeUtils from '../../utilities/resize';
 import Nav from 'components/nav';
 import PageTransition from 'components/page-transition';
 import Footer from 'components/footer';
+
 import isNull from 'lodash/isNull';
 
 const mapStateToProps = (state) => ({

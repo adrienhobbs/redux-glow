@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-
+import styles from './titles.css';
 const Title = React.createClass({
   propTypes: {
     title: PropTypes.string,
@@ -37,7 +37,7 @@ const Title = React.createClass({
 
   render () {
     return (
-      <div ref='title' className='slide-title'>
+      <div ref='title' className={styles.title}>
         {this.props.title}
       </div>
     );

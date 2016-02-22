@@ -1,0 +1,150 @@
+@use lost;
+
+.gradient_svg {
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.results_outer {
+  width: 100%;
+  position: relative;
+}
+
+.results_headline {
+  composes: study_headline from 'components/case-study/shared.css';
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.results_inner {
+  lost-flex-container: row;
+  lost-center: 1712px;
+  height: 100%; 
+  position: relative;
+}
+
+.left {
+  lost-column: 446/1712 0 0;
+  position: relative;
+  lost-flex-container: row;
+  @media(--sm-down) {
+    lost-column: 1/2 0 0;
+  }
+}
+
+.inner_center {
+  /* top: center; */
+  /* left: center; */
+  width: 100%;
+
+  @media(--sm-down) {
+    position: relative;
+    top: initial;
+    left: initial;
+    transform: none;
+    margin-bottom: 40px;
+  }
+}
+.center {
+  lost-column: 820/1712 0 0;
+  position: relative;
+  @media(--sm-down) {
+    lost-column: 0 0 0;
+  }
+}
+.right {
+  lost-column: 446/1712 0 0;
+  position: relative;
+  lost-flex-container: row;
+  @media(--sm-down) {
+    lost-column: 1/2 0 0;
+  }
+}
+
+.stat_left {
+  text-align: center;
+  lost-column: 1;
+  min-height: 165px;
+
+  @media (--lg-screen-down) {
+    min-height: 105px;
+  }
+}
+
+
+.stat_right {
+  text-align: center;
+  lost-column: 1;
+  min-height: 165px;
+  @media (--lg-screen-down) {
+    min-height: 105px;
+  }
+}
+
+.stat {
+  font-size: 3.4em;
+  font-weight: bold;
+  @media(--lg-screen-down) {
+    font-size: 2.5em;
+  }
+}
+.stat_description {
+  font-style: italic;
+  font-family: var(--secondary-font-family);
+  font-size: 1.4em;
+  font-weight: bold;
+  max-width: 90%;
+  margin: auto;
+  @media(--lg-screen-down) {
+    font-size: 1em;
+  }
+
+  @media(--md-down) {
+    font-size: 0.85em;
+  }
+}
+.stat_bordered {
+  composes: stat;
+  /* padding-top: 1px; */
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
+  /* border-top: 2px solid black; */
+}
+
+.stat_boxes {
+  lost-flex-container: column;
+  position: relative;
+
+}
+
+.separator {
+  left: center;
+  top: center;
+  background: var(--color-alto);
+  width: 40%;
+  height: 2px;
+
+  @media(--sm-down) {
+    display: none;
+  }
+}
+
+.left_inner {
+  /* position: absolute; */
+  /* right: 0; */
+  /* height: 50%; */
+}
+
+.right_inner {
+  /* position: absolute; */
+  /* left: 0; */
+  /* height: 50%; */
+}
+
+.stat_wrap {
+  position: relative;
+  height: 100%;
+}

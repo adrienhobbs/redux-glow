@@ -49,7 +49,6 @@ export class DesktopNav extends React.Component {
     (this.props.color !== prevProps.color) ? this.changeColors() : null;
   }
   changeColors () {
-    console.log(this.links);
     TweenLite.to(this.links, 1.5, {color: this.props.color});
   }
   render () {

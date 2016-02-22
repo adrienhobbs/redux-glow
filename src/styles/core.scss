@@ -7,6 +7,10 @@
 
 :global {
 
+  p:selection {
+    background: $radical-red;
+    color: white;
+  }
   .mom-scroll {
     -webkit-overflow-scrolling: touch;
   }

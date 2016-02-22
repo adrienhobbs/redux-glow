@@ -1,7 +1,7 @@
 import React from 'react';
 import Work from 'components/work-items';
 import AllClients from 'components/ui/clients-component/index.js';
-import {Link} from 'react-router';
+import Link from 'react-router/lib/Link';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import styles from './mobile-home.css';
 

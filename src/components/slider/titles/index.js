@@ -1,5 +1,5 @@
 import React from 'react';
-import './titles.scss';
+import styles from './titles.css';
 import Title from './title';
 
 const Titles = React.createClass({
@@ -20,7 +20,7 @@ const Titles = React.createClass({
 
   render () {
     return (
-      <div className='titles' id='case-title'>
+      <div className={styles.titles} id='case-title'>
         {this.getTitles()}
       </div>
     );

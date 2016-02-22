@@ -35,6 +35,9 @@ const FormMixin = {
     if (!err) {
       this.resetFormValues();
       this.setState({msg: this.thanksMsg, buttonMsg: null});
+      if (this.props.successFn) {
+        this.props.successFn();
+      }
     } else if (err) {
       this.setState({msg: 'shucks, looks like there was a problem.', buttonMsg: 'try again'});
     }

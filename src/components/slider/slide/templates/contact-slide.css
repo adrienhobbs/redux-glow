@@ -1,0 +1,55 @@
+.connectFormHeadline {
+  color: var(--primary-headline-color);
+  font-size: 3em;
+  text-align: center;
+}
+
+.form_copy {
+  font-size: 1.75em;
+  color: var(--color-light-gray);
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 3%;
+}
+.connectSlide {
+  width: 100%;
+  background-color: rgb(87, 182, 154);
+  position: absolute;
+  top:0;
+  bottom: 0;
+}
+
+.connectForm {
+  height: 100%;
+  position:absolute;
+  width: 100%;
+}
+
+.connectFormCtr {
+  z-index: 3;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.connectFormCtrInner {
+  background: white;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2em; 
+  margin: auto;
+  height: 100%;
+
+  @media(--md-down) {
+    width: 75%;
+  }
+  @media(--xs-down) {
+    width: 100%;
+  }
+  @media(--md) {
+    width: 50%;
+  }
+}

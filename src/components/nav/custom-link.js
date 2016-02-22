@@ -1,15 +1,15 @@
 import React, {PropTypes} from 'react';
-// import styles from './nav.css';
-import {Link} from 'react-router';
+import Link from 'react-router/lib/Link';
 
 export class CustomLink extends React.Component {
   static propTypes = {
     toggleNavState:     PropTypes.func,
-    data:               PropTypes.object.isRequired,
+    data:               PropTypes.object,
     activeStyle:        PropTypes.object,
-    insertIntoElArray:  PropTypes.func,
     desktop:            PropTypes.bool,
-    color:              PropTypes.string
+    color:              PropTypes.string,
+    path:               PropTypes.string,
+    name:               PropTypes.string
   };
 
   static contextTypes = {
@@ -29,16 +29,24 @@ export class CustomLink extends React.Component {
     if (this.props.toggleNavState) {
       this.props.toggleNavState();
     }
-    this.context.transitionToNewRoute(this.getData('path'));
+    this.context.transitionToNewRoute(this.getPath());
   }
 
   getStyle () {
-    return (this.props.desktop) ? {color: this.props.color} : {};
+    return (this.props.desktop) ? {color: this.props.color, borderColor: this.props.color} : {};
+  }
+
+  getPath () {
+    return this.props.path || this.getData('path');
+  }
+
+  getName () {
+    return this.props.name || this.getData('name');
   }
 
   render () {
     return (
-      <Link ref='link' style={this.getStyle()} {...this.props} onClick={this.onClick.bind(this)} to={this.getData('path')}>{this.getData('name')}</Link>
+      <Link ref='link' style={this.getStyle()} {...this.props} onClick={this.onClick.bind(this)} to={this.getPath()}>{this.getName()}</Link>
     );
   }
 }

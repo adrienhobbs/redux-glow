@@ -1,9 +1,7 @@
 @use lost;
-@use postcss-autoreset;
 
 .form_inner {
   p {
-
     margin-bottom: 20px;
     font-family: var(--primary-font-family);
     color: var(--color-storm-dust);
@@ -19,7 +17,7 @@
   lost-center: 50%;
   color: white;
   button {
-    all: initial;
+    color: white;
     margin-top: 20px;
     width: 80%;
     background-color: transparent;
@@ -30,15 +28,16 @@
 .message {
   text-align: center;
   font-family: var(--primary-font-family);
+  font-size: 1rem;
   color: var(--color-slate-gray);
   width: 100%;
   visibility: hidden;
   opacity: 0;
-  position: relative;
-  top: -100px;
-  /* button { */
-  /*   color: white; */
-  /* } */
+  left: center;
+  top: center;
+  button {
+    color: white;
+  }
 }
 .contact_form_outer {
   position: relative;

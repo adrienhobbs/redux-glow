@@ -1,14 +1,12 @@
 import React, { PropTypes } from 'react';
 import BaseTemplate from '../base-study-template';
-import Results from 'components/ui/results';
+import Results from 'components/case-study/content-modules/results';
 import AboutSection from '../../../content-modules/about.js';
 
 export class Veep extends BaseTemplate {
-
   static propTypes = {
     data: PropTypes.object.isRequired
   };
-
   constructor (props) {
     super(props);
   }
@@ -27,16 +25,14 @@ export class Veep extends BaseTemplate {
               </div>
             </div>
             <div className='img-single inner_section'>
-              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/device.png' className='' alt='' />
+              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/social-01.png' alt='' />
             </div>
             <div className='copy'>
               <div className='copy-inner' lang='en'>
                 <p style={this.getCopyStyle()}>Our campaign to launch Veep Season 3 needed to increase social and industry buzz, while keeping a low barrier to entry. We know the Veep’s staff are constantly on their phones, thus, in concert with HBO, GLOW developed a brand new way to engage the smart and savvy Veep fans.  Instead of building yet another social app to sign up for, GLOW designed an immersive Veep experience using phone calls, texting, and Twitter.<br /> <br /> We called this our Robocall execution.  This is a new way to engage Veep fans in social, had not been done before, all while using a “mature” existing medium. <br/><br/> All told, 15,000 total voice minutes were used and over 40,000 texts were exchanged. <br /> <br /> In a world governed by LIKES and Retweets, sometimes all it takes to succeed is a phone call.</p>
               </div>
             </div>
-            <div className='img-single inner_section'>
-              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/social-01.png' alt='' />
-            </div>
+
             <div className='copy'>
               <div className='copy-inner' lang='en'>
                 <p style={this.getCopyStyle()}>Having previously raised the bar again after a successful third season, GLOW challenged ourselves to create the strongest effort yet for S4.  Season 4 social activations included partnerships with VO app dubsmash, a successful #AskSelina Q&A, and a private DM group chat on Twitter. <br /> <br />Volume and conversation on Twitter for S4 premiere was up 36% from the S3 premiere. GLOW and HBO are currently planning for a larger and even more successful S5, coming in 2016.</p>

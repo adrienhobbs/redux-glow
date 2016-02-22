@@ -12,8 +12,8 @@ const Sidebar = React.createClass({
     return null;
   },
   componentWillUnmount () {
-    const icon = document.getElementById(this.getClient() + '-logo');
-    TweenLite.set(icon, {fill: '#666', attr: {fill: '#666'}});
+    const icon = document.getElementById(this.getClient());
+    TweenLite.set(icon, {fill: '#666'});
   },
   getClient () {
     return this.props.data.get('sidebar').customClientLogo || this.props.data.get('client').replace(/\s+/g, '-');
@@ -32,13 +32,15 @@ const Sidebar = React.createClass({
   getServiceContent () {
     return (
       <div className={this.getSidebarBoxClass()} id='sidebar-services'>
-        <div style={this.getHeadlineColor()} className={styles.sidebar_header}>
-          services
-        </div>
-        <div className={styles.sidebar_body}>
-          <ul style={this.getCopyColor()}>
-            {this.getServices()}
-          </ul>
+        <div className={styles.inner_box}>
+          <div style={this.getHeadlineColor()} className={styles.sidebar_header}>
+            services
+          </div>
+          <div className={styles.sidebar_body}>
+            <ul style={this.getCopyColor()}>
+              {this.getServices()}
+            </ul>
+          </div>
         </div>
       </div>
     );
@@ -52,13 +54,15 @@ const Sidebar = React.createClass({
     if (this.hasRecognition()) {
       return (
         <div className={this.getSidebarBoxClass()} id='sidebar-recognition'>
-          <div style={this.getHeadlineColor()} className={styles.sidebar_header}>
-            recognition
-          </div>
-          <div className={styles.sidebar_body}>
-            <ul style={this.getCopyColor()}>
-              {this.getRecognition()}
-            </ul>
+          <div className={styles.inner_box}>
+            <div style={this.getHeadlineColor()} className={styles.sidebar_header}>
+              recognition
+            </div>
+            <div className={styles.sidebar_body}>
+              <ul style={this.getCopyColor()}>
+                {this.getRecognition()}
+              </ul>
+            </div>
           </div>
         </div>
       );
@@ -86,11 +90,13 @@ const Sidebar = React.createClass({
     return (
       <div className={styles.sidebar}>
         <div className={this.getSidebarBoxClass()} id='sidebar-client'>
-          <div style={this.getHeadlineColor()} className={styles.sidebar_header}>
-            client
-          </div>
-          <div className={styles.sidebar_body}>
-            <Logo color={this.getLogoColor()} clientName={this.getClient()}/>
+          <div className={styles.inner_box}>
+            <div style={this.getHeadlineColor()} className={styles.sidebar_header}>
+              client
+            </div>
+            <div className={styles.sidebar_body}>
+              <Logo color={this.getLogoColor()} clientName={this.getClient()}/>
+            </div>
           </div>
         </div>
         {this.getServiceContent()}
@@ -102,6 +108,6 @@ const Sidebar = React.createClass({
 
 export default Sidebar;
 
-        // <div className={this.getSidebarBoxClass()} id='sidebar-share'>
-        //   <ShareButton copyColor={this.getShareButtonCopyColor()} strokeColor={this.getShareButtonStroke()} color={this.props.data.get('sidebarLogoColor')} />
-        // </div>
+// <div className={this.getSidebarBoxClass()} id='sidebar-share'>
+//   <ShareButton copyColor={this.getShareButtonCopyColor()} strokeColor={this.getShareButtonStroke()} color={this.props.data.get('sidebarLogoColor')} />
+// </div>

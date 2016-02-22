@@ -1,4 +1,44 @@
 @use lost;
+:global {
+  .hoverline {
+    position: relative;
+    padding-bottom: 4px;
+    &:after {
+      content: ' →';
+    }
+  }
+
+  .hoverline:hover {
+    color: #f12d5c;
+    transition: all .3s ease;
+  }
+
+  .hoverline:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    height: 3px;
+    border-bottom: 2px solid #f12d5c;
+    visibility: hidden;
+    width: 0px;
+    transition: all .45s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .hoverline:hover:before {
+    visibility: visible;
+    opacity: 1;
+    color: rgba(0,0,0,1);
+    bottom: 0px;
+    border-bottom: 2px solid #f12d5c;
+    width: 100%;
+  }
+
+  .hoverline.active {
+    border-bottom:2px solid #f12d5c;
+  }
+}
 
 .nav-height {
   height: var(--sizing-nav-height);
@@ -97,7 +137,6 @@
 
 .mobile {
   lost-flex-container: column;
-  /* lost-align: middle-center; */
   top: 0;
   left: 0;
   z-index: 100;
@@ -105,36 +144,14 @@
   position: fixed;
   width: 100vw;
   background-color: white;
-  /* visibility: hidden; */
-  /* opacity: 0; */
   &_inner {
     height: 75vh;
     width: 100%;
   }
 }
 
-.hamburger {
-  composes: nav-height;
-  cursor: pointer;
-  top: 0;
-  display: inline-block;
-  position: absolute;
-  width: 28px;
-  right: var(--sizing-frame-width);
-
-  @media(--lg) {
-    display: none;
-  }
-
-  svg {
-    top: center;
-    right: 0;
-  }
-}
-
 .logo {
   cursor: pointer;
-  /* margin-left: var(--sizing-frame-width); */
   width: 6.5104vw;
   height: 6.5104vw;
   min-height: 60px;

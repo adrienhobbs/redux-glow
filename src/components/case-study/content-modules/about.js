@@ -45,10 +45,13 @@ export class AboutSection extends React.Component {
           <div className={styles.about_center}>
             <div className='copy-inner' lang='en' style={this.getCopyStyle()} dangerouslySetInnerHTML={this.createParagraphEl()} />
           </div>
-          <Sidebar data={this.props.data}/>
+          <div className={styles.about_right}>
+            <Sidebar data={this.props.data}/>
+          </div>
         </div>
       </article>
     );
   }
 }
 export default AboutSection;
+

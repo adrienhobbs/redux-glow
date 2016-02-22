@@ -57,11 +57,6 @@ const employeeInfo = [
   },
 
   {
-    name: 'Ivan Burguete',
-    position: 'Art Director',
-    photoName: 'Ivan'
-  },
-  {
     name: 'Ben Tuber',
     position: 'Art Director',
     photoName: 'Ben'

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from  './jobs-clients-slide.css';
 import AllClients from 'components/ui/clients-component/index.js';
-import {Link} from 'react-router';
+import CustomLink from 'components/nav/custom-link.js';
 
 const JobsClients = React.createClass({
   getInitialState () {
@@ -22,7 +22,7 @@ const JobsClients = React.createClass({
             <div className={styles.hiring_copy}>
               <p>At GLOW, hiring the best and brightest talent is by far our best concept.  If you are looking to join a young, smart, hardworking team that values thinking, creativity, passion and curiosity, then we want to hear from you.  Below is a list of current positions available at GLOW.</p>
               <div className={styles.view_openings}>
-                <Link className='hoverline' to='/careers'>view current openings</Link>
+                <CustomLink className='hoverline' name='view current openings' path='/careers' />
               </div>
             </div>
           </div>

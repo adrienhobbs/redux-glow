@@ -1,38 +1,29 @@
 @use lost;
 :global {
   .sidebar-two {
-    margin-top: 15px;
-    &:first-of-type {
-      margin-top:0;
+    position: relative;
+    lost-column: 1 0 0;
+    @media(--xl-screen-down) {
+      lost-column: 1/2;
     }
-    @media(--lg-down) {
-      lost-column: 1/2 0 0;
-    }
-
-    @media(--xs-down) {
+    @media(--sm-down) {
       lost-column: 1 0 0;
     }
 
-    :last-of-type {
-    }
   }
   .sidebar-three {
-    margin-top: 15px;
-    &:first-of-type {
-      margin-top:0;
+    lost-column: 1 0 0;
+    position: relative;
+    @media(--xl-screen-down) {
+      lost-column: 1/3;
     }
-    @media(--lg-down) {
-      lost-column: 1/3 0 0;
-    }
-
-    @media(--xs-down) {
+    @media(--sm-down) {
       lost-column: 1 0 0;
     }
   }
 
   .sidebar-four {
     lost-row: 1 0 0;
-
     @media(--lg-down) {
       lost-column: 1/4 0 0;
     }
@@ -41,30 +32,40 @@
 
 .sidebar_header {
   color: white;
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-family: var(--primary-font-family);
   font-weight: bold;
-  @media(--lg-down) {
+  @media(--xl-screen-down) {
     text-align: center;
+    font-size: 2em;
   }
 }
+
 .sidebar_box {
   min-height: 120px;
   position: relative;
   margin-bottom: 20px;
 }
+.inner_box {
+  position: relative;
+}
 .sidebar_body {
   font-family: var(--primary-font-family);
-  padding-left: 10%;
-  @media(--lg-down) {
+  padding-left: 8%;
+  margin-bottom: 1em;
+
+  @media(--xl-screen-down) {
     text-align: center;
     padding-left: 0;
+    padding-bottom: 3%;
+    margin-bottom: 0;
   }
   svg {
-    max-width: 120px;
+    max-width: 80px;
     height: 70px;
-    @media(--lg-down) {
+    @media(--xl-screen-down) {
       margin: auto;
+      max-width: 80px;
     }
   }
 
@@ -74,37 +75,21 @@
 }
 
 .sidebar {
-  lost-column: 2.7/10 0 auto;
-  padding-left: 5%;
-  lost-flex-container: column;
-  max-width: 500px;
-  margin-right: auto !important;
-  margin-left: auto !important;
-  @media(--lg-down) {
-    lost-flex-container: row;
-    padding-left: 0;
-    lost-row: 1 0 auto;
-    order: 1;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
+  height: 100%;
+  lost-center: 332px;
+  lost-flex-container: row;
+  @media(--xl-screen-down) {
+    lost-center: 70%;
   }
-
-  #svg_share {
-    max-width: 70%;
-    cursor: pointer;
-    @media(--lg-down) {
-      @include center(xy);
-    }
+  @media(--sm-down) {
+    display: none;
   }
 }
 
 .share {
   cursor: pointer;
   margin-top: 60px;
-  @include outer-container(250px);
 }
-
 
 .waffle {
   height: 100vh;

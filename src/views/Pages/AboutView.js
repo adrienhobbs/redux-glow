@@ -70,6 +70,4 @@ export class AboutView extends PageLayout {
 }
 
 export default connect(mapStateToProps)(AboutView);
-// <div className='row' style={{maxWidth: 800}}>
-//   <Testimonials />
-// </div>
+

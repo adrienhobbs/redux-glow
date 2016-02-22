@@ -6,10 +6,10 @@ import classnames from 'classnames';
 const clients = [
   'we-tv',
   'syfy',
-  'hbo-gray',
+  'hbo',
   'cartoon-network',
   'crackle',
-  'ilny-gray',
+  'ilny',
   'usa',
   'cinemax',
   'tnt',
@@ -36,7 +36,7 @@ export class ClientsBar extends React.Component {
     return clients.map(function mapClientNames (client, i) {
       return (
         <div key={i} className={logoClass} >
-          <ClientLogo color='#666' stroke='#666' clientName={client}/>
+          <ClientLogo clientName={client}/>
         </div>
       );
     });

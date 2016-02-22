@@ -45,17 +45,17 @@ const ProjectIntro = React.createClass({
   },
 
   componentDidMount () {
-    if (this.props.isOpen && !this.state.singleMode) {
-      this.isNew = true;
-      this.openStudyFromProject();
-    }
+    // if (this.props.isOpen && !this.state.singleMode) {
+    //   this.isNew = true;
+    //   this.openStudyFromProject();
+    // }
   },
 
   hideOrShow (prevProps, prevState) {
     if (this.props.isHidden && !prevProps.isHidden) {
-      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.4, {delay:this.props.id / 150,  autoAlpha: 0, ease: Expo.easeInOut});
+      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.4, {delay:this.props.id / 150, zIndex: 1, autoAlpha: 1, ease: Expo.easeInOut});
     } else if (!this.props.isHidden && prevProps.isHidden) {
-      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.6, {delay:this.props.id / 200, autoAlpha:1, ease: Expo.easeInOut});
+      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.6, {delay:this.props.id / 200, autoAlpha:1, clearProps: 'z-index', ease: Expo.easeInOut});
     }
   },
 
@@ -63,7 +63,6 @@ const ProjectIntro = React.createClass({
     const TL = new TimelineLite();
     const rect = this.refs.projectIntro.getBoundingClientRect();
     const projHeight = this.refs.projectBox.getBoundingClientRect().height;
-    console.log(projHeight);
     const windowW = window.innerWidth;
     TL.set(this.refs.projectIntro, {
       width: rect.width,
@@ -72,8 +71,8 @@ const ProjectIntro = React.createClass({
       y: rect.top,
       z: 0,
       position: 'fixed',
-      overflow: 'hidden'
-      // zIndex: 99
+      overflow: 'hidden',
+      zIndex: 99
     });
     TweenLite.set(this.refs.projectBox, {height: projHeight});
 
@@ -132,7 +131,7 @@ const ProjectIntro = React.createClass({
     }
     this.props.hideOthers(this.props.id, true);
     TweenLite.set([this.refs.overlay, this.refs.projectInfo], {autoAlpha: 0});
-    TweenLite.to(this.refs.shape, 0.3, {scaleY: 0});
+    TweenLite.set(this.refs.shape, {scaleY: 0});
     this.hoverOut();
     this.studyTL = new TimelineLite({onComplete: () => this.setState({showBody: true})});
     // const startPoint = (this.isNew) ? 2 : this.props.id/10;
@@ -153,7 +152,7 @@ const ProjectIntro = React.createClass({
     }
     const sequence = new TimelineLite({paused: true, onComplete: () => this.setState({closed: true})});
     this.setState({closed: false, showBody: false});
-    TweenLite.set(this.refs.projectIntro, {overflow: 'hidden'});
+    TweenLite.set(this.refs.projectIntro, {overflow: 'hidden', clearProps: 'z-index'});
     sequence.addLabel('start');
     sequence.add(this.reverseStudyTL, 0);
     sequence.add(this.getNavTween, 0.4);
@@ -178,11 +177,13 @@ const ProjectIntro = React.createClass({
     du.removeClass(document.documentElement, 'locked');
     return this.studyTL.reverse();
   },
+
   getTags () {
     return map(this.props.data.get('services'), function (service, i) {
       return <span key={i}>{service}</span>;
     });
   },
+
   render () {
     const backBar = (this.state.singleMode) ? <BackBar singleMode={this.state.singleMode} showBar={this.state.showBody} data={this.props.data.toJS()} goBack={this.toggleStudyState}  /> : null;
     return (

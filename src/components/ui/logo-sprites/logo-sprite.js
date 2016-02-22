@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
-import './symbol/svg/sprite.symbol.svg';
-import './glow-icons.svg';
+// import './symbol/svg/sprite.symbol.svg';
+// import './glow-icons.svg';
+// import './logo-sprite.svg';
+import './svg/symbol/svg/sprite.symbol.svg';
 
 export class SpriteLogo extends React.Component {
   static propTypes = {
@@ -11,10 +13,10 @@ export class SpriteLogo extends React.Component {
 
   constructor (props) {
     super(props);
-    this.logoEl = document.getElementById(props.clientName + '-logo');
+    this.logoEl = document.getElementsByClassName(props.clientName);
     if (this.logoEl && props.color) {
       this.tl = new TimelineLite();
-      this.tl.set(this.logoEl, {fill: props.color || '#666', attr: {fill: props.color || '#666'}});
+      this.tl.set(this.logoEl, {fill: props.color || '#666'});
     }
   };
 
@@ -37,7 +39,7 @@ export class SpriteLogo extends React.Component {
   }
 
   getUseLink () {
-    return this.props.clientName + '-logo';
+    return this.props.clientName;
   }
 
   render () {

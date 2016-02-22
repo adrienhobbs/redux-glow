@@ -92,8 +92,6 @@
     visibility: hidden;
     opacity: 0;
     lost-flex-container: column;
-    /* lost-align: middle-center; */
-    /* top: var(--sizing-nav-height); */
     top: 0;
     left: 0;
     z-index: 100;
@@ -105,7 +103,6 @@
 }
 
 .mobile_item_ctr {
-
   height: 80vh;
   top: center;
   left: center;

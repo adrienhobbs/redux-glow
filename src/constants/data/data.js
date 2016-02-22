@@ -1,4 +1,4 @@
-    /*eslint-disable*/
+/*eslint-disable*/
 // import React from 'react';
     // winter calendar custom animation html5 development creative execution
     // ilny social strategy community management content lab creative execution recognition: beautiful destinations partnership
@@ -17,17 +17,17 @@
     //
 const s3 = 'https://s3.amazonaws.com/weareglow-assets/';
 const data = [
-   {
-     featured: true,
-     title: 'Intro Video',
-     home: true,
-     type: 'video',
-     video: 'https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic.mp4',
-     logoColor: '#f12d5c',
-     gradientTop: '#c03d3b',
-     gradientBottom: '#0e374a',
-     cat: '- we are glow -'
-   },
+   // {
+   //   featured: true,
+   //   title: 'Intro Video',
+   //   home: true,
+   //   type: 'video',
+   //   video: 'https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic.mp4',
+   //   logoColor: '#f12d5c',
+   //   gradientTop: '#c03d3b',
+   //   gradientBottom: '#0e374a',
+   //   cat: '- we are glow -'
+   // },
   
    {
     featured: true,
@@ -37,7 +37,6 @@ const data = [
     subtitle: 'seasons 2-3-4 social & media campaigns',
     subtitleSlug: 'social & media campaigns',
     type: 'case-study',
-    infoPath: s3 + 'case-studies/hbo/veep/logo-title.svg',
     backgroundImageUrl: s3 + 'case-studies/hbo/veep/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/hbo/veep/portrait.jpg',
     logoColor: '#c03d3b',
@@ -49,13 +48,13 @@ const data = [
     templateName: 'Veep',
     copyColor: '#ffffff',
     headlineColor: '#ffffff',
-    services: ['social strategy', 'community management', 'content lab', 'creative execution', 'digital media', 'influencer campaigns'],
+    services: ['social strategy', 'community management', 'content lab', 'digital media'],
     recognition: ['shorty: best multi-platform', 'shorty: best twitter campaign'],
     sidebar: {
       logoColor: '#ffffff',
       copyColor: '#577381',
       headlineColor: '#ffffff',
-      customClientLogo: 'hbo-white'
+      customClientLogo: 'hbo-alternate'
     },
     backbar: {
       bgColor: '#c03d3b'
@@ -79,15 +78,12 @@ const data = [
         {label: 'Twitter buzz increase', stat: '+76%'},
         {label: 'Pieces of custom content', stat: '1500+'},
         {label: 'increase in social volume', stat: '+53%'},
-        {label: 'tweeting premieres w/ custom content RT', stat: 'live'},
-        {label: 'Robocall texts exchanged', stat: '40k'},
-        {label: 'GIF on Tumblr w/ reblog from founder David Karp', stat: 'viral'},
-        {label: 'Twitter mentions from top social influencers', stat: '20'},
-        {label: 'Twitter buzz increase', stat: '??'}
+        {label: 'Texts exchanged', stat: '40k'}
       ],
       statColor: '#ffffff',
       statLabelColor: '#C03D3B',
-      bgColor: '#0A2C3A'
+      bgColor: '#0A2C3A',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/device.png' 
     },
     endShape: {
       bgColor: '#0A2C3A'
@@ -102,7 +98,6 @@ const data = [
     subtitle: 'kickstarter campaign',
     subtitleSlug: 'kickstarter campaign',
     type: 'case-study',
-    infoPath: s3 + 'case-studies/carla-hall/southern-kitchen/logo-title.svg',
     backgroundImageUrl: s3 + 'case-studies/carla-hall/southern-kitchen/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/carla-hall/southern-kitchen/portrait.jpg',
     logoColor: '#ed0f77',
@@ -154,7 +149,6 @@ const data = [
   //   subtitle: 'social media campaign',
   //   subtitleSlug: 'social media campaign',
   //   type: 'case-study',
-  //   infoPath: s3 + 'case-studies/hulu/mindy-project/logo-title.svg',
   //   backgroundImageUrl: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
   //   backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
   //   logoColor: '#e70062',
@@ -203,7 +197,6 @@ const data = [
   //   subtitle: 'social media campaign',
   //   subtitleSlug: 'social media campaign',
   //   type: 'case-study',
-  //   infoPath: s3 + 'case-studies/hulu/casual/logo-title.svg',
   //   backgroundImageUrl: s3 + 'case-studies/hulu/casual/landscape.jpg',
   //   backgroundImageUrlVert: s3 + 'case-studies/hulu/casual/landscape.jpg',
   //   logoColor: '#68ae34',
@@ -252,7 +245,6 @@ const data = [
     subtitle:                   'integrated campaign',
     subtitleSlug:               'integrated campaign',
     type:                       'case-study',
-    infoPath:                   s3 + 'case-studies/syfy/12-monkeys/logo-title.svg',
     backgroundImageUrl:         s3 + 'case-studies/syfy/12-monkeys/landscape.jpg',
     backgroundImageUrlVert:     s3 + 'case-studies/syfy/12-monkeys/landscape.jpg',
     logoColor:                  '#551313',
@@ -286,18 +278,15 @@ const data = [
     },
     results: {
       stats: [
-        {label: 'Twitter buzz increase', stat: '+76%'},
-        {label: 'Pieces of custom content', stat: '1500+'},
-        {label: 'increase in social volume', stat: '+53%'},
-        {label: 'tweeting premieres w/ custom content RT', stat: 'live'},
-        {label: 'Robocall texts exchanged', stat: '40k'},
-        {label: 'GIF on Tumblr w/ reblog from founder David Karp', stat: 'viral'},
-        {label: 'Twitter mentions from top social influencers', stat: '20'},
-        {label: 'Twitter buzz increase', stat: '??'}
+        {label: 'Facebook Fans in season 1', stat: '100K'},
+        {label: 'Increase in organic page likes', stat: '55%'},
+        {label: 'Total pieces of social content & video created', stat: '0000'},
+        {label: 'Display media units created', stat: '120+'}
       ],
       statColor:       '#ffffff',
       statLabelColor:  '#551313',
-      bgColor:         '#171717'
+      bgColor:         '#171717',
+      deviceImageUrl: s3 + 'case-studies/syfy/12-monkeys/device.png'
     },
 
     endShape: {
@@ -309,11 +298,11 @@ const data = [
     featured: false,
     client: 'tnt',
     project: 'proof',
+    headlineColor: '#000',
     title: 'proof',
     subtitle: 'media campaign',
     subtitleSlug: 'media campaign',
     type: 'case-study',
-    infoPath: s3 + 'case-studies/tnt/proof/logo-title.svg',
     backgroundImageUrl: s3 + 'case-studies/tnt/proof/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/tnt/proof/landscape.jpg',
     logoColor: '#82b3dc',
@@ -331,7 +320,8 @@ const data = [
       bgColor: '#82b3dc'
     },
     results: {
-      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+      deviceImageUrl: s3 + 'case-studies/tnt/proof/device.png',
+      stats: [{label: 'Video Views', stat: '7M'}, {label: 'Unique users reached', stat: '30M'}],
       statColor: '#ffffff',
       statLabelColor: '#000000',
       bgColor: '#c3c3c3'
@@ -361,11 +351,10 @@ const data = [
     featured: false,
     client: 'i love new york',
     project: 'social retainer',
-    title: 'social retainer',
+    title: 'social',
     subtitle: 'social agency of record',
     subtitleSlug: 'social agency of record',
     type: 'case-study',
-    infoPath: s3 + 'case-studies/iloveny/social-retainer/logo-title.svg',
     backgroundImageUrl: s3 + 'case-studies/iloveny/social-retainer/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/iloveny/social-retainer/landscape.jpg',
     logoColor: '#d52027',
@@ -381,6 +370,7 @@ const data = [
       bgColor: '#d52027'
     },
     results: {
+      deviceImageUrl: s3 + 'case-studies/iloveny/social-retainer/device.png',
       stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
       statColor: '#ffffff',
       statLabelColor: '#d52027',
@@ -415,7 +405,6 @@ const data = [
   //   title: 'ascension',
   //   subtitle: 'instagram campaign',
   //   type: 'case-study',
-  //   infoPath: s3 + 'case-studies/syfy/ascension/Glow_Featured_Ascension.svg',
   //   backgroundImageUrl: s3 +  'case-studies/syfy/ascension/Ascension_Image.jpg',
   //   backgroundImageUrlVert: s3 + 'case-studies/syfy/ascension/Glow_Home_Ascension_Vertical.jpg',
   //   logoColor: '#00838b',
@@ -433,7 +422,6 @@ const data = [
     subtitle: 'facebook experience',
     subtitleSlug: 'facebook experience',
     type: 'case-study',
-    infoPath: s3 + 'case-studies/cn/winter-calendar/logo-title.svg',
     backgroundImageUrl: s3 +  'case-studies/cn/winter-calendar/landscape.jpg',
     backgroundImageUrlVert: s3 +  'case-studies/cn/winter-calendar/landscape.jpg',
     logoColor: '#00283f',
@@ -456,7 +444,7 @@ const data = [
     sidebar: {
       copyColor: '#83a6b4',
       headlineColor: '#fff',
-      customClientLogo: 'cartoon-network-std'
+      customClientLogo: 'cartoon-network-alternate'
     },
     shareButton: {
       strokeColor: '#fcb823',
@@ -482,7 +470,6 @@ const data = [
     subtitle: 'video campaign',
     subtitleSlug: 'video campaign',
     type: 'case-study',
-    infoPath: s3 + 'case-studies/yahoo/how-i-did-it/logo-title.svg',
     backgroundImageUrl: s3 +  'case-studies/yahoo/how-i-did-it/landscape.jpg',
     backgroundImageUrlVert: s3 +  'case-studies/yahoo/how-i-did-it/landscape.jpg',
     logoColor: '#00283f',
@@ -491,7 +478,7 @@ const data = [
     gradientTop: '#00283f',
     gradientBottom: '#074d68',
     cat: ' ― cn | calendar ― ',
-    services: ['video production', 'post production', 'motion design', 'scripting', 'direction', 'production personnel', 'audio engineering'],
+    services: ['Full-service production', 'motion design', 'scripting', 'direction'],
     copyColor: '#000000',
     templateName: 'HowIDidIt',
     headlineColor: '#1EB547',
@@ -566,7 +553,6 @@ const data = [
     subtitle: 'social media campaign',
     subtitleSlug: 'social media campaign',
     type: 'case-study',
-    infoPath: s3 + 'case-studies/syfy/sharknado/logo-title.svg',
     backgroundImageUrl: s3 + 'case-studies/syfy/sharknado/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/syfy/sharknado/vertical.jpg',
     logoColor: '#a3373f',
@@ -575,7 +561,7 @@ const data = [
     gradientBottom: '#0b1c28',
     featuredProjectTitleColor: '#a3373f',
     sidebarLogoColor: '#ffffff',
-    cat: ' ― syfy | sharknado ',
+    cat: ' ― syfy | sharknado - ',
     templateName: 'Sharknado',
     // sharknado social strategy comminutiy mangement content lab creative execution influencer marketing 
     services: ['social strategy', 'community management', 'content lab', 'creative execution', 'influencer marketing'],
@@ -584,16 +570,21 @@ const data = [
       bgColor: '#0b1c28' 
     },
     lockup: {
-      className: 'sharknado-lockup'
+      className: 'sharknado-lockup',
+      projectColor: '#fff',
+      featured: {
+        projectColor: '#a3373f'
+      }
     },
     backbar: {
       bgColor: '#091720'
     },
     results: {
-      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+      stats: [{label: '#1 in U.S. & #2 across the planet', stat: 'Trending'}, {label: 'video views', stat: '6M'}, {label: 'Twitter Impressions', stat: '2B'}],
       statColor: '#ffffff',
       statLabelColor: '#7d2f37',
-      bgColor: '#091720'
+      bgColor: '#091720',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-device.png'
     },
     sidebar: {
       // logoColor: '#aaa',
@@ -617,7 +608,6 @@ const data = [
     subtitle: 'social media agency of record',
     subtitleSlug: 'social agency of record',
     type: 'case-study',
-    infoPath: s3 + 'case-studies/wkc/westminster-dog-show/logo-title.svg',
     backgroundImageUrl: s3 + 'case-studies/wkc/westminster-dog-show/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/wkc/westminster-dog-show/landscape.jpg',
     secColor: '#502173',
@@ -637,16 +627,17 @@ const data = [
       bgColor: '#d6963f'
     },
     results: {
-      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+      stats: [{label: 'Snapchat Live Stories views', stat: '26M'}, {label: 'FB users reached during 4 show days', stat: '7.8M'}, {label: 'Instagram followers', stat: 'doubled'}, {label: 'Visitors driven to WKC website', stat: '50K+'}],
       statColor: '#ffffff',
       statLabelColor: '#d6963f',
-      bgColor: '#431d67'
+      bgColor: '#431d67',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/device.png' 
     },
     sidebar: {
       logoColor: '#d6963f',
       copyColor: '#8b6ba9',
       headlineColor: '#fff',
-      customClientLogo: 'westminster-yellow'
+      customClientLogo: 'westminster-alternate'
     },
     shareButton: {
       strokeColor: '#d6963f',
@@ -692,7 +683,6 @@ module.exports = data;
 //   title: 'the mindy project',
 //   subtitle: 'social media campaign',
 //   type: 'case-study',
-//   infoPath: s3 + 'case-studies/hulu/mindy-project/logo-title.svg',
 //   backgroundImageUrl: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
 //   backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
 //   logoColor: '#e70062',
@@ -732,7 +722,6 @@ module.exports = data;
 //   title: 'casual',
 //   subtitle: 'social media campaign',
 //   type: 'case-study',
-//   infoPath: s3 + 'case-studies/hulu/casual/logo-title.svg',
 //   backgroundImageUrl: s3 + 'case-studies/hulu/casual/landscape.jpg',
 //   backgroundImageUrlVert: s3 + 'case-studies/hulu/casual/landscape.jpg',
 //   logoColor: '#68ae34',
