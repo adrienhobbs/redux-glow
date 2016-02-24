@@ -59,11 +59,11 @@ export class FeaturedStudy extends PageLayout {
       TweenLite.fromTo(this.refs.projectInner, 1.65, {y: -40, z: 0}, {y: 0, ease: Expo.easeInOut, z: 0});
     }
 
-    if (prevState.singleMode && !this.state.singleMode && this.props.routerState.location.pathname !== '/') {
+    if (prevState.singleMode && !this.state.singleMode && this.props.routerState.locationBeforeTransitions.pathname !== '/') {
       this.context.router.goBack();
     }
 
-    if (this.props.routerState.location.pathname === '/' && prevProps.routerState.location.pathname === this.getProjectUrl()) {
+    if (this.props.routerState.locationBeforeTransitions.pathname === '/' && prevProps.routerState.locationBeforeTransitions.pathname === this.getProjectUrl()) {
       if (this.state.singleMode) {
         this.changeState();
       }
