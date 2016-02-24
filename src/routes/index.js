@@ -19,7 +19,7 @@ import WorkView             from 'views/WorkView/work';
 import Direct from 'components/case-study/direct';
 import TestingStuff from 'components/testing-view/testingview.js';
 
-export default (
+export default (store) => (
   <Route path='/' component={CoreLayout}>
     <Route component={TestingStuff} path='/testing' />
     <IndexRoute component={HomeView} />

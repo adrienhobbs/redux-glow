@@ -1,15 +1,18 @@
-import Koa from 'koa';
-import convert from 'koa-convert';
-import webpack from 'webpack';
-import webpackConfig from '../build/webpack.config';
-import historyApiFallback from 'koa-connect-history-api-fallback';
-import serve from 'koa-static';
-import _debug from 'debug';
-import config from '../config';
+import Koa from 'koa'
+import convert from 'koa-convert'
+import webpack from 'webpack'
+import webpackConfig from '../build/webpack.config'
+import historyApiFallback from 'koa-connect-history-api-fallback'
+import serve from 'koa-static'
+import _debug from 'debug'
+import config from '../config'
+import webpackProxyMiddleware from './middleware/webpack-proxy'
+import webpackDevMiddleware from './middleware/webpack-dev'
+import webpackHMRMiddleware from './middleware/webpack-hmr'
 
-const debug = _debug('app:server');
-const paths = config.utils_paths;
-const app = new Koa();
+const debug = _debug('app:server')
+const paths = config.utils_paths
+const app = new Koa()
 
 // This rewrites all routes requests to the root /index.html file
 // (ignoring file requests). If you want to implement isomorphic
@@ -27,8 +30,13 @@ if (config.env === 'development') {
   // Enable webpack-dev and webpack-hot middleware
   const { publicPath } = webpackConfig.output;
 
-  app.use(require('./middleware/webpack-dev')(compiler, publicPath));
-  app.use(require('./middleware/webpack-hmr')(compiler));
+  if (config.proxy && config.proxy.enabled) {
+    const options = config.proxy.options
+    app.use(convert(webpackProxyMiddleware(options)))
+  }
+
+  app.use(webpackDevMiddleware(compiler, publicPath))
+  app.use(webpackHMRMiddleware(compiler))
 
   // Serve static assets from ~/src/static since Webpack is unaware of
   // these files. This middleware doesn't need to be enabled outside

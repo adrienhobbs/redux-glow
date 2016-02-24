@@ -1,3 +1,4 @@
+/* @flow */
 import { createAction, handleActions } from 'redux-actions';
 import Counter from '../../utilities/counter';
 // ------------------------------------
@@ -22,13 +23,16 @@ export const goToNumber  = createAction(GO_TO_NUMBER, (newState) => newState);
 // NOTE: This is solely for demonstration purposes. In a real application,
 // you'd probably want to dispatch an action of COUNTER_DOUBLE and let the
 // reducer take care of this logic.
-export const doubleAsync = () => {
-  return (dispatch, getState) => {
-    setTimeout(() => {
-      dispatch(increment(getState().counter));
-    }, 1000);
-  };
-};
+export const doubleAsync = (): Function => {
+  return (dispatch: Function, getState: Function): Promise => {
+    return new Promise((resolve: Function): void => {
+      setTimeout(() => {
+        dispatch(increment(getState().counter))
+        resolve()
+      }, 200)
+    })
+  }
+}
 
 export const actions = {
   next,
@@ -45,6 +49,13 @@ const initialState = {
   next: null,
   previous: null
 };
+
+// ------------------------------------
+// Action Handlers
+// ------------------------------------
+const ACTION_HANDLERS = {
+  [COUNTER_INCREMENT]: (state: number, action: {payload: number}): number => state + action.payload
+}
 
 // ------------------------------------
 // Reducer
@@ -93,3 +104,8 @@ export default handleActions({
     }
   }
 }, initialState);
+// export default function counterReducer (state: number = initialState, action: Action): number {
+//   const handler = ACTION_HANDLERS[action.type]
+
+//   return handler ? handler(state, action) : state
+// }
