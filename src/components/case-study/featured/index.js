@@ -109,7 +109,7 @@ export class FeaturedStudy extends PageLayout {
         <CaseStudy slider showBody={this.state.showBody} singleMode={this.state.singleMode} viewport={this.props.viewport} ref='projectInfoSvg' data={this.props.data} />
         <div ref='info' className='featured-info-outer'>
           <Spring endValue={this.state.singleMode ? {val: window.innerHeight, config: [200, 15]} : {val: 0, config: [150, 16]}}>
-            {val =>
+            {(val) =>
             this.toggleProjectText(val, this)
             }
           </Spring>

@@ -31,8 +31,10 @@
     "one-var"          : 0,
     "no-undefined"     : 0,
     "no-undef"         : 0,
-    "new-cap"          : 0
+    "new-cap"          : 0,
     "flow-vars/define-flow-type": 1,
-    "flow-vars/use-flow-type": 1
+    "flow-vars/use-flow-type": 1,
+    "no-useless-constructor": 0,
+    "react/jsx-no-bind": 0
   }
 }

@@ -47,10 +47,10 @@ export class Lockup extends React.Component {
   render () {
     return (
       <div className={this.getDivClassname()}>
-      <svg ref='lockup'  role='img' className={this.getLocalClassname()}>
-        <use xlinkHref={`#${this.getClassname()}`}></use>
-      </svg>
-    </div>
+        <svg ref='lockup'  role='img' className={this.getLocalClassname()}>
+          <use xlinkHref={`#${this.getClassname()}`}></use>
+        </svg>
+      </div>
     );
   }
 }

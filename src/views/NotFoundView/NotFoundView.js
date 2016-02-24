@@ -29,10 +29,6 @@ export class NotFoundView extends PageLayout {
     }
   }
 
-  constructor (props) {
-    super(props);
-  }
-
   render () {
     return (
       <div>soon to be 404 page

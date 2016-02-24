@@ -197,7 +197,7 @@ export class DesktopHomeView extends PageLayout {
   render () {
     return (
       <div ref='ctr' className={styles.homeContainerDesktop}
-        onWheel={(evt) => this.onWheel(evt) }
+        onWheel={(evt) => this.onWheel(evt)}
         onTouchStart={(evt) => this.onTouchStart(evt)}
         onTouchMove={(evt) => this.onTouchMove(evt)}>
         <WorkItems

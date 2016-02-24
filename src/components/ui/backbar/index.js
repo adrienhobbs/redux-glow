@@ -57,8 +57,8 @@ export class BackBar extends React.Component {
             <span className={styles.view_more}>view more</span>
           </div>
           <div className={styles.glow_logo}>
-          <GlowLogo width={'65'} />
-        </div>
+            <GlowLogo width={'65'} />
+          </div>
         </div>
       </div>
     );

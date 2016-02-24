@@ -15,7 +15,7 @@ const mapStateToProps = (state) => ({
   nav: state.nav,
   pageTransition: state.pageTransition,
   routerState: state.router,
-  currentPath: state.router.location.pathname,
+  currentPath: state.router.locationBeforeTransitions.pathname,
   viewport: state.viewport,
   colors: state.work.colors,
   currentColor: state.work.colors.get(state.counter.current)

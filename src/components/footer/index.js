@@ -26,21 +26,27 @@ const Footer = () => {
       </article>
       <article className={styles.footer_mobile}>
         <ul>
-          <li><a href='http://www.twitter.com/glow'>
+          <li>
+            <a href='http://www.twitter.com/glow'>
               <svg className={styles.iconSVG} role='img' >
                 <use xlinkHref='#glow-icon-twitter'></use>
               </svg>
-          </a></li>
-          <li><a href='https://www.facebook.com/glowinteractive'>
+            </a>
+          </li>
+          <li>
+            <a href='https://www.facebook.com/glowinteractive'>
               <svg className={styles.iconSVG}  role='img' >
                 <use xlinkHref='#glow-icon-facebook'></use>
               </svg>
-          </a></li>
-          <li><a href='mailto:info@glowinteractive.com'>
+            </a>
+          </li>
+          <li>
+            <a href='mailto:info@glowinteractive.com'>
               <svg className={styles.iconSVG} role='img' >
                 <use xlinkHref='#glow-icon-email'></use>
               </svg>
-          </a></li>
+            </a>
+          </li>
         </ul>
       </article>
       <section className={styles.footer_colophon}>

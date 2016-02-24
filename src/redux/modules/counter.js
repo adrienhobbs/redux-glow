@@ -23,16 +23,16 @@ export const goToNumber  = createAction(GO_TO_NUMBER, (newState) => newState);
 // NOTE: This is solely for demonstration purposes. In a real application,
 // you'd probably want to dispatch an action of COUNTER_DOUBLE and let the
 // reducer take care of this logic.
-export const doubleAsync = (): Function => {
-  return (dispatch: Function, getState: Function): Promise => {
-    return new Promise((resolve: Function): void => {
-      setTimeout(() => {
-        dispatch(increment(getState().counter))
-        resolve()
-      }, 200)
-    })
-  }
-}
+// export const doubleAsync = (): Function => {
+//   return (dispatch: Function, getState: Function): Promise => {
+//     return new Promise((resolve: Function): void => {
+//       setTimeout(() => {
+//         dispatch(increment(getState().counter))
+//         resolve()
+//       }, 200)
+//     })
+//   }
+// }
 
 export const actions = {
   next,
@@ -53,9 +53,9 @@ const initialState = {
 // ------------------------------------
 // Action Handlers
 // ------------------------------------
-const ACTION_HANDLERS = {
-  [COUNTER_INCREMENT]: (state: number, action: {payload: number}): number => state + action.payload
-}
+// const ACTION_HANDLERS = {
+//   [COUNTER_INCREMENT]: (state: number, action: {payload: number}): number => state + action.payload
+// }
 
 // ------------------------------------
 // Reducer
