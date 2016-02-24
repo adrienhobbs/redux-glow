@@ -6,7 +6,8 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import makeRoutes from './routes';
 import Root from './containers/Root';
 import configureStore from './redux/configureStore';
-
+import ga from 'react-google-analytics';
+ga('create', 'UA-237035-1', 'auto');
 // Configure history for react-router
 const browserHistory = useRouterHistory(createBrowserHistory)({
   basename: __BASENAME__
@@ -33,3 +34,5 @@ ReactDOM.render(
   <Root history={history} routes={routes} store={store} />,
   document.getElementById('root')
 );
+
+history.listen((location) => { ga('send', 'pageview'); });

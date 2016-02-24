@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { Spring } from 'react-motion';
 import CaseStudy from 'components/case-study';
 import BackBar from 'components/ui/backbar';
 import ViewCaseStudy from 'components/ui/icons/view-case-study';
@@ -54,6 +53,7 @@ export class FeaturedStudy extends PageLayout {
       TweenLite.fromTo(this.refs.projectSvg, 2, {y: 500, z: 0}, {z: 0, y: 0, ease: Expo.easeInOut});
       TweenLite.fromTo(this.refs.projectInner, 1.75, {y: 500, z: 0}, {z: 0, y: 0, ease: Expo.easeInOut});
     }
+
     if (prevProps.position === 'top' && this.props.position === 'center') {
       TweenLite.fromTo(this.refs.projectSvg, 1.25, {y: -50, z: 0}, {y:0, ease: Expo.easeInOut, z: 0});
       TweenLite.fromTo(this.refs.projectInner, 1.65, {y: -40, z: 0}, {y: 0, ease: Expo.easeInOut, z: 0});
@@ -68,7 +68,16 @@ export class FeaturedStudy extends PageLayout {
         this.changeState();
       }
     }
+
+    if (this.state.singleMode !== prevState.singleMode) {
+      if (!this.state.singleMode) {
+        TweenLite.to(this.refs.info, 0.8, {y: 0, ease: Back.easeInOut.config(1)});
+      } else if (this.state.singleMode) {
+        TweenLite.to(this.refs.info, 0.5, {y: 800, ease: Expo.easeInOut});
+      }
+    }
   }
+
   toggleProjectInfo (val) {
     this.toggleProjectText(val.val);
     return <span></span>;
@@ -108,11 +117,6 @@ export class FeaturedStudy extends PageLayout {
       <div className={classes.featuredSlideContainer} ref='project_container'>
         <CaseStudy slider showBody={this.state.showBody} singleMode={this.state.singleMode} viewport={this.props.viewport} ref='projectInfoSvg' data={this.props.data} />
         <div ref='info' className='featured-info-outer'>
-          <Spring endValue={this.state.singleMode ? {val: window.innerHeight, config: [200, 15]} : {val: 0, config: [150, 16]}}>
-            {(val) =>
-            this.toggleProjectText(val, this)
-            }
-          </Spring>
           <svg ref='projectSvg' width='100%' height='100%' viewBox='0, 0, 1728, 955' preserveAspectRatio='xMidYMid slice'>
             <svg viewBox={vb} preserveAspectRatio='xMidYMax meet' ref='projectInfo' fill={this.getShapeColor()} fillOpacity='0.8'>
               <polygon ref='shapePoly' points='0,340 0,492 1204,492 1728,82 1728,0'></polygon>

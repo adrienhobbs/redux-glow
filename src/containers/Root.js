@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import { Provider } from 'react-redux';
 import Router from 'react-router/lib/Router';
+import ga from 'react-google-analytics';
+const GAInitializer = ga.Initializer;
 
 export default class Root extends React.Component {
   static propTypes = {
@@ -38,6 +40,7 @@ export default class Root extends React.Component {
         <div >
           {this.content}
           {this.devTools}
+          <GAInitializer />
         </div>
       </Provider>
     );
