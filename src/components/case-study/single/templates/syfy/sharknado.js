@@ -1,7 +1,6 @@
 import React from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
-import Results from 'components/case-study/content-modules/results';
 
 export class Sharknado extends BaseTemplate {
 
@@ -42,11 +41,12 @@ export class Sharknado extends BaseTemplate {
   }
   render () {
     const copyStyle = this.getCopyStyle();
+    const ResultsSection = this.getResultsTemplate();
     return (
       <div ref='studyContent' className='study-content' style={{background: this.props.data.get('secColor')}}>
         <div className='content-container' style={{backgroundColor: this.props.data.get('secColor')}}>
           <AboutSection data={this.props.data} />
-          <Results data={this.props.data} />
+          <ResultsSection data={this.props.data} />
           <article className='approach'>
             {this.createHeadlineEl('approach')}
             <div className='copy'>
@@ -76,55 +76,3 @@ export class Sharknado extends BaseTemplate {
 }
 
 export default Sharknado;
-
-          // <article className='results' id='results'>
-          //   <div className='results-bg' style={{backgroundColor: this.props.data.get('results').bgColor}}></div>
-          //   <div className='results-outer'>
-          //     <h1 style={this.getHeadlineStyle()} className='study_headline section_headline'>results</h1>
-          //     <div className='results-inner'>
-          //       <div className='stat-boxes'>
-          //         <div className='stat-device-left'>
-          //           <div className='stat-box-device'>
-          //             <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-          //               #Trending
-          //             </div>
-          //             <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-          //               Trended #1 in U.S. & #2 across the planet
-          //             </h5>
-          //           </div>
-          //           <div className='stat-rule'></div>
-          //           <div className='stat-box-device'>
-          //             <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-          //               6m
-          //             </div>
-          //             <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-          //               video views
-          //             </h5>
-          //           </div>
-          //         </div>
-          //         <div className='stat-device-image'>
-          //           <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-device.png' alt='' />
-          //         </div>
-          //         <div className='stat-device-right'>
-          //           <div className='stat-box-device'>
-          //             <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-          //               100%
-          //             </div>
-          //             <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-          //              increase in Twitter traffic
-          //             </h5>
-          //           </div>
-          //           <div className='stat-rule'></div>
-          //           <div className='stat-box-device'>
-          //             <div style={{color: this.props.data.get('results').statColor}} className='stat-num'>
-          //               2b
-          //             </div>
-          //             <h5 style={{color: this.props.data.get('results').statLabelColor}} className='stat-description'>
-          //               Twitter impressions
-          //             </h5>
-          //           </div>
-          //         </div>
-          //       </div>
-          //     </div>
-          //   </div>
-          // </article>

@@ -44,6 +44,10 @@ export class FeaturedStudyMobile extends PageLayout {
     this.overlay = this.refs.overlay;
     this.TL = new TimelineMax({onReverseCompleteParams: ['{self}'], onReverseComplete:  (self)  => { self.clear(); }});
   }
+  static contextTypes = {
+    viewport: PropTypes.object,
+    router: PropTypes.object
+  };
 
   componentWillReceiveProps (nextProps) {
     if (!this.props.isHidden && nextProps.isHidden) {

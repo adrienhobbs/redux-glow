@@ -13,12 +13,15 @@ export class HomeMobile extends PageLayout {
 
   componentDidMount () {
     this.pageCtr = document.getElementsByClassName('page-container')[0];
+    this.viewCtr = document.getElementsByClassName('view-container')[0];
     this.TL = new TimelineLite();
     this.TL.set(this.pageCtr, {width: '100%'});
+    this.TL.set(this.viewCtr, {paddingTop: 0});
   }
 
   componentWillUnmount () {
     TweenLite.set(this.pageCtr, {clearProps: 'width'});
+    TweenLite.set(this.viewCtr, {clearProps: 'paddingTop'});
   }
   onChange (state) {
     this.setState(state);
@@ -29,6 +32,7 @@ export class HomeMobile extends PageLayout {
       <div className={styles.mobile_home_wrap} ref='page'>
         <div className={styles.home_mobile}>
           <div className={styles.home_mobile_image}>
+            <img src='https://s3.amazonaws.com/weareglow-assets/assets/mobile-home.jpg' alt='' />
           </div>
           <div className={styles.inner_wrap}>
             <h1 ref='hdl' className='page-title' >we are glow</h1>

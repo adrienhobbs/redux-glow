@@ -21,6 +21,7 @@ const mapStateToProps = (state) => ({
 });
 
 export class CoreLayout extends React.Component {
+
   static propTypes = {
     dispatch: PropTypes.func,
     children: PropTypes.object,
@@ -29,19 +30,22 @@ export class CoreLayout extends React.Component {
     location: PropTypes.object
   };
 
-  constructor (props) {
-    super(props);
-    this.actions = bindActionCreators(Object.assign({}, transitionActions, counterActions, navActions, workActions, viewportActions), props.dispatch);
-    resizeUtils.init(this.actions);
-  }
   static contextTypes = {
     router: PropTypes.object
   };
+
   static childContextTypes = {
     router: PropTypes.object,
     viewport: PropTypes.object,
     transitionToNewRoute: PropTypes.func
   };
+
+  constructor (props) {
+    super(props);
+    this.actions = bindActionCreators(Object.assign({}, transitionActions, counterActions, navActions, workActions, viewportActions), props.dispatch);
+    resizeUtils.init(this.actions);
+  }
+
   getChildContext () {
     return {
       router: this.context.router,
@@ -49,10 +53,13 @@ export class CoreLayout extends React.Component {
       transitionToNewRoute: this.transitionToNewRoute.bind(this)
     };
   }
+
   componentDidMount () {
+    // so the page transition knows what direction to animate from
     this.actions.setCurrentLinkIndex(this.props.location.pathname);
     this.checkFramePositionType(this.props.location.pathname);
   }
+
   checkFramePositionType (path) {
     if ((this.props.viewport.isPhone) && path === '/') {
       TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'absolute'});
@@ -61,6 +68,7 @@ export class CoreLayout extends React.Component {
       TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'fixed'});
     }
   }
+
   transitionToNewRoute (path = '/', newIndex) {
     if (this.props.location.pathname !== path) {
       this.checkFramePositionType(path);
@@ -70,6 +78,7 @@ export class CoreLayout extends React.Component {
       });
     }
   }
+
   testForFeatured (re, str) {
     if (str.search(re) !== -1) {
       return true;
@@ -77,6 +86,7 @@ export class CoreLayout extends React.Component {
       return false;
     }
   }
+
   getFooter () {
     const isFeatured = this.testForFeatured('featured', this.props.location.pathname);
     return (this.props.location.pathname !== '/' && isFeatured === false || this.props.viewport.isPhone) ? <Footer /> : null;

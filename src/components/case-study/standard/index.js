@@ -45,10 +45,12 @@ const ProjectIntro = React.createClass({
   },
 
   componentDidMount () {
-    // if (this.props.isOpen && !this.state.singleMode) {
-    //   this.isNew = true;
-    //   this.openStudyFromProject();
-    // }
+    this.projects = document.getElementsByClassName('project-intro');
+    if (this.props.isOpen && !this.state.singleMode) {
+      this.isNew = true;
+      TweenMax.delayedCall(1, this.openStudyFromProject);
+      // this.openStudyFromProject();
+    }
   },
 
   hideOrShow (prevProps, prevState) {
@@ -59,6 +61,37 @@ const ProjectIntro = React.createClass({
     }
   },
 
+  getClosestProject () {
+    console.log(this.props.id);
+    return (this.props.id !== 0) ? this.props.id - 1 : 1;
+  },
+  getReverseTrackTween () {
+    const TL = new TimelineLite();
+    const rect = this.refs.projectBox.getBoundingClientRect();
+    const infoHeight = this.refs.projectInfo.getBoundingClientRect().height;
+    const projHeight = (rect.height > 100) ? rect.height - infoHeight : this.projects[this.getClosestProject()].getBoundingClientRect().height + (infoHeight / 2);
+
+    TL.set(this.refs.projectBox, {height: projHeight});
+    TL.set(this.refs.projectImage, {
+      className: '+=link'
+    }, 0);
+
+    TL.to(this.refs.projectIntro, 0.8, {
+      width: rect.width,
+      height: projHeight,
+      x: rect.left,
+      y: rect.top,
+      ease: Expo.easeInOut,
+
+      onComplete: () => {
+        TweenLite.set([document.body], {className: '-=locked'});
+        TweenLite.set(this.refs.projectIntro, {clearProps: 'all', className: '+=closed'});
+        TweenLite.set(this.refs.projectBox, {clearProps: 'all'});
+      }
+    }, 0);
+
+    return TL;
+  },
   getTrackTween () {
     const TL = new TimelineLite();
     const rect = this.refs.projectIntro.getBoundingClientRect();
@@ -87,11 +120,14 @@ const ProjectIntro = React.createClass({
       y: 0,
       z: 0,
       xPercent: -50,
-      ease: Quart.easeInOut,
+      ease: Expo.easeInOut,
       clearProps: 'all',
       className: '-=closed',
       onComplete: () => {
         TweenLite.set([document.body], {className: '+=locked'});
+        TweenLite.set([this.refs.projectIntro, this.refs.projectImage, this.refs.projectBox], {
+          clearProps: 'all'
+        });
       }
     }, 0);
     return TL;
@@ -134,8 +170,8 @@ const ProjectIntro = React.createClass({
     TweenLite.set(this.refs.shape, {scaleY: 0});
     this.hoverOut();
     this.studyTL = new TimelineLite({onComplete: () => this.setState({showBody: true})});
-    // const startPoint = (this.isNew) ? 2 : this.props.id/10;
-    this.studyTL.addLabel('start', this.props.id / 10);
+    const startPoint = (this.isNew) ? 0.5 : this.props.id / 100;
+    this.studyTL.addLabel('start', startPoint);
     this.studyTL.add(this.getTrackTween(), 'start');
     this.studyTL.add(this.getNavTween(), 'start+=0.2');
   },
@@ -157,7 +193,7 @@ const ProjectIntro = React.createClass({
     sequence.add(this.reverseStudyTL, 0);
     sequence.add(this.getNavTween, 0.4);
     sequence.add(this.unHideOthers(), 0.2);
-    sequence.add(TweenLite.to(this.refs.projectInfo, 1.3, {delay: this.props.id / 10, autoAlpha: 1}), 1.1);
+    sequence.add(TweenLite.to(this.refs.projectInfo, 1.3, {delay: this.props.id / 100, autoAlpha: 1}), 1.1);
     sequence.play();
   },
 
@@ -175,7 +211,8 @@ const ProjectIntro = React.createClass({
     });
     du.removeClass(document.body, 'locked');
     du.removeClass(document.documentElement, 'locked');
-    return this.studyTL.reverse();
+    return this.getReverseTrackTween();
+    // return this.studyTL.reverse();
   },
 
   getTags () {

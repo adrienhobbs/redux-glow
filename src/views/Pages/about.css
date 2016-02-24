@@ -1,14 +1,22 @@
 @use lost;
 
 .row {
-  composes: row from 'styles/mixins.css';
+  /* composes: row from 'styles/mixins.css'; */
   /* margin-top: 3%; */
   /* margin-bottom: 3%; */
+  lost-flex-container: row;
 }
 
+.headline {
+  composes: headline from 'styles/mixins.css'; 
+  margin-top: 1em;
+  text-align: center;
+  width: 100%;
+}
 .row_large {
   margin-top: 3%;
-  composes: rowLarge from 'styles/mixins.css';
+  /* composes: rowLarge from 'styles/mixins.css'; */
+  lost-flex-container: row;
 }
 
 .about_all_clients {
@@ -31,6 +39,29 @@
   color: var(--color-tin);
 }
 
+.about_copy_left {
+  lost-column: 1/2;
+  @media(--md-down) {
+    lost-column: 1 0 0;
+  }
+
+  p {
+    @media(--md-down) {
+      font-size: 1.2em;
+    }
+  }
+}
+.about_copy_right {
+  lost-column: 1/2;
+  @media(--md-down) {
+    lost-column: 1 0 0;
+  }
+  p {
+    @media(--md-down) {
+      font-size: 1.2em;
+    }
+  }
+}
 .about_copy {
   lost-column: 1/2;
   @media (--md-down) {
@@ -40,6 +71,7 @@
 }
 
 .about_employee_card {
+
   @media (--sm-down) {
     lost-column: 1 0 0;
     margin-bottom: 15px;
@@ -56,7 +88,7 @@
   }
 
   @media(--lg) {
-    lost-column: 1/3 3 30px;
+    lost-column: 1/3;
     margin-bottom: 30px;
   }
 

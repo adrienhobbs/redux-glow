@@ -75,7 +75,6 @@
   }
 }
 
-
 /* SMALL SCREEN AND DOWN*/
 @media(--sm-down) {
   .clientLogoContainer {
@@ -90,10 +89,16 @@
 .headline {
   composes: headline from 'styles/mixins.css';
   /* margin-top: 4%; */
+  @media(--lg-down) {
+    font-size: 2.5em;
+  }
 }
 
 .subtitle {
   composes: headline_subtitle from 'styles/mixins.css';
+  @media(--lg-down) {
+    font-size: 1rem;
+  }
   div {
     display: inline-block;
     &:first-of-type {

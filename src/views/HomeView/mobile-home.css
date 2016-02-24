@@ -49,17 +49,17 @@
   position: relative;
   text-align: center;
   &_image {
-    min-height: 47vh;
-    background-position: center center;
-    background-image: url('https://s3.amazonaws.com/weareglow-assets/assets/mobile-home.jpg');
-    background-size: cover;
+    min-height: 47%;
+    /* background-position: center center; */
+    /* background-image: url('https://s3.amazonaws.com/weareglow-assets/assets/mobile-home.jpg'); */
+    /* background-size: cover; */
   }
 
 }
 
 .inner_wrap {
-  margin-top:2vh;
-  height: 41vh;
+  margin-top:2%;
+  height: 41%;
   width: 100%;
   position: relative;
 
@@ -74,13 +74,13 @@
 }
 
 .scroll_for_more {
-  margin-top:2vh;
+  margin-top:0%;
   text-align: center;
   font-family: var(--primary-font-family);
   font-size: 1.5em;
   width: 100%;
   color: var(--color-radical-red);
-  position: absolute;
+  /* position: absolute; */
   font-weight: 600;
 }
 

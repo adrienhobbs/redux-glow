@@ -13,7 +13,7 @@
   margin-bottom: 5%;
   @media(--sm-down) {
     lost-center: 500px;
-    lost-column: 1;
+    lost-column: 1 0 0;
     margin-right: auto;
   }
 

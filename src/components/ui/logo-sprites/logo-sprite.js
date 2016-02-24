@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 // import './symbol/svg/sprite.symbol.svg';
-// import './glow-icons.svg';
+import './glow-icons.svg';
 // import './logo-sprite.svg';
 import './svg/symbol/svg/sprite.symbol.svg';
 
@@ -8,21 +8,21 @@ export class SpriteLogo extends React.Component {
   static propTypes = {
     clientName: PropTypes.string,
     suffix: PropTypes.string,
-    color: PropTypes.string
+    color: PropTypes.string,
+    isCustom: PropTypes.bool
   };
 
   constructor (props) {
     super(props);
     this.logoEl = document.getElementsByClassName(props.clientName);
-    if (this.logoEl && props.color) {
-      this.tl = new TimelineLite();
-      this.tl.set(this.logoEl, {fill: props.color || '#666'});
+    if (this.logoEl && props.color && !props.isCustom) {
+      TweenLite.set(this.logoEl, {fill: props.color || '#666'});
     }
   };
 
   componentWillUnmount () {
-    if (this.tl) {
-      this.tl.reverse();
+    if (this.logoEl) {
+      TweenLite.set(this.logoEl, {clearProps: 'all'});
     }
   }
 

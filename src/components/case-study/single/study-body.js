@@ -13,6 +13,7 @@ const StudyBody = React.createClass({
   },
 
   componentDidMount () {
+    // document.body.webkitRequestFullscreen();
     this.TL = new TimelineLite({autoRemoveChildren: true});
     TweenLite.set(this.refs.studyWrapper, {yPercent: 140});
     TweenLite.to(this.refs.studyOverlay, 0.8, {autoAlpha: 1, ease: Circ.easeInOut, onComplete: () => this.bringInContent()});

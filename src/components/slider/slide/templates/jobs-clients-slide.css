@@ -11,18 +11,23 @@
   composes: headline_subtitle from 'styles/mixins.css';
   z-index: 3;
   position: relative;
+
+
+  @media(--lg-down) {
+    font-size: 1rem;
+  }
 }
 
 .inner {
   left: center;
-  bottom: 6%;
-
-  width: 90%;
+  top: center;
+  width: 81%;
 }
 
 .hiring {
   text-align: center;
 }
+
 .hiring_title {
   position: relative;
 }
@@ -42,16 +47,21 @@
 
 .hiring_copy {
   lost-center: 91%;
+  margin-top: 2em;
   p {
     font-size: 1.5rem;
     color: var(--color-slate-gray);
+    @media (--lg-down) {
+      font-size: 1.2rem;
+    }
     @media(--sm-down) {
       font-size: 1rem;
     }
   }
 }
+
 .view_openings {
-  margin-top: 1%;
+  margin-top: 0;
   text-align: center;
   width: 100%;
   a {
@@ -68,4 +78,7 @@
   background-color: var(--color-alto);
   padding-left: 3%;
   padding-right: 3%;
+  @media(--lg-down) {
+    font-size: 2.5em;
+  }
 }

@@ -83,7 +83,8 @@ const data = [
       statColor: '#ffffff',
       statLabelColor: '#C03D3B',
       bgColor: '#0A2C3A',
-      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/device.png' 
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/device.png',
+      template: 'Standard'
     },
     endShape: {
       bgColor: '#0A2C3A'
@@ -121,10 +122,10 @@ const data = [
       bgColor: '#ed0f77'
     },
     results: {
-      stats: [{label: 'Facebook followers', stat: '+89%'}, {label: 'Facebook followers', stat: '+286%'}, {label: 'Twitter followers', stat: '+35%'}],
+      stats: [{label: 'Facebook followers', stat: '+89%'}, {label: 'Instagram followers', stat: '+286%'}, {label: 'Twitter followers', stat: '+35%'}],
       statColor: '#000000',
-      statLabelColor: '#ed0f77'
-      // customHtml: <div class='info-box'> testing </div>
+      statLabelColor: '#ed0f77',
+      template: 'CalloutBox'
     },
     sidebar: {
       logoColor: '#4d4d4d',
@@ -286,7 +287,8 @@ const data = [
       statColor:       '#ffffff',
       statLabelColor:  '#551313',
       bgColor:         '#171717',
-      deviceImageUrl: s3 + 'case-studies/syfy/12-monkeys/device.png'
+      deviceImageUrl: s3 + 'case-studies/syfy/12-monkeys/device.png',
+      template: 'Standard'
     },
 
     endShape: {
@@ -307,10 +309,6 @@ const data = [
     backgroundImageUrlVert: s3 + 'case-studies/tnt/proof/landscape.jpg',
     logoColor: '#82b3dc',
     secColor: '#ffffff',
-    copyColor: '#000000',
-    gradientTop: '#82b3dc',
-    gradientBottom: '#ffffff',
-    shapeColor: '#82b3dc',
     cat: ' ― tnt | proof ― ',
     logo: 'HBO_logo.svg',
     templateName: 'Proof',
@@ -324,7 +322,8 @@ const data = [
       stats: [{label: 'Video Views', stat: '7M'}, {label: 'Unique users reached', stat: '30M'}],
       statColor: '#ffffff',
       statLabelColor: '#000000',
-      bgColor: '#c3c3c3'
+      bgColor: '#c3c3c3',
+      template: 'Standard'
     },
     sidebar: {
       logoColor: '#aaa',
@@ -359,8 +358,6 @@ const data = [
     backgroundImageUrlVert: s3 + 'case-studies/iloveny/social-retainer/landscape.jpg',
     logoColor: '#d52027',
     secColor: '#1d1d1d',
-    gradientTop: '#d52027',
-    gradientBottom: '#1d1d1d',
     cat: ' ― ilny | aor ― ',
     services: ['social strategy', 'community management', 'content lab', 'creative execution'],
     recognition: ['beautiful destinations partnership'],
@@ -374,13 +371,14 @@ const data = [
       stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
       statColor: '#ffffff',
       statLabelColor: '#d52027',
-      bgColor: '#171717'
+      bgColor: '#171717',
+      template: 'Standard'
     },
     sidebar: {
       // logoColor: '#aaa',
       copyColor: '#616161',
       headlineColor: '#fff',
-      customClientLogo: 'ilny'
+      customClientLogo: 'ilny-alternate'
     },
     shareButton: {
       strokeColor: '#d52027',
@@ -426,8 +424,6 @@ const data = [
     backgroundImageUrlVert: s3 +  'case-studies/cn/winter-calendar/landscape.jpg',
     logoColor: '#00283f',
     secColor: '#074d68',
-    gradientTop: '#00283f',
-    gradientBottom: '#074d68',
     cat: ' ― cn | calendar ― ',
     services: ['ui/ux', 'custom animation', 'html5 development', 'creative execution'],
     templateName: 'WinterCalendar',
@@ -436,10 +432,15 @@ const data = [
       className: 'winter-calendar-lockup'
     },
     results: {
-      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+      stats: [
+        {stat: '3,345', label: 'Facebook likes'},
+        {stat: '53,456', label: 'Page views'}
+      ],
       statColor: '#ffffff',
       statLabelColor: '#fcb823',
-      bgColor: '#0d4155'
+      bgColor: '#0d4155',
+      template: 'Standard',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/cn/winter-calendar/results.png'
     },
     sidebar: {
       copyColor: '#83a6b4',
@@ -475,8 +476,6 @@ const data = [
     logoColor: '#00283f',
     bodyColor: 'ffffff',
     secColor: '#ffffff',
-    gradientTop: '#00283f',
-    gradientBottom: '#074d68',
     cat: ' ― cn | calendar ― ',
     services: ['Full-service production', 'motion design', 'scripting', 'direction'],
     copyColor: '#000000',
@@ -564,7 +563,7 @@ const data = [
     cat: ' ― syfy | sharknado - ',
     templateName: 'Sharknado',
     // sharknado social strategy comminutiy mangement content lab creative execution influencer marketing 
-    services: ['social strategy', 'community management', 'content lab', 'creative execution', 'influencer marketing'],
+    services: ['content lab', 'social strategy',   'creative execution', 'influencer marketing', 'community management'],
     headlineColor: '#7d2f37',
     mobile: {
       bgColor: '#0b1c28' 
@@ -584,7 +583,8 @@ const data = [
       statColor: '#ffffff',
       statLabelColor: '#7d2f37',
       bgColor: '#091720',
-      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-device.png'
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-device.png',
+      template: 'Standard'
     },
     sidebar: {
       // logoColor: '#aaa',
@@ -612,8 +612,6 @@ const data = [
     backgroundImageUrlVert: s3 + 'case-studies/wkc/westminster-dog-show/landscape.jpg',
     secColor: '#502173',
     logoColor: '#d6963f',
-    gradientTop: '#502173',
-    gradientBottom: '#d6963f',
     featuredProjectTitleColor: '#ffffff',
     templateName: 'WKC',
     services: ['social strategy', 'community management', 'content lab', 'creative execution', 'live event management'],
@@ -631,7 +629,8 @@ const data = [
       statColor: '#ffffff',
       statLabelColor: '#d6963f',
       bgColor: '#431d67',
-      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/device.png' 
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/device.png' ,
+      template: 'Standard'
     },
     sidebar: {
       logoColor: '#d6963f',

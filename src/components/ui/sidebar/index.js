@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './sidebar.css';
-// import ShareButton from 'components/ui/share-button';
 import Logo from 'components/ui/logo-sprites/logo-sprite';
 import isEmpty from 'lodash/isEmpty';
 
@@ -12,11 +11,16 @@ const Sidebar = React.createClass({
     return null;
   },
   componentWillUnmount () {
-    const icon = document.getElementById(this.getClient());
+    const icon = document.getElementsByClassName(this.getClient());
     TweenLite.set(icon, {fill: '#666'});
   },
   getClient () {
     return this.props.data.get('sidebar').customClientLogo || this.props.data.get('client').replace(/\s+/g, '-');
+  },
+  hasCstLogo () {
+    /*eslint-disable */
+    return (this.props.data.get('sidebar').customClientLogo) ? true : false;
+    /*eslint-enable */
   },
   getLogoColor () {
     return this.props.data.get('sidebar').logoColor || '#ffffff';
@@ -86,16 +90,19 @@ const Sidebar = React.createClass({
   hasRecognition () {
     return !(isEmpty(this.props.data.get('recognition')));
   },
+  getSidebarCtrClass () {
+    return (this.hasRecognition()) ? styles.sidebar_ctr_three : styles.sidebar_ctr_two;
+  },
   render () {
     return (
-      <div className={styles.sidebar}>
+      <div className={this.getSidebarCtrClass()}>
         <div className={this.getSidebarBoxClass()} id='sidebar-client'>
           <div className={styles.inner_box}>
             <div style={this.getHeadlineColor()} className={styles.sidebar_header}>
               client
             </div>
             <div className={styles.sidebar_body}>
-              <Logo color={this.getLogoColor()} clientName={this.getClient()}/>
+              <Logo isCustom={this.hasCstLogo()} color={this.getLogoColor()} clientName={this.getClient()}/>
             </div>
           </div>
         </div>

@@ -21,18 +21,20 @@ import TestingStuff from 'components/testing-view/testingview.js';
 
 export default (
   <Route path='/' component={CoreLayout}>
-    <Route component={HomeView} path='/featured/:project' />
     <Route component={TestingStuff} path='/testing' />
     <IndexRoute component={HomeView} />
-    <Route path='/404' component={NotFoundView} />
-    <Route      component={Direct}     path='work/:project' />
-    <Route      component={AboutView}     path='about' />
-    <Route      component={ServicesView}     path='services' />
-    <Route      component={CareersView}     path='careers' />
-    <Route      component={ConnectView}     path='connect' />
-    <Route      component={WorkView}     path='work' >
-      <Route    component={WorkView}      path='/case-study/:project' />
+    <Route component={HomeView} path='/featured/:project' />
+    <Route      component={Direct} path='work/:project'/>
+    <Route      component={AboutView} path='about' />
+    <Route      component={ServicesView} path='services'/>
+    <Route      component={CareersView} path='careers'/>
+    <Route      component={ConnectView} path='connect'/>
+    <Route      component={WorkView}  path='work'>
+      <Route    component={WorkView}  path='/case-study/:project'/>
     </Route>
+    <Route path='/404' component={NotFoundView} />
     <Redirect from='*' to='/404' />
   </Route>
 );
+
+    // <Route component={HomeView} path='/featured/:project' />

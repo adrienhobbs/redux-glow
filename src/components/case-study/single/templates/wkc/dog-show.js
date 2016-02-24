@@ -1,7 +1,6 @@
 import React from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
-import Results from '../../../content-modules/results';
 
 export class DogShow extends BaseTemplate {
   static propTypes = {
@@ -12,11 +11,12 @@ export class DogShow extends BaseTemplate {
   }
   render () {
     const copyStyle = this.getCopyStyle();
+    const ResultsSection = this.getResultsTemplate();
     return (
       <div ref='studyContent' className='study-content' style={{background: this.props.data.get('secColor')}}>
         <div className='content-container' style={{backgroundColor: this.props.data.get('secColor')}}>
           <AboutSection data={this.props.data} />
-          <Results data={this.props.data} />
+          <ResultsSection data={this.props.data} />
           <article className='strategy'>
             <h1 style={this.getHeadlineStyle()} className='section_headline study_headline'>strategy + highlights</h1>
             <div className='copy'>

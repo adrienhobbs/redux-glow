@@ -1,5 +1,7 @@
 @custom-media --under-medium (max-width: 991px);
 @custom-media --md-lg (min-width: 992px) and (max-width: 1200px);
+@custom-media --lg-landscape (max-width: 1024px) and (orientation: landscape);
+
 @custom-media --lg-up (min-width: 1201px);
 @custom-media --xs (max-width: 34em);
 @custom-media --sm (min-width: 34em);

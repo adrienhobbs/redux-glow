@@ -18,8 +18,6 @@ const NewsletterInput = React.createClass({
     return (
       <div className={styles.newsletter}>
         <div className='newsletter-inner form-inner ' ref='form'>
-          <h2 className={styles.contact_headline}>join the newsletter</h2>
-          <p className={styles.newsletter_copy}>stay up on the industry with glow's monthly newsletter. chalk full of relevant industry news and inspiring work.</p>
           <Formsy.Form
             onSubmit={this.onSubmit}
             className={styles.newsletter_form}

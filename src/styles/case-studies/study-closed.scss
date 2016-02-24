@@ -82,6 +82,9 @@
     @include media($large-screen-up) {
       font-size: 1.3em;
     }
+    // @media(--sm-down) {
+    //   font-size: 1.65em;
+    // }
     &-inner {
       position: relative;
       display: inline;

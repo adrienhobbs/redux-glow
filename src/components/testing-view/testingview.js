@@ -33,10 +33,37 @@ export class Testing extends PageLayout {
     super(props);
   }
 
+  fullscreen () {
+    if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {  // current working methods
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      } else if (document.documentElement.msRequestFullscreen) {
+        document.documentElement.msRequestFullscreen();
+      } else if (document.documentElement.mozRequestFullScreen) {
+        document.documentElement.mozRequestFullScreen();
+      } else if (document.documentElement.webkitRequestFullscreen) {
+        document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+  }
+  onClick () {
+    // this.fullscreen();
+  }
   render () {
     return (
-      <div>
+      <div ref='testMe'>
         <AllClients showSubtitle color='#666' stroke='#666' />
+        <div className='test' style={{width: 100, height: 100, background: 'blue', color: 'white'}} onClick={this.onClick.bind(this)}>click</div>
       </div>
     );
   }

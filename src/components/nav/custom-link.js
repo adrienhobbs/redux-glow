@@ -26,6 +26,8 @@ export class CustomLink extends React.Component {
 
   onClick (e) {
     e.preventDefault();
+    e.stopPropagation();
+    console.log(this.getPath());
     if (this.props.toggleNavState) {
       this.props.toggleNavState();
     }

@@ -6,7 +6,7 @@
   @media (--lg-screen-down) {
     lost-flex-container: column;
   }
-  @media(--lg-screen-down) {
+  @media(--xl-screen-down) {
     padding-bottom: 0px;
   }
   max-width: 1920px;
@@ -45,12 +45,12 @@
 }
 
 .about_right {
-  lost-column: 550/1920;
-  @media(--xl-screen-down) {
-    lost-row: 1;
-    order: 1;
-    height: auto;
+  @media(--xl) {
+    lost-column: 550/1920;
   }
+  lost-row: 1;
+  order: 1;
+  height: auto;
 }
 
 /* .about_left { */

@@ -4,34 +4,21 @@ import AboutSection from '../../../content-modules/about.js';
 import Video from 'components/video/video.js';
 
 export class SouthernKitchen extends BaseTemplate {
-
   static propTypes = {
     data: React.PropTypes.object
   };
   constructor (props) {
     super(props);
   }
+
   render () {
-    // const subStyle = {color: shader(0.15, this.props.data.get('logoColor'))};
     const copyStyle = this.getCopyStyle();
+    const ResultsSection = this.getResultsTemplate();
     return (
       <div ref='studyContent' className='study-content' style={{background: this.props.data.get('secColor')}}>
         <div className='content-container' style={{backgroundColor: this.props.data.get('secColor')}}>
           <AboutSection data={this.props.data} />
-          <article className='results' id='results'>
-            <section className='' style={{backgroundColor: 'rgb(232,232,232)'}}>
-              <h2 className='study_headline' style={{color: this.props.data.get('headlineColor') || '#000'}}>results</h2>
-              <div className='results-inner outer'>
-                <div className='results-info-box'>
-                  <h2 className='lite'>October 29, 2014</h2>
-                  <h1>Successfully raised $264,704 with 1,550 backers.</h1>
-                </div>
-                <div className='stat-boxes'>
-                  {this.getStatContent()}
-                </div>
-              </div>
-            </section>
-          </article>
+          <ResultsSection data={this.props.data} />
           <article className='video-campaign'>
             <h2 style={this.getHeadlineStyle()} className='study_headline section_headline'>kickstarter</h2>
             <Video posterImg={'https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/poster.jpg'} videoSrc={'https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/Carla+Hall+-+Kickstarter-HD.mp4'}/>

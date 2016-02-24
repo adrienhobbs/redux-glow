@@ -1,7 +1,6 @@
 import React from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
-import Results from '../../../content-modules/results';
 
 export class ILNY extends BaseTemplate {
   static propTypes = {
@@ -10,39 +9,14 @@ export class ILNY extends BaseTemplate {
   constructor (props) {
     super(props);
   }
-  videoPlayNow () {
-    const TL = new TimelineLite();
-    TL.add(() => this.refs.video.play());
-    return TL;
-  }
-  pauseVideo () {
-    this.refs.video.pause();
-    const TL = new TimelineLite();
-    TL.addLabel('start');
-    TL.to(this.refs.videoBlock, 0.7, {maxWidth: '51.25em', ease: Expo.easeInOut}, 'start+=0.5');
-    TL.to(this.refs.playBtn, 0.5, {autoAlpha: 1, ease: Expo.easeInOut}, 'start+=0.5');
-    TL.to(this.refs.controls, 0.5, {autoAlpha: 0}, 'start+=1');
-  }
-  stopVideo () {
-    this.refs.video.stop();
-  }
-  onVideoClick () {
-    const width = this.refs.videoBlock.getBoundingClientRect().width;
-    const TL = new TimelineLite();
-    TL.addLabel('start');
-    TL.set(this.refs.videoBlock, {width: width, maxWidth: '100%'}, 'start');
-    TL.to(this.refs.videoBlock, 0.5, {width: '100%', ease: Expo.easeInOut}, 'start+=0.5');
-    TL.to(this.refs.playBtn, 0.5, {autoAlpha: 0, ease: Expo.easeInOut}, 'start+=0.5');
-    TL.add(this.videoPlayNow.bind(this), 'start+=1.5');
-    TL.to(this.refs.controls, 0.5, {autoAlpha: 1}, 'start+=1.8');
-  }
   render () {
     const copyStyle = this.getCopyStyle();
+    const ResultsSection = this.getResultsTemplate();
     return (
       <div ref='studyContent' className='study-content' style={{background: this.props.data.get('secColor')}}>
         <div className='content-container' style={{backgroundColor: this.props.data.get('secColor')}}>
           <AboutSection data={this.props.data} />
-          <Results data={this.props.data} />
+          <ResultsSection data={this.props.data} />
           <article className='strategy'>
               <h1 style={this.getHeadlineStyle()} className='study_headline section_headline'>social strategy</h1>
               <div className='copy'>

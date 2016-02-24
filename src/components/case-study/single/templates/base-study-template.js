@@ -1,4 +1,5 @@
 import React from 'react';
+import ResultsTemplates from 'components/case-study/content-modules/results/templates/templates.js';
 
 export class BaseStudyComponent extends React.Component {
 
@@ -39,6 +40,9 @@ export class BaseStudyComponent extends React.Component {
   createParagraphEl (paragraph) {
     let t = this.createMarkup(this.props.data.get('testMe'));
     return t;
+  }
+  getResultsTemplate () {
+    return ResultsTemplates[this.props.data.get('results').template];
   }
   render () {
     return (

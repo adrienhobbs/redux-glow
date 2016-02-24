@@ -48,8 +48,14 @@ export class ConnectView extends PageLayout {
           </div>
           <div className={styles.connect_map_inner_right}>
             <div className={styles.connect_forms_container}>
-              <ContactForm />
-              <Newsletter />
+
+              <h1 className={styles.connect_headline}>work with us</h1>
+              <p className={styles.connect_information}> we are always looking for great new opportunities. we'd love to work with you on your idea, however big or small.</p>
+              <ContactForm hideCopy />
+
+              <h1 className={styles.connect_headline}>join the newsletter</h1>
+              <p className={styles.connect_information}>stay up on the industry with glow's monthly newsletter. chalk full of relevant industry news and inspiring work.</p>
+              <Newsletter hideCopy />
               <div className={styles.connect_information}>
                 <div id='where-we-are' className={styles.connect_info_box}>
                   <h1 className={styles.connect_headline}>where we are</h1>
@@ -59,12 +65,16 @@ export class ConnectView extends PageLayout {
                     <li>New York, NY 10013</li>
                     <li>+1 212-206-7370</li>
                   </ul>
-                  <a className='hoverline' href='mailto:hello@weareglow.com'>hello@weareglow.com</a>
+                  <div className={styles.link_ctr}>
+                    <a className='hoverline' href='mailto:hello@weareglow.com'>hello@weareglow.com</a>
+                  </div>
                 </div>
                 <div id='work-for-us' className={styles.connect_info_box}>
                   <h1 className={styles.connect_headline}>work with us</h1>
                   <ul className={styles.connect_info_box_inner}><li>we are always looking for talented people. please check out our current openings or just send us an email.</li></ul>
-                  <a className='hoverline' href='mailto:hello@weareglow.com'>jobs@weareglow.com</a>
+                  <div className={styles.link_ctr}>
+                    <a className='hoverline' href='mailto:hello@weareglow.com'>jobs@weareglow.com</a>
+                  </div>
                 </div>
               </div>
             </div>

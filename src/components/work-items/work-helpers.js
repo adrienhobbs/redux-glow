@@ -29,7 +29,7 @@ export class WorkHelpers extends React.Component {
 
   getBackgroundColor () {
     return (this.props.slider)
-      ? {position: 'absolute', top: 0, left: 0, width: '100vw', height: '100vh', backgroundImage: 'linear-gradient(to top, ' + this.getCurrentSlide().get('gradientTop') + ', ' + this.getCurrentSlide().get('gradientBottom') + ')'}
+      ? {position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: 'linear-gradient(to top, ' + this.getCurrentSlide().get('gradientTop') + ', ' + this.getCurrentSlide().get('gradientBottom') + ')'}
       : {background: '#ffffff'};
   }
 
