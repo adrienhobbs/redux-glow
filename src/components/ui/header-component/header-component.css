@@ -59,3 +59,13 @@
     bottom: 50px;
   }
 }
+
+.headline {
+  composes: headline from 'styles/mixins.css'; 
+  text-align: center;
+  width: 100%;
+}
+
+.subtitle {
+  composes: subtitle from 'styles/mixins.css';
+}

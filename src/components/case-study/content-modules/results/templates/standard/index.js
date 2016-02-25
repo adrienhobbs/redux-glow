@@ -71,7 +71,7 @@ export class StandardResultsTemplate extends React.Component {
   getRightStats () {
     return this.props.data.get('results').stats.map((stat, i) => {
       if (this.oneStatPerSide()) {
-        if (i === 0) {
+        if (i === 1) {
           return this.getRightStatBox(stat, i);
         }
       } else {

@@ -28,7 +28,6 @@ const data = [
    //   gradientBottom: '#0e374a',
    //   cat: '- we are glow -'
    // },
-  
    {
     featured: true,
     client: 'hbo',
@@ -312,7 +311,7 @@ const data = [
     cat: ' ― tnt | proof ― ',
     logo: 'HBO_logo.svg',
     templateName: 'Proof',
-
+    copyColor: '#000',
     services: ['creative execution', 'digital media', 'social content'],
     backbar: {
       bgColor: '#82b3dc'

@@ -12,10 +12,6 @@ const mapStateToProps = (state) => ({
 export class NotFoundView extends PageLayout {
 
   static propTypes = {
-    dispatch: PropTypes.func,
-    work: PropTypes.object,
-    viewport: PropTypes.object,
-    toggleNav: PropTypes.func
   };
 
   static contextTypes = {
@@ -23,7 +19,6 @@ export class NotFoundView extends PageLayout {
   };
 
   componentWillMount () {
-    console.log(this);
     if (this.props.nav.isVisible) {
       this.actions.changeNavState({isVisible: false, shouldAnimate: false});
     }

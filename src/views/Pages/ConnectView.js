@@ -1,27 +1,27 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Newsletter from 'components/forms/newsletter-input';
 import ContactForm from 'components/forms/contact-form';
-import PageLayout from 'layouts/PageLayout/PageLayout';
-import { connect } from 'react-redux';
 import Header from 'components/ui/header-component/header-component.js';
 import styles from './connect.css';
 
-const mapStateToProps = (state) => ({
-  routerstate: state.router,
-  viewport: state.viewport
-});
+export class ConnectView extends React.Component {
 
-export class ConnectView extends PageLayout {
+  static contextTypes = {
+    setupPageInfo: PropTypes.func,
+    animatePageContentIn: PropTypes.func,
+    viewport: PropTypes.object
+  };
 
   constructor (props) {
     super(props);
-    this.setupPageInfo('Connect');
     mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHdpbGwiLCJhIjoiY2lqb3B4cmRrMDB3a3Q5a28xaHg0cnM0NiJ9.cmyU94c4wtK1aEs-cNfnCw';
   }
 
   componentDidMount () {
-    this.animatePageContentIn();
-    if (!this.props.viewport.isPhone) {
+    this.context.setupPageInfo('Connect');
+    this.context.animatePageContentIn(this.refs.page);
+    console.log(this);
+    if (!this.context.viewport.isPhone) {
       this.map = new mapboxgl.Map({
         container: this.refs.map,
         style: 'mapbox://styles/mattwill/cijysv78o00uo90lxte3x4fua',
@@ -48,11 +48,9 @@ export class ConnectView extends PageLayout {
           </div>
           <div className={styles.connect_map_inner_right}>
             <div className={styles.connect_forms_container}>
-
               <h1 className={styles.connect_headline}>work with us</h1>
               <p className={styles.connect_information}> we are always looking for great new opportunities. we'd love to work with you on your idea, however big or small.</p>
               <ContactForm hideCopy />
-
               <h1 className={styles.connect_headline}>join the newsletter</h1>
               <p className={styles.connect_information}>stay up on the industry with glow's monthly newsletter. chalk full of relevant industry news and inspiring work.</p>
               <Newsletter hideCopy />
@@ -85,4 +83,4 @@ export class ConnectView extends PageLayout {
   }
 }
 
-export default connect(mapStateToProps)(ConnectView);
+export default ConnectView;

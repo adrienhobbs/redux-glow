@@ -42,14 +42,11 @@
   padding-top: 2em; 
   margin: auto;
   height: 100%;
-
+  width: 50%;
   @media(--md-down) {
-    width: 50%;
+    width: 75%;
   }
   @media(--xs-down) {
     width: 100%;
-  }
-  @media(--md) {
-    width: 75%;
   }
 }

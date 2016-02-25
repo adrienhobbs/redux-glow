@@ -7,6 +7,8 @@ import du from 'domutil';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import { connect } from 'react-redux';
 import styles from './home.scss';
+import snakeCase from 'lodash/snakeCase';
+import isEmpty from 'lodash/isEmpty';
 
 const mapStateToProps = (state) => ({
   counter: state.counter,
@@ -14,7 +16,8 @@ const mapStateToProps = (state) => ({
   work: state.work,
   featuredWork: state.work.featured,
   viewport: state.viewport,
-  colors: state.work.colors
+  colors: state.work.colors,
+  routerState: state.router
 });
 
 export class DesktopHomeView extends PageLayout {
@@ -24,13 +27,20 @@ export class DesktopHomeView extends PageLayout {
     featuredWork: PropTypes.object,
     TL: PropTypes.object,
     colors: PropTypes.object,
-    viewport: PropTypes.object
+    viewport: PropTypes.object,
+    params: PropTypes.object
+  };
+
+  static contextTypes = {
+    viewport: PropTypes.object,
+    router: PropTypes.object
   };
 
   constructor (props) {
     super(props);
     this.state = {
-      singleView: false
+      singleView: false,
+      activeSlideNum: 0
     };
   }
 
@@ -42,12 +52,28 @@ export class DesktopHomeView extends PageLayout {
     TweenLite.set('.home-container', {className: '+=home-container-desktop'});
     // TweenLite.set(document.documentElement, {overflowY: 'scroll'});
   }
+
+  getFeaturedStudy () {
+    return this.props.featuredWork.findEntry(function (work) {
+      return snakeCase(work.get('project')) === snakeCase(this.props.params.project);
+    }, this);
+  }
   componentDidMount () {
+    const noParams = isEmpty(this.props.params);
+    console.log(this.props.params);
+    const hasFeaturedMatch = (!noParams) ? this.getFeaturedStudy() : false;
+
     this.mountDotsAndTitles();
     TweenLite.set(document.body, {overflowY: 'hidden'});
     TweenLite.set('.home-container', {className: '+=home-container-desktop'});
     this.checkTouchEvents();
     this.checkKeyDownEvent();
+
+    console.log(hasFeaturedMatch, !noParams);
+    if (hasFeaturedMatch && !noParams) {
+      TweenLite.delayedCall(1, this.goToSlideNumber.bind(this, hasFeaturedMatch[0]));
+      this.context.router.replace({pathname: '/'});
+    }
   }
   componentDidUpdate (prevProps, prevState) {
     if (this.props.counter.current !== prevProps.counter.current) {
@@ -171,14 +197,14 @@ export class DesktopHomeView extends PageLayout {
     this.checkThreshold(e);
   }
   onKeyDown (e) {
-      switch (e.keyCode) {
-        case 38 :
-          this.checkThreshold({deltaY: -51, type: 'wheel'});
-          break;
-        case 40 :
-          this.checkThreshold({deltaY: 51, type: 'wheel'});
-          break;
-      }
+    switch (e.keyCode) {
+      case 38 :
+        this.checkThreshold({deltaY: -51, type: 'wheel'});
+        break;
+      case 40 :
+        this.checkThreshold({deltaY: 51, type: 'wheel'});
+        break;
+    }
   }
   /*eslint-enable */
   toggleNav (navState) {
@@ -201,12 +227,14 @@ export class DesktopHomeView extends PageLayout {
         onTouchStart={(evt) => this.onTouchStart(evt)}
         onTouchMove={(evt) => this.onTouchMove(evt)}>
         <WorkItems
+          activeSlideNum={this.state.activeSlideNum}
           locationState={this.props.location}
           ref='workItems'
           featuredWorkOnly
           slider
           TL={this.props.TL}
           toggleNav={this.toggleNav.bind(this)}
+          shouldOpen={this.props.singleView}
         />
       </div>
     );

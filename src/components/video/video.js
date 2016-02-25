@@ -88,7 +88,7 @@ export class VideoComponent extends React.Component {
   getMobileVideo () {
     return (
       <div className={styles.video_block_mobile}>
-        <video preload ref='video' className={styles.mobile_video} controls src={this.props.videoSrc} poster={this.props.posterImg}></video>
+        <video ref='video' preload='none' className={styles.mobile_video} controls src={this.props.videoSrc} poster={this.props.posterImg}></video>
       </div>
     );
   }

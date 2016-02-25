@@ -51,7 +51,7 @@ export class HeaderComponent extends React.Component {
         <div ref='headerImage' style={this.getHeaderStyle()} className={classes.headerImage}>
           <div className={classes.gradTrigger} ref='gradTrigger'></div>
         </div>
-        <h1 className='page-title'>{this.props.title}</h1>
+        <h1 className={classes.headline}>{this.props.title}</h1>
         <h4 className='page-subtitle'>{this.props.subtitle}</h4>
         <div className={classes.gradientCtr}>
           <svg className={classes.gradientSvg}>

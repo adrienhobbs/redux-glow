@@ -1,32 +1,30 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import EmployeeCard from 'components/pages/about/employee-card';
 import EmployeeInfo from 'constants/data/employees';
-import { connect }  from 'react-redux';
 import map from 'lodash/map';
-import PageLayout from 'layouts/PageLayout/PageLayout';
 import Header from 'components/ui/header-component/header-component.js';
 import AllClients from 'components/ui/clients-component/index.js';
 import request from 'superagent';
 import styles from './about.css';
 
-const mapStateToProps = (state) => ({
-  router: state.router
-});
-
-export class AboutView extends PageLayout {
+export class AboutView extends React.Component {
+  static contextTypes = {
+    setupPageInfo: PropTypes.func,
+    animatePageContentIn: PropTypes.func
+  };
 
   constructor (props) {
     super(props);
     this.state = {
       weather: 'learn a little bit about Glow'
     };
-    this.setupPageInfo('About');
   }
   componentDidMount () {
     request.get('/weather')
     .set('Accept', 'application/json')
     .end(this.setWeather.bind(this));
-    this.animatePageContentIn();
+    this.context.setupPageInfo('About');
+    this.context.animatePageContentIn(this.refs.page);
   }
   setWeather (err, res) {
     if (!err) {
@@ -57,6 +55,7 @@ export class AboutView extends PageLayout {
             </article>
           </section>
           <section className={styles.about_all_clients}>
+            <h2 className={styles.headline}>our clients</h2>
             <AllClients color='#666' />
           </section>
         </div>
@@ -69,5 +68,5 @@ export class AboutView extends PageLayout {
   }
 }
 
-export default connect(mapStateToProps)(AboutView);
+export default AboutView;
 

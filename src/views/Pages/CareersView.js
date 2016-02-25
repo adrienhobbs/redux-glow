@@ -1,22 +1,20 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import PageLayout from 'layouts/PageLayout/PageLayout';
+import React, { PropTypes } from 'react';
 import Header from 'components/ui/header-component/header-component.js';
 import styles from './careers.css';
 
-const mapStateToProps = (state) => ({
-  routerstate: state.router
-});
+export class Careers extends React.Component {
+  static contextTypes = {
+    setupPageInfo: PropTypes.func,
+    animatePageContentIn: PropTypes.func
+  };
 
-export class Careers extends PageLayout {
   constructor (props) {
     super(props);
   }
-  componentWillMount () {
-    this.setupPageInfo('Careers');
-  }
+
   componentDidMount () {
-    this.animatePageContentIn();
+    this.context.setupPageInfo('Careers');
+    this.context.animatePageContentIn(this.refs.page);
   }
 
   render () {
@@ -66,4 +64,4 @@ export class Careers extends PageLayout {
   }
 }
 
-export default connect(mapStateToProps)(Careers);
+export default Careers;

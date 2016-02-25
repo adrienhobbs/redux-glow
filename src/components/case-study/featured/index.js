@@ -43,12 +43,15 @@ export class FeaturedStudy extends PageLayout {
   }
 
   componentDidUpdate (prevProps, prevState) {
+    console.log(this.props);
     if (this.state.showBody && !prevState.showBody) {
       TweenLite.set(document.body, {className: '+=mom-scroll', overflowY: 'scroll'});
     }
+
     if (!this.state.showBody && prevState.showBody) {
       TweenLite.set(document.body, {className: '-=mom-scroll', overflowY: 'hidden'});
     }
+
     if (prevProps.position === 'bottom' && this.props.position === 'center') {
       TweenLite.fromTo(this.refs.projectSvg, 2, {y: 500, z: 0}, {z: 0, y: 0, ease: Expo.easeInOut});
       TweenLite.fromTo(this.refs.projectInner, 1.75, {y: 500, z: 0}, {z: 0, y: 0, ease: Expo.easeInOut});
@@ -76,20 +79,6 @@ export class FeaturedStudy extends PageLayout {
         TweenLite.to(this.refs.info, 0.5, {y: 800, ease: Expo.easeInOut});
       }
     }
-  }
-
-  toggleProjectInfo (val) {
-    this.toggleProjectText(val.val);
-    return <span></span>;
-  }
-
-  toggleProjectText (y) {
-    try {
-      TweenLite.set(this.refs.info, {y: y.val});
-    } catch (err) {
-
-    }
-    return <span></span>;
   }
 
   changeState () {

@@ -22,7 +22,8 @@
     }
   }
   .video-looping {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
     @media(--sm-down) {
       max-width: var(--sizing-outer-width);
@@ -54,6 +55,7 @@
 
 .mobile_video {
   max-width: 100%;
+  position: relative;
 }
 
 .video_block {

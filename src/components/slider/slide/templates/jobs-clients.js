@@ -12,10 +12,12 @@ const JobsClients = React.createClass({
     return (
       <div className={styles.wrapper}>
         <div className={styles.inner}>
-          <AllClients color='#666' slide showSubtitle />
+          <h2 className={styles.headline}>our clients</h2>
+          <h2 className={styles.subtitle}>brands we've worked with</h2>
+          <AllClients color='#666'/>
           <div className={styles.hiring}>
             <div className={styles.hiring_title}>
-              <h2 className={styles.headline}>we&#8217;re hiring</h2>
+              <h2 className={styles.hiring_headline}>we&#8217;re hiring</h2>
               <div className={styles.rule}></div>
             </div>
             <h2 className={styles.subtitle}>we don&#8217;t bite. promise.</h2>

@@ -16,24 +16,30 @@ import ServicesView         from 'views/Pages/ServicesView';
 import CareersView          from 'views/Pages/CareersView';
 import ConnectView          from 'views/Pages/ConnectView';
 import WorkView             from 'views/WorkView/work';
-import Direct from 'components/case-study/direct';
+import PageViewLayout       from 'layouts/PageViewLayout/Page_View_Layout.js';
 import TestingStuff from 'components/testing-view/testingview.js';
 
 export default (store) => (
   <Route path='/' component={CoreLayout}>
-    <Route component={TestingStuff} path='/testing' />
     <IndexRoute component={HomeView} />
-    <Route component={HomeView} path='/featured/:project' />
-    <Route      component={Direct} path='work/:project'/>
-    <Route      component={AboutView} path='about' />
-    <Route      component={ServicesView} path='services'/>
-    <Route      component={CareersView} path='careers'/>
-    <Route      component={ConnectView} path='connect'/>
-    <Route      component={WorkView}  path='work'>
-      <Route    component={WorkView}  path='/case-study/:project'/>
+    <Route component={PageViewLayout}>
+      <Route component={ServicesView} path='services'/>
+      <Route component={AboutView} path='about' />
+      <Route component={CareersView} path='careers'/>
+      <Route component={ConnectView} path='connect'/>
     </Route>
+
+    <Route component={HomeView} path='/'>
+      <Route component={HomeView} path='/featured/:project'/>
+    </Route>
+
+    <Route component={WorkView} path='work'>
+      <Route component={WorkView} path='/work/:project'/>
+    </Route>
+
     <Route path='/404' component={NotFoundView} />
     <Redirect from='*' to='/404' />
+    <Route component={TestingStuff} path='/testing' />
   </Route>
 );
 

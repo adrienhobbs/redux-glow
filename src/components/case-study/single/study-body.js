@@ -86,7 +86,7 @@ const StudyBody = React.createClass({
           <div className={styles.study_intro_container} ref='introCtr'></div>
           <div className={styles.study_content_wrapper}>
             <div className={styles.study_content_mask} style={{ background: this.props.data.get('secColor') }}></div>
-            <StudyTemplate data={this.props.data} />
+            <StudyTemplate viewport={this.props.viewport} data={this.props.data} />
           </div>
         </div>
       </div>

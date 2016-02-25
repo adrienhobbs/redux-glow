@@ -54,10 +54,12 @@ export class WorkHelpers extends React.Component {
   }
 
   getSlideTemplate (slides) {
+    console.log(this.props);
     return slides.map((data, i) => {
       return (
         <Slide
           key={i}
+          params={this.props.params}
           data={data}
           position={this.getCurrentPosition(i)}
           TL={this.props.TL}
@@ -111,6 +113,7 @@ export class WorkHelpers extends React.Component {
 
   getTemplateType (work, i) {
     let isOpen = false;
+    console.log(this.props);
     if (this.props.params) {
       isOpen = this.props.params.project === snakeCase(work.get('project'));
     }

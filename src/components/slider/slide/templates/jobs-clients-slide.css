@@ -12,6 +12,7 @@
   z-index: 3;
   position: relative;
 
+  text-align: center;
 
   @media(--lg-down) {
     font-size: 1rem;
@@ -26,6 +27,7 @@
 
 .hiring {
   text-align: center;
+  margin-top: 2em;
 }
 
 .hiring_title {
@@ -74,11 +76,19 @@
   composes: headline from 'styles/mixins.css';
   z-index: 1;
   position: relative;
-  display: inline;
+  /* display: inline; */
   background-color: var(--color-alto);
   padding-left: 3%;
   padding-right: 3%;
-  @media(--lg-down) {
+  @media(--md-down) {
     font-size: 2.5em;
   }
+  text-align: center;
+  width: 100%;
+}
+
+.hiring_headline {
+  
+  composes: headline;
+  display: inline;
 }

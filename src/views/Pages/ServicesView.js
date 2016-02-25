@@ -1,18 +1,16 @@
-import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
+import React, {PropTypes} from 'react';
 import servicesList from 'constants/data/services-list';
-import PageLayout from 'layouts/PageLayout/PageLayout';
 import Header from 'components/ui/header-component/header-component.js';
 import styles from './services-view.css';
 
-const mapStateToProps = (state) => ({
-  work: state.work,
-  routerState: state.router
-});
-
-export class Services extends PageLayout {
+export class Services extends React.Component {
   static propTypes = {
     location: PropTypes.object
+  };
+
+  static contextTypes = {
+    setupPageInfo: PropTypes.func,
+    animatePageContentIn: PropTypes.func
   };
 
   constructor (props) {
@@ -20,11 +18,11 @@ export class Services extends PageLayout {
   }
 
   componentWillMount () {
-    this.setupPageInfo('Services');
+    this.context.setupPageInfo('Services');
   }
 
   componentDidMount () {
-    this.animatePageContentIn();
+    this.context.animatePageContentIn(this.refs.page);
   }
 
   pageSubTitle () {
@@ -66,4 +64,4 @@ export class Services extends PageLayout {
 
 }
 
-export default connect(mapStateToProps)(Services);
+export default Services;

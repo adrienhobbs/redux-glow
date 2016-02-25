@@ -163,7 +163,7 @@ const ProjectIntro = React.createClass({
 
   openStudy () {
     if (!this.props.isOpen) {
-      this.context.router.push({pathname: '/case-study/' + this.getProjectUrl()});
+      this.context.router.push({pathname: '/work/' + this.getProjectUrl()});
     }
     this.props.hideOthers(this.props.id, true);
     TweenLite.set([this.refs.overlay, this.refs.projectInfo], {autoAlpha: 0});

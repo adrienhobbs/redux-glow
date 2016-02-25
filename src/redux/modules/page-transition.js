@@ -29,7 +29,7 @@ const getLinkIndex = function getIndexOfCurrentLink (pathname) {
 };
 
 const getAnimationDirection = function getAnimDir (currentPathIndex, nextPath) {
-  return (getLinkIndex(nextPath) > currentPathIndex) ? 'left' : 'right';
+  return (getLinkIndex(nextPath) > currentPathIndex) ? 'right' : 'left';
 };
 
 export default handleActions({

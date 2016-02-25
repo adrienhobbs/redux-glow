@@ -4,10 +4,6 @@ import PageLayout from 'layouts/PageLayout/PageLayout';
 import AllClients from 'components/ui/clients-component/index.js';
 
 const mapStateToProps = (state) => ({
-  nav: state.nav,
-  viewport: state.viewport,
-  work: state.work,
-  counter: state.counter
 });
 
 export class Testing extends PageLayout {

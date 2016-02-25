@@ -20,6 +20,7 @@
   },
   "rules": {
     "semi" : [2, "always"],
+    "jsx-equals-spacing": [0, "never"],
     "comma-dangle" : [1, "never"],
     "func-names"   : 0,
     "key-spacing"  : 0,
@@ -35,6 +36,7 @@
     "flow-vars/define-flow-type": 1,
     "flow-vars/use-flow-type": 1,
     "no-useless-constructor": 0,
-    "react/jsx-no-bind": 0
+    "react/jsx-no-bind": 0,
+    "react/jsx-equal-spacing": 0
   }
 }

@@ -54,10 +54,6 @@ export class ClientsBar extends React.Component {
   render () {
     return (
       <div className={styles.ourClients}>
-        <div className={styles.ourClients_headlineWrap}>
-          <h2 className={styles.headline}>our clients</h2>
-          {this.getSubtitle()}
-        </div>
         <div className={styles.clientsLogoRow}>
           {this.getAllClientLogos()}
         </div>

@@ -56,25 +56,25 @@ export class HomeView extends PageLayout {
 
   componentDidMount () {
     this.animatePageContentIn();
-
     const images = this.props.work.studyData.filter((workItem) => {
       return (workItem.get('type') === 'case-study');
     }).map((workItem) => {
       return workItem.get('backgroundImageUrl');
     }).toJS();
     images.push('https://s3.amazonaws.com/weareglow-assets/assets/work-shape.svg');
-
     ImageHelper.loadImages(images);
   }
+
   constructor (props) {
     super(props);
   }
+
   render () {
     this.TL = new TimelineLite();
     const HomeTemp = this.getHomeTemplate();
     return (
       <div className='home-container'>
-        <HomeTemp location={this.props.routerState.location} TL={this.TL} />
+        <HomeTemp params={this.props.params} location={this.props.routerState.location} TL={this.TL} />
       </div>
     );
   }
