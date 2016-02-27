@@ -71,6 +71,7 @@
 
 .service_categories {
   composes: service-row;
+  lost-flex-container: row;
 }
 
 .service_cat {

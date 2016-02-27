@@ -14,6 +14,8 @@
 @custom-media --lg-down (min-width: 0em);
 @custom-media --lg-screen-down (max-width: 62em);
 @custom-media --xl-screen-down (max-width: 75em);
+@custom-media --above-laptop (min-width: 1441px);
+@custom-media --laptop (max-width: 1440px);
 @custom-media --copy-max (max-width: 860px);
 
 :root {

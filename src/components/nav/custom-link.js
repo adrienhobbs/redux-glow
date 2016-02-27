@@ -3,13 +3,14 @@ import Link from 'react-router/lib/Link';
 
 export class CustomLink extends React.Component {
   static propTypes = {
-    toggleNavState:     PropTypes.func,
-    data:               PropTypes.object,
-    activeStyle:        PropTypes.object,
-    desktop:            PropTypes.bool,
-    color:              PropTypes.string,
-    path:               PropTypes.string,
-    name:               PropTypes.string
+    toggleNavState:  PropTypes.func,
+    data:            PropTypes.object,
+    activeStyle:     PropTypes.object,
+    desktop:         PropTypes.bool,
+    color:           PropTypes.string,
+    path:            PropTypes.string,
+    name:            PropTypes.string,
+    children:        PropTypes.object
   };
 
   static contextTypes = {
@@ -27,7 +28,6 @@ export class CustomLink extends React.Component {
   onClick (e) {
     e.preventDefault();
     e.stopPropagation();
-    console.log(this.getPath());
     if (this.props.toggleNavState) {
       this.props.toggleNavState();
     }
@@ -46,9 +46,13 @@ export class CustomLink extends React.Component {
     return this.props.name || this.getData('name');
   }
 
+  getInnerLink () {
+    return this.props.children || this.getName();
+  }
+
   render () {
     return (
-      <Link ref='link' style={this.getStyle()} {...this.props} onClick={this.onClick.bind(this)} to={this.getPath()}>{this.getName()}</Link>
+      <Link ref='link' style={this.getStyle()} {...this.props} onClick={this.onClick.bind(this)} to={this.getPath()}>{this.getInnerLink()}</Link>
     );
   }
 }

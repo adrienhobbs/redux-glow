@@ -30,7 +30,6 @@ export class Lockup extends React.Component {
       this.tl.set(this.lockupEls.logo, {fill: this.getLogoColor(), attr: {fill: this.getLogoColor()}});
     }
     if (this.getProjectColor()) {
-      console.log(this.getProjectColor());
       this.tl.set(this.lockupEls.title, {fill: this.getProjectColor(), attr: {fill: this.getProjectColor()}});
     }
   }

@@ -8,19 +8,19 @@ import keys from 'lodash/keys';
 export class WorkHelpers extends React.Component {
 
   static propTypes = {
-    slider: PropTypes.object,
-    counter: PropTypes.object,
-    TL: PropTypes.object,
-    work: PropTypes.object,
-    viewport: PropTypes.object,
-    featuredWorkOnly: PropTypes.bool,
-    params: PropTypes.object,
-    mobileLayout: PropTypes.bool,
-    toggleNav: PropTypes.func,
-    frameEls: PropTypes.object,
-    actions: PropTypes.object,
-    location: PropTypes.object,
-    locationState: PropTypes.object
+    slider:            PropTypes.object,
+    counter:           PropTypes.object,
+    TL:                PropTypes.object,
+    work:              PropTypes.object,
+    viewport:          PropTypes.object,
+    featuredWorkOnly:  PropTypes.bool,
+    params:            PropTypes.object,
+    mobileLayout:      PropTypes.bool,
+    toggleNav:         PropTypes.func,
+    frameEls:          PropTypes.object,
+    actions:           PropTypes.object,
+    location:          PropTypes.object,
+    locationState:     PropTypes.object
   };
 
   constructor () {
@@ -49,12 +49,12 @@ export class WorkHelpers extends React.Component {
       return positions[key];
     })[0];
   }
+
   getCurrentFeaturedProject () {
     return this.getFeaturedProjects().get(this.props.counter.current);
   }
 
   getSlideTemplate (slides) {
-    console.log(this.props);
     return slides.map((data, i) => {
       return (
         <Slide
@@ -113,7 +113,6 @@ export class WorkHelpers extends React.Component {
 
   getTemplateType (work, i) {
     let isOpen = false;
-    console.log(this.props);
     if (this.props.params) {
       isOpen = this.props.params.project === snakeCase(work.get('project'));
     }

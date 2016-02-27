@@ -20,15 +20,14 @@ export class ConnectView extends React.Component {
   componentDidMount () {
     this.context.setupPageInfo('Connect');
     this.context.animatePageContentIn(this.refs.page);
-    console.log(this);
     if (!this.context.viewport.isPhone) {
       this.map = new mapboxgl.Map({
         container: this.refs.map,
         style: 'mapbox://styles/mattwill/cijysv78o00uo90lxte3x4fua',
-        center: [-74.01, 40.73],
-        zoom: 14,
-        interactive: false
+        center: [-73.92, 40.73],
+        zoom: 11.95
       });
+      this.map.scrollZoom.disable();
       this.map.on('load', this.setHeight.bind(this));
     }
   }

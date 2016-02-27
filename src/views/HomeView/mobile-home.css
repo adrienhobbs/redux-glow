@@ -37,6 +37,7 @@
   width: var(--sizing-outer-width);
   margin: auto;
 }
+
 .mobile_project_wrap, 
 .home_mobile_image,
 .about_mobile,
@@ -74,7 +75,7 @@
 }
 
 .scroll_for_more {
-  margin-top:0%;
+  margin-top: 0;
   text-align: center;
   font-family: var(--primary-font-family);
   font-size: 1.5em;
@@ -88,12 +89,14 @@
   background: var(--color-light-gray);
   &_wrap {
     padding-top: 40px;
+    padding-bottom: 40px;
     composes: mobile_home_width;
   }
 }
 
 .services_button {
   min-height: 60px;
+  margin-top: 2.5em;
   a {
     color: white;
   }
@@ -119,7 +122,6 @@
   h2 {
     margin-bottom: 15px;
   }
-
   p {
     font-size: 15px;
     font-weight: 300;
@@ -128,13 +130,17 @@
     color: var(--color-dove-gray);
     text-align: center;
   }
-
 }
-
-
 
 .clients.mobile {
   .headline-wrap {
     margin-bottom: 1em;
   }
+}
+
+.headline {
+  composes: headline from 'styles/mixins.css';
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.5em;
 }

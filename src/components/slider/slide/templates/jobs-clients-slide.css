@@ -1,4 +1,5 @@
 @use lost;
+
 .wrapper {
   position: relative;
   height: 100%;
@@ -22,12 +23,17 @@
 .inner {
   left: center;
   top: center;
+  top: 52%;
   width: 81%;
 }
 
 .hiring {
   text-align: center;
-  margin-top: 2em;
+  margin-top: 1em;
+
+   @media(--sm) {
+    margin-top: 1.5em;
+  }
 }
 
 .hiring_title {
@@ -42,22 +48,26 @@
   z-index: 0;
   left: center;
   top: center;
+
   @media (--sm-down) {
-    display: none;
+    width: 100%;
   }
 }
 
 .hiring_copy {
   lost-center: 91%;
-  margin-top: 2em;
+  margin-top: 1em;
+
+  @media(--sm-down) {
+    max-width: 100%;
+  }
+
   p {
     font-size: 1.5rem;
     color: var(--color-slate-gray);
+
     @media (--lg-down) {
       font-size: 1.2rem;
-    }
-    @media(--sm-down) {
-      font-size: 1rem;
     }
   }
 }
@@ -66,6 +76,7 @@
   margin-top: 0;
   text-align: center;
   width: 100%;
+
   a {
     font-family: var(--primary-font-family);
     font-size: 1.5em;
@@ -76,19 +87,22 @@
   composes: headline from 'styles/mixins.css';
   z-index: 1;
   position: relative;
-  /* display: inline; */
   background-color: var(--color-alto);
   padding-left: 3%;
   padding-right: 3%;
-  @media(--md-down) {
-    font-size: 2.5em;
-  }
   text-align: center;
   width: 100%;
+
+  @media(--md-down) {
+    font-size: 3.5em;
+  }
+
+  @media(--xs-down) {
+    font-size: 2.5em;
+  }
 }
 
 .hiring_headline {
-  
   composes: headline;
   display: inline;
 }

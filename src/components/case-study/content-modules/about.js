@@ -20,7 +20,8 @@ export class AboutSection extends React.Component {
 
   getHeadlineStyle () {
     return {
-      color: this.props.data.get('headlineColor') || '#000'
+      color: this.props.data.get('headlineColor') || '#000',
+      marginTop: 0
     };
   }
 

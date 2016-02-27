@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import StudyBody from './single/study-body';
 
 const CaseStudy = React.createClass({
-
   propTypes:     {
     singleMode:  PropTypes.bool,
     getInfoEl:   PropTypes.func,

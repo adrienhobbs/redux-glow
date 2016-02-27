@@ -17,17 +17,17 @@
     //
 const s3 = 'https://s3.amazonaws.com/weareglow-assets/';
 const data = [
-   // {
-   //   featured: true,
-   //   title: 'Intro Video',
-   //   home: true,
-   //   type: 'video',
-   //   video: 'https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic.mp4',
-   //   logoColor: '#f12d5c',
-   //   gradientTop: '#c03d3b',
-   //   gradientBottom: '#0e374a',
-   //   cat: '- we are glow -'
-   // },
+   {
+     featured: true,
+     title: 'Intro Video',
+     home: true,
+     type: 'video',
+     video: 'https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic.mp4',
+     logoColor: '#f12d5c',
+     gradientTop: '#c03d3b',
+     gradientBottom: '#0e374a',
+     cat: '- we are glow -'
+   },
    {
     featured: true,
     client: 'hbo',
@@ -472,6 +472,7 @@ const data = [
     type: 'case-study',
     backgroundImageUrl: s3 +  'case-studies/yahoo/how-i-did-it/landscape.jpg',
     backgroundImageUrlVert: s3 +  'case-studies/yahoo/how-i-did-it/landscape.jpg',
+    backgroundVideoUrl: s3 + 'case-studies/yahoo/how-i-did-it/yahoo_bg_video.mp4',
     logoColor: '#00283f',
     bodyColor: 'ffffff',
     secColor: '#ffffff',

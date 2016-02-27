@@ -31,7 +31,7 @@ export class WorkView extends PageLayout {
             <h4 className={styles.page_subtitle}>heres our work man</h4>
           </div>
           <div className={styles.work_view_content}>
-            <WorkItems actions={this.actions} location={this.props.routerState.locationBeforeTransitions} params={this.props.params}  />
+            <WorkItems workpage actions={this.actions} location={this.props.routerState.locationBeforeTransitions} params={this.props.params}  />
           </div>
         </div>
       </div>

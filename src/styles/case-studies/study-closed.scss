@@ -19,23 +19,28 @@
 
   .project {
     cursor: pointer;
-    @include media($under-small) {
+    &:last-of-type {
+      cursor: auto;
+    }
+    @media(--sm-down) {
       @include full-span();
-      // lost-column: 1;
+      &:last-of-type {
+        display: none;
+      }
     }
-    @include media($small-screens) {
+    @media(--md) {
       @include one-half();
-      // lost-column: 1/2;
+      &:last-of-type:nth-of-type(odd) {
+        display: none;
+      }
     }
-    @include media($medium-laptop) {
-      @include one-half();
-      // lost-waffle: 1/2;
-    }
-    @include media($above-laptop) {
+
+    @media(--above-laptop) {
       @include one-third();
-      // lost-waffle: 1/3;
+      &:last-of-type:nth-of-type(even) {
+        display: none;
+      }
     }
-    // margin-bottom: 0 !important;
   }
   .project-intro {
     .project-image {

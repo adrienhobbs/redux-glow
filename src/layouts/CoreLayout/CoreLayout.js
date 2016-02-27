@@ -40,18 +40,17 @@ export class CoreLayout extends React.Component {
     transitionToNewRoute: PropTypes.func
   };
 
-  constructor (props) {
-    super(props);
-    this.actions = bindActionCreators(Object.assign({}, transitionActions, counterActions, navActions, workActions, viewportActions), props.dispatch);
-    resizeUtils.init(this.actions);
-  }
-
   getChildContext () {
     return {
       router: this.context.router,
       viewport: this.props.viewport,
       transitionToNewRoute: this.transitionToNewRoute.bind(this)
     };
+  }
+  constructor (props) {
+    super(props);
+    this.actions = bindActionCreators(Object.assign({}, transitionActions, counterActions, navActions, workActions, viewportActions), props.dispatch);
+    resizeUtils.init(this.actions);
   }
 
   componentDidMount () {
@@ -89,7 +88,8 @@ export class CoreLayout extends React.Component {
 
   getFooter () {
     const isFeatured = this.testForFeatured('featured', this.props.location.pathname);
-    return (this.props.location.pathname !== '/' && isFeatured === false || this.props.viewport.isPhone) ? <Footer /> : null;
+    return (this.props.location.pathname !== '/' && this.props.location.pathname !== '/404' && isFeatured === false || this.props.viewport.isPhone) ? <Footer /> : null;
+    // return (this.props.location.pathname !== '/' && isFeatured === false) ? <Footer /> : null;
   }
 
   render () {

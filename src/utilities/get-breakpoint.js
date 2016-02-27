@@ -1,16 +1,24 @@
+const sm = 34 * 16;
+const md = 48 * 16;
+const lg = 62 * 16;
+const xl = 75 * 16;
+
 const getBreakpoint = (val = window.innerWidth) => {
   let breakPoint = '';
   if (val >= 320 || val < 320) {
     breakPoint = 'xsmall';
   }
-  if (val > 768) {
+  if (val > sm) {
     breakPoint = 'small';
   }
-  if (val >= 992) {
+  if (val >= md) {
     breakPoint = 'medium';
   }
-  if (val > 1200) {
+  if (val > lg) {
     breakPoint = 'large';
+  }
+  if (val >= xl) {
+    breakPoint = 'x-large';
   }
   return breakPoint;
 };

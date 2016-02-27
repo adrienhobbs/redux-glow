@@ -52,6 +52,7 @@ export class HomeView extends PageLayout {
 
   getHomeTemplate () {
     return HomeTemplate[this.getCurrentDevice()];
+    // return HomeTemplate['desktop'];
   }
 
   componentDidMount () {

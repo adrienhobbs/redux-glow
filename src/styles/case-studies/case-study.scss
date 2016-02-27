@@ -1,5 +1,8 @@
 @use lost;
 :global {
+  .content-container {
+    height: 100%;
+  }
   #about {
     margin-bottom: 60px;
     lost-flex-container: row;

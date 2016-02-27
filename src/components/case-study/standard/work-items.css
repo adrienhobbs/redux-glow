@@ -1,15 +1,15 @@
 @use lost;
+
 .project {
   position: relative;
   cursor: pointer;
   margin-bottom: 30px;
+
   @media(--sm-down) {
     lost-column: 1;
   }
+
   @media(--lg-down) {
     lost-column: 1/2;
   }
-
 }
-
-

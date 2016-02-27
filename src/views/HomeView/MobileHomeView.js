@@ -4,7 +4,6 @@ import AllClients from 'components/ui/clients-component/index.js';
 import Link from 'react-router/lib/Link';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import styles from './mobile-home.css';
-
 export class HomeMobile extends PageLayout {
 
   constructor (props) {
@@ -48,6 +47,7 @@ export class HomeMobile extends PageLayout {
         </div>
         <div className={styles.clients_mobile}>
           <div className={styles.clients_mobile_wrap}>
+            <h2 className={styles.headline}>our clients</h2>
             <AllClients mobileHome />
             <div className={styles.services_button}>
               <Link to='/services'>
@@ -57,7 +57,7 @@ export class HomeMobile extends PageLayout {
           </div>
         </div>
         <div className={styles.about_glow}>
-          <h2 className='page-title'>we are glow</h2>
+          <h2 className={styles.headline}>we are glow</h2>
           <p>Glow is an award-winning digital marketing and creative agency based in New York City that has been driving the digital marketing revolution since 1999. Everything we do puts consumers first, ensuring they're engaged, entertained, challenged and connected—no matter the medium.</p>
           <div className='contact-bucket'>
             <div className='contact-bucket-inner-wrap'>
