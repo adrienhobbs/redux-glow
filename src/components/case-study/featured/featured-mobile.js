@@ -5,6 +5,8 @@ import BackBar from 'components/ui/backbar';
 // import scroll from 'scroll';
 // import '../study-closed.scss';
 import PageLayout from 'layouts/PageLayout/PageLayout';
+import truncate from 'lodash/truncate.js';
+import trimStart from 'lodash/trimStart.js';
 
 import { connect } from 'react-redux';
 const mapStateToProps = (state) => ({
@@ -157,13 +159,17 @@ export class FeaturedStudyMobile extends PageLayout {
       color: this.props.data.get('mobile').summaryCopyColor || '#fff'
     };
   }
+  getSummaryText () {
+    return truncate(trimStart(this.props.data.get('aboutCopy'), '<p>'), {length: 150, separator: ' '});
+  }
 
   render () {
+    this.getSummaryText();
     const backBar = (this.state.singleMode) ? <BackBar showBar={this.state.showBody} singleMode={this.state.singleMode} data={this.props.data.toJS()} goBack={this.toggleStudyState.bind(this)}  /> : null;
     return (
       <div className='project mobile'
         ref='projectBox'
-        style={{background: this.props.data.get('mobile').bgColor}} >
+        style={{background: this.props.data.get('mobile').bgColor, display: 'block'}} >
         <div className='mobile-project-wrap'>
           <div ref='projectIntro' className='project-intro project__container mobile closed'>
             <div ref='projectImage' className='project-image project__image link' >
@@ -184,7 +190,7 @@ export class FeaturedStudyMobile extends PageLayout {
               </span>
             </div>
             <p style={this.getDescStyle()}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              {this.getSummaryText()}
             </p>
             <div onClick={this.openStudyFromProject.bind(this)} className='view-button' ><div style={{background: this.props.data.get('logoColor')}}>view case study  &#8594;</div></div>
           </div>

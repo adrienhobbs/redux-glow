@@ -33,8 +33,8 @@ export default (store) => (
       <Route component={WorkView} path='/work/:project'/>
     </Route>
 
+    <Route component={TestingStuff} path='/testing' />
     <Route path='/404' component={NotFoundView} />
     <Redirect from='*' to='/404' />
-    <Route component={TestingStuff} path='/testing' />
   </Route>
 );

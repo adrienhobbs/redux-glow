@@ -64,7 +64,7 @@ export class Nav extends React.Component {
   }
 
   getLinkColor () {
-    return (this.props.currentPath !== '/') ? Colors.radRed : this.props.colors.get(this.props.counter.current);
+    return (this.props.currentPath !== '/' || this.props.viewport.isMobile) ? Colors.radRed : this.props.colors.get(this.props.counter.current);
   }
 
   restartSliderPos () {

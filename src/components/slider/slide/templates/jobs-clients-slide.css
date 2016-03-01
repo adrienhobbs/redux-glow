@@ -1,43 +1,91 @@
 @use lost;
 
-.wrapper {
-  position: relative;
+.slide {
+  width: 93%;
   height: 100%;
-  width: 100%;
+  padding-top: var(--sizing-nav-height);
   background-color: var(--color-alto);
-  overflow: hidden;
+  position: absolute;
+  left: center;
+  bottom: 0;
+  lost-flex-container: column;
+}
+
+.slide_top {
+  lost-row: 510/980 0 0;
+  width: 100%;
+  padding-top: 3em;
+  lost-flex-container: column;
+
+  @media(--xs-down) {
+    lost-row: 900/980 0 0;
+    left: center;
+    top: center;
+  }
+
+  @media(max-height: 600px) {
+    lost-row: 600/980 0 0;
+    left: center;
+    top: center;
+  }
+}
+
+.slide_bottom {
+  lost-row: 470/980 0 0;
+  width: 100%;
+  lost-flex-container: column;
+  @media(--xs-down) {
+    display: none;
+  }
+  @media(max-height: 600px) {
+    display: none;
+  }
+}
+
+.headline {
+  composes: headline from 'styles/mixins.css';
+  line-height: 1;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  @media(--md-down) {
+    font-size: 3.5em;
+  }
+
+  @media(--xs-down) {
+    font-size: 2.5em;
+  }
+
+  @media(max-height: 700px) {
+    font-size: 2.5em;
+  }
+}
+
+.hiring_headline {
+  composes: headline;
+  background-color: var(--color-alto);
+  padding-left: 3%;
+  padding-right: 3%;
+  left: center;
+  width: auto;
 }
 
 .subtitle {
   composes: headline_subtitle from 'styles/mixins.css';
   z-index: 3;
   position: relative;
-
   text-align: center;
+  margin-top: 0;
 
-  @media(--lg-down) {
-    font-size: 1rem;
+  @media(--lg-screen-down) {
+    font-size: 1.5em;
   }
-}
 
-.inner {
-  left: center;
-  top: center;
-  top: 52%;
-  width: 81%;
-}
-
-.hiring {
-  text-align: center;
-  margin-top: 1em;
-
-   @media(--sm) {
-    margin-top: 1.5em;
+  @media(--sm-down) {
+    font-size: 1em;
   }
-}
-
-.hiring_title {
-  position: relative;
 }
 
 .rule {
@@ -50,59 +98,121 @@
   top: center;
 
   @media (--sm-down) {
-    width: 100%;
+    display: none;
+  }
+  @media(max-height: 700px) {
+    display: none;
   }
 }
 
 .hiring_copy {
-  lost-center: 91%;
-  margin-top: 1em;
+  max-width: 900px;
+  margin: auto;
 
-  @media(--sm-down) {
-    max-width: 100%;
+  @media(--lg-down) {
+    width: 80%;
+  }
+
+  @media(--xl) {
+    width: 65%;
+  }
+
+  @media(--md-down) {
+    width: 95%;
   }
 
   p {
     font-size: 1.5rem;
     color: var(--color-slate-gray);
+    text-align: center;
 
     @media (--lg-down) {
       font-size: 1.2rem;
     }
+
+    @media(--sm-down) {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.top_headline_ctr {
+  lost-row: 140/450 0 0;
+  width: 100%;
+
+  @media(--sm-down) {
+    lost-row: 100/450 0 0;
+  }
+}
+
+.top_clients_ctr {
+  lost-row: 310/450 0 0;
+  @media(--sm-down) {
+    lost-row: 350/450 0 0;
+  }
+  width: 81%;
+  margin-left: auto;
+  margin-right: auto;
+  lost-flex-container: row;
+}
+
+.bot_headline_ctr {
+  lost-row: 170/470 0 0;
+
+  @media(--sm-down) {
+    lost-row: 140/470 0 0;
+  }
+}
+
+.bot_copy_ctr {
+  lost-row: 300/470 0 0;
+  position: relative;
+
+  @media(--sm-down) {
+    lost-row: 330/470 0 0;
+  }
+}
+
+.hiring_head_ctr {
+  position: relative;
+  text-align: center;
+  height: 5em;
+
+  @media(--lg-screen-down) {
+    height: 3.5em;
+  }
+
+  @media(--md-down) {
+    height: 3.5em;
+  }
+  @media(--xs-down) {
+    height: 2.5em;
+  }
+
+  @media(max-height: 700px) {
+    height: 2.5em;
   }
 }
 
 .view_openings {
-  margin-top: 0;
+  /* position: absolute; */
+  /* bottom: 15%; */
+  /* left: 0; */
+  margin-top: 2em;
   text-align: center;
   width: 100%;
 
   a {
     font-family: var(--primary-font-family);
     font-size: 1.5em;
-  }
-}
 
-.headline {
-  composes: headline from 'styles/mixins.css';
-  z-index: 1;
-  position: relative;
-  background-color: var(--color-alto);
-  padding-left: 3%;
-  padding-right: 3%;
-  text-align: center;
-  width: 100%;
+    @media(--sm-down) {
+      font-size: 1em;
+    }
+  }
 
   @media(--md-down) {
-    font-size: 3.5em;
+    bottom: 5%;
+    margin-top: 0.8em;
   }
-
-  @media(--xs-down) {
-    font-size: 2.5em;
-  }
-}
-
-.hiring_headline {
-  composes: headline;
-  display: inline;
 }

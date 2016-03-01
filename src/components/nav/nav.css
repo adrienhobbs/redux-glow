@@ -20,7 +20,7 @@
     right: 0;
     bottom: 0px;
     height: 3px;
-    border-bottom: 2px solid #f12d5c;
+    border-bottom: 0px solid #f12d5c;
     visibility: hidden;
     width: 0px;
     transition: all .45s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -31,12 +31,12 @@
     opacity: 1;
     color: rgba(0,0,0,1);
     bottom: 0px;
-    border-bottom: 2px solid #f12d5c;
+    border-bottom: 0px solid #f12d5c;
     width: 100%;
   }
 
   .hoverline.active {
-    border-bottom:2px solid #f12d5c;
+    border-bottom:0px solid #f12d5c;
   }
 }
 

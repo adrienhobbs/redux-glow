@@ -23,9 +23,25 @@
 
 .about_all_clients {
   lost-flex-container: row;
-  margin-bottom: 70px;
+  width: 100%;
+  margin-bottom: 1em;
   .headline-wrap {
     margin-bottom: 3em;
+  }
+  svg,
+  div {
+    min-height: 70px;
+    @media(--md) {
+      min-height: 150px;
+    }
+
+    @media(--md-down) {
+      min-height: 110px;
+    }
+
+    @media(--sm-down) {
+      min-height: 70px;
+    }
   }
 }
 

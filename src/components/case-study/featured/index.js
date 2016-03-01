@@ -43,7 +43,6 @@ export class FeaturedStudy extends PageLayout {
   }
 
   componentDidUpdate (prevProps, prevState) {
-    console.log(this.props);
     if (this.state.showBody && !prevState.showBody) {
       TweenLite.set(document.body, {className: '+=mom-scroll', overflowY: 'scroll'});
     }

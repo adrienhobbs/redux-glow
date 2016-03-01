@@ -3,7 +3,7 @@ import React, {PropTypes} from 'react';
 import './glow-icons.svg';
 // import './logo-sprite.svg';
 import './svg/symbol/svg/sprite.symbol.svg';
-
+import styles from 'components/ui/clients-component/client-logos.css';
 export class SpriteLogo extends React.Component {
   static propTypes = {
     clientName: PropTypes.string,
@@ -44,9 +44,11 @@ export class SpriteLogo extends React.Component {
 
   render () {
     return (
-      <svg ref='logo' role='img' >
-        <use xlinkHref={`#${this.getUseLink()}`}></use>
-      </svg>
+      <div className={styles.client}>
+        <svg className={styles.client_svg} ref='logo' role='img' >
+          <use xlinkHref={`#${this.getUseLink()}`}></use>
+        </svg>
+      </div>
     );
   }
 

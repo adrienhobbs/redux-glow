@@ -39,7 +39,7 @@ export class ConnectView extends React.Component {
   render () {
     return (
       <div className='container' id='connect' ref='page'>
-        <Header hideGradient title={'connect'} subtitle={'Yeah Dawg, Like Connect With Us'} />
+        <Header hideGradient title={'connect'} subtitle={'drop us a line. we would love to hear from you.'} />
         <div className={styles.full_width_container}>
           <div className={styles.connect_page_map} ref='map'>
           </div>

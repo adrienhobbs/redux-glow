@@ -18,7 +18,7 @@
   width: 100%;
 }
 .featured_headline {
-  color: white;
+  color: black;
   font-size: 4.2em;
   margin-bottom: 20px;
 }
@@ -32,7 +32,7 @@
 
   p {
     font-family: var(--primary-font-family); 
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 1.875em;
   }
@@ -74,4 +74,13 @@
   background-image: url('/assets/images/Glow_Home_Splash_Vertical.jpg');
   background-size: cover;
   background-position: bottom center;
+}
+
+.video_intro {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
 }

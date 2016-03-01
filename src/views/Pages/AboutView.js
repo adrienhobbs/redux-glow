@@ -12,11 +12,10 @@ export class AboutView extends React.Component {
     setupPageInfo: PropTypes.func,
     animatePageContentIn: PropTypes.func
   };
-
   constructor (props) {
     super(props);
     this.state = {
-      weather: 'learn a little bit about Glow'
+      weather: 'learn a little bit about us.'
     };
   }
   componentDidMount () {

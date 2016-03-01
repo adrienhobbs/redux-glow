@@ -35,6 +35,8 @@ const Video = React.createClass({
   onCanPlay () {
     this.videoWrap = document.getElementsByClassName('drive-in-media');
     this.video     = this.videoWrap[0].getElementsByTagName('video')[0];
+    TweenLite.to(this.refs.videoIntro, 0.6, {autoAlpha: 0, ease: Expo.easeInOut});
+    TweenLite.to([this.refs.p, this.refs.hdl], 0.6, {color: '#ffffff', ease: Expo.easeInOut});
   },
   componentDidUpdate () {
     if (this.props.position !== 'center') {
@@ -52,10 +54,12 @@ const Video = React.createClass({
     return (
       <div ref='videoContainer' className={styles.video_placeholder}>
         <div className={styles.overlay}></div>
-        <DriveIn ref='video' onCanPlay={this.onCanPlay} show={[this.props.data.get('video'), 'https://s3.amazonaws.com/weareglow-assets/assets/video/home-poster.jpg']} />
+        <DriveIn ref='video' onCanPlay={this.onCanPlay} show={[this.props.data.get('video'), 'https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic_poster.jpg']} />
+        <div ref='videoIntro' className={styles.video_intro}>
+        </div>
         <div className={styles.copy_wrap}>
           <h1 ref='hdl' className={styles.featured_headline}>
-            <span>we are glow</span>
+            <span>we are GLOW</span>
           </h1>
           <p ref='p'>We activate fans, build and nurture communities and create interactive experiences that engage and convert.</p>
         </div>

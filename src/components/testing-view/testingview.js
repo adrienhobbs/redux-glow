@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import AllClients from 'components/ui/clients-component/index.js';
+import ScrollProxy from 'scroll-proxy';
 
 const mapStateToProps = (state) => ({
 });
@@ -19,10 +20,12 @@ export class Testing extends PageLayout {
     router: PropTypes.object
   };
 
-  componentWillMount () {
-    if (this.props.nav.isVisible) {
-      this.actions.changeNavState({isVisible: false, shouldAnimate: false});
-    }
+  componentDidMount () {
+    this.actions.changeNavState({isVisible: false, shouldAnimate: false});
+    this.s = new ScrollProxy(this.refs.scrollTest);
+    this.s.on('scroll', function () {
+      console.log(this);
+    });
   }
 
   constructor (props) {
@@ -59,7 +62,10 @@ export class Testing extends PageLayout {
     return (
       <div ref='testMe'>
         <AllClients showSubtitle color='#666' stroke='#666' />
-        <div className='test' style={{width: 100, height: 100, background: 'blue', color: 'white'}} onClick={this.onClick.bind(this)}>click</div>
+        <div ref='scrollTest' className='test' style={{position: 'relative', overflow: 'scroll', width: '100%', height: '100vh',  background: 'blue', color: 'white'}} onClick={this.onClick.bind(this)}>click
+          <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '50vh', background: 'red'}}></div>
+          <div style={{height: '200vh', width: '100%'}}></div>
+        </div>
       </div>
     );
   }

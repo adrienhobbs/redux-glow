@@ -256,7 +256,7 @@ const data = [
     templateName:               'TwelveMonkeys',
     copyColor:                  '#ffffff',
     headlineColor:              '#949494',
-    services:                   ['social strategy', 'community management', 'media campaign', 'asset creation', 'content-lab', 'creative execution', 'html5 site design', 'digital media', 'custom video'],
+    services:                   ['social strategy', 'content-lab', 'display media', 'site development', 'custom video'],
     sidebar: {
       logoColor:      '#ffffff',
       copyColor:      '#727272',
@@ -279,9 +279,9 @@ const data = [
     results: {
       stats: [
         {label: 'Facebook Fans in season 1', stat: '100K'},
-        {label: 'Increase in organic page likes', stat: '55%'},
-        {label: 'Total pieces of social content & video created', stat: '0000'},
-        {label: 'Display media units created', stat: '120+'}
+        {label: 'In organic page growth', stat: '55%'},
+        {label: 'Avg Rich Media engagement', stat: '7.3%'},
+        {label: 'Social & video content created', stat: '800+'}
       ],
       statColor:       '#ffffff',
       statLabelColor:  '#551313',
@@ -432,8 +432,8 @@ const data = [
     },
     results: {
       stats: [
-        {stat: '3,345', label: 'Facebook likes'},
-        {stat: '53,456', label: 'Page views'}
+        {stat: '35K', label: 'unlocked prized'},
+        {stat: '100%', label: 'fun'}
       ],
       statColor: '#ffffff',
       statLabelColor: '#fcb823',
@@ -473,6 +473,7 @@ const data = [
     backgroundImageUrl: s3 +  'case-studies/yahoo/how-i-did-it/landscape.jpg',
     backgroundImageUrlVert: s3 +  'case-studies/yahoo/how-i-did-it/landscape.jpg',
     backgroundVideoUrl: s3 + 'case-studies/yahoo/how-i-did-it/yahoo_bg_video.mp4',
+    backgroundVideoPoster: s3 + 'case-studies/yahoo/how-i-did-it/yahoo_bg_poster.jpg',
     logoColor: '#00283f',
     bodyColor: 'ffffff',
     secColor: '#ffffff',
@@ -545,41 +546,45 @@ const data = [
     ]
   },
   {
-    featured: true,
-    client: 'syfy',
-    project: 'sharknado',
-    title: 'sharknado',
-    subtitle: 'social media campaign',
-    subtitleSlug: 'social media campaign',
-    type: 'case-study',
-    backgroundImageUrl: s3 + 'case-studies/syfy/sharknado/landscape.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/syfy/sharknado/vertical.jpg',
-    logoColor: '#a3373f',
-    secColor: '#0b1c28',
-    gradientTop: '#a3373f',
-    gradientBottom: '#0b1c28',
-    featuredProjectTitleColor: '#a3373f',
-    sidebarLogoColor: '#ffffff',
-    cat: ' ― syfy | sharknado - ',
-    templateName: 'Sharknado',
-    // sharknado social strategy comminutiy mangement content lab creative execution influencer marketing 
-    services: ['content lab', 'social strategy',   'creative execution', 'influencer marketing', 'community management'],
-    headlineColor: '#7d2f37',
+    featured:                   true,
+    client:                     'syfy',
+    project:                    'sharknado',
+    title:                      'sharknado',
+    subtitle:                   'social media campaign',
+    subtitleSlug:               'social media campaign',
+    type:                       'case-study',
+    backgroundImageUrl:         s3 + 'case-studies/syfy/sharknado/landscape.jpg',
+    backgroundImageUrlVert:     s3 + 'case-studies/syfy/sharknado/vertical.jpg',
+    logoColor:                  '#a3373f',
+    secColor:                   '#0b1c28',
+    gradientTop:                '#a3373f',
+    gradientBottom:             '#0b1c28',
+    featuredProjectTitleColor:  '#a3373f',
+    sidebarLogoColor:           '#ffffff',
+    cat:                        '- syfy | sharknado -',
+    templateName:               'Sharknado',
+    services:                   ['content lab', 'social strategy', 'creative execution', 'influencer marketing', 'community management'],
+    headlineColor:              '#7d2f37',
     mobile: {
       bgColor: '#0b1c28' 
     },
     lockup: {
-      className: 'sharknado-lockup',
-      projectColor: '#fff',
-      featured: {
-        projectColor: '#a3373f'
+      className:       'sharknado-lockup',
+      projectColor:    '#fff',
+      featured:        {
+        projectColor:  '#a3373f'
       }
     },
     backbar: {
       bgColor: '#091720'
     },
     results: {
-      stats: [{label: '#1 in U.S. & #2 across the planet', stat: 'Trending'}, {label: 'video views', stat: '6M'}, {label: 'Twitter Impressions', stat: '2B'}],
+      stats: [
+        {label: 'Twitter impressions', stat: '2B'},
+        {label: 'Trending topic in U.S.', stat: '#1'},
+        {label: 'Trending topic global', stat: '#2'},
+        {label: 'Video views', stat: '6M'}
+      ],
       statColor: '#ffffff',
       statLabelColor: '#7d2f37',
       bgColor: '#091720',

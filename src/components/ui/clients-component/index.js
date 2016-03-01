@@ -32,12 +32,10 @@ export class ClientsBar extends React.Component {
   }
 
   getAllClientLogos () {
-    const logoClass = this.getClassname();
+    // const logoClass = this.getClassname();
     return clients.map(function mapClientNames (client, i) {
       return (
-        <div key={i} className={logoClass} >
-          <ClientLogo clientName={client}/>
-        </div>
+        <ClientLogo key={i} clientName={client}/>
       );
     });
   }
@@ -53,10 +51,8 @@ export class ClientsBar extends React.Component {
 
   render () {
     return (
-      <div className={styles.ourClients}>
-        <div className={styles.clientsLogoRow}>
-          {this.getAllClientLogos()}
-        </div>
+      <div className={styles.row}>
+        {this.getAllClientLogos()}
       </div>
     );
   }

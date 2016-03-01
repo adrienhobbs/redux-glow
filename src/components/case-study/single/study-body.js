@@ -68,7 +68,7 @@ const StudyBody = React.createClass({
   },
   getBgVideo () {
     if (this.props.data.get('backgroundVideoUrl')) {
-      return (<DriveIn show={[this.props.data.get('backgroundVideoUrl'), this.props.data.get('backgroundImageUrl')]} />);
+      return (<DriveIn show={[this.props.data.get('backgroundVideoUrl'), this.props.data.get('backgroundVideoPoster')]} />);
     }
   },
   render () {

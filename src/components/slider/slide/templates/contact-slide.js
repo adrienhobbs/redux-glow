@@ -20,15 +20,13 @@ export class ContactSlide extends React.Component {
       container: 'connect-slide',
       style: 'mapbox://styles/mattwill/cijysv78o00uo90lxte3x4fua',
       center: [-74.01, 40.73],
-      zoom:13
+      zoom: 13
     });
     this.map.scrollZoom.disable();
     this.map.on('load', this.setMapHeight.bind(this));
   }
 
   setMapHeight () {
-    this.map.on('zoomstart', function (e) {
-    });
     this.map.resize();
   }
 

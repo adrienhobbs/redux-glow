@@ -51,7 +51,7 @@ export class Services extends React.Component {
     return (
       <div className='page-outer'>
         <div className='container' id='services' ref='page'>
-          <Header title={'services'} subtitle={'check out our dope services, son!'} />
+          <Header title={'services'} subtitle={'check it out. how can we help?'} />
           <div className='page-content'>
             <div className='row'>
               {this.getOurServices()}
