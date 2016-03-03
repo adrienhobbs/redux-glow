@@ -63,7 +63,7 @@ export class DesktopHomeView extends PageLayout {
     const noParams = isEmpty(this.props.params);
     const hasFeaturedMatch = (!noParams) ? this.getFeaturedStudy() : false;
 
-    this.mountDotsAndTitles();
+    TweenLite.delayedCall(2, this.mountDotsAndTitles.bind(this));
     TweenLite.set(document.body, {overflowY: 'hidden'});
     TweenLite.set('.home-container', {className: '+=home-container-desktop'});
     this.checkTouchEvents();

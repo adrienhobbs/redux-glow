@@ -17,24 +17,37 @@
   height: 100%;
   width: 100%;
 }
+
 .featured_headline {
   color: black;
   font-size: 4.2em;
   margin-bottom: 20px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .copy_wrap {
   text-align: center;
   top: center;
   left:center;
-  width: 90%;
-  max-width: 960px;
+  width: 87%;
+  max-width: 898px;
 
   p {
-    font-family: var(--primary-font-family); 
+    font-family: var(--primary-font-family);
+    width: 87%;
+    margin: auto;
     color: black;
     font-weight: bold;
     font-size: 1.875em;
+    line-height: 1.2;
+    @media(--md-down) {
+      font-size: 1.5em;
+    }
+    @media(--xs-down) {
+      font-size: 1em;
+    }
   }
 }
 
@@ -71,7 +84,7 @@
 .video_placeholder {
   height: 100%;
   width: 100%;
-  background-image: url('/assets/images/Glow_Home_Splash_Vertical.jpg');
+  background-image: url('https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic_poster.jpg');
   background-size: cover;
   background-position: bottom center;
 }
