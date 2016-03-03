@@ -9,7 +9,8 @@ export class VirtualScroll extends Component {
     threshold: PropTypes.object,
     thresholdHit: PropTypes.func,
     onChange: PropTypes.func,
-    shouldUpdate: PropTypes.bool
+    shouldUpdate: PropTypes.bool,
+    callbacks: PropTypes.object
   };
 
   constructor (props) {
@@ -36,10 +37,11 @@ export class VirtualScroll extends Component {
   componentDidUpdate (prevProps) {
     if (this.state.deltaY >= this.props.threshold.y.up) {
       this.resetState();
-      this.props.thresholdHit('up hit');
+      // this.props.thresholdHit('up hit');
+      this.props.callbacks.up('up');
     } else if (this.state.deltaY <= this.props.threshold.y.down) {
       this.resetState();
-      this.props.thresholdHit('down hit');
+      this.props.callbacks.down('down');
     }
   }
 

@@ -220,11 +220,15 @@ export class DesktopHomeView extends PageLayout {
   }
 
   forward () {
-    console.log('go forward');
+    if (!this.props.TL.isActive() && !this.props.counter.isLast) {
+      this.actions.next();
+    }
   }
 
   back () {
-    console.log('go back');
+    if (!this.props.TL.isActive() && !this.props.counter.isFirst) {
+      this.actions.back();
+    }
   }
 
   mountDotsAndTitles () {
@@ -234,6 +238,12 @@ export class DesktopHomeView extends PageLayout {
     ReactDOM.render(titles, document.getElementById('frame-left'));
   }
   render () {
+
+    const cbs = {
+      down: this.forward.bind(this),
+      up: this.back.bind(this)
+    };
+
     const threshold = {
       y: {
         up: 100,
@@ -242,7 +252,7 @@ export class DesktopHomeView extends PageLayout {
     };
     return (
       <div ref='ctr' className={styles.homeContainerDesktop}>
-        <ScrollWatcher shouldUpdate={!this.tlIsActive()} threshold={threshold} thresholdHit={this.hit.bind(this)} />
+        <ScrollWatcher callbacks={cbs} shouldUpdate={!this.tlIsActive()} threshold={threshold} thresholdHit={this.hit.bind(this)} />
         <WorkItems
           activeSlideNum={this.state.activeSlideNum}
           locationState={this.props.location}
