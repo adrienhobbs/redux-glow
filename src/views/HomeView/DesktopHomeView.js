@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import styles from './home.scss';
 import snakeCase from 'lodash/snakeCase';
 import isEmpty from 'lodash/isEmpty';
+import ScrollWatcher from 'utilities/scroll_watcher.js';
 
 const mapStateToProps = (state) => ({
   counter: state.counter,
@@ -211,6 +212,21 @@ export class DesktopHomeView extends PageLayout {
   goToSlideNumber (num, dir) {
     this.actions.goToNumber({number: num, direction: dir});
   }
+
+  hit (data) {
+    console.log(data);
+    this.setState({shouldUpdate: false});
+    // TweenLite.delayedCall(5, () => {this.setState({shouldUpdate: true})});
+  }
+
+  forward () {
+    console.log('go forward');
+  }
+
+  back () {
+    console.log('go back');
+  }
+
   mountDotsAndTitles () {
     const dots = <SliderDots colors={this.props.colors} currentDot={this.props.counter.current} goToNumber={this.goToSlideNumber.bind(this)}/>;
     const titles = <Titles currentNum={this.props.counter.current} titles={this.getTitles()} currentTitle={this.getCurrentTitle()}/>;
@@ -218,11 +234,15 @@ export class DesktopHomeView extends PageLayout {
     ReactDOM.render(titles, document.getElementById('frame-left'));
   }
   render () {
+    const threshold = {
+      y: {
+        up: 100,
+        down: -100
+      }
+    };
     return (
-      <div ref='ctr' className={styles.homeContainerDesktop}
-        onWheel={(evt) => this.onWheel(evt)}
-        onTouchStart={(evt) => this.onTouchStart(evt)}
-        onTouchMove={(evt) => this.onTouchMove(evt)}>
+      <div ref='ctr' className={styles.homeContainerDesktop}>
+        <ScrollWatcher shouldUpdate={!this.tlIsActive()} threshold={threshold} thresholdHit={this.hit.bind(this)} />
         <WorkItems
           activeSlideNum={this.state.activeSlideNum}
           locationState={this.props.location}
@@ -239,4 +259,6 @@ export class DesktopHomeView extends PageLayout {
 }
 
 export default connect(mapStateToProps)(DesktopHomeView);
-
+        // onWheel={(evt) => this.onWheel(evt)}
+        // onTouchStart={(evt) => this.onTouchStart(evt)}
+        // onTouchMove={(evt) => this.onTouchMove(evt)}>
