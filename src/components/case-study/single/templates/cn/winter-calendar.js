@@ -16,8 +16,8 @@ export class WinterCalendar extends BaseTemplate {
   render () {
     const ResultsSection = this.getResultsTemplate();
     return (
-      <div ref='studyContent' className='study-content' style={{background: this.props.data.get('secColor')}}>
-        <div className='content-container' style={{backgroundColor: this.props.data.get('secColor')}}>
+      <div ref='studyContent' className='study-content'>
+        <div className='content-container'>
           <AboutSection data={this.props.data} />
           <ResultsSection data={this.props.data} />
           <div className={classes.cnSection}>

@@ -41,7 +41,7 @@ export class Careers extends React.Component {
                 <ul className={styles.positions_list}>
                   <li className={styles.position}>junior designer</li>
                   <li className={styles.position}>art director</li>
-                  <li className={styles.position}>production designer</li>
+                  <li className={styles.position}>producer/production manager</li>
                 </ul>
               </div>
             </div>

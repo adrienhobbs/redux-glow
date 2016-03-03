@@ -13,8 +13,8 @@ export class ILNY extends BaseTemplate {
     const copyStyle = this.getCopyStyle();
     // const ResultsSection = this.getResultsTemplate();
     return (
-      <div ref='studyContent' className='study-content' style={{background: this.props.data.get('secColor')}}>
-        <div className='content-container' style={{backgroundColor: this.props.data.get('secColor')}}>
+      <div ref='studyContent' className='study-content'>
+        <div className='content-container'>
           <AboutSection data={this.props.data} />
           <article className='strategy'>
             <h1 style={this.getHeadlineStyle()} className='study_headline section_headline'>social strategy</h1>

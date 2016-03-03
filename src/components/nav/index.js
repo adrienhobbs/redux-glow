@@ -83,13 +83,17 @@ export class Nav extends React.Component {
     }
   }
 
+  getNavClass () {
+    return (this.props.viewport.hasTouch || window.innerWidth <= 992) ? styles.nav_mobile : styles.nav_desktop;
+  }
+
   getMenuType () {
     return (this.props.viewport.hasTouch || window.innerWidth <= 992) ? 'mobile' : 'desktop';
   }
 
   render ()  {
     return (
-      <div className={styles.site_nav} ref='nav'>
+      <div className={this.getNavClass()} ref='nav'>
         {this.getNav()}
         <GlowLogoLink color={this.getLinkColor()} logoClick={this.logoClick} />
       </div>

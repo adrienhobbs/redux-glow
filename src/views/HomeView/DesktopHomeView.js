@@ -60,7 +60,6 @@ export class DesktopHomeView extends PageLayout {
   }
   componentDidMount () {
     const noParams = isEmpty(this.props.params);
-    console.log(this.props.params);
     const hasFeaturedMatch = (!noParams) ? this.getFeaturedStudy() : false;
 
     this.mountDotsAndTitles();
@@ -68,8 +67,6 @@ export class DesktopHomeView extends PageLayout {
     TweenLite.set('.home-container', {className: '+=home-container-desktop'});
     this.checkTouchEvents();
     this.checkKeyDownEvent();
-
-    console.log(hasFeaturedMatch, !noParams);
     if (hasFeaturedMatch && !noParams) {
       TweenLite.delayedCall(1, this.goToSlideNumber.bind(this, hasFeaturedMatch[0]));
       this.context.router.replace({pathname: '/'});

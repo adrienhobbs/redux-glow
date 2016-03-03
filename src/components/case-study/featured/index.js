@@ -73,8 +73,10 @@ export class FeaturedStudy extends PageLayout {
 
     if (this.state.singleMode !== prevState.singleMode) {
       if (!this.state.singleMode) {
+        TweenLite.set(this.refs.projectInner, {visibility: 'visible'});
         TweenLite.to(this.refs.info, 0.8, {y: 0, ease: Back.easeInOut.config(1)});
       } else if (this.state.singleMode) {
+        TweenLite.set(this.refs.projectInner, {visibility: 'hidden'});
         TweenLite.to(this.refs.info, 0.5, {y: 800, ease: Expo.easeInOut});
       }
     }

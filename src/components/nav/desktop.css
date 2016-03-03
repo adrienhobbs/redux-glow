@@ -8,7 +8,7 @@
 
 .hoverline:hover {
   color: #f12d5c;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .hoverline:before {
@@ -16,21 +16,21 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0px;
+  bottom: 0;
   height: 3px;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: inherit;
   visibility: hidden;
-  width: 0px;
-  transition: all .45s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 0;
+  transition: all 0.45s ease-in-out;
 }
 
 .hoverline:hover:before {
   visibility: visible;
   opacity: 1;
-  color: rgba(0,0,0,1);
-  bottom: 0px;
+  color: rgba(0, 0, 0, 1);
+  bottom: 0;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: inherit;
@@ -40,8 +40,8 @@
 .hoverline.hoverline_active:before {
   visibility: visible;
   opacity: 1;
-  color: rgba(0,0,0,1);
-  bottom: 0px;
+  color: rgba(0, 0, 0, 1);
+  bottom: 0;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: inherit;

@@ -6,6 +6,7 @@ import Header from 'components/ui/header-component/header-component.js';
 import AllClients from 'components/ui/clients-component/index.js';
 import request from 'superagent';
 import styles from './about.css';
+import sortBy from 'lodash/sortBy';
 
 export class AboutView extends React.Component {
   static contextTypes = {
@@ -30,8 +31,22 @@ export class AboutView extends React.Component {
       this.setState({weather: res.body.caption || res.text.caption});
     }
   }
+  getImportantEmployees () {
+    return map(EmployeeInfo.importantPeople, function mapEmployeeInfo (employee, i) {
+      return (
+        <div className={styles.about_employee_card} key={i}>
+          <EmployeeCard photoName={employee.photoName} name={employee.name} position={employee.position} />
+        </div>
+      );
+    });
+  }
+  getSortedEmployees () {
+    return sortBy(EmployeeInfo.otherPeople, function (employee, i) {
+      return employee.name;
+    });
+  }
   getEmployees () {
-    return map(EmployeeInfo, function mapEmployeeInfo (employee, i) {
+    return map(this.getSortedEmployees(), function mapEmployeeInfo (employee, i) {
       return (
         <div className={styles.about_employee_card} key={i}>
           <EmployeeCard photoName={employee.photoName} name={employee.name} position={employee.position} />
@@ -60,6 +75,7 @@ export class AboutView extends React.Component {
         </div>
         <h1 className={styles.headline} id='who-we-are-title'>who we are</h1>
         <section className={styles.row_large}>
+          {this.getImportantEmployees()}
           {this.getEmployees()}
         </section>
       </div>

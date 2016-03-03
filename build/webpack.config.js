@@ -118,6 +118,7 @@ webpackConfig.module.loaders = [{
     env: {
       development: {
         plugins: [
+        ['transform-decorators-legacy'],
           ['react-transform', {
             transforms: [{
               transform: 'react-transform-hmr',

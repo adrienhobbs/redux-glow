@@ -1,9 +1,10 @@
 import React from 'react';
 import Work from 'components/work-items';
 import AllClients from 'components/ui/clients-component/index.js';
-import Link from 'react-router/lib/Link';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import styles from './mobile-home.css';
+import CustomLink from 'components/nav/custom-link.js';
+
 export class HomeMobile extends PageLayout {
 
   constructor (props) {
@@ -49,11 +50,9 @@ export class HomeMobile extends PageLayout {
           <div className={styles.clients_mobile_wrap}>
             <h2 className={styles.headline}>our clients</h2>
             <AllClients mobileHome />
-            <div className={styles.services_button}>
-              <Link to='/services'>
-                <button>view our services  &#8594;</button>
-              </Link>
-            </div>
+          </div>
+          <div className={styles.services_button}>
+            <CustomLink className='hoverline' name='view our work' path='/work' />
           </div>
         </div>
         <div className={styles.about_glow}>

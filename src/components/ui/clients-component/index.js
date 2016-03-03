@@ -1,30 +1,31 @@
 import React, { PropTypes } from 'react';
 import ClientLogo from 'components/ui/logo-sprites/logo-sprite.js';
 import styles from './client-logos.css';
-import classnames from 'classnames';
 
 const clients = [
   'we-tv',
   'syfy',
   'hbo',
   'cartoon-network',
-  'crackle',
+  'westminster',
   'ilny',
   'usa',
-  'cinemax',
   'tnt',
-  'cnbc',
-  'carla-hall',
+  'cinemax',
+  // 'cnbc',
   'hulu',
-  'westminster',
-  'ae'
+  'carla-hall',
+  'crackle'
+  // 'ae'
 ];
 
 export class ClientsBar extends React.Component {
 
   static propTypes = {
     showSubtitle: PropTypes.bool,
-    slide: PropTypes.bool
+    slider: PropTypes.bool,
+    color: PropTypes.string,
+    mobileHome: PropTypes.bool
   };
 
   constructor (props) {
@@ -32,21 +33,20 @@ export class ClientsBar extends React.Component {
   }
 
   getAllClientLogos () {
-    // const logoClass = this.getClassname();
+    const logoClass = this.getClassname();
     return clients.map(function mapClientNames (client, i) {
-      return (
-        <ClientLogo key={i} clientName={client}/>
-      );
-    });
+      return (<ClientLogo className={logoClass} color={this.props.color || '#666'} key={i} clientName={client}/>);
+    }, this);
   }
 
-  getSubtitle () {
-    return (this.props.showSubtitle)
-      ? <h2 className={styles.subtitle}><div>brands we&#8217;ve</div><div>partnered with.</div></h2> : null;
-  }
   getClassname () {
-    const logoClass = (this.props.slide) ? styles.slideLogo : 'page';
-    return classnames(styles.clientLogoContainer, logoClass);
+    if (this.props.slider) {
+      return styles.slide_logo;
+    } else if (this.props.mobileHome) {
+      return styles.mobile_logo;
+    } else {
+      return styles.client;
+    }
   }
 
   render () {

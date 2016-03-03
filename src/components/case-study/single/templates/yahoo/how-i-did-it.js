@@ -35,8 +35,8 @@ export class HowIDidIt extends BaseTemplate {
 
   render () {
     return (
-      <div ref='studyContent' className='study-content' style={{background: this.props.data.get('secColor')}}>
-        <div className='content-container' style={{backgroundColor: this.props.data.get('secColor')}}>
+      <div ref='studyContent' className='study-content'>
+        <div className='content-container'>
           <AboutSection data={this.props.data} />
           {this.getVideoContent()}
         </div>

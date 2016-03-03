@@ -21,8 +21,8 @@ const servicesList =  [
   },
   {
     type: 'technology',
-    description: 'Our developers now how to develop cool things because they are cool people and have cool skills and lots of cool experiences.  Boo Yah!',
-    cats: ['front/back-end dev', 'HTML5', 'rapid prototyping', 'microsites', 'casual games', 'native mobile']
+    description: 'Building a great digital product demands experience.  Our seasoned experts thrive on navigating an ever-evolving technology landscape. From front-end, back-end to deployment, we’ve got you covered.',
+    cats: ['front/back-end dev', 'HTML5', 'rapid prototyping', 'deployment', 'casual games', 'native mobile']
   },
   {
     type: 'video',

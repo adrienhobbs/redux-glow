@@ -2,6 +2,7 @@ import scroll from 'scroll';
 
 function scrollReset () {
   scroll.top(document.body, 0, {duration: 1});
+  scroll.top(document.documentElement, 0, {duration: 1});
 };
 
 function getOffsetSum (elem) {
@@ -15,6 +16,7 @@ function getOffsetSum (elem) {
 
   return {top: top, left: left};
 }
+
 function getOffsetRect (elem) {
   // (1)
   const box = elem.getBoundingClientRect();

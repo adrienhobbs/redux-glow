@@ -4,7 +4,7 @@ import Templates from './templates';
 import Lockup from 'components/ui/lockup/lockup.js';
 import styles from './case-study.css';
 import DriveIn from 'react-drive-in';
-// import classes from 'components/ui/header-component/header-component.css';
+import ScrollProxy from 'scroll-proxy';
 
 const StudyBody = React.createClass({
 
@@ -13,20 +13,21 @@ const StudyBody = React.createClass({
     isVisible: PropTypes.bool,
     viewport: PropTypes.object
   },
-
   componentDidMount () {
-    // document.body.webkitRequestFullscreen();
     this.TL = new TimelineLite({autoRemoveChildren: true});
     TweenLite.set(this.refs.studyWrapper, {yPercent: 140});
     TweenLite.to(this.refs.studyOverlay, 0.8, {autoAlpha: 1, ease: Circ.easeInOut, onComplete: () => this.bringInContent()});
-    // this.bringInContent();
+    this.s = new ScrollProxy(this.refs.studyWrapper);
+    this.s.on('bottom', this.scrollOutContent.bind(this));
   },
 
+  scrollOutContent () {
+    console.log('yahos');
+  },
   shouldComponentUpdate (nextProps) {
     return !(nextProps.isVisible === this.props.isVisible) ||
       (nextProps.viewport.orientation !== nextProps.viewport.orientation);
   },
-
   componentWillUpdate (nextProps) {
     this.setIntroCtrHeight();
     if (!nextProps.isVisible) {
@@ -44,7 +45,6 @@ const StudyBody = React.createClass({
       }
     }
   },
-
   getCopyStyle () {
     return {
       color: this.props.data.get('copyColor') || '#fff'
@@ -68,7 +68,7 @@ const StudyBody = React.createClass({
   },
   getBgVideo () {
     if (this.props.data.get('backgroundVideoUrl')) {
-      return (<DriveIn show={[this.props.data.get('backgroundVideoUrl'), this.props.data.get('backgroundVideoPoster')]} />);
+      return (<DriveIn loop show={[this.props.data.get('backgroundVideoUrl'), this.props.data.get('backgroundVideoPoster')]} />);
     }
   },
   render () {
@@ -84,8 +84,8 @@ const StudyBody = React.createClass({
         </div>
         <div ref='studyWrapper' className={styles.case_study_single_wrapper}>
           <div className={styles.study_intro_container} ref='introCtr'></div>
-          <div className={styles.study_content_wrapper}>
-            <div className={styles.study_content_mask} style={{ background: this.props.data.get('secColor') }}></div>
+          <div className={styles.study_content_wrapper} style={{ background: this.props.data.get('secColor') }}>
+            <div className={styles.study_content_mask}   style={{ background: this.props.data.get('secColor') }}></div>
             <StudyTemplate viewport={this.props.viewport} data={this.props.data} />
           </div>
         </div>
@@ -95,13 +95,4 @@ const StudyBody = React.createClass({
 });
 
 export default StudyBody;
-
-            // <div style={{height: 200}}>
-            //   <svg className={classes.gradientSvg}>
-            //     <linearGradient id='t' gradientTransform='rotate(70)'>
-            //       <stop offset='0.4' stopColor={this.props.data.get('secColor')} stopOpacity='0' ref='endStop' />
-            //       <stop offset='0.1' stopColor={this.props.data.get('secColor')} />
-            //     </linearGradient>
-            //     <rect x='0' y='0' width='100%' height='100%' fill='url(#t)' />
-            //   </svg>
-            // </div>
+// <div ref='trigger' style={{width: '100%', height: 50, background: 'purple', position: 'absolute', bottom: 0}}></div>

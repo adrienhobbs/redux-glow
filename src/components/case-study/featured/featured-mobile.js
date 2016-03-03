@@ -76,6 +76,7 @@ export class FeaturedStudyMobile extends PageLayout {
       height: rect.height,
       x: rect.left,
       y: rect.top,
+      z: 0,
       position: 'fixed',
       overflow: 'hidden'
       // zIndex: 99
@@ -86,13 +87,14 @@ export class FeaturedStudyMobile extends PageLayout {
       className: '-=link'
     }, 0);
 
-    TL.to(this.refs.projectIntro, 0.8, {
+    TL.to(this.refs.projectIntro, 0.7, {
       width: windowW,
       height: '100%',
       x: windowW / 2,
       y: 0,
+      z: 0,
       xPercent: -50,
-      ease: Quart.easeInOut,
+      ease: Expo.easeInOut,
       clearProps: 'all',
       className: '-=closed',
       onComplete: () => {
@@ -113,13 +115,13 @@ export class FeaturedStudyMobile extends PageLayout {
   }
 
   openStudy () {
-    TweenLite.set([document.body, document.documentElement], {className: '+=locked'});
+    TweenLite.set([document.body], {className: '+=locked'});
     this.props.hideOthers(this.props.id, true);
     TweenLite.set([this.refs.overlay, this.refs.projectInfo], {autoAlpha: 0});
     this.studyTL = new TimelineLite({onComplete: () => this.setState({showBody: true})});
-    this.studyTL.addLabel('start', this.props.id / 10);
+    this.studyTL.addLabel('start');
     this.studyTL.add(this.getTrackTween(), 'start');
-    this.studyTL.add(this.getNavTween(), 'start+=0.2');
+    this.studyTL.add(this.getNavTween(), 'start');
   }
 
   unHideOthers () {
@@ -128,14 +130,41 @@ export class FeaturedStudyMobile extends PageLayout {
     };
   }
 
+  getReverseTrackTween () {
+    const TL = new TimelineLite();
+    const rect = this.refs.mobileWrap.getBoundingClientRect();
+    const infoHeight = this.refs.mobileWrap.getBoundingClientRect().height;
+
+    TL.set(this.refs.projectImage, {
+      className: '+=link'
+    }, 0);
+
+    TL.to(this.refs.projectIntro, 0.5, {
+      width: rect.width,
+      height: infoHeight,
+      x: rect.left,
+      y: rect.top,
+      z: 0,
+      ease: Expo.easeInOut,
+
+      onComplete: () => {
+        TweenLite.set([document.body], {className: '-=locked'});
+        TweenLite.set(this.refs.projectIntro, {clearProps: 'all', className: '+=closed'});
+        TweenLite.set(this.refs.projectBox, {clearProps: 'visibility,opacity,height,z-index'});
+      }
+    }, 0);
+
+    return TL;
+  }
+
   closeStudy () {
     const sequence = new TimelineLite({paused: true, onComplete: () => this.setState({closed: true})});
     this.setState({closed: false, showBody: false});
     TweenLite.set(this.refs.projectIntro, {overflow: 'hidden'});
     sequence.add(this.reverseStudyTL.bind(this), 0);
     sequence.add(this.getNavTween.bind(this), 0.4);
-    sequence.add(this.unHideOthers(), 0.6);
-    sequence.add(TweenLite.to(this.refs.projectInfo, 1.3, {delay: this.props.id / 15, autoAlpha: 1}), 1.1);
+    sequence.add(this.unHideOthers(), 0.2);
+    sequence.add(TweenLite.to(this.refs.projectInfo, 1.3, {delay: this.props.id / 15, autoAlpha: 1}), 0);
     sequence.play();
   }
 
@@ -151,7 +180,8 @@ export class FeaturedStudyMobile extends PageLayout {
       });
     });
     TweenLite.set([document.body, document.documentElement], {className: '-=locked'});
-    return this.studyTL.reverse();
+    // return this.studyTL.reverse();
+    return this.getReverseTrackTween();
   }
 
   getDescStyle () {
@@ -170,7 +200,7 @@ export class FeaturedStudyMobile extends PageLayout {
       <div className='project mobile'
         ref='projectBox'
         style={{background: this.props.data.get('mobile').bgColor, display: 'block'}} >
-        <div className='mobile-project-wrap'>
+        <div ref='mobileWrap' className='mobile-project-wrap'>
           <div ref='projectIntro' className='project-intro project__container mobile closed'>
             <div ref='projectImage' className='project-image project__image link' >
               <CaseStudy
