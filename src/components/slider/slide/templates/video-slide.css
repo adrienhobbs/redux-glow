@@ -17,10 +17,14 @@
   height: 100%;
   width: 100%;
 }
+
 .featured_headline {
   color: black;
   font-size: 4.2em;
   margin-bottom: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .copy_wrap {
@@ -31,10 +35,11 @@
   max-width: 960px;
 
   p {
-    font-family: var(--primary-font-family); 
+    font-family: var(--primary-font-family);
     color: black;
     font-weight: bold;
     font-size: 1.875em;
+    line-height: 1.2;
   }
 }
 
