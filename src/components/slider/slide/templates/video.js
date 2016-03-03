@@ -16,48 +16,51 @@ const Video = React.createClass({
     };
   },
 
-  getVidTemplate () {
-    return (
-      <video
-        preload
-        webkit-playsinline
-        poster='https://s3.amazonaws.com/weareglow-assets/assets/video/home-poster.jpg'
-        onPlay={this.onLoad}
-        ref='video'
-        className={styles.home_video}
-        muted
-        loop
-        src={this.props.data.get('video')}>
-        <p>sorry cant play</p>
-      </video>
-    );
+  componentDidMount () {
+    if (this.props.viewport.hasTouch) {
+      this.showSlide();
+    }
   },
 
   onCanPlay () {
     this.videoWrap = document.getElementsByClassName('drive-in-media');
     this.video     = this.videoWrap[0].getElementsByTagName('video')[0];
-    TweenLite.to(this.refs.videoIntro, 0.9, {autoAlpha: 0, ease: Expo.easeInOut, delay: 1.5});
-    TweenLite.to([this.refs.p, this.refs.hdlSvg], 0.9, {fill: '#ffffff', color: '#ffffff', delay: 1.5, ease: Expo.easeInOut});
+
+    this.showSlide();
   },
+
   componentDidUpdate () {
-    if (this.props.position !== 'center') {
-      this.props.TL.eventCallback('onComplete', () => { this.video.pause(); });
-    } else if (this.props.position === 'center') {
-      this.video.play();
+    if (this.hasVideo) {
+      if (this.props.position !== 'center') {
+        this.props.TL.eventCallback('onComplete', () => { this.video.pause(); });
+      } else if (this.props.position === 'center') {
+        this.video.play();
+      }
     }
   },
 
+  showSlide () {
+    TweenLite.to(this.refs.videoIntro, 0.9, {autoAlpha: 0, ease: Expo.easeInOut, delay: 1.5});
+    TweenLite.to([this.refs.p, this.refs.hdlSvg], 0.9, {fill: '#ffffff', color: '#ffffff', delay: 1.5, ease: Expo.easeInOut});
+    return <DriveIn ref='video' loop onCanPlay={this.onCanPlay} show={this.props.data.get('video')} poster='https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic_poster.jpg' />;
+  },
   restartTL () {
     this.tl.restart();
+  },
+  getVideoEl () {
+    return <DriveIn ref='video' loop onCanPlay={this.onCanPlay} show={this.props.data.get('video')} poster='https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic_poster.jpg' />;
+  },
+
+  getVideo () {
+    return (this.props.viewport.hasTouch) ? null : this.getVideoEl();
   },
 
   render () {
     return (
       <div ref='videoContainer' className={styles.video_placeholder}>
         <div className={styles.overlay}></div>
-        <DriveIn ref='video' loop onCanPlay={this.onCanPlay} show={[this.props.data.get('video'), 'https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic_poster.jpg']} />
-        <div ref='videoIntro' className={styles.video_intro}>
-        </div>
+        {this.getVideo()}
+        <div ref='videoIntro' className={styles.video_intro}></div>
         <div className={styles.copy_wrap}>
           <div ref='hdl' className={styles.featured_headline}>
             <svg style={{fill: primaryColor}} ref='hdlSvg' id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500.3 60.5'>
@@ -74,10 +77,3 @@ const Video = React.createClass({
 
 export default Video;
 
-// <div className='restart' onClick={this.restartTL} ref='restart' style={{position: 'relative', top: -50, width: 200, background: 'black', margin: 'auto'}}>restart</div>
-// <span ref='words' className='words-wrapper'>
-//   <b ref='hdlOne'>social</b>
-//   <b ref='hdlTwo'>digital</b>
-//   <b ref='hdlThree'>cool</b>
-//   <b ref='hdlFour'>glow</b>
-// </span>

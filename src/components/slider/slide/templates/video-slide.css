@@ -76,7 +76,7 @@
 .video_placeholder {
   height: 100%;
   width: 100%;
-  background-image: url('/assets/images/Glow_Home_Splash_Vertical.jpg');
+  background-image: url('https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic_poster.jpg');
   background-size: cover;
   background-position: bottom center;
 }
