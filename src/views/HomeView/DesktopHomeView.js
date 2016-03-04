@@ -3,13 +3,13 @@ import React, { PropTypes } from 'react';
 import WorkItems from 'components/work-items';
 import SliderDots from 'components/slider/slider-dots';
 import Titles from 'components/slider/titles';
-import du from 'domutil';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import { connect } from 'react-redux';
 import styles from './home.scss';
 import snakeCase from 'lodash/snakeCase';
 import isEmpty from 'lodash/isEmpty';
 import ScrollWatcher from 'utilities/scroll_watcher.js';
+import WorkHelpers from 'utilities/slide-helper.js';
 
 const mapStateToProps = (state) => ({
   counter: state.counter,
@@ -29,7 +29,8 @@ export class DesktopHomeView extends PageLayout {
     TL: PropTypes.object,
     colors: PropTypes.object,
     viewport: PropTypes.object,
-    params: PropTypes.object
+    params: PropTypes.object,
+    work: PropTypes.object
   };
 
   static contextTypes = {
@@ -51,7 +52,6 @@ export class DesktopHomeView extends PageLayout {
       this.actions.start(size - 1);
     }
     TweenLite.set('.home-container', {className: '+=home-container-desktop'});
-    // TweenLite.set(document.documentElement, {overflowY: 'scroll'});
   }
 
   getFeaturedStudy () {
@@ -59,164 +59,73 @@ export class DesktopHomeView extends PageLayout {
       return snakeCase(work.get('project')) === snakeCase(this.props.params.project);
     }, this);
   }
+
   componentDidMount () {
+    this.wh = Object.create(WorkHelpers);
+    this.wh.init(this.props.work);
     const noParams = isEmpty(this.props.params);
     const hasFeaturedMatch = (!noParams) ? this.getFeaturedStudy() : false;
-
     TweenLite.delayedCall(2, this.mountDotsAndTitles.bind(this));
     TweenLite.set(document.body, {overflowY: 'hidden'});
     TweenLite.set('.home-container', {className: '+=home-container-desktop'});
-    this.checkTouchEvents();
-    this.checkKeyDownEvent();
     if (hasFeaturedMatch && !noParams) {
       TweenLite.delayedCall(1, this.goToSlideNumber.bind(this, hasFeaturedMatch[0]));
       this.context.router.replace({pathname: '/'});
     }
   }
+
   componentDidUpdate (prevProps, prevState) {
     if (this.props.counter.current !== prevProps.counter.current) {
       this.mountDotsAndTitles();
     }
-    if (this.enteredSingleView(prevState) && this.props.viewport.hasTouch) {
-      this.cancelTouchMoveListener();
-    } else if (this.exitedSingleView(prevState)) {
-      this.checkTouchEvents();
-    }
+    console.log(this.wh.getTitles());
   }
+
   componentWillUnmount () {
     TweenLite.set(document.documentElement, {overflowY: 'initial'});
     TweenLite.set(document.body, {clearProps: 'all'});
     ReactDOM.unmountComponentAtNode(document.getElementById('frame-left'));
     ReactDOM.unmountComponentAtNode(document.getElementById('frame-right'));
-    this.cancelTouchMoveListener();
     this.actions.goToNumber({number: 0});
   }
+
   getCurrentFeaturedSlide () {
     return this.props.featuredWork.get(this.props.counter.current);
   }
+
   getCurrentTitle () {
     return this.getCurrentFeaturedSlide().get('cat');
   }
+
   getTitles () {
     return this.props.featuredWork.map(function (work) {
       return work.get('cat');
     });
   }
-  hasKeyDown () {
-    return ('onkeydown' in document);
-  }
-  listenForTouchMove (e) {
-    e.preventDefault();
-  }
-  preventTouchMove () {
-    du.bind(document, 'touchmove', this.listenForTouchMove);
-  }
-  cancelTouchMoveListener () {
-    du.unbind(document, 'touchmove', this.listenForTouchMove);
-  }
-  checkTouchEvents () {
-    if (this.props.viewport.hasTouch) {
-      this.preventTouchMove();
-    }
-  }
-  checkKeyDownEvent () {
-    if (this.hasKeyDown()) {
-      this.listenForKeyDown();
-    }
-  }
+
   timelineIsActive () {
     return this.props.TL.isActive();
   }
-  listenForKeyDown () {
-    du.bind(document, 'keydown', this.onKeyDown.bind(this));
-  }
+
   enteredSingleView (prevState) {
     return (this.state.singleView && !prevState.singleView);
   }
+
   exitedSingleView (prevState) {
     return (!this.state.singleView && prevState.singleView);
   }
-  goBack () {
-    if (!this.props.TL.isActive() && !this.props.counter.isFirst) {
-      this.actions.back();
-    }
-  }
-  goForward () {
-    if (!this.props.TL.isActive() && !this.props.counter.isLast) {
-      this.actions.next();
-    }
-  }
-  tlIsActive () {
-    return this.props.TL.isActive();
-  }
 
   getThreshold () {
-    return (this.props.viewport.safari) ? 1 : 51;
+    return (this.props.viewport.safari) ? 1 : 100;
   }
 
-  checkThreshold (e) {
-    if (!this.state.singleView) {
-      if (e.deltaY >= this.getThreshold()) {
-        if (e.type === 'wheel') {
-          this.goForward();
-        } else {
-          this.goBack();
-        }
-      } else if (e.deltaY <= -this.getThreshold()) {
-        if (e.type === 'wheel') {
-          this.goBack();
-        } else {
-          this.goForward();
-        }
-      }
-    }
-  }
-
-  onTouchStart (e) {
-    if (!this.state.singleView && this.props.viewport.hasTouch) {
-      const t = (e.targetTouches) ? e.targetTouches[0] : e;
-      this.touchStartX = t.pageX;
-      this.touchStartY = t.pageY;
-    }
-  }
-  onTouchMove (e) {
-    if (!this.state.singleView && this.props.viewport.hasTouch) {
-      const touchMult = 1;
-      const t = (e.targetTouches) ? e.targetTouches[0] : e;
-      const event = {
-        deltaX: (t.pageX - this.touchStartX) * touchMult,
-        deltaY: (t.pageY - this.touchStartY) * touchMult
-      };
-      this.checkThreshold(event, e);
-    }
-  }
-  /* eslint-disable */
-  onWheel (e) {
-    this.checkThreshold(e);
-  }
-  onKeyDown (e) {
-    switch (e.keyCode) {
-      case 38 :
-        this.checkThreshold({deltaY: -51, type: 'wheel'});
-        break;
-      case 40 :
-        this.checkThreshold({deltaY: 51, type: 'wheel'});
-        break;
-    }
-  }
-  /*eslint-enable */
   toggleNav (navState) {
     this.setState({singleView: !this.state.singleView});
     this.toggleNavState(navState);
   }
+
   goToSlideNumber (num, dir) {
     this.actions.goToNumber({number: num, direction: dir});
-  }
-
-  hit (data) {
-    console.log(data);
-    this.setState({shouldUpdate: false});
-    // TweenLite.delayedCall(5, () => {this.setState({shouldUpdate: true})});
   }
 
   forward () {
@@ -237,8 +146,12 @@ export class DesktopHomeView extends PageLayout {
     ReactDOM.render(dots, document.getElementById('frame-right'));
     ReactDOM.render(titles, document.getElementById('frame-left'));
   }
-  render () {
 
+  scrollShouldUpdate () {
+    return (!this.timelineIsActive() && !this.state.singleView);
+  }
+
+  render () {
     const cbs = {
       down: this.forward.bind(this),
       up: this.back.bind(this)
@@ -246,13 +159,13 @@ export class DesktopHomeView extends PageLayout {
 
     const threshold = {
       y: {
-        up: 100,
-        down: -100
+        up: this.getThreshold(),
+        down: -(this.getThreshold())
       }
     };
+
     return (
       <div ref='ctr' className={styles.homeContainerDesktop}>
-        <ScrollWatcher callbacks={cbs} shouldUpdate={!this.tlIsActive()} threshold={threshold} thresholdHit={this.hit.bind(this)} />
         <WorkItems
           activeSlideNum={this.state.activeSlideNum}
           locationState={this.props.location}
@@ -261,7 +174,6 @@ export class DesktopHomeView extends PageLayout {
           slider
           TL={this.props.TL}
           toggleNav={this.toggleNav.bind(this)}
-          shouldOpen={this.props.singleView}
         />
       </div>
     );
@@ -269,6 +181,4 @@ export class DesktopHomeView extends PageLayout {
 }
 
 export default connect(mapStateToProps)(DesktopHomeView);
-        // onWheel={(evt) => this.onWheel(evt)}
-        // onTouchStart={(evt) => this.onTouchStart(evt)}
-        // onTouchMove={(evt) => this.onTouchMove(evt)}>
+        // <ScrollWatcher callbacks={cbs} shouldUpdate={this.scrollShouldUpdate()} threshold={threshold} />

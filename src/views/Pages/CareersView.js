@@ -20,7 +20,7 @@ export class Careers extends React.Component {
   render () {
     return (
       <div className='container' id='careers' ref='page'>
-        <Header title={'careers'} subtitle={'we pay your bills, in exchange for your skills.'} />
+        <Header title={'careers'} subtitle={'oh yeah! come drink our koolaid.'} />
         <div className='page-content'>
           <div className='row'>
             <p className={styles.careers_copy}>At GLOW, hiring the best and brightest talent is by far our best concept.  If you are looking to join a young, smart, hardworking team that values thinking, creativity, passion and curiosity, then we want to hear from you.  Below is a list of current positions available at GLOW.</p>

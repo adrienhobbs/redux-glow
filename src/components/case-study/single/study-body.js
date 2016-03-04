@@ -4,7 +4,6 @@ import Templates from './templates';
 import Lockup from 'components/ui/lockup/lockup.js';
 import styles from './case-study.css';
 import DriveIn from 'react-drive-in';
-import ScrollProxy from 'scroll-proxy';
 
 const StudyBody = React.createClass({
 
@@ -17,8 +16,6 @@ const StudyBody = React.createClass({
     this.TL = new TimelineLite({autoRemoveChildren: true});
     TweenLite.set(this.refs.studyWrapper, {yPercent: 140});
     TweenLite.to(this.refs.studyOverlay, 0.8, {autoAlpha: 1, ease: Circ.easeInOut, onComplete: () => this.bringInContent()});
-    this.s = new ScrollProxy(this.refs.studyWrapper);
-    this.s.on('bottom', this.scrollOutContent.bind(this));
   },
 
   scrollOutContent () {
@@ -95,4 +92,3 @@ const StudyBody = React.createClass({
 });
 
 export default StudyBody;
-// <div ref='trigger' style={{width: '100%', height: 50, background: 'purple', position: 'absolute', bottom: 0}}></div>

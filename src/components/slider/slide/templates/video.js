@@ -10,6 +10,7 @@ const Video = React.createClass({
     TL: React.PropTypes.object,
     position: React.PropTypes.string
   },
+
   getInitialState () {
     return {
       hasVideo: null
@@ -25,7 +26,6 @@ const Video = React.createClass({
   onCanPlay () {
     this.videoWrap = document.getElementsByClassName('drive-in-media');
     this.video     = this.videoWrap[0].getElementsByTagName('video')[0];
-
     this.showSlide();
   },
 
@@ -40,8 +40,8 @@ const Video = React.createClass({
   },
 
   showSlide () {
-    TweenLite.to(this.refs.videoIntro, 0.9, {autoAlpha: 0, ease: Expo.easeInOut, delay: 1.5});
-    TweenLite.to([this.refs.p, this.refs.hdlSvg], 0.9, {fill: '#ffffff', color: '#ffffff', delay: 1.5, ease: Expo.easeInOut});
+    TweenLite.to(this.refs.videoIntro, 0.9, {autoAlpha: 0, ease: Expo.easeInOut, delay: 2.5});
+    TweenLite.to(this.refs.hdlSvg, 0.9, {fill: '#ffffff', delay: 2.5, ease: Expo.easeInOut});
     return <DriveIn ref='video' loop onCanPlay={this.onCanPlay} show={this.props.data.get('video')} poster='https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic_poster.jpg' />;
   },
   restartTL () {
@@ -58,7 +58,6 @@ const Video = React.createClass({
   render () {
     return (
       <div ref='videoContainer' className={styles.video_placeholder}>
-        <div className={styles.overlay}></div>
         {this.getVideo()}
         <div ref='videoIntro' className={styles.video_intro}></div>
         <div className={styles.copy_wrap}>

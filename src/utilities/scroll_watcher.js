@@ -1,5 +1,5 @@
 import autobind from 'autobind-decorator';
-import React, {Component, PropTypes} from 'react';
+import React, {Component, PropTypes, cloneElement, isValidElement} from 'react';
 
 export class VirtualScroll extends Component {
 
@@ -7,10 +7,9 @@ export class VirtualScroll extends Component {
 
   static propTypes = {
     threshold: PropTypes.object,
-    thresholdHit: PropTypes.func,
-    onChange: PropTypes.func,
     shouldUpdate: PropTypes.bool,
-    callbacks: PropTypes.object
+    callbacks: PropTypes.object,
+    children: PropTypes.element
   };
 
   constructor (props) {
@@ -23,13 +22,14 @@ export class VirtualScroll extends Component {
     el.addEventListener('touchstart', this.handleTouchStart, false);
     el.addEventListener('touchmove', this.handleTouchMove, false);
     el.addEventListener('touchend', this.handleTouchEnd, false);
+    el.addEventListener('keydown', this.handleKeyDown, false);
   }
 
   shouldComponentUpdate (nextProps) {
     return (nextProps.shouldUpdate);
   }
 
-  componentWillUpdate (nextProps) {
+  componentWillReceiveProps (nextProps) {
     if (nextProps.shouldUpdate !== this.props.shouldUpdate) {
       this.resetState();
     }
@@ -37,11 +37,10 @@ export class VirtualScroll extends Component {
   componentDidUpdate (prevProps) {
     if (this.state.deltaY >= this.props.threshold.y.up) {
       this.resetState();
-      // this.props.thresholdHit('up hit');
-      this.props.callbacks.up('up');
+      this.props.callbacks.up();
     } else if (this.state.deltaY <= this.props.threshold.y.down) {
       this.resetState();
-      this.props.callbacks.down('down');
+      this.props.callbacks.down();
     }
   }
 
@@ -59,7 +58,7 @@ export class VirtualScroll extends Component {
 
   @autobind
   handleWheel (event) {
-    event.preventDefault();
+    this.handleEvent(event);
     const deltaX = event.wheelDeltaX || event.deltaX * -1;
     const deltaY = event.wheelDeltaY || event.deltaY * -1;
     if (this.props.shouldUpdate) {
@@ -68,8 +67,14 @@ export class VirtualScroll extends Component {
   }
 
   @autobind
+  handleEvent (event) {
+    if (this.props.shouldUpdate) {
+      event.preventDefault();
+    }
+  }
+
+  @autobind
   handleTouchStart (event) {
-    event.preventDefault();
     const t = (event.targetTouches) ? event.targetTouches[0] : event;
     this.touchStartY = t.pageY;
     this.touchStartX = t.pageX;
@@ -77,7 +82,7 @@ export class VirtualScroll extends Component {
 
   @autobind
   handleTouchMove (event) {
-    event.preventDefault();
+    this.handleEvent(event);
     const t = (event.targetTouches) ? event.targetTouches[0] : event;
     const deltaY = t.pageY - this.touchStartY;
     const deltaX = t.pageX - this.touchStartX;
@@ -86,15 +91,30 @@ export class VirtualScroll extends Component {
 
   @autobind
   handleTouchEnd (event) {
-    event.preventDefault();
     this.pointerPosition = null;
     this.startFrame = null;
     this.setState({deltaX: 0, deltaY: 0});
   }
 
+  @autobind
+  handleKeyDown (event) {
+    let keyStep = 0;
+    switch (event.keyCode) {
+      case 38:
+        keyStep = this.props.threshold.y.up;
+        break;
+      case 40:
+        keyStep = this.props.threshold.y.down;
+        break;
+    }
+    this.setState({deltaY: keyStep});
+  }
+
   render () {
     return (
-      <div></div>
+      <div>
+        {(isValidElement(this.props.children)) ? cloneElement(this.props.children) : null}
+      </div>
     );
   }
 }
