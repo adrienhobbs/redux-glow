@@ -2,13 +2,18 @@
 
 :global {
   .error {
-    input {
-      border: 1px solid var(--color-radical-red);
+    input, 
+    textarea {
+      &:hover {
+        border: 2px solid var(--color-radical-red);
+      }
     }
   }
+
   .valid {
-    input {
-      border: 1px solid #9EDE9E;
+    input,
+    textarea {
+      border: 2px solid #9EDE9E;
     }
   }
 }
@@ -41,12 +46,12 @@
 .message {
   text-align: center;
   font-family: var(--primary-font-family);
-  font-size: 1rem;
   color: var(--color-slate-gray);
   width: 100%;
   visibility: hidden;
   opacity: 0;
   left: center;
+  font-size: 1.2rem !important;
   top: center;
   button {
     color: white;

@@ -28,7 +28,7 @@ export class WorkView extends PageLayout {
         <div className={styles.work_view}  ref='page'>
           <div className={styles.work_view_header}>
             <h1 className='page-title'>our work</h1>
-            <h4 className={styles.page_subtitle}>how we win.</h4>
+            <h4 className={styles.page_subtitle}>yeah, we get paid to do this.</h4>
           </div>
           <div className={styles.work_view_content}>
             <WorkItems workpage actions={this.actions} location={this.props.routerState.locationBeforeTransitions} params={this.props.params}  />

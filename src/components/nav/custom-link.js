@@ -52,7 +52,7 @@ export class CustomLink extends React.Component {
 
   render () {
     return (
-      <Link ref='link' style={this.getStyle()} {...this.props} onClick={this.onClick.bind(this)} to={this.getPath()}>{this.getInnerLink()}</Link>
+      <Link ref='link' style={this.getStyle()} {...this.props} onClick={this.onClick.bind(this)} onTouchEnd={this.onClick.bind(this)} to={this.getPath()}>{this.getInnerLink()}</Link>
     );
   }
 }

@@ -69,19 +69,23 @@ const employeeInfo = {
       position: 'Director of Marketing',
       photoName: 'Sean'
     },
-
+    {
+      name: 'Brit Mullen',
+      position: 'Social Designer',
+      photoName: 'Brit'
+    },
     {
       name: 'Ben Tuber',
       position: 'Art Director',
       photoName: 'Ben'
     },
     {
-      name: 'Aaron Perez',
+      name: 'Aaron J. Perez',
       position: 'Digital Strategist',
       photoName: 'Aaron'
     },
     {
-      name: 'Danielle Guernica',
+      name: 'Daniela Guernica',
       position: 'Community Manager',
       photoName: 'Danielle'
     },
@@ -162,7 +166,7 @@ const employeeInfo = {
     },
     {
       name: 'Tara Lewis',
-      position: 'Account Executive',
+      position: 'Sr. Project Manager',
       photoName: 'Tara'
     },
     {

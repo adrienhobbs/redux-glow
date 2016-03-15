@@ -1,20 +1,5 @@
 /*eslint-disable*/
-// import React from 'react';
-// winter calendar custom animation html5 development creative execution
-// ilny social strategy community management content lab creative execution recognition: beautiful destinations partnership
-// carla add social strategy 
-// monkeys add content lab creative execution html5 site design digital media custom video
-// proof creative execution digital media social content // update client logo
-// ilny social strategy community management content lab creative execution recognition: beautiful destinations partnership
-// winter calendar custom animation html5 development creative execution
-// sharknado social strategy comminutiy mangement content lab creative execution influencer marketing 
-// westminster social strategy community mangement content lab creative exectution live event management
-//
-// proof creative execution digital media social content // update client logo
-// monkeys add content lab creative execution html5 site design digital media custom video
-// veep social strategy, comm mangement, content lab, creative execution, digital mediau, influenver campaings, recogntion: shorty: best multi-paltform shorty: best twitter campaign.
-// westminster social strategy community mangement content lab creative exectution live event management
-//
+
 const s3 = 'https://s3.amazonaws.com/weareglow-assets/';
 const data = [
   {
@@ -28,7 +13,6 @@ const data = [
     gradientBottom: '#0e374a',
     cat: '- we are glow -'
   },
-
   {
     featured:                   true,
     client:                     'syfy',
@@ -65,8 +49,8 @@ const data = [
     results: {
       stats: [
         {label: 'Twitter impressions', stat: '2B'},
-        {label: 'Trending topic in U.S.', stat: '#1'},
-        {label: 'Trending topic global', stat: '#2'},
+        {label: 'Trending topic (US)', stat: '#1'},
+        {label: 'Trending topic (global)', stat: '#2'},
         {label: 'Video views', stat: '6M'}
       ],
       statColor: '#ffffff',
@@ -87,7 +71,7 @@ const data = [
     endShape: {
       bgColor: '#091720'
     },
-    aboutCopy: '<p>Sharknado 3 took the world by storm and stirred up 2 billion Twitter Impressions. Yes, that’s a B. A key priority program for Syfy, GLOW couldn’t wait to dive-in. Together we planned and launched a FOMO-inducing social campaign, which included social strategy, community management and social content creative to make Sharknado 3 a can’t-miss event. </p>'
+    aboutCopy: '<p>Sharknado 3 took the world by storm and stirred up 2 billion Twitter impressions. Yes, that’s a B. A key priority program for Syfy, GLOW couldn’t wait to dive-in. Together, we planned and launched a FOMO-inducing social campaign, which included social strategy, community management, and social content creative to make Sharknado 3 a can’t-miss event. </p>'
   },
   {
     featured: false,
@@ -103,7 +87,7 @@ const data = [
     secColor: '#1d1d1d',
     cat: ' ― ilny | aor ― ',
     services: ['social strategy', 'community management', 'content lab', 'creative execution'],
-    recognition: ['beautiful destinations partnership'],
+    recognition: ['shorty award finalist'],
     templateName: 'ILNY',
     headlineColor: '#d52027',
     backbar: {
@@ -137,7 +121,7 @@ const data = [
     endShape: {
       bgColor: '#171717'
     },
-    aboutCopy: '<p>In the fall of 2014, Empire State Development approached Glow.  The I Love New York initiative had taken shape on social, but it was important to ESD to maintain an edge over other states.  They needed a partner to analyze the trends, execute on insights and take their visual and editorial content to level unseen previous.  Glow stepped into this role with the goal to revitalize their social footprint, but also give it a unique voice among other states.</p>'
+    aboutCopy: '<p>In the fall of 2014, Empire State Development approached GLOW.  The I Love New York initiative had taken shape on social, but it was important to ESD to maintain an edge over other states.  They needed a partner to analyze the trends, execute on insights and, take their visual and editorial content to a level previously unseen.  GLOW stepped into this role with the goal to revitalize their social footprint, but also give it a unique voice among other states.</p>'
   },
   {
     featured: false,
@@ -164,7 +148,7 @@ const data = [
       bgColor: '#d6963f'
     },
     results: {
-      stats: [{label: 'Snapchat Live Stories views', stat: '26M'}, {label: 'FB users reached during 4 show days', stat: '7.8M'}, {label: 'Instagram followers', stat: 'doubled'}, {label: 'Visitors driven to WKC website', stat: '50K+'}],
+      stats: [{label: 'Snapchat Live Story views', stat: '26M'}, {label: 'FB users reached during 4 show days', stat: '7.8M'}, {label: 'Instagram followers', stat: '2X'}, {label: 'Visitors driven to WKC website', stat: '50K+'}],
       statColor: '#ffffff',
       statLabelColor: '#d6963f',
       bgColor: '#431d67',
@@ -202,7 +186,7 @@ const data = [
     bodyColor: 'ffffff',
     secColor: '#ffffff',
     cat: ' ― cn | calendar ― ',
-    services: ['Full-service production', 'motion design', 'scripting', 'direction'],
+    services: ['full-service production', 'motion design', 'scripting', 'direction'],
     copyColor: '#000000',
     templateName: 'HowIDidIt',
     headlineColor: '#1EB547',
@@ -235,7 +219,7 @@ const data = [
     backbar: {
       bgColor: '#1EB547'
     },
-    aboutCopy: '<p>HOW I DID IT: EVERYDAY STORIES OF FINANCIAL SUCCESS is a five part documentary series of short stories on subjects ranging from Paying for College, to Buying Your First House. GLOW, in partnership with Believe Entertainment, Yahoo Finance, and the Consumer Financial Protection Bureau, produced, directed and edited all five episodes.</p><p> The goal of the project was to demystify options available when facing a range of different financial challenges, by showing the personal approaches of several ordinary individuals in a fun, and relatable first-person telling of how they met and overcame their own financial issues.</p>',
+    aboutCopy: '<p>HOW I DID IT: EVERYDAY STORIES OF FINANCIAL SUCCESS is a five part documentary series of short stories on subjects ranging from Paying for College to Buying Your First House. GLOW, in partnership with Believe Entertainment, Yahoo Finance, and the Consumer Financial Protection Bureau, produced, directed and edited all five episodes.</p><p> The goal of the project was to demystify options available when facing a range of different financial challenges, by showing the personal approaches of several ordinary individuals in a fun, and relatable first-person telling of how they met and overcame their own financial issues.</p>',
     videos: [
       {
         videoSrc: 'https://s3.amazonaws.com/weareglow-assets/case-studies/yahoo/how-i-did-it/ep01.mp4',
@@ -329,7 +313,7 @@ const data = [
     endShape: {
       bgColor: '#0A2C3A'
     },
-    aboutCopy: '<p>Veep was a favorite among critics in its inaugural season. However, critical acclaim is simply not enough. GLOW approached HBO and took this opportunity to do what we do best - build audience and expand the social footprint with a smart, strong strategy and quality social content...and lots of it.</p><p>All the while, we were striving to redefine how a thirty-minute comedy is marketed on social media. </p><p>And it worked.</p>'
+    aboutCopy: '<p>Veep was a favorite among critics in its inaugural season. However, critical acclaim was simply not enough. GLOW approached HBO and took this opportunity to do what we do best - build audience and expand the social footprint with a smart, strong strategy and quality social content...and lots of it.</p><p>All the while, we were striving to redefine how a thirty-minute comedy is marketed on social media. </p><p>And it worked.</p>'
   },
   {
     featured:                   false,
@@ -350,7 +334,7 @@ const data = [
     templateName:               'TwelveMonkeys',
     copyColor:                  '#ffffff',
     headlineColor:              '#949494',
-    services:                   ['social strategy', 'content-lab', 'display media', 'site development', 'custom video'],
+    services:                   ['social strategy', 'content lab', 'display media', 'site development', 'custom video'],
     sidebar: {
       logoColor:      '#ffffff',
       copyColor:      '#727272',
@@ -375,7 +359,7 @@ const data = [
         {label: 'Facebook Fans in season 1', stat: '100K'},
         {label: 'In organic page growth', stat: '55%'},
         {label: 'Avg Rich Media engagement', stat: '7.3%'},
-        {label: 'Social & video content created', stat: '800+'}
+        {label: 'Social & video content pieces created', stat: '800+'}
       ],
       statColor:       '#ffffff',
       statLabelColor:  '#551313',
@@ -387,7 +371,7 @@ const data = [
     endShape: {
       bgColor: '#171717'
     },
-    aboutCopy: "<p>Syfy’s <i>12 Monkeys</i> is a science fiction thriller about one man's desperate attempt to save mankind using a dangerous and untested method of time travel. Our objective around the series launch was to build the world of 12 Monkeys for a new audience by making sense of its complex time-traveling story and supplement the on-air viewing with multi-platform digital and social content around this theme.  </p><p>The goals were to drive an immersive experience that would build and sustain engagement throughout the series and illustrate a comprehensive and clear vision for mapping the time travel jumps of James Cole, one of the lead characters. We also wanted to offer a stream of unique, provocative real-time, platform-specific social content for fans. </p>"
+    aboutCopy: "<p>Syfy’s 12 Monkeys is a science-fiction thriller about one man's desperate attempt to save mankind using a dangerous and untested method of time travel. Our objective around the series launch was to build the world of 12 Monkeys for a new audience by making sense of its complex time-traveling story and supplement the on-air viewing with multi-platform digital and social content around this theme.  </p><p>The goals were to drive an immersive experience that would build and sustain engagement throughout the series and illustrate a comprehensive and clear vision for mapping the time travel jumps of James Cole, one of the lead characters. We also wanted to offer a stream of unique, provocative real-time, platform-specific social content for fans. </p>"
   },
   {
     featured: true,
@@ -438,7 +422,7 @@ const data = [
       bgColor: '#ffffff',
       summaryCopyColor: '#4d4d4d'
     },
-    aboutCopy: '<p>GLOWs relationship with celebrity chef Carla Hall from ABC’s “The Chew” began with a conversation around launching a Kickstarter campaign to raise funds to support her life long dream of opening her own restaurant, <i>Carla Hall’s Southern Kitchen.</i></p> <p>GLOW laid out a strategy that began with a complete social refresh of all of Carla’s social profiles to ignite and strengthen her base before we kicked off her Kickstarter campaign.</p>'
+    aboutCopy: '<p>GLOWs relationship with celebrity chef Carla Hall from ABC’s “The Chew” began with a conversation around launching a Kickstarter campaign to raise funds to support her life-long dream of opening her own restaurant, <i>Carla Hall’s Southern Kitchen.</i></p> <p>GLOW laid out a strategy that began with a complete social refresh of all of Carla’s social profiles to ignite and strengthen her base before we kicked off her Kickstarter campaign.</p>'
   },
   {
     featured: false,
@@ -462,7 +446,7 @@ const data = [
     },
     results: {
       deviceImageUrl: s3 + 'case-studies/tnt/proof/device.png',
-      stats: [{label: 'Video Views', stat: '7M'}, {label: 'Unique users reached', stat: '30M'}],
+      stats: [{label: 'Video views', stat: '7M'}, {label: 'Unique users reached', stat: '30M'}],
       statColor: '#ffffff',
       statLabelColor: '#000000',
       bgColor: '#c3c3c3',
@@ -487,15 +471,15 @@ const data = [
     endShape: {
       bgColor: '#82b3dc'
     },
-    aboutCopy: '<p>The premise of “what happens when we die?” is a powerful question that connects us all.  Near death experiences are both common, and fascinating.  Our challenge as we began crafting our creative approach was how to best use this question of life after death as a launch platform for TNT’s new show, Proof. </p>'
+    aboutCopy: '<p>The premise of “What happens when we die?” is a powerful question that connects us all.  Near-death experiences are both common, and fascinating.  Our challenge as we began crafting our creative approach was how to best use this question of life after death as a launch platform for TNT’s new show, Proof. </p>'
   },
   {
     featured: false,
     client: 'cn',
     project: 'winter calendar',
     title: 'winter calendar',
-    subtitle: 'facebook experience',
-    subtitleSlug: 'facebook experience',
+    subtitle: 'digital experience',
+    subtitleSlug: 'digital experience',
     type: 'case-study',
     backgroundImageUrl: s3 +  'case-studies/cn/winter-calendar/landscape.jpg',
     backgroundImageUrlVert: s3 +  'case-studies/cn/winter-calendar/landscape.jpg',
@@ -510,8 +494,8 @@ const data = [
     },
     results: {
       stats: [
-        {stat: '35K', label: 'unlocked prized'},
-        {stat: '100%', label: 'fun'}
+        {stat: '35K', label: 'Prizes unlocked'},
+        {stat: '100%', label: 'Fun'}
       ],
       statColor: '#ffffff',
       statLabelColor: '#fcb823',
@@ -538,7 +522,7 @@ const data = [
     backbar: {
       bgColor: '#00283f'
     },
-    aboutCopy: '<p>In a count-down-to-winter-themed effort to engage fans with custom and unique content for the hit franchise Adventure Time, GLOW teamed with Cartoon Network to develop a digital experience called Adventure Time Winter Breakout. Our goal was to develop a fun, seasonal engagement that drove excitement around a countdown to winter, gave fans a reason to come back and engage with their favorite show, unlocking new items daily that awarded fans with Adventure Time assets and winnable items. </p>' 
+    aboutCopy: '<p>In a count-down-to-winter-themed effort to engage fans with custom and unique content for the hit franchise Adventure Time, GLOW teamed with Cartoon Network to develop a digital experience called Adventure Time: Winter Breakout. Our goal was to develop a fun, seasonal engagement that drove excitement around a countdown to winter, and gave fans a reason to come back and engage with their favorite show, to unlock new items daily that awarded fans with Adventure Time assets and winnable items. </p>' 
   },
   {
     featured: true,
@@ -550,7 +534,7 @@ const data = [
     secColor: '#DADADA',
     gradientTop: '#FFFFFF',
     gradientBottom: '#f12d5c',
-    cat: ' ― about glow ― '
+    cat: '― our clients ―'
   },
   {
     featured: true,
@@ -562,7 +546,7 @@ const data = [
     secColor: '#FFFFFF',
     gradientBottom: '#FFFFFF',
     gradientTop: '#DADADA',
-    cat: ' ― get in touch ― '
+    cat: '― get in touch ―'
   }
 ];
 

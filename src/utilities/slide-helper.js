@@ -1,17 +1,28 @@
 const WorkHelpers = (function () {
   var work;
 
-  const getTitles = function () {
+  const getFeaturedTitles = function () {
     return work.featured.map(function (work) {
       return work.get('cat');
     });
+  };
+
+  const getCurrentFeaturedSlide = function (current) {
+    console.log(this);
+    return work.featured.get(current);
+  };
+
+  const getCurrentTitle = function () {
+    return getCurrentFeaturedSlide().get('cat');
   };
 
   return {
     init: function (data) {
       work = data;
     },
-    getTitles: getTitles
+    getFeaturedTitles: getFeaturedTitles,
+    getCurrentTitle: getCurrentTitle,
+    getCurrentFeaturedSlide: getCurrentFeaturedSlide
   };
 }());
 

@@ -48,7 +48,7 @@ export class SouthernKitchen extends BaseTemplate {
             <div className='copy'>
               <div className='copy-inner'>
                 <LoopingVideo videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/carla-hall/southern-kitchen/social-01.mp4' viewport={this.props.viewport} />
-                <p style={copyStyle}>In just 3.5 months, we increased page likes by 20.73 % - twitter followers by 8.08 % and Instagram follows by 34.48%.</p>
+                <p style={copyStyle}>In just 3.5 months, we increased page likes by 21 % - twitter followers by 8% and Instagram follows by 35%.</p>
                 <p style={copyStyle}>After effectively completing this social overhaul, we then launched into our Kickstarter campaign.  GLOW's video team produced, scripted, directed, shot and edited a dynamic series of videos for the Kickstarter campaign. The main video was a direct plea to Carla's fans with Carla front and center. The follow up videos included a how-to video on cooking the perfect Hot Chicken, followed by the story of Carla's cooking inspiration, and finally Carla in the streets of New York City talking Hot Chicken as she mixes and mingles with residents of the big city.</p>
               </div>
               <div className='image-large inner_section'>

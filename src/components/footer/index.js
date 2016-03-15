@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './footer.css';
 
 const Footer = () => {
+  var year = new Date().getFullYear();
   return (
     <footer className={styles.footer} id='footer'>
       <article className={styles.desktop_footer}>
@@ -50,7 +51,7 @@ const Footer = () => {
         </ul>
       </article>
       <section className={styles.footer_colophon}>
-        © 1999 - 2015 GLOW - all rights reserved
+        © 1999 - {year} GLOW - all rights reserved
       </section>
     </footer>
   );

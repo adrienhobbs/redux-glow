@@ -40,8 +40,8 @@ const Video = React.createClass({
   },
 
   showSlide () {
-    TweenLite.to(this.refs.videoIntro, 0.9, {autoAlpha: 0, ease: Expo.easeInOut, delay: 2.5});
-    TweenLite.to(this.refs.hdlSvg, 0.9, {fill: '#ffffff', delay: 2.5, ease: Expo.easeInOut});
+    TweenLite.to(this.refs.videoIntro, 0.9, {autoAlpha: 0, ease: Expo.easeInOut, delay: 2});
+    TweenLite.to(this.refs.hdlSvg, 0.9, {fill: '#ffffff', delay: 2, ease: Expo.easeInOut});
     return <DriveIn ref='video' loop onCanPlay={this.onCanPlay} show={this.props.data.get('video')} poster='https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic_poster.jpg' />;
   },
   restartTL () {

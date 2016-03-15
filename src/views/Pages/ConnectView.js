@@ -29,11 +29,47 @@ export class ConnectView extends React.Component {
       });
       this.map.scrollZoom.disable();
       this.map.on('load', this.setHeight.bind(this));
+      // this.map.on('style.load', this.setMarkers.bind(this));
     }
   }
 
   setHeight () {
     this.map.resize();
+  }
+
+  setMarkers () {
+    this.map.addSource('markers', {
+      'type': 'geojson',
+      'data': {
+        'type': 'FeatureCollection',
+        'features': [{
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-74.008, 40.727]
+          },
+          'properties': {
+            'marker-color': '#3ca0d3',
+            'marker-size': 'large',
+            'marker-symbol': 'triangle',
+            title: 'GLOW HQ'
+          }
+        }
+        ]
+      }
+    });
+    this.map.addLayer({
+      'id': 'markers',
+      'type': 'symbol',
+      'source': 'markers',
+      'layout': {
+        'icon-image': '{marker-symbol}-15',
+        'text-field': '{title}',
+        'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+        'text-offset': [0, 0.6],
+        'text-anchor': 'top'
+      }
+    });
   }
 
   render () {

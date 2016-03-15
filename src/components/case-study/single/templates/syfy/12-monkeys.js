@@ -20,7 +20,7 @@ export class TwelveMonkeys extends BaseTemplate {
           <ResultsSection data={this.props.data} />
           <div className='copy'>
             <div className='copy-inner'>
-              <p style={copyStyle}>By creating a dynamic interactive experience, a compelling social media content campaign, and a targeted digital media campaign ensured viewers were met at every opportunity with variations of 12 Monkeys content and messaging geared for each platform. Consolidating all asks of a campaign into one agency allowed for extreme efficiencies and shared platform learnings—paving the way for GLOW to deliver a successful campaign across the board.</p>
+              <p style={copyStyle}>By creating a dynamic interactive experience, a compelling social media content campaign, and a targeted digital media campaign, GLOW ensured viewers were met at every opportunity with variations of 12 Monkeys content and messaging geared for each platform. Consolidating all asks of a campaign into one agency allowed for extreme efficiencies and shared platform learnings—paving the way for GLOW to deliver a successful campaign across the board.</p>
               <p style={copyStyle}>Overall, during January to May 2015, the 12 Monkeys Time Map on Syfy.com exceeded expectations on total page views, uniques, and site visits and garnered a time spent average of 3+ minutes per visit, which is an outstanding “dwell time” that’s notably above industry average. </p>
             </div>
           </div>

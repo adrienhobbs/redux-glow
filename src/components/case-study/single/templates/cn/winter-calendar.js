@@ -24,7 +24,7 @@ export class WinterCalendar extends BaseTemplate {
             {this.createHeadlineEl('the calendar')}
             <div className='copy'>
               <div className='copy-inner'>
-                <p style={this.getCopyStyle()}>To ensure we addressed an audience that is evermore increasing its presence on mobile, Glow developed a mobile/tablet friendly HTML experience, where over the course of twelve days, fans were invited to become heroes each day, smashing ice blocks to free their favorite AT characters from the Ice King's frosty clutches. Custom animations captured the groovy, irreverent whimsy nature of the show and created a daily branded experience for fans. Each day featured a new character to be freed along with an exclusive 'thank you' to fans, offering everything from downloadable craft projects and video clips, to exclusive ringtones and discounts on Adventure Time gear.</p>
+                <p style={this.getCopyStyle()}>To ensure we addressed an audience that is ever-more increasing its presence on mobile, GLOW developed a mobile/tablet-friendly HTML experience, where over the course of twelve days, fans were invited to become heroes each day, smashing ice blocks to free their favorite AT characters from the Ice King's frosty clutches. Custom animations captured the groovy, irreverent, and whimsical nature of the show and created a daily-branded experience for fans. Each day featured a new character to be freed along with an exclusive 'thank you' to fans, offering everything from downloadable craft projects and video clips, to exclusive ringtones and discounts on Adventure Time gear.</p>
               </div>
             </div>
           </div>

@@ -1,6 +1,8 @@
 :global {
   #featured-work {
     margin-top: 60px;
+    position: relative;
+    z-index: 10;
   }
   .project {
     &.mobile {
@@ -51,7 +53,7 @@
 
 .home_mobile {
   background: white;
-  position: relative;
+  /* position: relative; */
   text-align: center;
   &_image {
     min-height: 47%;
@@ -79,10 +81,11 @@
 }
 
 .inner_wrap {
-  margin-top:2%;
+  margin-top: 4%;
   height: 41%;
-  width: 100%;
-  position: relative;
+  width: 87%;
+  margin-right: auto;
+  margin-left: auto;
 
   .featured-headline {
     font-size: 15vw;
@@ -94,20 +97,24 @@
 
 }
 
+.headline_svg {
+  margin-bottom: 0.5em;
+}
+
 .scroll_for_more {
   margin-top: 0;
   text-align: center;
   font-family: var(--primary-font-family);
   font-size: 1.5em;
-  width: 100%;
   color: var(--color-radical-red);
-  /* position: absolute; */
   font-weight: 600;
 }
 
 .clients_mobile {
   background: var(--color-light-gray);
   padding-bottom: 40px;
+  z-index: 1;
+  position: relative;
 }
 
 .services_button {

@@ -69,9 +69,10 @@ const ProjectIntro = React.createClass({
     const TL = new TimelineLite();
     const rect = this.refs.projectBox.getBoundingClientRect();
     const infoHeight = this.refs.projectInfo.getBoundingClientRect().height;
-    const projHeight = (rect.height > 100) ? rect.height - infoHeight : this.projects[this.getClosestProject()].getBoundingClientRect().height + (infoHeight / 2);
+    const projHeight =  this.projects[this.getClosestProject()].getBoundingClientRect().height;
 
-    TL.set(this.refs.projectBox, {height: projHeight});
+    console.log(projHeight);
+    TL.set(this.refs.projectBox, {height: projHeight + infoHeight});
     TL.set(this.refs.projectImage, {
       className: '+=link'
     }, 0);
@@ -92,11 +93,14 @@ const ProjectIntro = React.createClass({
 
     return TL;
   },
+
   getTrackTween () {
     const TL = new TimelineLite();
     const rect = this.refs.projectIntro.getBoundingClientRect();
     const projHeight = this.refs.projectBox.getBoundingClientRect().height;
     const windowW = window.innerWidth;
+
+    TweenLite.set(this.refs.projectBox, {height: projHeight});
     TL.set(this.refs.projectIntro, {
       width: rect.width,
       height: rect.height,
@@ -107,7 +111,6 @@ const ProjectIntro = React.createClass({
       overflow: 'hidden',
       zIndex: 99
     });
-    TweenLite.set(this.refs.projectBox, {height: projHeight});
 
     TL.set(this.refs.projectImage, {
       className: '-=link'
@@ -212,7 +215,6 @@ const ProjectIntro = React.createClass({
     du.removeClass(document.body, 'locked');
     du.removeClass(document.documentElement, 'locked');
     return this.getReverseTrackTween();
-    // return this.studyTL.reverse();
   },
 
   getTags () {
@@ -222,9 +224,9 @@ const ProjectIntro = React.createClass({
   },
 
   render () {
-    const backBar = (this.state.singleMode) ? <BackBar singleMode={this.state.singleMode} showBar={this.state.showBody} data={this.props.data.toJS()} goBack={this.toggleStudyState}  /> : null;
+    const backBar = (this.state.singleMode) ? <BackBar singleMode={this.state.singleMode} showBar={this.state.showBody} data={this.props.data.toJS()} goBack={this.toggleStudyState} /> : null;
     return (
-      <div className='project' ref='projectBox'  onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onClick={this.openStudyFromProject}>
+      <div className='project' ref='projectBox' onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onClick={this.openStudyFromProject}>
         <div ref='projectIntro' className='project-intro project__container closed'>
           <div ref='projectImage'  className='project-image project__image link' >
             <CaseStudy showBody={this.state.showBody} singleMode={this.state.singleMode} changeParentState={this.toggleStudyState} ref='projectSvg' {...this.props} />

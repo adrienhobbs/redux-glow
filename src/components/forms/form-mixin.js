@@ -1,6 +1,7 @@
 import React from 'react';
 import request from 'superagent';
 import isNull from 'lodash/isNull';
+
 const FormMixin = {
   getInitialState () {
     return {
@@ -37,6 +38,8 @@ const FormMixin = {
       this.setState({msg: this.thanksMsg, buttonMsg: null});
       if (this.props.successFn) {
         this.props.successFn();
+      } else {
+        TweenLite.delayedCall(3, this.showForm.bind(this));
       }
     } else if (err) {
       this.setState({msg: 'shucks, looks like there was a problem.', buttonMsg: 'try again'});
@@ -55,7 +58,7 @@ const FormMixin = {
     this.hideMessageAndShowForm();
   },
   getMessageButton () {
-    return (!(isNull(this.state.buttonMsg)) ? <button onClick={this.showForm} >{this.state.buttonMsg}</button> : null);
+    return (!(isNull(this.state.buttonMsg)) ? <button className={this.getFormType() + ' message-btn'} onClick={this.showForm} >{this.state.buttonMsg}</button> : null);
   },
   disableButton () {
     this.setState({canSubmit: false});

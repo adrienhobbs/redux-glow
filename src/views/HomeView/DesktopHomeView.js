@@ -78,7 +78,6 @@ export class DesktopHomeView extends PageLayout {
     if (this.props.counter.current !== prevProps.counter.current) {
       this.mountDotsAndTitles();
     }
-    console.log(this.wh.getTitles());
   }
 
   componentWillUnmount () {
@@ -166,6 +165,7 @@ export class DesktopHomeView extends PageLayout {
 
     return (
       <div ref='ctr' className={styles.homeContainerDesktop}>
+        <ScrollWatcher callbacks={cbs} shouldUpdate={this.scrollShouldUpdate()} threshold={threshold} />
         <WorkItems
           activeSlideNum={this.state.activeSlideNum}
           locationState={this.props.location}
@@ -181,4 +181,3 @@ export class DesktopHomeView extends PageLayout {
 }
 
 export default connect(mapStateToProps)(DesktopHomeView);
-        // <ScrollWatcher callbacks={cbs} shouldUpdate={this.scrollShouldUpdate()} threshold={threshold} />

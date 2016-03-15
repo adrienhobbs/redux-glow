@@ -54,8 +54,7 @@ export class DesktopNav extends React.Component {
   render () {
     return (
       <nav className={styles.desktop}>
-        <div className={styles.left}></div>
-        <div className={styles.right}>
+        <div className={styles.desktop_inner}>
           {this.getLinks()}
           <div className={styles.link_ctr}>
             <div className={styles.link_ctr_inner}>
@@ -69,3 +68,4 @@ export class DesktopNav extends React.Component {
 }
 
 export default DesktopNav;
+

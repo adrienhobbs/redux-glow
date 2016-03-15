@@ -52,16 +52,25 @@ export class FeaturedStudyMobile extends PageLayout {
   };
 
   componentWillReceiveProps (nextProps) {
-    if (!this.props.isHidden && nextProps.isHidden) {
-      TweenLite.set([this.refs.projectBox, this.refs.projectIntro], {zIndex: 0});
-      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.3, {opacity: 0, autoAlpha: 1, ease: Expo.easeInOut});
-    } else if (this.props.isHidden && !nextProps.isHidden) {
-      TweenLite.set([this.refs.projectBox, this.refs.projectIntro], {zIndex: 0});
-      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.3, {delay: 0.1, autoAlpha:1, opacity: 1, ease: Expo.easeOut});
+    // if (!this.props.isHidden && nextProps.isHidden) {
+    //   TweenLite.set([this.refs.projectBox, this.refs.projectIntro], {zIndex: 10});
+    //   // TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.3, {opacity: 0, autoAlpha: 1, ease: Expo.easeInOut});
+    // } else if (this.props.isHidden && !nextProps.isHidden) {
+    //   TweenLite.set([this.refs.projectBox, this.refs.projectIntro], {zIndex: 10});
+    //   // TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.3, {delay: 0.1, autoAlpha:1, opacity: 1, ease: Expo.easeOut});
+    // }
+  }
+
+  hideOrShow (prevProps, prevState) {
+    if (this.props.isHidden && !prevProps.isHidden) {
+      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.4, {delay:this.props.id / 150, zIndex: 1, autoAlpha: 1, ease: Expo.easeInOut});
+    } else if (!this.props.isHidden && prevProps.isHidden) {
+      TweenLite.to([this.refs.projectBox, this.refs.projectIntro], 0.6, {delay:this.props.id / 200, autoAlpha:1, clearProps: 'z-index', ease: Expo.easeInOut});
     }
   }
 
   componentDidUpdate (prevProps, prevState) {
+    this.hideOrShow(prevProps, prevState);
     (!prevState.singleMode && this.state.singleMode) ? this.openStudy() : false;
     (prevState.singleMode && !this.state.singleMode) ? this.closeStudy() : false;
   }
@@ -78,8 +87,8 @@ export class FeaturedStudyMobile extends PageLayout {
       y: rect.top,
       z: 0,
       position: 'fixed',
-      overflow: 'hidden'
-      // zIndex: 99
+      overflow: 'hidden',
+      zIndex: 99
     });
     TweenLite.set(this.refs.projectBox, {height: projHeight});
 
@@ -120,7 +129,7 @@ export class FeaturedStudyMobile extends PageLayout {
     TweenLite.set([this.refs.overlay, this.refs.projectInfo], {autoAlpha: 0});
     this.studyTL = new TimelineLite({onComplete: () => this.setState({showBody: true})});
     this.studyTL.addLabel('start');
-    this.studyTL.add(this.getTrackTween(), 'start');
+    this.studyTL.add(this.getTrackTween(), 'start+=0.2');
     this.studyTL.add(this.getNavTween(), 'start');
   }
 
@@ -139,7 +148,7 @@ export class FeaturedStudyMobile extends PageLayout {
       className: '+=link'
     }, 0);
 
-    TL.to(this.refs.projectIntro, 0.5, {
+    TL.to(this.refs.projectIntro, 0.8, {
       width: rect.width,
       height: infoHeight,
       x: rect.left,
@@ -162,9 +171,9 @@ export class FeaturedStudyMobile extends PageLayout {
     this.setState({closed: false, showBody: false});
     TweenLite.set(this.refs.projectIntro, {overflow: 'hidden'});
     sequence.add(this.reverseStudyTL.bind(this), 0);
-    sequence.add(this.getNavTween.bind(this), 0.4);
+    sequence.add(this.getNavTween.bind(this), 1.4);
     sequence.add(this.unHideOthers(), 0.2);
-    sequence.add(TweenLite.to(this.refs.projectInfo, 1.3, {delay: this.props.id / 15, autoAlpha: 1}), 0);
+    sequence.add(TweenLite.to(this.refs.projectInfo, 1.3, {autoAlpha: 1}), 1);
     sequence.play();
   }
 

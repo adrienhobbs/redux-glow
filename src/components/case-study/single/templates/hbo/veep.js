@@ -50,7 +50,7 @@ export class Veep extends BaseTemplate {
               <h2 className='study_headline' style={this.getHeadlineStyle()}>media campaign</h2>
               <div className='copy'>
                 <div className='copy-inner'>
-                  <p style={this.getCopyStyle()}>Glow also partnered to create the digital media campaigns for Veep.  As both social and display partner, we were able to work with HBO to integrate the robocall number into key art on all display units in the campaign, adding a significant element of reach and awareness to the effort.</p>
+                  <p style={this.getCopyStyle()}>Glow also partnered to create the digital media campaigns for Veep.  As both social and display partner, we were able to work with HBO to integrate the Robocall number into key art on all display units in the campaign, adding a significant element of reach and awareness to the effort.</p>
                 </div>
               </div>
               <div className='img-single inner_section'>

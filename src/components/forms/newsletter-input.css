@@ -1,6 +1,48 @@
 @use lost;
 
 :global {
+  button.message-btn,
+  button.message-btn:hover {
+    background-color: var(--color-radical-red) !important;
+    background: var(--color-radical-red) !important;
+    color: white !important;
+    text-align: center;
+    font-family: var(--primary-font-family);
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width:60%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
+    right: auto !important;
+    display: block;
+  }
+  .message {
+    top: -30px;
+    left: center;
+    color: var(--color-slate-gray);
+    font-family: var(--primary-font-family);
+    font-size: 1.2rem !important;
+    margin-top: 1em;
+  }
+
+  /* .message-button-ctr { */
+  /*   button, button:hover { */
+  /*     background-color: var(--color-radical-red) !important; */
+  /*     background: var(--color-radical-red) !important; */
+  /*     color: white !important; */
+  /*     text-align: center; */
+  /*     font-family: var(--primary-font-family); */
+  /*     padding-top: 0.5em; */
+  /*     padding-bottom: 0.5em; */
+  /*     width:60%; */
+  /*     margin-left: auto !important; */
+  /*     margin-right: auto !important; */
+  /*     position: relative !important; */
+  /*     right: auto !important; */
+  /*     display: block; */
+  /*   } */
+  /* } */
 
 }
 
@@ -41,8 +83,33 @@ div.error {
 .newsletter {
   position: relative;
   width: 100%;
+  .message {
+    top: center;
+    left: center;
+  }
 
-  button {
+
+  .form, .newsletter-form {
+    position: relative;
+    div {
+      width: 100%;
+    }
+  }
+}
+
+.newsletter_input {
+  height: 46px;
+  padding-right: 10px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding-right: 0;
+  position: relative;
+  right: -1px;
+
+}
+
+.input_button {
     height: 46px;
     background: var(--primary-headline-color);
     color: white;
@@ -73,37 +140,4 @@ div.error {
     &:hover {
       background: transparent;
     }
-
   }
-
-  .message {
-    position: absolute;
-    top: 0;
-    visibility: hidden;
-    opacity: 0;
-    text-align: center;
-    width: 100%;
-
-    button {
-      color: white;
-    }
-  }
-
-  .form, .newsletter-form {
-    position: relative;
-    div {
-      width: 100%;
-    }
-  }
-}
-
-.newsletter_input {
-  height: 46px;
-  padding-right: 10px;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  padding-right: 0;
-  position: relative;
-  right: -1px;
-}

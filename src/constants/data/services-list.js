@@ -12,7 +12,7 @@ const servicesList =  [
   {
     type: 'social content',
     description: 'We develop content to serve brands\' needs in today\'s feed-centric media landscape that is timely, relevant, and sought after by your target audience.',
-    cats: ['custom video', 'GIF\'s',  'cinemagraphs', 'content themes', 'personalized creative']
+    cats: ['custom video', 'GIFs',  'cinemagraphs', 'content themes', 'personalized creative']
   },
   {
     type: 'creative',
@@ -21,13 +21,13 @@ const servicesList =  [
   },
   {
     type: 'technology',
-    description: 'Building a great digital product demands experience.  Our seasoned experts thrive on navigating an ever-evolving technology landscape. From front-end, back-end to deployment, we’ve got you covered.',
+    description: 'Building a great digital product demands experience.  Our seasoned experts thrive on navigating an ever-evolving technology landscape. From front-end and back-end to deployment, we’ve got you covered.',
     cats: ['front/back-end dev', 'HTML5', 'rapid prototyping', 'deployment', 'casual games', 'native mobile']
   },
   {
     type: 'video',
-    description: 'Pre-production through post, we create premium video content for on-air and all social platforms. Our videos engage and convert users into fans and fans into customers.',
-    cats: ['original content creation', 'concepting & writing', 'motion graphics', 'full service production', 'post production', 'platform optimization']
+    description: 'Pre-production through post, we create premium video content for on-air and all social platforms. Our videos engage and convert users into fans, and fans into customers.',
+    cats: ['original content creation', 'concepting & writing', 'motion graphics', 'full-service production', 'post-production', 'platform optimization']
   }
 ];
 

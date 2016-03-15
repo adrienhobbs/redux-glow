@@ -61,10 +61,10 @@ export class CoreLayout extends React.Component {
 
   checkFramePositionType (path) {
     if ((this.props.viewport.isPhone) && path === '/') {
-      TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'absolute'});
+      TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'absolute', backgroundColor: 'transparent'});
     }
     if (!(isNull(this.props.viewport.isPhone)) && path !== '/') {
-      TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'fixed'});
+      TweenLite.set([this.refs.frameLeft, this.refs.frameRight], {position: 'fixed', backgroundColor: 'white'});
     }
   }
 

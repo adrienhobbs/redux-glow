@@ -8,7 +8,7 @@
 
 .hoverline:hover {
   color: #f12d5c;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hoverline:before {
@@ -16,32 +16,33 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 31%;
   height: 3px;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: inherit;
   visibility: hidden;
   width: 0;
-  transition: all 0.45s ease-in-out;
+  transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hoverline:hover:before {
   visibility: visible;
   opacity: 1;
   color: rgba(0, 0, 0, 1);
-  bottom: 0;
+  bottom: 31%; 
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: inherit;
   width: 100%;
+
 }
 
 .hoverline.hoverline_active:before {
   visibility: visible;
   opacity: 1;
   color: rgba(0, 0, 0, 1);
-  bottom: 0;
+  bottom: 31%;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: inherit;
@@ -53,7 +54,6 @@
 }
 
 .desktop {
-  display: none;
   composes: nav-height from './nav.css';
   position: fixed;
   top: 0;
@@ -63,8 +63,10 @@
   padding-right: var(--sizing-frame-width);
   background: white;
   z-index: 100;
-  @media(--lg) {
-    lost-flex-container: row;
+  display: block;
+
+  @media(--md-down) {
+    display: none;
   }
 }
 
@@ -78,14 +80,18 @@
 }
 
 .link_ctr {
-  lost-column: 1/6 0 0;
-  position: relative;
+  /* lost-column: 1/6 0 0; */
+  /* position: relative; */
+  display:inline-block;
   composes: nav-height from './nav.css';
   text-align: center;
+  margin-left: 2em;
   a {
+    display: table-cell;
+    vertical-align: middle;
     font-family: var(--primary-font-family);
     font-size: 1.15em;
-    lost-column: 1/6 0 0; 
+    /* lost-column: 1/6 0 0; */ 
     width: 100%;
     @media (--xl) {
       font-size: 1.3125em;
@@ -93,14 +99,21 @@
   }
 }
 
+.desktop_inner {
+  composes: nav-height from './nav.css';
+  float: right;
+}
+/* .link_ctr_inner { */
+/*   top: center; */
+/*   left: center; */
+/*   width: 100%; */
+/* } */
+
+/* .link_ctr_inner:last-of-type { */
+/*   width: auto; */
+/* } */
 .link_ctr_inner {
-  top: center;
-  left: center;
-  width: 100%;
+  display: table;
+  height: 100%;
 }
-
-.link_ctr_inner:last-of-type {
-  width: auto;
-}
-
 

@@ -30,7 +30,7 @@ const NewsletterInput = React.createClass({
               validations='isEmail'
               type='text'
               required/>
-            <button disabled={!this.state.canSubmit} type='submit'>join  →</button>
+            <button className={styles.input_button} disabled={!this.state.canSubmit} type='submit'>join  →</button>
           </Formsy.Form>
         </div>
         <div ref='message' className='message'>

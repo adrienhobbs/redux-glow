@@ -16,7 +16,7 @@ var commitMsg     = argv.msg || 'updates';
 var shell         = require('gulp-shell');
 var push          = shell.task(['cd ../glow-laravel && git add . &&  git commit -m=' + commitMsg +  ' && git push']);
 var config = {
-  host:        '54.172.235.134',
+  host:        '52.1.166.127',
   port:        22,
   username:    'ec2-user',
   privateKey:  fs.readFileSync('../glowsite.pem')
