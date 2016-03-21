@@ -9,11 +9,13 @@ export class VirtualScroll extends Component {
     threshold: PropTypes.object,
     shouldUpdate: PropTypes.bool,
     callbacks: PropTypes.object,
-    children: PropTypes.element
+    children: PropTypes.element,
+    browser: PropTypes.object
   };
 
   constructor (props) {
     super(props);
+    this.scrollMultiplier = 15;
   }
 
   componentDidMount () {
@@ -23,6 +25,9 @@ export class VirtualScroll extends Component {
     el.addEventListener('touchmove', this.handleTouchMove, false);
     el.addEventListener('touchend', this.handleTouchEnd, false);
     el.addEventListener('keydown', this.handleKeyDown, false);
+    // el.addEventListener('mousedown', this.handleTouchStart, false);
+    // el.addEventListener('mousemove', this.handleTouchMove, false);
+    // document.addEventListener('mouseup', this.handleTouchEnd, false);
   }
 
   shouldComponentUpdate (nextProps) {
@@ -34,6 +39,7 @@ export class VirtualScroll extends Component {
       this.resetState();
     }
   }
+
   componentDidUpdate (prevProps) {
     if (this.state.deltaY >= this.props.threshold.y.up) {
       this.resetState();
@@ -59,8 +65,12 @@ export class VirtualScroll extends Component {
   @autobind
   handleWheel (event) {
     this.handleEvent(event);
-    const deltaX = event.wheelDeltaX || event.deltaX * -1;
-    const deltaY = event.wheelDeltaY || event.deltaY * -1;
+    let deltaX = event.wheelDeltaX || event.deltaX * -1;
+    let deltaY = event.wheelDeltaY || event.deltaY * -1;
+    if (this.props.browser.gecko) {
+      deltaX = deltaX * this.scrollMultiplier;
+      deltaY = deltaY * this.scrollMultiplier;
+    }
     if (this.props.shouldUpdate) {
       this.setState({deltaX: deltaX, deltaY: deltaY});
     }

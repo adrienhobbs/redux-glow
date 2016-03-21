@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './sidebar.css';
-import Logo from 'components/ui/logo-sprites/logo-sprite';
+import Logo from 'components/ui/svg-sprites/svg-sprite.js';
 import isEmpty from 'lodash/isEmpty';
 
 const Sidebar = React.createClass({

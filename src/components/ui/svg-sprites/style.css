@@ -1,0 +1,28 @@
+.client_svg {
+  width: 50%;
+  max-height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  overflow: visible;
+
+  @media(--xs-down) {
+    width: 65%;
+  }
+
+  @media(--xl-screen-down) {
+    width: 55%;
+  }
+
+  @media(--lg-screen-down) {
+    max-width: 80px;
+  }
+
+  @media(max-height: 600px) {
+    max-height: 70px;
+  }
+
+  @media(max-height: 835px) {
+    max-height: 90px;
+  }
+}

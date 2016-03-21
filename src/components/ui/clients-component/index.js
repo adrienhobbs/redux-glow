@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
-import ClientLogo from 'components/ui/logo-sprites/logo-sprite.js';
+import ClientLogo from 'components/ui/svg-sprites/svg-sprite.js';
 import styles from './client-logos.css';
 
 const clients = [
-  'we-tv',
+  'tbs',
   'syfy',
   'hbo',
   'cartoon-network',
@@ -12,11 +12,9 @@ const clients = [
   'usa',
   'tnt',
   'cinemax',
-  // 'cnbc',
   'hulu',
   'carla-hall',
-  'crackle'
-  // 'ae'
+  'history'
 ];
 
 export class ClientsBar extends React.Component {

@@ -115,7 +115,7 @@ export class DesktopHomeView extends PageLayout {
   }
 
   getThreshold () {
-    return (this.props.viewport.safari) ? 1 : 100;
+    return (this.props.viewport.safari) ? 1 : 50;
   }
 
   toggleNav (navState) {
@@ -162,10 +162,9 @@ export class DesktopHomeView extends PageLayout {
         down: -(this.getThreshold())
       }
     };
-
     return (
       <div ref='ctr' className={styles.homeContainerDesktop}>
-        <ScrollWatcher callbacks={cbs} shouldUpdate={this.scrollShouldUpdate()} threshold={threshold} />
+        <ScrollWatcher browser={this.props.viewport.browser} callbacks={cbs} shouldUpdate={this.scrollShouldUpdate()} threshold={threshold} />
         <WorkItems
           activeSlideNum={this.state.activeSlideNum}
           locationState={this.props.location}
