@@ -1,12 +1,14 @@
 :global {
-  #site-overlay {
+  #video-home-overlay {
     width: 100%;
     height: 100%;
     background: white;
-    position: fixed;
+    position: absolute;
     top: 0;
-    display: none;
-    z-index: 101;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 137;
   }
 }
 
@@ -22,7 +24,7 @@
 .copy_wrap {
   text-align: center;
   top: center;
-  left:center;
+  left: center;
   width: 87%;
   max-width: 898px;
 
@@ -34,15 +36,16 @@
     font-weight: bold;
     font-size: 1.875em;
     line-height: 1.2;
+
     @media(--md-down) {
       font-size: 1.5em;
     }
+
     @media(--xs-down) {
       font-size: 1em;
     }
   }
 }
-
 
 .home_video {
   left: center;
@@ -89,3 +92,4 @@
   left: 0;
   background: white;
 }
+

@@ -1,15 +1,9 @@
 import React, { PropTypes } from 'react';
 import styles from './page-transition.css';
-
-// 1. animate pink slide
-// 2. animate white slide
-// 3. change zindex of view window to 13
-// 4. animate new content slide
-// 5. clear pink slide
-// 6. clear white slide
-// 7. reset zindex value of view window
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 const PageTransition = React.createClass({
+  mixins: [PureRenderMixin],
   propTypes: {
     status: React.PropTypes.object,
     location: React.PropTypes.object,

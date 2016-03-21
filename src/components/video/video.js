@@ -62,8 +62,6 @@ export class VideoComponent extends React.Component {
   playVideo () {
     const TL = new TimelineLite();
     TL.addLabel('start');
-    // TL.set(this.refs.videoBlock, {width: width, maxWidth: '100%'}, 'start');
-    // TL.to(this.refs.videoBlock, 0.5, {width: '100%', ease: Expo.easeInOut}, 'start+=0.5');
 
     if (this.props.showBtn) {
       TL.to(this.refs.playBtn, 0.5, {autoAlpha: 0, ease: Expo.easeInOut}, 'start+=0.5');
@@ -77,7 +75,6 @@ export class VideoComponent extends React.Component {
     if (!this.props.autoplay) {
       const TL = new TimelineLite();
       TL.addLabel('start');
-      // TL.to(this.refs.videoBlock, 0.7, {maxWidth: '51.25em', ease: Expo.easeInOut}, 'start+=0.5');
       if (this.props.showBtn) {
         TL.to(this.refs.playBtn, 0.5, {autoAlpha: 1, ease: Expo.easeInOut}, 'start+=0.5');
         TL.to(this.refs.controls, 0.5, {autoAlpha: 0}, 'start+=1');

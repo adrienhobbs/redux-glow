@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
 import './glow-icons.svg';
 import './symbol/svg/sprite.symbol.svg';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+
 import styles from './style.css';
 
 export class SpriteLogo extends React.Component {
@@ -19,6 +21,7 @@ export class SpriteLogo extends React.Component {
       this.logoEl = document.getElementsByClassName(props.clientName);
       TweenLite.set(this.logoEl, {fill: props.color || '#666'});
     }
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   };
 
   componentWillUnmount () {

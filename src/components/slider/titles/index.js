@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './titles.css';
 import Title from './title';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 const Titles = React.createClass({
 
+  mixins: [PureRenderMixin],
   propTypes: {
     titles: React.PropTypes.object,
     currentNum: React.PropTypes.number

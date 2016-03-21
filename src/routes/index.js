@@ -12,8 +12,9 @@ import CareersView          from 'views/Pages/CareersView';
 import ConnectView          from 'views/Pages/ConnectView';
 import WorkView             from 'views/WorkView/work';
 import PageViewLayout       from 'layouts/PageViewLayout/Page_View_Layout.js';
-import TestingStuff         from 'components/testing-view/testingview.js';
-
+// import TestingStuff         from 'components/testing-view/testingview.js';
+// <Route component={TestingStuff} path='/testing' />
+//
 export default (store) => (
   <Route path='/' component={CoreLayout}>
     <IndexRoute component={HomeView} />
@@ -33,7 +34,6 @@ export default (store) => (
       <Route component={WorkView} path='/work/:project'/>
     </Route>
 
-    <Route component={TestingStuff} path='/testing' />
     <Route path='/404' component={NotFoundView} />
     <Redirect from='*' to='/404' />
   </Route>

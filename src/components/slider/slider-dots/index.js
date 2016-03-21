@@ -1,8 +1,11 @@
 import React from 'react';
 import SliderDot from './slider-dot';
 import styles from './dots.css';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 const SliderDots = React.createClass({
+
+  mixins: [PureRenderMixin],
 
   propTypes: {
     goToNumber: React.PropTypes.func,

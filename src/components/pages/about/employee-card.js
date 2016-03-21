@@ -41,7 +41,7 @@ export class EmployeeCard extends React.Component {
   }
 
   getEmployeeName () {
-    if (this.props.name.length > 15) {
+    if (this.props.name.length > 16) {
       return `${this.getFirstName()} ${this.getFirstChar(this.getLastName())}.`;
     } else {
       return this.props.name;
