@@ -1,4 +1,4 @@
-.huntersButton {
+.huntersButton, .huntersButtonIframe {
   border-width: 2px;
   border-color: rgb(61, 160, 168);
   border-style: solid;
@@ -17,6 +17,16 @@
   }
 }
 
+.huntersButtonIframe {
+  left: center;
+  top: center;
+  background: rgb(61, 160, 168);
+  color: #d0d0c4;
+  &:hover {
+    background: rgb(61, 160, 168);
+  }
+}
+
 .embed_container {
   position: relative;
   padding-bottom: 56.25%;
@@ -31,4 +41,12 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.testimonial {
+  padding: 0 20px 0 20px;
+
+  @media(--md-down) {
+    font-size: 0.9em;
+  }
 }

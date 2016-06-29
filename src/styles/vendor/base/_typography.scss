@@ -15,6 +15,9 @@ $formats: eot woff;
 @include font-face("Domaine", $domaine-path + "SemiboldItalic", 600, italic, $file-formats: $formats);
 @include font-face("Domaine", $domaine-path + "Bold", 700, $file-formats: $formats);
 
+.gl-light {
+  font-family: 'GT-WalsheimLight';
+}
 
 body {
   color: $base-font-color;
