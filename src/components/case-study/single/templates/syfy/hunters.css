@@ -1,0 +1,34 @@
+.huntersButton {
+  border-width: 2px;
+  border-color: rgb(61, 160, 168);
+  border-style: solid;
+  width: 172px;
+  height: 47px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 43px;
+  font-size: 1.2em;
+  color: rgb(61, 160, 168);
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background: #d0d0c4;
+  }
+}
+
+.embed_container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed_container iframe, .embed_container object, .embed_container embed {
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

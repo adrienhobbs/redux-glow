@@ -16,6 +16,71 @@ const data = [
   {
     featured:                   true,
     client:                     'syfy',
+    project:                    'hunters',
+    title:                      'hunters',
+    subtitle:                   'interactive experience',
+    subtitleSlug:               'interactive experience',
+    type:                       'case-study',
+    backgroundImageUrl:         s3 + 'case-studies/syfy/hunters/landscape.jpg',
+    backgroundImageUrlVert:     s3 + 'case-studies/syfy/hunters/landscape.jpg',
+    featuredBackgroundVideo: s3 + 'case-studies/syfy/hunters/landscape.mp4',
+    logoColor:                  '#3dA0A8',
+    secColor:                   '#e3e3d7',
+    copyColor:                  '#203A4C',
+    gradientTop:                '#a3373f',
+    gradientBottom:             '#0b1c28',
+    featuredProjectTitleColor:  '#a3373f',
+    sidebarLogoColor:           '#ffffff',
+    shapeColor: '#1f3a4d',
+    cat:                        '- syfy | hunters -',
+    templateName:               'Hunters',
+    backgroundVideoUrl: s3 + 'case-studies/syfy/hunters/landscape.mp4',
+    backgroundVideoPoster: s3 + 'case-studies/syfy/hunters/landscape.jpg',
+    services:                   ['ui/ux', 'web design', 'motion design', 'audio design', 'web development'],
+    headlineColor:              '#1f3a4d',
+    mobile: {
+      bgColor: '#0b1c28' 
+    },
+    lockup: {
+      className:       'hunters-lockup',
+      projectColor:    '#FFFFFF',
+      featured:        {
+        projectColor:  '#3da0a8'
+      }
+    },
+    backbar: {
+      bgColor: '#1f3a4d'
+    },
+    results: {
+      stats: [
+        {label: 'Twitter impressions', stat: '2B'},
+        {label: 'Trending topic (US)', stat: '#1'},
+        {label: 'Trending topic (global)', stat: '#2'},
+        {label: 'Video views', stat: '6M'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#7d2f37',
+      bgColor: '#e3e3d7',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-device.png',
+      template: 'Standard'
+    },
+    sidebar: {
+      logoColor: '#203A4C',
+      copyColor: '#556169',
+      headlineColor: '#1f3a4d'
+    },
+    shareButton: {
+      strokeColor: '#7d2f37',
+      copyColor: '#ffffff'
+    },
+    endShape: {
+      bgColor: '#091720'
+    },
+    aboutCopy: '<p>A cross between gritty crime drama and sci-fi thriller, Hunters comes from executive producers Gale Anne Hurd (The Walking Dead, The Terminator trilogy) and Natalie Chaidez (12 Monkeys, Heroes). Utilizing emerging web technologies like WebGL and ThreeJS, Glow worked in collaboration with Syfy to create an innovative interactive experience bringing the world of Hunters to life. Over the course of 13 weeks, custom created content was “leaked” through the site, giving fans the opportunity to dive into the show in a unique way.</p>'
+  },
+  {
+    featured:                   true,
+    client:                     'syfy',
     project:                    'sharknado',
     title:                      'sharknado',
     subtitle:                   'social media campaign',

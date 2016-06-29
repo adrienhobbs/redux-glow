@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import PageLayout from 'layouts/PageLayout/PageLayout';
 import classes from './study.scss';
 import Lockup from 'components/ui/lockup/lockup.js';
+import DriveIn from 'react-drive-in';
 
 const mapStateToProps = (state) => ({
   counter: state.counter,
@@ -36,6 +37,12 @@ export class FeaturedStudy extends PageLayout {
       singleMode: false,
       showBody: false
     };
+  }
+
+  getBgVideo () {
+    if (this.props.data.get('backgroundVideoUrl')) {
+      return (<DriveIn loop show={[this.props.data.get('backgroundVideoUrl'), this.props.data.get('backgroundVideoPoster')]} />);
+    }
   }
 
   getProjectUrl () {

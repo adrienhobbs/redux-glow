@@ -24,7 +24,7 @@ var config = {
   host:        '52.1.166.127',
   port:        22,
   username:    'ec2-user',
-  privateKey:  fs.readFileSync('../glowsite.pem')
+  // privateKey:  fs.readFileSync('../glowsite.pem')
 };
 
 var gulpSSH = new GulpSSH({
@@ -171,6 +171,33 @@ var svgConfig = {
     }
   }
 };
+var lockupSvgConfig = {
+  mode: {
+    symbol: {
+      inline: true,
+      example: true,
+      render: {
+        css: true
+      },
+      sprite: 'lockups-sprite.svg'
+    }
+  },
+  svg: {
+    dimensionAttributes: true,
+    namespaceIDs: false,
+    namespaceClassnames: false
+  },
+  shape: {
+    transform       : [
+      {svgo       : {
+        plugins : [
+          {cleanupIDs: false}
+        ]
+      }}
+    ]
+  }
+};
+
 
 var currentFileName;
 
@@ -189,6 +216,12 @@ gulp.task('create-sprite', ['fix-classnames'], function () {
   gulp.src('**/*.svg', {cwd: './svg-src/sprites'})
   .pipe(svgSprite(svgConfig))
   .pipe(gulp.dest('./src/components/ui/svg-sprites'));
+});
+
+gulp.task('create-lockup-sprite', function () {
+  gulp.src('**/*.svg', {cwd: './svg-src/lockups'})
+  .pipe(svgSprite(lockupSvgConfig))
+  .pipe(gulp.dest('./src/components/ui/lockup'));
 });
 
 gulp.task('client-logos', ['fix-classnames', 'create-sprite']);

@@ -9,6 +9,7 @@ import WinterCalendar from './cn/winter-calendar.js';
 import TwelveMonkeys from './syfy/12-monkeys.js';
 import Casual from './hulu/casual.js';
 import HowIDidIt from './yahoo/how-i-did-it.js';
+import Hunters from './syfy/hunters.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
@@ -22,7 +23,8 @@ const CaseStudyTemplates = (function templates () {
     WinterCalendar: WinterCalendar,
     TwelveMonkeys: TwelveMonkeys,
     Casual: Casual,
-    HowIDidIt: HowIDidIt
+    HowIDidIt: HowIDidIt,
+    Hunters: Hunters
   };
 }());
 

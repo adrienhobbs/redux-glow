@@ -57,7 +57,7 @@ const StudyBody = React.createClass({
   },
   bringInContent () {
     this.setIntroCtrHeight();
-    TweenLite.fromTo(this.refs.studyWrapper, 0.8, {yPercent: 140, autoAlpha: 1}, {yPercent: 0, ease: Expo.easeInOut, delay: 0.5});
+    TweenLite.fromTo(this.refs.studyWrapper, 0.8, {yPercent: 0, autoAlpha: 1}, {yPercent: 0, ease: Expo.easeInOut, delay: 0.5});
   },
   slideDownContent () {
     TweenLite.to(this.refs.studyWrapper, 0.5, {yPercent: 140, autoAlpha: 0, ease: Expo.easeInOut});
@@ -78,6 +78,7 @@ const StudyBody = React.createClass({
             <Lockup data={this.props.data} single />
             <div className={styles.study_headline_subtitle}>{this.props.data.get('subtitle')}</div>
           </div>
+          <div className={styles.scroll_down}>scroll</div>
         </div>
         <div ref='studyWrapper' className={styles.case_study_single_wrapper}>
           <div className={styles.study_intro_container} ref='introCtr'></div>

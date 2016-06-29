@@ -1,21 +1,23 @@
 import React, { PropTypes } from 'react';
 import classes from './lockups.scss';
-import './lockups.svg';
+import './symbol/lockups-sprite.svg';
 
 export class Lockup extends React.Component {
-  constructor (props) {
-    super(props);
-    this.tl = new TimelineLite();
-    this.lockupEls = {
-      title: document.getElementById(this.getClassname() + '-project'),
-      logo: document.getElementById(this.getClassname() + '-logo')
-    };
-    this.setLockupColors();
-  }
   static propTypes = {
     data: PropTypes.object,
     single: PropTypes.bool
   };
+
+  constructor (props) {
+    super(props);
+    this.tl = new TimelineLite();
+    this.lockupEls = {
+      title: document.getElementById(`${this.getClassname()}-project`),
+      logo: document.getElementById(`${this.getClassname()}-logo`)
+    };
+    this.setLockupColors();
+  }
+
   componentWillUnmount () {
     this.tl.reverse();
   }

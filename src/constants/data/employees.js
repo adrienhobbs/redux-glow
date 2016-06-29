@@ -33,7 +33,7 @@ const employeeInfo = {
     },
     {
       name: 'Clayton Benn',
-      position: 'Sr. Account Executive',
+      position: 'Director of Video Production',
       photoName: 'Clayton',
       isImportant: true
     }
@@ -110,16 +110,6 @@ const employeeInfo = {
       photoName: 'GinaC'
     },
     {
-      name: 'Jasmyn Lawson',
-      position: 'Digital Project Manager',
-      photoName: 'Jas'
-    },
-    {
-      name: 'Jasper Speier',
-      position: 'Digital Strategist',
-      photoName: 'Jasper'
-    },
-    {
       name: 'Kendell Burton',
       position: 'Social Designer',
       photoName: 'Kendell'
@@ -130,11 +120,6 @@ const employeeInfo = {
       photoName: 'Lauren'
     },
     {
-      name: 'Meagan Mosser',
-      position: 'Creative Director',
-      photoName: 'Meagan'
-    },
-    {
       name: 'Morris Didia',
       position: 'Digital Project Manager',
       photoName: 'Morris'
@@ -143,11 +128,6 @@ const employeeInfo = {
       name: 'Peter Kondratowicz',
       position: 'Senior Designer',
       photoName: 'PK'
-    },
-    {
-      name: 'Rachel Coleman',
-      position: 'Community Manager',
-      photoName: 'Rachel'
     },
     {
       name: 'Sarah Pine',
@@ -173,11 +153,6 @@ const employeeInfo = {
       name: 'Tom Quirk',
       position: 'Community Manager',
       photoName: 'Tom'
-    },
-    {
-      name: 'Zach Linder',
-      position: 'Digital Strategist',
-      photoName: 'Zach'
     }
   ]
 

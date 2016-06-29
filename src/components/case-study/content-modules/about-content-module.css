@@ -2,7 +2,6 @@
 
 .about_content_module {
   lost-flex-container: row;
-  padding-bottom: 140px;
   @media (--lg-screen-down) {
     lost-flex-container: column;
   }
@@ -12,7 +11,9 @@
   max-width: 1920px;
   margin: auto;
 }
-
+.about_content_module_container {
+  padding-bottom: 70px;
+}
 .section_headline {
   composes: study_headline from 'styles/mixins.css';
   font-size: 5em;
@@ -26,14 +27,14 @@
 }
 
 .about_left {
-  lost-column: 550/1920;
+  lost-column: 410/1920;
   @media(--xl-screen-down) {
     lost-column: 0;
   }
 }
 
 .about_center {
-  lost-column: 820/1920 0 0;
+  lost-column: 980/1920 0 0;
   @media(--xl-screen-down) {
     lost-column: 1 0 0;
     order: 2;

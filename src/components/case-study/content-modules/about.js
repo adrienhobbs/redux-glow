@@ -5,7 +5,8 @@ import styles from './about-content-module.css';
 export class AboutSection extends React.Component {
 
   static propTypes = {
-    data: PropTypes.object
+    data: PropTypes.object,
+    children: PropTypes.element
   };
 
   constructor () {
@@ -39,7 +40,7 @@ export class AboutSection extends React.Component {
 
   render () {
     return (
-      <article>
+      <article className={styles.about_content_module_container}>
         {this.createHeadlineEl('about')}
         <div className={styles.about_content_module} id='about'>
           <div className={styles.about_left}></div>
@@ -50,6 +51,7 @@ export class AboutSection extends React.Component {
             <Sidebar data={this.props.data}/>
           </div>
         </div>
+        {this.props.children}
       </article>
     );
   }
