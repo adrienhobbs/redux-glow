@@ -2,7 +2,6 @@ import React from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
 import classes from './hunters.css';
-import styles from 'components/pages/about/testimonials.css';
 import LoopingVideo from 'components/video/looping-video.js';
 
 export class ResponsiveVideo extends React.Component {
@@ -51,11 +50,11 @@ export class ClientTestimonial extends React.Component {
     };
 
     return (
-      <article className='testimonial inner_section' style={{marginTop: 30, marginBottom: 30, textAlign: 'center', maxWidth: 1100, margin: 'auto'}}>
-        <div className='body' style={bodyStyle}>
+      <article className={classes.testimonial} style={{marginTop: 30, marginBottom: 30, textAlign: 'center', maxWidth: 1100, margin: 'auto'}}>
+        <div className={classes.body} style={bodyStyle}>
           {this.props.body}
         </div>
-        <div className='quote_source' style={sourceStyle}>
+        <div className={classes.quote_source} style={sourceStyle}>
           - {this.props.source}
         </div>
       </article>
@@ -70,15 +69,20 @@ export class Hunters extends BaseTemplate {
   constructor (props) {
     super(props);
   }
+  showIframe () {
+    TweenLite.to(this.refs.iframeBlocker, 0.5, {autoAlpha: 0});
+  }
   render () {
     const copyStyle = this.getCopyStyle();
     return (
       <div ref='studyContent' className='study-content'>
         <div className='content-container'>
           <AboutSection data={this.props.data}>
-            <div className={classes.huntersButton}>
-              view the site
-            </div>
+            <a target='_blank' href='http://www.syfy.com/hunters/theyareamongus/'>
+              <div className={classes.huntersButton}>
+                view the site
+              </div>
+            </a>
           </AboutSection>
           <article className='approach'>
             {this.createHeadlineEl('overview')}
@@ -138,6 +142,9 @@ export class Hunters extends BaseTemplate {
                 <p style={copyStyle}>Glow utilized emerging web technologies like WebGL and ThreeJS to help bring the 3D particle models to life on both mobile and desktop. It was a point of focus to maximize the possible particle count and frame rate while ensuring that the experience rendered well on both mobile and desktop. Glow created a custom shader to help ensure solid performance when rendering the amount of particles needed in the experience. Maintaining a contstant 60fps, we were able to render over 100k interactive particles thanks to the custom shader.  </p>
               </div>
             </div>
+            <div className='img-single' style={{position: 'relative', zIndex: 1, marginTop: 40, marginbottom: 40}}>
+              <iframe ref='iframe' style={{height: 700, position: 'relative', zIndex: 0}} src='http://hunters-dev.weareglow.com/test25/' scrolling='no' width='100%' height='900px' frameBorder='0' />
+            </div>
           </article>
           <article className='result' style={{marginBottom: 48}} >
             {this.createHeadlineEl('the result')}
@@ -155,3 +162,10 @@ export class Hunters extends BaseTemplate {
 }
 
 export default Hunters;
+// <iframe height='700px' scrolling='no' src='//codepen.io/adrienhobbs/embed/preview/NrpZay/?height=486&theme-id=0&default-tab=result&embed-version=2' frameBorder='no' allowTransparency='true' allowfullscreen='true' style={{width: '100%'}} />
+//
+// <div ref='iframeBlocker' style={{height: '700px', width: '100%', zIndex: 2, background: 'rgba(1,1,1,0.4)', position: 'absolute', top: 0}}>
+//   <div onClick={this.showIframe.bind(this)} className={classes.huntersButtonIframe}>
+//     play around?
+//   </div>
+// </div>
