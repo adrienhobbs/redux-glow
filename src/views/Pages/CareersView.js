@@ -5,10 +5,10 @@ import colors from '../../constants/colors.js';
 
 const Jobs = [
   {
-    title: 'account executive',
+    title: 'digital project manager',
     active: true,
     type: 'full time',
-    summary: 'We are looking for smart and focused account executives that are excellent communicators, share our passion for the digital and social space and want to be part of a growing and winning team. The right person for this position has a passion for digital/social, is knowledgeable, hard-working, brings with them a great deal of enthusiasm, shares our work ethic and attention to detail, and has a willingness to learn and teach. If you’re creative about how you approach challenges, always look to provide solutions, live for the details, love the fast pace, stay cool under pressure and want to continue to grow professionally in a very talented agency environment, then you have a bright future here at GLOW.',
+    summary: 'We are looking for smart and focused digital project managers that are excellent communicators, share our passion for the digital and social space and want to be part of a growing and winning team. The right person for this position takes a glass-half-full approach, is knowledgeable, brings with them a great deal of enthusiasm, shares our work ethic and attention to detail, and has a willingness to both learn and teach. If you’re creative about how you approach challenges, always look to provide solutions, live for the details, love the fast pace, stay cool under pressure and want to continue to grow professionally in a very talented agency environment, then you have a bright future here at GLOW.',
     duties: [
       'Work closely with internal teams and clients to execute social campaigns that integrate with our clients’ overall strategic goals.',
       'Manage day-to-day contact on projects that range from sites and app builds to social activations and content, interfacing between client and agency, as well as vendors where needed.',
@@ -38,135 +38,131 @@ const Jobs = [
     ]
   },
   {
-    title: 'sr. creative designer',
+    title: 'community manager',
     active: true,
     type: 'freelance',
-    summary: 'We are looking for smart and focused account executives that are excellent communicators, share our passion for the digital and social space and want to be part of a growing and winning team. The right person for this position has a passion for digital/social, is knowledgeable, hard-working, brings with them a great deal of enthusiasm, shares our work ethic and attention to detail, and has a willingness to learn and teach. If you’re creative about how you approach challenges, always look to provide solutions, live for the details, love the fast pace, stay cool under pressure and want to continue to grow professionally in a very talented agency environment, then you have a bright future here at GLOW.',
+    summary: 'GLOW is an award-winning social, marketing and creative agency based in New York City. With a 16-year history as a leader in the digital space, GLOW provides innovative social strategies and best in breed executions for a range of clients who are considered the most successful in their respective industries. Our passionate, collaborative culture and wide range of integrated capabilities provides our client partners with strategies and campaigns that solve key business problems and generate measurable results. Our team consists of a dynamic, creative, cooperative group of experts who accomplish the extraordinary by working together to bring the highest level of value to our client partners. GLOW\'s Social team continues to experience amazing growth. We are currently looking for additional community managers to work on very high profile entertainment clients who are considered amongst the best in digital social marketing.',
     duties: [
-      'Work closely with internal teams and clients to execute social campaigns that integrate with our clients’ overall strategic goals.',
-      'Manage day-to-day contact on projects that range from sites and app builds to social activations and content, interfacing between client and agency, as well as vendors where needed.',
-      'Work with management, team and client to establish scope, set project timelines and monitor the overall flow of the effort from kickoff to completion.',
-      'Participation in brainstorms and creative meetings. Your ideas need to contribute to the team’s thinking!!',
-      'Ensure projects have the necessary resources to run efficiently/effectively from kickoff to completion.',
-      'You possess a keen understanding of what a project entails, and keep a broader focus on how our efforts ladder to the overarching client goals.',
-      'You will be an active participant on new business teams and contribute directly to new business opportunities.',
-      'Good problem solving skills, works well under pressure. ',
-      'The ability to anticipate the needs of the team and the account.',
-      'Active involvement in planning and strategy – you will know your projects and clients inside and out so you can provide answers as needed.',
-      'Confidence and comfort to act as the voice of the team when necessary on client correspondence.'
+      'Develop, own, and execute innovative social media campaigns to build conversation and communities for our clients.',
+      'Oversee and develop day-to-day editorial/content calendars and publish to client social media channels.',
+      'Liaise with our Account and Design teams to facilitate efficient execution.',
+      'Own Community Management with client social media channels on a daily basis.',
+      'Craft, pitch, and execute strategic social marketing plans for clients.',
+      'Define, along with your team, the best direction for each client to grow and improve on social.',
+      'Liaise with client to ensure we are optimized to meet their business objectives, as well as foster and nurture a healthy partnership.',
+      'Weekly live-tweeting of high profile television shows and live events.',
+      'Provide our clients with reporting that measures our success on each platform.',
+      'Plan/launch paid social media strategy recommendations and executing paid campaigns',
+      'Provide POVs on trends, platforms, relevant industry news, etc.',
+      'Inform the team of hot new trends as they happen to stay ahead of competitors.',
+      'Contribute to brainstorms and planning for upcoming show strategies.'
     ],
     traits: [
-      'Has a minimum 2-4 years of agency experience.',
-      'Must have prior experience working in digital or social media, in an entertainment capacity is a plus.',
-      'A genuine enthusiasm about pop culture, entertainment and social media and an understanding of what other brands are doing in the space.',
-      'Demonstrated ability to communicate clearly and effectively with clients at varying levels.',
-      'Loves a challenge and uses problem-solving skills to seek out ways to help make our team and our partners stronger/smarter/better.',
-      'A highly organized, detail-oriented multi-tasker.  The fast pace of real-time social media energizes you!',
-      'Considers themselves a curious marketer and is dedicated to personal and team growth.',
-      'The ability to communicate clearly, lead conversations, and can function exceptionally well in a team environment.',
-      'You know what makes the client tick, and are ready to jump in and make sure they’re being given what they need.',
-      'Has opinions and ideas and you’d love to share them with the team and our clients.',
-      'Someone who others will want to work with - your personality should work well with many different types of people.',
-      'A person who truly wants to grow while learning more about social and digital.'
+      'At least 1-3 years professional experience in digital and/or specifically social media.',
+      'Active familiarity with social platforms, especially Twitter and Facebook, with an added emphasis on Instagram, Snapchat, Tumblr, and others.',
+      'You love knowing about the coolest and newest memes, trends and products online.',
+      'Excellent writer, interpersonal skills, and comfort speaking in front of clients and senior colleagues.',
+      'You take initiative in creating great work, but also a great communicator with team members.',
+      'You\'re absolutely obsessed with the latest and greatest tv shows.'
+
     ]
   },
   {
-    title: 'junior designer',
+    title: 'junior producer/editor',
     active: true,
-    type: 'part time',
-    summary: 'We are looking for smart and focused account executives that are excellent communicators, share our passion for the digital and social space and want to be part of a growing and winning team. The right person for this position has a passion for digital/social, is knowledgeable, hard-working, brings with them a great deal of enthusiasm, shares our work ethic and attention to detail, and has a willingness to learn and teach. If you’re creative about how you approach challenges, always look to provide solutions, live for the details, love the fast pace, stay cool under pressure and want to continue to grow professionally in a very talented agency environment, then you have a bright future here at GLOW.',
+    type: 'freelance',
+    summary: 'GLOW is looking for a creative and resourceful Junior Producer/Editor who can assist with creating compelling short-form video content for the web and other digital platforms. Must be a native of the digital and pop cultural landscape with intimate knowledge of the latest and greatest in social media, content and emerging technology/platforms. This is a full-time paid position. You must submit a sample video of your work and LINKS to your favorite things around the net to be considered for this position.',
     duties: [
-      'Work closely with internal teams and clients to execute social campaigns that integrate with our clients’ overall strategic goals.',
-      'Manage day-to-day contact on projects that range from sites and app builds to social activations and content, interfacing between client and agency, as well as vendors where needed.',
-      'Work with management, team and client to establish scope, set project timelines and monitor the overall flow of the effort from kickoff to completion.',
-      'Participation in brainstorms and creative meetings. Your ideas need to contribute to the team’s thinking!!',
-      'Ensure projects have the necessary resources to run efficiently/effectively from kickoff to completion.',
-      'You possess a keen understanding of what a project entails, and keep a broader focus on how our efforts ladder to the overarching client goals.',
-      'You will be an active participant on new business teams and contribute directly to new business opportunities.',
-      'Good problem solving skills, works well under pressure. ',
-      'The ability to anticipate the needs of the team and the account.',
-      'Active involvement in planning and strategy – you will know your projects and clients inside and out so you can provide answers as needed.',
-      'Confidence and comfort to act as the voice of the team when necessary on client correspondence.'
+      'Coming up creative concepts and executions',
+      'Assist with video shoots - must be comfortable using DSLRs',
+      'Setting up basic lighting configurations',
+      'Assist with research and media gathering',
+      'Editing filmed content'
     ],
     traits: [
-      'Has a minimum 2-4 years of agency experience.',
-      'Must have prior experience working in digital or social media, in an entertainment capacity is a plus.',
-      'A genuine enthusiasm about pop culture, entertainment and social media and an understanding of what other brands are doing in the space.',
-      'Demonstrated ability to communicate clearly and effectively with clients at varying levels.',
-      'Loves a challenge and uses problem-solving skills to seek out ways to help make our team and our partners stronger/smarter/better.',
-      'A highly organized, detail-oriented multi-tasker.  The fast pace of real-time social media energizes you!',
-      'Considers themselves a curious marketer and is dedicated to personal and team growth.',
-      'The ability to communicate clearly, lead conversations, and can function exceptionally well in a team environment.',
-      'You know what makes the client tick, and are ready to jump in and make sure they’re being given what they need.',
-      'Has opinions and ideas and you’d love to share them with the team and our clients.',
-      'Someone who others will want to work with - your personality should work well with many different types of people.',
-      'A person who truly wants to grow while learning more about social and digital.'
+      'EPK and or Field Producing experience',
+      'Interest in and focus on creating social media video content',
+      'Experience with DSLR cameras, sound and lighting equipment',
+      'On set experience is a plus',
+      'A competitive drive -- you enjoy winning and really going for it',
+      'Ability to take direction and work in a dynamic'
     ]
   },
   {
-    title: 'motion designer',
+    title: 'social media art director',
     active: true,
-    type: 'full time',
-    summary: 'We are looking for smart and focused account executives that are excellent communicators, share our passion for the digital and social space and want to be part of a growing and winning team. The right person for this position has a passion for digital/social, is knowledgeable, hard-working, brings with them a great deal of enthusiasm, shares our work ethic and attention to detail, and has a willingness to learn and teach. If you’re creative about how you approach challenges, always look to provide solutions, live for the details, love the fast pace, stay cool under pressure and want to continue to grow professionally in a very talented agency environment, then you have a bright future here at GLOW.',
+    type: 'freelance',
+    summary: 'Our dream Art Director is a leader, a builder, a presenter, an inventor, & above all else, a Social creature – in love with the medium & able to harness the things that make it great.',
     duties: [
-      'Work closely with internal teams and clients to execute social campaigns that integrate with our clients’ overall strategic goals.',
-      'Manage day-to-day contact on projects that range from sites and app builds to social activations and content, interfacing between client and agency, as well as vendors where needed.',
-      'Work with management, team and client to establish scope, set project timelines and monitor the overall flow of the effort from kickoff to completion.',
-      'Participation in brainstorms and creative meetings. Your ideas need to contribute to the team’s thinking!!',
-      'Ensure projects have the necessary resources to run efficiently/effectively from kickoff to completion.',
-      'You possess a keen understanding of what a project entails, and keep a broader focus on how our efforts ladder to the overarching client goals.',
-      'You will be an active participant on new business teams and contribute directly to new business opportunities.',
-      'Good problem solving skills, works well under pressure. ',
-      'The ability to anticipate the needs of the team and the account.',
-      'Active involvement in planning and strategy – you will know your projects and clients inside and out so you can provide answers as needed.',
-      'Confidence and comfort to act as the voice of the team when necessary on client correspondence.'
+      'Providing leadership & creative vision for the Social Media Design Team',
+      'Injecting your knowledge of, and passion for, Social Media into the design process',
+      'Developing relationships with clients, & providing a service that brings them back for more ',
+      'Creating work alongside those you\'re directing (roughly a 60/40 split between direction/creation)',
+      'Staying abreast of developments in the Social space, & finding exciting applications for them within your projects'
     ],
     traits: [
-      'Has a minimum 2-4 years of agency experience.',
-      'Must have prior experience working in digital or social media, in an entertainment capacity is a plus.',
-      'A genuine enthusiasm about pop culture, entertainment and social media and an understanding of what other brands are doing in the space.',
-      'Demonstrated ability to communicate clearly and effectively with clients at varying levels.',
-      'Loves a challenge and uses problem-solving skills to seek out ways to help make our team and our partners stronger/smarter/better.',
-      'A highly organized, detail-oriented multi-tasker.  The fast pace of real-time social media energizes you!',
-      'Considers themselves a curious marketer and is dedicated to personal and team growth.',
-      'The ability to communicate clearly, lead conversations, and can function exceptionally well in a team environment.',
-      'You know what makes the client tick, and are ready to jump in and make sure they’re being given what they need.',
-      'Has opinions and ideas and you’d love to share them with the team and our clients.',
-      'Someone who others will want to work with - your personality should work well with many different types of people.',
-      'A person who truly wants to grow while learning more about social and digital.'
+      'An inborn love of Social Media',
+      'The ability to captivate & engage your audience (the client, your director, your designers, & ultimately the end user)',
+      '3+ years of agency design experience, with some experience in a managerial role',
+      'The ability to lead, direct, inspire, critique, present, demonstrate, cajole, twist, & juke your way to great product',
+      'Strong communication skills (written & verbal, client facing & internal)',
+      'The ability to satisfy the artistic, business & technological requirements of a project (on brand, on budget & within scope)',
+      'Skills in relevant tools (Adobe CC, shared Google Docs, etc.)',
+      'A working knowledge of mobile (design & UX best practices)'
     ]
   },
   {
-    title: 'strategist',
+    title: 'junior project manager',
     active: true,
-    type: 'full time',
-    summary: 'We are looking for smart and focused account executives that are excellent communicators, share our passion for the digital and social space and want to be part of a growing and winning team. The right person for this position has a passion for digital/social, is knowledgeable, hard-working, brings with them a great deal of enthusiasm, shares our work ethic and attention to detail, and has a willingness to learn and teach. If you’re creative about how you approach challenges, always look to provide solutions, live for the details, love the fast pace, stay cool under pressure and want to continue to grow professionally in a very talented agency environment, then you have a bright future here at GLOW.',
+    type: 'freelance',
+    summary: 'As a Junior Project Manager you will:',
     duties: [
-      'Work closely with internal teams and clients to execute social campaigns that integrate with our clients’ overall strategic goals.',
-      'Manage day-to-day contact on projects that range from sites and app builds to social activations and content, interfacing between client and agency, as well as vendors where needed.',
-      'Work with management, team and client to establish scope, set project timelines and monitor the overall flow of the effort from kickoff to completion.',
-      'Participation in brainstorms and creative meetings. Your ideas need to contribute to the team’s thinking!!',
-      'Ensure projects have the necessary resources to run efficiently/effectively from kickoff to completion.',
-      'You possess a keen understanding of what a project entails, and keep a broader focus on how our efforts ladder to the overarching client goals.',
-      'You will be an active participant on new business teams and contribute directly to new business opportunities.',
-      'Good problem solving skills, works well under pressure. ',
-      'The ability to anticipate the needs of the team and the account.',
-      'Active involvement in planning and strategy – you will know your projects and clients inside and out so you can provide answers as needed.',
-      'Confidence and comfort to act as the voice of the team when necessary on client correspondence.'
+      'Assist the production director on managing the day-to-day production of digital campaigns and projects.',
+      'Learn to manage and interpret important client, vendor and publisher materials such as media detail, scheduling docs, resource management documents and spec sheets. ',
+      'Create, organize and distribute internal production documents.',
+      'Schedule, facilitate and participate in client and internal staff meetings, brainstorms, etc.',
+      'Liaise with account manager and production staff; the right person will have the ability to interface with clients.',
+      'Create and manage project schedules.',
+      'Demonstrate solid judgment to ensure the daily production cycle runs smoothly.',
+      'Direct report to the Production Director.'
     ],
     traits: [
-      'Has a minimum 2-4 years of agency experience.',
-      'Must have prior experience working in digital or social media, in an entertainment capacity is a plus.',
-      'A genuine enthusiasm about pop culture, entertainment and social media and an understanding of what other brands are doing in the space.',
-      'Demonstrated ability to communicate clearly and effectively with clients at varying levels.',
-      'Loves a challenge and uses problem-solving skills to seek out ways to help make our team and our partners stronger/smarter/better.',
-      'A highly organized, detail-oriented multi-tasker.  The fast pace of real-time social media energizes you!',
-      'Considers themselves a curious marketer and is dedicated to personal and team growth.',
-      'The ability to communicate clearly, lead conversations, and can function exceptionally well in a team environment.',
-      'You know what makes the client tick, and are ready to jump in and make sure they’re being given what they need.',
-      'Has opinions and ideas and you’d love to share them with the team and our clients.',
-      'Someone who others will want to work with - your personality should work well with many different types of people.',
-      'A person who truly wants to grow while learning more about social and digital.'
+      'Must be incredibly enthusiastic about the ever-evolving worlds of social media, the digital landscape at-large, and the media & TV industry',
+      'Strategic thinker',
+      'Rock solid organizational skills',
+      'Excellent written and verbal presentation skills ',
+      'Strong attention to detail and the ability to multitask',
+      'Proficient in Google, PC and Mac OS – email, docs, spreadsheets, presentations',
+      'Must possess a sense of pride and a strong work ethic',
+      'Passion to learn and commitment to the team'
+    ]
+  },
+  {
+    title: 'social strategist',
+    active: true,
+    type: 'freelance',
+    summary: 'GLOW continues to experience amazing growth. We are currently looking for additional social strategists to work on very high profile entertainment clients who are considered amongst the best at social marketing.',
+    duties: [
+      'Social media strategy and execution',
+      'Client facing',
+      'Can take ownership of project/client and can work with the client to see it through',
+      'Shape Voice and Tone for brand',
+      'Work with GLOWs creative department to produce creative and compelling social content',
+      'Craft, pitch, and execute strategic social marketing plans for clients',
+      'Establish KPI’s and success metrics',
+      'Provide recommendations for new, innovative social executions',
+      'Help our clients navigate the rapidly-evolving world of digital and social',
+      'Lead a group of community managers and support staff'
+    ],
+    traits: [
+      'Must be incredibly enthusiastic about the ever-evolving worlds of social media, the digital landscape at-large, and the media & TV industry',
+      'Big thinker',
+      'Strategic thinker',
+      'Rock solid organizational skills',
+      'Excellent written and verbal presentation skills ',
+      'Strong attention to detail and the ability to multitask',
+      'Must possess a sense of pride and a strong work ethic',
+      'Passion to learn and commitment to the team'
     ]
   }
 ];
@@ -211,7 +207,7 @@ export class Career extends React.Component {
       <div className={styles.career_list_item}>
         <div ref='careerHeader' onClick={this.toggleItem.bind(this)} className={styles.career_item_header}>
           <div className={styles.career_title} style={{color: color}}><span>{this.getStatusCharacter()}</span>{this.props.job.title}</div>
-          <div className={styles.career_type} style={{color: color}}>{this.props.job.type}</div>
+          <div className={styles.career_type} style={{color: color, visibility: (this.state.isOpen) ? 'visible' : 'hidden'}}>{this.props.job.type}</div>
         </div>
         <div className={styles.career_body} style={bodyStyle} ref='careerBody'>
           <p style={{marginBottom: 0}}>
@@ -237,6 +233,7 @@ export class Career extends React.Component {
     );
   }
 }
+
 export class Careers extends React.Component {
   static contextTypes = {
     setupPageInfo: PropTypes.func,
@@ -250,7 +247,6 @@ export class Careers extends React.Component {
   componentDidMount () {
     this.context.setupPageInfo('Careers');
     this.context.animatePageContentIn(this.refs.page);
-    console.log(this);
   }
 
   toggleItem () {

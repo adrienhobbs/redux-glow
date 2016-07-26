@@ -59,3 +59,28 @@ const data = [
     },
   }
 ];
+
+
+
+
+contentSections: [
+{
+	type: 'copy',
+	headline: 'Web Development',
+	copy: 'this is the copy'
+},
+
+{
+	type: 'video',
+	headline: 'cool video',
+	videoUrl: 'http',
+	videoDescription: 'sldfkjas;ldfkjas;ldfja;slkdfja;lsdkjf'
+},
+
+{
+	type: 'image-gallery',
+	images: ['image1.jpg', 'image2.jpg', 'image3.jpg']
+}
+
+
+]

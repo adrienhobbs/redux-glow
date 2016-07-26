@@ -234,9 +234,18 @@
 .scroll_down {
   text-align: center;
   font-family: 'Domaine';
+  font-style: italic;
   position: absolute;
-  bottom: 10%;
+  top: 76%;
   width: 100%;
   left: 0;
   color: white;
+}
+
+.scroll_down_vert {
+  left: center;
+  bottom: 0;
+  height: 18%;
+  width: 1px;
+  background: white;
 }

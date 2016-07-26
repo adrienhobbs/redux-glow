@@ -16,11 +16,10 @@ const StudyBody = React.createClass({
     this.TL = new TimelineLite({autoRemoveChildren: true});
     TweenLite.set(this.refs.studyWrapper, {yPercent: 140});
     TweenLite.to(this.refs.studyOverlay, 0.8, {autoAlpha: 1, ease: Circ.easeInOut, onComplete: () => this.bringInContent()});
+    TweenLite.fromTo(this.refs.scrollDown, 0.9, {autoAlpha: 0, y: -30}, {autoAlpha: 1, y: 0, ease: Expo.easeOut, delay: 1.5});
+    TweenLite.fromTo(this.refs.scrollVerticalBar, 0.9, {autoAlpha: 0, height: 0}, {autoAlpha: 1, height: '18%', ease: Expo.easeInOut, delay: 1.9});
   },
 
-  scrollOutContent () {
-    console.log('yahos');
-  },
   shouldComponentUpdate (nextProps) {
     return !(nextProps.isVisible === this.props.isVisible) ||
       (nextProps.viewport.orientation !== nextProps.viewport.orientation);
@@ -34,6 +33,7 @@ const StudyBody = React.createClass({
   getLogoColor () {
     return (this.props.data.get('clientLogoColor')) ? this.props.data.get('clientLogoColor') : null;
   },
+
   setIntroCtrHeight () {
     if (this.props.viewport.isPhone) {
       if (this.props.viewport.orientation === 'landscape') {
@@ -42,6 +42,7 @@ const StudyBody = React.createClass({
       }
     }
   },
+
   getCopyStyle () {
     return {
       color: this.props.data.get('copyColor') || '#fff'
@@ -78,7 +79,10 @@ const StudyBody = React.createClass({
             <Lockup data={this.props.data} single />
             <div className={styles.study_headline_subtitle}>{this.props.data.get('subtitle')}</div>
           </div>
-          <div className={styles.scroll_down}>scroll</div>
+          <div className='scroll_down_ctr' style={{height: '100%', width: '100%', position: 'relative', top: 0}}>
+            <div ref='scrollVerticalBar' className={styles.scroll_down_vert} ></div>
+            <div ref='scrollDown' className={styles.scroll_down}>scroll</div>
+          </div>
         </div>
         <div ref='studyWrapper' className={styles.case_study_single_wrapper}>
           <div className={styles.study_intro_container} ref='introCtr'></div>

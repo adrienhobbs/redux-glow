@@ -11,7 +11,11 @@
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
+  @media(--sm-down) {
+    text-align: left;
+  }
 }
+
 .career_listings {
   margin-top: 30px;
   width: 100%;
@@ -45,6 +49,10 @@
   font-weight: 300;
   font-family: 'GT-Walsheim';
   font-size: 1.5rem;
+  @media(--sm-down) {
+    font-size: 1rem;
+    line-height: 40px;
+  }
 }
 
 .career_title:after {
@@ -73,13 +81,22 @@
 .headline {
   composes: headline from 'styles/mixins.css'; 
   text-align: center;
+  margin-bottom: 70px;
+  @media(--sm-down) {
+    font-size: 2.5em;
+    margin-bottom: 35px;
+  }
 }
 
 .career_list_item {
-  lost-column: 1;
-  border-bottom: 2px solid var(--color-stack);
+  lost-column: 1 0 0;
+  border-bottom: 2px solid rgba(142, 142, 142, 0.5);
   padding-top: 35px;
   padding-bottom: 35px;
+  @media(--sm-down) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 .career_item_header {
@@ -93,6 +110,8 @@
 }
 
 .career_body {
+  width: 100%;
+  padding-right: 10px;
 }
 
 .section_header {
@@ -111,11 +130,18 @@
   font-family: var(--primary-font-family);
 }
 
+.duty, .trait, .career_body p {
+  line-height: 1.7;
+  @media(--sm-down) {
+    line-height: 1.3;
+    padding-bottom: 12px;
+
+  }
+}
 .duty, .trait {
   position: relative;
   padding-left: 20px;
   font-size: 1.25rem;
-  line-height: 1.7;
 }
 
 .duty:before, .trait:before {
@@ -132,6 +158,7 @@
   width: 200px;
   text-align: center;
   margin: auto;
+  margin-top: 30px;
 
   a {
     color: white;

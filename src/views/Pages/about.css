@@ -18,6 +18,32 @@
   lost-flex-container: row;
 }
 
+.awards {
+  width: 100%;
+  margin-bottom: 70px;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    max-width: 100%;
+
+    &.awardsLarge {
+      display: none;
+      @media(--lg) {
+        display: block;
+      }
+    }
+    &.awardsSmall {
+
+      @media(--lg) {
+        display: none;
+      }
+    
+    }
+  }
+  
+}
 .about_all_clients {
   lost-flex-container: row;
   width: 100%;

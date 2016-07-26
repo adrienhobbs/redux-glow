@@ -139,6 +139,51 @@ const data = [
     aboutCopy: '<p>Sharknado 3 took the world by storm and stirred up 2 billion Twitter impressions. Yes, that’s a B. A key priority program for Syfy, GLOW couldn’t wait to dive-in. Together, we planned and launched a FOMO-inducing social campaign, which included social strategy, community management, and social content creative to make Sharknado 3 a can’t-miss event. </p>'
   },
   {
+    featured:                   false,
+    client:                     'tvland',
+    project:                    'younger',
+    title:                      'younger',
+    subtitle:                   'interactive experience',
+    subtitleSlug:               'interactive experience',
+    type:                       'case-study',
+    backgroundImageUrl:         s3 + 'case-studies/tvland/younger/landscape.jpg',
+    backgroundImageUrlVert:     s3 + 'case-studies/syfy/younger/landscape.jpg',
+    logoColor:                  '#1686DC',
+    secColor:                   '#ffffff',
+    copyColor:                  '#A7A7A7',
+    gradientTop:                '#a3373f',
+    gradientBottom:             '#0b1c28',
+    featuredProjectTitleColor:  '#a3373f',
+    sidebarLogoColor:           '#ffffff',
+    shapeColor: '#1f3a4d',
+    cat:                        '- tvland | younger -',
+    templateName:               'Younger',
+    services:                   ['ui/ux', 'motion design', 'front-end dev', 'back-end dev', 'social integration'],
+    headlineColor:              '#1686DC',
+    lockup: {
+      className:       'younger-lockup',
+      projectColor:    '#FFFFFF',
+      featured:        {
+        projectColor:  '#3da0a8'
+      }
+    },
+    backbar: {
+      bgColor: '#1686DC'
+    },
+    results: {
+    },
+    sidebar: {
+      logoColor: '#203A4C',
+      copyColor: '#A7A7A7',
+      headlineColor: '#1686DC'
+    },
+    shareButton: {
+      strokeColor: '#7d2f37',
+      copyColor: '#ffffff'
+    },
+    aboutCopy: '<p>First, the show\'s theme does not intrinsically have a broad social appeal. Couple that with a show that speaks to an older skewing audience, it was aparent that Casual was not developed to be a heavily social property. In spite of those challenges, we applied a smart strategy that leveraged key elements of the show itself and released content in very focused ways. This provided successful, driving massive viewership. Video clips went viral across Facebook, and earned a total of more than 20 million views on the platform. Overall, our efforts drove widespread engagement and awareness of the series as a fun and unique Hulu Original. </p>'
+  },
+  {
     featured: false,
     client: 'i love new york',
     project: 'social retainer',
@@ -601,6 +646,98 @@ const data = [
     gradientBottom: '#f12d5c',
     cat: '― our clients ―'
   },
+{
+  featured: false,
+  client: 'hulu',
+  project: 'mindy',
+  title: 'the mindy project',
+  subtitle: 'social media campaign',
+  subtitleSlug: 'social media campaign',
+  type: 'case-study',
+  backgroundImageUrl: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
+  backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
+  logoColor: '#e70062',
+  secColor: '#ffffff',
+  gradientTop: '#e70062', gradientBottom: '#18d4ff', clientLogoColor: '#6eb116', headlineColor: '#68A83B',
+  copyColor: '#A7A7A7',
+  cat: ' ― hulu | mindy ― ',
+  templateName: 'Mindy',
+  results: {
+    stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+    statColor: '#ffffff',
+    statLabelColor: '#e70662',
+    bgColor: '#00C1E8'
+  },
+  services: ['social strategy', 'community management', 'content lab', 'creative execution', 'video'],
+  lockup: {
+    className: 'mindy-lockup',
+    logoColor: '#FFFFFF'
+  },
+  sidebar: {
+    logoColor: '#A7A7A7',
+    copyColor: '#A7A7A7',
+    headlineColor: '#68A83B'
+  },
+  shareButton: {
+    strokeColor: '#fff',
+    copyColor: '#fff'
+  },
+  endShape: {
+    bgColor: '#00CAFF'
+  },
+  backbar: {
+    bgColor: '#68A83B'
+  },
+  aboutCopy: '<p>Our objective for The Mindy Project, the highly popular comedy series originally on FOX, was to increase across the board awareness and drive tune-in as Mindy moved from FOX to Hulu as their next original series. We sought to tap into the series’ fanbase and develop engaging custom content that resonated with viewers, while leveraging series\' talent to boost the social conversation and awareness of the series now on Hulu.</p>'  ,
+},
+{
+  featured: false,
+  client: 'hulu',
+  project: 'casual',
+  title: 'casual',
+  subtitle: 'social media campaign',
+  subtitleSlug: 'social media campaign',
+  type: 'case-study',
+  backgroundImageUrl: s3 + 'case-studies/hulu/casual/landscape.jpg',
+  backgroundImageUrlVert: s3 + 'case-studies/hulu/casual/landscape.jpg',
+  logoColor: '#68ae34',
+  secColor: '#ffffff',
+  copyColor: '#676767',
+  gradientTop: '#68ae34',
+  gradientBottom: '#5f6e8d',
+  featuredProjectTitleColor: '#68ae34',
+  clientLogoColor: '#6eb116',
+  headlineColor: '#606F8C',
+  cat: ' ― hulu | casual ― ',
+  templateName: 'Casual',
+  results: {
+    stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+    statColor: '#ffffff',
+    statLabelColor: '#6eb116',
+    bgColor: '#4C5772'
+  },
+  lockup: {
+    className: 'casual-lockup',
+    logoColor: '#ffffff'
+  },
+  services: ['social strategy', 'community management', 'content lab', 'creative execution'],
+  sidebar: {
+    logoColor: '#3C465D',
+    copyColor: '#676767',
+    headlineColor: '#606F8C',
+  },
+  shareButton: {
+    strokeColor: '#fff',
+    copyColor: '#fff'
+  },
+  backbar: {
+    bgColor: '#606F8C'
+  },
+  aboutCopy: 'First, the show\'s theme does not intrinsically have a broad social appeal. Couple that with a show that speaks to an older skewing audience, it was apparent that Casual was not developed to be a heavily social property. In spite of those challenges, we applied a smart strategy that leveraged key elements of the show itself and released content in very focused ways. This provided successful, driving massive viewership. Video clips went viral across Facebook, and earned a total of more than 20 million views on the platform. Overall, our efforts drove widespread engagement and awareness of the series as a fun and unique Hulu Original.</p>' ,
+  endShape: {
+    bgColor: '#4C5772'
+  }
+},
   {
     featured: true,
     title: 'Info',
@@ -617,98 +754,3 @@ const data = [
 
 module.exports = data;
 
-// {
-//   featured: false,
-//   client: 'hulu',
-//   project: 'mindy',
-//   title: 'the mindy project',
-//   subtitle: 'social media campaign',
-//   subtitleSlug: 'social media campaign',
-//   type: 'case-study',
-//   backgroundImageUrl: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
-//   backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/landscape.jpg',
-//   logoColor: '#e70062',
-//   secColor: '#18d4ff',
-//   gradientTop: '#e70062',
-//   gradientBottom: '#18d4ff',
-//   clientLogoColor: '#6eb116',
-//   headlineColor: '#e70062',
-//   copyColor: '#000',
-//   featuredProjectTitleColor: '#e70062',
-//   cat: ' ― hulu | mindy ― ',
-//   templateName: 'Mindy',
-//   results: {
-//     stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
-//     statColor: '#ffffff',
-//     statLabelColor: '#e70662',
-//     bgColor: '#00C1E8'
-//   },
-//   services: ['community management', 'video production', 'social content'],
-//   recognition: ['short award finalist', 'best twitter campaign'],
-//   lockup: {
-//     className: 'mindy-lockup',
-//     logoColor: '#73B100'
-//   },
-//   sidebar: {
-//     logoColor: '#129fbf',
-//     copyColor: '#129fbf',
-//     headlineColor: '#fff'
-//   },
-//   shareButton: {
-//     strokeColor: '#fff',
-//     copyColor: '#fff'
-//   },
-//   endShape: {
-//     bgColor: '#00CAFF'
-//   },
-//   backbar: {
-//     bgColor: '#e70062'
-//   }
-// },
-// {
-//   featured: false,
-//   client: 'hulu',
-//   project: 'casual',
-//   title: 'casual',
-//   subtitle: 'social media campaign',
-//   subtitleSlug: 'social media campaign',
-//   type: 'case-study',
-//   backgroundImageUrl: s3 + 'case-studies/hulu/casual/landscape.jpg',
-//   backgroundImageUrlVert: s3 + 'case-studies/hulu/casual/landscape.jpg',
-//   logoColor: '#68ae34',
-//   secColor: '#5f6e8d',
-//   gradientTop: '#68ae34',
-//   gradientBottom: '#5f6e8d',
-//   featuredProjectTitleColor: '#68ae34',
-//   clientLogoColor: '#6eb116',
-//   headlineColor: '#ffffff',
-//   cat: ' ― hulu | casual ― ',
-//   templateName: 'Casual',
-//   results: {
-//     stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
-//     statColor: '#ffffff',
-//     statLabelColor: '#6eb116',
-//     bgColor: '#4C5772'
-//   },
-//   lockup: {
-//     className: 'casual-lockup',
-//     logoColor: '#73B100'
-//   },
-//   services: ['community management', 'video production', 'social content'],
-//   recognition: ['short award finalist', 'best twitter campaign'],
-//   sidebar: {
-//     logoColor: '#3C465D',
-//     copyColor: '#3C465D',
-//     headlineColor: '#fff'
-//   },
-//   shareButton: {
-//     strokeColor: '#fff',
-//     copyColor: '#fff'
-//   },
-//   backbar: {
-//     bgColor: '#6eb116'
-//   },
-//   endShape: {
-//     bgColor: '#4C5772'
-//   }
-// },

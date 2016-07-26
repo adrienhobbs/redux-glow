@@ -97,7 +97,9 @@ export class Hunters extends BaseTemplate {
                 <p style={copyStyle}>The narrative of the site takes the POV of an Edward Snowden type mole who is leaking out information to the public. Both the collection and leaking of data is a key element to the site, so finding a way to represent a collection of data was essential; we decided on a particle driven data cloud. This was also done in reference to exact mechanism of how the Hunters (alien creatures from the show) visualize their world.  To tie the model even further to the show, Glow created 13 different 3D models to map the particles to. Each model is a reference to a significant moment from that week’s episode.</p>
               </div>
             </div>
-            <LoopingVideo viewport={this.props.viewport} videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/hunters/DataDriven.mp4'/>
+            <div className='img-single'>
+              <LoopingVideo viewport={this.props.viewport} videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/hunters/DataDriven.mp4'/>
+            </div>
             <div className='copy'>
               <div className='copy-inner'>
                 <p style={copyStyle}>To help create the feeling that the site was a living and breathing entity, it was important to include actual fan sentiment about Hunters. The social chatter is visualized through the 3D particle models. Each week, new social chatter of was scraped from Twitter and brought into the site, encouraging exploration and further interaction of the 3D model. Additionally the custom assets created for the site were posted to the official Syfy Hunters Twitter account to help cross promote both the show and site.</p>
@@ -111,7 +113,9 @@ export class Hunters extends BaseTemplate {
                 <p style={copyStyle}>Working closely with Syfy and the show runners, Glow strove to ensure the tone of the site matched the show ensuring the content released felt authentic. This was done by using particles as a core component of the site, utilizing high quality images from the show, and creating custom audio that was used throughout the site. Glow created custom audio used from actual SFX from Hunters as interaction mechanics guiding users through their experience. </p>
               </div>
             </div>
-            <LoopingVideo viewport={this.props.viewport} style={{marginBottom: 20, marginTop: 30}} videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/hunters/Design01.mp4'/>
+            <div className='img-single'>
+              <LoopingVideo viewport={this.props.viewport} style={{marginBottom: 20, marginTop: 30}} videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/hunters/Design01.mp4'/>
+            </div>
             <div className='img-single inner_section' style={{marginTop: 0, marginBottom: 0}}>
               <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/hunters/design02.jpg' />
             </div>
@@ -129,7 +133,7 @@ export class Hunters extends BaseTemplate {
                 <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/hunters/design06.jpg' alt='' />
               </div>
             </div>
-            <div className='copy'>
+            <div className='copy' style={{marginTop: 40}}>
               <div className='copy-inner'>
                 <p style={copyStyle}>Glow comped out several design iterations for the look and feel of the site, eventually settling on a “light” version. This was a purposeful departure from the typical data visualization and rather, takes a more humanistic approach to the way data is displayed. </p>
               </div>
@@ -142,11 +146,11 @@ export class Hunters extends BaseTemplate {
                 <p style={copyStyle}>Glow utilized emerging web technologies like WebGL and ThreeJS to help bring the 3D particle models to life on both mobile and desktop. It was a point of focus to maximize the possible particle count and frame rate while ensuring that the experience rendered well on both mobile and desktop. Glow created a custom shader to help ensure solid performance when rendering the amount of particles needed in the experience. Maintaining a contstant 60fps, we were able to render over 100k interactive particles thanks to the custom shader.  </p>
               </div>
             </div>
-            <div className='img-single' style={{position: 'relative', zIndex: 1, marginTop: 40, marginbottom: 40}}>
+            <div className='img-single' style={{position: 'relative', zIndex: 1, marginTop: 40, marginbottom: 140}}>
               <iframe ref='iframe' style={{height: 700, position: 'relative', zIndex: 0}} src='http://hunters-dev.weareglow.com/test25/' scrolling='no' width='100%' height='900px' frameBorder='0' />
             </div>
           </article>
-          <article className='result' style={{marginBottom: 48}} >
+          <article className='result' style={{marginBottom: 48, marginTop: 40}} >
             {this.createHeadlineEl('the result')}
             <div className='copy'>
               <div className='copy-inner'>

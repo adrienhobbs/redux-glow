@@ -47,11 +47,14 @@
 }
 
 .about_right {
-  @media(--xl) {
-    lost-column: 550/1920;
+  @media(--xl-screen-down) {
+    lost-row: 1;
+    order: 1;
+    height: auto;
   }
-  lost-row: 1;
-  order: 1;
-  height: auto;
+
+  lost-column: 550/1920;
+  
+  width: auto;
 }
 

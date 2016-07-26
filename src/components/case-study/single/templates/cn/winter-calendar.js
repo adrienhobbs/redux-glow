@@ -14,12 +14,16 @@ export class WinterCalendar extends BaseTemplate {
   }
 
   render () {
-    const ResultsSection = this.getResultsTemplate();
     return (
       <div ref='studyContent' className='study-content'>
         <div className='content-container'>
-          <AboutSection data={this.props.data} />
-          <ResultsSection data={this.props.data} />
+          <AboutSection data={this.props.data}>
+            <a target='_blank' href='https://s3.amazonaws.com/weareglow-assets/winter-calendar/index.html'>
+              <div className={classes.cnButton}>
+                view the site
+              </div>
+            </a>
+          </AboutSection>
           <div className={classes.cnSection}>
             {this.createHeadlineEl('the calendar')}
             <div className='copy'>

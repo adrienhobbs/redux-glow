@@ -36,6 +36,11 @@ const employeeInfo = {
       position: 'Director of Video Production',
       photoName: 'Clayton',
       isImportant: true
+    },
+    {
+      name: 'Annie Ok',
+      position: 'Director of Innovation',
+      photoName: 'Annie'
     }
   ],
   otherPeople: [
@@ -153,7 +158,43 @@ const employeeInfo = {
       name: 'Tom Quirk',
       position: 'Community Manager',
       photoName: 'Tom'
+    },
+    {
+      name: 'Sean Orr',
+      position: 'Video Editor',
+      photoName: 'SeanO'
+    },
+    {
+      name: 'Sammie Barret',
+      position: 'Designer',
+      photoName: 'Sammie'
+    },
+    {
+      name: 'Paula Ersly',
+      position: 'Community Manager',
+      photoName: 'Paula'
+    },
+    {
+      name: 'Eve Gural',
+      position: 'Project Manager',
+      photoName: 'Eve'
+    },
+    {
+      name: 'Eric Goldie',
+      position: 'Community Manager',
+      photoName: 'EricG'
+    },
+    {
+      name: 'Paola Bossola',
+      position: 'Video Producer',
+      photoName: 'Paola'
+    },
+    {
+      name: 'Zoe Greenblatt',
+      position: 'Community Manager',
+      photoName: 'Zoe'
     }
+
   ]
 
 };

@@ -16,7 +16,7 @@ export class AboutView extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      weather: 'learn a little bit about us.'
+      weather: ''
     };
   }
   componentDidMount () {
@@ -71,6 +71,13 @@ export class AboutView extends React.Component {
           <section className={styles.about_all_clients}>
             <h2 className={styles.headline}>our clients</h2>
             <AllClients color='#666' />
+          </section>
+          <section className={styles.awards}>
+            <h2 className={styles.headline}>awards</h2>
+            <div>
+              <img className={styles.awardsLarge} src='https://s3.amazonaws.com/weareglow-assets/global-assets/awards-desktop.png' alt='our awards' />
+              <img className={styles.awardsSmall} src='https://s3.amazonaws.com/weareglow-assets/global-assets/awards-mobile.png' alt='our awards' />
+            </div>
           </section>
         </div>
         <h1 className={styles.headline} id='who-we-are-title'>who we are</h1>

@@ -10,6 +10,7 @@ import TwelveMonkeys from './syfy/12-monkeys.js';
 import Casual from './hulu/casual.js';
 import HowIDidIt from './yahoo/how-i-did-it.js';
 import Hunters from './syfy/hunters.js';
+import Younger from './tvland/younger.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
@@ -24,7 +25,8 @@ const CaseStudyTemplates = (function templates () {
     TwelveMonkeys: TwelveMonkeys,
     Casual: Casual,
     HowIDidIt: HowIDidIt,
-    Hunters: Hunters
+    Hunters: Hunters,
+    Younger: Younger
   };
 }());
 

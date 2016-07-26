@@ -1,7 +1,9 @@
 import React, { PropTypes } from 'react';
 import { Provider } from 'react-redux';
+// import ReactDOM from 'react-dom';
 import Router from 'react-router/lib/Router';
 import ga from 'react-google-analytics';
+// import IntroAnimation from 'components/Animations/intro-animation.js';
 const GAInitializer = ga.Initializer;
 
 export default class Root extends React.Component {
@@ -32,6 +34,10 @@ export default class Root extends React.Component {
         return <DevTools />;
       }
     }
+  }
+
+  componentDidMount () {
+    // ReactDOM.render(<IntroAnimation />, document.getElementById('intro-animation'));
   }
 
   render () {

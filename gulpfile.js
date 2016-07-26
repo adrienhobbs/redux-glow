@@ -171,6 +171,7 @@ var svgConfig = {
     }
   }
 };
+
 var lockupSvgConfig = {
   mode: {
     symbol: {
@@ -198,6 +199,32 @@ var lockupSvgConfig = {
   }
 };
 
+var iconSvgConfig = {
+  mode: {
+    symbol: {
+      inline: true,
+      example: true,
+      render: {
+        css: true
+      },
+      sprite: 'icons-sprite.svg'
+    }
+  },
+  svg: {
+    dimensionAttributes: true,
+    namespaceIDs: false,
+    namespaceClassnames: false
+  },
+  shape: {
+    transform       : [
+      {svgo       : {
+        plugins : [
+          {cleanupIDs: false}
+        ]
+      }}
+    ]
+  }
+};
 
 var currentFileName;
 
@@ -222,6 +249,12 @@ gulp.task('create-lockup-sprite', function () {
   gulp.src('**/*.svg', {cwd: './svg-src/lockups'})
   .pipe(svgSprite(lockupSvgConfig))
   .pipe(gulp.dest('./src/components/ui/lockup'));
+});
+
+gulp.task('create-icon-sprite', function () {
+  gulp.src('**/*.svg', {cwd: './svg-src/icons'})
+  .pipe(svgSprite(iconSvgConfig))
+  .pipe(gulp.dest('./src/components/ui/icons'));
 });
 
 gulp.task('client-logos', ['fix-classnames', 'create-sprite']);

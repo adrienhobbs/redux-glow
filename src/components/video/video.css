@@ -26,7 +26,7 @@
     margin-right: auto;
     max-width: 100%;
     @media(--sm-down) {
-      max-width: var(--sizing-outer-width);
+      /* max-width: var(--sizing-outer-width); */
     }
     /* margin-bottom: 70px; */
 

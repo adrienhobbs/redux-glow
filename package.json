@@ -8,7 +8,7 @@
     "npm": "^3.0.0"
   },
   "scripts": {
-    "cc": "gulp clean-dist && npm3 run compile --production && gulp bladeify && gulp",
+    "cc": "gulp clean-dist && npm run compile --production && gulp bladeify && gulp",
     "clean": "rimraf dist",
     "compile": "better-npm-run compile",
     "lint": "eslint .",
