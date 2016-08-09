@@ -32,6 +32,18 @@ const employeeInfo = {
       isImportant: true
     },
     {
+      name: 'Sean Lynam',
+      position: 'Director of Marketing',
+      photoName: 'Sean',
+      isImportant: true
+    },
+    {
+      name: 'Robert Sosin',
+      position: 'Senior Creative Director',
+      photoName: 'RobertS',
+      isImportant: true
+    },
+    {
       name: 'Clayton Benn',
       position: 'Director of Video Production',
       photoName: 'Clayton',
@@ -70,11 +82,6 @@ const employeeInfo = {
       photoName: 'GinaA'
     },
     {
-      name: 'Sean Lynam',
-      position: 'Director of Marketing',
-      photoName: 'Sean'
-    },
-    {
       name: 'Brit Mullen',
       position: 'Social Designer',
       photoName: 'Brit'
@@ -110,11 +117,6 @@ const employeeInfo = {
       photoName: 'Erin'
     },
     {
-      name: 'Gina Chen',
-      position: 'Digital Project Manager',
-      photoName: 'GinaC'
-    },
-    {
       name: 'Kendell Burton',
       position: 'Social Designer',
       photoName: 'Kendell'
@@ -123,11 +125,6 @@ const employeeInfo = {
       name: 'Lauren Farmer',
       position: 'Digital Strategist',
       photoName: 'Lauren'
-    },
-    {
-      name: 'Morris Didia',
-      position: 'Digital Project Manager',
-      photoName: 'Morris'
     },
     {
       name: 'Peter Kondratowicz',
@@ -193,10 +190,23 @@ const employeeInfo = {
       name: 'Zoe Greenblatt',
       position: 'Community Manager',
       photoName: 'Zoe'
+    },
+    {
+      name: 'Casey De Pont',
+      position: 'Art Director',
+      photoName: 'Casey'
+    },
+    {
+      name: 'Nöel Anderson',
+      position: 'Motion Designer',
+      photoName: 'Noel'
+    },
+    {
+      name: 'Tara Prangell',
+      position: 'Community Manager',
+      photoName: 'TaraP'
     }
-
   ]
-
 };
 
 export default employeeInfo;

@@ -54,10 +54,10 @@ export class Services extends React.Component {
 
   render () {
     return (
-      <div className='page-outer'>
+      <div className='page-outer '>
         <div className='container' id='services' ref='page'>
           <Header title={'services'} subtitle={'check it out. how can we help?'} />
-          <div className='page-content' style={{marginTop: 90}}>
+          <div className='page-content outer-services' style={{marginTop: 90}}>
             <div className='row'>
               {this.getOurServices()}
             </div>

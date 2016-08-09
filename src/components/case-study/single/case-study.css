@@ -53,14 +53,10 @@
       margin-left: auto;
       margin-right: auto;
       width: 1100px;
-      max-width: 90%;
-    /* @media screen and (width >= 500px) and (width <= 1200px) { */
-    /*   max-width: 10px; */
-    /* } */
+      max-width: 100%;
 
-
-      @media(--md-down) {
-        max-width: 85%;
+      @media(max-width: 1120px) {
+        max-width: 95%;
       }
     }
 
@@ -150,8 +146,8 @@
     }
 
     .copy-inner {
-      lost-center: 820px;
-      @media (--copy-max) {
+      lost-center: 1101px;
+      @media (max-width: 1120px) {
         max-width: var(--sizing-outer-width);
       }
       p {

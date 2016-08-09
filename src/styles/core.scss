@@ -34,6 +34,13 @@
       padding-right: var(--sizing-frame-width);
     }
   }
+
+  .outer-services {
+    @media(min-width: 101em) {
+      margin-left: 0;
+      padding-right: 0;
+    }
+  }
   body {
     overflow-x: hidden;
   }

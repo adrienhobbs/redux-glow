@@ -94,7 +94,7 @@ export class Hunters extends BaseTemplate {
             {this.createHeadlineEl('data-driven')}
             <div className='copy'>
               <div className='copy-inner'>
-                <p style={copyStyle}>The narrative of the site takes the POV of an Edward Snowden type mole who is leaking out information to the public. Both the collection and leaking of data is a key element to the site, so finding a way to represent a collection of data was essential; we decided on a particle driven data cloud. This was also done in reference to exact mechanism of how the Hunters (alien creatures from the show) visualize their world.  To tie the model even further to the show, Glow created 13 different 3D models to map the particles to. Each model is a reference to a significant moment from that week’s episode.</p>
+                <p style={copyStyle}>The narrative of the site takes the POV of an Edward Snowden type mole who is hellbent on leaking out sensitive information to the public. The collection and subsequent leaking of data is a central element to the site, so finding a way to effectively represent the information was essential; we decided on a particle driven data cloud. Additionally, this visual approach was chosen because it directly referenced the mechanism of how the Hunters (alien creatures from the show) visualize their world. To tie the 3D model even further to the show, Glow created 13 different episodically significant models to map the particles along. </p>
               </div>
             </div>
             <div className='img-single'>
@@ -102,7 +102,7 @@ export class Hunters extends BaseTemplate {
             </div>
             <div className='copy'>
               <div className='copy-inner'>
-                <p style={copyStyle}>To help create the feeling that the site was a living and breathing entity, it was important to include actual fan sentiment about Hunters. The social chatter is visualized through the 3D particle models. Each week, new social chatter of was scraped from Twitter and brought into the site, encouraging exploration and further interaction of the 3D model. Additionally the custom assets created for the site were posted to the official Syfy Hunters Twitter account to help cross promote both the show and site.</p>
+                <p style={copyStyle}>To help create the feeling that the site was a "living and breathing entity,” we leveraged actual fan sentiment about Hunters. Each week, new social chatter was scraped from Twitter and mapped to its respective episodic model.  This not only created a sense of “live connectivity” but it also encouraged exploration and interaction with the 3D model. The custom social assets that were created for the experience were also posted to the official Syfy Hunters Twitter account, helping promote and maintain continuity across social properties and the site."</p>
               </div>
             </div>
           </article>
@@ -110,7 +110,7 @@ export class Hunters extends BaseTemplate {
             {this.createHeadlineEl('design')}
             <div className='copy'>
               <div className='copy-inner'>
-                <p style={copyStyle}>Working closely with Syfy and the show runners, Glow strove to ensure the tone of the site matched the show ensuring the content released felt authentic. This was done by using particles as a core component of the site, utilizing high quality images from the show, and creating custom audio that was used throughout the site. Glow created custom audio used from actual SFX from Hunters as interaction mechanics guiding users through their experience. </p>
+                <p style={copyStyle}>Working closely with Syfy and the show runners, Glow strove to ensure the tone of the experience matched the show, ensuring the content felt authentic. By using particles as a core component of the site, high quality show imagery, and custom tailored audio we were able to create a genuine voice.</p>
               </div>
             </div>
             <div className='img-single'>
@@ -135,7 +135,7 @@ export class Hunters extends BaseTemplate {
             </div>
             <div className='copy' style={{marginTop: 40}}>
               <div className='copy-inner'>
-                <p style={copyStyle}>Glow comped out several design iterations for the look and feel of the site, eventually settling on a “light” version. This was a purposeful departure from the typical data visualization and rather, takes a more humanistic approach to the way data is displayed. </p>
+                <p style={copyStyle}>Glow comped out several design iterations for the look and feel of the site, eventually settling on a “light” version. This was a purposeful departure from the routine “dark” and technical looking data visualization and rather, takes a more humanistic approach to the way data is displayed.</p>
               </div>
             </div>
           </article>
@@ -143,18 +143,18 @@ export class Hunters extends BaseTemplate {
             {this.createHeadlineEl('development')}
             <div className='copy'>
               <div className='copy-inner'>
-                <p style={copyStyle}>Glow utilized emerging web technologies like WebGL and ThreeJS to help bring the 3D particle models to life on both mobile and desktop. It was a point of focus to maximize the possible particle count and frame rate while ensuring that the experience rendered well on both mobile and desktop. Glow created a custom shader to help ensure solid performance when rendering the amount of particles needed in the experience. Maintaining a contstant 60fps, we were able to render over 100k interactive particles thanks to the custom shader.  </p>
+                <p style={copyStyle}>Glow utilized emerging web technologies like WebGL and ThreeJS to help bring the 3D particle models to life on both mobile and desktop. Particle density was important to visualize the models effectively as was ensuring that the experience rendered well on both mobile and desktop. So, in order to maximize the particle count and frame rate on various devices we created a custom shader. As a result, we were able to render well over 100k interactive particles at a constant 60FPS thanks to the shader.</p>
               </div>
             </div>
             <div className='img-single' style={{position: 'relative', zIndex: 1, marginTop: 40, marginbottom: 140}}>
-              <iframe ref='iframe' style={{height: 700, position: 'relative', zIndex: 0}} src='http://hunters-dev.weareglow.com/test25/' scrolling='no' width='100%' height='900px' frameBorder='0' />
+              <iframe ref='iframe' style={{height: 700, position: 'relative', zIndex: 0}} src='http://hunters-dev.s3-website-us-east-1.amazonaws.com/test25/' scrolling='no' width='100%' height='900px' frameBorder='0' />
             </div>
           </article>
           <article className='result' style={{marginBottom: 48, marginTop: 40}} >
             {this.createHeadlineEl('the result')}
             <div className='copy'>
               <div className='copy-inner'>
-                <p style={copyStyle}>The final site launched on April 11, following the release of the first episode of Hunters. Each week thereafter, new content and models were unlocked and fresh social chatter was brought into the site. The reception from Syfy and the show runners was phenomenal. </p>
+                <p style={copyStyle}>The final site launched on April 11, following the release of the first episode of Hunters. Each week thereafter, new content, 3D models and fresh social chatter was unlocked. The reception from Syfy and the show runners was phenomenal.</p>
               </div>
             </div>
           </article>
