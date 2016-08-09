@@ -103,7 +103,7 @@ const employeeInfo = {
     },
     {
       name: 'Emily Babich',
-      position: 'Community Manager',
+      position: 'Junior Video Producer',
       photoName: 'EmilyB'
     },
     {
