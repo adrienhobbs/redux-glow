@@ -205,6 +205,11 @@ const employeeInfo = {
       name: 'Tara Prangell',
       position: 'Community Manager',
       photoName: 'TaraP'
+    },
+    {
+      name: 'Jennifer Fink',
+      position: 'Digital Strategist',
+      photoName: 'Jennifer'
     }
   ]
 };

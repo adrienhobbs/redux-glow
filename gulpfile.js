@@ -24,7 +24,7 @@ var config = {
   host:        '52.1.166.127',
   port:        22,
   username:    'ec2-user',
-  // privateKey:  fs.readFileSync('../glowsite.pem')
+  privateKey:  fs.readFileSync('../glowsite.pem')
 };
 
 var gulpSSH = new GulpSSH({
