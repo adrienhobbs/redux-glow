@@ -1,25 +1,30 @@
-var gulp = require('gulp');
-var watch = require('gulp-watch');
-var clean = require('gulp-rimraf');
-var rename = require('gulp-rename');
-var foreach = require('gulp-foreach');
-var watchPath = './dist';
-var destPathPub = '../glow-laravel/public/';
+var gulp          = require('gulp');
+var watch         = require('gulp-watch');
+var clean         = require('gulp-rimraf');
+var rename        = require('gulp-rename');
+var foreach       = require('gulp-foreach');
+var watchPath     = './dist';
+var destPathPub   = '../glow-laravel/public/';
 var destPathViews = '../glow-laravel/resources/views/';
-var path = require('path');
-var GulpSSH = require('gulp-ssh');
-var async = require('async');
-var batchReplace = require('gulp-batch-replace');
-var fs = require('fs');
-var argv = require('yargs').argv;
+var path          = require('path');
+var GulpSSH       = require('gulp-ssh');
+var async         = require('async');
+var batchReplace  = require('gulp-batch-replace');
+var fs            = require('fs');
+var tap           = require('gulp-tap');
+var replace       = require('gulp-replace');
+var svgSprite     = require('gulp-svg-sprite');
+var argv          = require('yargs').argv;
+
 var commitMsg     = argv.msg || 'updates';
 var shell         = require('gulp-shell');
 var push          = shell.task(['cd ../glow-laravel && git add . &&  git commit -m=' + commitMsg +  ' && git push']);
+
 var config = {
-  host:        '54.172.235.134',
+  host:        '52.1.166.127',
   port:        22,
   username:    'ec2-user',
-  privateKey:  fs.readFileSync('../glowsite.pem')
+  // privateKey:  fs.readFileSync('../glowsite.pem')
 };
 
 var gulpSSH = new GulpSSH({
@@ -28,6 +33,7 @@ var gulpSSH = new GulpSSH({
 });
 
 gulp.task('push', push);
+
 var ssh = function () {
   var path = '/var/www/glow-site';
   return gulpSSH
@@ -37,7 +43,6 @@ var ssh = function () {
 
 gulp.task('ssh', ssh);
 var getBladeSrc = function (file, ext) {
-  console.log(ext);
   var folder = (ext === '.css') ? 'css/' : 'js/';
   return `{{ URL::asset('${folder}${file}') }}`;
 };
@@ -142,6 +147,118 @@ gulp.task('clean-dist-html', function () {
     force: true
   }));
 });
+
+var svgConfig = {
+  mode: {
+    symbol: {
+      inline: true,
+      example: true,
+      render: {
+        css: true
+      }
+    }
+  },
+  svg: {
+    dimensionAttributes: true,
+    namespaceIDs: false,
+    namespaceClassnames: false
+  },
+  shape: {
+    transform: ['svgo'],
+    dimension: {
+      maxWidth: 300,
+      maxHeight: 100
+    }
+  }
+};
+
+var lockupSvgConfig = {
+  mode: {
+    symbol: {
+      inline: true,
+      example: true,
+      render: {
+        css: true
+      },
+      sprite: 'lockups-sprite.svg'
+    }
+  },
+  svg: {
+    dimensionAttributes: true,
+    namespaceIDs: false,
+    namespaceClassnames: false
+  },
+  shape: {
+    transform       : [
+      {svgo       : {
+        plugins : [
+          {cleanupIDs: false}
+        ]
+      }}
+    ]
+  }
+};
+
+var iconSvgConfig = {
+  mode: {
+    symbol: {
+      inline: true,
+      example: true,
+      render: {
+        css: true
+      },
+      sprite: 'icons-sprite.svg'
+    }
+  },
+  svg: {
+    dimensionAttributes: true,
+    namespaceIDs: false,
+    namespaceClassnames: false
+  },
+  shape: {
+    transform       : [
+      {svgo       : {
+        plugins : [
+          {cleanupIDs: false}
+        ]
+      }}
+    ]
+  }
+};
+
+var currentFileName;
+
+gulp.task('fix-classnames', function (cb) {
+  return gulp.src('./svg-src/client-logos/*.svg')
+  .pipe(tap(function (file) {
+    currentFileName = path.basename(file.path, '.svg');
+  }))
+  .pipe(replace('cls', function () {
+    return currentFileName;
+  }))
+  .pipe(gulp.dest('./svg-src/sprites'));
+});
+
+gulp.task('create-sprite', ['fix-classnames'], function () {
+  gulp.src('**/*.svg', {cwd: './svg-src/sprites'})
+  .pipe(svgSprite(svgConfig))
+  .pipe(gulp.dest('./src/components/ui/svg-sprites'));
+});
+
+gulp.task('create-lockup-sprite', function () {
+  gulp.src('**/*.svg', {cwd: './svg-src/lockups'})
+  .pipe(svgSprite(lockupSvgConfig))
+  .pipe(gulp.dest('./src/components/ui/lockup'));
+});
+
+gulp.task('create-icon-sprite', function () {
+  gulp.src('**/*.svg', {cwd: './svg-src/icons'})
+  .pipe(svgSprite(iconSvgConfig))
+  .pipe(gulp.dest('./src/components/ui/icons'));
+});
+
+gulp.task('client-logos', ['fix-classnames', 'create-sprite']);
 gulp.task('clean', ['clean-scripts', 'clean-php', 'clean-css']);
 gulp.task('clean-dist', ['clean-dist-css', 'clean-dist-maps', 'clean-dist-js', 'clean-dist-html']);
 gulp.task('default', ['copy-css', 'copy-js', 'copy-html-to-php']);
+
