@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React, { PropTypes } from 'react';
 import Header from 'components/ui/header-component/header-component.js';
 import styles from './careers.css';
@@ -70,7 +71,7 @@ const Jobs = [
   {
     title: 'social design intern',
     active: true,
-    type: 'full time',
+    type: '',
     summary: 'Are you an aspiring Designer who is obsessed with Social Media? Do you want to represent not what Social Media Creative is now, but what Social Media Creative should be? Do you want to learn the language of Quote Cards, GIFs, Vines, Snaps & Tweets, and figure out how to take them to new places? Do you want to learn how to inspire, critique, present, demonstrate, cajole, twist, & juke your way to a great product? Are you looking for a fun creative career? Let’s meet & find out!',
     duties: [
       'creating a plethora of static & motion content across all social media platforms',
@@ -220,9 +221,11 @@ export class Career extends React.Component {
     this.setState({isOpen: !this.state.isOpen});
   }
 
+
   getStatusCharacter () {
     return (this.state.isOpen) ? '− ' : '+ ';
   }
+
   render () {
     var bodyStyle = {
       height: (this.state.isOpen) ? 'auto' : 0,
@@ -233,13 +236,13 @@ export class Career extends React.Component {
     var duties = this.props.job.duties.map(function (duty, i) {
       return <li key={i} className={styles.duty}>{duty}</li>;
 });
-
 var traits = this.props.job.traits.map(function (trait, i) {
   return <li key={i} className={styles.trait}>{trait}</li>;
     });
 
     var color = (this.state.isOpen) ? colors.radRed : colors.stormDust;
     var mailTo = `mailto:jobs@weareglow.com?subject=${this.props.job.title}%20position%20availability&body=Hi%20there%2C%0D%0A%0D%0AInterested%20in%20this%20${this.props.job.title}%20position.`;
+
     return (
       <div className={styles.career_list_item}>
         <div ref='careerHeader' onClick={this.toggleItem.bind(this)} className={styles.career_item_header}>
@@ -286,31 +289,27 @@ export class Careers extends React.Component {
     this.context.animatePageContentIn(this.refs.page);
   }
 
-  toggleItem () {
-
-  }
-
   render () {
     const careerItems = Jobs.map(function (item, i) {
       return <Career key={i} job={item} />;
-});
+    });
 
-return (
-  <div className='container' id='careers' ref='page'>
-    <Header title={'careers'} subtitle={'oh yeah! come drink our kool-aid.'} />
-    <div className='page-content'>
-      <div className='row'>
-        <p className={styles.careers_copy}>At GLOW, hiring the best and brightest talent is by far our best concept.  If you are looking to join a young, smart, hardworking team that values thinking, creativity, passion and curiosity, then we want to hear from you.  Below is a list of current positions available at GLOW.</p>
+    return (
+      <div className='container' id='careers' ref='page'>
+      <Header title={'careers'} subtitle={'oh yeah! come drink our kool-aid.'} />
+        <div className='page-content'>
+         <div className='row'>
+      <p className={styles.careers_copy}>At GLOW, hiring the best and brightest talent is by far our best concept.  If you are looking to join a young, smart, hardworking team that values thinking, creativity, passion and curiosity, then we want to hear from you.  Below is a list of current positions available at GLOW.</p>
       </div>
-    </div>
-    <h1 className={styles.headline}>current openings</h1>
-    <div className={styles.career_list}>
-      <div className='row'>
-        {careerItems}
       </div>
-    </div>
-  </div>
-);
+      <h1 className={styles.headline}>current openings</h1>
+      <div className={styles.career_list}>
+      <div className='row'>
+      {careerItems}
+      </div>
+      </div>
+      </div>
+    );
   }
 }
 

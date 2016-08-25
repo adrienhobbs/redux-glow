@@ -24,7 +24,7 @@ var config = {
   host:        '52.1.166.127',
   port:        22,
   username:    'ec2-user',
-  // privateKey:  fs.readFileSync('../glowsite.pem')
+  privateKey:  fs.readFileSync('../glowsite.pem')
 };
 
 var gulpSSH = new GulpSSH({
@@ -254,7 +254,8 @@ gulp.task('create-lockup-sprite', function () {
 gulp.task('create-icon-sprite', function () {
   gulp.src('**/*.svg', {cwd: './svg-src/icons'})
   .pipe(svgSprite(iconSvgConfig))
-  .pipe(gulp.dest('./src/components/ui/icons'));
+  //.pipe(gulp.dest('./src/components/ui/icons'));
+  .pipe(gulp.dest('./new'));
 });
 
 gulp.task('client-logos', ['fix-classnames', 'create-sprite']);
