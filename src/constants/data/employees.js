@@ -72,6 +72,16 @@ const employeeInfo = {
       photoName: 'Ann'
     },
     {
+      name: 'Andre Cole',
+      position: 'Video Editor',
+      photoName: 'Andre'
+    },
+    {
+      name: 'Lindsey Cirmotich',
+      position: 'Junior Designer',
+      photoName: 'Lindsey'
+    },
+    {
       name: 'Emily Stone',
       position: 'Designer',
       photoName: 'EmilyS'
