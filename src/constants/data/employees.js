@@ -220,6 +220,11 @@ const employeeInfo = {
       name: 'Jennifer Fink',
       position: 'Digital Strategist',
       photoName: 'Jennifer'
+    },
+    {
+      name: 'Robert Lester',
+      position: 'Creative Director',
+      photoName: 'Robert'
     }
   ]
 };
