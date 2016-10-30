@@ -25,6 +25,8 @@ export class ILNY extends BaseTemplate {
                 <p style={copyStyle}>Facebook was revitalized as a “social magazine,” offering relevant travel content and posted at times that was optimized for the Gen Xer audience.  Twitter was reshaped in a “social newspaper,” increasing the posting cadence and focusing content around trending topics outside of travel as well as within.  Instagram shifted to be a “social look book,” focusing heavily on the UGC images and using hashtags and geotags to wide the reach of the posts.  </p>
                 <p style={copyStyle}>As the platform roles evolved, it was supported with influencer campaigns that took advantage of New York’s busiest and most beautiful months (fall and winter).  With the quality of the photography raised, engagement and visibility for the owned channels went up as well.</p>
                 <p style={copyStyle}>Meanwhile, Glow took over editorial duties for the I Love New York’s blog, using the social channels to drive traffic to their site and facilitate trip bookings.</p>
+                <p style={copyStyle}>In order to increase brand awareness for two of I Love NY's primary social channels (Facebook and Instagram), GLOW spearheaded a partnership with Beautiful Destinations, the largest travel and lifestyle community on the internet. This partnership exposed I Love NY's content to a combined social audience of over 12 million active users and inspired tangible results in travel across New York state. I Love NY's Instagram followers increased by 125% and engagement across all social platforms over the course of the 3 month partnership totaled 1.9M.</p>
+                <p style={copyStyle}>This Fall, GLOW is excited to announce that we've once again launched a partnership with Beautiful Destinations and I Love NY for an even greater campaign to drive awareness to the Catskills. The partnership includes sending four of Beautiful Destinations top content creators to the region to capture imagery, 360 photos, drone and video footage to be shared across all parties social platforms.</p>
               </div>
             </div>
             <div className='img-wrap video-looping-row inner_section'>
@@ -39,6 +41,9 @@ export class ILNY extends BaseTemplate {
               </div>
               <div className='video-looping-half'>
                 <video loop autoPlay src='https://s3.amazonaws.com/weareglow-assets/case-studies/iloveny/social-retainer/social-04.mp4'></video>
+              </div>
+              <div className='video-looping-full' style={{marginTop: 20}}>
+                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/iloveny/social-retainer/ilny-social-4.png' alt='' />
               </div>
             </div>
           </article>

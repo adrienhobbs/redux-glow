@@ -48,11 +48,6 @@ const employeeInfo = {
       position: 'Director of Video Production',
       photoName: 'Clayton',
       isImportant: true
-    },
-    {
-      name: 'Annie Ok',
-      position: 'Director of Innovation',
-      photoName: 'Annie'
     }
   ],
   otherPeople: [
