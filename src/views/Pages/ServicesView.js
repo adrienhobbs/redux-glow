@@ -3,7 +3,7 @@ import servicesList from 'constants/data/services-list';
 import Header from 'components/ui/header-component/header-component.js';
 import styles from './services-view.css';
 import '../../components/ui/icons/symbol/icons-sprite.svg';
-import svgStyles from '../../components/ui/icons/symbol/sprite.css';
+// import svgStyles from '../../components/ui/icons/symbol/sprite.css';
 
 export class Services extends React.Component {
   static propTypes = {
@@ -37,9 +37,6 @@ export class Services extends React.Component {
       return (
         <div key={i} className={styles.service_bucket}>
           <div className={styles.service_title}>
-            <svg style={{display: 'block'}} className={svgStyles[`svg-${service.icon}-dims`]} role='img' >
-              <use xlinkHref={`#${service.icon}`}></use>
-            </svg>
             {service.type}
             <div className='divider'></div>
           </div>
@@ -70,3 +67,6 @@ export class Services extends React.Component {
 }
 
 export default Services;
+            // <svg style={{display: 'block'}} className={svgStyles[`svg-${service.icon}-dims`]} role='img' >
+            //   <use xlinkHref={`#${service.icon}`}></use>
+            // </svg>

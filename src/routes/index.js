@@ -13,7 +13,7 @@ import ConnectView          from 'views/Pages/ConnectView';
 import WorkView             from 'views/WorkView/work';
 import PageViewLayout       from 'layouts/PageViewLayout/Page_View_Layout.js';
 // import TestingStuff         from 'components/testing-view/testingview.js';
-// <Route component={TestingStuff} path='/testing' />
+//     <Route component={TestingStuff} path='/testing' />
 //
 export default (store) => (
   <Route path='/' component={CoreLayout}>

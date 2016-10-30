@@ -11,6 +11,7 @@ import Casual from './hulu/casual.js';
 import HowIDidIt from './yahoo/how-i-did-it.js';
 import Hunters from './syfy/hunters.js';
 import Younger from './tvland/younger.js';
+import Profit from './cnbc/profit.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
@@ -26,7 +27,8 @@ const CaseStudyTemplates = (function templates () {
     Casual: Casual,
     HowIDidIt: HowIDidIt,
     Hunters: Hunters,
-    Younger: Younger
+    Younger: Younger,
+    Profit: Profit
   };
 }());
 

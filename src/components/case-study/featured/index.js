@@ -123,7 +123,7 @@ export class FeaturedStudy extends PageLayout {
             <div ref='innerWrap' className={classes.featuredInfoInnerWrap} onClick={this.changeState.bind(this)}>
               <Lockup data={this.props.data} />
               <div className='view-case-study'>
-                <ViewCaseStudy />
+                <ViewCaseStudy  />
               </div>
             </div>
           </div>

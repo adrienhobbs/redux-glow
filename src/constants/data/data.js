@@ -14,6 +14,52 @@ const data = [
     cat: '- we are glow -'
   },
   {
+    featured:                   false,
+    client:                     'cnbc',
+    project:                    'the profit',
+    title:                      'the profit',
+    subtitle:                   'interactive map',
+    subtitleSlug:               'interactive map',
+    type:                       'case-study',
+    backgroundImageUrl:         s3 + 'case-studies/cnbc/the_profit/landscape-theprofit.jpg',
+    backgroundImageUrlVert:     s3 + 'case-studies/cnbc/the_profit/landscape-theprofit.jpg',
+    logoColor:                  '#4F4F4F',
+    secColor:                   '#ffffff',
+    copyColor:                  '#676767',
+    gradientTop:                '#a3373f',
+    gradientBottom:             '#0b1c28',
+    featuredProjectTitleColor:  '#ffffff',
+    sidebarLogoColor:           '#ffffff',
+    shapeColor: '#1f3a4d',
+    cat:                        '- cnbc | the profit -',
+    templateName:               'Profit',
+    services:                   ['ui/ux', 'front-end dev', 'back-end dev', 'mapbox', 'social integration'],
+    headlineColor:              '#4F4F4F',
+    mobile: {
+      bgColor: '#0b1c28' 
+    },
+    lockup: {
+      className:       'profit-lockup',
+      projectColor:    '#FFFFFF'
+    },
+    backbar: {
+      bgColor: '#4F4F4F'
+    },
+    sidebar: {
+      logoColor: '#203A4C',
+      copyColor: '#556169',
+      headlineColor: '#1f3a4d'
+    },
+    shareButton: {
+      strokeColor: '#7d2f37',
+      copyColor: '#ffffff'
+    },
+    endShape: {
+      bgColor: '#091720'
+    },
+    aboutCopy: '<p>On each episode of CNBC’s The Profit, millionaire Marcus Lemonis evaluates and decides if he will or will not invest his own money in a featured business. And over the course of three successful seasons he has invested in numerous companies, and his expanding empire spans across the US</p><p>Because the show focuses primarily on the evaluation and investment process, and less on keeping track of the deals made, CNBC wanted to create a way to showcases these individual companies he’s invested in and their expanded franchises in one destination. GLOW was asked to provide the solution.</p>'
+  },
+  {
     featured:                   true,
     client:                     'syfy',
     project:                    'hunters',
@@ -32,6 +78,7 @@ const data = [
     featuredProjectTitleColor:  '#a3373f',
     sidebarLogoColor:           '#ffffff',
     shapeColor: '#1f3a4d',
+    hasFWAAward: true,
     cat:                        '- syfy | hunters -',
     templateName:               'Hunters',
     backgroundVideoUrl: s3 + 'case-studies/syfy/hunters/landscape.mp4',

@@ -71,7 +71,6 @@ const ProjectIntro = React.createClass({
     const infoHeight = this.refs.projectInfo.getBoundingClientRect().height;
     const projHeight =  this.projects[this.getClosestProject()].getBoundingClientRect().height;
 
-    console.log(projHeight);
     TL.set(this.refs.projectBox, {height: projHeight + infoHeight});
     TL.set(this.refs.projectImage, {
       className: '+=link'

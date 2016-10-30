@@ -69,6 +69,14 @@ const StudyBody = React.createClass({
       return (<DriveIn loop show={[this.props.data.get('backgroundVideoUrl'), this.props.data.get('backgroundVideoPoster')]} />);
     }
   },
+  getFWA () {
+    var style = {position: 'absolute', bottom: 0, left: 0, zIndex: 11, width: 160, maxWidth: '30%'};
+    if (this.props.data.get('hasFWAAward')) {
+      return <img style={style} className='featured-ribbon' src='https://s3.amazonaws.com/weareglow-assets/global-assets/%402_FOTD+%E2%80%93+bottom+left.png' />;
+    } else {
+      return null;
+    }
+  },
   render () {
     const StudyTemplate = this.getStudyTemplate();
     return (

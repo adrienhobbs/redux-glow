@@ -34,11 +34,19 @@ const CaseStudy = React.createClass({
       backgroundPosition: this.getBgPosition()
     };
   },
-
+  getFWA () {
+    var style = {position: 'absolute', top: 0, right: 0, zIndex: 11, width: 283, maxWidth: '30%'};
+    if (this.props.data.get('hasFWAAward')) {
+      return <img style={style} className='featured-ribbon' src='https://s3.amazonaws.com/weareglow-assets/global-assets/fwa-ribbon.png' />;
+    } else {
+      return null;
+    }
+  },
   render () {
     const studyBody = (this.props.showBody && this.props.data.get('templateName')) ? <StudyBody data={this.props.data} viewport={this.props.viewport} isVisible={this.props.singleMode} /> : null;
     return (
       <div className='case-bg' style={this.getBgStyle()}>
+        {this.getFWA()}
         {this.props.children}
         {studyBody}
       </div>
