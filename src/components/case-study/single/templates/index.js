@@ -2,7 +2,9 @@ import SouthernKitchen from './carla-hall/southern-kitchen.js';
 import Proof from './tnt/proof.js';
 import Sharknado from './syfy/sharknado.js';
 import WKC from './wkc/dog-show.js';
-import MindyProject from './hulu/mindy.js';
+import WKC2016 from './wkc/dog-show-2016.js';
+// import MindyProject from './hulu/mindy.js';
+import Mindy2016 from './hulu/mindy-2016.js';
 import Veep from './hbo/veep.js';
 import ILNY from './ilny/ilny.js';
 import WinterCalendar from './cn/winter-calendar.js';
@@ -19,7 +21,9 @@ const CaseStudyTemplates = (function templates () {
     Proof: Proof,
     Sharknado: Sharknado,
     WKC: WKC,
-    Mindy: MindyProject,
+    WKC2016: WKC2016,
+    Mindy: Mindy2016,
+    Mindy2016: Mindy2016,
     Veep: Veep,
     ILNY: ILNY,
     WinterCalendar: WinterCalendar,

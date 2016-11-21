@@ -81,11 +81,11 @@ const employeeInfo = {
       position: 'Designer',
       photoName: 'EmilyS'
     },
-    {
-      name: 'Gina Amsellem',
-      position: 'Social Designer',
-      photoName: 'GinaA'
-    },
+    // {
+    //   name: 'Gina Amsellem',
+    //   position: 'Social Designer',
+    //   photoName: 'GinaA'
+    // },
     {
       name: 'Brit Mullen',
       position: 'Social Designer',
@@ -157,29 +157,14 @@ const employeeInfo = {
       photoName: 'Tara'
     },
     {
-      name: 'Tom Quirk',
-      position: 'Community Manager',
-      photoName: 'Tom'
-    },
-    {
       name: 'Sean Orr',
       position: 'Video Editor',
       photoName: 'SeanO'
     },
     {
-      name: 'Sammie Barret',
-      position: 'Designer',
-      photoName: 'Sammie'
-    },
-    {
       name: 'Paula Ersly',
       position: 'Community Manager',
       photoName: 'Paula'
-    },
-    {
-      name: 'Eve Gural',
-      position: 'Project Manager',
-      photoName: 'Eve'
     },
     {
       name: 'Eric Goldie',
@@ -210,11 +195,6 @@ const employeeInfo = {
       name: 'Tara Prangell',
       position: 'Community Manager',
       photoName: 'TaraP'
-    },
-    {
-      name: 'Jennifer Fink',
-      position: 'Digital Strategist',
-      photoName: 'Jennifer'
     },
     {
       name: 'Robert Lester',

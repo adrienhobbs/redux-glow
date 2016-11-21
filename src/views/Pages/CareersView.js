@@ -6,6 +6,36 @@ import colors from '../../constants/colors.js';
 
 const Jobs = [
   {
+    title: 'Media Director, Paid Social',
+    active: true,
+    type: 'full time',
+    summary: 'GLOW\'s Social team continues to experience amazing growth. We have an immediate need for a Media Director. The ideal candidate will be able to hit the ground running, work collaboratively within our award-winning team, provide thought leadership, and drive the development of a groundbreaking paid social strategy.',
+    traits: [
+      'Bachelor’s degree',
+      '4+ years of campaign management and experience (in entertainment preferred)',
+      'Paid Social: (significant experience is a must)',
+      'Working knowledge of self-serve platforms and API technology on Facebook, Instagram, Snapchat, Twitter, Pinterest, and Tumblr, as well as other emerging platforms',
+      'Working knowledge of native and third party tools',
+      'Fluency with latest evolutions of tracking and targeting',
+      'Deep knowledge of ad serving platforms and online analytic solutions',
+      'Knowledge of statistical methods and testing methodology preferred',
+      'Ability to communicate findings clearly and cohesively' ,
+      'A team player who is able to handle stressful situations and deadlines calmly',
+      'Passion for social media, TV, and overall media & entertainment'
+    ],
+    duties: [
+      'Creating and overseeing execution of paid media strategies of various budget levels',
+      'Developing a complete understanding of a client’s goals, targets, needs, and expectations',
+      'Thinking big picture and creating a holistic approach to the campaign at hand',
+      'Deep understanding of all social paid platforms and search',
+      'Testing and optimizing media in real-time to ensure client goals are met and/or exceeded',
+      'Converting large amounts of data from insights tools into practical strategies and actionable recommendations',
+      'Overseeing and guiding a team of paid social specialists to meet and exceed both client and internal goals',
+      'Trends and tools for paid social media platforms',
+      'Key performance metrics for paid/earned/owned media with a focus on analytics and optimization'
+    ]
+  },
+  {
     title: 'digital project manager',
     active: true,
     type: 'full time',
