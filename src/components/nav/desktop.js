@@ -3,6 +3,8 @@ import styles from './desktop.css';
 import CustomLink from './custom-link.js';
 import Links from 'constants/page-links';
 import Twitter from 'components/ui/icons/twitter';
+import Instagram from 'components/ui/icons/instagram';
+import Facebook from 'components/ui/icons/facebook';
 
 export class DesktopNav extends React.Component {
   static propTypes = {
@@ -59,6 +61,8 @@ export class DesktopNav extends React.Component {
           <div className={styles.link_ctr}>
             <div className={styles.link_ctr_inner}>
               <a className={styles.twitter_link} target='_blank' href='http://www.twitter.com/glow'><Twitter ref='twitterSVG' color={this.getLinkColor()}/></a>
+              <a className={styles.instagram_link} target='_blank' href='https://www.instagram.com/glowdigitalagency/'><Instagram ref='instagramSVG' color={this.getLinkColor()}/></a>
+              <a className={styles.facebook_link} target='_blank' href='https://www.facebook.com/glowinteractive/'><Facebook ref='facebookSVG' color={this.getLinkColor()}/></a>
             </div>
           </div>
         </div>
