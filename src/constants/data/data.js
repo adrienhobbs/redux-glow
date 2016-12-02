@@ -14,50 +14,55 @@ const data = [
     cat: '- we are glow -'
   },
   {
-    featured:                   false,
-    client:                     'cnbc',
-    project:                    'the profit',
-    title:                      'the profit',
-    subtitle:                   'interactive map',
-    subtitleSlug:               'interactive map',
-    type:                       'case-study',
-    backgroundImageUrl:         s3 + 'case-studies/cnbc/the_profit/landscape-theprofit.jpg',
-    backgroundImageUrlVert:     s3 + 'case-studies/cnbc/the_profit/landscape-theprofit.jpg',
-    logoColor:                  '#4F4F4F',
-    secColor:                   '#ffffff',
-    copyColor:                  '#676767',
-    gradientTop:                '#a3373f',
-    gradientBottom:             '#0b1c28',
-    featuredProjectTitleColor:  '#ffffff',
-    sidebarLogoColor:           '#ffffff',
-    shapeColor: '#1f3a4d',
-    cat:                        '- cnbc | the profit -',
-    templateName:               'Profit',
-    services:                   ['ui/ux', 'front-end dev', 'back-end dev', 'mapbox', 'social integration'],
-    headlineColor:              '#4F4F4F',
+    featured: true,
+    client: 'hulu',
+    project: 'mindy',
+    title: 'the mindy project',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/hulu/mindy-project/mindy-bg.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/mindy-bg.jpg',
+    logoColor: '#68A83B',
+    secColor: '#ffffff',
+    gradientTop: '#e70062', 
+    gradientBottom: '#18d4ff',
+    clientLogoColor: '#6eb116',
+    headlineColor: '#68A83B',
+    copyColor: '#A7A7A7',
+    cat: ' ― hulu | mindy ― ',
+    templateName: 'Mindy',
+    shapeColor: '#68A83B',
+    results: {
+      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+      statColor: '#ffffff',
+      statLabelColor: '#e70662',
+      bgColor: '#00C1E8'
+    },
     mobile: {
-      bgColor: '#0b1c28' 
+      bgColor: '#0e374a'
     },
+    services: ['social strategy', 'community management', 'content lab', 'creative execution', 'video'],
     lockup: {
-      className:       'profit-lockup',
-      projectColor:    '#FFFFFF'
-    },
-    backbar: {
-      bgColor: '#4F4F4F'
+      className: 'mindy-lockup',
+      logoColor: '#FFFFFF'
     },
     sidebar: {
-      logoColor: '#203A4C',
-      copyColor: '#556169',
-      headlineColor: '#1f3a4d'
+      logoColor: '#A7A7A7',
+      copyColor: '#A7A7A7',
+      headlineColor: '#68A83B'
     },
     shareButton: {
-      strokeColor: '#7d2f37',
-      copyColor: '#ffffff'
+      strokeColor: '#fff',
+      copyColor: '#fff'
     },
     endShape: {
-      bgColor: '#091720'
+      bgColor: '#00CAFF'
     },
-    aboutCopy: '<p>On each episode of CNBC’s The Profit, millionaire Marcus Lemonis evaluates and decides if he will or will not invest his own money in a featured business. And over the course of three successful seasons he has invested in numerous companies, and his expanding empire spans across the US</p><p>Because the show focuses primarily on the evaluation and investment process, and less on keeping track of the deals made, CNBC wanted to create a way to showcases these individual companies he’s invested in and their expanded franchises in one destination. GLOW was asked to provide the solution.</p>'
+    backbar: {
+      bgColor: '#68A83B'
+    },
+    aboutCopy: '<p>Our objective for The Mindy Project, the highly popular comedy series originally on FOX, was to increase across the board awareness and drive tune-in as Mindy moved from FOX to Hulu as their next original series. We sought to tap into the series’ fanbase and develop engaging custom content that resonated with viewers, while leveraging series\' talent to boost the social conversation and awareness of the series now on Hulu.</p>'  ,
   },
   {
     featured:                   true,
@@ -124,57 +129,6 @@ const data = [
       bgColor: '#091720'
     },
     aboutCopy: '<p>A cross between gritty crime drama and sci-fi thriller, Hunters comes from executive producers Gale Anne Hurd (The Walking Dead, The Terminator trilogy) and Natalie Chaidez (12 Monkeys, Heroes). Utilizing emerging web technologies like WebGL and ThreeJS, Glow partnered with Syfy to create an innovative interactive experience bringing the world of Hunters to life. Over the course of 13 weeks, custom sharable content was “leaked” through the site, giving fans the opportunity to dive into the show in a unique way.</p>'
-  },
-  {
-    featured: true,
-    client: 'hulu',
-    project: 'mindy',
-    title: 'the mindy project',
-    subtitle: 'social media campaign',
-    subtitleSlug: 'social media campaign',
-    type: 'case-study',
-    backgroundImageUrl: s3 + 'case-studies/hulu/mindy-project/mindy-bg.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/mindy-bg.jpg',
-    logoColor: '#68A83B',
-    secColor: '#ffffff',
-    gradientTop: '#e70062', 
-    gradientBottom: '#18d4ff',
-    clientLogoColor: '#6eb116',
-    headlineColor: '#68A83B',
-    copyColor: '#A7A7A7',
-    cat: ' ― hulu | mindy ― ',
-    templateName: 'Mindy',
-    shapeColor: '#68A83B',
-    results: {
-      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
-      statColor: '#ffffff',
-      statLabelColor: '#e70662',
-      bgColor: '#00C1E8'
-    },
-    mobile: {
-      bgColor: '#0e374a'
-    },
-    services: ['social strategy', 'community management', 'content lab', 'creative execution', 'video'],
-    lockup: {
-      className: 'mindy-lockup',
-      logoColor: '#FFFFFF'
-    },
-    sidebar: {
-      logoColor: '#A7A7A7',
-      copyColor: '#A7A7A7',
-      headlineColor: '#68A83B'
-    },
-    shareButton: {
-      strokeColor: '#fff',
-      copyColor: '#fff'
-    },
-    endShape: {
-      bgColor: '#00CAFF'
-    },
-    backbar: {
-      bgColor: '#68A83B'
-    },
-    aboutCopy: '<p>Our objective for The Mindy Project, the highly popular comedy series originally on FOX, was to increase across the board awareness and drive tune-in as Mindy moved from FOX to Hulu as their next original series. We sought to tap into the series’ fanbase and develop engaging custom content that resonated with viewers, while leveraging series\' talent to boost the social conversation and awareness of the series now on Hulu.</p>'  ,
   },
   {
     featured:                   true,
@@ -527,6 +481,52 @@ const data = [
       bgColor: '#0A2C3A'
     },
     aboutCopy: '<p>Veep was a favorite among critics in its inaugural season. However, critical acclaim was simply not enough. GLOW approached HBO and took this opportunity to do what we do best - build audience and expand the social footprint with a smart, strong strategy and quality social content...and lots of it.</p><p>All the while, we were striving to redefine how a thirty-minute comedy is marketed on social media. </p><p>And it worked.</p>'
+  },
+  {
+    featured:                   false,
+    client:                     'cnbc',
+    project:                    'the profit',
+    title:                      'the profit',
+    subtitle:                   'interactive map',
+    subtitleSlug:               'interactive map',
+    type:                       'case-study',
+    backgroundImageUrl:         s3 + 'case-studies/cnbc/the_profit/landscape-theprofit.jpg',
+    backgroundImageUrlVert:     s3 + 'case-studies/cnbc/the_profit/landscape-theprofit.jpg',
+    logoColor:                  '#4F4F4F',
+    secColor:                   '#ffffff',
+    copyColor:                  '#676767',
+    gradientTop:                '#a3373f',
+    gradientBottom:             '#0b1c28',
+    featuredProjectTitleColor:  '#ffffff',
+    sidebarLogoColor:           '#ffffff',
+    shapeColor: '#1f3a4d',
+    cat:                        '- cnbc | the profit -',
+    templateName:               'Profit',
+    services:                   ['ui/ux', 'front-end dev', 'back-end dev', 'mapbox', 'social integration'],
+    headlineColor:              '#4F4F4F',
+    mobile: {
+      bgColor: '#0b1c28' 
+    },
+    lockup: {
+      className:       'profit-lockup',
+      projectColor:    '#FFFFFF'
+    },
+    backbar: {
+      bgColor: '#4F4F4F'
+    },
+    sidebar: {
+      logoColor: '#203A4C',
+      copyColor: '#556169',
+      headlineColor: '#1f3a4d'
+    },
+    shareButton: {
+      strokeColor: '#7d2f37',
+      copyColor: '#ffffff'
+    },
+    endShape: {
+      bgColor: '#091720'
+    },
+    aboutCopy: '<p>On each episode of CNBC’s The Profit, millionaire Marcus Lemonis evaluates and decides if he will or will not invest his own money in a featured business. And over the course of three successful seasons he has invested in numerous companies, and his expanding empire spans across the US</p><p>Because the show focuses primarily on the evaluation and investment process, and less on keeping track of the deals made, CNBC wanted to create a way to showcases these individual companies he’s invested in and their expanded franchises in one destination. GLOW was asked to provide the solution.</p>'
   },
   {
     featured:                   false,

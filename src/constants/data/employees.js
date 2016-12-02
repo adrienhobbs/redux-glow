@@ -132,6 +132,11 @@ const employeeInfo = {
       photoName: 'Lauren'
     },
     {
+      name: 'Jennifer Fink',
+      position: 'Digital Strategist',
+      photoName: 'Jennifer'
+    },
+    {
       name: 'Peter Kondratowicz',
       position: 'Senior Designer',
       photoName: 'PK'
