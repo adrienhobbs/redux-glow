@@ -7,7 +7,7 @@ class Instagram extends Component {
 
   render () {
     return (
-      <svg ref='icon' height='20px' width='20px' fill={this.props.color || '#f21d5c'} stroke={this.props.color} xmlns='http://www.w3.org/2000/svg' x="0px" y="0px" viewBox='0 0 50 50'>
+      <svg ref='icon' height='20px' width='20px' fill={this.props.color || '#f21d5c'} stroke={this.props.color} xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 50 50'>
         <g>
           <path d='M36.202,0H13.798C6.19,0,0,6.19,0,13.798v22.404C0,43.81,6.19,50,13.798,50h22.404C43.81,50,50,43.81,50,36.202V13.798
             C50,6.19,43.81,0,36.202,0z M45.564,36.202c0,5.162-4.2,9.362-9.362,9.362H13.798c-5.162,0-9.362-4.2-9.362-9.362V13.798
