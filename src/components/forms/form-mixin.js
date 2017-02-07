@@ -42,7 +42,10 @@ const FormMixin = {
         TweenLite.delayedCall(3, this.showForm.bind(this));
       }
     } else if (err) {
-      this.setState({msg: 'shucks, looks like there was a problem.', buttonMsg: 'try again'});
+      this.setState({
+        msg: 'shucks, looks like there was a problem.',
+        msgTwo: 'you can reach us at info@weareglow.com.',
+        buttonMsg: 'try again'});
     }
   },
   hideMessageAndShowForm () {

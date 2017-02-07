@@ -65,6 +65,7 @@ const ContactForm = React.createClass({
         </div>
         <div ref='message' className={styles.message}>
           <div>{this.state.msg}</div>
+          <div>{this.state.msgTwo}</div>
           <div className={styles.message_button_ctr}>
             {this.getMessageButton()}
           </div>
