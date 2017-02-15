@@ -38,12 +38,6 @@ const employeeInfo = {
       isImportant: true
     },
     {
-      name: 'Robert Sosin',
-      position: 'Senior Creative Director',
-      photoName: 'RobertS',
-      isImportant: true
-    },
-    {
       name: 'Clayton Benn',
       position: 'Director of Video Production',
       photoName: 'Clayton',
@@ -103,7 +97,7 @@ const employeeInfo = {
     },
     {
       name: 'Daniela Guernica',
-      position: 'Community Manager',
+      position: 'Digital Strategist',
       photoName: 'Danielle'
     },
     {
@@ -147,11 +141,6 @@ const employeeInfo = {
       photoName: 'Sarah'
     },
     {
-      name: 'Simona Belau',
-      position: 'Digital Strategist',
-      photoName: 'Simona'
-    },
-    {
       name: 'Stephanie Rogers',
       position: 'Sr. Account Manager',
       photoName: 'Steph'
@@ -175,11 +164,6 @@ const employeeInfo = {
       name: 'Eric Goldie',
       position: 'Community Manager',
       photoName: 'EricG'
-    },
-    {
-      name: 'Paola Bossola',
-      position: 'Video Producer',
-      photoName: 'Paola'
     },
     {
       name: 'Zoe Greenblatt',
