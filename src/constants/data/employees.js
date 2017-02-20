@@ -8,6 +8,12 @@ const employeeInfo = {
       isImportant: true
     },
     {
+      name: 'Robert Sosin',
+      position: 'Senior Creative Director',
+      photoName: 'RobertS',
+      isImportant: true
+    },
+    {
       name: 'Ted Kacandes',
       position: 'Co-Flounder',
       photoName: 'Ted',
