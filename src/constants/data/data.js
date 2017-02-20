@@ -25,7 +25,7 @@ const data = [
     backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/mindy-bg.jpg',
     logoColor: '#68A83B',
     secColor: '#ffffff',
-    gradientTop: '#e70062', 
+    gradientTop: '#e70062',
     gradientBottom: '#18d4ff',
     clientLogoColor: '#6eb116',
     headlineColor: '#68A83B',
@@ -91,7 +91,7 @@ const data = [
     services:                   ['ui/ux', 'web design', 'motion design', 'audio design', 'web development'],
     headlineColor:              '#1f3a4d',
     mobile: {
-      bgColor: '#0b1c28' 
+      bgColor: '#0b1c28'
     },
     lockup: {
       className:       'hunters-lockup',
@@ -133,6 +133,54 @@ const data = [
   {
     featured:                   true,
     client:                     'syfy',
+    project:                    'znation',
+    title:                      'zombie interstellar produce',
+    subtitle:                   'meme generator',
+    subtitleSlug:               'meme generator',
+    type:                       'case-study',
+    backgroundImageUrl:         s3 + 'case-studies/syfy/znation/landscape.jpg',
+    backgroundImageUrlVert:     s3 + 'case-studies/syfy/znation/landscape.jpg',
+    logoColor:                  '#a3373f',
+    secColor:                   '#000000',
+    gradientTop:                '#a3373f',
+    gradientBottom:             '#0b1c28',
+    featuredProjectTitleColor:  '#a3373f',
+    sidebarLogoColor:           '#ffffff',
+    cat:                        '- syfy | sharknado -',
+    templateName:               'Znation',
+    services:                   ['ui/ux', 'web design', 'motion design', 'web development', 'social integration'],
+    headlineColor:              '#530B0C',
+    mobile: {
+      bgColor: '#0b1c28'
+    },
+    copyColor: '#ffffff',
+    lockup: {
+      className:       'sharknado-lockup',
+      projectColor:    '#fff',
+      featured:        {
+        projectColor:  '#a3373f'
+      }
+    },
+    backbar: {
+      bgColor: '#530B0C'
+    },
+    sidebar: {
+      // logoColor: '#aaa',
+      copyColor: '#556169',
+      headlineColor: '#fff'
+    },
+    shareButton: {
+      strokeColor: '#7d2f37',
+      copyColor: '#ffffff'
+    },
+    endShape: {
+      bgColor: '#091720'
+    },
+    aboutCopy: '<p>Inspired by <span style="text-decoration: underline;">Selleck Waterfall</span> Sandwich Tumblr, which became well-known for its absurd combination of seemingly <span style="text-decoration: underline;">unrelated items</span> and its obviously photoshopped composition, GLOW developed a branded lo-fi, highly unique and totally absurd meme generator to serve the die hard fan base for the 3rd Season of Syfy’s popular scripted zombie spoof, Z-Nation. Zombie Interstellar Produce greets users with a simple interface and instantly generates a random compilation image that pulls assets from three different, and very unrelated categories: Zombie: Z Nation zombie graphic. Interstellar: space background.</p>'
+  },
+  {
+    featured:                   true,
+    client:                     'syfy',
     project:                    'sharknado',
     title:                      'sharknado',
     subtitle:                   'social media campaign',
@@ -151,7 +199,7 @@ const data = [
     services:                   ['content lab', 'social strategy', 'creative execution', 'influencer marketing', 'community management'],
     headlineColor:              '#7d2f37',
     mobile: {
-      bgColor: '#0b1c28' 
+      bgColor: '#0b1c28'
     },
     copyColor: '#ffffff',
     lockup: {
@@ -505,7 +553,7 @@ const data = [
   //   services:                   ['ui/ux', 'front-end dev', 'back-end dev', 'mapbox', 'social integration'],
   //   headlineColor:              '#4F4F4F',
   //   mobile: {
-  //     bgColor: '#0b1c28' 
+  //     bgColor: '#0b1c28'
   //   },
   //   lockup: {
   //     className:       'profit-lockup',
@@ -606,7 +654,7 @@ const data = [
     cat: '― carla hall ―',
     templateName: 'SouthernKitchen',
     mobile: {
-      bgColor: '#fff' 
+      bgColor: '#fff'
     },
     services: ['social strategy', 'community management', 'video production', 'social content'],
     fullScreenBgImg: s3 + 'case-studies/carla-hall/southern-kitchen/video-04.jpg',
@@ -736,7 +784,7 @@ const data = [
     backbar: {
       bgColor: '#00283f'
     },
-    aboutCopy: '<p>In a count-down-to-winter-themed effort to engage fans with custom and unique content for the hit franchise Adventure Time, GLOW teamed with Cartoon Network to develop a digital experience called Adventure Time: Winter Breakout. Our goal was to develop a fun, seasonal engagement that drove excitement around a countdown to winter, and gave fans a reason to come back and engage with their favorite show, to unlock new items daily that awarded fans with Adventure Time assets and winnable items. </p>' 
+    aboutCopy: '<p>In a count-down-to-winter-themed effort to engage fans with custom and unique content for the hit franchise Adventure Time, GLOW teamed with Cartoon Network to develop a digital experience called Adventure Time: Winter Breakout. Our goal was to develop a fun, seasonal engagement that drove excitement around a countdown to winter, and gave fans a reason to come back and engage with their favorite show, to unlock new items daily that awarded fans with Adventure Time assets and winnable items. </p>'
   },
   {
     featured: true,
