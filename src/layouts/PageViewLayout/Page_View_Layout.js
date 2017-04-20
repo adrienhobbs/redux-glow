@@ -78,6 +78,11 @@ export class PageLayout extends React.Component {
   }
   setupPageInfo (pageName) {
     Helpers.setPageTitle(pageName);
+    try {
+      fbq('track', 'PageView');
+    } catch (err) {
+      console.log(err);
+    }
   }
   render () {
     return (
