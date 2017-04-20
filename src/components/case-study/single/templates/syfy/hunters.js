@@ -158,7 +158,7 @@ export class Hunters extends BaseTemplate {
               </div>
             </div>
           </article>
-          <ClientTestimonial bodyColor='#3da0a8' source='Jesse Murray, head of digital, Syfy' body='“From my POV we are extremely happy with everything. The team has been a real pleasure to work with – responsive, solution oriented, with great ideas and follow through. I really can’t think of anything to improve!”' />
+          <ClientTestimonial bodyColor='#3da0a8' source='Jesse Murray, VP, Content Strategy, Syfy' body='“From my POV we are extremely happy with everything. The team has been a real pleasure to work with – responsive, solution oriented, with great ideas and follow through. I really can’t think of anything to improve!”' />
         </div>
       </div>
     );
