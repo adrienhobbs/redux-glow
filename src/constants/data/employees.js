@@ -8,12 +8,6 @@ const employeeInfo = {
       isImportant: true
     },
     {
-      name: 'Robert Sosin',
-      position: 'Senior Creative Director',
-      photoName: 'RobertS',
-      isImportant: true
-    },
-    {
       name: 'Ted Kacandes',
       position: 'Co-Flounder',
       photoName: 'Ted',
@@ -35,6 +29,12 @@ const employeeInfo = {
       name: 'Jerry Levin',
       position: 'Chief Financial Officer',
       photoName: 'Jerry',
+      isImportant: true
+    },
+    {
+      name: 'Robert Sosin',
+      position: 'Senior Creative Director',
+      photoName: 'RobertS',
       isImportant: true
     },
     {
@@ -73,7 +73,7 @@ const employeeInfo = {
     },
     {
       name: 'Lindsey Cirmotich',
-      position: 'Junior Designer',
+      position: 'Designer',
       photoName: 'Lindsey'
     },
     {
