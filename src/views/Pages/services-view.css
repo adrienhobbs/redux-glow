@@ -8,11 +8,15 @@
   }
 }
 
+.outer-services {
+  @media(min-width: 101em) {
+    padding-right: 0;
+  }
+}
+
 .service_bucket {
   position: relative;
   margin-bottom: 5%;
-
-
 
   @media (--md-down) {
     lost-column: 1/2 2 60px;
