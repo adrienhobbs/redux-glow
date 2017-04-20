@@ -232,7 +232,43 @@ const Jobs = [
       'Must possess a sense of pride and a strong work ethic',
       'Passion to learn and commitment to the team'
     ]
-  }
+  },
+  {
+    title: 'design intern',
+    active: true,
+    type: 'full time',
+    contactEmail: 'intern.creative',
+    summary: 'A love for marketing and all things social. You are fluent in social media and know how to speak the visual language of users, no matter what platform, and are passionate about taking social design to the next level. ',
+    traits: [
+      'Junior or Senior level of experience from an accredited art school or equitable work experience',
+      'Strong knowledge of design best practices for Social Media',
+      'Strong fundamental design skills',
+      'A knack for visual storytelling',
+      'Maturity and confidence as a designer',
+      'Strong knowledge of the Adobe Creative Suite',
+      'Working knowledge of motion design language and principles',
+      'Impeccable attention to detail & design quality control',
+      'Ability to handle simultaneous design tasks',
+      'Ability to self-manage deadlines',
+      'Understanding of all major social platforms and why certain content best operates on each',
+      'Curiosity to explore and play',
+      'The desire to grow into a creative leader',
+      'The desire to learn the artistic, business & technological requirements of a project (on brand, on budget/scope and within technical parameters)',
+      'The desire to learn how to captivate and engage your audience (the client, your director & ultimately the end user)',
+      'Natural love of an open and honest feedback loop to facilitate both team member and GLOW growth'
+    ],
+    duties: [
+      'Creating a plethora of static and motion content across all social media platforms',
+      'Owning projects alongside senior/junior designers for multiple entertainment clients simultaneously',
+      'Innovating alongside senior/junior designers to come up with new design ideas and solutions within your executions',
+      'Presenting your design decisions to senior/junior designers internally',
+      'Influencing our clients & staff by providing them valuable social media thinking',
+      'Discovering developments in the Social space to deliver innovative & competitive content',
+      'Collaborating on new business opportunities',
+      'Playing in brainstorms and ideation sessions',
+      'Engaging with GLOW’s internal teams including Art Directors, Social Strategists, Community Managers, Analysts, and audience engagement specialists'
+    ]
+  },
 ];
 
 export class Career extends React.Component {
@@ -271,7 +307,8 @@ var traits = this.props.job.traits.map(function (trait, i) {
     });
 
     var color = (this.state.isOpen) ? colors.radRed : colors.stormDust;
-    var mailTo = `mailto:jobs@weareglow.com?subject=${this.props.job.title}%20position%20availability&body=Hi%20there%2C%0D%0A%0D%0AInterested%20in%20this%20${this.props.job.title}%20position.`;
+    var contactEmail = this.props.job.contactEmail || 'jobs'
+    var mailTo = `mailto:${contactEmail}@weareglow.com?subject=${this.props.job.title}%20position%20availability&body=Hi%20there%2C%0D%0A%0D%0AInterested%20in%20this%20${this.props.job.title}%20position.`;
 
     return (
       <div className={styles.career_list_item}>
