@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
+import ResponsiveVideo from '../../../../video/responsive-video.js';
 
 export class Ballers extends BaseTemplate {
   static propTypes = {
@@ -20,8 +21,11 @@ export class Ballers extends BaseTemplate {
           <div className='social-strategy'>
             <h2 className='study_headline' style={this.getHeadlineStyle()}>social content</h2>
             <div className='img-single inner_section'>
-              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/ballers/grid.jpg' alt='' />
+              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/ballers/grid_wall.jpg' alt='' />
             </div>
+          </div>
+          <div className='img-single inner_section' style={{marginTop: 0}}>
+            <ResponsiveVideo src='http://player.vimeo.com/video/215673883?title=0&byline=0&portrait=0' />
           </div>
         </div>
       </div>

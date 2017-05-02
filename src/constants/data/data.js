@@ -23,12 +23,12 @@ const data = [
     type: 'case-study',
     backgroundImageUrl: s3 + 'case-studies/hbo/ballers/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/hbo/ballers/landscape.jpg',
-    logoColor: '#EBA6B1',
+    logoColor: '#EEC83F',
     secColor: '#0D434B',
     gradientTop: '#c03d3b',
     gradientBottom: '#0e374a',
     featuredProjectTitleColor: '#EEC83F',
-    cat: ' ― hbo | veep ― ',
+    cat: ' ― hbo | ballers ― ',
     templateName: 'Ballers',
     shapeColor: '#0D434B',
     copyColor: 'rgba(255, 255, 255, 0.75)',
@@ -55,7 +55,7 @@ const data = [
       className: 'veep-lockup',
       projectColor: '#FFFFFF',
       featured: {
-        projectColor: '#EBA6B1'
+        projectColor: '#EEC83F'
       }
     },
     results: {
