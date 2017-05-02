@@ -12,7 +12,6 @@ export class ANTM extends BaseTemplate {
 
   render () {
     const ResultsSection = this.getResultsTemplate();
-    console.log(this.props.data.toJS());
     return (
       <div ref='studyContent' className='study-content'>
         <div className='content-container'>
@@ -26,7 +25,7 @@ export class ANTM extends BaseTemplate {
               </div>
             </div>
             <div className='img-single inner_section'>
-              <video width='100%' playsinline preload muted autoPlay>
+              <video width='100%' playsinline preload muted autoPlay loop>
                 <source src='https://s3.amazonaws.com/weareglow-assets/case-studies/vh1/antm/vh1_antm_video_wall.mp4' type='video/mp4'/>
               </video>
             </div>

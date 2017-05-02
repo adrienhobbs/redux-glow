@@ -46,7 +46,6 @@ export class Lockup extends React.Component {
     return (this.props.single) ? 'project-title-svg single' : 'project-title-svg';
   }
   render () {
-    console.log(this.props, 'lockup');
     return (
       <div className={this.getDivClassname()}>
         <svg ref='lockup'  role='img' className={this.getLocalClassname()}>
