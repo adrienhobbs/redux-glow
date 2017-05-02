@@ -14,9 +14,11 @@ import HowIDidIt from './yahoo/how-i-did-it.js';
 import Hunters from './syfy/hunters.js';
 import Younger from './tvland/younger.js';
 import Profit from './cnbc/profit.js';
+import NightOf from './hbo/the-night-of.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
+    NightOf: NightOf,
     SouthernKitchen: SouthernKitchen,
     Proof: Proof,
     Sharknado: Sharknado,

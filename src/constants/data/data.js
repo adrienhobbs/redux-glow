@@ -13,6 +13,69 @@ const data = [
     gradientBottom: '#0e374a',
     cat: '- we are glow -'
   },
+
+  {
+    featured: true,
+    client: 'hbo',
+    project: 'the night of',
+    title: 'the night of',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social-media-campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
+    logoColor: '#1B2326',
+    secColor: '#1B2326',
+    gradientTop: '#909090',
+    gradientBottom: '#1B2326',
+    featuredProjectTitleColor: '#c03d3b',
+    cat: ' ― hbo | night of ― ',
+    templateName: 'NightOf',
+    copyColor: '#ffffff',
+    headlineColor: '#909090',
+    services: ['social strategy', 'content lab', 'creative execution', 'motion graphics'],
+    sidebar: {
+      logoColor: '#ffffff',
+      copyColor: '#ffffff',
+      headlineColor: '#909090',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#1B2326'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#1B2326'
+    },
+    lockup: {
+      className: 'veep-lockup',
+      projectColor: '#fff',
+      featured: {
+        projectColor: '#909090'
+      }
+    },
+    results: {
+      stats: [
+        {label: 'Impressions', stat: '47MM+'},
+        {label: 'Video views', stat: '3MM'},
+        {label: 'Fans reached', stat: '+20MM'},
+        {label: 'Fans on Facebook', stat: '145K+'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#909090',
+      bgColor: '#161D20',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/device.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>Our objective for HBO’s The Night Of was to enlist fans of true crime and realistic crime fiction to watch, discuss, and advocate for The Night Of - an addictive, cinematic exploration of the modern judicial system.</p><p>The social strategy aimed to activate armchair detectives of similar true crime programming such as True Detective and The Jinx.  We did this by creating thought-provoking, shareable content that allowed fans to theorize about Naz’s night and explore more nuances of the judicial system that he experienced first hand.  The content sought to dangle the carrot, letting fans have enough to piece together themselves.</p>'
+  },
+
   {
     featured: true,
     client: 'hulu',
@@ -25,7 +88,7 @@ const data = [
     backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/mindy-bg.jpg',
     logoColor: '#68A83B',
     secColor: '#ffffff',
-    gradientTop: '#e70062', 
+    gradientTop: '#e70062',
     gradientBottom: '#18d4ff',
     clientLogoColor: '#6eb116',
     headlineColor: '#68A83B',
@@ -91,7 +154,7 @@ const data = [
     services:                   ['ui/ux', 'web design', 'motion design', 'audio design', 'web development'],
     headlineColor:              '#1f3a4d',
     mobile: {
-      bgColor: '#0b1c28' 
+      bgColor: '#0b1c28'
     },
     lockup: {
       className:       'hunters-lockup',
@@ -151,7 +214,7 @@ const data = [
     services:                   ['content lab', 'social strategy', 'creative execution', 'influencer marketing', 'community management'],
     headlineColor:              '#7d2f37',
     mobile: {
-      bgColor: '#0b1c28' 
+      bgColor: '#0b1c28'
     },
     copyColor: '#ffffff',
     lockup: {
@@ -505,7 +568,7 @@ const data = [
   //   services:                   ['ui/ux', 'front-end dev', 'back-end dev', 'mapbox', 'social integration'],
   //   headlineColor:              '#4F4F4F',
   //   mobile: {
-  //     bgColor: '#0b1c28' 
+  //     bgColor: '#0b1c28'
   //   },
   //   lockup: {
   //     className:       'profit-lockup',
@@ -606,7 +669,7 @@ const data = [
     cat: '― carla hall ―',
     templateName: 'SouthernKitchen',
     mobile: {
-      bgColor: '#fff' 
+      bgColor: '#fff'
     },
     services: ['social strategy', 'community management', 'video production', 'social content'],
     fullScreenBgImg: s3 + 'case-studies/carla-hall/southern-kitchen/video-04.jpg',
@@ -736,7 +799,7 @@ const data = [
     backbar: {
       bgColor: '#00283f'
     },
-    aboutCopy: '<p>In a count-down-to-winter-themed effort to engage fans with custom and unique content for the hit franchise Adventure Time, GLOW teamed with Cartoon Network to develop a digital experience called Adventure Time: Winter Breakout. Our goal was to develop a fun, seasonal engagement that drove excitement around a countdown to winter, and gave fans a reason to come back and engage with their favorite show, to unlock new items daily that awarded fans with Adventure Time assets and winnable items. </p>' 
+    aboutCopy: '<p>In a count-down-to-winter-themed effort to engage fans with custom and unique content for the hit franchise Adventure Time, GLOW teamed with Cartoon Network to develop a digital experience called Adventure Time: Winter Breakout. Our goal was to develop a fun, seasonal engagement that drove excitement around a countdown to winter, and gave fans a reason to come back and engage with their favorite show, to unlock new items daily that awarded fans with Adventure Time assets and winnable items. </p>'
   },
   {
     featured: true,
