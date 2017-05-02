@@ -6,66 +6,28 @@ import colors from '../../constants/colors.js';
 
 const Jobs = [
   {
-    title: 'Media Director, Paid Social',
+    title: 'project manager',
+    contactEmail: 'pete',
     active: true,
     type: 'full time',
-    summary: 'GLOW\'s Social team continues to experience amazing growth. We have an immediate need for a Media Director. The ideal candidate will be able to hit the ground running, work collaboratively within our award-winning team, provide thought leadership, and drive the development of a groundbreaking paid social strategy.',
-    traits: [
-      'Bachelor’s degree',
-      '4+ years of campaign management and experience (in entertainment preferred)',
-      'Paid Social: (significant experience is a must)',
-      'Working knowledge of self-serve platforms and API technology on Facebook, Instagram, Snapchat, Twitter, Pinterest, and Tumblr, as well as other emerging platforms',
-      'Working knowledge of native and third party tools',
-      'Fluency with latest evolutions of tracking and targeting',
-      'Deep knowledge of ad serving platforms and online analytic solutions',
-      'Knowledge of statistical methods and testing methodology preferred',
-      'Ability to communicate findings clearly and cohesively' ,
-      'A team player who is able to handle stressful situations and deadlines calmly',
-      'Passion for social media, TV, and overall media & entertainment'
-    ],
+    summary: 'Glow Interactive, Inc. has an opening for a Project Manager - Digital and Social Media Agency at its New York City offices.',
     duties: [
-      'Creating and overseeing execution of paid media strategies of various budget levels',
-      'Developing a complete understanding of a client’s goals, targets, needs, and expectations',
-      'Thinking big picture and creating a holistic approach to the campaign at hand',
-      'Deep understanding of all social paid platforms and search',
-      'Testing and optimizing media in real-time to ensure client goals are met and/or exceeded',
-      'Converting large amounts of data from insights tools into practical strategies and actionable recommendations',
-      'Overseeing and guiding a team of paid social specialists to meet and exceed both client and internal goals',
-      'Trends and tools for paid social media platforms',
-      'Key performance metrics for paid/earned/owned media with a focus on analytics and optimization'
-    ]
-  },
-  {
-    title: 'digital project manager',
-    active: true,
-    type: 'full time',
-    summary: 'We are looking for smart and focused digital project managers that are excellent communicators, share our passion for the digital and social space and want to be part of a growing and winning team. The right person for this position takes a glass-half-full approach, is knowledgeable, brings with them a great deal of enthusiasm, shares our work ethic and attention to detail, and has a willingness to both learn and teach. If you’re creative about how you approach challenges, always look to provide solutions, live for the details, love the fast pace, stay cool under pressure and want to continue to grow professionally in a very talented agency environment, then you have a bright future here at GLOW.',
-    duties: [
-      'Work closely with internal teams and clients to execute social campaigns that integrate with our clients’ overall strategic goals.',
-      'Manage day-to-day contact on projects that range from sites and app builds to social activations and content, interfacing between client and agency, as well as vendors where needed.',
-      'Work with management, team and client to establish scope, set project timelines and monitor the overall flow of the effort from kickoff to completion.',
-      'Participation in brainstorms and creative meetings. Your ideas need to contribute to the team’s thinking!!',
-      'Ensure projects have the necessary resources to run efficiently/effectively from kickoff to completion.',
-      'You possess a keen understanding of what a project entails, and keep a broader focus on how our efforts ladder to the overarching client goals.',
-      'You will be an active participant on new business teams and contribute directly to new business opportunities.',
-      'Good problem solving skills, works well under pressure. ',
-      'The ability to anticipate the needs of the team and the account.',
-      'Active involvement in planning and strategy – you will know your projects and clients inside and out so you can provide answers as needed.',
-      'Confidence and comfort to act as the voice of the team when necessary on client correspondence.'
+      'Responsible for and manages day-to-day activities on projects for a digital and social media agency that range from website development, mobile applications and video content',
+      'Work closely with internal teams and clients to execute digital initiatives that integrate with our clients’ overall strategic goals',
+      'Interface between client and team, as well as vendors when needed',
+      'Work with management, team and client to establish scope, set project timelines and to manage the overall flow of the effort from kickoff to completion',
+      'Keep projects on track through clear task lists, issue tracking, status reports, and meeting notes',
+      'Clearly communicate changes, issues, and resolutions to the tactical and executive teams'
     ],
     traits: [
-      'Has a minimum 2-4 years of agency experience.',
-      'Must have prior experience working in digital or social media, in an entertainment capacity is a plus.',
-      'A genuine enthusiasm about pop culture, entertainment and social media and an understanding of what other brands are doing in the space.',
-      'Demonstrated ability to communicate clearly and effectively with clients at varying levels.',
-      'Loves a challenge and uses problem-solving skills to seek out ways to help make our team and our partners stronger/smarter/better.',
-      'A highly organized, detail-oriented multi-tasker.  The fast pace of real-time social media energizes you!',
-      'Considers themselves a curious marketer and is dedicated to personal and team growth.',
-      'The ability to communicate clearly, lead conversations, and can function exceptionally well in a team environment.',
-      'You know what makes the client tick, and are ready to jump in and make sure they’re being given what they need.',
-      'Has opinions and ideas and you’d love to share them with the team and our clients.',
-      'Someone who others will want to work with - your personality should work well with many different types of people.',
-      'A person who truly wants to grow while learning more about social and digital.'
+      'Has Bachelor’s Degree in Computer Science, Business Administration in or with a concentration in Marketing, or a related field or its foreign equivalent and two years post-Degree experience in the position or the above referenced education and two years post-Degree experience in any occupation providing marketing services for a digital and social media agency, including assisting the account team with strategic planning, user research, brainstorming, pitching, and collaborating',
+      'Firm knowledge and understanding of modern day digital technologies such as: HTML5, Javascript, iOS/Android, chatbots, software SDK’s and social platform API’s',
+      'Two years of analytic experience with MS Excel, Google Analytics, and Omniture; Must have demonstrated skills as being highly organized and a detailed-oriented multitasker',
+      'Must have demonstrated knowledge of the digital and social media agency market, good problem- solving skills and the ability to communicate and to lead conversations effectively, and to function in a team environment',
+      'Current knowledge of digital marketing best practices and industry best practices',
+      'Demonstrated ability to manage multiple, competing priorities, duties and/or projects',
+      'A genuine enthusiasm about pop culture, entertainment and social media and an understanding of what other brands are doing in the space',
+      'Demonstrated ability to communicate clearly and effectively with clients at varying levels'
     ]
   },
   {
@@ -309,6 +271,7 @@ var traits = this.props.job.traits.map(function (trait, i) {
     var color = (this.state.isOpen) ? colors.radRed : colors.stormDust;
     var contactEmail = this.props.job.contactEmail || 'jobs'
     var mailTo = `mailto:${contactEmail}@weareglow.com?subject=${this.props.job.title}%20position%20availability&body=Hi%20there%2C%0D%0A%0D%0AInterested%20in%20this%20${this.props.job.title}%20position.`;
+    var extraContent = (this.props.job.title === 'project manager') ? 'Applicants should send resumes to Peter Levin at Glow Interactive, Inc., 333 Hudson Street, Suite 302, NY, NY or to Pete@weareglow.com. Equal Opportunity Employer' : ''
 
     return (
       <div className={styles.career_list_item}>
@@ -334,6 +297,9 @@ var traits = this.props.job.traits.map(function (trait, i) {
           </div>
           <div className={styles.apply_now}>
             <a href={mailTo}>apply now</a>
+          </div>
+          <div style={{fontStyle: 'italic', textAlign: 'center', display: 'block', marginTop: 10}}>
+            {extraContent}
           </div>
         </div>
       </div>
