@@ -15,6 +15,68 @@ const data = [
   },
   {
     featured: true,
+    client: 'vh1',
+    project: 'antm',
+    title: 'antm',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/vh1/antm/landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/vh1/antm/landscape.jpg',
+    logoColor: '#252525',
+    secColor: '#252525',
+    gradientTop: '#EBA6B1',
+    gradientBottom: '#252525',
+    clientLogoColor: '#6eb116',
+    headlineColor: '#EBA6B1',
+    copyColor: 'rgba(255, 255, 255, 0.75)',
+    cat: ' ― vh1 | antm ― ',
+    templateName: 'ANTM',
+    shapeColor: '#252525',
+    results: {
+      stats: [
+        {label: 'Impressions', stat: '1/2B'},
+        {label: 'Video Views', stat: '+46M'},
+        {label: 'Engagements', stat: '+20M'},
+        {label: 'Creative Assets Crafted', stat: '+3K'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#ECA7B2',
+      bgColor: '#1E1E1E',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/vh1/antm/device.jpg',
+      template: 'Standard'
+    },
+    mobile: {
+      bgColor: '#252525'
+    },
+    services: ['social strategy', 'community management', 'content lab', 'creative execution', 'video', 'motion design', 'interactive facebook live', 'talent content capture'],
+    lockup: {
+      className: 'mindy-lockup',
+      logoColor: '#FFFFFF',
+      projectColor:    '#FFFFFF',
+      featured:        {
+        projectColor:  '#EBA6B1'
+      }
+    },
+    sidebar: {
+      logoColor: '#A7A7A7',
+      copyColor: '#A7A7A7',
+      headlineColor: '#68A83B'
+    },
+    shareButton: {
+      strokeColor: '#fff',
+      copyColor: '#fff'
+    },
+    endShape: {
+      bgColor: '#00CAFF'
+    },
+    backbar: {
+      bgColor: '#EBA6B1'
+    },
+    aboutCopy: '<p>In 2016, reality TV pioneer America\'s Next Top Model found a new home on VH1 after 22 seasons, and following a decade long run on The CW. Following a former cancellation, a new network to call home, and all-new host + panel, the challenge for ANTM\'s comeback was to create a holistic social media campaign that introduced loyal viewers to a revamped Top Model on VH1.</p><p>The marketing for ANTM kicked off with an OOH whisper campaign with simple messaging: "What\'s Next." Rather than keeping the new contestants a secret and stress about them getting leaked, we turned that on its head by creating a campaign that allowed the audience to figure out "What\'s Next" with a social-first puzzle. ANTM social provided fans with clues per contestant which were seeded out across all social platforms. When press announced the finalists, ANTM social celebrated with 13 custom animations featuring the contestants and their clues on the @ANTMVH1 Instagram, tagged the contestants in clue posts, and released a tap-to-reveal on Snapchat & Instagram stories to pull the entire reveal together.</p>',
+  },
+  {
+    featured: true,
     client: 'hulu',
     project: 'mindy',
     title: 'the mindy project',
@@ -25,7 +87,7 @@ const data = [
     backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/mindy-bg.jpg',
     logoColor: '#68A83B',
     secColor: '#ffffff',
-    gradientTop: '#e70062', 
+    gradientTop: '#e70062',
     gradientBottom: '#18d4ff',
     clientLogoColor: '#6eb116',
     headlineColor: '#68A83B',
@@ -91,7 +153,7 @@ const data = [
     services:                   ['ui/ux', 'web design', 'motion design', 'audio design', 'web development'],
     headlineColor:              '#1f3a4d',
     mobile: {
-      bgColor: '#0b1c28' 
+      bgColor: '#0b1c28'
     },
     lockup: {
       className:       'hunters-lockup',
@@ -151,7 +213,7 @@ const data = [
     services:                   ['content lab', 'social strategy', 'creative execution', 'influencer marketing', 'community management'],
     headlineColor:              '#7d2f37',
     mobile: {
-      bgColor: '#0b1c28' 
+      bgColor: '#0b1c28'
     },
     copyColor: '#ffffff',
     lockup: {
@@ -505,7 +567,7 @@ const data = [
   //   services:                   ['ui/ux', 'front-end dev', 'back-end dev', 'mapbox', 'social integration'],
   //   headlineColor:              '#4F4F4F',
   //   mobile: {
-  //     bgColor: '#0b1c28' 
+  //     bgColor: '#0b1c28'
   //   },
   //   lockup: {
   //     className:       'profit-lockup',
@@ -606,7 +668,7 @@ const data = [
     cat: '― carla hall ―',
     templateName: 'SouthernKitchen',
     mobile: {
-      bgColor: '#fff' 
+      bgColor: '#fff'
     },
     services: ['social strategy', 'community management', 'video production', 'social content'],
     fullScreenBgImg: s3 + 'case-studies/carla-hall/southern-kitchen/video-04.jpg',
@@ -736,7 +798,7 @@ const data = [
     backbar: {
       bgColor: '#00283f'
     },
-    aboutCopy: '<p>In a count-down-to-winter-themed effort to engage fans with custom and unique content for the hit franchise Adventure Time, GLOW teamed with Cartoon Network to develop a digital experience called Adventure Time: Winter Breakout. Our goal was to develop a fun, seasonal engagement that drove excitement around a countdown to winter, and gave fans a reason to come back and engage with their favorite show, to unlock new items daily that awarded fans with Adventure Time assets and winnable items. </p>' 
+    aboutCopy: '<p>In a count-down-to-winter-themed effort to engage fans with custom and unique content for the hit franchise Adventure Time, GLOW teamed with Cartoon Network to develop a digital experience called Adventure Time: Winter Breakout. Our goal was to develop a fun, seasonal engagement that drove excitement around a countdown to winter, and gave fans a reason to come back and engage with their favorite show, to unlock new items daily that awarded fans with Adventure Time assets and winnable items. </p>'
   },
   {
     featured: true,

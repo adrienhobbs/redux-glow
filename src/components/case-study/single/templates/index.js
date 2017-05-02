@@ -14,9 +14,11 @@ import HowIDidIt from './yahoo/how-i-did-it.js';
 import Hunters from './syfy/hunters.js';
 import Younger from './tvland/younger.js';
 import Profit from './cnbc/profit.js';
+import ANTM from './vh1/antm.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
+    ANTM: ANTM,
     SouthernKitchen: SouthernKitchen,
     Proof: Proof,
     Sharknado: Sharknado,
