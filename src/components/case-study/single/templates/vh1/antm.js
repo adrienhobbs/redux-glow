@@ -6,6 +6,7 @@ export class ANTM extends BaseTemplate {
   static propTypes = {
     data: PropTypes.object.isRequired
   };
+
   constructor (props) {
     super(props);
   }
