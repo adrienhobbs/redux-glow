@@ -20,7 +20,7 @@ const data = [
     project: 'the night of',
     title: 'the night of',
     subtitle: 'social media campaign',
-    subtitleSlug: 'social-media-campaign',
+    subtitleSlug: 'social media campaign',
     type: 'case-study',
     backgroundImageUrl: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
