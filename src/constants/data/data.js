@@ -23,16 +23,16 @@ const data = [
     type: 'case-study',
     backgroundImageUrl: s3 + 'case-studies/vh1/antm/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/vh1/antm/landscape.jpg',
-    logoColor: '#252525',
-    secColor: '#252525',
+    logoColor: 'rgb(37,37,37)',
+    secColor: 'rgb(37, 37, 37)',
     gradientTop: '#EBA6B1',
-    gradientBottom: '#252525',
+    gradientBottom: 'rgb(37,37,37)',
     clientLogoColor: '#6eb116',
     headlineColor: '#EBA6B1',
     copyColor: 'rgba(255, 255, 255, 0.75)',
     cat: ' ― vh1 | antm ― ',
     templateName: 'ANTM',
-    shapeColor: '#252525',
+    shapeColor: 'rgb(37,37,37)',
     results: {
       stats: [
         {label: 'Impressions', stat: '1/2B'},
@@ -43,11 +43,11 @@ const data = [
       statColor: '#ffffff',
       statLabelColor: '#ECA7B2',
       bgColor: '#1E1E1E',
-      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/vh1/antm/device.jpg',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/vh1/antm/device.png',
       template: 'Standard'
     },
     mobile: {
-      bgColor: '#252525'
+      bgColor: 'rgb(37,37,37)'
     },
     services: ['social strategy', 'community management', 'content lab', 'creative execution', 'video', 'motion design', 'interactive facebook live', 'talent content capture'],
     lockup: {

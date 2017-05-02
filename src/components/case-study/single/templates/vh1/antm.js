@@ -12,6 +12,7 @@ export class ANTM extends BaseTemplate {
 
   render () {
     const ResultsSection = this.getResultsTemplate();
+    console.log(this.props.data.toJS());
     return (
       <div ref='studyContent' className='study-content'>
         <div className='content-container'>
@@ -25,7 +26,9 @@ export class ANTM extends BaseTemplate {
               </div>
             </div>
             <div className='img-single inner_section'>
-              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/social-01.png' alt='' />
+              <video width='100%' playsinline preload muted autoPlay>
+                <source src='https://s3.amazonaws.com/weareglow-assets/case-studies/vh1/antm/vh1_antm_video_wall.mp4' type='video/mp4'/>
+              </video>
             </div>
             <div className='media-campaign'>
               <h2 className='study_headline' style={this.getHeadlineStyle()}>360° & interactive FB lives</h2>
@@ -38,9 +41,6 @@ export class ANTM extends BaseTemplate {
                 <div className='copy-inner'>
                   <p style={this.getCopyStyle()}>This was constantly met with "always-on" community management that proved to the fans that ANTM is listening. Cultivating the knowledge we gained from the fan base for finale, GLOW ideated & executed the first-ever Facebook Live Fan Challenge Photoshoot hosted by Drew Elliott bringing fan-favorite contestants back for one last challenge. The FB Live featured multiple live fan polling elements and user highlighted commentary helping to direct an actual photoshoot. It's above and beyond how brands are currently executing FB Live, a precise production for social driving finale tune-in.</p>
                 </div>
-              </div>
-              <div className='img-single inner_section'>
-                <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/media-01.png' alt='' />
               </div>
             </div>
           </div>
