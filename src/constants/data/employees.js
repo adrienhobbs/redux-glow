@@ -32,12 +32,6 @@ const employeeInfo = {
       isImportant: true
     },
     {
-      name: 'Robert Sosin',
-      position: 'Senior Creative Director',
-      photoName: 'RobertS',
-      isImportant: true
-    },
-    {
       name: 'Sean Lynam',
       position: 'Director of Marketing',
       photoName: 'Sean',
@@ -58,12 +52,12 @@ const employeeInfo = {
     },
     {
       name: 'Matt Will',
-      position: 'Art Director',
+      position: 'Creative Developer',
       photoName: 'Matt'
     },
     {
       name: 'Ann Ketly',
-      position: 'Office Manager',
+      position: 'Chief Facilitator',
       photoName: 'Ann'
     },
     {
@@ -98,12 +92,12 @@ const employeeInfo = {
     },
     {
       name: 'Aaron J. Perez',
-      position: 'Digital Strategist',
+      position: 'Director, Social & Digital Strategy',
       photoName: 'Aaron'
     },
     {
       name: 'Daniela Guernica',
-      position: 'Digital Strategist',
+      position: 'Associate Director, Social & Digital Strategy',
       photoName: 'Danielle'
     },
     {
@@ -113,12 +107,12 @@ const employeeInfo = {
     },
     {
       name: 'Eric Drumm',
-      position: 'Digital Strategist',
+      position: 'Associate Director, Strategy & Innovation',
       photoName: 'Eric'
     },
     {
       name: 'Erin Resnick',
-      position: 'Community Manager',
+      position: 'Social Media Manager',
       photoName: 'Erin'
     },
     {
@@ -127,58 +121,48 @@ const employeeInfo = {
       photoName: 'Kendell'
     },
     {
-      name: 'Lauren Farmer',
-      position: 'Digital Strategist',
-      photoName: 'Lauren'
-    },
-    {
       name: 'Jennifer Fink',
-      position: 'Digital Strategist',
+      position: 'Director, Social & Digital Strategy',
       photoName: 'Jennifer'
     },
     {
       name: 'Peter Kondratowicz',
-      position: 'Senior Designer',
+      position: 'Senior Production Designer',
       photoName: 'PK'
     },
     {
       name: 'Sarah Pine',
-      position: 'Digital Strategist',
+      position: 'Associate Director, Social & Digital Strategy',
       photoName: 'Sarah'
     },
     {
       name: 'Stephanie Rogers',
-      position: 'Sr. Account Manager',
+      position: 'Senior Account Manager',
       photoName: 'Steph'
     },
     {
       name: 'Tara Lewis',
-      position: 'Sr. Project Manager',
+      position: 'Group Director, Account Services',
       photoName: 'Tara'
     },
     {
-      name: 'Sean Orr',
-      position: 'Video Editor',
-      photoName: 'SeanO'
-    },
-    {
       name: 'Paula Ersly',
-      position: 'Community Manager',
+      position: 'Social Media Manager',
       photoName: 'Paula'
     },
     {
       name: 'Eric Goldie',
-      position: 'Community Manager',
+      position: 'Social Media Coordinator',
       photoName: 'EricG'
     },
     {
       name: 'Zoe Greenblatt',
-      position: 'Community Manager',
+      position: 'Social Media Manager',
       photoName: 'Zoe'
     },
     {
       name: 'Casey De Pont',
-      position: 'Art Director',
+      position: 'Associate Creative Director',
       photoName: 'Casey'
     },
     {
@@ -188,12 +172,12 @@ const employeeInfo = {
     },
     {
       name: 'Tara Prangell',
-      position: 'Community Manager',
+      position: 'Social Media & Analytics Specialist',
       photoName: 'TaraP'
     },
     {
       name: 'Robert Lester',
-      position: 'Creative Director',
+      position: 'Associate Creative Director',
       photoName: 'Robert'
     }
   ]
