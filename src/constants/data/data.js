@@ -15,6 +15,69 @@ const data = [
   },
   {
     featured: true,
+    client: 'hbo',
+    project: 'ballers',
+    title: 'ballers',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/hbo/ballers/landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/ballers/landscape.jpg',
+    logoColor: '#EBA6B1',
+    secColor: '#0D434B',
+    gradientTop: '#c03d3b',
+    gradientBottom: '#0e374a',
+    featuredProjectTitleColor: '#EEC83F',
+    cat: ' ― hbo | veep ― ',
+    templateName: 'Ballers',
+    shapeColor: '#0D434B',
+    copyColor: 'rgba(255, 255, 255, 0.75)',
+    headlineColor: '#EEC83F',
+    services: ['social strategy', 'community management', 'media campaign', 'creative execution', 'video & motion design'],
+    recognition: ['shorty: best multi-platform', 'shorty: best twitter campaign'],
+    sidebar: {
+      logoColor: '#ffffff',
+      copyColor: '#577381',
+      headlineColor: '#ffffff',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#EBA6B1'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'veep-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#EBA6B1'
+      }
+    },
+    results: {
+      stats: [
+        {label: 'pieces of custom content created', stat: '350+'},
+        {label: 'instagram growth over season 2', stat: '+580%'},
+        {label: 'art direction', stat: 'shorty'},
+        {label: 'twitter engagement over S2', stat: '+31K'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#EEC83F',
+      bgColor: '#0A363C',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/ballers/device.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>The HBO series Ballers reveals there’s a lot more to being a baller than a multi-million dollar deal. You have to make a statement. To kick off Season 2 of Ballers on HBO, the GLOW social and creative teams did just that with a social content design strategy to launch the official Ballers HBO Instagram.</p><p>The coordination between GLOW’s social and creative teams produced an eye-catching combination of video, static and illustrated social content that was seamlessly intertwined week-over-week with connective design elements showcasing the fresh, impressive, and winning qualities of a true Baller.</p><p>Simultaneously applying the Ballers design across social platforms, GLOW’s social and creative teams built digital destinations for fans to ball out every week.</p>'
+  },
+  {
+    featured: true,
     client: 'hulu',
     project: 'mindy',
     title: 'the mindy project',
@@ -25,7 +88,7 @@ const data = [
     backgroundImageUrlVert: s3 + 'case-studies/hulu/mindy-project/mindy-bg.jpg',
     logoColor: '#68A83B',
     secColor: '#ffffff',
-    gradientTop: '#e70062', 
+    gradientTop: '#e70062',
     gradientBottom: '#18d4ff',
     clientLogoColor: '#6eb116',
     headlineColor: '#68A83B',
@@ -91,7 +154,7 @@ const data = [
     services:                   ['ui/ux', 'web design', 'motion design', 'audio design', 'web development'],
     headlineColor:              '#1f3a4d',
     mobile: {
-      bgColor: '#0b1c28' 
+      bgColor: '#0b1c28'
     },
     lockup: {
       className:       'hunters-lockup',
@@ -151,7 +214,7 @@ const data = [
     services:                   ['content lab', 'social strategy', 'creative execution', 'influencer marketing', 'community management'],
     headlineColor:              '#7d2f37',
     mobile: {
-      bgColor: '#0b1c28' 
+      bgColor: '#0b1c28'
     },
     copyColor: '#ffffff',
     lockup: {
@@ -505,7 +568,7 @@ const data = [
   //   services:                   ['ui/ux', 'front-end dev', 'back-end dev', 'mapbox', 'social integration'],
   //   headlineColor:              '#4F4F4F',
   //   mobile: {
-  //     bgColor: '#0b1c28' 
+  //     bgColor: '#0b1c28'
   //   },
   //   lockup: {
   //     className:       'profit-lockup',
@@ -606,7 +669,7 @@ const data = [
     cat: '― carla hall ―',
     templateName: 'SouthernKitchen',
     mobile: {
-      bgColor: '#fff' 
+      bgColor: '#fff'
     },
     services: ['social strategy', 'community management', 'video production', 'social content'],
     fullScreenBgImg: s3 + 'case-studies/carla-hall/southern-kitchen/video-04.jpg',
@@ -736,7 +799,7 @@ const data = [
     backbar: {
       bgColor: '#00283f'
     },
-    aboutCopy: '<p>In a count-down-to-winter-themed effort to engage fans with custom and unique content for the hit franchise Adventure Time, GLOW teamed with Cartoon Network to develop a digital experience called Adventure Time: Winter Breakout. Our goal was to develop a fun, seasonal engagement that drove excitement around a countdown to winter, and gave fans a reason to come back and engage with their favorite show, to unlock new items daily that awarded fans with Adventure Time assets and winnable items. </p>' 
+    aboutCopy: '<p>In a count-down-to-winter-themed effort to engage fans with custom and unique content for the hit franchise Adventure Time, GLOW teamed with Cartoon Network to develop a digital experience called Adventure Time: Winter Breakout. Our goal was to develop a fun, seasonal engagement that drove excitement around a countdown to winter, and gave fans a reason to come back and engage with their favorite show, to unlock new items daily that awarded fans with Adventure Time assets and winnable items. </p>'
   },
   {
     featured: true,

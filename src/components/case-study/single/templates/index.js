@@ -14,6 +14,7 @@ import HowIDidIt from './yahoo/how-i-did-it.js';
 import Hunters from './syfy/hunters.js';
 import Younger from './tvland/younger.js';
 import Profit from './cnbc/profit.js';
+import Ballers from './hbo/ballers.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
@@ -32,7 +33,8 @@ const CaseStudyTemplates = (function templates () {
     HowIDidIt: HowIDidIt,
     Hunters: Hunters,
     Younger: Younger,
-    Profit: Profit
+    Profit: Profit,
+    Ballers: Ballers
   };
 }());
 
