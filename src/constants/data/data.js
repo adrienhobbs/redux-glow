@@ -139,7 +139,7 @@ const data = [
     aboutCopy: '<p>In 2016, reality TV pioneer America\'s Next Top Model found a new home on VH1 after 22 seasons, and following a decade long run on The CW. Following a former cancellation, a new network to call home, and all-new host + panel, the challenge for ANTM\'s comeback was to create a holistic social media campaign that introduced loyal viewers to a revamped Top Model on VH1.</p><p>The marketing for ANTM kicked off with an OOH whisper campaign with simple messaging: "What\'s Next." Rather than keeping the new contestants a secret and stress about them getting leaked, we turned that on its head by creating a campaign that allowed the audience to figure out "What\'s Next" with a social-first puzzle. ANTM social provided fans with clues per contestant which were seeded out across all social platforms. When press announced the finalists, ANTM social celebrated with 13 custom animations featuring the contestants and their clues on the @ANTMVH1 Instagram, tagged the contestants in clue posts, and released a tap-to-reveal on Snapchat & Instagram stories to pull the entire reveal together.</p>',
   },
   {
-    featured: true,
+    featured: false,
     client: 'hulu',
     project: 'mindy',
     title: 'the mindy project',
@@ -190,7 +190,7 @@ const data = [
     aboutCopy: '<p>Our objective for The Mindy Project, the highly popular comedy series originally on FOX, was to increase across the board awareness and drive tune-in as Mindy moved from FOX to Hulu as their next original series. We sought to tap into the series’ fanbase and develop engaging custom content that resonated with viewers, while leveraging series\' talent to boost the social conversation and awareness of the series now on Hulu.</p>'  ,
   },
   {
-    featured:                   true,
+    featured:                   false,
     client:                     'syfy',
     project:                    'hunters',
     title:                      'hunters',
@@ -256,7 +256,7 @@ const data = [
     aboutCopy: '<p>A cross between gritty crime drama and sci-fi thriller, Hunters comes from executive producers Gale Anne Hurd (The Walking Dead, The Terminator trilogy) and Natalie Chaidez (12 Monkeys, Heroes). Utilizing emerging web technologies like WebGL and ThreeJS, Glow partnered with Syfy to create an innovative interactive experience bringing the world of Hunters to life. Over the course of 13 weeks, custom sharable content was “leaked” through the site, giving fans the opportunity to dive into the show in a unique way.</p>'
   },
   {
-    featured:                   true,
+    featured:                   false,
     client:                     'syfy',
     project:                    'sharknado',
     title:                      'sharknado',
@@ -712,7 +712,7 @@ const data = [
     aboutCopy: "<p>Syfy’s 12 Monkeys is a science-fiction thriller about one man's desperate attempt to save mankind using a dangerous and untested method of time travel. Our objective around the series launch was to build the world of 12 Monkeys for a new audience by making sense of its complex time-traveling story and supplement the on-air viewing with multi-platform digital and social content around this theme.  </p><p>The goals were to drive an immersive experience that would build and sustain engagement throughout the series and illustrate a comprehensive and clear vision for mapping the time travel jumps of James Cole, one of the lead characters. We also wanted to offer a stream of unique, provocative real-time, platform-specific social content for fans. </p>"
   },
   {
-    featured: true,
+    featured: false,
     client: 'carla hall',
     project: 'southern kitchen',
     title: 'southern kitchen',
