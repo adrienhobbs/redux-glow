@@ -52,7 +52,7 @@ const data = [
       bgColor: '#0D434B'
     },
     lockup: {
-      className: 'veep-lockup',
+      className: 'ballers-lockup',
       projectColor: '#FFFFFF',
       featured: {
         projectColor: '#EEC83F'
@@ -114,7 +114,7 @@ const data = [
     },
     services: ['social strategy', 'community management', 'content lab', 'creative execution', 'video', 'motion design', 'interactive facebook live', 'talent content capture'],
     lockup: {
-      className: 'mindy-lockup',
+      className: 'antm-lockup',
       logoColor: '#FFFFFF',
       projectColor:    '#FFFFFF',
       featured:        {
