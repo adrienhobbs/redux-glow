@@ -25,7 +25,7 @@ export class Ballers extends BaseTemplate {
             </div>
           </div>
           <div className='img-single inner_section' style={{marginTop: 0}}>
-            <ResponsiveVideo src='http://player.vimeo.com/video/215673883?title=0&byline=0&portrait=0' />
+            <ResponsiveVideo src='http://player.vimeo.com/video/216015518?title=0&byline=0&portrait=0' />
           </div>
         </div>
       </div>
