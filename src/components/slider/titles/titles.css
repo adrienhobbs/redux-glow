@@ -1,0 +1,27 @@
+.titles {
+  display: none;
+  @media(--sm) {
+    display: block;
+  }
+  left: center;
+  top: center;
+  text-align: center;
+}
+
+.title {
+  width: 239px;
+  font-size: 0.9em;
+
+  font-family: var(--primary-font-family);
+  color: var(--color-slate-gray);
+  font-weight: 400;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0;
+  transform: rotateZ(-90deg) translateY(-120px);
+  @media(--lg) {
+    font-size: 1.2em;
+  }
+}

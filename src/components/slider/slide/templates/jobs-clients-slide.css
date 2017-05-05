@@ -1,0 +1,96 @@
+@use lost;
+
+.outer {
+  width: 100%;
+  height: 100%;
+  padding-top: var(--sizing-nav-height);
+  background-color: var(--color-alto);
+  position: relative;
+  lost-flex-container: column;
+  background: url("https://s3.amazonaws.com/weareglow-assets/assets/contact_bg.jpg");
+  background-size: cover;
+}
+
+.headline {
+  composes: headline from "styles/mixins.css";
+  line-height: 1;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  @media(--md-down) {
+    font-size: 3.5em;
+  }
+
+  @media(--xs-down) {
+    font-size: 2.5em;
+  }
+
+  @media(max-height: 700px) {
+    font-size: 3em;
+  }
+}
+
+.subtitle {
+  composes: headline_subtitle from "styles/mixins.css";
+  z-index: 3;
+  position: relative;
+  text-align: center;
+  margin-top: 0;
+
+  @media(--lg-screen-down) {
+    font-size: 1.5em;
+  }
+
+  @media(--sm-down) {
+    font-size: 1em;
+  }
+
+  @media (max-height: 600px) {
+    display: none;
+  }
+}
+
+.view_work {
+  margin-top: 3em;
+  text-align: center;
+  width: 100%;
+
+  a {
+    font-family: var(--primary-font-family);
+    font-size: 1.5em;
+
+    @media(--sm-down) {
+      font-size: 1em;
+    }
+  }
+
+  @media(--md-down) {
+    bottom: 5%;
+    margin-top: 2em;
+  }
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: table;
+}
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+
+}
+
+.intro {
+  margin-bottom: 3em;
+
+  @media (max-height: 600px) {
+    margin-bottom: 1em;
+  }
+}

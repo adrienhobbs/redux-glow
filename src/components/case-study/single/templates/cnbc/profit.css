@@ -1,0 +1,19 @@
+.profitBtn {
+  border-width: 2px;
+  border-color: #4F4F4F;  
+  border-style: solid;
+  width: 172px;
+  height: 47px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 43px;
+  font-size: 1.2em;
+  color: #4F4F4F;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background: #eeeeee;
+  }
+
+}

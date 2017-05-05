@@ -1,0 +1,21 @@
+:local {
+
+  .slider_dots {
+    display: none;
+    left: center;
+    top: center;
+    width: 12px;
+    overflow: visible !important;
+
+    @media(--sm) {
+      display: block;
+    }
+  }
+  .dot {
+    cursor: pointer;
+    svg {
+      overflow: visible;
+    }
+  }
+
+}

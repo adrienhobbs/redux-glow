@@ -1,0 +1,19 @@
+<svg id="hbo-alternate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 422 174">
+  <defs>
+    <style>
+      .hbo-alternate-1 {
+        fill: #fff;
+      }
+
+      .hbo-alternate-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 44px;
+      }
+    </style>
+  </defs>
+  <title>hbo-alternate</title>
+  <path id="path3" class="hbo-alternate-1" d="M206,1.8c13,0,50,7.1,50,43.5,0,29.3-14,38-25,40-8,1.5,23,0,23,36.7,0,52-45,50-45,50H134V1.8h72ZM176,43.3V69h25s10-1.2,10-13.5-10-12.2-10-12.2H176Zm0,62.7v26h25s10-1,10-14c0-12-10-12-10-12H176ZM0,1.8V172H47V109H77v63h47V1.8H77V66H47V1.8H0Z"/>
+  <circle id="Oval" class="hbo-alternate-2" cx="335" cy="87" r="65"/>
+  <circle id="Oval-2" class="hbo-alternate-1" cx="335" cy="87" r="35"/>
+</svg>

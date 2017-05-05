@@ -1,0 +1,183 @@
+:global {
+  #featured-work {
+    margin-top: 60px;
+    position: relative;
+    z-index: 10;
+  }
+  .project {
+    &.mobile {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  }
+  .mobile-project-wrap {
+    width: var(--sizing-outer-width);
+    margin: auto;
+     }
+  .view-button {
+    color: white;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    min-height: 83px;
+    font-size: 1em;
+    font-family: var(--primary-font-family);
+
+    div {
+      padding: 0.75em 1.5em 0.75em 1.5em;
+      line-height: 1;
+      width: 186px;
+      height:40px;
+      border-radius: 3px;
+      left: center;
+      top: center;
+    }
+  }
+}
+
+.mobile_home_width {
+  width: var(--sizing-outer-width);
+  margin: auto;
+}
+
+.mobile_project_wrap,
+.home_mobile_image,
+.about_mobile,
+.clients_mobile_wrap {
+  composes: mobile_home_width;
+}
+
+.clients_mobile_wrap {
+  padding-top: 1.5em;
+}
+
+.home_mobile {
+  background: white;
+  /* position: relative; */
+  text-align: center;
+  &_image {
+    min-height: 47%;
+  }
+
+}
+
+.clients_mobile_wrap {
+  svg,
+  div {
+    min-height: 70px;
+
+    @media(--md) {
+      min-height: 150px;
+    }
+
+    @media(--md-down) {
+      min-height: 110px;
+    }
+
+    @media(--sm-down) {
+      min-height: 70px;
+    }
+  }
+}
+
+.inner_wrap {
+  margin-top: 4%;
+  height: 41%;
+  width: 87%;
+  margin-right: auto;
+  margin-left: auto;
+
+  .featured-headline {
+    font-size: 15vw;
+  }
+
+  p {
+    color: var(--color-tin);
+  }
+
+}
+
+.headline_svg {
+  margin-bottom: 0.5em;
+}
+
+.scroll_for_more {
+  margin-top: 0;
+  text-align: center;
+  font-family: var(--primary-font-family);
+  font-size: 1.5em;
+  color: var(--color-radical-red);
+  font-weight: 600;
+}
+
+.clients_mobile {
+  background: var(--color-light-gray);
+  padding-bottom: 40px;
+  z-index: 1;
+  position: relative;
+}
+
+.services_button {
+  width: 50%;
+  text-align: center;
+  padding-left: 5px;
+  margin-top: 2em;
+  padding-right: 5px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  border-radius: 3px;
+  background-color: var(--primary-headline-color);
+  font-family: var(--primary-font-family);
+
+  a {
+    color: white;
+    background-color: var(--primary-headline-color);
+    font-family: var(--primary-font-family);
+  }
+  button {
+    background: var(--color-radical-red);
+    left: center;
+  }
+}
+
+.about_glow {
+  composes: mobile_home_width;
+  margin-top: 40px;
+  .header-image {
+    margin-bottom: 20px;
+  }
+  .featured-headline {
+    text-align: center;
+  }
+
+  .contact-bucket {
+    margin-top: 15px;
+  }
+  h2 {
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 300;
+    font-family: var(--primary-font-family);
+    line-height: 1.5;
+    color: var(--color-dove-gray);
+    text-align: center;
+  }
+}
+
+.clients.mobile {
+  .headline-wrap {
+    margin-bottom: 1em;
+  }
+}
+
+.headline {
+  composes: headline from 'styles/mixins.css';
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.5em;
+}

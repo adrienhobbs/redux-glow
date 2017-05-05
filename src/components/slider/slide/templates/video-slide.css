@@ -1,0 +1,95 @@
+:global {
+  #video-home-overlay {
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 137;
+  }
+}
+
+.featured_headline {
+  color: black;
+  font-size: 4.2em;
+  margin-bottom: 20px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copy_wrap {
+  text-align: center;
+  top: center;
+  left: center;
+  width: 87%;
+  max-width: 898px;
+
+  p {
+    font-family: var(--primary-font-family);
+    width: 87%;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 1.875em;
+    line-height: 1.2;
+
+    @media(--md-down) {
+      font-size: 1.5em;
+    }
+
+    @media(--xs-down) {
+      font-size: 1em;
+    }
+  }
+}
+
+.home_video {
+  left: center;
+  top: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.scroll_down {
+  position: absolute;
+  left: 50%;
+  top: 94%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  color: white;
+  letter-spacing: 4px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  .arrow {
+    font-size: 1.5rem;
+  }
+
+}
+
+.video_placeholder {
+  height: 100%;
+  width: 100%;
+  background-image: url('https://s3.amazonaws.com/weareglow-assets/assets/video/Glow_Website_Animatic_poster.jpg');
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.video_intro {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+}
+

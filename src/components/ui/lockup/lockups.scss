@@ -1,0 +1,101 @@
+@import 'base';
+:global {
+  .project-title-svg {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+
+    @include media($xsmall-large-screen) {
+      position: absolute;
+      @include center(xy);
+      top: 82%;
+    }
+    @include media(max-height 900px) {
+      top: 80%;
+    }
+    @include media($large-screen-up) {
+      //49% for 1440
+      width: 60%;
+    }
+
+    &.single {
+      @include media($xsmall-large-screen) {
+        position: relative;
+        @include transform(translate(0, 0));
+        top: auto;
+        left: auto;
+      }
+    }
+    svg {
+      width:100%;
+      height: 100%;
+      max-height: 132px;
+      @include media($large-screen-up) {
+        max-height: 168px;
+      }
+    }
+  }
+}
+
+
+
+.12-monkeys-lockup {
+  width: 1102px;
+  height: 177px;
+}
+
+.ascension-lockup {
+  width: 982px;
+  height: 152px;
+}
+
+.carla-lockup {
+  width: 979px;
+  height: 165px;
+}
+
+.casual-lockup {
+  width: 886px;
+  height: 152px;
+}
+
+.ilny-lockup {
+  width: 796px;
+  height: 165px;
+}
+
+.mindy-lockup {
+  width: 1106px;
+  height: 142px;
+}
+
+.proof-lockup {
+  width: 605px;
+  height: 170px;
+}
+
+.sharknado-lockup {
+  width: 1152px;
+  height: 141px;
+}
+
+.veep-lockup {
+  width: 754px;
+  height: 168px;
+}
+
+.westminster-lockup {
+  width: 1156px;
+  height: 238px;
+}
+
+.winter-calendar-lockup {
+  width: 1030px;
+  height: 168px;
+}
+
+.yahoo-lockup {
+  width: 1069px;
+  height: 142px;
+}
+

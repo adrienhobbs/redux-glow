@@ -1,0 +1,141 @@
+@import 'base';
+:global {
+
+  .study-outer, .case-study-single {
+    @include size(100%);
+  }
+
+  .info-container {
+    &-outer {
+      @include position(absolute, null null 0 0);
+      width: 100%;
+      height: 30%;
+    }
+
+    &-inner {
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      width:100%;
+      height: 50%;
+
+    }
+  }
+
+  .info {
+    @include position(relative, null null 0 0);
+    width: 100%;
+    svg {
+      @include position(absolute, null null 0 0);
+    }
+  }
+
+  .study-title-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    svg {
+      @include center(xy);
+      height:100%;
+      max-width: 900px;
+    }
+  }
+
+  .study-title-outer {
+    @include position(absolute, null null 0 0);
+    height: 48%;
+    width: 90%;
+    @include center(x);
+  }
+
+  #view-case-study {
+    cursor: pointer;
+  }
+
+  .y-overflow-auto {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .featured-stats {
+    display: none;
+    @include media($medium-screen-up) {
+      display: block;
+    }
+  }
+
+  .featured-info-outer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+
+    .view-case-study {
+      cursor: pointer;
+      text-align: center;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 90%;
+      width: 100%;
+
+      svg {
+        width: 70%;
+        @include media($large-screen-up) {
+          width: auto;
+        }
+        @include media(max-width 900px) {
+          width: 60%;
+        }
+      }
+      @include media($large-screen-up) {
+        top: 100%;
+      }
+    }
+  }
+}
+
+:local {
+
+  .featuredSlideContainer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .featuredInfo {
+    &Inner {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-size: cover;
+      &Wrap {
+        @include media($xsmall-large-screen) {
+          height: 100%;
+        }
+        position: absolute;
+        bottom: 0%;
+        left: 0;
+        @include media($medium-large-screen) {
+          position: absolute;
+          bottom: 0;
+        }
+        @include media($large-screen-up) {
+          @include position(absolute, null null 5% 0);
+          position: absolute;
+          bottom: 8%;
+        }
+        width:100%;
+      }
+    }
+  }
+}

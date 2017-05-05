@@ -1,0 +1,60 @@
+@use lost;
+
+/* @mixin grid-margin($margin-bottom) { */
+/*   margin-bottom: $margin-bottom; */
+/* } */
+
+/* @mixin cst-row($row-width: $default-row-width) { */
+/*   lost-center: $row-width; */ 
+/*   width:100%; */
+/* } */
+
+.row {
+  lost-center: 1620px;
+  width: 100%;
+  lost-flex-container: row;
+}
+
+.rowLarge {
+  lost-center: 1770px;
+  width: 100%;
+}
+
+.headline {
+  color: var(--color-radical-red);
+  font-family: var(--primary-font-family);
+  font-weight: bold;
+  font-size: 4.5em;
+  margin-bottom: 0;
+  letter-spacing: -2px;
+  @media(--md-down) {
+    font-size: 3.5em;
+  }
+}
+
+.study_headline {
+  font-family: var(--primary-font-family);
+  font-weight: bold;
+  font-size: 5em;
+  margin-bottom: 30px;
+  margin-top: 3%;
+  letter-spacing: -2px;
+  text-align: center;
+  @media(--md-down) {
+    font-size: 2.5em;
+  }
+}
+
+.headline_subtitle {
+  font-style: italic;
+  font-family: var(--secondary-font-family);
+  margin-top: -1%;
+  color: var(--color-slate-gray);
+  font-size: 1.35em;
+  font-weight: 700;
+  @media(--sm-down) {
+    font-size: 0.9em;
+  }
+}
+
+

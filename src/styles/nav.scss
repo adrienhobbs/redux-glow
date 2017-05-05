@@ -1,0 +1,189 @@
+// @import 'base';
+// @mixin nav-height() {
+//   height: $nav-height;
+//   min-height: em(50);
+//   max-height: 99.8px;
+// }
+
+// .nav {
+//   background-color: white;
+//   &-inner {
+//     padding-left: $frame-width;
+//     padding-right: $frame-width;
+//     width: 100%;
+//     // max-width: 1920px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     lost-flex-container: row;
+//     @include nav-height;
+//     .nav-right {
+//       lost-flex-container: row;
+//       lost-column: 6/12 0 0;
+//       @include media($large-screen-up) {
+//         lost-column: 5/12 0 0;
+//       }
+//       @include media($under-medium) {
+//         display: none;
+//       }
+//     }
+//     .nav-left {
+//       // lost-column: 7/12 0 0;
+//       // @include media($medium-large-screen) {
+//       //   lost-column: 6/12 0 0;
+//       // }
+//       lost-column: 6/12 0 0;
+//       @include media($large-screen-up) {
+//         lost-column: 7/12 0 0;
+//       }
+//       .logo {
+//         margin-left: $frame-width;
+//         @include size(6.5104vw);
+//         @include media($under-medium) {
+//           display: inline-block;
+//         }
+//         background: $radical-red;
+//         min-height: em(60);
+//         min-width: em(60);
+//         max-width: rem(125);
+//         max-height: rem(125);
+//         position: relative;
+//         cursor: pointer;
+//         svg {
+//           position: absolute;
+//           top: 50%;
+//           left: 50%;
+//           @include transform(translate(-50%, -50%));
+//         }
+//       }
+//     }
+
+//   }
+
+//   @include nav-height;
+//   position: fixed;
+//   z-index: 100;
+//   width: 100%;
+//   left: 0;
+//   top: 0;
+//   background-color: white;
+
+//   .nav-item {
+//     font-size: 1.1em;
+//     @include media($large-screen-up) {
+//       font-size: 1.2em;
+//     }
+//     lost-column: 1/6 0 0;
+//     a {
+//       font-family: $gt;
+//       @include user-select(none);
+//     }
+//     @include nav-height;
+//     lost-column: 1/6 0 0; 
+//     lost-align: middle-center;
+//     cursor: pointer;
+
+//     svg.line {
+//       width: 0;
+//       top:69% !important;
+//     }
+//   }
+
+
+
+//   // .twitter-svg {
+//   //   @include size(40px);
+//   //   right: 0;
+//   //   left: auto;
+//   //   svg {
+//   //     fill: $radical-red;
+//   //     @include size(40px);
+//   //     float: right;
+//   //   }
+//   // }
+
+// }
+
+// @mixin frame() {
+//   width: $frame-width;
+//   max-width: 75px;
+//   height: 100vh;
+//   background-color: white;
+//   position: fixed;
+//   z-index: 12;
+//   top: 0;
+//   min-width: $min-frame-width;
+// }
+// .frame-left {
+//   @include frame;
+//   left: 0;
+// }
+
+// .frame-right {
+//   @include frame;
+//   right: 0;
+// }
+
+// .hamburger {
+//   cursor: pointer;
+//   @include media($medium-screen-up) {
+//     display: none;
+//   }
+
+//   display: inline-block;
+//   position: absolute;
+//   right: $frame-width;
+//   .ham {
+//     @include nav-height;
+//   }
+//   svg {
+//     @include center(y);
+//     right: 0;
+//   }
+//   @include nav-height;
+// }
+
+// nav.mobile {
+//   position: relative;
+//   z-index: 100;
+//   lost-flex-container: column;
+//   lost-align: middle-center;
+//   top: 0;
+//   left: 0;
+//   height: 100vh;
+//   position: fixed;
+//   width: 100vw;
+//   background: white;
+//   // @include transform(scaleY(0));
+//   visibility: hidden;
+//   opacity: 0;
+//   .inner {
+//   lost-flex-container: column;
+//     height: 50vh;
+//     width: 100%;
+//     .nav-item {
+//       // margin-top: em(20);
+//       // margin-bottom: em(20);
+//       cursor: pointer;
+//       lost-row: 1/5 0 0;
+//       lost-align: middle-center;
+//       .line {
+//         display: none;
+//       }
+//       &:hover {
+//         background: $radical-red;
+//         a {
+//           color: white !important;
+//         }
+//       }
+//       a {
+//         font-size: 3em;
+//         font-weight: bold;
+//       }
+//       text-align: center;
+//     }
+//   }
+
+// }
+
+
+

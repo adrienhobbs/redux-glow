@@ -1,0 +1,58 @@
+@use lost;
+.itemOne {
+  lost-column: 707/1101 2 15px;
+  img {
+    width: 96.5%;
+  }
+}
+
+.itemTwo {
+  lost-column: 394/1101 1 15px;
+
+  video {
+    width: 100%;
+  }
+}
+
+.itemThree {
+  lost-column: 1 0 0;
+  video {
+    width: 100%;
+  }
+}
+
+.rowOne {
+  lost-column: 403/1101 3 15px;
+
+  /* @media(--sm-down) { */
+  /*   lost-column: 1 0 0; */
+  /* } */
+  img {
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.rowTwo {
+  lost-column: 349/1101 3 15px;
+
+  /* @media(--sm-down) { */
+  /*   lost-column: 1 0 0; */
+  /* } */
+  img {
+    width: 100%;
+  }
+}
+
+.rowThree {
+  lost-column: 349/1101 3 15px;
+  /* @media(--sm-down) { */
+  /*   lost-column: 1 0 0; */
+  /* } */
+  img, video {
+    width: 100%;
+  }
+}
+
+

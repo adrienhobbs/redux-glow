@@ -1,0 +1,12 @@
+<svg id="TNT_Logo" data-name="TNT Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.2 125.21">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #666;
+      }
+    </style>
+  </defs>
+  <title>tnt</title>
+  <path class="cls-1" d="M40.5,43.9H52.9c3.1,0,4.6.9,6.2,3.4L71.6,67H72V43.9h50.2a62.48,62.48,0,0,0-119.3,0H40.5Z" transform="translate(0 0.01)"/>
+  <path class="cls-1" d="M110.7,53V90H98.2V53H83.9V90H75.6c-3.1,0-4.6-.9-6.2-3.4L53.3,62.4H53V90H41V53H26.8V90H14.1V53H0.7A74.75,74.75,0,0,0,0,62.6a62.6,62.6,0,0,0,125.2,0,74.76,74.76,0,0,0-.7-9.6H110.7Z" transform="translate(0 0.01)"/>
+</svg>

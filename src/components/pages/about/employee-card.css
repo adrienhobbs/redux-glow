@@ -1,0 +1,70 @@
+.employee_card {
+  text-align: center;
+  backface-visibility: hidden;
+  position: relative;
+  overflow: hidden;
+}
+
+.img_one {
+  cursor: pointer;
+  bottom: -6px;
+  position: relative;
+}
+
+.img_roll {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  visibility: hidden;
+}
+
+.employee_card_inner {
+  padding-top: 60px;
+  background-image: url("https://s3.amazonaws.com/weareglow-assets/employee-photos/Employee_Card_Shape.svg");
+  background-size: cover;
+  background-position: top center;
+  height: 168px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(200px);
+  transform-origin: top center;
+  width: 100%;
+  @media(--lg) {
+    padding-top: 70px;
+  }
+}
+
+.employee_card_inner_wrap {
+  max-width: 95%;
+}
+
+.employee_name {
+  font-family: var(--primary-font-family);
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: -0.025em;
+  color: var(--color-radical-red);
+  @media(--lg) {
+    font-size: 26px;
+  }
+  @media(--xs-down) {
+    font-size: 36px;
+  }
+}
+
+.employee_position {
+  margin-top: -5px;
+  font-family: var(--secondary-font-family);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-glow-blue);
+  @media(--lg) {
+    font-size: rem(15);
+  }
+  @media(--xs-down) {
+    font-size: 26px;
+  }
+}

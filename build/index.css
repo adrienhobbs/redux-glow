@@ -1,0 +1,68 @@
+@custom-media --under-medium (max-width: 991px);
+@custom-media --md-lg (min-width: 992px) and (max-width: 1200px);
+@custom-media --lg-landscape (max-width: 1024px) and (orientation: landscape);
+
+@custom-media --lg-up (min-width: 1201px);
+@custom-media --xs (max-width: 34em);
+@custom-media --sm (min-width: 34em);
+@custom-media --md (min-width: 48em);
+@custom-media --lg (min-width: 62em);
+@custom-media --xl (min-width: 75em);
+@custom-media --xs-down (max-width: 34em);
+@custom-media --sm-down (max-width: 48em);
+@custom-media --md-down (max-width: 62em);
+@custom-media --lg-down (min-width: 0em);
+@custom-media --lg-screen-down (max-width: 62em);
+@custom-media --xl-screen-down (max-width: 75em);
+@custom-media --above-laptop (min-width: 1441px);
+@custom-media --laptop (max-width: 1440px);
+@custom-media --copy-max (max-width: 860px);
+
+:root {
+  /* Colors */
+  --color-blue: #477dca;
+  --color-dark-gray: #a7a7a7;
+  --color-medium-gray: #999;
+  --color-light-gray: #d4d4d4;
+  --color-dove-gray: #737373;
+  --color-slate-gray: #666666;
+  --color-stack: #8E8E8E;
+  --color-pink: #f12d5c;
+  --color-iron: #CCCCCC;
+  --color-mercury: #E6E6E6;
+  --color-stack: rgba(142, 142, 142, 1);
+  --color-tin: rgba(128, 128, 128, 1);
+  --color-tin-darkened: darken($tin, 10%);
+  --color-roof: rgba(0, 55, 74, 1);
+  --color-alto: #DADADA;
+  --color-concrete: rgb(242, 242, 242);
+  --color-glow-blue: rgb(72,195,211);
+  --color-radical-red: rgb(241, 45, 92);
+  --color-storm-dust: rgb(167,167,167);
+
+  --primary-headline-color: rgb(241, 45, 92);
+  --secondary-headline-color: rgb(72, 195, 211);
+
+  /* Sizing */
+  --sizing-nav-height: 5.2vw;
+  --sizing-frame-width: 3.90625vw;
+  --sizing-min-frame-width: 15px;
+  --sizing-outer-width: 92.1875%;
+  --global-max-width: 1620px;
+
+  --sizing-nav-height-large: 100px;
+  --sizing-nav-height-medium: 75px;
+  --sizing-nav-height-small: 60px;
+  --sizing-nav-height-xsmall: 50px;
+
+  --sizing-section-margin: 50px;
+  --sizing-side-pad-large: 75px;
+  --sizing-side-pad-medium: 40px;
+  --sizing-side-pad-small: 25px;
+  --sizing-side-pad-xsmall: 15px;
+
+  /* FONTS */
+  --primary-font-family: "GT-Walsheim";
+  --secondary-font-family: "Domaine";
+
+}

@@ -19,10 +19,25 @@
     "__BASENAME__" : false
   },
   "rules": {
-    "semi" : [2, "never"],
-    "space-infix-ops": 0,
-    "max-len": [2, 120, 2],
+    "semi" : [2, "always"],
+    "jsx-equals-spacing": [0, "never"],
+    "comma-dangle" : [1, "never"],
+    "func-names"   : 0,
+    "key-spacing"  : 0,
+    "space-before-function-paren" : [2, "always"],
+    "react/jsx-space-before-closing" : [0, "never"],
+    "no-else-return"   : 0,
+    "no-multi-spaces"  : 0,
+    "quotes"           : [2, "single"],
+    "jsx-quotes"       : [1, "prefer-single"],
+    "one-var"          : 0,
+    "no-undefined"     : 0,
+    "no-undef"         : 0,
+    "new-cap"          : 0,
     "flow-vars/define-flow-type": 1,
-    "flow-vars/use-flow-type": 1
+    "flow-vars/use-flow-type": 1,
+    "no-useless-constructor": 0,
+    "react/jsx-no-bind": 0,
+    "react/jsx-equal-spacing": 0
   }
 }

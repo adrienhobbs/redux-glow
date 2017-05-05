@@ -1,0 +1,151 @@
+@use lost;
+
+:global {
+  .error {
+    input, 
+    textarea {
+      &:hover {
+        border: 2px solid var(--color-radical-red);
+      }
+    }
+  }
+
+  .valid {
+    input,
+    textarea {
+      border: 2px solid #9EDE9E;
+    }
+  }
+}
+
+.form_inner {
+  p {
+    margin-bottom: 20px;
+    font-family: var(--primary-font-family);
+    color: var(--color-storm-dust);
+    font-weight: normal;
+    letter-spacing: 0;
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
+}
+
+.message_button_ctr {
+  position: relative;
+  lost-center: 50%;
+  color: white;
+  button {
+    color: white;
+    margin-top: 20px;
+    width: 80%;
+    background-color: transparent;
+
+  }
+}
+
+.message {
+  text-align: center;
+  font-family: var(--primary-font-family);
+  color: var(--color-slate-gray);
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  left: center;
+  font-size: 1.2rem !important;
+  top: center;
+  button {
+    color: white;
+  }
+}
+.contact_form_outer {
+  position: relative;
+}
+.contact_form {
+  margin-bottom: 10px;
+  position: relative;
+
+  input {
+    overflow: visible;
+    position: relative;
+    margin-bottom: 0;
+    height: 46px;
+  }
+
+  label {
+    padding-left: 0.5em;
+    color: var(--color-iron);
+  }
+
+  .contact-link {
+    font-weight: normal;
+    padding-right: 15px;
+  }
+
+  textarea {
+    width: 100%;
+    margin-bottom: 0;
+    height: 46px;
+  }
+
+  button {
+    font-family: var(--primary-font-family);
+    font-size: 1.25em;
+    border-radius: 0;
+    font-weight: normal;
+    width: 100%;
+    background-color: transparent;
+    height: 46px;
+    color: var(--color-radical-red);
+
+    &:hover, &:focus {
+      background: transparent;
+      color: var(--color-radical-red);
+    }
+
+  }
+
+  button:disabled {
+    opacity: 1 !important;
+    background-color: transparent;
+    background: transparent;
+  }
+
+}
+
+.field {
+  lost-column: 1/2;
+  @media (--sm-down) {
+    lost-column: 1 0 0;
+  .error {
+    border: 2px solid red;
+  }
+  }
+}
+
+.input_fields {
+  lost-flex-container: row;
+}
+
+.connect_headline {
+  color: var(--primary-headline-color);
+  font-family: var(--primary-font-family);
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.message_button_ctr {
+
+  button {
+    background-color: var(--color-radical-red);
+    text-align: center;
+    font-family: var(--primary-font-family);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width:100%;
+  }
+}
+
+.text_area_message {
+  margin-top: 10px;
+  lost-column: 10/10 10 0;
+}

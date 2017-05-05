@@ -1,0 +1,25 @@
+/* @use postcss-autoreset; */
+
+.submit_btn_ctr {
+  width: 100%;
+  text-align: right;
+  button {
+    /* all: initial; */
+    width: 100%;
+    font-family: var(--primary-font-family);
+    font-size: 1.75em;
+    color: var(--primary-headline-color);
+    cursor: pointer;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 1em;
+    background-color: transparent;
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}

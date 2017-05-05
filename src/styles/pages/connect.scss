@@ -1,0 +1,102 @@
+// :global {
+//   .mapboxgl-canvas-container {
+//     position: relative;
+//     height:100%;
+//   }
+//   .submit-btn-ctr {
+//     button {
+//       &:hover {
+//         background: transparent;
+//       }
+//     }
+//   }
+//   .full-width-container {
+//     lost-flex-container: row;
+//     position: relative;
+//     max-width: 1920px;
+//     margin: auto;
+//   }
+//   .connect-map-inner {
+//     &-left {
+//       lost-column: 1/2 0 0;
+//       @include media($small-phone-under) {
+//         lost-column: 0 0 0;
+//       }
+//       @include media($under-medium) {
+//         lost-column: 1/4 0 0;
+//       }
+//     }
+//     &-right {
+//       lost-column: 1/2 0 0;
+//       position: relative;
+//       background-color: rgba(255,255,255,0.9);
+//       padding: 2%;
+//       @include media($under-medium) {
+//         lost-column: 3/4 0 0;
+//       }
+//       @include media($small-phone-under) {
+//         lost-column: 1 0 0;
+//       }
+
+//     }
+//   }
+
+//   // .connect-inner {
+//     //   lost-column: 1/2 2;
+//     //   @include media($under-medium) {
+//       //     lost-column: 1 0;
+//     //   }
+//     //   &.left {
+//       //     position: relative;
+//       //     height: 800px;
+//     //   }
+//   // }
+
+//   #connect-page-map {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     width: 100%;
+//   }
+//   .connect-headline {
+//     @include title;
+//     text-align: left;
+//     font-size: 1.8em !important;
+//     @include media($medium-large-screen) {
+//       font-size: 1.6em !important;
+//     }
+//     @include media($small-phone-under) {
+//       font-size: 1.4em !important;
+//     }
+//   }
+//   div.connect-information {
+//     @include cst-row($row-width: 100%);
+//   }
+//   .connect-info-box {
+//     * {
+//       font-family: $gt;
+//     }
+//     lost-column: 1/2;
+//     @include media($under-medium) {
+//       lost-column: 1/2;
+//       margin-bottom: em(20);
+//     }
+//   }
+
+//   .connect-info-box-inner {
+//     position: relative;
+//     @include bottom-rule-accent($align: left);
+//     margin-bottom: em(10);
+//   }
+//   .contact-link {
+//     height: 40px;
+//     width: 150px;
+//     padding: 0;
+//   }
+
+//   .newsletter {
+//     margin-bottom: em(25);
+//   }
+// }

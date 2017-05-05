@@ -1,0 +1,26 @@
+@import 'base';
+:global {
+  #twitter_circle, #email_circle, #share_box {
+    // stroke:#C03D3B;
+    stroke-width:3;
+    stroke-miterlimit:10;
+  }
+  #twitter_circle, #email_circle, #facebook_circle, #share_box {
+    // fill: black;
+    fill-opacity: 0;
+  }
+  .clip-svg {
+    // fill:#FFFFFF;
+    color: white;
+    font-family: $gt;
+    font-size:21px;
+    letter-spacing:2px;
+  }
+
+  #facebook_icon, #email_icon, #twitter_icon {
+    opacity: 0;
+    cursor: pointer;
+  }
+
+
+}
