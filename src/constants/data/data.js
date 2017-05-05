@@ -24,11 +24,11 @@ const data = [
     type: 'case-study',
     backgroundImageUrl: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
-    logoColor: '#1B2326',
+    logoColor: '#909090',
     secColor: '#1B2326',
     gradientTop: '#909090',
     gradientBottom: '#1B2326',
-    featuredProjectTitleColor: '#c03d3b',
+    featuredProjectTitleColor: '#909090',
     cat: ' ― hbo | night of ― ',
     templateName: 'NightOf',
     copyColor: '#ffffff',
@@ -59,15 +59,15 @@ const data = [
     },
     results: {
       stats: [
-        {label: 'Impressions', stat: '47MM+'},
-        {label: 'Video views', stat: '3MM'},
-        {label: 'Fans reached', stat: '+20MM'},
+        {label: 'Impressions', stat: '47M+'},
+        {label: 'Video views', stat: '3M'},
+        {label: 'Fans reached', stat: '+20M'},
         {label: 'Fans on Facebook', stat: '145K+'}
       ],
       statColor: '#ffffff',
       statLabelColor: '#909090',
       bgColor: '#161D20',
-      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/device.png',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/the-night-of/devices.png',
       template: 'Standard'
     },
     endShape: {
