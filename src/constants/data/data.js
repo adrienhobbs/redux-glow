@@ -86,7 +86,7 @@ const data = [
     type: 'case-study',
     backgroundImageUrl: s3 + 'case-studies/vh1/antm/landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/vh1/antm/landscape.jpg',
-    logoColor: 'rgb(37,37,37)',
+    logoColor: '#EBA6B1',
     secColor: 'rgb(37, 37, 37)',
     gradientTop: '#EBA6B1',
     gradientBottom: 'rgb(37,37,37)',
