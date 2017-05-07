@@ -13,132 +13,6 @@ const data = [
     gradientBottom: '#0e374a',
     cat: '- we are glow -'
   },
-
-  {
-    featured: true,
-    client: 'hbo',
-    project: 'the night of',
-    title: 'the night of',
-    subtitle: 'social media campaign',
-    subtitleSlug: 'social media campaign',
-    type: 'case-study',
-    backgroundImageUrl: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
-    logoColor: '#909090',
-    secColor: '#1B2326',
-    gradientTop: '#909090',
-    gradientBottom: '#1B2326',
-    featuredProjectTitleColor: '#909090',
-    cat: ' ― hbo | night of ― ',
-    templateName: 'NightOf',
-    copyColor: '#ffffff',
-    headlineColor: '#909090',
-    services: ['social strategy', 'content lab', 'creative execution', 'motion graphics'],
-    sidebar: {
-      logoColor: '#ffffff',
-      copyColor: '#ffffff',
-      headlineColor: '#909090',
-      customClientLogo: 'hbo-alternate'
-    },
-    backbar: {
-      bgColor: '#1B2326'
-    },
-    shareButton: {
-      strokeColor: '#C03D3B',
-      copyColor: '#ffffff'
-    },
-    mobile: {
-      bgColor: '#1B2326'
-    },
-    lockup: {
-      className: 'veep-lockup',
-      projectColor: '#fff',
-      featured: {
-        projectColor: '#909090'
-      }
-    },
-    results: {
-      stats: [
-        {label: 'Impressions', stat: '47M+'},
-        {label: 'Video views', stat: '3M'},
-        {label: 'Fans reached', stat: '+20M'},
-        {label: 'Fans on Facebook', stat: '145K+'}
-      ],
-      statColor: '#ffffff',
-      statLabelColor: '#909090',
-      bgColor: '#161D20',
-      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/the-night-of/devices.png',
-      template: 'Standard'
-    },
-    endShape: {
-      bgColor: '#0A2C3A'
-    },
-    aboutCopy: '<p>Our objective for HBO’s The Night Of was to enlist fans of true crime and realistic crime fiction to watch, discuss, and advocate for The Night Of - an addictive, cinematic exploration of the modern judicial system.</p><p>The social strategy aimed to activate armchair detectives of similar true crime programming such as True Detective and The Jinx.  We did this by creating thought-provoking, shareable content that allowed fans to theorize about Naz’s night and explore more nuances of the judicial system that he experienced first hand.  The content sought to dangle the carrot, letting fans have enough to piece together themselves.</p>'
-  },
-
-  {
-    featured: true,
-    client: 'hbo',
-    project: 'ballers',
-    title: 'ballers',
-    subtitle: 'social media campaign',
-    subtitleSlug: 'social media campaign',
-    type: 'case-study',
-    backgroundImageUrl: s3 + 'case-studies/hbo/ballers/landscape.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/hbo/ballers/landscape.jpg',
-    logoColor: '#EEC83F',
-    secColor: '#0D434B',
-    gradientTop: '#EEC83F',
-    gradientBottom: '#0D434B',
-    featuredProjectTitleColor: '#EEC83F',
-    cat: ' ― hbo | ballers ― ',
-    templateName: 'Ballers',
-    shapeColor: '#0D434B',
-    copyColor: 'rgba(255, 255, 255, 0.75)',
-    headlineColor: '#EEC83F',
-    services: ['social strategy', 'community management', 'media campaign', 'creative execution', 'video & motion design'],
-    recognition: ['shorty: best multi-platform', 'shorty: best twitter campaign'],
-    sidebar: {
-      logoColor: '#ffffff',
-      copyColor: '#577381',
-      headlineColor: '#ffffff',
-      customClientLogo: 'hbo-alternate'
-    },
-    backbar: {
-      bgColor: '#EBA6B1'
-    },
-    shareButton: {
-      strokeColor: '#C03D3B',
-      copyColor: '#ffffff'
-    },
-    mobile: {
-      bgColor: '#0D434B'
-    },
-    lockup: {
-      className: 'ballers-lockup',
-      projectColor: '#FFFFFF',
-      featured: {
-        projectColor: '#EEC83F'
-      }
-    },
-    results: {
-      stats: [
-        {label: 'pieces of custom content created', stat: '350+'},
-        {label: 'instagram growth over season 2', stat: '+580%'},
-        {label: 'art direction', stat: 'shorty'},
-        {label: 'twitter engagement over S2', stat: '+31K'}
-      ],
-      statColor: '#ffffff',
-      statLabelColor: '#EEC83F',
-      bgColor: '#0A363C',
-      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/ballers/device.png',
-      template: 'Standard'
-    },
-    endShape: {
-      bgColor: '#0A2C3A'
-    },
-    aboutCopy: '<p>The HBO series Ballers reveals there’s a lot more to being a baller than a multi-million dollar deal. You have to make a statement. To kick off Season 2 of Ballers on HBO, the GLOW social and creative teams did just that with a social content design strategy to launch the official Ballers HBO Instagram.</p><p>The coordination between GLOW’s social and creative teams produced an eye-catching combination of video, static and illustrated social content that was seamlessly intertwined week-over-week with connective design elements showcasing the fresh, impressive, and winning qualities of a true Baller.</p><p>Simultaneously applying the Ballers design across social platforms, GLOW’s social and creative teams built digital destinations for fans to ball out every week.</p>'
-  },
   {
     featured: true,
     client: 'vh1',
@@ -203,6 +77,131 @@ const data = [
   },
   {
     featured: true,
+    client: 'hbo',
+    project: 'ballers',
+    title: 'ballers',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/hbo/ballers/landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/ballers/landscape.jpg',
+    logoColor: '#EEC83F',
+    secColor: '#0D434B',
+    gradientTop: '#EEC83F',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#EEC83F',
+    cat: ' ― hbo | ballers ― ',
+    templateName: 'Ballers',
+    shapeColor: '#0D434B',
+    copyColor: 'rgba(255, 255, 255, 0.75)',
+    headlineColor: '#EEC83F',
+    services: ['social strategy', 'community management', 'media campaign', 'creative execution', 'video & motion design'],
+    recognition: ['shorty: best multi-platform', 'shorty: best twitter campaign'],
+    sidebar: {
+      logoColor: '#ffffff',
+      copyColor: '#577381',
+      headlineColor: '#ffffff',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#EEC83F'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'ballers-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#EEC83F'
+      }
+    },
+    results: {
+      stats: [
+        {label: 'pieces of custom content created', stat: '350+'},
+        {label: 'instagram growth over season 2', stat: '+580%'},
+        {label: 'art direction', stat: 'shorty'},
+        {label: 'twitter engagement over S2', stat: '+31K'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#EEC83F',
+      bgColor: '#0A363C',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/ballers/device.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>The HBO series Ballers reveals there’s a lot more to being a baller than a multi-million dollar deal. You have to make a statement. To kick off Season 2 of Ballers on HBO, the GLOW social and creative teams did just that with a social content design strategy to launch the official Ballers HBO Instagram.</p><p>The coordination between GLOW’s social and creative teams produced an eye-catching combination of video, static and illustrated social content that was seamlessly intertwined week-over-week with connective design elements showcasing the fresh, impressive, and winning qualities of a true Baller.</p><p>Simultaneously applying the Ballers design across social platforms, GLOW’s social and creative teams built digital destinations for fans to ball out every week.</p>'
+  },
+  {
+    featured: true,
+    client: 'hbo',
+    project: 'the night of',
+    title: 'the night of',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
+    logoColor: '#909090',
+    secColor: '#1B2326',
+    gradientTop: '#909090',
+    gradientBottom: '#1B2326',
+    featuredProjectTitleColor: '#909090',
+    cat: ' ― hbo | night of ― ',
+    templateName: 'NightOf',
+    copyColor: '#ffffff',
+    headlineColor: '#909090',
+    services: ['social strategy', 'content lab', 'creative execution', 'motion graphics'],
+    sidebar: {
+      logoColor: '#ffffff',
+      copyColor: '#ffffff',
+      headlineColor: '#909090',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#1B2326'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#1B2326'
+    },
+    lockup: {
+      className: 'nightof-lockup',
+      projectColor: '#fff',
+      featured: {
+        projectColor: '#909090'
+      }
+    },
+    results: {
+      stats: [
+        {label: 'Impressions', stat: '47M+'},
+        {label: 'Video views', stat: '3M'},
+        {label: 'Fans reached', stat: '+20M'},
+        {label: 'Fans on Facebook', stat: '145K+'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#909090',
+      bgColor: '#161D20',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/the-night-of/devices.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>Our objective for HBO’s The Night Of was to enlist fans of true crime and realistic crime fiction to watch, discuss, and advocate for The Night Of - an addictive, cinematic exploration of the modern judicial system.</p><p>The social strategy aimed to activate armchair detectives of similar true crime programming such as True Detective and The Jinx.  We did this by creating thought-provoking, shareable content that allowed fans to theorize about Naz’s night and explore more nuances of the judicial system that he experienced first hand.  The content sought to dangle the carrot, letting fans have enough to piece together themselves.</p>'
+  },
+
+  {
+    featured: false,
     client: 'hulu',
     project: 'mindy',
     title: 'the mindy project',
