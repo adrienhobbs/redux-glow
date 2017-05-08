@@ -342,7 +342,7 @@ const data = [
     },
     copyColor: '#ffffff',
     lockup: {
-      className:       'sharknado-lockup',
+      className:       'znation-lockup',
       projectColor:    '#fff',
       featured:        {
         projectColor:  '#a3373f'

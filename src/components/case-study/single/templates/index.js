@@ -39,7 +39,7 @@ const CaseStudyTemplates = (function templates () {
     Hunters: Hunters,
     Younger: Younger,
     Profit: Profit,
-    Ballers: Ballers
+    Ballers: Ballers,
     Znation: Znation
   };
 }());
