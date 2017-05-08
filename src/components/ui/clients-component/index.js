@@ -3,18 +3,18 @@ import ClientLogo from 'components/ui/svg-sprites/svg-sprite.js';
 import styles from './client-logos.css';
 
 const clients = [
-  'tbs',
-  'syfy',
-  'hbo',
-  'cartoon-network',
+  'ifc',
+  'vh1',
+  'moet',
+  'nickjr',
   'westminster',
   'ilny',
-  'usa',
-  'tnt',
+  'hbo',
+  'hearst',
   'cinemax',
   'hulu',
   'carla-hall',
-  'history'
+  'nick'
 ];
 
 export class ClientsBar extends React.Component {

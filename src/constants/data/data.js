@@ -15,6 +15,193 @@ const data = [
   },
   {
     featured: true,
+    client: 'vh1',
+    project: 'antm',
+    title: 'antm',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/vh1/antm/landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/vh1/antm/landscape.jpg',
+    logoColor: '#EBA6B1',
+    secColor: 'rgb(37, 37, 37)',
+    gradientTop: '#EBA6B1',
+    gradientBottom: 'rgb(37,37,37)',
+    clientLogoColor: '#6eb116',
+    headlineColor: '#EBA6B1',
+    copyColor: 'rgba(255, 255, 255, 0.75)',
+    cat: ' ― vh1 | antm ― ',
+    templateName: 'ANTM',
+    shapeColor: 'rgb(37,37,37)',
+    results: {
+      stats: [
+        {label: 'Impressions', stat: '1/2B'},
+        {label: 'Video Views', stat: '+46M'},
+        {label: 'Engagements', stat: '+20M'},
+        {label: 'Creative Assets Crafted', stat: '+3K'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#ECA7B2',
+      bgColor: '#1E1E1E',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/vh1/antm/device.png',
+      template: 'Standard'
+    },
+    mobile: {
+      bgColor: 'rgb(37,37,37)'
+    },
+    services: ['social strategy', 'community management', 'content lab', 'creative execution', 'video', 'motion design', 'interactive facebook live', 'talent content capture'],
+    lockup: {
+      className: 'antm-lockup',
+      logoColor: '#FFFFFF',
+      projectColor:    '#FFFFFF',
+      featured:        {
+        projectColor:  '#EBA6B1'
+      }
+    },
+    sidebar: {
+      logoColor: '#A7A7A7',
+      copyColor: '#A7A7A7',
+      headlineColor: '#68A83B'
+    },
+    shareButton: {
+      strokeColor: '#fff',
+      copyColor: '#fff'
+    },
+    endShape: {
+      bgColor: '#00CAFF'
+    },
+    backbar: {
+      bgColor: '#EBA6B1'
+    },
+    aboutCopy: '<p>In 2016, reality TV pioneer America\'s Next Top Model found a new home on VH1 after 22 seasons, and following a decade long run on The CW. Following a former cancellation, a new network to call home, and all-new host + panel, the challenge for ANTM\'s comeback was to create a holistic social media campaign that introduced loyal viewers to a revamped Top Model on VH1.</p><p>The marketing for ANTM kicked off with an OOH whisper campaign with simple messaging: "What\'s Next." Rather than keeping the new contestants a secret and stress about them getting leaked, we turned that on its head by creating a campaign that allowed the audience to figure out "What\'s Next" with a social-first puzzle. ANTM social provided fans with clues per contestant which were seeded out across all social platforms. When press announced the finalists, ANTM social celebrated with 13 custom animations featuring the contestants and their clues on the @ANTMVH1 Instagram, tagged the contestants in clue posts, and released a tap-to-reveal on Snapchat & Instagram stories to pull the entire reveal together.</p>',
+  },
+  {
+    featured: true,
+    client: 'hbo',
+    project: 'ballers',
+    title: 'ballers',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/hbo/ballers/landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/ballers/landscape.jpg',
+    logoColor: '#EEC83F',
+    secColor: '#0D434B',
+    gradientTop: '#EEC83F',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#EEC83F',
+    cat: ' ― hbo | ballers ― ',
+    templateName: 'Ballers',
+    shapeColor: '#0D434B',
+    copyColor: 'rgba(255, 255, 255, 0.75)',
+    headlineColor: '#EEC83F',
+    services: ['social strategy', 'community management', 'media campaign', 'creative execution', 'video & motion design'],
+    recognition: ['shorty: best multi-platform', 'shorty: best twitter campaign'],
+    sidebar: {
+      logoColor: '#ffffff',
+      copyColor: '#577381',
+      headlineColor: '#ffffff',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#EEC83F'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'ballers-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#EEC83F'
+      }
+    },
+    results: {
+      stats: [
+        {label: 'pieces of custom content created', stat: '350+'},
+        {label: 'instagram growth over season 2', stat: '+580%'},
+        {label: 'art direction', stat: 'shorty'},
+        {label: 'twitter engagement over S2', stat: '+31K'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#EEC83F',
+      bgColor: '#0A363C',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/ballers/device.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>The HBO series Ballers reveals there’s a lot more to being a baller than a multi-million dollar deal. You have to make a statement. To kick off Season 2 of Ballers on HBO, the GLOW social and creative teams did just that with a social content design strategy to launch the official Ballers HBO Instagram.</p><p>The coordination between GLOW’s social and creative teams produced an eye-catching combination of video, static and illustrated social content that was seamlessly intertwined week-over-week with connective design elements showcasing the fresh, impressive, and winning qualities of a true Baller.</p><p>Simultaneously applying the Ballers design across social platforms, GLOW’s social and creative teams built digital destinations for fans to ball out every week.</p>'
+  },
+  {
+    featured: true,
+    client: 'hbo',
+    project: 'the night of',
+    title: 'the night of',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/the-night-of/landscape.jpg',
+    logoColor: '#909090',
+    secColor: '#1B2326',
+    gradientTop: '#909090',
+    gradientBottom: '#1B2326',
+    featuredProjectTitleColor: '#909090',
+    cat: ' ― hbo | night of ― ',
+    templateName: 'NightOf',
+    copyColor: '#ffffff',
+    headlineColor: '#909090',
+    services: ['social strategy', 'content lab', 'creative execution', 'motion graphics'],
+    sidebar: {
+      logoColor: '#ffffff',
+      copyColor: '#ffffff',
+      headlineColor: '#909090',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#1B2326'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#1B2326'
+    },
+    lockup: {
+      className: 'nightof-lockup',
+      projectColor: '#fff',
+      featured: {
+        projectColor: '#909090'
+      }
+    },
+    results: {
+      stats: [
+        {label: 'Impressions', stat: '47M+'},
+        {label: 'Video views', stat: '3M'},
+        {label: 'Fans reached', stat: '+20M'},
+        {label: 'Fans on Facebook', stat: '145K+'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#909090',
+      bgColor: '#161D20',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/the-night-of/devices.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>Our objective for HBO’s The Night Of was to enlist fans of true crime and realistic crime fiction to watch, discuss, and advocate for The Night Of - an addictive, cinematic exploration of the modern judicial system.</p><p>The social strategy aimed to activate armchair detectives of similar true crime programming such as True Detective and The Jinx.  We did this by creating thought-provoking, shareable content that allowed fans to theorize about Naz’s night and explore more nuances of the judicial system that he experienced first hand.  The content sought to dangle the carrot, letting fans have enough to piece together themselves.</p>'
+  },
+
+  {
+    featured: false,
     client: 'hulu',
     project: 'mindy',
     title: 'the mindy project',
@@ -65,7 +252,7 @@ const data = [
     aboutCopy: '<p>Our objective for The Mindy Project, the highly popular comedy series originally on FOX, was to increase across the board awareness and drive tune-in as Mindy moved from FOX to Hulu as their next original series. We sought to tap into the series’ fanbase and develop engaging custom content that resonated with viewers, while leveraging series\' talent to boost the social conversation and awareness of the series now on Hulu.</p>'  ,
   },
   {
-    featured:                   true,
+    featured:                   false,
     client:                     'syfy',
     project:                    'hunters',
     title:                      'hunters',
@@ -131,7 +318,7 @@ const data = [
     aboutCopy: '<p>A cross between gritty crime drama and sci-fi thriller, Hunters comes from executive producers Gale Anne Hurd (The Walking Dead, The Terminator trilogy) and Natalie Chaidez (12 Monkeys, Heroes). Utilizing emerging web technologies like WebGL and ThreeJS, Glow partnered with Syfy to create an innovative interactive experience bringing the world of Hunters to life. Over the course of 13 weeks, custom sharable content was “leaked” through the site, giving fans the opportunity to dive into the show in a unique way.</p>'
   },
   {
-    featured:                   true,
+    featured:                   false,
     client:                     'syfy',
     project:                    'znation',
     title:                      'zombie interstellar produce',
@@ -635,7 +822,7 @@ const data = [
     aboutCopy: "<p>Syfy’s 12 Monkeys is a science-fiction thriller about one man's desperate attempt to save mankind using a dangerous and untested method of time travel. Our objective around the series launch was to build the world of 12 Monkeys for a new audience by making sense of its complex time-traveling story and supplement the on-air viewing with multi-platform digital and social content around this theme.  </p><p>The goals were to drive an immersive experience that would build and sustain engagement throughout the series and illustrate a comprehensive and clear vision for mapping the time travel jumps of James Cole, one of the lead characters. We also wanted to offer a stream of unique, provocative real-time, platform-specific social content for fans. </p>"
   },
   {
-    featured: true,
+    featured: false,
     client: 'carla hall',
     project: 'southern kitchen',
     title: 'southern kitchen',

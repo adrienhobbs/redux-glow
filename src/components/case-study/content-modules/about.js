@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import styles from './about-content-module.css';
+import {startCase} from 'lodash';
 
 export class AboutSection extends React.Component {
 
@@ -60,6 +61,10 @@ export class AboutSection extends React.Component {
       color: this.props.data.get('headlineColor'),
       textAlign: 'left'
     };
+    const getEmailBody = () => {
+      return encodeURI(`Take a look at GLOW\'s work on ${startCase(this.props.data.get('client'))}'s ${startCase(this.props.data.get('project'))}. \n \n ${window.location.href}`);
+    };
+
     return (
       <article className={styles.about_content_module_container}>
         <div className={styles.about_content_module}>
@@ -81,7 +86,7 @@ export class AboutSection extends React.Component {
           <div className={styles.share}>
             {this.createHeadlineEl('share')}
             <p style={itemStyle}><a style={{color: this.props.data.get('copyColor')}} href={`https://twitter.com/intent/tweet?text=${tweetText}&url=${window.location.href}`} target='_blank'>twitter</a></p>
-            <p style={itemStyle}><a style={{color: this.props.data.get('copyColor')}} href={`mailto:?subject=${tweetText}`}>mail</a></p>
+            <p style={itemStyle}><a style={{color: this.props.data.get('copyColor')}} href={`mailto:?subject=${tweetText}&body=${getEmailBody()}`}>mail</a></p>
           </div>
         </div>
         <div style={{width: '100%', marginTop: 30}}>
@@ -101,4 +106,3 @@ export default AboutSection;
 //     <Sidebar data={this.props.data}/>
 //   </div>
 // </div>
-

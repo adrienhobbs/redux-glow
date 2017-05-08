@@ -15,9 +15,14 @@ import Hunters from './syfy/hunters.js';
 import Younger from './tvland/younger.js';
 import Profit from './cnbc/profit.js';
 import Znation from './syfy/znation.js';
+import Ballers from './hbo/ballers.js';
+import ANTM from './vh1/antm.js';
+import NightOf from './hbo/the-night-of.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
+    ANTM: ANTM,
+    NightOf: NightOf,
     SouthernKitchen: SouthernKitchen,
     Proof: Proof,
     Sharknado: Sharknado,
@@ -34,6 +39,7 @@ const CaseStudyTemplates = (function templates () {
     Hunters: Hunters,
     Younger: Younger,
     Profit: Profit,
+    Ballers: Ballers
     Znation: Znation
   };
 }());

@@ -6,7 +6,6 @@ import styles from './case-study.css';
 import DriveIn from 'react-drive-in';
 
 const StudyBody = React.createClass({
-
   propTypes: {
     data: PropTypes.object,
     isVisible: PropTypes.bool,
@@ -18,11 +17,16 @@ const StudyBody = React.createClass({
     TweenLite.to(this.refs.studyOverlay, 0.8, {autoAlpha: 1, ease: Circ.easeInOut, onComplete: () => this.bringInContent()});
     TweenLite.fromTo(this.refs.scrollDown, 0.9, {autoAlpha: 0, y: -30}, {autoAlpha: 1, y: 0, ease: Expo.easeOut, delay: 1.5});
     TweenLite.fromTo(this.refs.scrollVerticalBar, 0.9, {autoAlpha: 0, height: 0}, {autoAlpha: 1, height: '18%', ease: Expo.easeInOut, delay: 1.9});
+    try {
+      fbq('track', 'PageView');
+    } catch (err) {
+      console.log(err);
+    }
   },
 
   shouldComponentUpdate (nextProps) {
     return !(nextProps.isVisible === this.props.isVisible) ||
-      (nextProps.viewport.orientation !== nextProps.viewport.orientation);
+    (nextProps.viewport.orientation !== nextProps.viewport.orientation);
   },
   componentWillUpdate (nextProps) {
     this.setIntroCtrHeight();

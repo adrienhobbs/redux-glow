@@ -81,7 +81,7 @@ const Video = React.createClass({
             </svg>
           </div>
           <p ref='p'>
-          We engage fans, grow communities, and create digital experiences that convert.</p>
+          We provide real solutions covering the full spectrum of social and digital marketing.</p>
         </div>
         <p ref='scroll' className={styles.scroll_down}>scroll <br/> <span className='arrow'>&#8595;</span></p>
       </div>
