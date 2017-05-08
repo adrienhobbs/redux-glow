@@ -4,13 +4,13 @@ import styles from './client-logos.css';
 
 const clients = [
   'ifc',
-  'syfy',
-  'hbo',
+  'vh1',
+  'moet',
   'nickjr',
   'westminster',
   'ilny',
-  'usa',
-  'spotify',
+  'hbo',
+  'hearst',
   'cinemax',
   'hulu',
   'carla-hall',

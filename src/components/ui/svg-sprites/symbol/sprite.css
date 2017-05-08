@@ -48,6 +48,11 @@
 	height: 100px;
 }
 
+.svg-hearst-dims {
+	width: 300px;
+	height: 37.5px;
+}
+
 .svg-history-dims {
 	width: 124.04px;
 	height: 100px;
@@ -59,8 +64,8 @@
 }
 
 .svg-ifc-dims {
-	width: 134px;
-	height: 82px;
+	width: 152px;
+	height: 94px;
 }
 
 .svg-ilny-dims {
@@ -70,6 +75,11 @@
 
 .svg-ilny-alternate-dims {
 	width: 107.68px;
+	height: 100px;
+}
+
+.svg-moet-dims {
+	width: 228.43px;
 	height: 100px;
 }
 
