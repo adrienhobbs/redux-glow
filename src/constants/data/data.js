@@ -254,6 +254,102 @@ const data = [
   {
     featured:                   false,
     client:                     'syfy',
+    project:                    'znation',
+    title:                      'zombie interstellar produce',
+    subtitle:                   'meme generator',
+    subtitleSlug:               'meme generator',
+    type:                       'case-study',
+    backgroundImageUrl:         s3 + 'case-studies/syfy/znation/landscape.jpg',
+    backgroundImageUrlVert:     s3 + 'case-studies/syfy/znation/landscape.jpg',
+    logoColor:                  '#a3373f',
+    secColor:                   '#000000',
+    gradientTop:                '#a3373f',
+    gradientBottom:             '#0b1c28',
+    featuredProjectTitleColor:  '#a3373f',
+    sidebarLogoColor:           '#ffffff',
+    cat:                        '- syfy | znation -',
+    templateName:               'Znation',
+    services:                   ['ui/ux', 'web design', 'motion design', 'web development', 'social integration'],
+    headlineColor:              '#710101',
+    mobile: {
+      bgColor: '#0b1c28'
+    },
+    copyColor: '#ffffff',
+    lockup: {
+      className:       'znation-lockup',
+      projectColor:    '#fff',
+      featured:        {
+        projectColor:  '#a3373f'
+      }
+    },
+    backbar: {
+      bgColor: '#710101'
+    },
+    sidebar: {
+      // logoColor: '#aaa',
+      copyColor: '#556169',
+      headlineColor: '#fff'
+    },
+    shareButton: {
+      strokeColor: '#7d2f37',
+      copyColor: '#ffffff'
+    },
+    endShape: {
+      bgColor: '#091720'
+    },
+    aboutCopy: '<p>Inspired by <span style="text-decoration: underline;">Selleck Waterfall</span> Sandwich Tumblr, which became well-known for its absurd combination of seemingly <span style="text-decoration: underline;">unrelated items</span> and its obviously photoshopped composition, GLOW developed a branded lo-fi, highly unique and totally absurd meme generator to serve the die hard fan base for the 3rd Season of Syfy’s popular scripted zombie spoof, Z-Nation. Zombie Interstellar Produce greets users with a simple interface and instantly generates a random compilation image that pulls assets from three different, and very unrelated categories: Zombie: Z Nation zombie graphic. Interstellar: space background.</p>'
+  },
+  {
+    featured:                   false,
+    client:                     'universal',
+    project:                    'bridget jones moment',
+    title:                      'bridget jones moment',
+    subtitle:                   'UGC campaign',
+    subtitleSlug:               'UGC campaign',
+    type:                       'case-study',
+    backgroundImageUrl:         s3 + 'case-studies/universal/bridget-jones-moment/jones-landscape.jpg',
+    backgroundImageUrlVert:     s3 + 'case-studies/universal/bridget-jones-moment/jones-landscape.jpg',
+    logoColor:                  '#a3373f',
+    secColor:                   '#ffffff',
+    gradientTop:                '#a3373f',
+    gradientBottom:             '#0b1c28',
+    featuredProjectTitleColor:  '#a3373f',
+    sidebarLogoColor:           '#ffffff',
+    cat:                        '- universal | bjm -',
+    templateName:               'BridgetJones',
+    services:                   ['ui/ux', 'motion design', 'front-end dev', 'back-end dev', 'social integration'],
+    headlineColor:              '#5D3A7F',
+    mobile: {
+      bgColor: '#0b1c28'
+    },
+    copyColor: 'rgba(0, 0, 0, .75)',
+    lockup: {
+      className:       'bridget-lockup',
+      projectColor:    '#fff',
+      featured:        {
+        projectColor:  '#a3373f'
+      }
+    },
+    backbar: {
+      bgColor: '#E64A83'
+    },
+    sidebar: {
+      // logoColor: '#aaa',
+      copyColor: '#556169',
+      headlineColor: '#5D3A7F'
+    },
+    shareButton: {
+      strokeColor: '#7d2f37',
+      copyColor: '#ffffff'
+    },
+    endShape: {
+      bgColor: '#091720'
+    },
+    aboutCopy: '<p>Bridget Jones and the unforgettable moments she’s experienced throughout the film series has provided millions of fans around the world with a loveable film character that so many can identify with. To take advantage of this and provide these fans with a way to identify and express themselves through her character, we developed a fun UGC experience for Universal Pictures’ feature release of Bridget Jones’ Baby. The experience invited fans took a fun, short personality quiz to discover their Bridget Jones Moment, and then shared it using #BridgetJonesMoment.</p>'
+  },
+  {
+    featured:                   false,
+    client:                     'syfy',
     project:                    'hunters',
     title:                      'hunters',
     subtitle:                   'interactive experience',
@@ -316,54 +412,6 @@ const data = [
       bgColor: '#091720'
     },
     aboutCopy: '<p>A cross between gritty crime drama and sci-fi thriller, Hunters comes from executive producers Gale Anne Hurd (The Walking Dead, The Terminator trilogy) and Natalie Chaidez (12 Monkeys, Heroes). Utilizing emerging web technologies like WebGL and ThreeJS, Glow partnered with Syfy to create an innovative interactive experience bringing the world of Hunters to life. Over the course of 13 weeks, custom sharable content was “leaked” through the site, giving fans the opportunity to dive into the show in a unique way.</p>'
-  },
-  {
-    featured:                   false,
-    client:                     'syfy',
-    project:                    'znation',
-    title:                      'zombie interstellar produce',
-    subtitle:                   'meme generator',
-    subtitleSlug:               'meme generator',
-    type:                       'case-study',
-    backgroundImageUrl:         s3 + 'case-studies/syfy/znation/landscape.jpg',
-    backgroundImageUrlVert:     s3 + 'case-studies/syfy/znation/landscape.jpg',
-    logoColor:                  '#a3373f',
-    secColor:                   '#000000',
-    gradientTop:                '#a3373f',
-    gradientBottom:             '#0b1c28',
-    featuredProjectTitleColor:  '#a3373f',
-    sidebarLogoColor:           '#ffffff',
-    cat:                        '- syfy | znation -',
-    templateName:               'Znation',
-    services:                   ['ui/ux', 'web design', 'motion design', 'web development', 'social integration'],
-    headlineColor:              '#530B0C',
-    mobile: {
-      bgColor: '#0b1c28'
-    },
-    copyColor: '#ffffff',
-    lockup: {
-      className:       'znation-lockup',
-      projectColor:    '#fff',
-      featured:        {
-        projectColor:  '#a3373f'
-      }
-    },
-    backbar: {
-      bgColor: '#530B0C'
-    },
-    sidebar: {
-      // logoColor: '#aaa',
-      copyColor: '#556169',
-      headlineColor: '#fff'
-    },
-    shareButton: {
-      strokeColor: '#7d2f37',
-      copyColor: '#ffffff'
-    },
-    endShape: {
-      bgColor: '#091720'
-    },
-    aboutCopy: '<p>Inspired by <span style="text-decoration: underline;">Selleck Waterfall</span> Sandwich Tumblr, which became well-known for its absurd combination of seemingly <span style="text-decoration: underline;">unrelated items</span> and its obviously photoshopped composition, GLOW developed a branded lo-fi, highly unique and totally absurd meme generator to serve the die hard fan base for the 3rd Season of Syfy’s popular scripted zombie spoof, Z-Nation. Zombie Interstellar Produce greets users with a simple interface and instantly generates a random compilation image that pulls assets from three different, and very unrelated categories: Zombie: Z Nation zombie graphic. Interstellar: space background.</p>'
   },
   {
     featured:                   false,

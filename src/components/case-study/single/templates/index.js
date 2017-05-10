@@ -18,10 +18,12 @@ import Znation from './syfy/znation.js';
 import Ballers from './hbo/ballers.js';
 import ANTM from './vh1/antm.js';
 import NightOf from './hbo/the-night-of.js';
+import BridgetJones from './universal/bridget-jones-moment.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
     ANTM: ANTM,
+    BridgetJones: BridgetJones,
     NightOf: NightOf,
     SouthernKitchen: SouthernKitchen,
     Proof: Proof,

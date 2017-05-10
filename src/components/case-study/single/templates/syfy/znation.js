@@ -2,6 +2,7 @@ import React from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
 import LoopingVideo from 'components/video/looping-video.js';
+import Button from 'components/ui/buttons/button.js';
 
 export class Znation extends BaseTemplate {
   static propTypes = {
@@ -15,7 +16,15 @@ export class Znation extends BaseTemplate {
     return (
       <div ref='studyContent' className='study-content'>
         <div className='content-container'>
-          <AboutSection data={this.props.data} />
+          <AboutSection data={this.props.data} >
+            <Button
+              link='http://zombieinterstellarproduce.com/'
+              hoverColor='#a40808'
+              color={this.props.data.get('secColor')}
+              bgColor={this.props.data.get('headlineColor')}
+              text='View Site'
+            />
+          </AboutSection>
           <article className='approach'>
             {this.createHeadlineEl('overview')}
             <div className='copy'>
