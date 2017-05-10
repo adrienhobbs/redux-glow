@@ -1,7 +1,7 @@
 import SouthernKitchen from './carla-hall/southern-kitchen.js';
 import Proof from './tnt/proof.js';
 import Sharknado from './syfy/sharknado.js';
-import WKC from './wkc/dog-show.js';
+// import WKC from './wkc/dog-show.js';
 import WKC2016 from './wkc/dog-show-2016.js';
 // import MindyProject from './hulu/mindy.js';
 import Mindy2016 from './hulu/mindy-2016.js';
@@ -12,7 +12,6 @@ import TwelveMonkeys from './syfy/12-monkeys.js';
 import Casual from './hulu/casual.js';
 import HowIDidIt from './yahoo/how-i-did-it.js';
 import Hunters from './syfy/hunters.js';
-import Younger from './tvland/younger.js';
 import Profit from './cnbc/profit.js';
 import Znation from './syfy/znation.js';
 import Ballers from './hbo/ballers.js';
@@ -39,7 +38,6 @@ const CaseStudyTemplates = (function templates () {
     Casual: Casual,
     HowIDidIt: HowIDidIt,
     Hunters: Hunters,
-    Younger: Younger,
     Profit: Profit,
     Ballers: Ballers,
     Znation: Znation
