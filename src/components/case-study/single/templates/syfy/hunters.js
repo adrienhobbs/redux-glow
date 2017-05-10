@@ -3,18 +3,7 @@ import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
 import classes from './hunters.css';
 import LoopingVideo from 'components/video/looping-video.js';
-
-export class ResponsiveVideo extends React.Component {
-  static propTypes = {
-    src: React.PropTypes.string.isRequired
-  }
-
-  render () {
-    return (
-      <div className={classes.embed_container}><iframe src={this.props.src} frameBorder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-    );
-  }
-}
+import ResponsiveVideo from 'components/video/responsive';
 
 export class ClientTestimonial extends React.Component {
 

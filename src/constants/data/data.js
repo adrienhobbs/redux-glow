@@ -320,6 +320,54 @@ const data = [
   {
     featured:                   false,
     client:                     'syfy',
+    project:                    'znation',
+    title:                      'zombie interstellar produce',
+    subtitle:                   'meme generator',
+    subtitleSlug:               'meme generator',
+    type:                       'case-study',
+    backgroundImageUrl:         s3 + 'case-studies/syfy/znation/landscape.jpg',
+    backgroundImageUrlVert:     s3 + 'case-studies/syfy/znation/landscape.jpg',
+    logoColor:                  '#a3373f',
+    secColor:                   '#000000',
+    gradientTop:                '#a3373f',
+    gradientBottom:             '#0b1c28',
+    featuredProjectTitleColor:  '#a3373f',
+    sidebarLogoColor:           '#ffffff',
+    cat:                        '- syfy | znation -',
+    templateName:               'Znation',
+    services:                   ['ui/ux', 'web design', 'motion design', 'web development', 'social integration'],
+    headlineColor:              '#530B0C',
+    mobile: {
+      bgColor: '#0b1c28'
+    },
+    copyColor: '#ffffff',
+    lockup: {
+      className:       'znation-lockup',
+      projectColor:    '#fff',
+      featured:        {
+        projectColor:  '#a3373f'
+      }
+    },
+    backbar: {
+      bgColor: '#530B0C'
+    },
+    sidebar: {
+      // logoColor: '#aaa',
+      copyColor: '#556169',
+      headlineColor: '#fff'
+    },
+    shareButton: {
+      strokeColor: '#7d2f37',
+      copyColor: '#ffffff'
+    },
+    endShape: {
+      bgColor: '#091720'
+    },
+    aboutCopy: '<p>Inspired by <span style="text-decoration: underline;">Selleck Waterfall</span> Sandwich Tumblr, which became well-known for its absurd combination of seemingly <span style="text-decoration: underline;">unrelated items</span> and its obviously photoshopped composition, GLOW developed a branded lo-fi, highly unique and totally absurd meme generator to serve the die hard fan base for the 3rd Season of Syfy’s popular scripted zombie spoof, Z-Nation. Zombie Interstellar Produce greets users with a simple interface and instantly generates a random compilation image that pulls assets from three different, and very unrelated categories: Zombie: Z Nation zombie graphic. Interstellar: space background.</p>'
+  },
+  {
+    featured:                   false,
+    client:                     'syfy',
     project:                    'sharknado',
     title:                      'sharknado',
     subtitle:                   'social media campaign',
