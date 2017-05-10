@@ -2,7 +2,6 @@ import React from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
 import LoopingVideo from 'components/video/looping-video.js';
-import ResponsiveVideo from 'components/video/responsive';
 
 export class Znation extends BaseTemplate {
   static propTypes = {
@@ -25,14 +24,14 @@ export class Znation extends BaseTemplate {
               </div>
             </div>
             <div className='img-single inner_section' style={{marginTop: 0}}>
-              <ResponsiveVideo src='http://player.vimeo.com/video/172432509?title=0&byline=0&portrait=0' />
+              <LoopingVideo viewport={this.props.viewport} videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/znation/znation-01.mp4'/>
             </div>
           </article>
           <article className='approach'>
             {this.createHeadlineEl('results')}
             <div className='copy'>
               <div className='copy-inner'>
-                <LoopingVideo viewport={this.props.viewport} videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/hunters/DataDriven.mp4'/>
+                <LoopingVideo viewport={this.props.viewport} videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/znation/znation-02.mp4'/>
               </div>
             </div>
           </article>

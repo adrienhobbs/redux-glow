@@ -333,7 +333,7 @@ const data = [
     gradientBottom:             '#0b1c28',
     featuredProjectTitleColor:  '#a3373f',
     sidebarLogoColor:           '#ffffff',
-    cat:                        '- syfy | sharknado -',
+    cat:                        '- syfy | znation -',
     templateName:               'Znation',
     services:                   ['ui/ux', 'web design', 'motion design', 'web development', 'social integration'],
     headlineColor:              '#530B0C',
@@ -366,7 +366,7 @@ const data = [
     aboutCopy: '<p>Inspired by <span style="text-decoration: underline;">Selleck Waterfall</span> Sandwich Tumblr, which became well-known for its absurd combination of seemingly <span style="text-decoration: underline;">unrelated items</span> and its obviously photoshopped composition, GLOW developed a branded lo-fi, highly unique and totally absurd meme generator to serve the die hard fan base for the 3rd Season of Syfy’s popular scripted zombie spoof, Z-Nation. Zombie Interstellar Produce greets users with a simple interface and instantly generates a random compilation image that pulls assets from three different, and very unrelated categories: Zombie: Z Nation zombie graphic. Interstellar: space background.</p>'
   },
   {
-    featured:                   true,
+    featured:                   false,
     client:                     'syfy',
     project:                    'sharknado',
     title:                      'sharknado',
