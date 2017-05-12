@@ -56,9 +56,9 @@ const employeeInfo = {
       photoName: 'Matt'
     },
     {
-      name: 'Adrianna Castaneda',
+      name: 'Adriana Castaneda',
       position: 'Social Media Coordinator',
-      photoName: 'Adrianna'
+      photoName: 'Adriana'
     },
     {
       name: 'Erika Rohrssen',
