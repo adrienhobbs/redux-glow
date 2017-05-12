@@ -56,6 +56,26 @@ const employeeInfo = {
       photoName: 'Matt'
     },
     {
+      name: 'Adrianna Castaneda',
+      position: 'Social Media Coordinator',
+      photoName: 'Adrianna'
+    },
+    {
+      name: 'Erika Rohrssen',
+      position: 'Senior Account Manager',
+      photoName: 'Erika'
+    },
+    {
+      name: 'Jessica Bahr',
+      position: 'Director, Paid Media',
+      photoName: 'Jess'
+    },
+    {
+      name: 'Paula Alvarez',
+      position: 'Motion Designer',
+      photoName: 'PaulaA'
+    },
+    {
       name: 'Ann Ketly',
       position: 'Chief Facilitator',
       photoName: 'Ann'
