@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './video-slide.css';
 import DriveIn from 'react-drive-in';
-// import {primaryColor} from 'constants/colors';
 import VideoOverlay from './video-overlay.js';
 
 const Video = React.createClass({
@@ -10,7 +9,8 @@ const Video = React.createClass({
     viewport: React.PropTypes.object,
     data: React.PropTypes.object,
     TL: React.PropTypes.object,
-    position: React.PropTypes.string
+    position: React.PropTypes.string,
+    toggleNav: React.PropTypes.func
   },
 
   getInitialState () {
@@ -24,6 +24,8 @@ const Video = React.createClass({
       this.showSlide();
     }
     window.homeHasLoaded = true;
+    this.player = new Vimeo.Player(this.refs.embedContainer, {id: 217077385});
+    // this.videoReelPlayer = new Vimeo.Player(this.refs.videoReel);
   },
 
   onCanPlay () {
@@ -70,9 +72,43 @@ const Video = React.createClass({
     return (this.props.viewport.hasTouch) ? null : this.getVideoEl();
   },
 
+  showReelContainer () {
+    TweenLite.to(this.refs.videoOverlay, 0.6, {autoAlpha: 1, ease: Circ.easeOut, delay: 0.2});
+  },
+
+  showVideoReel () {
+    this.player.loadVideo(217077385).then(() => this.player.play());
+    this.props.toggleNav({isVisible: false, shouldAnimate: true});
+    this.showReelContainer();
+    this.player.play();
+  },
+
+  showInteractiveReel () {
+    this.player.loadVideo(188844228).then(() => this.player.play());
+    this.props.toggleNav({isVisible: false, shouldAnimate: true});
+    this.showReelContainer();
+  },
+
+  hideVideoReel () {
+    this.player.pause();
+    this.hideOverlay();
+  },
+
+  hideOverlay () {
+    this.props.toggleNav({isVisible: true, shouldAnimate: true});
+    TweenLite.to(this.refs.videoOverlay, 0.8, {autoAlpha: 0, ease: Circ.easeOut, delay: 0.2});
+  },
+
   render () {
     return (
       <div ref='videoContainer' className={styles.video_placeholder}>
+        <div className='video-overlay' ref='videoOverlay'>
+          <div className='go-back' onClick={this.hideVideoReel}> Go Back </div>
+          <div className='video-overlay-inner'>
+            <div className='embed_container' ref='embedContainer'>
+            </div>
+          </div>
+        </div>
         {this.getVideo()}
         <div className={styles.copy_wrap}>
           <div ref='hdl' className={styles.featured_headline}>
@@ -82,6 +118,10 @@ const Video = React.createClass({
           </div>
           <p ref='p'>
           We provide real solutions covering the full spectrum of social and digital marketing.</p>
+          <div className='reel-btns'>
+            <div className='reel-btn' onClick={this.showInteractiveReel}>view interactive reel</div>
+            <div className='reel-btn' onClick={this.showVideoReel}>view video reel</div>
+          </div>
         </div>
         <p ref='scroll' className={styles.scroll_down}>scroll <br/> <span className='arrow'>&#8595;</span></p>
       </div>
@@ -90,4 +130,3 @@ const Video = React.createClass({
 });
 
 export default Video;
-

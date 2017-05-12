@@ -1,3 +1,5 @@
+@use lost;
+
 :global {
   #video-home-overlay {
     width: 100%;
@@ -8,7 +10,87 @@
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 140;
+  }
+
+  .video-overlay {
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 137;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .go-back {
+    background-color: var(--color-radical-red);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 99999999999;
+
+    &:hover {
+      color: var(--color-radical-red);
+      background-color: white;
+    }
+  }
+
+
+  .video-overlay-inner {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .reel-btns {
+    lost-flex-container: row;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    max-width: 600px;
+
+    @media(--sm-down) {
+      max-width: 70%;
+      margin-top: 20px;
+    }
+  }
+
+  .reel-btn {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: var(--color-radical-red);
+    cursor: pointer;
+    padding: 15px 10px;
+    lost-column: 1/2;
+    font-size: 22px;
+    font-weight: bold;
+
+    @media(--sm-down) {
+      lost-column: 1 0 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    &:hover {
+      background-color: var(--color-radical-red);
+      color: #fff;
+    }
+  }
+
+  .reel-btn.inverse {
+    color: rgba(255, 255, 255, 1);
+    background-color: var(--color-radical-red);
   }
 }
 
@@ -92,4 +174,3 @@
   left: 0;
   background: white;
 }
-
