@@ -50,6 +50,21 @@ export class AboutSection extends React.Component {
     });
   }
 
+  getAccoladesHTML () {
+    const itemStyle = {
+      margin: '0px 0 10px 0',
+      color: this.props.data.get('copyColor') || '#A7A7A7',
+      lineHeight: 1
+    };
+    return this.props.data.get('accolades').map((accolade, i) => {
+      return <p key={i} style={itemStyle}>{accolade}</p>;
+    });
+  }
+
+  getAccolades () {
+    return (this.props.data.get('accolades')) ? this.getAccoladesHTML() : null;
+  }
+
   render () {
     const tweetText = escape('Check out this case study from GLOW!');
     const itemStyle = {
@@ -82,6 +97,10 @@ export class AboutSection extends React.Component {
           <div className={styles.services}>
             {this.createHeadlineEl('services')}
             {this.getServices()}
+            <div className={styles.accolades}>
+              {(this.props.data.get('accolades')) ? this.createHeadlineEl('accolades') : ''}
+              {this.getAccolades()}
+            </div>
           </div>
           <div className={styles.share}>
             {this.createHeadlineEl('share')}
@@ -96,13 +115,5 @@ export class AboutSection extends React.Component {
     );
   }
 }
+
 export default AboutSection;
-// <div className={styles.about_content_module} id='about'>
-//   <div className={styles.about_left}></div>
-//   <div className={styles.about_center}>
-//     <div className='copy-inner' lang='en' style={this.getCopyStyle()} dangerouslySetInnerHTML={this.createParagraphEl()} />
-//   </div>
-//   <div className={styles.about_right}>
-//     <Sidebar data={this.props.data}/>
-//   </div>
-// </div>

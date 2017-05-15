@@ -62,7 +62,6 @@ const ProjectIntro = React.createClass({
   },
 
   getClosestProject () {
-    console.log(this.props.id);
     return (this.props.id !== 0) ? this.props.id - 1 : 1;
   },
   getReverseTrackTween () {
