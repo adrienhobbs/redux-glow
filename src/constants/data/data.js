@@ -525,53 +525,6 @@ const data = [
     },
     aboutCopy: '<p>In the fall of 2014, Empire State Development approached GLOW.  The I Love New York initiative had taken shape on social, but it was important to ESD to maintain an edge over other states.  They needed a partner to analyze the trends, execute on insights and, take their visual and editorial content to a level previously unseen.  GLOW stepped into this role with the goal to revitalize their social footprint, but also give it a unique voice among other states.</p>'
   },
-  // {
-  //   featured: false,
-  //   client: 'westminster',
-  //   project: 'westminster',
-  //   title: '2015 dog show',
-  //   subtitle: 'social media agency of record',
-  //   subtitleSlug: 'social agency of record',
-  //   type: 'case-study',
-  //   backgroundImageUrl: s3 + 'case-studies/wkc/westminster-dog-show/landscape.jpg',
-  //   backgroundImageUrlVert: s3 + 'case-studies/wkc/westminster-dog-show/landscape.jpg',
-  //   secColor: '#502173',
-  //   logoColor: '#d6963f',
-  //   featuredProjectTitleColor: '#ffffff',
-  //   templateName: 'WKC',
-  //   services: ['social strategy', 'community management', 'content lab', 'creative execution', 'live event management'],
-  //   clientLogoColor: '#d6963f',
-  //   headlineColor: '#d6963f',
-  //   lockup: {
-  //     className: 'westminster-lockup',
-  //     logoColor: '#D6963F'
-  //   },
-  //   backbar: {
-  //     bgColor: '#d6963f'
-  //   },
-  //   results: {
-  //     stats: [{label: 'Snapchat Live Story views', stat: '26M'}, {label: 'FB users reached during 4 show days', stat: '7.8M'}, {label: 'Instagram followers', stat: '2X'}, {label: 'Visitors driven to WKC website', stat: '50K+'}],
-  //     statColor: '#ffffff',
-  //     statLabelColor: '#d6963f',
-  //     bgColor: '#431d67',
-  //     deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/device.png' ,
-  //     template: 'Standard'
-  //   },
-  //   sidebar: {
-  //     logoColor: '#d6963f',
-  //     copyColor: '#8b6ba9',
-  //     headlineColor: '#fff',
-  //     customClientLogo: 'westminster-alternate'
-  //   },
-  //   shareButton: {
-  //     strokeColor: '#d6963f',
-  //     copyColor: '#ffffff'
-  //   },
-  //   endShape: {
-  //     bgColor: '#431d67'
-  //   },
-  //   aboutCopy: '<p>The Westminster Kennel Club Dog Show is one of the oldest sporting events in modern history, and since 2013, GLOW has been the leading force behind expanding the organization’s social media presence.  Challenged with an aging audience and antiquated communication strategies, it was clear to us from day one, that there was the need to double down on social in order to build a larger social footprint and a sustainable social audience.</p>'
-  // },
   {
     featured: false,
     client: 'westminster',
@@ -600,9 +553,9 @@ const data = [
     results: {
       stats: [{label: 'snapchat Live Story views', stat: '100m'}, {label: 'fb users reached during 4 day show', stat: '5.8m'}, {label: 'of domestic IG users reached on IG Live', stat: '98%'}, {label: '#wkcdogshow trended nationally on Twitter', stat: 'No. 5'}],
       statColor: '#ffffff',
-      statLabelColor: '#d6963f',
+      statLabelColor: '#7D1C21',
       bgColor: '#431d67',
-      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/wkc-results-2016.png' ,
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/westminster-2016-devices.png' ,
       template: 'Standard'
     },
     sidebar: {
@@ -757,7 +710,7 @@ const data = [
       statColor: '#ffffff',
       statLabelColor: '#C03D3B',
       bgColor: '#0A2C3A',
-      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/device.png',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/veep/veep-devices.png',
       template: 'Standard'
     },
     endShape: {
@@ -860,7 +813,7 @@ const data = [
       statColor:       '#ffffff',
       statLabelColor:  '#551313',
       bgColor:         '#171717',
-      deviceImageUrl: s3 + 'case-studies/syfy/12-monkeys/device.png',
+      deviceImageUrl: s3 + 'case-studies/syfy/12-monkeys/12-monkeys-devices.png',
       template: 'Standard'
     },
 
