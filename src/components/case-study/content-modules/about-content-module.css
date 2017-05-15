@@ -1,5 +1,8 @@
 @use lost;
 
+.accolades {
+  margin-top: 30px;
+}
 .about_content_module {
   lost-flex-container: row;
   width: 100%;
@@ -42,7 +45,7 @@
         &:after {
           content: '';
         }
-      
+
       }
     }
   }
@@ -114,4 +117,3 @@
     font-size: 2em;
   }
 }
-

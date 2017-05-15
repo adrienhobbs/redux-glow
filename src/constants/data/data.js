@@ -96,7 +96,7 @@ const data = [
     copyColor: 'rgba(255, 255, 255, 0.75)',
     headlineColor: '#EEC83F',
     services: ['social strategy', 'community management', 'media campaign', 'creative execution', 'video & motion design'],
-    recognition: ['shorty: best multi-platform', 'shorty: best twitter campaign'],
+    accolades: ['shorty award finalist', 'audience honor: art direction'],
     sidebar: {
       logoColor: '#ffffff',
       copyColor: '#577381',
@@ -389,9 +389,9 @@ const data = [
     results: {
       stats: [
         {label: 'Twitter impressions', stat: '2B'},
-        {label: 'Trending topic (US)', stat: '#1'},
-        {label: 'Trending topic (global)', stat: '#2'},
-        {label: 'Video views', stat: '6M'}
+        {label: 'Trending in U.S. ahead of Teen Choice Awards', stat: '#1'},
+        {label: 'Trending Worldwide behind Teen Choice Awards', stat: '#2'},
+        {label: 'Video views', stat: '32M'}
       ],
       statColor: '#ffffff',
       statLabelColor: '#7d2f37',
@@ -413,51 +413,113 @@ const data = [
     },
     aboutCopy: '<p>A cross between gritty crime drama and sci-fi thriller, Hunters comes from executive producers Gale Anne Hurd (The Walking Dead, The Terminator trilogy) and Natalie Chaidez (12 Monkeys, Heroes). Utilizing emerging web technologies like WebGL and ThreeJS, Glow partnered with Syfy to create an innovative interactive experience bringing the world of Hunters to life. Over the course of 13 weeks, custom sharable content was “leaked” through the site, giving fans the opportunity to dive into the show in a unique way.</p>'
   },
+  // {
+  //   featured:                   false,
+  //   client:                     'syfy',
+  //   project:                    'sharknado',
+  //   title:                      'sharknado',
+  //   subtitle:                   'social media campaign',
+  //   subtitleSlug:               'social media campaign',
+  //   type:                       'case-study',
+  //   backgroundImageUrl:         s3 + 'case-studies/syfy/sharknado/landscape.jpg',
+  //   backgroundImageUrlVert:     s3 + 'case-studies/syfy/sharknado/vertical.jpg',
+  //   logoColor:                  '#a3373f',
+  //   secColor:                   '#0b1c28',
+  //   gradientTop:                '#a3373f',
+  //   gradientBottom:             '#0b1c28',
+  //   featuredProjectTitleColor:  '#a3373f',
+  //   sidebarLogoColor:           '#ffffff',
+  //   cat:                        '- syfy | sharknado -',
+  //   templateName:               'Sharknado',
+  //   services:                   ['content lab', 'social strategy', 'creative execution', 'influencer marketing', 'community management'],
+  //   headlineColor:              '#7d2f37',
+  //   mobile: {
+  //     bgColor: '#0b1c28'
+  //   },
+  //   copyColor: '#ffffff',
+  //   lockup: {
+  //     className:       'sharknado-lockup',
+  //     projectColor:    '#fff',
+  //     featured:        {
+  //       projectColor:  '#a3373f'
+  //     }
+  //   },
+  //   backbar: {
+  //     bgColor: '#091720'
+  //   },
+  //   results: {
+  //     stats: [
+  //       {label: 'Twitter impressions', stat: '2B'},
+  //       {label: 'Trending topic (US)', stat: '#1'},
+  //       {label: 'Trending topic (global)', stat: '#2'},
+  //       {label: 'Video views', stat: '6M'}
+  //     ],
+  //     statColor: '#ffffff',
+  //     statLabelColor: '#7d2f37',
+  //     bgColor: '#091720',
+  //     deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-device.png',
+  //     template: 'Standard'
+  //   },
+  //   sidebar: {
+  //     // logoColor: '#aaa',
+  //     copyColor: '#556169',
+  //     headlineColor: '#fff'
+  //   },
+  //   shareButton: {
+  //     strokeColor: '#7d2f37',
+  //     copyColor: '#ffffff'
+  //   },
+  //   endShape: {
+  //     bgColor: '#091720'
+  //   },
+  //   aboutCopy: '<p>Sharknado 3 took the world by storm and stirred up 2 billion Twitter impressions. Yes, that’s a B. A key priority program for Syfy, GLOW couldn’t wait to dive-in. Together, we planned and launched a FOMO-inducing social campaign, which included social strategy, community management, and social content creative to make Sharknado 3 a can’t-miss event. </p>'
+  // },
   {
     featured:                   false,
     client:                     'syfy',
-    project:                    'sharknado',
-    title:                      'sharknado',
-    subtitle:                   'social media campaign',
-    subtitleSlug:               'social media campaign',
+    project:                    'sharknado 4',
+    title:                      'sharknado 4',
+    subtitle:                   'social media campaigns',
+    subtitleSlug:               'social media campaigns',
     type:                       'case-study',
-    backgroundImageUrl:         s3 + 'case-studies/syfy/sharknado/landscape.jpg',
-    backgroundImageUrlVert:     s3 + 'case-studies/syfy/sharknado/vertical.jpg',
-    logoColor:                  '#a3373f',
-    secColor:                   '#0b1c28',
+    backgroundImageUrl:         s3 + 'case-studies/syfy/sharknado/sharknado-2017-landscape.jpg',
+    backgroundImageUrlVert:     s3 + 'case-studies/syfy/sharknado/sharknado-2017-landscape.jpg',
+    logoColor:                  '#722930',
+    secColor:                   '#0E1A24',
     gradientTop:                '#a3373f',
     gradientBottom:             '#0b1c28',
     featuredProjectTitleColor:  '#a3373f',
     sidebarLogoColor:           '#ffffff',
     cat:                        '- syfy | sharknado -',
-    templateName:               'Sharknado',
-    services:                   ['content lab', 'social strategy', 'creative execution', 'influencer marketing', 'community management'],
-    headlineColor:              '#7d2f37',
+    templateName:               'Sharknado2017',
+    services:                   ['social strategy', 'community management', 'content lab', 'creative execution', 'live event management'],
+    headlineColor:              '#722930',
     mobile: {
       bgColor: '#0b1c28'
     },
     copyColor: '#ffffff',
     lockup: {
-      className:       'sharknado-lockup',
+      className:       'sharknado-2017-lockup',
       projectColor:    '#fff',
       featured:        {
         projectColor:  '#a3373f'
       }
     },
     backbar: {
-      bgColor: '#091720'
+      bgColor: '#722930'
     },
+    accolades: ['shorty award finalist', 'best twitter campaign'],
     results: {
       stats: [
         {label: 'Twitter impressions', stat: '2B'},
-        {label: 'Trending topic (US)', stat: '#1'},
-        {label: 'Trending topic (global)', stat: '#2'},
-        {label: 'Video views', stat: '6M'}
+        {label: 'Trending in U.S. ahead of Teen Choice Awards', stat: '#1'},
+        {label: 'Trending Worldwide behind Teen Choice Awards', stat: '#2'},
+        {label: 'Video views', stat: '32M'}
       ],
       statColor: '#ffffff',
       statLabelColor: '#7d2f37',
       bgColor: '#091720',
-      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-device.png',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/syfy/sharknado/sharknado-2017-devices.png',
       template: 'Standard'
     },
     sidebar: {
@@ -472,7 +534,7 @@ const data = [
     endShape: {
       bgColor: '#091720'
     },
-    aboutCopy: '<p>Sharknado 3 took the world by storm and stirred up 2 billion Twitter impressions. Yes, that’s a B. A key priority program for Syfy, GLOW couldn’t wait to dive-in. Together, we planned and launched a FOMO-inducing social campaign, which included social strategy, community management, and social content creative to make Sharknado 3 a can’t-miss event. </p>'
+    aboutCopy: '<p>Sharknado. That’s right, it’s a tornado made of sharks, so getting to higher ground won\'t save you, and like most of the cast, you’ll probably die. Or if you’re lucky, survive, but have your arm chomped off. #AprilLives.</p><p>In 2013, the made-for-television comedy disaster film debuted on Syfy Network and although was widely considered a TV ratings bust, Sharknado devoured Twitter, catapulting the film into becoming the first ever social media blockbuster.</p><p>For the third and fourth installments, GLOW was sent a mission - and we chose to accept. The task? We had to take this beast of a franchise and elevate it even further creating an iconic pop culture social experience.</p><p>We dove into the mouth of the beast and chainsawed our way out.</p><p>On premiere night, the world wide social audience chatter was nothing but ‘Nado. GLOW’s creative and strategic brainpower developed and executed a strategy that engaged fans and influencers, created best in-class creative and dominated the social conversation. </p><p>The results blew all expectations out of the water, literally. With over 4 billion social media impressions combined, Sharknado 3 and 4 did indeed take the world by storm. Our strong content and curated hilarious parodies sucked the audience into the whirlwind of this cult classic, and  upheld the franchise’s social media blockbuster status.</p>'
   },
   {
     featured: false,

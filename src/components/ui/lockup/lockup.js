@@ -7,7 +7,6 @@ export class Lockup extends React.Component {
     data: PropTypes.object,
     single: PropTypes.bool
   };
-
   constructor (props) {
     super(props);
     this.tl = new TimelineLite();
@@ -17,7 +16,6 @@ export class Lockup extends React.Component {
     };
     this.setLockupColors();
   }
-
   componentWillUnmount () {
     this.tl.reverse();
   }
