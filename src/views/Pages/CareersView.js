@@ -61,43 +61,6 @@ const Jobs = [
     ]
   },
   {
-    title: 'social design intern',
-    active: true,
-    type: '',
-    summary: 'Are you an aspiring Designer who is obsessed with Social Media? Do you want to represent not what Social Media Creative is now, but what Social Media Creative should be? Do you want to learn the language of Quote Cards, GIFs, Vines, Snaps & Tweets, and figure out how to take them to new places? Do you want to learn how to inspire, critique, present, demonstrate, cajole, twist, & juke your way to a great product? Are you looking for a fun creative career? Let’s meet & find out!',
-    duties: [
-      'creating a plethora of static & motion content across all social media platforms',
-      'owning projects alongside senior/junior designers for multiple entertainment clients simultaneously',
-      'innovating alongside senior/junior designers to come up with new design ideas & solutions within your executions',
-      'presenting your design decisions to senior/junior designers internally and to clients',
-      'influencing our clients & staff by providing them valuable social media thinking',
-      'discovering developments in the Social space to deliver innovative & competitive content',
-      'collaborating on new business opportunities',
-      'playing in brainstorms & ideation sessions',
-      'engaging with GLOWs internal teams including Creative Directors, Social Strategists, Community Managers, Analysts, and audience engagement specialists'
-    ],
-    traits: [
-      'junior or senior level of experience from an accredited art school or equitable work experience',
-      'the absolute love, desire & knowledge for all things Social Media',
-      'fundamental design skills',
-      'maturity & confidence in yourself as a designer',
-      'knowledge of the Adobe Creative Suite',
-      'impeccable attention to detail & design quality control',
-      'ability to self-manage deadlines',
-      'ability to work with a mix of quick turnaround asks and full-time ongoing projects',
-      'knowledge of design best practices for Social Media',
-      'strong drawing skills',
-      'experience with Interactive Design beyond Social',
-      'understanding of all major social platforms & why certain content best operates on each',
-      'curiosity to explore & play',
-      'the desire to grow into a creative leader',
-      'the desire to learn the artistic, business & technological requirements of a project (on brand, on budget & within scope)',
-      'the desire to learn how to captivate & engage your audience (the client, your director & ultimately the end user)',
-      'natural love of an open and honest feedback loop to facilitate both team member & GLOW growth',
-      'PLUSES: Copywriting skills and a love for all things pop culture'
-    ]
-  },
-  {
     title: 'junior producer/editor',
     active: true,
     type: 'freelance',
@@ -196,7 +159,7 @@ const Jobs = [
     ]
   },
   {
-    title: 'design intern',
+    title: 'social design intern',
     active: true,
     type: 'full time',
     contactEmail: 'intern.creative',

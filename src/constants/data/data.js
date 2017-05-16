@@ -615,7 +615,7 @@ const data = [
     results: {
       stats: [{label: 'snapchat Live Story views', stat: '100m'}, {label: 'fb users reached during 4 day show', stat: '5.8m'}, {label: 'of domestic IG users reached on IG Live', stat: '98%'}, {label: '#wkcdogshow trended nationally on Twitter', stat: 'No. 5'}],
       statColor: '#ffffff',
-      statLabelColor: '#7D1C21',
+      statLabelColor: '#D6963F',
       bgColor: '#431d67',
       deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/westminster-2016-devices.png' ,
       template: 'Standard'
@@ -873,7 +873,7 @@ const data = [
         {label: 'Social & video content pieces created', stat: '800+'}
       ],
       statColor:       '#ffffff',
-      statLabelColor:  '#551313',
+      statLabelColor:  '#d0323a',
       bgColor:         '#171717',
       deviceImageUrl: s3 + 'case-studies/syfy/12-monkeys/12-monkeys-devices.png',
       template: 'Standard'

@@ -50,7 +50,7 @@
       }
       position: relative;
       overflow: hidden;
-    @include aspect-ratio(em(835), em(441)); 
+    @include aspect-ratio(em(835), em(441));
     }
 
     .project-overlay {
@@ -263,7 +263,7 @@
     @include backface-visibility(hidden);
     svg {
       display: block;
-    } 
+    }
   }
 
   .view-case-study {
