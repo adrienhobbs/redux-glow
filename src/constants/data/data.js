@@ -289,7 +289,7 @@ const data = [
       bgColor: '#0D434B'
     },
     lockup: {
-      className: 'ballers-lockup',
+      className: 'boxing-lockup',
       projectColor: '#FFFFFF',
       featured: {
         projectColor: '#EEC83F'
