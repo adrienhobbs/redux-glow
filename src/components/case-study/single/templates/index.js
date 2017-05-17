@@ -16,10 +16,12 @@ import Ballers from './hbo/ballers.js';
 import ANTM from './vh1/antm.js';
 import NightOf from './hbo/the-night-of.js';
 import BridgetJones from './universal/bridget-jones-moment.js';
+import Boxing from './hbo/boxing.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
     ANTM: ANTM,
+    Boxing: Boxing,
     BridgetJones: BridgetJones,
     NightOf: NightOf,
     SouthernKitchen: SouthernKitchen,

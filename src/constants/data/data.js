@@ -252,6 +252,68 @@ const data = [
     aboutCopy: '<p>Our objective for The Mindy Project, the highly popular comedy series originally on FOX, was to increase across the board awareness and drive tune-in as Mindy moved from FOX to Hulu as their next original series. We sought to tap into the series’ fanbase and develop engaging custom content that resonated with viewers, while leveraging series\' talent to boost the social conversation and awareness of the series now on Hulu.</p>'  ,
   },
   {
+    featured: false,
+    client: 'hbo',
+    project: 'boxing',
+    title: 'boxing',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/hbo/boxing/boxing-landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/boxing/boxing-landscape.jpg',
+    logoColor: '#EEC83F',
+    secColor: '#1D1D1D',
+    gradientTop: '#EEC83F',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#EEC83F',
+    cat: ' ― hbo | boxing ― ',
+    templateName: 'Boxing',
+    shapeColor: '#0D434B',
+    copyColor: 'rgba(255, 255, 255, 0.75)',
+    headlineColor: '#C41A1B',
+    services: ['social strategy', 'community management', 'content lab', 'creative'],
+    sidebar: {
+      logoColor: '#ffffff',
+      copyColor: '#ffffff',
+      headlineColor: '#C41A1B',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#C41A1B'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'boxing-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#EEC83F'
+      }
+    },
+    results: {
+      stats: [
+        {label: 'total impressions', stat: '13M'},
+        {label: 'total engagements', stat: '589K'},
+        {label: 'total video views', stat: '2.6M'},
+        {label: 'total platform growth', stat: '37K'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#C41A1B',
+      bgColor: '#191919',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/boxing/boxing-device.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>Gennady Golovkin, arguably the best middle-weight boxer in the world, was taking on Daniel Jacobs, a man that beat back cancer to become a champion live on HBO Pay Per View.  Our mission was to drive awareness for the fight and its undercard matches, building a narrative leading up to the fight through a multi-channel campaign featuring compelling social content.</p><p>The goal was to build a short, hard hitting campaign that told a staged storyline about the fighters and their motivations.  With the fighters humanized and familiar, fans would become emotionally invested in the fight, building anticipation to them stepping into the ring.  From there, they were given a larger view of the scale of the fight through real time social content during and after the fight.</p>'
+  },
+  {
     featured:                   false,
     client:                     'syfy',
     project:                    'znation',
