@@ -103,7 +103,7 @@
     "postcss-use": "^2.0.2",
     "radium": "^0.16.2",
     "raf": "^3.1.0",
-    "react": "^0.14.0",
+    "react": "^0.14.9",
     "react-addons-pure-render-mixin": "^0.14.7",
     "react-dom": "^0.14.0",
     "react-drive-in": "^1.7.3",

@@ -94,8 +94,9 @@
 }
 
 .stat {
-  font-size: 3em;
+  font-size: 2.45em;
   font-weight: bold;
+  font-family: Domaine;
   @media(--lg-screen-down) {
     font-size: 2.5em;
   }

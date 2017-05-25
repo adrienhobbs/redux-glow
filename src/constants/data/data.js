@@ -139,6 +139,56 @@ const data = [
     aboutCopy: '<p>The HBO series Ballers reveals there’s a lot more to being a baller than a multi-million dollar deal. You have to make a statement. To kick off Season 2 of Ballers on HBO, the GLOW social and creative teams did just that with a social content design strategy to launch the official Ballers HBO Instagram.</p><p>The coordination between GLOW’s social and creative teams produced an eye-catching combination of video, static and illustrated social content that was seamlessly intertwined week-over-week with connective design elements showcasing the fresh, impressive, and winning qualities of a true Baller.</p><p>Simultaneously applying the Ballers design across social platforms, GLOW’s social and creative teams built digital destinations for fans to ball out every week.</p>'
   },
   {
+    featured: false,
+    client: 'i love new york',
+    project: 'social agency of record',
+    title: 'social',
+    subtitle: 'social agency of record',
+    subtitleSlug: 'social agency of record',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/iloveny/social-retainer/ilny-landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/iloveny/social-retainer/ilny-landscape.jpg',
+    logoColor: '#d52027',
+    secColor: '#1d1d1d',
+    copyColor: '#ffffff',
+    cat: ' ― ilny | aor ― ',
+    services: ['social strategy', 'influencer marketing', 'community management', 'creative execution'],
+    templateName: 'ILNY',
+    headlineColor: '#d52027',
+    backbar: {
+      bgColor: '#d52027'
+    },
+    results: {
+      deviceImageUrl: s3 + 'case-studies/iloveny/social-retainer/ilny-results.png',
+      stats: [{label: 'Best Instagram Partnership', stat: 'Shorty Winner'}, {label: 'Total Engagements', stat: '27M+'}, {label: 'Travel + Tourism', stat: 'Shorty Silver'}, {label: 'YOY Instagram Follower Growth', stat: '+545%'}],
+      statColor: '#ffffff',
+      statLabelColor: '#d52027',
+      bgColor: '#171717',
+      template: 'Standard'
+    },
+    sidebar: {
+      // logoColor: '#aaa',
+      copyColor: '#616161',
+      headlineColor: '#fff',
+      customClientLogo: 'ilny-alternate'
+    },
+    shareButton: {
+      strokeColor: '#d52027',
+      copyColor: '#ffffff'
+    },
+    lockup: {
+      className: 'ilny2017-lockup'
+    },
+    mobile: {
+      bgColor: '#82b3dc',
+      summaryCopyColor: '#000000'
+    },
+    endShape: {
+      bgColor: '#171717'
+    },
+    aboutCopy: '<p>In the fall of 2016, GLOW partnered with I LOVE NEW YORK, Visit the Catskills, local county tourism offices and Beautiful Destinations to promote the New York Catskills as the ultimate fall destination for singles and couples residing in the New York City metro area.  </p><p>Our goal was to show potential travelers that the area is full of adventure with a diverse array of attractions offering something for every travel style. In partnering with travel and lifestyle brand, Beautiful Destinations, we were able to show the Catskills through the eyes of influential content creators, leverage their huge social followings to expand reach and pique interest among travel enthusiasts, ultimately inspiring travel to the region.</p>'
+  },
+  {
     featured: true,
     client: 'hbo',
     project: 'the night of',
@@ -262,7 +312,7 @@ const data = [
     backgroundImageUrl: s3 + 'case-studies/hbo/boxing/boxing-landscape.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/hbo/boxing/boxing-landscape.jpg',
     logoColor: '#EEC83F',
-    secColor: '#1D1D1D',
+    secColor: '#1F1F1F',
     gradientTop: '#EEC83F',
     gradientBottom: '#0D434B',
     featuredProjectTitleColor: '#EEC83F',
@@ -598,57 +648,57 @@ const data = [
     },
     aboutCopy: '<p>Sharknado. That’s right, it’s a tornado made of sharks, so getting to higher ground won\'t save you, and like most of the cast, you’ll probably die. Or if you’re lucky, survive, but have your arm chomped off. #AprilLives.</p><p>In 2013, the made-for-television comedy disaster film debuted on Syfy Network and although was widely considered a TV ratings bust, Sharknado devoured Twitter, catapulting the film into becoming the first ever social media blockbuster.</p><p>For the third and fourth installments, GLOW was sent a mission - and we chose to accept. The task? We had to take this beast of a franchise and elevate it even further creating an iconic pop culture social experience.</p><p>We dove into the mouth of the beast and chainsawed our way out.</p><p>On premiere night, the world wide social audience chatter was nothing but ‘Nado. GLOW’s creative and strategic brainpower developed and executed a strategy that engaged fans and influencers, created best in-class creative and dominated the social conversation. </p><p>The results blew all expectations out of the water, literally. With over 4 billion social media impressions combined, Sharknado 3 and 4 did indeed take the world by storm. Our strong content and curated hilarious parodies sucked the audience into the whirlwind of this cult classic, and  upheld the franchise’s social media blockbuster status.</p>'
   },
-  {
-    featured: false,
-    client: 'i love new york',
-    project: 'social retainer',
-    title: 'social',
-    subtitle: 'social agency of record',
-    subtitleSlug: 'social agency of record',
-    type: 'case-study',
-    backgroundImageUrl: s3 + 'case-studies/iloveny/social-retainer/ilny-bg.jpg',
-    backgroundImageUrlVert: s3 + 'case-studies/iloveny/social-retainer/ilny-bg.jpg',
-    logoColor: '#d52027',
-    secColor: '#1d1d1d',
-    copyColor: '#ffffff',
-    cat: ' ― ilny | aor ― ',
-    services: ['social strategy', 'community management', 'content lab', 'creative execution'],
-    recognition: ['shorty award finalist'],
-    templateName: 'ILNY',
-    headlineColor: '#d52027',
-    backbar: {
-      bgColor: '#d52027'
-    },
-    results: {
-      deviceImageUrl: s3 + 'case-studies/iloveny/social-retainer/device.png',
-      stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
-      statColor: '#ffffff',
-      statLabelColor: '#d52027',
-      bgColor: '#171717',
-      template: 'Standard'
-    },
-    sidebar: {
-      // logoColor: '#aaa',
-      copyColor: '#616161',
-      headlineColor: '#fff',
-      customClientLogo: 'ilny-alternate'
-    },
-    shareButton: {
-      strokeColor: '#d52027',
-      copyColor: '#ffffff'
-    },
-    lockup: {
-      className: 'ilny-lockup'
-    },
-    mobile: {
-      bgColor: '#82b3dc',
-      summaryCopyColor: '#000000'
-    },
-    endShape: {
-      bgColor: '#171717'
-    },
-    aboutCopy: '<p>In the fall of 2014, Empire State Development approached GLOW.  The I Love New York initiative had taken shape on social, but it was important to ESD to maintain an edge over other states.  They needed a partner to analyze the trends, execute on insights and, take their visual and editorial content to a level previously unseen.  GLOW stepped into this role with the goal to revitalize their social footprint, but also give it a unique voice among other states.</p>'
-  },
+  // {
+  //   featured: false,
+  //   client: 'i love new york',
+  //   project: 'social retainer',
+  //   title: 'social',
+  //   subtitle: 'social agency of record',
+  //   subtitleSlug: 'social agency of record',
+  //   type: 'case-study',
+  //   backgroundImageUrl: s3 + 'case-studies/iloveny/social-retainer/ilny-bg.jpg',
+  //   backgroundImageUrlVert: s3 + 'case-studies/iloveny/social-retainer/ilny-bg.jpg',
+  //   logoColor: '#d52027',
+  //   secColor: '#1d1d1d',
+  //   copyColor: '#ffffff',
+  //   cat: ' ― ilny | aor ― ',
+  //   services: ['social strategy', 'community management', 'content lab', 'creative execution'],
+  //   recognition: ['shorty award finalist'],
+  //   templateName: 'ILNY',
+  //   headlineColor: '#d52027',
+  //   backbar: {
+  //     bgColor: '#d52027'
+  //   },
+  //   results: {
+  //     deviceImageUrl: s3 + 'case-studies/iloveny/social-retainer/device.png',
+  //     stats: [{label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'dollars raised', stat: '$264,704'}, {label: 'video shot', stat: '108 min'}],
+  //     statColor: '#ffffff',
+  //     statLabelColor: '#d52027',
+  //     bgColor: '#171717',
+  //     template: 'Standard'
+  //   },
+  //   sidebar: {
+  //     // logoColor: '#aaa',
+  //     copyColor: '#616161',
+  //     headlineColor: '#fff',
+  //     customClientLogo: 'ilny-alternate'
+  //   },
+  //   shareButton: {
+  //     strokeColor: '#d52027',
+  //     copyColor: '#ffffff'
+  //   },
+  //   lockup: {
+  //     className: 'ilny-lockup'
+  //   },
+  //   mobile: {
+  //     bgColor: '#82b3dc',
+  //     summaryCopyColor: '#000000'
+  //   },
+  //   endShape: {
+  //     bgColor: '#171717'
+  //   },
+  //   aboutCopy: '<p>In the fall of 2014, Empire State Development approached GLOW.  The I Love New York initiative had taken shape on social, but it was important to ESD to maintain an edge over other states.  They needed a partner to analyze the trends, execute on insights and, take their visual and editorial content to a level previously unseen.  GLOW stepped into this role with the goal to revitalize their social footprint, but also give it a unique voice among other states.</p>'
+  // },
   {
     featured: false,
     client: 'westminster',
