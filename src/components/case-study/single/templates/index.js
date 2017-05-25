@@ -17,9 +17,11 @@ import ANTM from './vh1/antm.js';
 import NightOf from './hbo/the-night-of.js';
 import BridgetJones from './universal/bridget-jones-moment.js';
 import Boxing from './hbo/boxing.js';
+import Uncorked from './moet/uncorked';
 
 const CaseStudyTemplates = (function templates () {
   return {
+    Uncorked: Uncorked,
     ANTM: ANTM,
     Boxing: Boxing,
     BridgetJones: BridgetJones,
