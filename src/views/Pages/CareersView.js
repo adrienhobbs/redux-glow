@@ -82,26 +82,31 @@ const Jobs = [
     ]
   },
   {
-    title: 'social media art director',
+    title: 'social art director',
     active: true,
     type: 'freelance',
-    summary: 'Our dream Art Director is a leader, a builder, a presenter, an inventor, & above all else, a Social creature – in love with the medium & able to harness the things that make it great.',
+    contactEmail: 'jobs.creative',
+    inResponse: 'Send a resume along with work examples. Please include a personality, product, or brand you feel is doing something smart on social.',
+    summary: 'Our Art Director is a leader, a maker, a presenter, an inventor, & above all else, a Social creature – in love with the medium & able to harness the things that make it great.  Knowledge of motion design & animation is a must and knowledge of 3D is a major plus.',
     duties: [
       'Providing leadership & creative vision for the Social Media Design Team',
       'Injecting your knowledge of, and passion for, Social Media into the design process',
       'Developing relationships with clients, & providing a service that brings them back for more ',
       'Creating work alongside those you\'re directing (roughly a 60/40 split between direction/creation)',
-      'Staying abreast of developments in the Social space, & finding exciting applications for them within your projects'
+      'Staying abreast of developments and best practices in the Social and Creative spaces, and finding novel applications for them.'
     ],
     traits: [
-      'An inborn love of Social Media',
-      'The ability to captivate & engage your audience (the client, your director, your designers, & ultimately the end user)',
-      '3+ years of agency design experience, with some experience in a managerial role',
-      'The ability to lead, direct, inspire, critique, present, demonstrate, cajole, twist, & juke your way to great product',
-      'Strong communication skills (written & verbal, client facing & internal)',
-      'The ability to satisfy the artistic, business & technological requirements of a project (on brand, on budget & within scope)',
-      'Skills in relevant tools (Adobe CC, shared Google Docs, etc.)',
-      'A working knowledge of mobile (design & UX best practices)'
+      'An instinctive love of Social Media',
+      'A broad portfolio, rich in Social Media and motion driven examples',
+      '3+ years of agency design experience, and parallel experience in a managerial role',
+      'The skill to captivate & engage your audience - the client, your director, your designers, & ultimately the end user',
+      'The ability to lead, direct, inspire, give and receive critiques & present, demonstrate, cajole, twist, & juke your way to great product',
+      'Confidence managing multiple Social campaigns',
+      'Can produce a high volume of work while maintaining a sharp eye for detail and a command of the campaign creative vision',
+      'Strength in communication and collaboration - written & verbal, client facing & internal',
+      'The ability to satisfy the artistic, technological & business requirements of a project - on brand, on budget & within scope',
+      'Senior skills in relevant tools - Adobe CC, Cinema4D or similar, Keynote, a pencil etc.',
+      'Fundamental knowledge of desktop & mobile design & UX best practices'
     ]
   },
   {
@@ -258,6 +263,14 @@ var traits = this.props.job.traits.map(function (trait, i) {
               {traits}
             </ul>
           </div>
+          {(this.props.job.inResponse) ?
+            <div className={styles.inResponse}>
+              <div className={styles.section_header}>in your response:</div>
+              <p style={{display: 'block'}}>
+                {this.props.job.inResponse}
+              </p>
+            </div>
+          : ''}
           <div className={styles.apply_now}>
             <a href={mailTo}>apply now</a>
           </div>
@@ -292,18 +305,19 @@ export class Careers extends React.Component {
 
     return (
       <div className='container' id='careers' ref='page'>
-      <Header title={'careers'} subtitle={'oh yeah! come drink our kool-aid.'} />
+        <Header title={'careers'} subtitle={'oh yeah! come drink our kool-aid.'} />
         <div className='page-content'>
-         <div className='row'>
-      <p className={styles.careers_copy}>At GLOW, hiring the best and brightest talent is by far our best concept.  If you are looking to join a young, smart, hardworking team that values thinking, creativity, passion and curiosity, then we want to hear from you.  Below is a list of current positions available at GLOW.</p>
-      </div>
-      </div>
-      <h1 className={styles.headline}>current openings</h1>
-      <div className={styles.career_list}>
-      <div className='row'>
-      {careerItems}
-      </div>
-      </div>
+          <div className='row'>
+            <p className={styles.careers_copy}>At GLOW, hiring the best and brightest talent is by far our best concept.  If you are looking to join a young, smart, hardworking team that values thinking, creativity, passion and curiosity, then we want to hear from you.  Below is a list of current positions available at GLOW.</p>
+            <p className={styles.careers_copy}>GLOW offers endless opportunities to develop your career, health insurance, 401k, and a positive cultural vibe in Hudson Square, NYC.</p>
+          </div>
+        </div>
+        <h1 className={styles.headline}>current openings</h1>
+        <div className={styles.career_list}>
+          <div className='row'>
+            {careerItems}
+          </div>
+        </div>
       </div>
     );
   }
