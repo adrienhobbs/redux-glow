@@ -189,6 +189,68 @@ const data = [
     aboutCopy: '<p>In the fall of 2016, GLOW partnered with I LOVE NEW YORK, Visit the Catskills, local county tourism offices and Beautiful Destinations to promote the New York Catskills as the ultimate fall destination for singles and couples residing in the New York City metro area.  </p><p>Our goal was to show potential travelers that the area is full of adventure with a diverse array of attractions offering something for every travel style. In partnering with travel and lifestyle brand, Beautiful Destinations, we were able to show the Catskills through the eyes of influential content creators, leverage their huge social followings to expand reach and pique interest among travel enthusiasts, ultimately inspiring travel to the region.</p>'
   },
   {
+    featured: false,
+    client: 'moet',
+    project: 'uncorked',
+    title: 'uncorked',
+    subtitle: 'video series',
+    subtitleSlug: 'video series',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/moet/uncorked/uncorked-landscape.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/moet/uncorked/uncorked-landscape.jpg',
+    logoColor: '#EEC83F',
+    secColor: '#201612',
+    gradientTop: '#EEC83F',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#EEC83F',
+    cat: ' ― hbo | boxing ― ',
+    templateName: 'Uncorked',
+    shapeColor: '#0D434B',
+    copyColor: 'rgba(255, 255, 255, 1)',
+    headlineColor: '#be9e5b',
+    services: ['Concepting', 'Casting', 'Production Strategy', 'Production', 'Post Production', 'Motion Design', 'Directing'],
+    sidebar: {
+      logoColor: '#ffffff',
+      copyColor: '#ffffff',
+      headlineColor: '#C41A1B',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#be9e5b'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'uncorked-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#EEC83F'
+      }
+    },
+    results: {
+      stats: [
+        {label: 'Impressions', stat: '47M+'},
+        {label: 'Video views', stat: '3M'},
+        {label: 'Fans reached', stat: '+20M'},
+        {label: 'Fans on Facebook', stat: '145K+'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#909090',
+      bgColor: '#161D20',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/the-night-of/devices.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>GLOW, in partnership with Believe Entertainment, created an entirely new type of content for iconic spirits brand Moet Chandon.</p><p>The almost 300-year-old brand was looking for a modern and more contemporary way to reach a younger millennial audience, in a bid to extend its brand position as a premium spirt to this younger coveted demo.  The content produced would align with a new campaign slogan "Celebrate the Moment" and also position Moet Champagne as an accessible "everyday" beverage, right for any occasion.</p>'
+  },
+  {
     featured: true,
     client: 'hbo',
     project: 'the night of',
@@ -249,7 +311,6 @@ const data = [
     },
     aboutCopy: '<p>Our objective for HBO’s The Night Of was to enlist fans of true crime and realistic crime fiction to watch, discuss, and advocate for The Night Of - an addictive, cinematic exploration of the modern judicial system.</p><p>The social strategy aimed to activate armchair detectives of similar true crime programming such as True Detective and The Jinx.  We did this by creating thought-provoking, shareable content that allowed fans to theorize about Naz’s night and explore more nuances of the judicial system that he experienced first hand.  The content sought to dangle the carrot, letting fans have enough to piece together themselves.</p>'
   },
-
   {
     featured: false,
     client: 'hulu',
