@@ -14,7 +14,10 @@ const clients = [
   'cinemax',
   'hulu',
   'carla-hall',
-  'nick'
+  'nick',
+  'spotify_brands',
+  'believe',
+  'discovery-kids'
 ];
 
 export class ClientsBar extends React.Component {

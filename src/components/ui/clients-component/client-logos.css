@@ -1,24 +1,25 @@
 @use lost;
 
 .client {
-  lost-column: 1/4 4 10%;
+  lost-column: 1/5 5 20px;
   lost-flex-container: column;
   position: relative;
   margin-bottom: 2em;
 
-  &:nth-of-type(9),
-  &:nth-of-type(10),
-  &:nth-of-type(11),
-  &:nth-of-type(12) {
+  /*&:nth-of-type(11),
+  &:nth-of-type(12),
+  &:nth-of-type(13),
+  &:nth-of-type(14),
+  &:nth-of-type(15), {
     margin-bottom: 0;
-  }
+  }*/
 
   @media (--xl-screen-down) {
     lost-column: 1/3 0 0;
     margin-bottom: 2em;
-    &:nth-of-type(10),
-    &:nth-of-type(11),
-    &:nth-of-type(12) {
+    &:nth-of-type(13),
+    &:nth-of-type(14),
+    &:nth-of-type(15) {
       margin-bottom: 0;
     }
   }
@@ -28,7 +29,7 @@
 }
 
 .mobile_logo {
-  lost-column: 1/4 4 10%;
+  lost-column: 1/4 4 2%;
   lost-flex-container: column;
   position: relative;
   margin-bottom: 2em;
@@ -52,24 +53,24 @@
 }
 
 .slide_logo {
-  lost-column: 1/4 4 10%;
+  lost-column: 1/5 5 20px;
   lost-flex-container: column;
   position: relative;
   margin-bottom: 5rem;
 
-  &:nth-of-type(9),
+  /*&:nth-of-type(9),
   &:nth-of-type(10),
   &:nth-of-type(11),
   &:nth-of-type(12) {
     margin-bottom: 0;
-  }
+  }*/
 
   @media (--lg-screen-down) {
     lost-column: 1/3 0 0;
     margin-bottom: 3rem;
-    &:nth-of-type(10),
-    &:nth-of-type(11),
-    &:nth-of-type(12) {
+    &:nth-of-type(13),
+    &:nth-of-type(14),
+    &:nth-of-type(15) {
       margin-bottom: 0;
     }
   }
@@ -102,7 +103,7 @@
 }
 
 .client_svg {
-  width: 50%;
+  width: 70%;
   max-height: 90px;
   margin-left: auto;
   margin-right: auto;
@@ -114,7 +115,7 @@
   }
 
   @media(--xl-screen-down) {
-    width: 55%;
+    width: 65%;
   }
 
   @media(--lg-screen-down) {
@@ -129,4 +130,3 @@
     max-height: 90px;
   }
 }
-
