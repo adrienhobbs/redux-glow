@@ -5,31 +5,31 @@ import styles from './careers.css';
 import colors from '../../constants/colors.js';
 
 const Jobs = [
-  {
-    title: 'project manager',
-    contactEmail: 'pete',
-    active: true,
-    type: 'full time',
-    summary: 'Glow Interactive, Inc. has an opening for a Project Manager - Digital and Social Media Agency at its New York City offices.',
-    duties: [
-      'Responsible for and manages day-to-day activities on projects for a digital and social media agency that range from website development, mobile applications and video content',
-      'Work closely with internal teams and clients to execute digital initiatives that integrate with our clients’ overall strategic goals',
-      'Interface between client and team, as well as vendors when needed',
-      'Work with management, team and client to establish scope, set project timelines and to manage the overall flow of the effort from kickoff to completion',
-      'Keep projects on track through clear task lists, issue tracking, status reports, and meeting notes',
-      'Clearly communicate changes, issues, and resolutions to the tactical and executive teams'
-    ],
-    traits: [
-      'Has Bachelor’s Degree in Computer Science, Business Administration in or with a concentration in Marketing, or a related field or its foreign equivalent and two years post-Degree experience in the position or the above referenced education and two years post-Degree experience in any occupation providing marketing services for a digital and social media agency, including assisting the account team with strategic planning, user research, brainstorming, pitching, and collaborating',
-      'Firm knowledge and understanding of modern day digital technologies such as: HTML5, Javascript, iOS/Android, chatbots, software SDK’s and social platform API’s',
-      'Two years of analytic experience with MS Excel, Google Analytics, and Omniture; Must have demonstrated skills as being highly organized and a detailed-oriented multitasker',
-      'Must have demonstrated knowledge of the digital and social media agency market, good problem- solving skills and the ability to communicate and to lead conversations effectively, and to function in a team environment',
-      'Current knowledge of digital marketing best practices and industry best practices',
-      'Demonstrated ability to manage multiple, competing priorities, duties and/or projects',
-      'A genuine enthusiasm about pop culture, entertainment and social media and an understanding of what other brands are doing in the space',
-      'Demonstrated ability to communicate clearly and effectively with clients at varying levels'
-    ]
-  },
+  // {
+  //   title: 'project manager',
+  //   contactEmail: 'pete',
+  //   active: true,
+  //   type: 'full time',
+  //   summary: 'Glow Interactive, Inc. has an opening for a Project Manager - Digital and Social Media Agency at its New York City offices.',
+  //   duties: [
+  //     'Responsible for and manages day-to-day activities on projects for a digital and social media agency that range from website development, mobile applications and video content',
+  //     'Work closely with internal teams and clients to execute digital initiatives that integrate with our clients’ overall strategic goals',
+  //     'Interface between client and team, as well as vendors when needed',
+  //     'Work with management, team and client to establish scope, set project timelines and to manage the overall flow of the effort from kickoff to completion',
+  //     'Keep projects on track through clear task lists, issue tracking, status reports, and meeting notes',
+  //     'Clearly communicate changes, issues, and resolutions to the tactical and executive teams'
+  //   ],
+  //   traits: [
+  //     'Has Bachelor’s Degree in Computer Science, Business Administration in or with a concentration in Marketing, or a related field or its foreign equivalent and two years post-Degree experience in the position or the above referenced education and two years post-Degree experience in any occupation providing marketing services for a digital and social media agency, including assisting the account team with strategic planning, user research, brainstorming, pitching, and collaborating',
+  //     'Firm knowledge and understanding of modern day digital technologies such as: HTML5, Javascript, iOS/Android, chatbots, software SDK’s and social platform API’s',
+  //     'Two years of analytic experience with MS Excel, Google Analytics, and Omniture; Must have demonstrated skills as being highly organized and a detailed-oriented multitasker',
+  //     'Must have demonstrated knowledge of the digital and social media agency market, good problem- solving skills and the ability to communicate and to lead conversations effectively, and to function in a team environment',
+  //     'Current knowledge of digital marketing best practices and industry best practices',
+  //     'Demonstrated ability to manage multiple, competing priorities, duties and/or projects',
+  //     'A genuine enthusiasm about pop culture, entertainment and social media and an understanding of what other brands are doing in the space',
+  //     'Demonstrated ability to communicate clearly and effectively with clients at varying levels'
+  //   ]
+  // },
   {
     title: 'community manager',
     active: true,
@@ -239,7 +239,7 @@ var traits = this.props.job.traits.map(function (trait, i) {
     var color = (this.state.isOpen) ? colors.radRed : colors.stormDust;
     var contactEmail = this.props.job.contactEmail || 'jobs'
     var mailTo = `mailto:${contactEmail}@weareglow.com?subject=${this.props.job.title}%20position%20availability&body=Hi%20there%2C%0D%0A%0D%0AInterested%20in%20this%20${this.props.job.title}%20position.`;
-    var extraContent = (this.props.job.title === 'project manager') ? 'Applicants should send resumes to Peter Levin at Glow Interactive, Inc., 333 Hudson Street, Suite 302, NY, NY or to Pete@weareglow.com. Equal Opportunity Employer' : ''
+    // var extraContent = (this.props.job.title === 'project manager') ? 'Applicants should send resumes to Peter Levin at Glow Interactive, Inc., 333 Hudson Street, Suite 302, NY, NY or to Pete@weareglow.com. Equal Opportunity Employer' : ''
 
     return (
       <div className={styles.career_list_item}>
@@ -275,7 +275,6 @@ var traits = this.props.job.traits.map(function (trait, i) {
             <a href={mailTo}>apply now</a>
           </div>
           <div style={{fontStyle: 'italic', textAlign: 'center', display: 'block', marginTop: 10}}>
-            {extraContent}
           </div>
         </div>
       </div>
