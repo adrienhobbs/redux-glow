@@ -96,7 +96,7 @@
 .stat {
   font-size: 2.45em;
   font-weight: bold;
-  font-family: Domaine;
+  font-family: GT-Walsheim;
   @media(--lg-screen-down) {
     font-size: 2.5em;
   }
