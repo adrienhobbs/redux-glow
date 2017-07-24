@@ -15,6 +15,63 @@ const data = [
   },
   {
     featured: true,
+    client: 'hbo',
+    project: 'girls',
+    title: 'girls',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/hbo/girls/girls-bg.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/girls/girls-bg.jpg',
+    logoColor: '#EEC83F',
+    secColor: '#1c3938',
+    gradientTop: '#EEC83F',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#EEC83F',
+    cat: ' ― hbo | girls ― ',
+    templateName: 'Girls',
+    shapeColor: '#0D434B',
+    copyColor: 'rgba(255, 255, 255, 0.75)',
+    headlineColor: '#fdaf76',
+    services: ['social strategy', 'content-lab', 'creative execution', 'custom illustration'],
+    sidebar: {
+      logoColor: '#fdaf76',
+      copyColor: '#ffffff',
+      headlineColor: '#fdaf76',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#1d272b'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'ballers-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#ffffff'
+      }
+    },
+    results: {
+      stats: [],
+      statColor: '#ffffff',
+      statLabelColor: '#fdaf76',
+      bgColor: '#1d272b',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/girls/girls-results.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>No show in recent memory has had as deep a cultural impact with millenials as HBO’s GIRLS. It became the voice of a generation relating to the everyday life of its fans. When GLOW was tasked with building a digital campaign to sunset the series, our challenge was to engage the extremely passionate and loyal fan base while also driving tune-in.</p>'
+  },
+  {
+    featured: true,
     client: 'vh1',
     project: 'antm',
     title: 'antm',

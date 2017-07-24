@@ -19,9 +19,11 @@ import NightOf from './hbo/the-night-of.js';
 import BridgetJones from './universal/bridget-jones-moment.js';
 import Boxing from './hbo/boxing.js';
 import Uncorked from './moet/uncorked';
+import Girls from './hbo/girls.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
+    Girls: Girls,
     Uncorked: Uncorked,
     ANTM: ANTM,
     Boxing: Boxing,
