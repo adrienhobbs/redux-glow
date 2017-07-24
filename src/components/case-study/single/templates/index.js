@@ -1,6 +1,7 @@
 import SouthernKitchen from './carla-hall/southern-kitchen.js';
 import Proof from './tnt/proof.js';
 import Sharknado2017 from './syfy/sharknado-2017.js';
+import WKC2017 from './wkc/dog-show-2017.js';
 import WKC2016 from './wkc/dog-show-2016.js';
 import Mindy2016 from './hulu/mindy-2016.js';
 import Veep from './hbo/veep.js';
@@ -30,6 +31,7 @@ const CaseStudyTemplates = (function templates () {
     Proof: Proof,
     Sharknado2017: Sharknado2017,
     WKC2016: WKC2016,
+    WKC2017: WKC2017,
     Mindy: Mindy2016,
     Mindy2016: Mindy2016,
     Veep: Veep,

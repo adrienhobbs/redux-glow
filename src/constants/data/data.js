@@ -76,6 +76,55 @@ const data = [
     aboutCopy: '<p>In 2016, reality TV pioneer America\'s Next Top Model found a new home on VH1 after 22 seasons, and following a decade long run on The CW. Following a former cancellation, a new network to call home, and all-new host + panel, the challenge for ANTM\'s comeback was to create a holistic social media campaign that introduced loyal viewers to a revamped Top Model on VH1.</p><p>The marketing for ANTM kicked off with an OOH whisper campaign with simple messaging: "What\'s Next." Rather than keeping the new contestants a secret and stress about them getting leaked, we turned that on its head by creating a campaign that allowed the audience to figure out "What\'s Next" with a social-first puzzle. ANTM social provided fans with clues per contestant which were seeded out across all social platforms. When press announced the finalists, ANTM social celebrated with 13 custom animations featuring the contestants and their clues on the @ANTMVH1 Instagram, tagged the contestants in clue posts, and released a tap-to-reveal on Snapchat & Instagram stories to pull the entire reveal together.</p>',
   },
   {
+    featured: false,
+    client: 'westminster',
+    project: 'westminster2017',
+    title: '2017 dog show',
+    subtitle: 'social media agency of record',
+    subtitleSlug: 'social agency of record',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/wkc/westminster-dog-show/westminster-2017-bg.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/wkc/westminster-dog-show/westminster-2017-bg.jpg',
+    secColor: '#492c5f',
+    logoColor: '#d7a200',
+    featuredProjectTitleColor: '#ffffff',
+    templateName: 'WKC2017',
+    services: ['social strategy', 'community management', 'creative execution', 'live event management'],
+    accolades: ["shorty award audience honor: pets & animals"],
+    clientLogoColor: '#d7a200',
+    headlineColor: '#d7a200',
+    copyColor: '#fff',
+    lockup: {
+      className: 'westminster-lockup',
+      logoColor: '#d7a200'
+    },
+    backbar: {
+      bgColor: '#d7a200'
+    },
+    results: {
+      stats: [{label: 'pets & animals', stat: 'shorty award'}, {label: 'total year impressions', stat: '62M'}, {label: 'snapchat story', stat: '85.9M'}, {label: 'total year engagements', stat: '3.7M'}],
+      statColor: '#ffffff',
+      statLabelColor: '#d7a200',
+      bgColor: '#431d67',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/wkc2017-results.png' ,
+      template: 'Standard'
+    },
+    sidebar: {
+      logoColor: '#d7a200',
+      copyColor: '#ffffff',
+      headlineColor: '#fff',
+      customClientLogo: 'westminster-alternate'
+    },
+    shareButton: {
+      strokeColor: '#d7a200',
+      copyColor: '#ffffff'
+    },
+    endShape: {
+      bgColor: '#431d67'
+    },
+    aboutCopy: '<p>The Westminster Kennel Club Dog Show is one of the oldest sporting events in modern history, and since 2013, GLOW has been the leading force behind expanding the organization’s social media presence. Challenged with an aging audience and antiquated communication strategies, it was clear to us from day one, that there was the need to modernize the communication flow and ignite fan engagement in order to reach a younger fan base without isolating the traditional core Westminster demographic. </p>'
+  },
+  {
     featured: true,
     client: 'hbo',
     project: 'ballers',
@@ -771,36 +820,36 @@ const data = [
     backgroundImageUrl: s3 + 'case-studies/wkc/westminster-dog-show/west-bg.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/wkc/westminster-dog-show/west-bg.jpg',
     secColor: '#502173',
-    logoColor: '#d6963f',
+    logoColor: '#d7a200',
     featuredProjectTitleColor: '#ffffff',
     templateName: 'WKC2016',
     services: ['social strategy', 'community management', 'content lab', 'creative execution', 'live event management'],
-    clientLogoColor: '#d6963f',
-    headlineColor: '#d6963f',
+    clientLogoColor: '#d7a200',
+    headlineColor: '#d7a200',
     copyColor: '#fff',
     lockup: {
       className: 'westminster-lockup',
-      logoColor: '#D6963F'
+      logoColor: '#d7a200'
     },
     backbar: {
-      bgColor: '#d6963f'
+      bgColor: '#d7a200'
     },
     results: {
       stats: [{label: 'snapchat Live Story views', stat: '100m'}, {label: 'fb users reached during 4 day show', stat: '5.8m'}, {label: 'of domestic IG users reached on IG Live', stat: '98%'}, {label: '#wkcdogshow trended nationally on Twitter', stat: 'No. 5'}],
       statColor: '#ffffff',
-      statLabelColor: '#D6963F',
+      statLabelColor: '#d7a200',
       bgColor: '#431d67',
       deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/westminster-2016-devices.png' ,
       template: 'Standard'
     },
     sidebar: {
-      logoColor: '#d6963f',
+      logoColor: '#d7a200',
       copyColor: '#ffffff',
       headlineColor: '#fff',
       customClientLogo: 'westminster-alternate'
     },
     shareButton: {
-      strokeColor: '#d6963f',
+      strokeColor: '#d7a200',
       copyColor: '#ffffff'
     },
     endShape: {
