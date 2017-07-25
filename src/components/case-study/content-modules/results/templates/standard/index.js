@@ -5,7 +5,8 @@ export class StandardResultsTemplate extends React.Component {
 
   static propTypes = {
     bg: PropTypes.string,
-    data: PropTypes.object
+    data: PropTypes.object,
+    hideHeadline: PropTypes.boolean
   };
 
   constructor (props) {
@@ -132,7 +133,13 @@ export class StandardResultsTemplate extends React.Component {
           </linearGradient>
           <rect x='0' y='0' width='100%' height='100%' fill='url(#t)' />
         </svg>
-        <h2 className={styles.results_headline} style={{color: this.props.data.get('headlineColor')}}>results</h2>
+        <h2 className={styles.results_headline}
+          style={{
+            color: this.props.data.get('headlineColor'),
+            display: (this.props.hideHeadline) ? 'none' : 'block'
+          }}>
+          results
+        </h2>
         <div className={styles.results_inner}>
           <div className={styles.left}>
             <div className={styles.inner_center}>
@@ -140,7 +147,13 @@ export class StandardResultsTemplate extends React.Component {
             </div>
           </div>
           <div className={styles.center}>
-            <img src={this.props.data.get('results').deviceImageUrl} alt='' />
+            <img
+              src={this.props.data.get('results').deviceImageUrl} alt=''
+              style={{
+                marginTop: (this.props.hideHeadline) ? '10px' : '0',
+                marginBottom: (this.props.hideHeadline) ? '60px' : '0'
+              }}
+            />
           </div>
           <div className={styles.right}>
             <div className={styles.inner_center}>

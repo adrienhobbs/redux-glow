@@ -14,6 +14,112 @@ const data = [
     cat: '- we are glow -'
   },
   {
+    featured: false,
+    client: 'hbo',
+    project: 'girls',
+    title: 'girls',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/hbo/girls/girls-bg.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hbo/girls/girls-bg.jpg',
+    logoColor: '#EEC83F',
+    secColor: '#1c3938',
+    gradientTop: '#EEC83F',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#EEC83F',
+    cat: ' ― hbo | girls ― ',
+    templateName: 'Girls',
+    shapeColor: '#0D434B',
+    copyColor: 'rgba(255, 255, 255, 0.75)',
+    headlineColor: '#fdaf76',
+    services: ['social strategy', 'content-lab', 'creative execution', 'custom illustration'],
+    sidebar: {
+      logoColor: '#fdaf76',
+      copyColor: '#ffffff',
+      headlineColor: '#fdaf76',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#1d272b'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'girls-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#ffffff'
+      }
+    },
+    results: {
+      stats: [],
+      statColor: '#ffffff',
+      statLabelColor: '#fdaf76',
+      bgColor: '#1d272b',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/girls/girls-results.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>No show in recent memory has had as deep a cultural impact with millenials as HBO’s GIRLS. It became the voice of a generation relating to the everyday life of its fans. When GLOW was tasked with building a digital campaign to sunset the series, our challenge was to engage the extremely passionate and loyal fan base while also driving tune-in.</p>'
+  },
+  {
+    featured: false,
+    client: 'westminster',
+    project: 'westminster2017',
+    title: '2017 dog show',
+    subtitle: 'social media agency of record',
+    subtitleSlug: 'social agency of record',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/wkc/westminster-dog-show/westminster-2017-bg.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/wkc/westminster-dog-show/westminster-2017-bg.jpg',
+    secColor: '#532480',
+    logoColor: '#d7a200',
+    featuredProjectTitleColor: '#ffffff',
+    templateName: 'WKC2017',
+    services: ['social strategy', 'community management', 'creative execution', 'live event management'],
+    accolades: ["shorty award audience honor: pets & animals"],
+    clientLogoColor: '#d7a200',
+    headlineColor: '#d7a200',
+    copyColor: '#fff',
+    lockup: {
+      className: 'westminster-lockup',
+      logoColor: '#d7a200'
+    },
+    backbar: {
+      bgColor: '#d7a200'
+    },
+    results: {
+      stats: [{label: 'pets & animals', stat: 'shorty award'}, {label: 'total year impressions', stat: '62M'}, {label: 'snapchat story', stat: '85.9M'}, {label: 'total year engagements', stat: '3.7M'}],
+      statColor: '#ffffff',
+      statLabelColor: '#d7a200',
+      bgColor: '#431d67',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/wkc2017-results.png' ,
+      template: 'Standard'
+    },
+    sidebar: {
+      logoColor: '#d7a200',
+      copyColor: '#ffffff',
+      headlineColor: '#fff',
+      customClientLogo: 'westminster-alternate'
+    },
+    shareButton: {
+      strokeColor: '#d7a200',
+      copyColor: '#ffffff'
+    },
+    endShape: {
+      bgColor: '#431d67'
+    },
+    aboutCopy: '<p>The Westminster Kennel Club Dog Show is one of the oldest sporting events in modern history, and since 2013, GLOW has been the leading force behind expanding the organization’s social media presence. Challenged with an aging audience and antiquated communication strategies, it was clear to us from day one, that there was the need to modernize the communication flow and ignite fan engagement in order to reach a younger fan base without isolating the traditional core Westminster demographic. </p>'
+  },
+  {
     featured: true,
     client: 'vh1',
     project: 'antm',
@@ -771,36 +877,36 @@ const data = [
     backgroundImageUrl: s3 + 'case-studies/wkc/westminster-dog-show/west-bg.jpg',
     backgroundImageUrlVert: s3 + 'case-studies/wkc/westminster-dog-show/west-bg.jpg',
     secColor: '#502173',
-    logoColor: '#d6963f',
+    logoColor: '#d7a200',
     featuredProjectTitleColor: '#ffffff',
     templateName: 'WKC2016',
     services: ['social strategy', 'community management', 'content lab', 'creative execution', 'live event management'],
-    clientLogoColor: '#d6963f',
-    headlineColor: '#d6963f',
+    clientLogoColor: '#d7a200',
+    headlineColor: '#d7a200',
     copyColor: '#fff',
     lockup: {
       className: 'westminster-lockup',
-      logoColor: '#D6963F'
+      logoColor: '#d7a200'
     },
     backbar: {
-      bgColor: '#d6963f'
+      bgColor: '#d7a200'
     },
     results: {
       stats: [{label: 'snapchat Live Story views', stat: '100m'}, {label: 'fb users reached during 4 day show', stat: '5.8m'}, {label: 'of domestic IG users reached on IG Live', stat: '98%'}, {label: '#wkcdogshow trended nationally on Twitter', stat: 'No. 5'}],
       statColor: '#ffffff',
-      statLabelColor: '#D6963F',
+      statLabelColor: '#d7a200',
       bgColor: '#431d67',
       deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/westminster-2016-devices.png' ,
       template: 'Standard'
     },
     sidebar: {
-      logoColor: '#d6963f',
+      logoColor: '#d7a200',
       copyColor: '#ffffff',
       headlineColor: '#fff',
       customClientLogo: 'westminster-alternate'
     },
     shareButton: {
-      strokeColor: '#d6963f',
+      strokeColor: '#d7a200',
       copyColor: '#ffffff'
     },
     endShape: {

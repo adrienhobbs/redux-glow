@@ -38,4 +38,3 @@ export class DogShow extends BaseTemplate {
 }
 
 export default DogShow;
-
