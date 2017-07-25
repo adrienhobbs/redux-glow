@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
+import LoopingVideo from 'components/video/looping-video';
 
 export class Girls extends BaseTemplate {
   static propTypes = {
@@ -26,6 +27,9 @@ export class Girls extends BaseTemplate {
               </div>
             </div>
           </div>
+        </div>
+        <div className='img-single inner_section'>
+          <LoopingVideo style={{maxWidth: '100%', width: '100%'}} videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/hbo/girls/hbo_girls_content_wall.mp4' />
         </div>
       </div>
     );

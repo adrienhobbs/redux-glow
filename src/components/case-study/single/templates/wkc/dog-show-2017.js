@@ -1,6 +1,7 @@
 import React from 'react';
 import BaseTemplate from '../base-study-template';
 import AboutSection from '../../../content-modules/about.js';
+import LoopingVideo from 'components/video/looping-video';
 
 export class DogShow extends BaseTemplate {
   static propTypes = {
@@ -31,7 +32,10 @@ export class DogShow extends BaseTemplate {
               </div>
             </div>
             <div className='img-single inner_section'>
-              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/social-01-2016.png' alt='' />
+              <img src='https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/wkc_2017_content_wall_static.jpg' alt='' />
+            </div>
+            <div className='img-single inner_section'>
+              <LoopingVideo style={{maxWidth: '100%', width: '100%'}} videoSrc='https://s3.amazonaws.com/weareglow-assets/case-studies/wkc/westminster-dog-show/wkc_2017_content_wall.mp4' />
             </div>
           </article>
         </div>
