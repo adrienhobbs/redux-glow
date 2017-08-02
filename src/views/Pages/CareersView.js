@@ -30,6 +30,41 @@ const Jobs = [
   //     'Demonstrated ability to communicate clearly and effectively with clients at varying levels'
   //   ]
   // },
+
+  {
+    title: 'account manager',
+    active: true,
+    type: 'full-time',
+    summary: 'GLOW is an award-winning social, marketing and creative agency based in New York City. With a 16-year history as a leader in the digital space, GLOW provides innovative social strategies and best in breed executions for a range of clients who are considered the most successful in their respective industries. Our passionate, collaborative culture and wide range of integrated capabilities provides our client partners with strategies and campaigns that solve key business problems and generate measurable results. Our team consists of a dynamic, creative, cooperative group of experts who accomplish the extraordinary by working together to bring the highest level of value to our client partners. GLOW\'s Social team continues to experience amazing growth. We are currently looking for additional community managers to work on very high profile entertainment clients who are considered amongst the best in digital social marketing.',
+    duties: [
+      'Work closely with internal teams and clients to execute social campaigns that integrate with our clients’ overall strategic goals.',
+      'Manage day-to-day contact on projects that range from sites and app builds to social activations and content, interfacing between client and team, as well as vendors when needed.',
+      'Work with management, team and client to establish scope, set project timelines and monitor the overall flow of the effort from kickoff to completion.',
+      'Participation in brainstorms and creative meetings. Your ideas need to contribute to the team’s thinking!!',
+      'Ensure projects have the necessary resources to run efficiently/effectively from kickoff to completion.',
+      'You possess a keen understanding of what a project entails, and keep a broader focus on how our efforts ladder to the overarching client goals.',
+      'You will be an active participant on new business teams and contribute directly to new business opportunities.',
+      'Good problem solving skills, works well under pressure.',
+      'Ability to anticipate the needs of the team and the account.',
+      'Active involvement in planning and strategy – you will know your projects and clients inside and out so you can provide answers as needed.',
+      'Confidence and comfort to act as the voice of the team when necessary on client correspondence.'
+    ],
+    traits: [
+      'Has a minimum 2-4 years of agency experience.',
+      'Must have prior experience working in digital or social media, in an entertainment capacity is a plus.',
+      'A genuine enthusiasm about pop culture, entertainment and social media and an understanding of what other brands are doing in the space.',
+      'Demonstrated ability to communicate clearly and effectively with clients at varying levels.',
+      'Experience managing interactive, mobile and/or display media campaigns.',
+      'Loves a challenge and uses problem-solving skills to seek out ways to help make our team and our partners stronger/smarter/better.',
+      'A highly organized, detail-oriented multitasker.  The fast pace of real-time social media energizes you!',
+      'Considers themselves a curious marketer and is dedicated to personal and team growth.',
+      'The ability to communicate clearly, lead conversations, and can function exceptionally well in a team environment.'  ,
+      'You know what makes the client tick, and are ready to jump in and make sure they’re being given what they need.',
+      'Has opinions and ideas and you’d love to share them with the team and our clients.',
+      'Someone who others will want to work with - your glowing personality should work well with many different types of people.',
+      'A person who truly wants to grow while learning more about social and digital marketing.'
+    ]
+  },
   {
     title: 'community manager',
     active: true,

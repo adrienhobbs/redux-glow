@@ -36,12 +36,6 @@ const employeeInfo = {
       position: 'Director of Marketing',
       photoName: 'Sean',
       isImportant: true
-    },
-    {
-      name: 'Clayton Benn',
-      position: 'Director of Video Production',
-      photoName: 'Clayton',
-      isImportant: true
     }
   ],
   otherPeople: [
@@ -119,11 +113,6 @@ const employeeInfo = {
       name: 'Daniela Guernica',
       position: 'Associate Director, Social & Digital Strategy',
       photoName: 'Danielle'
-    },
-    {
-      name: 'Emily Babich',
-      position: 'Junior Video Producer',
-      photoName: 'EmilyB'
     },
     {
       name: 'Eric Drumm',
