@@ -15,6 +15,68 @@ const data = [
   },
   {
     featured: false,
+    client: 'ifc',
+    project: 'brockmire',
+    title: 'brockmire',
+    subtitle: 'social media campaign',
+    subtitleSlug: 'social media campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/ifc/brockmire/brockmire-bg.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/ifc/brockmire/brockmire-bg.jpg',
+    logoColor: '#ffe533',
+    secColor: '#3a3a3a',
+    gradientTop: '#ffe533',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#ffe533',
+    cat: ' ― hbo | brockmire ― ',
+    templateName: 'Brockmire',
+    shapeColor: '#0D434B',
+    copyColor: '#ffffff',
+    headlineColor: '#ffe533',
+    services: ['social strategy', 'community management', 'content-lab', 'creative execution', 'motion graphics', 'video'],
+    sidebar: {
+      logoColor: '#ffe533',
+      copyColor: '#ffffff',
+      headlineColor: '#ffe533',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#ffe533'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'brockmire-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#ffffff'
+      }
+    },
+    results: {
+      stats: [
+        {label: 'Avg. Engagement Rate', stat: '9.5%'},
+        {label: 'Reach', stat: '9.6M'},
+        {label: 'Video Views', stat: '11M'},
+        {label: 'Community Growth', stat: '+44.2K'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#ffe533',
+      bgColor: '#2a2a2a',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/ifc/brockmire/brockmire-results.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>Welcome to the minor leagues, folks, where America’s favorite pastime has mixed with comedy to bring to life IFC’s baseball-themed series -- Brockmire, starring Hank Azaria. To generate chatter and social engagement around Season One, GLOW was tasked with creating a content strategy that not only appealed to baseball fans, but all lovers of comedic television.</p>'
+  },
+  {
+    featured: false,
     client: 'hbo',
     project: 'girls',
     title: 'girls',

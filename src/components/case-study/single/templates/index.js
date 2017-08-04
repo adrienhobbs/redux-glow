@@ -20,9 +20,11 @@ import BridgetJones from './universal/bridget-jones-moment.js';
 import Boxing from './hbo/boxing.js';
 import Uncorked from './moet/uncorked';
 import Girls from './hbo/girls.js';
+import Brockmire from './ifc/brockmire.js';
 
 const CaseStudyTemplates = (function templates () {
   return {
+    Brockmire,
     Girls: Girls,
     Uncorked: Uncorked,
     ANTM: ANTM,
