@@ -15,6 +15,64 @@ const data = [
   },
   {
     featured: false,
+    client: 'nickelodeon',
+    project: 'retail brands',
+    title: 'retail brands',
+    subtitle: 'social creative',
+    subtitleSlug: 'social creative',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/nickelodeon/nick-retail/nick-bg.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/nickelodeon/nick-retail/nick-bg.jpg',
+    logoColor: '#5cc4d0',
+    secColor: '#14baca',
+    gradientTop: '#5cc4d0',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#ffe533',
+    cat: ' ― nick | retail ― ',
+    templateName: 'NickRetail',
+    shapeColor: '#0D434B',
+    copyColor: '#ffffff',
+    headlineColor: '#e65c00',
+    services: ['social strategy', 'creative execution', 'motion graphics', 'custom photography'],
+    sidebar: {
+      logoColor: '#e65c00',
+      copyColor: '#ffffff',
+      headlineColor: '#e65c00',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#5cc4d0'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'retail-brands-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#ffffff'
+      }
+    },
+    results: {
+      stats: [
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#ffe533',
+      bgColor: '#1098a6',
+      deviceImageUrl: 'https://s3.amazonaws.com/weareglow-assets/case-studies/nickelodeon/nick-retail/results-nick-retail.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>As a legendary brand, Nickelodeon has cemented itself in the hearts and minds of kids for generations. As the brand expands into the world of social, it sought GLOW out as a partner to help develop awareness and drive sales to their consumer products.</p><p>GLOW ideated and developed custom social content for Nick’s retail division which spearheads campaigns for their latest line of consumer products with partners such as Walmart, Target and Party City. The campaigns promoted consumer products such as clothing, toys and accessories for Nickelodeon’s current entertainment IP’s including SpongeBob SquarePants, Nick Jr (Paw Patrol, Blaze and the Monster Machines, Shimmer and Shine, etc.),  Legends of the Hidden Temple and JoJo Siwa, in addition to, legacy brands such as Rugrats, Rocko’s Modern World and CatDog. </p>'
+  },
+  {
+    featured: false,
     client: 'ifc',
     project: 'brockmire',
     title: 'brockmire',

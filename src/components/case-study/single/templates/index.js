@@ -21,10 +21,12 @@ import Boxing from './hbo/boxing.js';
 import Uncorked from './moet/uncorked';
 import Girls from './hbo/girls.js';
 import Brockmire from './ifc/brockmire.js';
+import NickRetail from './nickelodeon/retail-brands';
 
 const CaseStudyTemplates = (function templates () {
   return {
     Brockmire,
+    NickRetail,
     Girls: Girls,
     Uncorked: Uncorked,
     ANTM: ANTM,

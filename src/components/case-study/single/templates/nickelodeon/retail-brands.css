@@ -1,0 +1,14 @@
+@use lost;
+
+.nickVideoRow {
+  lost-flex-container: row;
+}
+
+.nickLoopingVideo {
+  lost-column: 1/2 2 11px;
+}
+
+.nickLoopingVideo > .video-looping {
+  margin-top: 0;
+  margin-bottom: 0;
+}
