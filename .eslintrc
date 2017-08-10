@@ -29,7 +29,6 @@
     "no-else-return"   : 0,
     "no-multi-spaces"  : 0,
     "quotes"           : [2, "single"],
-    "jsx-quotes"       : [1, "prefer-single"],
     "one-var"          : 0,
     "no-undefined"     : 0,
     "no-undef"         : 0,

@@ -5,13 +5,20 @@ import Lockup from 'components/ui/lockup/lockup.js';
 import styles from './case-study.css';
 import DriveIn from 'react-drive-in';
 
-const StudyBody = React.createClass({
-  propTypes: {
+class StudyBody extends React.Component {
+  static propTypes = {
     data: PropTypes.object,
     isVisible: PropTypes.bool,
     viewport: PropTypes.object
-  },
+  }
+
+  componentWillUnmount () {
+    this.metaOg.content = 'https://s3.amazonaws.com/weareglow-assets/assets/glow.png';
+  }
+
   componentDidMount () {
+    this.metaOg = document.getElementById('meta-og');
+    this.metaOg.content = this.props.data.get('backgroundImageUrl');
     this.TL = new TimelineLite({autoRemoveChildren: true});
     TweenLite.set(this.refs.studyWrapper, {yPercent: 140});
     TweenLite.to(this.refs.studyOverlay, 0.8, {autoAlpha: 1, ease: Circ.easeInOut, onComplete: () => this.bringInContent()});
@@ -22,65 +29,74 @@ const StudyBody = React.createClass({
     } catch (err) {
       console.log(err);
     }
-  },
+  }
 
   shouldComponentUpdate (nextProps) {
     return !(nextProps.isVisible === this.props.isVisible) ||
     (nextProps.viewport.orientation !== nextProps.viewport.orientation);
-  },
+  }
+
   componentWillUpdate (nextProps) {
     this.setIntroCtrHeight();
     if (!nextProps.isVisible) {
       this.slideDownContent();
     }
-  },
-  getLogoColor () {
-    return (this.props.data.get('clientLogoColor')) ? this.props.data.get('clientLogoColor') : null;
-  },
+  }
 
-  setIntroCtrHeight () {
+  getLogoColor = () => {
+    return (this.props.data.get('clientLogoColor')) ? this.props.data.get('clientLogoColor') : null;
+  }
+
+  setIntroCtrHeight = () => {
     if (this.props.viewport.isPhone) {
       if (this.props.viewport.orientation === 'landscape') {
         TweenLite.set(this.refs.introCtr, {height: '90%'});
         TweenLite.set(this.refs.overlayInfo, {top: '50%', maxWidth: '60%'});
       }
     }
-  },
+  }
 
-  getCopyStyle () {
+  getCopyStyle = () => {
     return {
       color: this.props.data.get('copyColor') || '#fff'
     };
-  },
-  getHeadlineStyle () {
+  }
+
+  getHeadlineStyle = () => {
     return {
       color: this.props.data.get('headlineColor') || '#000'
     };
-  },
-  getStudyTemplate () {
+  }
+
+  getStudyTemplate = () => {
     return Templates[this.props.data.get('templateName')];
-  },
-  bringInContent () {
+  }
+
+  bringInContent = () => {
     this.setIntroCtrHeight();
     TweenLite.fromTo(this.refs.studyWrapper, 0.8, {yPercent: 0, autoAlpha: 1}, {yPercent: 0, ease: Expo.easeInOut, delay: 0.5});
-  },
-  slideDownContent () {
+  }
+
+  slideDownContent = () => {
     TweenLite.to(this.refs.studyWrapper, 0.5, {yPercent: 140, autoAlpha: 0, ease: Expo.easeInOut});
     du.removeClass(this.refs.studyWrapper, 'y-overflow-auto');
-  },
-  getBgVideo () {
+  }
+
+  getBgVideo = () => {
     if (this.props.data.get('backgroundVideoUrl')) {
       return (<DriveIn loop show={[this.props.data.get('backgroundVideoUrl'), this.props.data.get('backgroundVideoPoster')]} />);
     }
-  },
-  getFWA () {
+  }
+
+  getFWA = () => {
     var style = {position: 'absolute', bottom: 0, left: 0, zIndex: 11, width: 160, maxWidth: '30%'};
     if (this.props.data.get('hasFWAAward')) {
       return <img style={style} className='featured-ribbon' src='https://s3.amazonaws.com/weareglow-assets/global-assets/%402_FOTD+%E2%80%93+bottom+left.png' />;
     } else {
       return null;
     }
-  },
+  }
+
   render () {
     const StudyTemplate = this.getStudyTemplate();
     return (
@@ -106,6 +122,6 @@ const StudyBody = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default StudyBody;

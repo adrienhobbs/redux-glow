@@ -6,7 +6,7 @@ export class StandardResultsTemplate extends React.Component {
   static propTypes = {
     bg: PropTypes.string,
     data: PropTypes.object,
-    hideHeadline: PropTypes.boolean
+    hideHeadline: PropTypes.bool
   };
 
   constructor (props) {
