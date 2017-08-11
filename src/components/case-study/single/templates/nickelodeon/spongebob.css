@@ -1,0 +1,30 @@
+@use lost;
+
+.rowOne {
+  lost-flex-container: row;
+
+  .videoItem {
+    lost-column: 1/3 3 8px;
+    video {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.nickLoopingVideo > .video-looping {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.rowTwo {
+  lost-flex-container: row;
+
+  .videoItem {
+    lost-column: 1/2 2 99px;
+    video {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -16,6 +16,64 @@ const data = [
   {
     featured: false,
     client: 'nickelodeon',
+    project: 'spongebob squarepants',
+    title: 'spongebob squarepants',
+    subtitle: 'social creative',
+    subtitleSlug: 'social creative',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/nickelodeon/spongebob/sponge-bob-bg.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/nickelodeon/spongebob/sponge-bob-bg.jpg',
+    logoColor: '#e65c00',
+    secColor: '#1d58a8',
+    gradientTop: '#5cc4d0',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#ffe533',
+    cat: ' ― nick | spongebob ― ',
+    templateName: 'SpongeBob',
+    shapeColor: '#0D434B',
+    copyColor: '#ffffff',
+    headlineColor: '#e65c00',
+    services: ['social strategy', 'creative execution', 'motion graphics', 'custom photography'],
+    sidebar: {
+      logoColor: '#e65c00',
+      copyColor: '#ffffff',
+      headlineColor: '#e65c00',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#5cc4d0'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'spongebob-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#ffffff'
+      }
+    },
+    results: {
+      stats: [
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#ffe533',
+      bgColor: '#18488a',
+      deviceImageUrl: s3 + 'case-studies/nickelodeon/spongebob/bob-results.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>SpongeBob SquarePants is an ICON. As leading meme voice of millennials, his quirky and lovable charisma have dominated social conversations for years. With that being said, GLOW was challenged by Nickelodeon to develop content and strategy that would position SpongeBob as a trend leader in the social space success and elevate the authority of the brand’s voice. </p><p>We combined our knowledge of the the social audience, the prevailing trends, and the latest creative styles and executions to provide content that directly engaged the fans. As huge fans ourselves, we knew it was critical to replicate fan behavior while still presenting a premium brand look and feel, and leveraging our broad access to the show’s IP to give fans something they wouldn’t find anywhere else.</p>'
+  },
+  {
+    featured: false,
+    client: 'nickelodeon',
     project: 'retail brands',
     title: 'retail brands',
     subtitle: 'social creative',

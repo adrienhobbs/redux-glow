@@ -22,34 +22,35 @@ import Uncorked from './moet/uncorked';
 import Girls from './hbo/girls.js';
 import Brockmire from './ifc/brockmire.js';
 import NickRetail from './nickelodeon/retail-brands';
+import SpongeBob from './nickelodeon/spongebob';
 
 const CaseStudyTemplates = (function templates () {
   return {
+    SpongeBob,
     Brockmire,
     NickRetail,
-    Girls: Girls,
-    Uncorked: Uncorked,
-    ANTM: ANTM,
-    Boxing: Boxing,
-    BridgetJones: BridgetJones,
-    NightOf: NightOf,
-    SouthernKitchen: SouthernKitchen,
-    Proof: Proof,
-    Sharknado2017: Sharknado2017,
-    WKC2016: WKC2016,
-    WKC2017: WKC2017,
-    Mindy: Mindy2016,
-    Mindy2016: Mindy2016,
-    Veep: Veep,
-    ILNY: ILNY,
-    WinterCalendar: WinterCalendar,
-    TwelveMonkeys: TwelveMonkeys,
-    Casual: Casual,
-    HowIDidIt: HowIDidIt,
-    Hunters: Hunters,
-    Profit: Profit,
-    Ballers: Ballers,
-    Znation: Znation
+    Girls,
+    Uncorked,
+    ANTM,
+    Boxing,
+    BridgetJones,
+    NightOf,
+    SouthernKitchen,
+    Proof,
+    Sharknado2017,
+    WKC2016,
+    WKC2017,
+    Mindy2016,
+    Veep,
+    ILNY,
+    WinterCalendar,
+    TwelveMonkeys,
+    Casual,
+    HowIDidIt,
+    Hunters,
+    Profit,
+    Ballers,
+    Znation
   };
 }());
 
