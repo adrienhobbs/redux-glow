@@ -3,7 +3,7 @@ import Proof from './tnt/proof.js';
 import Sharknado2017 from './syfy/sharknado-2017.js';
 import WKC2017 from './wkc/dog-show-2017.js';
 import WKC2016 from './wkc/dog-show-2016.js';
-import Mindy2016 from './hulu/mindy-2016.js';
+import Mindy from './hulu/mindy.js';
 import Veep from './hbo/veep.js';
 import ILNY from './ilny/ilny.js';
 import WinterCalendar from './cn/winter-calendar.js';
@@ -16,16 +16,18 @@ import Znation from './syfy/znation.js';
 import Ballers from './hbo/ballers.js';
 import ANTM from './vh1/antm.js';
 import NightOf from './hbo/the-night-of.js';
-import BridgetJones from './universal/bridget-jones-moment.js';
+import BridgetJones from './universal/bridget-jones-moment';
 import Boxing from './hbo/boxing.js';
 import Uncorked from './moet/uncorked';
 import Girls from './hbo/girls.js';
-import Brockmire from './ifc/brockmire.js';
+import Brockmire from './ifc/brockmire';
 import NickRetail from './nickelodeon/retail-brands';
+import NickJrBrand from './nickelodeon/nickjr-brand';
 import SpongeBob from './nickelodeon/spongebob';
 
 const CaseStudyTemplates = (function templates () {
   return {
+    NickJrBrand,
     SpongeBob,
     Brockmire,
     NickRetail,
@@ -40,7 +42,7 @@ const CaseStudyTemplates = (function templates () {
     Sharknado2017,
     WKC2016,
     WKC2017,
-    Mindy2016,
+    Mindy,
     Veep,
     ILNY,
     WinterCalendar,
