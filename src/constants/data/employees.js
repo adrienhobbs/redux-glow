@@ -40,6 +40,26 @@ const employeeInfo = {
   ],
   otherPeople: [
     {
+      name: 'Michelle Pepe',
+      position: 'Social Media Coordinator',
+      photoName: 'MichelleP'
+    },
+    {
+      name: 'Lizzi Stuart',
+      position: 'Motion Designer',
+      photoName: 'Lizzi'
+    },
+    {
+      name: 'Natalie Dallenbach',
+      position: 'Designer',
+      photoName: 'Natalie'
+    },
+    {
+      name: 'Liam Elias',
+      position: 'Creative Resident',
+      photoName: 'Liam'
+    },
+    {
       name: 'Adrien Hobbs',
       position: 'Developer',
       photoName: 'Adrien'
@@ -63,11 +83,6 @@ const employeeInfo = {
       name: 'Jessica Bahr',
       position: 'Director, Paid Media',
       photoName: 'Jess'
-    },
-    {
-      name: 'Paula Alvarez',
-      position: 'Motion Designer',
-      photoName: 'PaulaA'
     },
     {
       name: 'Ann Ketly',
