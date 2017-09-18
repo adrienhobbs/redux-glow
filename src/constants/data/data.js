@@ -15,6 +15,64 @@ const data = [
   },
   {
     featured: false,
+    client: 'nick jr',
+    project: 'brand',
+    title: 'brand',
+    subtitle: 'social creative',
+    subtitleSlug: 'social creative',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/nickelodeon/nickjr-brand/nickjr-brands-bg.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/nickelodeon/nickjr-brand/nickjr-brands-bg.jpg',
+    logoColor: '#e65c00',
+    secColor: '#ffffff',
+    gradientTop: '#5cc4d0',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#ffe533',
+    cat: ' ― nickjr | brand ― ',
+    templateName: 'NickJrBrand',
+    shapeColor: '#0D434B',
+    copyColor: '#db6b1e',
+    headlineColor: '#16bccb',
+    services: ['social strategy', 'creative execution', 'motion graphics', 'custom photography'],
+    sidebar: {
+      logoColor: '#e65c00',
+      copyColor: '#ffffff',
+      headlineColor: '#e65c00',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#16bccb'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'nickjr-brand-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#ffffff'
+      }
+    },
+    results: {
+      stats: [
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#ffe533',
+      bgColor: '#d6f2f5',
+      deviceImageUrl: s3 + 'case-studies/nickelodeon/nickjr-brand/nickjr-brand-device.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>GLOW collaborated with the Nick Jr. social team to provide strategic direction and content for Nick Jr.’s official Instagram, Facebook and Pinterest. We were presented a challenge to reach parents in the social space, while elevating their network’s IP.</p><p>We successfully reached and engaged parents by ideating and creating social content that highlighted Nick Jr’s characters and stories while providing the audience with added-value like DIY tutorials, craft & seasonal ideas, games to play with their children and educational content. The creative executions covered a wide variety of media ranging from custom photoshoots, stop-motion, social games, and motion graphics.</p> '
+  },
+  {
+    featured: false,
     client: 'nickelodeon',
     project: 'spongebob squarepants',
     title: 'spongebob squarepants',

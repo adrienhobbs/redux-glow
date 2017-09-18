@@ -1,5 +1,21 @@
 @use lost;
 
+.nickJrRow {
+  lost-flex-container: row;
+
+  .rowItem {
+    lost-column: 1/2;
+  }
+}
+
+.nickJrRow > .rowItem {
+  lost-column: 1/2 2 50px;
+}
+
+.nickJrRow > .inner_section {
+  margin-top: 0;
+}
+
 .rowOne {
   lost-flex-container: row;
 
