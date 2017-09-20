@@ -15,6 +15,64 @@ const data = [
   },
   {
     featured: false,
+    client: 'hulu',
+    project: 'the handmaids tale',
+    title: 'the handmaid\'s tale',
+    subtitle: 'social campaign',
+    subtitleSlug: 'social campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/hulu/handmaids/handmaids-bg.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/hulu/handmaids/handmaids-bg.jpg',
+    logoColor: '#e65c00',
+    secColor: '#8c262f',
+    gradientTop: '#5cc4d0',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#ffe533',
+    cat: ' ― hulu | handmaid\'s tale ― ',
+    templateName: 'Handmaids',
+    shapeColor: '#0D434B',
+    copyColor: '#ffffff',
+    headlineColor: '#999999',
+    services: ['community management', 'creative execution', 'live coverage', 'content lab', 'video'],
+    sidebar: {
+      logoColor: '#e65c00',
+      copyColor: '#ffffff',
+      headlineColor: '#999999',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#999999'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'handmaids-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#ffffff'
+      }
+    },
+    results: {
+      stats: [
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#ffe533',
+      bgColor: '#75242d',
+      deviceImageUrl: s3 + 'case-studies/hulu/handmaids/handmaids-device.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>The cultural conversation surrounding Hulu’s Emmy Award Winner for Best Drama Series, The Handmaid’s Tale and its parallels to our current political climate was the foundation of igniting social chatter amongst existing and new fans of the classic book and original series. GLOW crafted the voice of the series on social and launched companion social activations to bolster the robust community.</p><p>We enacted a layered approach to find, reward, and serve our series’s evangelists with social content via an exclusive Facebook group and supporting tactics. </p>'
+  },
+  {
+    featured: false,
     client: 'nick jr',
     project: 'brand',
     title: 'brand',

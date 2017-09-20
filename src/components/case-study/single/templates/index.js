@@ -24,9 +24,11 @@ import Brockmire from './ifc/brockmire';
 import NickRetail from './nickelodeon/retail-brands';
 import NickJrBrand from './nickelodeon/nickjr-brand';
 import SpongeBob from './nickelodeon/spongebob';
+import Handmaids from './hulu/handmaids-tale';
 
 const CaseStudyTemplates = (function templates () {
   return {
+    Handmaids,
     NickJrBrand,
     SpongeBob,
     Brockmire,

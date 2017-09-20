@@ -1,0 +1,10 @@
+@use lost;
+
+.loopingRow {
+  lost-flex-container: row;
+
+}
+
+.loopingVideo {
+  lost-column: 1/2 2 19px;
+}
