@@ -15,6 +15,68 @@ const data = [
   },
   {
     featured: false,
+    client: 'vh1',
+    project: 'daytime divas',
+    title: 'daytime divas',
+    subtitle: 'social media & paid campaign',
+    subtitleSlug: 'social media & paid campaign',
+    type: 'case-study',
+    backgroundImageUrl: s3 + 'case-studies/vh1/daytime-divas/daytime-divas-bg.jpg',
+    backgroundImageUrlVert: s3 + 'case-studies/vh1/daytime-divas/daytime-divas-bg.jpg',
+    logoColor: '#b6252b',
+    secColor: '#2A2A2A',
+    gradientTop: '#5cc4d0',
+    gradientBottom: '#0D434B',
+    featuredProjectTitleColor: '#ffe533',
+    cat: ' ― vh1 | daytime divas ― ',
+    templateName: 'DaytimeDivas',
+    shapeColor: '#0D434B',
+    copyColor: '#ffffff',
+    headlineColor: '#ffffff',
+    services: ['social strategy', 'paid strategy & execution', 'community management', 'creative execution', 'video', 'motion design', 'talent content capture'],
+    sidebar: {
+      logoColor: '#e65c00',
+      copyColor: '#ffffff',
+      headlineColor: '#999999',
+      customClientLogo: 'hbo-alternate'
+    },
+    backbar: {
+      bgColor: '#b6252b'
+    },
+    shareButton: {
+      strokeColor: '#C03D3B',
+      copyColor: '#ffffff'
+    },
+    mobile: {
+      bgColor: '#0D434B'
+    },
+    lockup: {
+      className: 'divas-lockup',
+      projectColor: '#FFFFFF',
+      featured: {
+        projectColor: '#ffffff'
+      }
+    },
+    results: {
+      stats: [
+        {label: 'fan growth', stat: '47M+'},
+        {label: 'Twitter trend nationally on premiere night', stat: '#3'},
+        {label: 'video views', stat: '+17M'},
+        {label: 'impressions', stat: '+30M'}
+      ],
+      statColor: '#ffffff',
+      statLabelColor: '#b6252b',
+      bgColor: '#1e1e1e',
+      deviceImageUrl: s3 + 'case-studies/vh1/daytime-divas/daytime-divas-device.png',
+      template: 'Standard'
+    },
+    endShape: {
+      bgColor: '#0A2C3A'
+    },
+    aboutCopy: '<p>Behind the scenes, it’s even juicier and the VH1 scripted series, Daytime Divas, is here to spill ALL the tea. When it came to marketing the show behind the show, no topic was taboo and GLOW met that task head on by building a holistic organic & paid social strategy that not only appealed to fans of VH1, but solidified VH1’s place in the scripted space.</p>'
+  },
+  {
+    featured: false,
     client: 'hulu',
     project: 'the handmaids tale',
     title: 'the handmaid\'s tale',

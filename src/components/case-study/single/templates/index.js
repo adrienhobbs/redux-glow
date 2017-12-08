@@ -25,9 +25,11 @@ import NickRetail from './nickelodeon/retail-brands';
 import NickJrBrand from './nickelodeon/nickjr-brand';
 import SpongeBob from './nickelodeon/spongebob';
 import Handmaids from './hulu/handmaids-tale';
+import DaytimeDivas from './vh1/daytime-divas';
 
 const CaseStudyTemplates = (function templates () {
   return {
+    DaytimeDivas,
     Handmaids,
     NickJrBrand,
     SpongeBob,

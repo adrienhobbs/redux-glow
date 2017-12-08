@@ -36,6 +36,12 @@ const employeeInfo = {
       position: 'Director of Marketing',
       photoName: 'Sean',
       isImportant: true
+    },
+    {
+      name: 'Randy Malinoff',
+      position: 'Chief Growth Officer - West Coast',
+      photoName: 'Randy',
+      isImportant: true
     }
   ],
   otherPeople: [
@@ -89,11 +95,11 @@ const employeeInfo = {
       position: 'Chief Facilitator',
       photoName: 'Ann'
     },
-    {
-      name: 'Andre Cole',
-      position: 'Video Editor',
-      photoName: 'Andre'
-    },
+    // {
+    //   name: 'Andre Cole',
+    //   position: 'Video Editor',
+    //   photoName: 'Andre'
+    // },
     {
       name: 'Lindsey Cirmotich',
       position: 'Designer',
@@ -154,11 +160,11 @@ const employeeInfo = {
       position: 'Associate Director, Social & Digital Strategy',
       photoName: 'Sarah'
     },
-    {
-      name: 'Stephanie Rogers',
-      position: 'Senior Account Manager',
-      photoName: 'Steph'
-    },
+    // {
+    //   name: 'Stephanie Rogers',
+    //   position: 'Senior Account Manager',
+    //   photoName: 'Steph'
+    // },
     {
       name: 'Tara Lewis',
       position: 'Group Director, Account Services',
@@ -184,11 +190,11 @@ const employeeInfo = {
       position: 'Associate Creative Director',
       photoName: 'Casey'
     },
-    {
-      name: 'Nöel Anderson',
-      position: 'Motion Designer',
-      photoName: 'Noel'
-    },
+    // {
+    //   name: 'Nöel Anderson',
+    //   position: 'Motion Designer',
+    //   photoName: 'Noel'
+    // },
     {
       name: 'Tara Prangell',
       position: 'Social Media & Analytics Specialist',

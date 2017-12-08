@@ -5,32 +5,39 @@ import styles from './careers.css';
 import colors from '../../constants/colors.js';
 
 const Jobs = [
-  // {
-  //   title: 'project manager',
-  //   contactEmail: 'pete',
-  //   active: true,
-  //   type: 'full time',
-  //   summary: 'Glow Interactive, Inc. has an opening for a Project Manager - Digital and Social Media Agency at its New York City offices.',
-  //   duties: [
-  //     'Responsible for and manages day-to-day activities on projects for a digital and social media agency that range from website development, mobile applications and video content',
-  //     'Work closely with internal teams and clients to execute digital initiatives that integrate with our clients’ overall strategic goals',
-  //     'Interface between client and team, as well as vendors when needed',
-  //     'Work with management, team and client to establish scope, set project timelines and to manage the overall flow of the effort from kickoff to completion',
-  //     'Keep projects on track through clear task lists, issue tracking, status reports, and meeting notes',
-  //     'Clearly communicate changes, issues, and resolutions to the tactical and executive teams'
-  //   ],
-  //   traits: [
-  //     'Has Bachelor’s Degree in Computer Science, Business Administration in or with a concentration in Marketing, or a related field or its foreign equivalent and two years post-Degree experience in the position or the above referenced education and two years post-Degree experience in any occupation providing marketing services for a digital and social media agency, including assisting the account team with strategic planning, user research, brainstorming, pitching, and collaborating',
-  //     'Firm knowledge and understanding of modern day digital technologies such as: HTML5, Javascript, iOS/Android, chatbots, software SDK’s and social platform API’s',
-  //     'Two years of analytic experience with MS Excel, Google Analytics, and Omniture; Must have demonstrated skills as being highly organized and a detailed-oriented multitasker',
-  //     'Must have demonstrated knowledge of the digital and social media agency market, good problem- solving skills and the ability to communicate and to lead conversations effectively, and to function in a team environment',
-  //     'Current knowledge of digital marketing best practices and industry best practices',
-  //     'Demonstrated ability to manage multiple, competing priorities, duties and/or projects',
-  //     'A genuine enthusiasm about pop culture, entertainment and social media and an understanding of what other brands are doing in the space',
-  //     'Demonstrated ability to communicate clearly and effectively with clients at varying levels'
-  //   ]
-  // },
+  {
+    title: 'director, paid social',
+    active: true,
+    type: 'full-time',
+    contactEmail: 'mike',
+    summary: 'GLOW is seeking a Director of Paid Social to spearhead the continued growth of this fully integrated group. <br/><br/> GLOW is an award-winning social, marketing and creative agency based in New York City. With a 17-year history as a leader in the digital space, GLOW provides innovative social strategies and best in breed executions for a range of clients who are considered the most successful in their respective industries. Our passionate, collaborative culture and wide range of integrated capabilities provide our client partners with strategies and campaigns that solve key business problems and generate measurable results. <br/> <br/> GLOW\'s Social team continues to experience amazing growth. We have an immediate need for a Director, Paid Social. The ideal candidate will be able to hit the ground running, work collaboratively within our award-winning team, provide thought leadership, and drive the development of a groundbreaking paid social strategy. </br></br> You may recognize GLOW’s award-winning work in social for clients including: HBO, Spotify, Hulu, IFC, VH1, ILNY, Westminster Kennel Club, and Nickelodeon. <br/> <br/> A sampling of recent social campaigns: Baroness von Sketch Show, Curb Your Enthusiasm, Ballers, Portlandia, The Handmaid’s Tale, The Mindy Project, The Path, Girls, Veep, Crashing, Animals, Americas Next Top Model, HBO Boxing, Brockmire, Silicon Valley, etc….<br/> <br/> This is a multi-disciplinary role in which you’ll need to integrate learnings and foster collaboration across teams including marketing, strategy, creative, finance, and more.',
+    duties: [
+      'Self-starter who is excited about the opportunity to come in and spearhead the growth of the Paid Social team and business as a whole',
+      'Someone who sees the opportunity for current and prospective clients and can help them see that vision too',
+      'Avid user and highly proficient in the language of social, being able to explain which KPIs to use where and when, in addition to being able to generate reports and actionable insights',
+      'Comfortable and confident managing the entire campaign process from budgeting to execution and final reporting',
+      'Agile and can adapt to changing timelines, deliverables, and changes in platform capabilities',
+      'Motivated. Passionate. Hungry. Focused.'
+    ],
 
+    traits: [
+      'Proven track record of managing a variety of campaigns across multiple platforms',
+      'Proven history of business growth and development',
+      '8-10 years of experience in digital media planning, as well as 3-5 years management experience.',
+      'Experience working in the TV/Cable/Entertainment space',
+      'Experience with 3rd party campaign management, analytics, and reporting tools',
+      'Intimate understanding of analytics and optimization techniques',
+      'Experience managing a team of campaign managers and strategists'
+    ],
+
+    perks: [
+      'Rare opportunity to build a team and vertical from the ground up',
+      'Amazing roster of clients',
+      'Exposure to the newest features on Facebook, Instagram, and Twitter thanks to client\'s involvement in alpha and beta programs',
+      'Opportunity to work with passionate, smart individuals pushing the envelope on innovative social experiences',
+      'AR/VR Studio (including playing with stuff we’re developing for clients'
+    ]
+  },
   {
     title: 'account manager',
     active: true,
@@ -95,27 +102,27 @@ const Jobs = [
 
     ]
   },
-  {
-    title: 'junior producer/editor',
-    active: true,
-    type: 'freelance',
-    summary: 'GLOW is looking for a creative and resourceful Junior Producer/Editor who can assist with creating compelling short-form video content for the web and other digital platforms. Must be a native of the digital and pop cultural landscape with intimate knowledge of the latest and greatest in social media, content and emerging technology/platforms. This is a full-time paid position. You must submit a sample video of your work and LINKS to your favorite things around the net to be considered for this position.',
-    duties: [
-      'Coming up creative concepts and executions',
-      'Assist with video shoots - must be comfortable using DSLRs',
-      'Setting up basic lighting configurations',
-      'Assist with research and media gathering',
-      'Editing filmed content'
-    ],
-    traits: [
-      'EPK and or Field Producing experience',
-      'Interest in and focus on creating social media video content',
-      'Experience with DSLR cameras, sound and lighting equipment',
-      'On set experience is a plus',
-      'A competitive drive -- you enjoy winning and really going for it',
-      'Ability to take direction and work in a dynamic'
-    ]
-  },
+  // {
+  //   title: 'junior producer/editor',
+  //   active: false,
+  //   type: 'freelance',
+  //   summary: 'GLOW is looking for a creative and resourceful Junior Producer/Editor who can assist with creating compelling short-form video content for the web and other digital platforms. Must be a native of the digital and pop cultural landscape with intimate knowledge of the latest and greatest in social media, content and emerging technology/platforms. This is a full-time paid position. You must submit a sample video of your work and LINKS to your favorite things around the net to be considered for this position.',
+  //   duties: [
+  //     'Coming up creative concepts and executions',
+  //     'Assist with video shoots - must be comfortable using DSLRs',
+  //     'Setting up basic lighting configurations',
+  //     'Assist with research and media gathering',
+  //     'Editing filmed content'
+  //   ],
+  //   traits: [
+  //     'EPK and or Field Producing experience',
+  //     'Interest in and focus on creating social media video content',
+  //     'Experience with DSLR cameras, sound and lighting equipment',
+  //     'On set experience is a plus',
+  //     'A competitive drive -- you enjoy winning and really going for it',
+  //     'Ability to take direction and work in a dynamic'
+  //   ]
+  // },
   {
     title: 'social art director',
     active: true,
@@ -257,6 +264,13 @@ export class Career extends React.Component {
     return (this.state.isOpen) ? '− ' : '+ ';
   }
 
+  
+  getPerks () {
+    return this.props.job.perks.map((perk, i) => {
+      return <li className={styles.trait}>{perk}</li>
+    });
+  }
+
   render () {
     var bodyStyle = {
       height: (this.state.isOpen) ? 'auto' : 0,
@@ -283,8 +297,7 @@ var traits = this.props.job.traits.map(function (trait, i) {
           <div className={styles.career_type} style={{color: color, visibility: (this.state.isOpen) ? 'visible' : 'hidden'}}>{this.props.job.type}</div>
         </div>
         <div className={styles.career_body} style={bodyStyle} ref='careerBody'>
-          <p style={{marginBottom: 0}}>
-            {this.props.job.summary}
+          <p style={{marginBottom: 0}} dangerouslySetInnerHTML={{__html: this.props.job.summary}}>
           </p>
           <div className={styles.position_duties}>
             <div className={styles.section_header}>position duties</div>
@@ -298,6 +311,14 @@ var traits = this.props.job.traits.map(function (trait, i) {
               {traits}
             </ul>
           </div>
+         {this.props.job.perks && 
+          <div className={styles.position_traits}>
+    <div className={styles.section_header}>aside from the standard stuff (healthcare, dental, <br/> 401k, summer friday’s, etc) we offer:</div>
+            <ul className={styles.traits}>
+    {this.getPerks()}
+            </ul>
+          </div>
+          }
           {(this.props.job.inResponse) ?
             <div className={styles.inResponse}>
               <div className={styles.section_header}>in your response:</div>

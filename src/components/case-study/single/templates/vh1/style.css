@@ -13,3 +13,7 @@
     margin-bottom: 15px;
   }
 }
+
+.col {
+  lost-column: 1/2 0 100px;
+}
